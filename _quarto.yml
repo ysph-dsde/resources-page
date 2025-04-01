@@ -1,5 +1,58 @@
 project:
-  title: "resources-page"
-
+  type: website
+  output-dir: docs
+  
 editor: visual
+
+website:
+  title: "Resource Navigation Tool"
+  page-navigation: true
+  back-to-top-navigation: true
+  bread-crumbs: false
+  favicon: Images/DSDE-Social-Media-Profile.png
+  search: true
+  navbar:
+    right:
+      - text: Resource
+        menu:
+          - text: "Overview"
+            href: resources.qmd
+          - text: "Freely Accessible"
+            href: bucket-1.qmd
+          - text: "Restricted Access"
+            href: bucket-2.qmd
+          - text: "License Required"
+            href: bucket-3.qmd
+      - text: About Us
+        href: about-us.qmd
+      - text: Contact
+        href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/
+        target: _blank
+  page-footer:
+    background: light 
+    left: "This site was built on a ysph-dsde.github.io page. It was rendered using Quarto (v 1.6.3) and theme [flatly](https://github.com/thomaspark/bootswatch)." 
+    center:
+      - text: About Us
+        href: about-us.qmd
+      - text: Resource
+        href: resources.qmd
+      - text: Contact
+        href: contact.qmd
+    right: 
+      - icon: globe
+        href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/
+      - icon: github
+        href: https://github.com/ysph-dsde
+      - icon: linkedin 
+        href: https://www.linkedin.com/showcase/public-health-data-science-and-data-equity-at-yale/
+      - icon: envelope 
+        href: mailto:admin.dsdeysph@yale.edu
+      - text: "(203) 737-8644"
+
+format:
+  html:
+    theme:
+      - flatly
+      - custom-styles/dsde-like-branding.scss
+    toc: true
 

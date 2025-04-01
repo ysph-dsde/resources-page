@@ -1,0 +1,21 @@
+---
+  format: html
+  editor: visual
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+  back-to-top-navigation: true
+---
+
+## About Us
+
+{{< lipsum 1 >}}
+
+
+## Things We Do
+
+
+## People
+
+[People](https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/people/)
+

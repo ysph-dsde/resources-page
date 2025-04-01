@@ -1,0 +1,22 @@
+---
+  format: 
+    html:
+      toc: false
+  editor: visual
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+  back-to-top-navigation: true
+---
+
+## Resources Overview
+
+{{< lipsum 1 >}}
+
+
+```{r}
+#| echo: FALSE
+
+library("DT")
+```
+
