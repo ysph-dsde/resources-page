@@ -37,7 +37,7 @@ website:
       - text: Resource
         href: resources.qmd
       - text: Contact
-        href: contact.qmd
+        href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/
     right: 
       - icon: globe
         href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/
