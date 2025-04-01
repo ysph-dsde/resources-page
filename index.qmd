@@ -1,0 +1,17 @@
+---
+  format: 
+    html:
+      toc: false
+  editor: visual
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+  page-navigation: false
+---
+
+![](Images/Data Science and Data Equity wordmark/PNG/Wordmark-Data-Science-and-Data-Equity-yaleblue.png)
+
+\
+\
+
+{{< lipsum 1 >}}
