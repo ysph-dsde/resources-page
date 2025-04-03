@@ -1,0 +1,15 @@
+[
+  {
+    "listing": "/Restricted-Access/index.html",
+    "items": [
+      "/Restricted-Access/NIH All of Us/index.html",
+      "/Restricted-Access/UK Biobank/index.html",
+      "/Restricted-Access/YNHHS Epic Cosmos/index.html",
+      "/Restricted-Access/YODA/index.html"
+    ]
+  },
+  {
+    "listing": "/bucket-3.html",
+    "items": []
+  }
+]

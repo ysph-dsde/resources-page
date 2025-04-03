@@ -2,86 +2,16 @@
   {
     "objectID": "resources.html",
     "href": "resources.html",
-    "title": "Resource Navigation Tool",
+    "title": "Yale Resources",
     "section": "",
-    "text": "Nulla eget cursus ipsum. Vivamus porttitor leo diam, sed volutpat lectus facilisis sit amet. Maecenas et pulvinar metus. Ut at dignissim tellus. In in tincidunt elit. Etiam vulputate lobortis arcu, vel faucibus leo lobortis ac. Aliquam erat volutpat. In interdum orci ac est euismod euismod. Nunc eleifend tristique risus, at lacinia odio commodo in. Sed aliquet ligula odio, sed tempor neque ultricies sit amet."
-  },
-  {
-    "objectID": "resources.html#resources-overview",
-    "href": "resources.html#resources-overview",
-    "title": "Resource Navigation Tool",
-    "section": "",
-    "text": "Nulla eget cursus ipsum. Vivamus porttitor leo diam, sed volutpat lectus facilisis sit amet. Maecenas et pulvinar metus. Ut at dignissim tellus. In in tincidunt elit. Etiam vulputate lobortis arcu, vel faucibus leo lobortis ac. Aliquam erat volutpat. In interdum orci ac est euismod euismod. Nunc eleifend tristique risus, at lacinia odio commodo in. Sed aliquet ligula odio, sed tempor neque ultricies sit amet."
-  },
-  {
-    "objectID": "bucket-2.html",
-    "href": "bucket-2.html",
-    "title": "Restricted Access",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "bucket-2.html#section",
-    "href": "bucket-2.html#section",
-    "title": "Restricted Access",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "bucket-2.html#section-1",
-    "href": "bucket-2.html#section-1",
-    "title": "Restricted Access",
-    "section": "Section #1",
-    "text": "Section #1\n\nResource #1\n\n\nResource #2"
-  },
-  {
-    "objectID": "bucket-2.html#section-2",
-    "href": "bucket-2.html#section-2",
-    "title": "Restricted Access",
-    "section": "Section #2",
-    "text": "Section #2\n\nResource #1\n\n\nResource #2"
-  },
-  {
-    "objectID": "about-us.html",
-    "href": "about-us.html",
-    "title": "Resource Navigation Tool",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "about-us.html#about-us",
-    "href": "about-us.html#about-us",
-    "title": "Resource Navigation Tool",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "about-us.html#things-we-do",
-    "href": "about-us.html#things-we-do",
-    "title": "Resource Navigation Tool",
-    "section": "Things We Do",
-    "text": "Things We Do"
-  },
-  {
-    "objectID": "about-us.html#people",
-    "href": "about-us.html#people",
-    "title": "Resource Navigation Tool",
-    "section": "People",
-    "text": "People\nPeople"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Resource Navigation Tool",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\n\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "bucket-1.html",
     "href": "bucket-1.html",
     "title": "Freely Accessible",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    "text": "Etiam quis tortor luctus, pellentesque ante a, finibus dolor. Phasellus in nibh et magna pulvinar malesuada. Ut nisl ex, sagittis at sollicitudin et, sollicitudin id nunc. In id porta urna. Proin porta dolor dolor, vel dapibus nisi lacinia in. Pellentesque ante mauris, ornare non euismod a, fermentum ut sapien. Proin sed vehicula enim. Aliquam tortor odio, vestibulum vitae odio in, tempor molestie justo. Praesent maximus lacus nec leo maximus blandit."
   },
   {
     "objectID": "bucket-1.html#section-1",
@@ -98,31 +28,199 @@
     "text": "Section #2\n\nResource #1\n\n\nResource #2"
   },
   {
+    "objectID": "about-us.html",
+    "href": "about-us.html",
+    "title": "Resource Navigation Tool",
+    "section": "",
+    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat."
+  },
+  {
+    "objectID": "about-us.html#about-us",
+    "href": "about-us.html#about-us",
+    "title": "Resource Navigation Tool",
+    "section": "",
+    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat."
+  },
+  {
+    "objectID": "about-us.html#things-we-do",
+    "href": "about-us.html#things-we-do",
+    "title": "Resource Navigation Tool",
+    "section": "Things We Do",
+    "text": "Things We Do"
+  },
+  {
+    "objectID": "about-us.html#people",
+    "href": "about-us.html#people",
+    "title": "Resource Navigation Tool",
+    "section": "People",
+    "text": "People\nPeople"
+  },
+  {
+    "objectID": "Restricted-Access/NIH All of Us/index.html",
+    "href": "Restricted-Access/NIH All of Us/index.html",
+    "title": "NIH’s All of Us",
+    "section": "",
+    "text": "Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor."
+  },
+  {
+    "objectID": "Restricted-Access/NIH All of Us/index.html#links-contacts-and-formsduas",
+    "href": "Restricted-Access/NIH All of Us/index.html#links-contacts-and-formsduas",
+    "title": "NIH’s All of Us",
+    "section": "Links, Contacts, and Forms/DUA’s",
+    "text": "Links, Contacts, and Forms/DUA’s"
+  },
+  {
+    "objectID": "Restricted-Access/NIH All of Us/index.html#step-by-step",
+    "href": "Restricted-Access/NIH All of Us/index.html#step-by-step",
+    "title": "NIH’s All of Us",
+    "section": "Step-by-Step",
+    "text": "Step-by-Step"
+  },
+  {
+    "objectID": "Restricted-Access/NIH All of Us/index.html#typical-timeline",
+    "href": "Restricted-Access/NIH All of Us/index.html#typical-timeline",
+    "title": "NIH’s All of Us",
+    "section": "Typical Timeline",
+    "text": "Typical Timeline\n\n\n\n\n\n\nImportant\n\n\n\nGood things come with time."
+  },
+  {
+    "objectID": "Restricted-Access/NIH All of Us/index.html#other-notes",
+    "href": "Restricted-Access/NIH All of Us/index.html#other-notes",
+    "title": "NIH’s All of Us",
+    "section": "Other Notes",
+    "text": "Other Notes"
+  },
+  {
+    "objectID": "Restricted-Access/index.html",
+    "href": "Restricted-Access/index.html",
+    "title": "Restricted Access",
+    "section": "",
+    "text": "NIH’s All of Us\n\n\nDescriptive description with descriptors.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nUK Biobank\n\n\nDescriptive description with descriptors.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYNHHS Epic Cosmos\n\n\nDescriptive description with descriptors.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nYale University Open Data Access (YODA)\n\n\nDescriptive description with descriptors.\n\n\n\n\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+  },
+  {
+    "objectID": "Restricted-Access/YODA/index.html",
+    "href": "Restricted-Access/YODA/index.html",
+    "title": "Yale University Open Data Access (YODA)",
+    "section": "",
+    "text": "Etiam congue quam eget velit convallis, eu sagittis orci vestibulum. Vestibulum at massa turpis. Curabitur ornare ex sed purus vulputate, vitae porta augue rhoncus. Phasellus auctor suscipit purus, vel ultricies nunc. Nunc eleifend nulla ac purus volutpat, id fringilla felis aliquet. Duis vitae porttitor nibh, in rhoncus risus. Vestibulum a est vitae est tristique vehicula. Proin mollis justo id est tempus hendrerit. Praesent suscipit placerat congue. Aliquam eu elit gravida, consequat augue non, ultricies sapien. Nunc ultricies viverra ante, sit amet vehicula ante volutpat id. Etiam tempus purus vitae tellus mollis viverra. Donec at ornare mauris. Aliquam sodales hendrerit ornare. Suspendisse accumsan lacinia sapien, sit amet imperdiet dui molestie ut."
+  },
+  {
+    "objectID": "Restricted-Access/YODA/index.html#links-contacts-and-formsduas",
+    "href": "Restricted-Access/YODA/index.html#links-contacts-and-formsduas",
+    "title": "Yale University Open Data Access (YODA)",
+    "section": "Links, Contacts, and Forms/DUA’s",
+    "text": "Links, Contacts, and Forms/DUA’s"
+  },
+  {
+    "objectID": "Restricted-Access/YODA/index.html#step-by-step",
+    "href": "Restricted-Access/YODA/index.html#step-by-step",
+    "title": "Yale University Open Data Access (YODA)",
+    "section": "Step-by-Step",
+    "text": "Step-by-Step"
+  },
+  {
+    "objectID": "Restricted-Access/YODA/index.html#typical-timeline",
+    "href": "Restricted-Access/YODA/index.html#typical-timeline",
+    "title": "Yale University Open Data Access (YODA)",
+    "section": "Typical Timeline",
+    "text": "Typical Timeline\n\n\n\n\n\n\nImportant\n\n\n\nGood things come with time."
+  },
+  {
+    "objectID": "Restricted-Access/YODA/index.html#other-notes",
+    "href": "Restricted-Access/YODA/index.html#other-notes",
+    "title": "Yale University Open Data Access (YODA)",
+    "section": "Other Notes",
+    "text": "Other Notes"
+  },
+  {
+    "objectID": "Restricted-Access/YNHHS Epic Cosmos/index.html",
+    "href": "Restricted-Access/YNHHS Epic Cosmos/index.html",
+    "title": "YNHHS Epic Cosmos",
+    "section": "",
+    "text": "Etiam congue quam eget velit convallis, eu sagittis orci vestibulum. Vestibulum at massa turpis. Curabitur ornare ex sed purus vulputate, vitae porta augue rhoncus. Phasellus auctor suscipit purus, vel ultricies nunc. Nunc eleifend nulla ac purus volutpat, id fringilla felis aliquet. Duis vitae porttitor nibh, in rhoncus risus. Vestibulum a est vitae est tristique vehicula. Proin mollis justo id est tempus hendrerit. Praesent suscipit placerat congue. Aliquam eu elit gravida, consequat augue non, ultricies sapien. Nunc ultricies viverra ante, sit amet vehicula ante volutpat id. Etiam tempus purus vitae tellus mollis viverra. Donec at ornare mauris. Aliquam sodales hendrerit ornare. Suspendisse accumsan lacinia sapien, sit amet imperdiet dui molestie ut."
+  },
+  {
+    "objectID": "Restricted-Access/YNHHS Epic Cosmos/index.html#links-contacts-and-formsduas",
+    "href": "Restricted-Access/YNHHS Epic Cosmos/index.html#links-contacts-and-formsduas",
+    "title": "YNHHS Epic Cosmos",
+    "section": "Links, Contacts, and Forms/DUA’s",
+    "text": "Links, Contacts, and Forms/DUA’s"
+  },
+  {
+    "objectID": "Restricted-Access/YNHHS Epic Cosmos/index.html#step-by-step",
+    "href": "Restricted-Access/YNHHS Epic Cosmos/index.html#step-by-step",
+    "title": "YNHHS Epic Cosmos",
+    "section": "Step-by-Step",
+    "text": "Step-by-Step"
+  },
+  {
+    "objectID": "Restricted-Access/YNHHS Epic Cosmos/index.html#typical-timeline",
+    "href": "Restricted-Access/YNHHS Epic Cosmos/index.html#typical-timeline",
+    "title": "YNHHS Epic Cosmos",
+    "section": "Typical Timeline",
+    "text": "Typical Timeline\n\n\n\n\n\n\nImportant\n\n\n\nGood things come with time."
+  },
+  {
+    "objectID": "Restricted-Access/YNHHS Epic Cosmos/index.html#other-notes",
+    "href": "Restricted-Access/YNHHS Epic Cosmos/index.html#other-notes",
+    "title": "YNHHS Epic Cosmos",
+    "section": "Other Notes",
+    "text": "Other Notes"
+  },
+  {
+    "objectID": "Restricted-Access/UK Biobank/index.html",
+    "href": "Restricted-Access/UK Biobank/index.html",
+    "title": "UK Biobank",
+    "section": "",
+    "text": "Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor."
+  },
+  {
+    "objectID": "Restricted-Access/UK Biobank/index.html#links-contacts-and-formsduas",
+    "href": "Restricted-Access/UK Biobank/index.html#links-contacts-and-formsduas",
+    "title": "UK Biobank",
+    "section": "Links, Contacts, and Forms/DUA’s",
+    "text": "Links, Contacts, and Forms/DUA’s"
+  },
+  {
+    "objectID": "Restricted-Access/UK Biobank/index.html#step-by-step",
+    "href": "Restricted-Access/UK Biobank/index.html#step-by-step",
+    "title": "UK Biobank",
+    "section": "Step-by-Step",
+    "text": "Step-by-Step"
+  },
+  {
+    "objectID": "Restricted-Access/UK Biobank/index.html#typical-timeline",
+    "href": "Restricted-Access/UK Biobank/index.html#typical-timeline",
+    "title": "UK Biobank",
+    "section": "Typical Timeline",
+    "text": "Typical Timeline\n\n\n\n\n\n\nImportant\n\n\n\nGood things come with time."
+  },
+  {
+    "objectID": "Restricted-Access/UK Biobank/index.html#other-notes",
+    "href": "Restricted-Access/UK Biobank/index.html#other-notes",
+    "title": "UK Biobank",
+    "section": "Other Notes",
+    "text": "Other Notes"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Resource Navigation Tool",
+    "section": "",
+    "text": "Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor.\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "datasets.html",
+    "href": "datasets.html",
+    "title": "Datasets",
+    "section": "",
+    "text": "Here we have curated commonly used public health datasets, and included relevant links or instructions on how to access them. The table below compiles all listings together, but we have further organized them into separate pages for freely accessible resources, those with restricted access, and those that require a license.\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "bucket-3.html",
     "href": "bucket-3.html",
     "title": "License Required",
     "section": "",
-    "text": "Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor."
-  },
-  {
-    "objectID": "bucket-3.html#section",
-    "href": "bucket-3.html#section",
-    "title": "License Required",
-    "section": "",
-    "text": "Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor."
-  },
-  {
-    "objectID": "bucket-3.html#section-1",
-    "href": "bucket-3.html#section-1",
-    "title": "License Required",
-    "section": "Section #1",
-    "text": "Section #1\n\nResource #1\n\n\nResource #2"
-  },
-  {
-    "objectID": "bucket-3.html#section-2",
-    "href": "bucket-3.html#section-2",
-    "title": "License Required",
-    "section": "Section #2",
-    "text": "Section #2\n\nResource #1\n\n\nResource #2"
+    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat.\n\n\n\n\n\n\nFree for Yale-Affiliates\n\n\n\n\n\n  \n    \n      \n        HTML\n         \n        \n          \n        \n        \n        for web publishing\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        PDF\n         \n        \n          \n        \n        \n        for high quality print\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        MS Word\n         \n        \n          \n        \n        \n        for Office workflows\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        HTML\n         \n        \n          \n        \n        \n        with advanced layout\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        PDF\n         \n        \n          \n        \n        \n        with advanced layout\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nLicense Required\n\n\n\n\n\n  \n    \n      \n        RevealJS\n         \n        \n          \n        \n        \n        HTML presentations\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Beamer\n         \n        \n          \n        \n        \n        PDF presentations\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        PowerPoint\n         \n        \n          \n        \n        \n        presentations\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Streamlining with R\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        An educator's perspective of the tidyverse\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        An anthology of experimental designs\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        The untold story of palmerpenguins\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Outrageously efficient EDA\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Improvements in textrecipes\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items\n\n Back to top"
   }
 ]
