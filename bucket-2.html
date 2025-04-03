@@ -105,13 +105,17 @@ background: #ae8b2d50;
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-resource" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Resource</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-datasets" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Datasets</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-resource">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-datasets">    
         <li>
-    <a class="dropdown-item" href="./resources.html">
+    <a class="dropdown-item" href="./datasets.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
@@ -119,7 +123,7 @@ background: #ae8b2d50;
  <span class="dropdown-text">Freely Accessible</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./bucket-2.html">
+    <a class="dropdown-item" href="./Restricted-Access/index.html">
  <span class="dropdown-text">Restricted Access</span></a>
   </li>  
         <li>
@@ -168,8 +172,7 @@ background: #ae8b2d50;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">Section #1</a>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link active" data-scroll-target="#section-1">Section #1</a>
   <ul class="collapse">
   <li><a href="#resource-1" id="toc-resource-1" class="nav-link" data-scroll-target="#resource-1">Resource #1</a></li>
   <li><a href="#resource-2" id="toc-resource-2" class="nav-link" data-scroll-target="#resource-2">Resource #2</a></li>
@@ -189,10 +192,10 @@ background: #ae8b2d50;
 
 
 
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section"></h2>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
-</section>
+<p>Etiam maximus accumsan gravida. Maecenas at nunc dignissim, euismod enim ac, bibendum ipsum. Maecenas vehicula velit in nisl aliquet ultricies. Nam eget massa interdum, maximus arcu vel, pretium erat. Maecenas sit amet tempor purus, vitae aliquet nunc. Vivamus cursus urna velit, eleifend dictum magna laoreet ut. Duis eu erat mollis, blandit magna id, tincidunt ipsum. Integer massa nibh, commodo eu ex vel, venenatis efficitur ligula. Integer convallis lacus elit, maximus eleifend lacus ornare ac. Vestibulum scelerisque viverra urna id lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aenean eget enim at diam bibendum tincidunt eu non purus. Nullam id magna ultrices, sodales metus viverra, tempus turpis.</p>
+<p><br>
+<br>
+</p>
 <section id="section-1" class="level2">
 <h2 class="anchored" data-anchor-id="section-1">Section #1</h2>
 <section id="resource-1" class="level3">
@@ -305,7 +308,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ysph-dsde\.github\.io\/resources-page\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -648,6 +651,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <li class="nav-item">
     <a class="nav-link" href="./resources.html">
 <p>Resource</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="./datasets.html">
+<p>Datasets</p>
 </a>
   </li>  
     <li class="nav-item">
