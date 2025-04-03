@@ -2,16 +2,37 @@
   {
     "objectID": "resources.html",
     "href": "resources.html",
-    "title": "Yale Resources",
+    "title": "Resources",
     "section": "",
-    "text": "Back to top"
+    "text": "An open data ecosystem made to power pandemic prediction.\n    \n  \n  \n  \n  \n    \n      \n        \n        Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!\n    \n  \n  \n    \n  \n    \n      \n        \n        We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. \nThe Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations."
+  },
+  {
+    "objectID": "resources.html#yale-school-of-public-health",
+    "href": "resources.html#yale-school-of-public-health",
+    "title": "Resources",
+    "section": "",
+    "text": "An open data ecosystem made to power pandemic prediction.\n    \n  \n  \n  \n  \n    \n      \n        \n        Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!\n    \n  \n  \n    \n  \n    \n      \n        \n        We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. \nThe Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations."
+  },
+  {
+    "objectID": "resources.html#yale-school-of-medicine",
+    "href": "resources.html#yale-school-of-medicine",
+    "title": "Resources",
+    "section": "Yale School of Medicine",
+    "text": "Yale School of Medicine\n\n\n  \n  \n    \n      \n        Polymer Screen\n        Combining polymer chemistry with quantitative proteomics, we have developed a quantitative guide for spatially-resolved extraction for more than 2100 MPs into native-nanodiscs. These nanodiscs are of tunable diameter between 8-20 nm and allow for direct extraction from the endogenous membrane while maintaining that native membrane environment. Here we present that guide to native extraction in an easily searchable format with the ability to search for single proteins of interest or networks of proteins. Searching for your protein(s) of interest will yield the preferred condition for optimal native extraction for that protein of interest serving as a starting point for structural and biochemical studies."
+  },
+  {
+    "objectID": "resources.html#yale-university",
+    "href": "resources.html#yale-university",
+    "title": "Resources",
+    "section": "Yale University",
+    "text": "Yale University\n  \n\n  \n  \n    \n      \n        Yale Center for Research Computing (YCRC)\n        The Yale Center for Research Computing (YCRC) is a computational core facility under the Office of the Provost created to support the advanced computing needs of the research community. The YCRC is staffed by a team of research scientists, application specialists, and systems administrators with expertise in supporting high performance computing (HPC) and computationally dependent disciplines.\n        The YCRC advances research at Yale by administering a state-of-the-art cyber-infrastructure, providing sustainable research services, and facilitating an interdisciplinary approach to the development and application of advanced computing and data processing technology throughout the research community.\n        Programmatic input for the YCRC is sought from the YCRC Steering Committee.\n    \n  \n  \n  \n  \n    \n      \n        Data-Intensive Social Science Center at Yale (DISSC)\n        The ever-growing availability of social and behavioral data, rapidly increasing computational power, and expanding tools in data science and statistics are transforming the nature of social science research. The Data Intensive Social Science Center seeks to advance such impactful data-intensive social science research at the frontiers of each social science discipline at Yale."
   },
   {
     "objectID": "bucket-1.html",
     "href": "bucket-1.html",
     "title": "Freely Accessible",
     "section": "",
-    "text": "Etiam quis tortor luctus, pellentesque ante a, finibus dolor. Phasellus in nibh et magna pulvinar malesuada. Ut nisl ex, sagittis at sollicitudin et, sollicitudin id nunc. In id porta urna. Proin porta dolor dolor, vel dapibus nisi lacinia in. Pellentesque ante mauris, ornare non euismod a, fermentum ut sapien. Proin sed vehicula enim. Aliquam tortor odio, vestibulum vitae odio in, tempor molestie justo. Praesent maximus lacus nec leo maximus blandit."
+    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat."
   },
   {
     "objectID": "bucket-1.html#section-1",
@@ -32,14 +53,14 @@
     "href": "about-us.html",
     "title": "Resource Navigation Tool",
     "section": "",
-    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat."
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
   },
   {
     "objectID": "about-us.html#about-us",
     "href": "about-us.html#about-us",
     "title": "Resource Navigation Tool",
     "section": "",
-    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat."
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
   },
   {
     "objectID": "about-us.html#things-we-do",
@@ -60,7 +81,7 @@
     "href": "Restricted-Access/NIH All of Us/index.html",
     "title": "NIH’s All of Us",
     "section": "",
-    "text": "Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor."
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
   },
   {
     "objectID": "Restricted-Access/NIH All of Us/index.html#links-contacts-and-formsduas",
@@ -102,7 +123,7 @@
     "href": "Restricted-Access/YODA/index.html",
     "title": "Yale University Open Data Access (YODA)",
     "section": "",
-    "text": "Etiam congue quam eget velit convallis, eu sagittis orci vestibulum. Vestibulum at massa turpis. Curabitur ornare ex sed purus vulputate, vitae porta augue rhoncus. Phasellus auctor suscipit purus, vel ultricies nunc. Nunc eleifend nulla ac purus volutpat, id fringilla felis aliquet. Duis vitae porttitor nibh, in rhoncus risus. Vestibulum a est vitae est tristique vehicula. Proin mollis justo id est tempus hendrerit. Praesent suscipit placerat congue. Aliquam eu elit gravida, consequat augue non, ultricies sapien. Nunc ultricies viverra ante, sit amet vehicula ante volutpat id. Etiam tempus purus vitae tellus mollis viverra. Donec at ornare mauris. Aliquam sodales hendrerit ornare. Suspendisse accumsan lacinia sapien, sit amet imperdiet dui molestie ut."
+    "text": "Nunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti."
   },
   {
     "objectID": "Restricted-Access/YODA/index.html#links-contacts-and-formsduas",
@@ -137,7 +158,7 @@
     "href": "Restricted-Access/YNHHS Epic Cosmos/index.html",
     "title": "YNHHS Epic Cosmos",
     "section": "",
-    "text": "Etiam congue quam eget velit convallis, eu sagittis orci vestibulum. Vestibulum at massa turpis. Curabitur ornare ex sed purus vulputate, vitae porta augue rhoncus. Phasellus auctor suscipit purus, vel ultricies nunc. Nunc eleifend nulla ac purus volutpat, id fringilla felis aliquet. Duis vitae porttitor nibh, in rhoncus risus. Vestibulum a est vitae est tristique vehicula. Proin mollis justo id est tempus hendrerit. Praesent suscipit placerat congue. Aliquam eu elit gravida, consequat augue non, ultricies sapien. Nunc ultricies viverra ante, sit amet vehicula ante volutpat id. Etiam tempus purus vitae tellus mollis viverra. Donec at ornare mauris. Aliquam sodales hendrerit ornare. Suspendisse accumsan lacinia sapien, sit amet imperdiet dui molestie ut."
+    "text": "Nunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti."
   },
   {
     "objectID": "Restricted-Access/YNHHS Epic Cosmos/index.html#links-contacts-and-formsduas",
@@ -172,7 +193,7 @@
     "href": "Restricted-Access/UK Biobank/index.html",
     "title": "UK Biobank",
     "section": "",
-    "text": "Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor."
+    "text": "Nunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti."
   },
   {
     "objectID": "Restricted-Access/UK Biobank/index.html#links-contacts-and-formsduas",
@@ -207,7 +228,7 @@
     "href": "index.html",
     "title": "Resource Navigation Tool",
     "section": "",
-    "text": "Proin sodales neque erat, varius cursus diam tincidunt sit amet. Etiam scelerisque fringilla nisl eu venenatis. Donec sem ipsum, scelerisque ac venenatis quis, hendrerit vel mauris. Praesent semper erat sit amet purus condimentum, sit amet auctor mi feugiat. In hac habitasse platea dictumst. Nunc ac mauris in massa feugiat bibendum id in dui. Praesent accumsan urna at lacinia aliquet. Proin ultricies eu est quis pellentesque. In vel lorem at nisl rhoncus cursus eu quis mi. In eu rutrum ante, quis placerat justo. Etiam euismod nibh nibh, sed elementum nunc imperdiet in. Praesent gravida nunc vel odio lacinia, at tempus nisl placerat. Aenean id ipsum sed est sagittis hendrerit non in tortor.\n\n\n\n Back to top"
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\n\n\n Back to top"
   },
   {
     "objectID": "datasets.html",
@@ -221,6 +242,20 @@
     "href": "bucket-3.html",
     "title": "License Required",
     "section": "",
-    "text": "Aenean placerat luctus tortor vitae molestie. Nulla at aliquet nulla. Sed efficitur tellus orci, sed fringilla lectus laoreet eget. Vivamus maximus quam sit amet arcu dignissim, sed accumsan massa ullamcorper. Sed iaculis tincidunt feugiat. Nulla in est at nunc ultricies dictum ut vitae nunc. Aenean convallis vel diam at malesuada. Suspendisse arcu libero, vehicula tempus ultrices a, placerat sit amet tortor. Sed dictum id nulla commodo mattis. Aliquam mollis, nunc eu tristique faucibus, purus lacus tincidunt nulla, ac pretium lorem nunc ut enim. Curabitur eget mattis nisl, vitae sodales augue. Nam felis massa, bibendum sit amet nulla vel, vulputate rutrum lacus. Aenean convallis odio pharetra nulla mattis consequat.\n\n\n\n\n\n\nFree for Yale-Affiliates\n\n\n\n\n\n  \n    \n      \n        HTML\n         \n        \n          \n        \n        \n        for web publishing\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        PDF\n         \n        \n          \n        \n        \n        for high quality print\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        MS Word\n         \n        \n          \n        \n        \n        for Office workflows\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        HTML\n         \n        \n          \n        \n        \n        with advanced layout\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        PDF\n         \n        \n          \n        \n        \n        with advanced layout\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\nLicense Required\n\n\n\n\n\n  \n    \n      \n        RevealJS\n         \n        \n          \n        \n        \n        HTML presentations\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Beamer\n         \n        \n          \n        \n        \n        PDF presentations\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        PowerPoint\n         \n        \n          \n        \n        \n        presentations\n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Streamlining with R\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        An educator's perspective of the tidyverse\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        An anthology of experimental designs\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        The untold story of palmerpenguins\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Outrageously efficient EDA\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n  \n    \n      \n        Improvements in textrecipes\n         \n        \n          \n        \n        \n        \n      \n    \n    \n      \n    \n    \n    \n    \n  \n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Data Life Cycle\n  \n  \n  \n  \n      \n      Your Role\n  \n  \n  \n  \n      \n      Your Domain\n  \n  \n  \n  \n      \n      Your Tasks\n  \n  \n  \n  \n      \n      Your Tasks"
+  },
+  {
+    "objectID": "bucket-3.html#free-for-yale-affiliates",
+    "href": "bucket-3.html#free-for-yale-affiliates",
+    "title": "License Required",
+    "section": "",
+    "text": "Data Life Cycle\n  \n  \n  \n  \n      \n      Your Role\n  \n  \n  \n  \n      \n      Your Domain\n  \n  \n  \n  \n      \n      Your Tasks\n  \n  \n  \n  \n      \n      Your Tasks"
+  },
+  {
+    "objectID": "bucket-3.html#payment-required",
+    "href": "bucket-3.html#payment-required",
+    "title": "License Required",
+    "section": "Payment Required",
+    "text": "Payment Required\n\n\n  \n  \n    \n    Data Life Cycle\n  \n  \n  \n  \n      \n      Your Role\n  \n  \n  \n  \n      \n      Your Domain\n  \n  \n  \n  \n      \n      Your Tasks\n  \n  \n  \n  \n      \n      Your Tasks"
   }
 ]
