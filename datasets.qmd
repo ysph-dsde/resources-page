@@ -1,0 +1,48 @@
+---
+  title: "Datasets"
+  title-block-banner: "#ae8b2d50"
+  title-block-banner-color: "#2e2e36"
+  format: 
+    html:
+      toc: false
+      page-layout: full
+  editor: visual
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+---
+
+Here we have curated commonly used public health datasets, and included relevant links or instructions on how to access them. The table below compiles all listings together, but we have further organized them into separate pages for freely accessible resources, those with restricted access, and those that require a license.
+
+\
+\
+
+
+```{r}
+#| echo: FALSE
+
+library("readxl")
+library("DT")
+
+options(DT.options = list(
+  bPaginate = FALSE, 
+  dom = "ifrt", 
+  language = list(info = "Showing _TOTAL_ entries")
+))
+
+All_Datsets_Table <- read_excel("All Datsets Table.xlsx")
+
+datatable(All_Datsets_Table,
+  filter = "top",
+  options = list(pageLength = 10)
+)
+```
+
+
+
+
+
+
+
+
+
