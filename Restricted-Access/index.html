@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-d2eefa6150c0a287b3b7cccb4d746a24.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-95920e67fa1e8de0193abe4324e025e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,20 +72,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    const listingTargetEl = window.document.querySelector('#listing-listing-1 .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description"],
+      searchColumns: ["listing-tiles"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+    window['quarto-listings']['listing-listing-1'] = new List('listing-listing-1', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -148,7 +148,7 @@ window.Quarto = {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -166,7 +166,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../resources.html"> 
+    <a class="nav-link" href="../Resources/index.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -179,7 +179,7 @@ window.Quarto = {
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../bucket-1.html">
+    <a class="dropdown-item" href="../Freely-Accessible/index.html">
  <span class="dropdown-text">Freely Accessible</span></a>
   </li>  
         <li>
@@ -187,7 +187,7 @@ window.Quarto = {
  <span class="dropdown-text">Restricted Access</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../bucket-3.html">
+    <a class="dropdown-item" href="../License-Required/index.html">
  <span class="dropdown-text">License Required</span></a>
   </li>  
     </ul>
@@ -210,13 +210,13 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
+    <div class="quarto-title column-page">
       <h1 class="title">Restricted Access</h1>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta">
+  <div class="quarto-title-meta column-page">
 
       
     
@@ -224,12 +224,12 @@ window.Quarto = {
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
@@ -239,97 +239,160 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1743645665677" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<a href="../Restricted-Access/NIH All of Us/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../Restricted-Access/NIH All of Us/cover_4.8x3.6.png" class="thumbnail-image card-img" style="height: 150px;">
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing-1">
+
+<!--icons from https://icons.getbootstrap.com/-->
+
+<div class="container">
+
+  
+  <div class="tile" data-index="0">
+    <img src="Images/YODA.png" class="image">
+    <h2 class="h2 anchored">Yale University Open Data Access (YODA)</h2>
+    
+    <p class="p">The Yale University Open Data Access (YODA) Project’s mission is to advocate for the responsible sharing of clinical research data, open science, and research transparency. The Project is committed to supporting research focused on improving the health of patients and informing science and public health. By clicking this link, you’ll be directed to a page where you can request clinical trial data.
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-NIH’s All of Us
-</h5>
-<div class="card-text listing-description">
-Descriptive description with descriptors.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+         
+        &nbsp;
+        <a href="../Restricted-Access/Pages/YODA.html" title="Get more information" class="source-code card-text float-beginning inline-block">
+          <i class="bi-info-circle"></i></a>
+        
+        
+        
+        
+         
+        &nbsp;
+        <a href="https://yoda.yale.edu/" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+         
+        &nbsp;
+        <a href="https://medicine.yale.edu/core/" title="Group site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-people-fill"></i></a>
+        
+        
+        
+        
+        <p class="p">Yale University Affiliated</p>
+        
+      </small>
+    </div>
+    
+  </div>
 
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="1" data-listing-file-modified-sort="1743645690404" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<a href="../Restricted-Access/UK Biobank/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../Restricted-Access/UK Biobank/cover.png" class="thumbnail-image card-img" style="height: 150px;">
+  
+  <div class="tile" data-index="1">
+    <img src="Images/NIH All of Us_4.8x3.6.png" class="image">
+    <h2 class="h2 anchored">NIH's All of Us</h2>
+    
+    <p class="p">All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-UK Biobank
-</h5>
-<div class="card-text listing-description">
-Descriptive description with descriptors.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+         
+        &nbsp;
+        <a href="../Restricted-Access/Pages/NIH_All-of-Us.html" title="Get more information" class="source-code card-text float-beginning inline-block">
+          <i class="bi-info-circle"></i></a>
+        
+        
+        
+        
+         
+        &nbsp;
+        <a href="https://allofus.nih.gov/" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+        
+        
+        
+        
+        <p class="p">US Government</p>
+        
+      </small>
+    </div>
+    
+  </div>
 
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="2" data-listing-file-modified-sort="1743645701788" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<a href="../Restricted-Access/YNHHS Epic Cosmos/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../Restricted-Access/YNHHS Epic Cosmos/cover.png" class="thumbnail-image card-img" style="height: 150px;">
+  
+  <div class="tile" data-index="2">
+    <img src="Images/UK Biobank.png" class="image">
+    <h2 class="h2 anchored">UK Biobank</h2>
+    
+    <p class="p">The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. 
+<br>
+<br>
+Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
 </p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-YNHHS Epic Cosmos
-</h5>
-<div class="card-text listing-description">
-Descriptive description with descriptors.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+         
+        &nbsp;
+        <a href="../Restricted-Access/Pages/UK-Biobank.html" title="Get more information" class="source-code card-text float-beginning inline-block">
+          <i class="bi-info-circle"></i></a>
+        
+        
+        
+        
+         
+        &nbsp;
+        <a href="https://www.ukbiobank.ac.uk/" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+        
+        
+        
+        
+        <p class="p"></p>
+        
+      </small>
+    </div>
+    
+  </div>
+
+  
+  <div class="tile" data-index="3">
+    <img src="Images/YNHHS Epic Cosmos.png" class="image">
+    <h2 class="h2 anchored">YNHHS Epic COSMOS</h2>
+    
+    <p class="p">Descriptive descriptions with descriptors.</p>
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+         
+        &nbsp;
+        <a href="../Restricted-Access/Pages/YNHHS-Epic-Cosmos.html" title="Get more information" class="source-code card-text float-beginning inline-block">
+          <i class="bi-info-circle"></i></a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <p class="p">Yale University Affiliated</p>
+        
+      </small>
+    </div>
+    
+  </div>
 
 </div>
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="g-col-1" data-index="3" data-listing-file-modified-sort="1743645703956" data-listing-reading-time-sort="1" data-listing-word-count-sort="14">
-<a href="../Restricted-Access/YODA/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../Restricted-Access/YODA/cover.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Yale University Open Data Access (YODA)
-</h5>
-<div class="card-text listing-description">
-Descriptive description with descriptors.
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
 
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>
@@ -765,7 +828,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../resources.html">
+    <a class="nav-link" href="../Resources/index.html">
 <p>Resources</p>
 </a>
   </li>  
