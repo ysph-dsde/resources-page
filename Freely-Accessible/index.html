@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Resource Navigation Tool</title>
+<title>Freely Accessible – Resource Navigation Tool</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-95920e67fa1e8de0193abe4324e025e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-95920e67fa1e8de0193abe4324e025e2.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,18 +69,93 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing-1 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-category','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-category","listing-tiles"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing-1'] = new List('listing-listing-1', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+<style>
+
+      .quarto-title-block .quarto-title-banner h1,
+      .quarto-title-block .quarto-title-banner h2,
+      .quarto-title-block .quarto-title-banner h3,
+      .quarto-title-block .quarto-title-banner h4,
+      .quarto-title-block .quarto-title-banner h5,
+      .quarto-title-block .quarto-title-banner h6
+      {
+        color: #2e2e36;
+      }
+
+      .quarto-title-block .quarto-title-banner {
+        color: #2e2e36;
+background: #ae8b2d50;
+      }
+</style>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Resource Navigation Tool</span>
     </a>
   </div>
@@ -89,7 +166,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Resources/index.html"> 
+    <a class="nav-link" href="../Resources/index.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -98,25 +175,25 @@ ul.task-list li input[type="checkbox"] {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-datasets">    
         <li>
-    <a class="dropdown-item" href="./datasets.html">
+    <a class="dropdown-item" href="../datasets.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Freely-Accessible/index.html">
+    <a class="dropdown-item" href="../Freely-Accessible/index.html">
  <span class="dropdown-text">Freely Accessible</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./Restricted-Access/index.html">
+    <a class="dropdown-item" href="../Restricted-Access/index.html">
  <span class="dropdown-text">Restricted Access</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./License-Required/index.html">
+    <a class="dropdown-item" href="../License-Required/index.html">
  <span class="dropdown-text">License Required</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./about-us.html"> 
+    <a class="nav-link" href="../about-us.html"> 
 <span class="menu-text">About Us</span></a>
   </li>  
   <li class="nav-item">
@@ -131,25 +208,307 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">Freely Accessible</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta column-page">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
 
-<p><img src="Images/Data Science and Data Equity wordmark/PNG/Wordmark-Data-Science-and-Data-Equity-yaleblue.png" class="img-fluid"></p>
-<p><br>
-<br>
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing-1">
+
+<h2 class="anchored">Yale School of Public Health</h2>
+
+<div class="container">
+
+  
+  <div class="tile" data-index="0">
+    <img src="Images/nextstrain.png" class="image">
+    <h2 class="h2 anchored">nextstrain</h2>
+    
+    <p class="p">Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!
 </p>
-<p>Nunc ac dignissim magna. Vestibulum vitae egestas elit. Proin feugiat leo quis ante condimentum, eu ornare mauris feugiat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris cursus laoreet ex, dignissim bibendum est posuere iaculis. Suspendisse et maximus elit. In fringilla gravida ornare. Aenean id lectus pulvinar, sagittis felis nec, rutrum risus. Nam vel neque eu arcu blandit fringilla et in quam. Aliquam luctus est sit amet vestibulum eleifend. Phasellus elementum sagittis molestie. Proin tempor lorem arcu, at condimentum purus volutpat eu. Fusce et pellentesque ligula. Pellentesque id tellus at erat luctus fringilla. Suspendisse potenti.</p>
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://grubaughlab.com/" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://medicine.yale.edu/lab/weinberger/" title="Group site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-people-fill"></i></a>
+        
+        
+        &nbsp;
+        
+        
+        
+        <p class="p">Basic Research Assays</p>
+        
+      </small>
+    </div>
+    
+  </div>
 
+  
+  <div class="tile" data-index="1">
+    <img src="Images/DSDE People_AS399026036.jpeg" class="image">
+    <h2 class="h2 anchored">The Health Attribution Library</h2>
+    
+    <p class="p">We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. The Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations.
+</p>
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://www.healthattribution.org/" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-people-fill"></i></a>
+        
+        
+        &nbsp;
+        
+        
+        
+        <p class="p">Clinical Study/Surveys</p>
+        
+      </small>
+    </div>
+    
+  </div>
 
+  
+  <div class="tile" data-index="2">
+    <img src="Images/wisspar.png" class="image">
+    <h2 class="h2 anchored">Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)</h2>
+    
+    <p class="p">The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a centralized platform housing data on immunogenicity from clinical trials of pneumococcal vaccines. The data on WISSPAR are primarily curated from outcomes tables from clinicaltrials.gov and are made available in a searchable format that can be readily used for downstream analyses.
+<br>
+<br>
+Fields included in the database include product, manufacturers, dosing schedule, age group, and geographic region. You can use the embedded tools to generate customizable visualizations, export data for further analyses, or just browse through clinical trial results.
+</p>
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://wisspar.com/" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://medicine.yale.edu/lab/weinberger/" title="Group site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-people-fill"></i></a>
+        
+        
+        &nbsp;
+        
+        
+        
+        <p class="p">Clinical Study/Surveys</p>
+        
+      </small>
+    </div>
+    
+  </div>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</div>
+
+<h2 class="anchored">Government Agency or Program</h2>
+
+<div class="container">
+
+  
+  <div class="tile" data-index="3">
+    <img src="Images/Firefly data science ai hub; watercolor image 92513.jpg" class="image">
+    <h2 class="h2 anchored">National Center for Health Statistics (NCHS)</h2>
+    
+    <p class="p">The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and death records, medical records, interviews with people and healthcare providers, direct physical examinations, and laboratory testing. 
+<br>
+<br>
+NCHS shares data, statistics, and analysis in multiple ways, including reports, dashboards, and data files. Including: Family Growth Survey, Health Care Surveys, Rapid Surveys, Health and Nutrition Examination Survey, Health Interview Survey, Vital Statistics, and a special compilation of linked surveys with administrative data. Here we specifically list the surveys that are not open access only.
+</p>
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://www.cdc.gov/nchs/index.html" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+        
+        
+        <p class="p">Clinical Study/Surveys</p>
+        
+      </small>
+    </div>
+    
+  </div>
+
+  
+  <div class="tile" data-index="4">
+    <img src="Images/nhis.png" class="image">
+    <h2 class="h2 anchored">NCHS's National Health Interview Survey (NHIS)</h2>
+    
+    <p class="p">The National Health Interview Survey (NHIS) monitors the health of people across the country—the U.S. population—by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults.
+<br>
+<br>
+CDC's National Center for Health Statistics (NCHS) conducts NHIS. It is the nation's largest and oldest national health survey. NHIS began collecting data in 1957.
+<br>
+<br>
+Each year, NHIS collects data from about 27,000 adults through confidential, face-to-face interviews throughout the year. Many of these adults also provide health information about children in their households.
+<br>
+<br>
+NHIS collects data from civilians who don't live in institutions. Civilians are people not serving on active duty in the military. Institutionalized people live in places like correctional facilities, skilled-nursing homes, and mental (psychiatric) hospitals.
+</p>
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://www.cdc.gov/nchs/nhis/index.html" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+        
+        
+        <p class="p">Clinical Study/Surveys</p>
+        
+      </small>
+    </div>
+    
+  </div>
+
+  
+  <div class="tile" data-index="5">
+    <img src="Images/nhcs.png" class="image">
+    <h2 class="h2 anchored">NCHS's The National Health Care Surveys (NHCS)</h2>
+    
+    <p class="p">The National Health Care Surveys are a family of surveys that provide information about—
+</p><ul>
+    <li>Organizations and providers that deliver health care</li>
+    <li>The healthcare services they provide</li>
+    <li>The patients they serve across diverse healthcare settings</li>
+</ul>
+<p style="margin-bottom: -10px">Researchers, policymakers, and health professionals can use data from our surveys to understand providers, patients, and management and delivery of patient care in the United States.</p>
+<p></p>
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+         
+        <a href="https://www.cdc.gov/nchs/healthcare-surveys/about/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fupdates%2Fnational-health-care-surveys.html" title="Main site" class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        
+        
+        &nbsp;
+        
+        
+        
+        &nbsp;
+        
+        
+        
+        <p class="p">Clinical Study/Surveys</p>
+        
+      </small>
+    </div>
+    
+  </div>
+
+</div>
+
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -576,17 +935,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./about-us.html">
+    <a class="nav-link" href="../about-us.html">
 <p>About Us</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./Resources/index.html">
+    <a class="nav-link" href="../Resources/index.html">
 <p>Resources</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./datasets.html">
+    <a class="nav-link" href="../datasets.html">
 <p>Datasets</p>
 </a>
   </li>  

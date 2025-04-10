@@ -1,11 +1,27 @@
 [
   {
+    "listing": "/Resources/index.html",
+    "items": []
+  },
+  {
     "listing": "/Restricted-Access/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Freely-Accessible/index.html",
+    "items": []
+  },
+  {
+    "listing": "/License-Required/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Not Used/Restricted-Access_blog/index.html",
     "items": [
-      "/Restricted-Access/NIH All of Us/index.html",
-      "/Restricted-Access/UK Biobank/index.html",
-      "/Restricted-Access/YNHHS Epic Cosmos/index.html",
-      "/Restricted-Access/YODA/index.html"
+      "/Not Used/Restricted-Access_blog/NIH All of Us/index.html",
+      "/Not Used/Restricted-Access_blog/UK Biobank/index.html",
+      "/Not Used/Restricted-Access_blog/YNHHS Epic Cosmos/index.html",
+      "/Not Used/Restricted-Access_blog/YODA/index.html"
     ]
   }
 ]
