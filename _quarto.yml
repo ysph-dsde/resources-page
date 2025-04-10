@@ -13,16 +13,18 @@ website:
   search: true
   navbar:
     right:
-      - text: Resource
+      - text: "Resources"
+        href: Resources/index.qmd
+      - text: Datasets
         menu:
           - text: "Overview"
-            href: resources.qmd
+            href: datasets.qmd
           - text: "Freely Accessible"
-            href: bucket-1.qmd
+            href: Freely-Accessible/index.qmd
           - text: "Restricted Access"
-            href: bucket-2.qmd
+            href: Restricted-Access/index.qmd
           - text: "License Required"
-            href: bucket-3.qmd
+            href: License-Required/index.qmd
       - text: About Us
         href: about-us.qmd
       - text: Contact
@@ -34,8 +36,10 @@ website:
     center:
       - text: About Us
         href: about-us.qmd
-      - text: Resource
-        href: resources.qmd
+      - text: Resources
+        href: Resources/index.qmd
+      - text: Datasets
+        href: datasets.qmd
       - text: Contact
         href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/
     right: 

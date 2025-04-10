@@ -1,0 +1,69 @@
+
+```{=html}
+
+<!--icons from https://icons.getbootstrap.com/-->
+
+
+<% for (const item of items) { %>
+
+<div class="container">
+
+<% for (const tile of item.tiles) { %>
+  
+  <div class="tile" <%= metadataAttrs(tile) %>>
+    <img src="<%- tile.image %>" class="image">
+    <h2 class="h2"><%= tile.title %></h2>
+    
+    <p class="p"><%= tile.description %></p>
+    
+    <div class="card-header py-1 px-2 border-bottom bg-light">
+      <small class="card-text inline-block">
+        
+        <% if (tile.info) { %> 
+        &nbsp;
+        <a href="<%- tile.info %>" title="Get more information" 
+          class="source-code card-text float-beginning inline-block">
+          <i class="bi-info-circle"></i></a>
+        <% } %>
+        
+        <% if (tile.github) { %> 
+        &nbsp;
+        <a href="<%- tile.github %>" title="GitHub page" 
+          class="source-code card-text float-beginning inline-block">
+          <i class="bi-github"></i></a>
+        <% } %>
+        
+        <% if (tile.site) { %> 
+        &nbsp;
+        <a href="<%- tile.site %>" title="Main site" 
+          class="source-code card-text float-beginning inline-block">
+          <i class="bi-globe"></i></a>
+        <% } %>
+        
+        <% if (tile.group) { %> 
+        &nbsp;
+        <a href="<%- tile.group %>" title="Group site" 
+          class="source-code card-text float-beginning inline-block">
+          <i class="bi-people-fill"></i></a>
+        <% } %>
+        
+        <% if (tile.article) { %> 
+        &nbsp;
+        <a href="<%- tile.article %>" title="View publication" 
+          class="source-code card-text float-beginning inline-block">
+          <i class="bi-journal-text"></i></a>
+        <% } %>
+        
+        <p class="p"><%= tile.topic %></p>
+        
+      </small>
+    </div>
+    
+  </div>
+
+<% } %>
+
+</div>
+<% } %>
+
+```

@@ -2,25 +2,19 @@
   title: "Freely Accessible"
   title-block-banner: "#ae8b2d50"
   title-block-banner-color: "#2e2e36"
-  format: html
+  format:
+    html:
+      toc: false
+      page-layout: full
   editor: visual
+  execute:
+    echo: false
   markdown: 
   editor_options: 
   chunk_output_type: console
-  back-to-top-navigation: true
+  listing:
+    - template: free_listing.ejs
+      contents: free_listing.yml
 ---
 
-{{< lipsum 1 >}}
 
-## Section #1
-
-### Resource #1
-
-### Resource #2
-
-
-## Section #2
-
-### Resource #1
-
-### Resource #2
