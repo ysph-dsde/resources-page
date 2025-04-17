@@ -4,14 +4,14 @@
     "href": "datasets.html",
     "title": "Datasets",
     "section": "",
-    "text": "Here we have curated commonly used public health datasets, and included relevant links or instructions on how to access them. The table below compiles all listings together, but we have further organized them into separate pages for freely accessible resources, those with restricted access, and those that require a license.\n\n\n\n\n\n\n\n\n\n\n\n\n Back to top"
+    "text": "Back to top"
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/UK Biobank/index.html",
     "href": "Not Used/Restricted-Access_blog/UK Biobank/index.html",
     "title": "UK Biobank",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    "text": "Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim."
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/UK Biobank/index.html#links-contacts-and-formsduas",
@@ -46,7 +46,7 @@
     "href": "Not Used/Restricted-Access_blog/YNHHS Epic Cosmos/index.html",
     "title": "YNHHS Epic Cosmos",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
+    "text": "Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim."
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/YNHHS Epic Cosmos/index.html#links-contacts-and-formsduas",
@@ -109,7 +109,7 @@
     "href": "index.html",
     "title": "Resource Navigation Tool",
     "section": "",
-    "text": "Etiam non efficitur urna, quis elementum nisi. Mauris posuere a augue vel gravida. Praesent luctus erat et ex iaculis interdum. Nulla vestibulum quam ac nunc consequat vulputate. Nullam iaculis lobortis sem sit amet fringilla. Aliquam semper, metus ut blandit semper, nulla velit fermentum sapien, fermentum ultrices dolor sapien sed leo. Vestibulum molestie faucibus magna, at feugiat nulla ullamcorper a. Aliquam erat volutpat. Praesent scelerisque magna a justo maximus, sit amet suscipit mauris tempor. Nulla nec dolor eget ipsum pellentesque lobortis a in ipsum. Morbi turpis turpis, fringilla a eleifend maximus, viverra nec neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.\n\n\n\n Back to top"
+    "text": "Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice. Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.\n\n\n\n Back to top"
   },
   {
     "objectID": "Resources/index.html",
@@ -123,21 +123,21 @@
     "href": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html",
     "title": "YNHHS Epic Cosmos",
     "section": "",
-    "text": "Duis urna urna, pellentesque eu urna ut, malesuada bibendum dolor. Suspendisse potenti. Vivamus ornare, arcu quis molestie ultrices, magna est accumsan augue, auctor vulputate erat quam quis neque. Nullam scelerisque odio vel ultricies facilisis. Ut porta arcu non magna sagittis lacinia. Cras ornare vulputate lectus a tristique. Pellentesque ac arcu congue, rhoncus mi id, dignissim ligula."
+    "text": "Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic Cosmos data will require a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:\n\n\nVirtual Desktop Infrastructure (VDI)\n\n\nEpic SlicerDicer\n\n\nComputational Health Platform (CHP)\n\n\n\n\n\n\n\nMicrosoft Office 365\n\n\n\nRemote access to a YNHHS secure device without requiring the YNHHS VPN. VDI includes the following software: SQL Server Management Studio, R, Stata, SAS, Office365, and Epic. It can be used to handle small-to-medium sized data, accessing Epic charts, SlicerDicer, and the CHP.\nAccess de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. IRB applications is not required, but training is strongly recommended before usage.\nA secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. Suitable for AI research and development, and is well suited for analyzing large volumes of data in different forms (i.e. images, text, structured).\nThis tool requires advanced data science skills with relational databases, Python, and SQL. Additional details can be found here: OMOP Common Data Model.\nMicrosoft applications linked within the YNHHS organization.\n\n\n\n\nAll Yale University and YNHHS (YU-YNHHS) Covered Entity faculty and licensed provides may submit and sponsor RBA requests. If you are within the Yale system, your manager or sponser with a YNHHS account must complete the “YNHHS Researcher Basic Access” request on your behalf to start the process.\nIf you are not a member of a YU-YNHHS Covered Entity (e.g. YSPH), you will need a sponsor to submit a request on your behalf. Find the current “List of Covered Departments” under “Administrative Functions” on the hippa.yale.edu resources page."
   },
   {
-    "objectID": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#links-contacts-and-formsduas",
-    "href": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#links-contacts-and-formsduas",
+    "objectID": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#overview",
+    "href": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#overview",
     "title": "YNHHS Epic Cosmos",
-    "section": "Links, Contacts, and Forms/DUA’s",
-    "text": "Links, Contacts, and Forms/DUA’s"
+    "section": "",
+    "text": "Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic Cosmos data will require a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:\n\n\nVirtual Desktop Infrastructure (VDI)\n\n\nEpic SlicerDicer\n\n\nComputational Health Platform (CHP)\n\n\n\n\n\n\n\nMicrosoft Office 365\n\n\n\nRemote access to a YNHHS secure device without requiring the YNHHS VPN. VDI includes the following software: SQL Server Management Studio, R, Stata, SAS, Office365, and Epic. It can be used to handle small-to-medium sized data, accessing Epic charts, SlicerDicer, and the CHP.\nAccess de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. IRB applications is not required, but training is strongly recommended before usage.\nA secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. Suitable for AI research and development, and is well suited for analyzing large volumes of data in different forms (i.e. images, text, structured).\nThis tool requires advanced data science skills with relational databases, Python, and SQL. Additional details can be found here: OMOP Common Data Model.\nMicrosoft applications linked within the YNHHS organization.\n\n\n\n\nAll Yale University and YNHHS (YU-YNHHS) Covered Entity faculty and licensed provides may submit and sponsor RBA requests. If you are within the Yale system, your manager or sponser with a YNHHS account must complete the “YNHHS Researcher Basic Access” request on your behalf to start the process.\nIf you are not a member of a YU-YNHHS Covered Entity (e.g. YSPH), you will need a sponsor to submit a request on your behalf. Find the current “List of Covered Departments” under “Administrative Functions” on the hippa.yale.edu resources page."
   },
   {
     "objectID": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#step-by-step",
     "href": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#step-by-step",
     "title": "YNHHS Epic Cosmos",
     "section": "Step-by-Step",
-    "text": "Step-by-Step"
+    "text": "Step-by-Step\n\nYour YU-YNHHS Covered Entity manager or sponsor will complete the “YNHHS Researcher Basic Access” request on your behalf. This will give you YNHHS log-in credentials and identification authentication with Duo.\nFor Yale NetID holders: HIPAA Privacy and Security courses in Workday, including the basic privacy and security module followed by the role specific module (i.e. for clinician’s or researcher’s).\nFor Non-Yale NetID holders: read and sign the HIPAA Privacy and Security training materials specific to your role on the project (i.e. for clinician’s or researcher’s). Submission directions for these documents can be found on the PDF.\nHuman Subjects Protection Training (HSPT) certificate from CITI completed within the last 3 years. Below is a summary of the process, and the complete directions can be found on the It’s Your Yale page about HSPT. You can reach out to irb.training@yale.edu for further questions.\nResearchers will need to complete the following CITI certificates:\n\n“Basic Training”\nOne of the following two initial/basic Human Subjects Research modules: “Biomedical Research Basic” or “Social Behavioral Educational Researchers Basic”.\n\nFor Yale-affiliates, it is preferable, though not required, to go through Workday to access the CITI training modules. Doing so will expedite recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) Institutional Review Board (IRB) system. In Workday, the CITI training link will show up as the “Human Subjects Protection Training – Initial/Refresher” course. You can reach out to your manager, learning@yale.edu, or irb.training@yale.edu to request manual assignment if needed.\nQualifying certificates completed through other institutions CITI subscriptions need to be emailed to irb.training@yale.edu. Please keep in mind that receiving CITI certification independently from a subscribing institution will incur charges."
   },
   {
     "objectID": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#typical-timeline",
@@ -147,123 +147,39 @@
     "text": "Typical Timeline\n\n\n\n\n\n\nImportant\n\n\n\nGood things come with time."
   },
   {
-    "objectID": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#other-notes",
-    "href": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#other-notes",
+    "objectID": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#sources",
+    "href": "Restricted-Access/Pages/YNHHS-Epic-Cosmos.html#sources",
     "title": "YNHHS Epic Cosmos",
-    "section": "Other Notes",
-    "text": "Other Notes"
+    "section": "Sources",
+    "text": "Sources\n\nYale Biomedical Informatics & Computing\n\n\n\n\nUpdated: April 16th, 2025"
   },
   {
     "objectID": "Restricted-Access/Pages/NIH_All-of-Us.html",
     "href": "Restricted-Access/Pages/NIH_All-of-Us.html",
     "title": "NIH’s All of Us",
     "section": "",
-    "text": "Duis urna urna, pellentesque eu urna ut, malesuada bibendum dolor. Suspendisse potenti. Vivamus ornare, arcu quis molestie ultrices, magna est accumsan augue, auctor vulputate erat quam quis neque. Nullam scelerisque odio vel ultricies facilisis. Ut porta arcu non magna sagittis lacinia. Cras ornare vulputate lectus a tristique. Pellentesque ac arcu congue, rhoncus mi id, dignissim ligula."
-  },
-  {
-    "objectID": "Restricted-Access/Pages/NIH_All-of-Us.html#links-contacts-and-formsduas",
-    "href": "Restricted-Access/Pages/NIH_All-of-Us.html#links-contacts-and-formsduas",
-    "title": "NIH’s All of Us",
-    "section": "Links, Contacts, and Forms/DUA’s",
-    "text": "Links, Contacts, and Forms/DUA’s"
-  },
-  {
-    "objectID": "Restricted-Access/Pages/NIH_All-of-Us.html#step-by-step",
-    "href": "Restricted-Access/Pages/NIH_All-of-Us.html#step-by-step",
-    "title": "NIH’s All of Us",
-    "section": "Step-by-Step",
-    "text": "Step-by-Step"
-  },
-  {
-    "objectID": "Restricted-Access/Pages/NIH_All-of-Us.html#typical-timeline",
-    "href": "Restricted-Access/Pages/NIH_All-of-Us.html#typical-timeline",
-    "title": "NIH’s All of Us",
-    "section": "Typical Timeline",
-    "text": "Typical Timeline\n\n\n\n\n\n\nImportant\n\n\n\nGood things come with time."
-  },
-  {
-    "objectID": "Restricted-Access/Pages/NIH_All-of-Us.html#other-notes",
-    "href": "Restricted-Access/Pages/NIH_All-of-Us.html#other-notes",
-    "title": "NIH’s All of Us",
-    "section": "Other Notes",
-    "text": "Other Notes"
+    "text": "Free Adobe Stock photo by inspiring.team. File #: 284810520\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Restricted-Access/index.html",
     "href": "Restricted-Access/index.html",
     "title": "Restricted Access",
     "section": "",
-    "text": "Yale University Open Data Access (YODA)\n    \n    The Yale University Open Data Access (YODA) Project’s mission is to advocate for the responsible sharing of clinical research data, open science, and research transparency. The Project is committed to supporting research focused on improving the health of patients and informing science and public health. By clicking this link, you’ll be directed to a page where you can request clinical trial data.\n\n    \n    \n      \n        \n         \n         \n        \n          \n        \n        \n        \n        \n         \n         \n        \n          \n        \n        \n         \n         \n        \n          \n        \n        \n        \n        \n        Yale University Affiliated\n        \n      \n    \n    \n  \n\n  \n  \n    \n    NIH's All of Us\n    \n    All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.\n\n    \n    \n      \n        \n         \n         \n        \n          \n        \n        \n        \n        \n         \n         \n        \n          \n        \n        \n        \n        \n        \n        \n        US Government\n        \n      \n    \n    \n  \n\n  \n  \n    \n    UK Biobank\n    \n    The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. \n\n\nBefore applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.\n\n    \n    \n      \n        \n         \n         \n        \n          \n        \n        \n        \n        \n         \n         \n        \n          \n        \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    \n  \n\n  \n  \n    \n    YNHHS Epic COSMOS\n    \n    Descriptive descriptions with descriptors.\n    \n    \n      \n        \n         \n         \n        \n          \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        Yale University Affiliated\n        \n      \n    \n    \n  \n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Yale University Open Data Access (YODA)\n    \n    The Yale University Open Data Access (YODA) Project’s mission is to advocate for the responsible sharing of clinical research data, open science, and research transparency. The Project is committed to supporting research focused on improving the health of patients and informing science and public health. By clicking this link, you’ll be directed to a page where you can request clinical trial data.\n\n    \n    \n      \n        \n         \n         \n        \n          \n        \n        \n        \n        \n         \n         \n        \n          \n        \n        \n         \n         \n        \n          \n        \n        \n        \n        \n        Yale University Affiliated\n        \n      \n    \n    \n  \n\n  \n  \n    \n    YNHHS Epic COSMOS\n    \n    The Cosmos data set combines billions of clinical data points, made up of data from across the Epic community, to form the largest database of EHR patient information. Participating organizations provide a HIPAA-defined limited data set to the centralized Cosmos database. \n\n\nWith over 34,200 Clinics and 1,522 Hospitals participating in Cosmos, researchers can access a representative sample of patients who seek healthcare. You can learn more about the latest features of Cosmos on Epic UserWeb, available to all YNHHS research users and on the Yale Cosmos Teams Site.\n\n    \n    \n      \n        \n         \n         \n        \n          \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        \n        Yale University Affiliated\n        \n      \n    \n    \n  \n\n  \n  \n    \n    NIH's All of Us\n    \n    All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.\n\n    \n    \n      \n        \n         \n         \n        \n          \n        \n        \n        \n        \n         \n         \n        \n          \n        \n        \n        \n        \n        \n        \n        US Government\n        \n      \n    \n    \n  \n\n  \n  \n    \n    UK Biobank\n    \n    The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. \n\n\nBefore applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.\n\n    \n    \n      \n        \n         \n         \n        \n          \n        \n        \n        \n        \n         \n         \n        \n          \n        \n        \n        \n        \n        \n        \n        \n        \n      \n    \n    \n  \n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "Restricted-Access/Pages/YODA.html",
     "href": "Restricted-Access/Pages/YODA.html",
     "title": "Yale University Open Data Access (YODA)",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sagittis posuere ligula sit amet lacinia. Duis dignissim pellentesque magna, rhoncus congue sapien finibus mollis. Ut eu sem laoreet, vehicula ipsum in, convallis erat. Vestibulum magna sem, blandit pulvinar augue sit amet, auctor malesuada sapien. Nullam faucibus leo eget eros hendrerit, non laoreet ipsum lacinia. Curabitur cursus diam elit, non tempus ante volutpat a. Quisque hendrerit blandit purus non fringilla. Integer sit amet elit viverra ante dapibus semper. Vestibulum viverra rutrum enim, at luctus enim posuere eu. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-  },
-  {
-    "objectID": "Restricted-Access/Pages/YODA.html#links-contacts-and-formsduas",
-    "href": "Restricted-Access/Pages/YODA.html#links-contacts-and-formsduas",
-    "title": "Yale University Open Data Access (YODA)",
-    "section": "Links, Contacts, and Forms/DUA’s",
-    "text": "Links, Contacts, and Forms/DUA’s"
-  },
-  {
-    "objectID": "Restricted-Access/Pages/YODA.html#step-by-step",
-    "href": "Restricted-Access/Pages/YODA.html#step-by-step",
-    "title": "Yale University Open Data Access (YODA)",
-    "section": "Step-by-Step",
-    "text": "Step-by-Step"
-  },
-  {
-    "objectID": "Restricted-Access/Pages/YODA.html#typical-timeline",
-    "href": "Restricted-Access/Pages/YODA.html#typical-timeline",
-    "title": "Yale University Open Data Access (YODA)",
-    "section": "Typical Timeline",
-    "text": "Typical Timeline\n\n\n\n\n\n\nImportant\n\n\n\nGood things come with time."
-  },
-  {
-    "objectID": "Restricted-Access/Pages/YODA.html#other-notes",
-    "href": "Restricted-Access/Pages/YODA.html#other-notes",
-    "title": "Yale University Open Data Access (YODA)",
-    "section": "Other Notes",
-    "text": "Other Notes"
+    "text": "Free Adobe Stock photo by inspiring.team. File #: 284810520\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Restricted-Access/Pages/UK-Biobank.html",
     "href": "Restricted-Access/Pages/UK-Biobank.html",
     "title": "UK Biobank",
     "section": "",
-    "text": "Duis urna urna, pellentesque eu urna ut, malesuada bibendum dolor. Suspendisse potenti. Vivamus ornare, arcu quis molestie ultrices, magna est accumsan augue, auctor vulputate erat quam quis neque. Nullam scelerisque odio vel ultricies facilisis. Ut porta arcu non magna sagittis lacinia. Cras ornare vulputate lectus a tristique. Pellentesque ac arcu congue, rhoncus mi id, dignissim ligula."
-  },
-  {
-    "objectID": "Restricted-Access/Pages/UK-Biobank.html#links-contacts-and-formsduas",
-    "href": "Restricted-Access/Pages/UK-Biobank.html#links-contacts-and-formsduas",
-    "title": "UK Biobank",
-    "section": "Links, Contacts, and Forms/DUA’s",
-    "text": "Links, Contacts, and Forms/DUA’s"
-  },
-  {
-    "objectID": "Restricted-Access/Pages/UK-Biobank.html#step-by-step",
-    "href": "Restricted-Access/Pages/UK-Biobank.html#step-by-step",
-    "title": "UK Biobank",
-    "section": "Step-by-Step",
-    "text": "Step-by-Step"
-  },
-  {
-    "objectID": "Restricted-Access/Pages/UK-Biobank.html#typical-timeline",
-    "href": "Restricted-Access/Pages/UK-Biobank.html#typical-timeline",
-    "title": "UK Biobank",
-    "section": "Typical Timeline",
-    "text": "Typical Timeline\n\n\n\n\n\n\nImportant\n\n\n\nGood things come with time."
-  },
-  {
-    "objectID": "Restricted-Access/Pages/UK-Biobank.html#other-notes",
-    "href": "Restricted-Access/Pages/UK-Biobank.html#other-notes",
-    "title": "UK Biobank",
-    "section": "Other Notes",
-    "text": "Other Notes"
+    "text": "Free Adobe Stock photo by inspiring.team. File #: 284810520\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Freely-Accessible/index.html",
@@ -282,28 +198,21 @@
   {
     "objectID": "about-us.html",
     "href": "about-us.html",
-    "title": "Resource Navigation Tool",
+    "title": "About Us",
     "section": "",
-    "text": "Etiam non efficitur urna, quis elementum nisi. Mauris posuere a augue vel gravida. Praesent luctus erat et ex iaculis interdum. Nulla vestibulum quam ac nunc consequat vulputate. Nullam iaculis lobortis sem sit amet fringilla. Aliquam semper, metus ut blandit semper, nulla velit fermentum sapien, fermentum ultrices dolor sapien sed leo. Vestibulum molestie faucibus magna, at feugiat nulla ullamcorper a. Aliquam erat volutpat. Praesent scelerisque magna a justo maximus, sit amet suscipit mauris tempor. Nulla nec dolor eget ipsum pellentesque lobortis a in ipsum. Morbi turpis turpis, fringilla a eleifend maximus, viverra nec neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
-  },
-  {
-    "objectID": "about-us.html#about-us",
-    "href": "about-us.html#about-us",
-    "title": "Resource Navigation Tool",
-    "section": "",
-    "text": "Etiam non efficitur urna, quis elementum nisi. Mauris posuere a augue vel gravida. Praesent luctus erat et ex iaculis interdum. Nulla vestibulum quam ac nunc consequat vulputate. Nullam iaculis lobortis sem sit amet fringilla. Aliquam semper, metus ut blandit semper, nulla velit fermentum sapien, fermentum ultrices dolor sapien sed leo. Vestibulum molestie faucibus magna, at feugiat nulla ullamcorper a. Aliquam erat volutpat. Praesent scelerisque magna a justo maximus, sit amet suscipit mauris tempor. Nulla nec dolor eget ipsum pellentesque lobortis a in ipsum. Morbi turpis turpis, fringilla a eleifend maximus, viverra nec neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    "text": "Our Data Enclave and Navigation platform is designed to empower YSPH students, staff, and faculty by providing a centralized resource for accessing data and data tools.\nComprehensive Data Enclave and Navigation Tool: Access a robust collection of resources designed to support your public health data projects, including resource sites for commonly used public health datasets with information about how to access the data, anticipated timelines for accessing and utilizes these different datasets, and example Yale studies that have been conducted and published using each of these specific datasets.\nPublic Health Data Resources: Discover curated Yale resources such as aggregations of data or computational resources that students, staff and faculty can use in their research."
   },
   {
     "objectID": "about-us.html#things-we-do",
     "href": "about-us.html#things-we-do",
-    "title": "Resource Navigation Tool",
+    "title": "About Us",
     "section": "Things We Do",
     "text": "Things We Do"
   },
   {
     "objectID": "about-us.html#people",
     "href": "about-us.html#people",
-    "title": "Resource Navigation Tool",
+    "title": "About Us",
     "section": "People",
     "text": "People\nPeople"
   },
@@ -312,7 +221,7 @@
     "href": "Not Used/Restricted-Access_blog/YODA/index.html",
     "title": "Yale University Open Data Access (YODA)",
     "section": "",
-    "text": "Etiam non efficitur urna, quis elementum nisi. Mauris posuere a augue vel gravida. Praesent luctus erat et ex iaculis interdum. Nulla vestibulum quam ac nunc consequat vulputate. Nullam iaculis lobortis sem sit amet fringilla. Aliquam semper, metus ut blandit semper, nulla velit fermentum sapien, fermentum ultrices dolor sapien sed leo. Vestibulum molestie faucibus magna, at feugiat nulla ullamcorper a. Aliquam erat volutpat. Praesent scelerisque magna a justo maximus, sit amet suscipit mauris tempor. Nulla nec dolor eget ipsum pellentesque lobortis a in ipsum. Morbi turpis turpis, fringilla a eleifend maximus, viverra nec neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos."
+    "text": "Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim."
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/YODA/index.html#links-contacts-and-formsduas",
@@ -354,7 +263,7 @@
     "href": "Not Used/Restricted-Access_blog/NIH All of Us/index.html",
     "title": "NIH’s All of Us",
     "section": "",
-    "text": "Etiam quis tortor luctus, pellentesque ante a, finibus dolor. Phasellus in nibh et magna pulvinar malesuada. Ut nisl ex, sagittis at sollicitudin et, sollicitudin id nunc. In id porta urna. Proin porta dolor dolor, vel dapibus nisi lacinia in. Pellentesque ante mauris, ornare non euismod a, fermentum ut sapien. Proin sed vehicula enim. Aliquam tortor odio, vestibulum vitae odio in, tempor molestie justo. Praesent maximus lacus nec leo maximus blandit."
+    "text": "Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim."
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/NIH All of Us/index.html#links-contacts-and-formsduas",
