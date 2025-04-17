@@ -13,6 +13,10 @@
   chunk_output_type: console
 ---
 
+
+Reformat as YAML to allow for better search/filtering and hyperlinks to relevant pages for the resources.
+
+
 ```{r}
 #| echo: FALSE
 #| column: page
