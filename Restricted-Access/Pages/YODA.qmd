@@ -1,8 +1,6 @@
 ---
   title: "Yale University Open Data Access (YODA)"
-  description: "Descriptive description with descriptors."
-  title-block-banner: "#ae8b2d50"
-  title-block-banner-color: "#2e2e36"
+  title-block-banner: true
   format: html
   editor: visual
   image: cover.png
@@ -11,24 +9,4 @@
   chunk_output_type: console
 ---
 
-{{< lipsum 1 >}}
-
-\
-
-## Links, Contacts, and Forms/DUA's
-
-
-
-## Step-by-Step
-
-
-
-## Typical Timeline
-
-::: {.callout-important}
-Good things come with time.
-:::
-
-
-
-## Other Notes
+![Free Adobe Stock photo by inspiring.team. File #: 284810520](images/AdobeStock_284810520.jpeg){fig-align="center"}

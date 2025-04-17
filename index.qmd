@@ -9,10 +9,8 @@
   page-navigation: false
 ---
 
-![](Images/Data Science and Data Equity wordmark/PNG/Wordmark-Data-Science-and-Data-Equity-yaleblue.png)
+![](Images/Data Science and Data Equity wordmark/PNG/Wordmark-Data-Science-and-Data-Equity-black.png)\
 
 \
-\
 
-
-{{< lipsum 1 >}}
+Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice. Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.
