@@ -4,14 +4,14 @@
     "href": "datasets.html",
     "title": "Datasets",
     "section": "",
-    "text": "Back to top"
+    "text": "Reformat as YAML to allow for better search/filtering and hyperlinks to relevant pages for the resources.\n\n\n\n\n\n\n\n\n\n Back to top"
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/UK Biobank/index.html",
     "href": "Not Used/Restricted-Access_blog/UK Biobank/index.html",
     "title": "UK Biobank",
     "section": "",
-    "text": "Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim."
+    "text": "Maecenas turpis velit, ultricies non elementum vel, luctus nec nunc. Nulla a diam interdum, faucibus sapien viverra, finibus metus. Donec non tortor diam. In ut elit aliquet, bibendum sem et, aliquam tortor. Donec congue, sem at rhoncus ultrices, nunc augue cursus erat, quis porttitor mauris libero ut ex. Nullam quis leo urna. Donec faucibus ligula eget pellentesque interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus interdum erat ut ultricies. Aenean tempus ex non elit suscipit, quis dignissim enim efficitur. Proin laoreet enim massa, vitae laoreet nulla mollis quis."
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/UK Biobank/index.html#links-contacts-and-formsduas",
@@ -46,7 +46,7 @@
     "href": "Not Used/Restricted-Access_blog/YNHHS Epic Cosmos/index.html",
     "title": "YNHHS Epic Cosmos",
     "section": "",
-    "text": "Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim."
+    "text": "Maecenas turpis velit, ultricies non elementum vel, luctus nec nunc. Nulla a diam interdum, faucibus sapien viverra, finibus metus. Donec non tortor diam. In ut elit aliquet, bibendum sem et, aliquam tortor. Donec congue, sem at rhoncus ultrices, nunc augue cursus erat, quis porttitor mauris libero ut ex. Nullam quis leo urna. Donec faucibus ligula eget pellentesque interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus interdum erat ut ultricies. Aenean tempus ex non elit suscipit, quis dignissim enim efficitur. Proin laoreet enim massa, vitae laoreet nulla mollis quis."
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/YNHHS Epic Cosmos/index.html#links-contacts-and-formsduas",
@@ -109,7 +109,7 @@
     "href": "index.html",
     "title": "Resource Navigation Tool",
     "section": "",
-    "text": "Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice. Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.\n\n\n\n Back to top"
+    "text": "Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice. Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.\n\n\nAdd some description about the the icons used in the tiles. Full list here: Bootstrap Icons.\n\n\n\n Back to top"
   },
   {
     "objectID": "Resources/index.html",
@@ -198,30 +198,37 @@
   {
     "objectID": "about-us.html",
     "href": "about-us.html",
-    "title": "About Us",
+    "title": "Resource Navigation Tool",
     "section": "",
-    "text": "Our Data Enclave and Navigation platform is designed to empower YSPH students, staff, and faculty by providing a centralized resource for accessing data and data tools.\nComprehensive Data Enclave and Navigation Tool: Access a robust collection of resources designed to support your public health data projects, including resource sites for commonly used public health datasets with information about how to access the data, anticipated timelines for accessing and utilizes these different datasets, and example Yale studies that have been conducted and published using each of these specific datasets.\nPublic Health Data Resources: Discover curated Yale resources such as aggregations of data or computational resources that students, staff and faculty can use in their research."
+    "text": "Details about the DSDE group as a whole."
+  },
+  {
+    "objectID": "about-us.html#about-us",
+    "href": "about-us.html#about-us",
+    "title": "Resource Navigation Tool",
+    "section": "",
+    "text": "Details about the DSDE group as a whole."
   },
   {
     "objectID": "about-us.html#things-we-do",
     "href": "about-us.html#things-we-do",
-    "title": "About Us",
+    "title": "Resource Navigation Tool",
     "section": "Things We Do",
-    "text": "Things We Do"
+    "text": "Things We Do\nOur Data Enclave and Navigation platform is designed to empower YSPH students, staff, and faculty by providing a centralized resource for accessing data and data tools.\nComprehensive Data Enclave and Navigation Tool: Access a robust collection of resources designed to support your public health data projects, including resource sites for commonly used public health datasets with information about how to access the data, anticipated timelines for accessing and utilizes these different datasets, and example Yale studies that have been conducted and published using each of these specific datasets.\nPublic Health Data Resources: Discover curated Yale resources such as aggregations of data or computational resources that students, staff and faculty can use in their research.\nBrief statement about other things happeneing with DSDE, maybe also point to the Mukherjee lab site too? Resources and Services."
   },
   {
     "objectID": "about-us.html#people",
     "href": "about-us.html#people",
-    "title": "About Us",
+    "title": "Resource Navigation Tool",
     "section": "People",
-    "text": "People\nPeople"
+    "text": "People\nList of people who are from DSDE and collaborators working on the Resource Navigation Tool.\nLink to the whole team here: People"
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/YODA/index.html",
     "href": "Not Used/Restricted-Access_blog/YODA/index.html",
     "title": "Yale University Open Data Access (YODA)",
     "section": "",
-    "text": "Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim."
+    "text": "Maecenas turpis velit, ultricies non elementum vel, luctus nec nunc. Nulla a diam interdum, faucibus sapien viverra, finibus metus. Donec non tortor diam. In ut elit aliquet, bibendum sem et, aliquam tortor. Donec congue, sem at rhoncus ultrices, nunc augue cursus erat, quis porttitor mauris libero ut ex. Nullam quis leo urna. Donec faucibus ligula eget pellentesque interdum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rhoncus interdum erat ut ultricies. Aenean tempus ex non elit suscipit, quis dignissim enim efficitur. Proin laoreet enim massa, vitae laoreet nulla mollis quis."
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/YODA/index.html#links-contacts-and-formsduas",
@@ -263,7 +270,7 @@
     "href": "Not Used/Restricted-Access_blog/NIH All of Us/index.html",
     "title": "NIH’s All of Us",
     "section": "",
-    "text": "Nullam dapibus cursus dolor sit amet consequat. Nulla facilisi. Curabitur vel nulla non magna lacinia tincidunt. Duis porttitor quam leo, et blandit velit efficitur ut. Etiam auctor tincidunt porttitor. Phasellus sed accumsan mi. Fusce ut erat dui. Suspendisse eu augue eget turpis condimentum finibus eu non lorem. Donec finibus eros eu ante condimentum, sed pharetra sapien sagittis. Phasellus non dolor ac ante mollis auctor nec et sapien. Pellentesque vulputate at nisi eu tincidunt. Vestibulum at dolor aliquam, hendrerit purus eu, eleifend massa. Morbi consectetur eros id tincidunt gravida. Fusce ut enim quis orci hendrerit lacinia sed vitae enim."
+    "text": "Ut ut condimentum augue, nec eleifend nisl. Sed facilisis egestas odio ac pretium. Pellentesque consequat magna sed venenatis sagittis. Vivamus feugiat lobortis magna vitae accumsan. Pellentesque euismod malesuada hendrerit. Ut non mauris non arcu condimentum sodales vitae vitae dolor. Nullam dapibus, velit eget lacinia rutrum, ipsum justo malesuada odio, et lobortis sapien magna vel lacus. Nulla purus neque, hendrerit non malesuada eget, mattis vel erat. Suspendisse potenti."
   },
   {
     "objectID": "Not Used/Restricted-Access_blog/NIH All of Us/index.html#links-contacts-and-formsduas",
