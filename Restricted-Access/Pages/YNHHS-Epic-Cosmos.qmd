@@ -1,9 +1,15 @@
 ---
   title: "YNHHS Epic Cosmos"
-  description: "Descriptive description with descriptors."
-  title-block-banner: "#ae8b2d50"
-  title-block-banner-color: "#2e2e36"
+  description: |
+         </br>
+         The Cosmos data set combines billions of clinical data points, made up of data from across the Epic community, to form the largest database of Electronic Health Record (EHR) patient information. Participating organizations provide a HIPAA-defined limited data set to the centralized Cosmos database. 
+         </br>
+         </br>
+         With over 34,200 Clinics and 1,522 Hospitals participating in Cosmos, researchers can access a representative sample of patients who seek healthcare. You can learn more about the latest features of Cosmos on <a href="https://signin.epic.com/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fuserweb.epic.com%2f&wctx=rm%3d1%26id%3dpassive%26ru%3d%252F&wct=2025-04-16T00%3a32%3a32Z&wreply=https%3a%2f%2fuserweb.epic.com%2f">Epic UserWeb</a>, available to all Yale New Haven Health System (YNHHS) research users and on the <a href="https://teams.microsoft.com/l/team/19%3AJTlr92eAMEnJsBJmV1Uymbla8oek8ePqASKzxPE7mrQ1%40thread.tacv2/conversations?groupId=aa0ac073-1651-4dee-a59e-884bef65ea6b&tenantId=dd8cbebb-2139-4df8-b411-4e3e87abeb5c">Yale Cosmos Teams</a> Site.
+  title-block-banner: true
   format: html
+  filters:
+    - parse-latex
   editor: visual
   image: cover.png
   markdown: 
@@ -11,26 +17,88 @@
   chunk_output_type: console
 ---
 
-{{< lipsum 1 >}}
+## Overview
+
+Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic Cosmos data will require a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:
+
+:::::: columns
+::: {.column style="text-align:right; width:25%"}
+[Virtual Desktop Infrastructure (VDI)](https://medicine.yale.edu/ybic/computational-resources/ynhhs/#virtual-desktop-infrastructure)
 
 \
+\
+\hyperlink{https://medicine.yale.edu/ybic/data-resources-services/slicerdicer/}{Epic SlicerDicer}
 
-## Links, Contacts, and Forms/DUA's
+\
+\
+\hyperlink{https://medicine.yale.edu/ybic/computational-resources/ynhhs/#computational-health-platform}{Computational Health Platform (CHP)}\
+\
+\
+\
 
+\
+\
 
+Microsoft Office 365
+:::
+
+::: {.column width="3%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="72%"}
+Remote access to a YNHHS secure device without requiring the YNHHS VPN. VDI includes the following software: SQL Server Management Studio, R, Stata, SAS, Office365, and Epic. It can be used to handle small-to-medium sized data, accessing Epic charts, SlicerDicer, and the CHP.
+
+Access de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. IRB applications is not required, but training is strongly recommended before usage.
+
+A secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. Suitable for AI research and development, and is well suited for analyzing large volumes of data in different forms (i.e. images, text, structured). 
+
+This tool requires advanced data science skills with relational databases, Python, and SQL. Additional details can be found here: [OMOP Common Data Model](https://medicine.yale.edu/ybic/data-resources-services/omop-common-data-model/).
+
+Microsoft applications linked within the YNHHS organization.
+:::
+::::::
+
+### Do I Qualify?
+
+All Yale University and YNHHS (YU-YNHHS) Covered Entity faculty and licensed provides may submit and sponsor RBA requests. If you are within the Yale system, your manager or sponser with a YNHHS account must complete the ["YNHHS Researcher Basic Access"](https://shorturl.at/nJOS0) request on your behalf to start the process.
+
+If you are not a member of a YU-YNHHS Covered Entity (e.g. YSPH), you will need a sponsor to submit a request on your behalf. Find the current "List of Covered Departments" under "Administrative Functions" on the [hippa.yale.edu](https://hipaa.yale.edu/resources/resource-documents-and-guidance) resources page.
 
 ## Step-by-Step
 
+1.  Your YU-YNHHS Covered Entity manager or sponsor will complete the ["YNHHS Researcher Basic Access"](https://shorturl.at/nJOS0) request on your behalf. This will give you YNHHS log-in credentials and identification authentication with Duo.
+
+2.  **For Yale NetID holders:** [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) courses in Workday, including the basic privacy and security module followed by the role specific module (i.e. for clinician's or researcher's).
+
+    **For Non-Yale NetID holders:** read and sign the [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) training materials specific to your role on the project (i.e. for clinician's or researcher's). Submission directions for these documents can be found on the PDF.
+
+3.  Human Subjects Protection Training (HSPT) certificate from CITI completed within the last 3 years. Below is a summary of the process, and the complete directions can be found on the [It's Your Yale](https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training) page about HSPT. You can reach out to irb.training@yale.edu for further questions. 
+
+    Researchers will need to complete the following CITI certificates:
+
+    -   "Basic Training"
+    -   One of the following two initial/basic Human Subjects Research modules: "Biomedical Research Basic" or "Social Behavioral Educational Researchers Basic".
+
+    For Yale-affiliates, it is preferable, though not required, to go through Workday to access the CITI training modules. Doing so will expedite recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) Institutional Review Board (IRB) system. In Workday, the CITI training link will show up as the "Human Subjects Protection Training – Initial/Refresher" course. You can reach out to your manager, learning@yale.edu, or irb.training@yale.edu to request manual assignment if needed.
+
+    Qualifying certificates completed through other institutions CITI subscriptions need to be emailed to irb.training@yale.edu. Please keep in mind that receiving CITI certification independently from a subscribing institution will incur charges.
+
+4. 
 
 
 ## Typical Timeline
 
-::: {.callout-important}
+::: callout-important
 Good things come with time.
 :::
 
 
+## Sources
 
-## Other Notes
+1.  [Yale Biomedical Informatics & Computing](https://medicine.yale.edu/ybic)
 
-
+\
+\
+\
+Updated: April 16th, 2025

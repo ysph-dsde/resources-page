@@ -1,25 +1,21 @@
 ---
   title: "Datasets"
-  title-block-banner: "#ae8b2d50"
-  title-block-banner-color: "#2e2e36"
+  description: |
+    </br>
+    Here we have curated commonly used public health datasets, and included relevant links or instructions on how to access them. The table below compiles all listings together, but we have further organized them into separate pages for freely accessible resources, those with restricted access, and those that require a license.
+  title-block-banner: true
   format: 
     html:
       toc: false
-      page-layout: full
   editor: visual
   markdown: 
   editor_options: 
   chunk_output_type: console
 ---
 
-Here we have curated commonly used public health datasets, and included relevant links or instructions on how to access them. The table below compiles all listings together, but we have further organized them into separate pages for freely accessible resources, those with restricted access, and those that require a license.
-
-\
-\
-
-
 ```{r}
 #| echo: FALSE
+#| column: page
 
 library("readxl")
 library("DT")
@@ -37,12 +33,3 @@ datatable(All_Datsets_Table,
   options = list(pageLength = 10)
 )
 ```
-
-
-
-
-
-
-
-
-

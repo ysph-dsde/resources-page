@@ -1,8 +1,6 @@
 project:
   type: website
   output-dir: docs
-  
-editor: visual
 
 website:
   title: "Resource Navigation Tool"
@@ -11,6 +9,9 @@ website:
   bread-crumbs: false
   favicon: Images/DSDE-Social-Media-Profile.png
   search: true
+  repo-url: https://github.com/ysph-dsde/resources-page
+  issue-url: https://github.com/ysph-dsde/resources-page/issues
+  repo-actions: [source, issue]
   navbar:
     right:
       - text: "Resources"
@@ -59,4 +60,5 @@ format:
       - flatly
       - custom-styles/dsde-like-branding.scss
     toc: true
+    from: markdown+autolink_bare_uris
 

@@ -1,5 +1,9 @@
 ---
-  format: html
+  title: "About Us"
+  title-block-banner: true
+  format:
+    html:
+      toc: false
   editor: visual
   markdown: 
   editor_options: 
@@ -7,16 +11,14 @@
   back-to-top-navigation: true
 ---
 
-## About Us
+Our Data Enclave and Navigation platform is designed to empower YSPH students, staff, and faculty by providing a centralized resource for accessing data and data tools.
 
-{{< lipsum 1 >}}
+**Comprehensive Data Enclave and Navigation Tool:** Access a robust collection of resources designed to support your public health data projects, including resource sites for commonly used public health datasets with information about how to access the data, anticipated timelines for accessing and utilizes these different datasets, and example Yale studies that have been conducted and published using each of these specific datasets.
 
-
+**Public Health Data Resources:** Discover curated Yale resources such as aggregations of data or computational resources that students, staff and faculty can use in their research.
 
 ## Things We Do
-
 
 ## People
 
 [People](https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/people/)
-

@@ -2,28 +2,76 @@
 
 // colors
 
-$navbar-bg: #52515e;
+$navbar-bg: #00356B;
 $navbar-fg: #F0F0F0;
 
-$link-color: #ae8b2d;
+$link-color: #bd5319;
 $hover-color: lighten($link-color, 40%);
 
+// Tables
+
+$table-color: $navbar-fg !default;
+$table-accent-bg: rgba($navbar-fg, .05) !default;
+$table-hover-bg: rgba($navbar-fg, .075) !default;
+$table-border-color: body-mix(50%) !default;
+$table-dark-bg: body-mix(16%) !default;
+$table-dark-border-color: body-mix(23%) !default;
+
+$table-bg-scale: 0 !default;
+
+
+div.datatables {
+  color: #333;
+  font-size: 11pt;
+}
+
 /*-- scss:rules --*/
-.card-header {
-  background-color: #ae8b2d50;
+
+.a{
+  color: #00356B;
+}
+.quarto-title-block .quarto-title-banner {
+  color: #2e2e36;
+  background: lighten(#dddddd, 3%);
+}
+.quarto-title-banner h1, .quarto-title-banner .h1, .quarto-title-banner h2, .quarto-title-banner .h2 {
+  color: #2e2e36;
+}
+.quarto-title-banner a {
+  text-decoration: none;
+  color: $link-color;
 }
 
+
+a.navbar-brand :hover {
+  color: lighten(#63aaff, 10%);
+}
+.nav-item > a {
+  color: #F0F0F0
+}
 .nav-item > a:hover {
-  color: #ae8b2d;
+  color: lighten(#63aaff, 10%);
 }
-
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: lighten(#63aaff, 10%);
+}
 .nav-link {
   color: #F0F0F0;
 }
-
 .tabset .nav-link {
   color: #52515e;
 }
+
+.nav-footer a {
+  color: #6a6c6c;
+}
+.nav-footer a:hover {
+  color: lighten($link-color, 10%);
+}
+.nav-footer {
+  background: lighten(#dddddd, 3%);
+}
+
 
 .value-box {
   text-align: center;
@@ -36,11 +84,14 @@ $hover-color: lighten($link-color, 40%);
 .container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
   justify-content: center;
+  align-content: center;
+  column-gap: 10px;
+  row-gap: 30px;
 }
 .tile {
   width: 32%;
+  min-width: 300px;
   height: fit-content;
   border: 1px solid #444;
   display: flex;
@@ -52,12 +103,12 @@ $hover-color: lighten($link-color, 40%);
   text-decoration: none;
 }
 .tile h2{
-  max-width: 350px;
+  max-width: 300px;
   font-size: 18px;
   padding: 6px;
   color: #52505d;
   border-bottom: none;
-  margin-top: 0px;
+  margin-top: 10px;
   margin-bottom: 0px;
 }
 .tile p{
@@ -80,6 +131,11 @@ $hover-color: lighten($link-color, 40%);
   width: 100%;
   height: 150px;
   object-fit: cover;
+}
+@media(max-width: 575px){
+  .container{
+    flex-wrap: wrap;
+  }
 }
 
 

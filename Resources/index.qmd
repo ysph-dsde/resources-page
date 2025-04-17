@@ -1,7 +1,6 @@
 ---
   title: "Resources"
-  title-block-banner: "#ae8b2d50"
-  title-block-banner-color: "#2e2e36"
+  title-block-banner: true
   format:
     html:
       toc: false
