@@ -1,0 +1,35 @@
+-  tiles:
+     - title: National Center for Health Statistics (NCHS)
+       description: |
+         The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and death records, medical records, interviews with people and healthcare providers, direct physical examinations, and laboratory testing. 
+         </br>
+         </br>
+         NCHS shares data, statistics, and analysis in multiple ways, including reports, dashboards, and data files. Including: Family Growth Survey, Health Care Surveys, Rapid Surveys, Health and Nutrition Examination Survey, Health Interview Survey, Vital Statistics, and a special compilation of linked surveys with administrative data. Here we specifically list the surveys that are not open access only.
+       image: Images/Firefly data science ai hub; watercolor image 92513.jpg
+       topic: "Clinical Study/Surveys"
+       site: https://www.cdc.gov/nchs/index.html
+     - title: NCHS's National Health Interview Survey (NHIS)
+       description: |
+         The National Health Interview Survey (NHIS) monitors the health of people across the country—the U.S. population—by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults.
+         </br>
+         </br>
+         CDC's National Center for Health Statistics (NCHS) conducts NHIS. It is the nation's largest and oldest national health survey. NHIS began collecting data in 1957.
+         </br>
+         </br>
+         Each year, NHIS collects data from about 27,000 adults through confidential, face-to-face interviews throughout the year. Many of these adults also provide health information about children in their households.
+         </br>
+         </br>
+         NHIS collects data from civilians who don't live in institutions. Civilians are people not serving on active duty in the military. Institutionalized people live in places like correctional facilities, skilled-nursing homes, and mental (psychiatric) hospitals.
+       image: Images/nhis.png
+       topic: "Clinical Study/Surveys"
+       site: https://www.cdc.gov/nchs/nhis/index.html
+     - title: NCHS's The National Health Care Surveys (NHCS)
+       description: |
+         The National Health Care Surveys are a family of surveys that provide information about—<br>
+         &#x2022; Organizations and providers that deliver health care<br>
+         &#x2022; The healthcare services they provide<br>
+         &#x2022; The patients they serve across diverse healthcare settings
+         Researchers, policymakers, and health professionals can use data from our surveys to understand providers, patients, and management and delivery of patient care in the United States.
+       image: Images/nhcs.png
+       topic: "Clinical Study/Surveys"
+       site: https://www.cdc.gov/nchs/healthcare-surveys/about/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fupdates%2Fnational-health-care-surveys.html

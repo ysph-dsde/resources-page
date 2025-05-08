@@ -4,14 +4,29 @@
   format:
     html:
       toc: false
+      code-fold: true
       page-layout: full
-  editor: visual
   execute:
     echo: false
   markdown: 
   editor_options: 
   chunk_output_type: console
   listing:
-    - template: free_listing.ejs
-      contents: free_listing.yml
+    - categories: false
+    - sort-ui: false
+    - filter-ui: false
+    - page-size: 5
+    - id: national
+      template: free listing.ejs
+      contents: free listing_national.yml
+    - id: ysph
+      template: free listing.ejs
+      contents: free listing_ysph.yml
 ---
+
+:::{#national}
+:::
+
+:::{#ysph}
+:::
+
