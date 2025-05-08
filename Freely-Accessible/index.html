@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cb99cf1324a43cc9758c4c7f2362e19f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8bac37e12447f6c8eacbca809c4c65e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -79,13 +79,153 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-category','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-category","listing-tiles"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-listing-1'] = new List('listing-listing-1', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing-2 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing-2'] = new List('listing-listing-2', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing-3 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing-3'] = new List('listing-listing-3', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing-4 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: [{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing-4'] = new List('listing-listing-4', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-national .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-tiles"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-national'] = new List('listing-national', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ysph .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-tiles"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ysph'] = new List('listing-ysph', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -218,191 +358,82 @@ window.Quarto = {
 
 
 
+<div id="listing-national" class="quarto-listing quarto-listing-container-custom">
+
+<!--icons from https://icons.getbootstrap.com/-->
 
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clamping Test</title>
+  <!-- Unnecesary styling.
+  <style>
+    .clamp {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+  -->
 
 
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing-1">
-
-<h2 class="anchored">Yale School of Public Health</h2>
-
-<div class="container">
 
   
-  <div class="tile" data-index="0">
-    <img src="Images/nextstrain.png" class="image">
-    <h2 class="h2 anchored">nextstrain</h2>
-    
-    <p class="p">Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!
-</p>
-    
-    <div class="card-header py-1 px-2 border-bottom bg-light">
-      <small class="card-text inline-block">
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://grubaughlab.com/" title="Main site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-globe"></i></a>
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://medicine.yale.edu/lab/weinberger/" title="Group site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-people-fill"></i></a>
-        
-        
-        &nbsp;
-        
-        
-        
-        <p class="p">Basic Research Assays</p>
-        
-      </small>
-    </div>
-    
-  </div>
 
-  
-  <div class="tile" data-index="1">
-    <img src="Images/DSDE People_AS399026036.jpeg" class="image">
-    <h2 class="h2 anchored">The Health Attribution Library</h2>
-    
-    <p class="p">We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. The Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations.
-</p>
-    
-    <div class="card-header py-1 px-2 border-bottom bg-light">
-      <small class="card-text inline-block">
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://www.healthattribution.org/" title="Main site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-globe"></i></a>
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-people-fill"></i></a>
-        
-        
-        &nbsp;
-        
-        
-        
-        <p class="p">Clinical Study/Surveys</p>
-        
-      </small>
-    </div>
-    
-  </div>
+    <div class="container">
 
-  
-  <div class="tile" data-index="2">
-    <img src="Images/wisspar.png" class="image">
-    <h2 class="h2 anchored">Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)</h2>
-    
-    <p class="p">The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a centralized platform housing data on immunogenicity from clinical trials of pneumococcal vaccines. The data on WISSPAR are primarily curated from outcomes tables from clinicaltrials.gov and are made available in a searchable format that can be readily used for downstream analyses.
-<br>
-<br>
-Fields included in the database include product, manufacturers, dosing schedule, age group, and geographic region. You can use the embedded tools to generate customizable visualizations, export data for further analyses, or just browse through clinical trial results.
-</p>
-    
-    <div class="card-header py-1 px-2 border-bottom bg-light">
-      <small class="card-text inline-block">
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://wisspar.com/" title="Main site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-globe"></i></a>
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://medicine.yale.edu/lab/weinberger/" title="Group site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-people-fill"></i></a>
-        
-        
-        &nbsp;
-        
-        
-        
-        <p class="p">Clinical Study/Surveys</p>
-        
-      </small>
-    </div>
-    
-  </div>
-
-</div>
-
-<h2 class="anchored">Government Agency or Program</h2>
-
-<div class="container">
-
-  
-  <div class="tile" data-index="3">
-    <img src="Images/Firefly data science ai hub; watercolor image 92513.jpg" class="image">
-    <h2 class="h2 anchored">National Center for Health Statistics (NCHS)</h2>
-    
-    <p class="p">The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and death records, medical records, interviews with people and healthcare providers, direct physical examinations, and laboratory testing. 
+      
+      
+        <div class="tile" data-index="0">
+          <img src="Images/Firefly data science ai hub; watercolor image 92513.jpg" class="image">
+          <h2 class="h2 js-line-count anchored">National Center for Health Statistics (NCHS)</h2>
+          
+          <p class="description">The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and death records, medical records, interviews with people and healthcare providers, direct physical examinations, and laboratory testing. 
 <br>
 <br>
 NCHS shares data, statistics, and analysis in multiple ways, including reports, dashboards, and data files. Including: Family Growth Survey, Health Care Surveys, Rapid Surveys, Health and Nutrition Examination Survey, Health Interview Survey, Vital Statistics, and a special compilation of linked surveys with administrative data. Here we specifically list the surveys that are not open access only.
 </p>
-    
-    <div class="card-header py-1 px-2 border-bottom bg-light">
-      <small class="card-text inline-block">
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://www.cdc.gov/nchs/index.html" title="Main site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-globe"></i></a>
-        
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-        
-        
-        <p class="p">Clinical Study/Surveys</p>
-        
-      </small>
-    </div>
-    
-  </div>
+          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
+          
+          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
+            <small class="card-text inline-block">
+              
+              
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://www.cdc.gov/nchs/index.html" title="Main site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-globe"></i></a>
+              
+              
+              
+               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
+              
+              
+            </small>
+          </div>
+          
+        </div>
 
-  
-  <div class="tile" data-index="4">
-    <img src="Images/nhis.png" class="image">
-    <h2 class="h2 anchored">NCHS's National Health Interview Survey (NHIS)</h2>
-    
-    <p class="p">The National Health Interview Survey (NHIS) monitors the health of people across the country—the U.S. population—by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults.
+      
+      
+        <div class="tile" data-index="1">
+          <img src="Images/nhis.png" class="image">
+          <h2 class="h2 js-line-count anchored">NCHS's National Health Interview Survey (NHIS)</h2>
+          
+          <p class="description">The National Health Interview Survey (NHIS) monitors the health of people across the country—the U.S. population—by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults.
 <br>
 <br>
 CDC's National Center for Health Statistics (NCHS) conducts NHIS. It is the nation's largest and oldest national health survey. NHIS began collecting data in 1957.
@@ -413,81 +444,420 @@ Each year, NHIS collects data from about 27,000 adults through confidential, fac
 <br>
 NHIS collects data from civilians who don't live in institutions. Civilians are people not serving on active duty in the military. Institutionalized people live in places like correctional facilities, skilled-nursing homes, and mental (psychiatric) hospitals.
 </p>
-    
-    <div class="card-header py-1 px-2 border-bottom bg-light">
-      <small class="card-text inline-block">
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://www.cdc.gov/nchs/nhis/index.html" title="Main site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-globe"></i></a>
-        
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-        
-        
-        <p class="p">Clinical Study/Surveys</p>
-        
-      </small>
+          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
+          
+          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
+            <small class="card-text inline-block">
+              
+              
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://www.cdc.gov/nchs/nhis/index.html" title="Main site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-globe"></i></a>
+              
+              
+              
+               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
+              
+              
+            </small>
+          </div>
+          
+        </div>
+
+      
+      
+        <div class="tile" data-index="2">
+          <img src="Images/nhcs.png" class="image">
+          <h2 class="h2 js-line-count anchored">NCHS's The National Health Care Surveys (NHCS)</h2>
+          
+          <p class="description">The National Health Care Surveys are a family of surveys that provide information about—<br>
+• Organizations and providers that deliver health care<br>
+• The healthcare services they provide<br>
+• The patients they serve across diverse healthcare settings
+Researchers, policymakers, and health professionals can use data from our surveys to understand providers, patients, and management and delivery of patient care in the United States.
+</p>
+          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
+          
+          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
+            <small class="card-text inline-block">
+              
+              
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://www.cdc.gov/nchs/healthcare-surveys/about/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fupdates%2Fnational-health-care-surveys.html" title="Main site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-globe"></i></a>
+              
+              
+              
+               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
+              
+              
+            </small>
+          </div>
+          
+        </div>
+
+      
+
     </div>
-    
-  </div>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function updateLineCounts() {
+        document.querySelectorAll(".tile").forEach(function(tile) {
+          var h2Element = tile.querySelector(".js-line-count");
+          var lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
+
+          var height = h2Element.scrollHeight;
+          var lines = Math.floor(height / lineHeight);
+
+          // Set -webkit-line-clamp based on the lines for the <p> object
+          var clampValue;
+          if (lines === 3) {
+            clampValue = 5;
+          } else if (lines === 2) {
+            clampValue = 6;
+          } else if (lines === 1) {
+            clampValue = 7;
+          } else {
+            clampValue = null;
+          }
+          
+          // Adjust the clamp value based on the topic element
+          var topicElement = tile.querySelector('.topic');
+          if (topicElement && topicElement.style.display !== 'none') {
+            var topicHeight = topicElement.scrollHeight;
+            var topicLines = Math.floor(topicHeight / lineHeight);
+            if (clampValue !== null) {
+              clampValue -= topicLines;
+            }
+          } else {
+            // If no topic is provided, add 1 to clampValue
+            if (clampValue !== null) {
+              clampValue += 1;
+            }
+          }
+
+          var pElement = tile.querySelector("p.description");
+          console.log('Applying clampValue:', clampValue, 'to pElement:', pElement.textContent);
+
+          if (clampValue) {
+            pElement.style.display = '-webkit-box';
+            pElement.style.webkitBoxOrient = 'vertical';
+            pElement.style.webkitLineClamp = clampValue;
+            pElement.style.overflow = 'hidden';
+          } else {
+            pElement.style.display = 'block';
+            pElement.style.webkitBoxOrient = '';
+            pElement.style.webkitLineClamp = '';
+            pElement.style.overflow = '';
+          }
+        });
+      }
+
+      updateLineCounts();
+
+      window.addEventListener('resize', updateLineCounts);
+    });
+  </script>
+
+
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+<div id="listing-ysph" class="quarto-listing quarto-listing-container-custom">
+
+<!--icons from https://icons.getbootstrap.com/-->
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clamping Test</title>
+  <!-- Unnecesary styling.
+  <style>
+    .clamp {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+  -->
+
+
 
   
-  <div class="tile" data-index="5">
-    <img src="Images/nhcs.png" class="image">
-    <h2 class="h2 anchored">NCHS's The National Health Care Surveys (NHCS)</h2>
-    
-    <p class="p">The National Health Care Surveys are a family of surveys that provide information about—
-</p><ul>
-    <li>Organizations and providers that deliver health care</li>
-    <li>The healthcare services they provide</li>
-    <li>The patients they serve across diverse healthcare settings</li>
-</ul>
-<p style="margin-bottom: -10px">Researchers, policymakers, and health professionals can use data from our surveys to understand providers, patients, and management and delivery of patient care in the United States.</p>
-<p></p>
-    
-    <div class="card-header py-1 px-2 border-bottom bg-light">
-      <small class="card-text inline-block">
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://www.cdc.gov/nchs/healthcare-surveys/about/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fupdates%2Fnational-health-care-surveys.html" title="Main site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-globe"></i></a>
-        
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-        
-        
-        <p class="p">Clinical Study/Surveys</p>
-        
-      </small>
-    </div>
-    
-  </div>
 
+    <div class="container">
+
+      
+      
+        <div class="tile" data-index="0">
+          <img src="Images/nextstrain.png" class="image">
+          <h2 class="h2 js-line-count anchored">nextstrain</h2>
+          
+          <p class="description">Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!
+</p>
+          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
+          
+          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
+            <small class="card-text inline-block">
+              
+              
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://grubaughlab.com/" title="Main site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-globe"></i></a>
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://medicine.yale.edu/lab/weinberger/" title="Group site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-people-fill"></i></a>
+               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <p class="topic" style="margin-bottom: 5px;">Basic Research Assays</p>
+              
+              
+            </small>
+          </div>
+          
+        </div>
+
+      
+      
+        <div class="tile" data-index="1">
+          <img src="Images/DSDE People_AS399026036.jpeg" class="image">
+          <h2 class="h2 js-line-count anchored">The Health Attribution Library</h2>
+          
+          <p class="description">We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. The Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations.
+</p>
+          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
+          
+          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
+            <small class="card-text inline-block">
+              
+              
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://www.healthattribution.org/" title="Main site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-globe"></i></a>
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-people-fill"></i></a>
+               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
+              
+              
+            </small>
+          </div>
+          
+        </div>
+
+      
+      
+        <div class="tile" data-index="2">
+          <img src="Images/wisspar.png" class="image">
+          <h2 class="h2 js-line-count anchored">Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)</h2>
+          
+          <p class="description">The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a centralized platform housing data on immunogenicity from clinical trials of pneumococcal vaccines. The data on WISSPAR are primarily curated from outcomes tables from clinicaltrials.gov and are made available in a searchable format that can be readily used for downstream analyses.
+<br>
+<br>
+Fields included in the database include product, manufacturers, dosing schedule, age group, and geographic region. You can use the embedded tools to generate customizable visualizations, export data for further analyses, or just browse through clinical trial results.
+</p>
+          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
+          
+          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
+            <small class="card-text inline-block">
+              
+              
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://wisspar.com/" title="Main site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-globe"></i></a>
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://medicine.yale.edu/lab/weinberger/" title="Group site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-people-fill"></i></a>
+               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
+              
+              
+            </small>
+          </div>
+          
+        </div>
+
+      
+
+    </div>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function updateLineCounts() {
+        document.querySelectorAll(".tile").forEach(function(tile) {
+          var h2Element = tile.querySelector(".js-line-count");
+          var lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
+
+          var height = h2Element.scrollHeight;
+          var lines = Math.floor(height / lineHeight);
+
+          // Set -webkit-line-clamp based on the lines for the <p> object
+          var clampValue;
+          if (lines === 3) {
+            clampValue = 5;
+          } else if (lines === 2) {
+            clampValue = 6;
+          } else if (lines === 1) {
+            clampValue = 7;
+          } else {
+            clampValue = null;
+          }
+          
+          // Adjust the clamp value based on the topic element
+          var topicElement = tile.querySelector('.topic');
+          if (topicElement && topicElement.style.display !== 'none') {
+            var topicHeight = topicElement.scrollHeight;
+            var topicLines = Math.floor(topicHeight / lineHeight);
+            if (clampValue !== null) {
+              clampValue -= topicLines;
+            }
+          } else {
+            // If no topic is provided, add 1 to clampValue
+            if (clampValue !== null) {
+              clampValue += 1;
+            }
+          }
+
+          var pElement = tile.querySelector("p.description");
+          console.log('Applying clampValue:', clampValue, 'to pElement:', pElement.textContent);
+
+          if (clampValue) {
+            pElement.style.display = '-webkit-box';
+            pElement.style.webkitBoxOrient = 'vertical';
+            pElement.style.webkitLineClamp = clampValue;
+            pElement.style.overflow = 'hidden';
+          } else {
+            pElement.style.display = 'block';
+            pElement.style.webkitBoxOrient = '';
+            pElement.style.webkitLineClamp = '';
+            pElement.style.overflow = '';
+          }
+        });
+      }
+
+      updateLineCounts();
+
+      window.addEventListener('resize', updateLineCounts);
+    });
+  </script>
+
+
+<div class="listing-no-matching d-none">
+No matching items
+</div>
 </div>
 
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing-1">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div><div class="quarto-listing quarto-listing-container-default" id="listing-listing-2">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div><div class="quarto-listing quarto-listing-container-default" id="listing-listing-3">
+<div class="list quarto-listing-default">
+
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div><div class="quarto-listing quarto-listing-container-default" id="listing-listing-4">
+<div class="list quarto-listing-default">
+
+</div>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Restricted Access – Resource Navigation Tool</title>
+<title>International – Resource Navigation Tool</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,25 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-8bac37e12447f6c8eacbca809c4c65e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-8bac37e12447f6c8eacbca809c4c65e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,20 +72,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-restricted .list');
+    const listingTargetEl = window.document.querySelector('#listing-international .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-category','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-tiles"],
+      searchColumns: ["listing-category","listing-tiles"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-restricted'] = new List('listing-restricted', options);
+    window['quarto-listings']['listing-international'] = new List('listing-international', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -138,7 +138,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Resource Navigation Tool</span>
     </a>
   </div>
@@ -149,7 +149,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../Resources/index.html"> 
+    <a class="nav-link" href="../../Resources/index.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -158,25 +158,25 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-datasets">    
         <li>
-    <a class="dropdown-item" href="../datasets.html">
+    <a class="dropdown-item" href="../../datasets.html">
  <span class="dropdown-text">Overview</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../Freely-Accessible/index.html">
+    <a class="dropdown-item" href="../../Freely-Accessible/index.html">
  <span class="dropdown-text">Freely Accessible</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../Restricted-Access/index.html">
+    <a class="dropdown-item" href="../../Restricted-Access/index.html">
  <span class="dropdown-text">Restricted Access</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../License-Required/index.html">
+    <a class="dropdown-item" href="../../License-Required/index.html">
  <span class="dropdown-text">License Required</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="../about-us.html"> 
+    <a class="nav-link" href="../../about-us.html"> 
 <span class="menu-text">About Us</span></a>
   </li>  
   <li class="nav-item">
@@ -194,7 +194,7 @@ window.Quarto = {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page">
-      <h1 class="title">Restricted Access</h1>
+      <h1 class="title">International</h1>
                       </div>
   </div>
     
@@ -218,7 +218,7 @@ window.Quarto = {
 
 
 
-<div id="listing-restricted" class="quarto-listing quarto-listing-container-custom">
+<div id="listing-international" class="quarto-listing quarto-listing-container-custom">
 
 <!--icons from https://icons.getbootstrap.com/-->
 
@@ -245,10 +245,10 @@ window.Quarto = {
       
       
         <div class="tile" data-index="0">
-          <img src="Images/YODA.png" class="image">
-          <h2 class="h2 js-line-count anchored">Yale University Open Data Access (YODA)</h2>
+          <img src="Images/Verena.png" class="image">
+          <h2 class="h2 js-line-count anchored">The Viral Emergence Research Initiative</h2>
           
-          <p class="description">The Yale University Open Data Access (YODA) Project’s mission is to advocate for the responsible sharing of clinical research data, open science, and research transparency. The Project is committed to supporting research focused on improving the health of patients and informing science and public health. By clicking this link, you’ll be directed to a page where you can request clinical trial data.
+          <p class="description">An open data ecosystem made to power pandemic prediction.
 </p>
           <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
           
@@ -261,14 +261,14 @@ window.Quarto = {
               
                
               &nbsp;
-              <a href="https://yoda.yale.edu/" title="Main site" class="source-code card-text float-beginning inline-block">
+              <a href="https://www.viralemergence.org/data" title="Main site" class="source-code card-text float-beginning inline-block">
                 <i class="bi-globe"></i></a>
               
               
               
                
               &nbsp;
-              <a href="https://medicine.yale.edu/core/" title="Group site" class="source-code card-text float-beginning inline-block">
+              <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code card-text float-beginning inline-block">
                 <i class="bi-people-fill"></i></a>
                
               
@@ -276,15 +276,11 @@ window.Quarto = {
               
               
               
-               
-              &nbsp;
-              <a href="../Restricted-Access/Pages/YODA.html" title="Get more information" class="source-code card-text float-beginning inline-block">
-                <i class="bi-info-circle"></i></a>
               
               
               
               
-                <p class="topic" style="margin-bottom: 5px;">Yale University Affiliated</p>
+                <p class="topic" style="margin-bottom: 5px;">Basic Research, Animal Research, Analytical Tools</p>
               
               
             </small>
@@ -295,55 +291,10 @@ window.Quarto = {
       
       
         <div class="tile" data-index="1">
-          <img src="Images/YNHHS Epic Cosmos.png" class="image">
-          <h2 class="h2 js-line-count anchored">YNHHS Epic COSMOS</h2>
+          <img src="Images/grubaugh.png" class="image">
+          <h2 class="h2 js-line-count anchored">Open Science</h2>
           
-          <p class="description">The Cosmos data set combines billions of clinical data points, made up of data from across the Epic community, to form the largest database of EHR patient information. Participating organizations provide a HIPAA-defined limited data set to the centralized Cosmos database. 
-<br>
-<br>
-With over 34,200 Clinics and 1,522 Hospitals participating in Cosmos, researchers can access a representative sample of patients who seek healthcare. You can learn more about the latest features of Cosmos on <a href="https://signin.epic.com/adfs/ls/?wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fuserweb.epic.com%2f&amp;wctx=rm%3d1%26id%3dpassive%26ru%3d%252F&amp;wct=2025-04-16T00%3a32%3a32Z&amp;wreply=https%3a%2f%2fuserweb.epic.com%2f">Epic UserWeb</a>, available to all YNHHS research users and on the <a href="https://teams.microsoft.com/l/team/19%3AJTlr92eAMEnJsBJmV1Uymbla8oek8ePqASKzxPE7mrQ1%40thread.tacv2/conversations?groupId=aa0ac073-1651-4dee-a59e-884bef65ea6b&amp;tenantId=dd8cbebb-2139-4df8-b411-4e3e87abeb5c">Yale Cosmos Teams</a> Site.
-</p>
-          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
-          
-          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
-            <small class="card-text inline-block">
-              
-              
-              
-              
-              
-              
-              
-              
-               
-              
-              
-              
-              
-              
-               
-              &nbsp;
-              <a href="../Restricted-Access/Pages/YNHHS-Epic-Cosmos.html" title="Get more information" class="source-code card-text float-beginning inline-block">
-                <i class="bi-info-circle"></i></a>
-              
-              
-              
-              
-                <p class="topic" style="margin-bottom: 5px;">Yale University Affiliated</p>
-              
-              
-            </small>
-          </div>
-          
-        </div>
-
-      
-      
-        <div class="tile" data-index="2">
-          <img src="Images/NIH All of Us_4.8x3.6.png" class="image">
-          <h2 class="h2 js-line-count anchored">NIH's All of Us</h2>
-          
-          <p class="description">All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.
+          <p class="description">In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
 </p>
           <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
           
@@ -356,75 +307,26 @@ With over 34,200 Clinics and 1,522 Hospitals participating in Cosmos, researcher
               
                
               &nbsp;
-              <a href="https://allofus.nih.gov/" title="Main site" class="source-code card-text float-beginning inline-block">
+              <a href="https://grubaughlab.com/open-science/" title="Main site" class="source-code card-text float-beginning inline-block">
                 <i class="bi-globe"></i></a>
               
               
               
                
-              
-              
-              
-              
-              
-               
               &nbsp;
-              <a href="../Restricted-Access/Pages/NIH_All-of-Us.html" title="Get more information" class="source-code card-text float-beginning inline-block">
-                <i class="bi-info-circle"></i></a>
-              
-              
-              
-              
-                <p class="topic" style="margin-bottom: 5px;">US Government</p>
-              
-              
-            </small>
-          </div>
-          
-        </div>
-
-      
-      
-        <div class="tile" data-index="3">
-          <img src="Images/UK Biobank.png" class="image">
-          <h2 class="h2 js-line-count anchored">UK Biobank</h2>
-          
-          <p class="description">The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. 
-<br>
-<br>
-Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
-</p>
-          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
-          
-          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
-            <small class="card-text inline-block">
-              
-              
-              
-              
-              
-               
-              &nbsp;
-              <a href="https://www.ukbiobank.ac.uk/" title="Main site" class="source-code card-text float-beginning inline-block">
-                <i class="bi-globe"></i></a>
-              
-              
-              
+              <a href="https://grubaughlab.com/" title="Group site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-people-fill"></i></a>
                
               
               
               
               
               
-               
-              &nbsp;
-              <a href="../Restricted-Access/Pages/UK-Biobank.html" title="Get more information" class="source-code card-text float-beginning inline-block">
-                <i class="bi-info-circle"></i></a>
               
               
               
               
-                <p class="topic" style="display:none; margin-bottom: 5px;"></p>
+                <p class="topic" style="margin-bottom: 5px;">Basic Research, Analytical Tools, Consulting/Services</p>
               
               
             </small>
@@ -933,17 +835,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="../about-us.html">
+    <a class="nav-link" href="../../about-us.html">
 <p>About Us</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../Resources/index.html">
+    <a class="nav-link" href="../../Resources/index.html">
 <p>Resources</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="../datasets.html">
+    <a class="nav-link" href="../../datasets.html">
 <p>Datasets</p>
 </a>
   </li>  
@@ -953,7 +855,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Restricted-Access/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Resources/International/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">

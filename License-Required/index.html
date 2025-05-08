@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cb99cf1324a43cc9758c4c7f2362e19f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8bac37e12447f6c8eacbca809c4c65e4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -72,20 +72,20 @@ ul.task-list li input[type="checkbox"] {
 <script>
 
   window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing-1 .list');
+    const listingTargetEl = window.document.querySelector('#listing-national .list');
     if (!listingTargetEl) {
       // No listing discovered, do not attach.
       return; 
     }
 
     const options = {
-      valueNames: ['listing-category','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-categories','listing-tiles',{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-category","listing-tiles"],
+      searchColumns: ["listing-categories","listing-tiles"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing-1'] = new List('listing-listing-1', options);
+    window['quarto-listings']['listing-national'] = new List('listing-national', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -218,59 +218,149 @@ window.Quarto = {
 
 
 
+<div id="listing-national" class="quarto-listing quarto-listing-container-custom">
+
+<!--icons from https://icons.getbootstrap.com/-->
 
 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clamping Test</title>
+  <!-- Unnecesary styling.
+  <style>
+    .clamp {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+  -->
 
 
-<div class="quarto-listing quarto-listing-container-custom" id="listing-listing-1">
-
-<h2 class="anchored">Free for Yale Affiliates</h2>
-
-<div class="container">
 
   
-  <div class="tile" data-index="0">
-    <img src="Images/Verena.png" class="image">
-    <h2 class="h2 anchored">The Viral Emergence Research Initiative</h2>
-    
-    <p class="p">An open data ecosystem made to power pandemic prediction.
-</p>
-    
-    <div class="card-header py-1 px-2 border-bottom bg-light">
-      <small class="card-text inline-block">
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-        
-        
-        &nbsp;
-        
-         
-        <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code card-text float-beginning inline-block">
-          <i class="bi-people-fill"></i></a>
-        
-        
-        &nbsp;
-        
-        
-        
-        <p class="p">Basic Research, Animal Research, Analytical Tools</p>
-        
-      </small>
-    </div>
-    
-  </div>
 
-</div>
+    <h2 class="anchored"></h2>
+
+    <div class="container">
+
+      
+      
+        <div class="tile" data-index="0">
+          <img src="Images/Verena.png" class="image">
+          <h2 class="h2 js-line-count anchored">The Viral Emergence Research Initiative</h2>
+          
+          <p class="description">An open data ecosystem made to power pandemic prediction.
+</p>
+          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
+          
+          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
+            <small class="card-text inline-block">
+              
+              
+              
+              
+              
+              
+              
+              
+               
+              &nbsp;
+              <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code card-text float-beginning inline-block">
+                <i class="bi-people-fill"></i></a>
+               
+              
+              
+              
+              
+              
+              
+              
+              
+              
+                <p class="topic" style="margin-bottom: 5px;">Basic Research, Animal Research, Analytical Tools</p>
+              
+              
+            </small>
+          </div>
+          
+        </div>
+
+      
+
+    </div>
+  
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function updateLineCounts() {
+        document.querySelectorAll(".tile").forEach(function(tile) {
+          var h2Element = tile.querySelector(".js-line-count");
+          var lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
+
+          var height = h2Element.scrollHeight;
+          var lines = Math.floor(height / lineHeight);
+
+          // Set -webkit-line-clamp based on the lines for the <p> object
+          var clampValue;
+          if (lines === 3) {
+            clampValue = 5;
+          } else if (lines === 2) {
+            clampValue = 6;
+          } else if (lines === 1) {
+            clampValue = 7;
+          } else {
+            clampValue = null;
+          }
+          
+          // Adjust the clamp value based on the topic element
+          var topicElement = tile.querySelector('.topic');
+          if (topicElement && topicElement.style.display !== 'none') {
+            var topicHeight = topicElement.scrollHeight;
+            var topicLines = Math.floor(topicHeight / lineHeight);
+            if (clampValue !== null) {
+              clampValue -= topicLines;
+            }
+          } else {
+            // If no topic is provided, add 1 to clampValue
+            if (clampValue !== null) {
+              clampValue += 1;
+            }
+          }
+
+          var pElement = tile.querySelector("p.description");
+          console.log('Applying clampValue:', clampValue, 'to pElement:', pElement.textContent);
+
+          if (clampValue) {
+            pElement.style.display = '-webkit-box';
+            pElement.style.webkitBoxOrient = 'vertical';
+            pElement.style.webkitLineClamp = clampValue;
+            pElement.style.overflow = 'hidden';
+          } else {
+            pElement.style.display = 'block';
+            pElement.style.webkitBoxOrient = '';
+            pElement.style.webkitLineClamp = '';
+            pElement.style.overflow = '';
+          }
+        });
+      }
+
+      updateLineCounts();
+
+      window.addEventListener('resize', updateLineCounts);
+    });
+  </script>
+
 
 <div class="listing-no-matching d-none">
 No matching items
 </div>
-</div><a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</div>
+
+
+
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
