@@ -1,0 +1,155 @@
+```{=html}
+
+<!--icons from https://icons.getbootstrap.com/-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clamping Test</title>
+  <!-- Unnecesary styling.
+  <style>
+    .clamp {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  </style>
+  -->
+</head>
+<body>
+
+  <% for (const item of items) { %>
+
+    <div class="container">
+
+      <% for (const tile of item.tiles) { %>
+      
+        <div class="tile" <%= metadataAttrs(tile) %>>
+          <img src="<%- tile.image %>" class="image">
+          <h2 class="h2 js-line-count"><%= tile.title %></h2>
+          
+          <p class="description"><%= tile.description %></p>
+          <!-- Code that reports the h2 line counts. <span>Total Lines: <b class="totalLines"></b></span> -->
+          
+          <div class="card-header py-1 px-2 border-bottom bg-light" style="margin-top: auto;">
+            <small class="card-text inline-block">
+              
+              
+              <% if (tile.github) { %> 
+              &nbsp;
+              <a href="<%- tile.github %>" title="GitHub page" 
+                class="source-code card-text float-beginning inline-block">
+                <i class="bi-github"></i></a>
+              <% } %>
+              
+              
+              <% if (tile.site) { %> 
+              &nbsp;
+              <a href="<%- tile.site %>" title="Main site" 
+                class="source-code card-text float-beginning inline-block">
+                <i class="bi-globe"></i></a>
+              <% } %>
+              
+              
+              <% if (tile.group) { %> 
+              &nbsp;
+              <a href="<%- tile.group %>" title="Group site" 
+                class="source-code card-text float-beginning inline-block">
+                <i class="bi-people-fill"></i></a>
+              <% } %> 
+              
+              
+              <% if (tile.article) { %> 
+              &nbsp;
+              <a href="<%- tile.article %>" title="View publication" 
+                class="source-code card-text float-beginning inline-block">
+                <i class="bi-journal-text"></i></a>
+              <% } %>
+              
+              
+              <% if (tile.info) { %> 
+              &nbsp;
+              <a href="<%- tile.info %>" title="Get more information" 
+                class="source-code card-text float-beginning inline-block">
+                <i class="bi-info-circle"></i></a>
+              <% } %>
+              
+              
+              <% if (tile.topic) { %>
+                <p class="topic" style="margin-bottom: 5px;"><%= tile.topic %></p>
+              <% } else { %>
+                <p class="topic" style="display:none; margin-bottom: 5px;"></p>
+              <% } %>
+              
+            </small>
+          </div>
+          
+        </div>
+
+      <% } %>
+
+    </div>
+  <% } %>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      function updateLineCounts() {
+        document.querySelectorAll(".tile").forEach(function(tile) {
+          var h2Element = tile.querySelector(".js-line-count");
+          var lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
+
+          var height = h2Element.scrollHeight;
+          var lines = Math.floor(height / lineHeight);
+
+          // Set -webkit-line-clamp based on the lines for the <p> object
+          var clampValue;
+          if (lines === 3) {
+            clampValue = 5;
+          } else if (lines === 2) {
+            clampValue = 6;
+          } else if (lines === 1) {
+            clampValue = 7;
+          } else {
+            clampValue = null;
+          }
+          
+          // Adjust the clamp value based on the topic element
+          var topicElement = tile.querySelector('.topic');
+          if (topicElement && topicElement.style.display !== 'none') {
+            var topicHeight = topicElement.scrollHeight;
+            var topicLines = Math.floor(topicHeight / lineHeight);
+            if (clampValue !== null) {
+              clampValue -= topicLines;
+            }
+          } else {
+            // If no topic is provided, add 1 to clampValue
+            if (clampValue !== null) {
+              clampValue += 1;
+            }
+          }
+
+          var pElement = tile.querySelector("p.description");
+          console.log('Applying clampValue:', clampValue, 'to pElement:', pElement.textContent);
+
+          if (clampValue) {
+            pElement.style.display = '-webkit-box';
+            pElement.style.webkitBoxOrient = 'vertical';
+            pElement.style.webkitLineClamp = clampValue;
+            pElement.style.overflow = 'hidden';
+          } else {
+            pElement.style.display = 'block';
+            pElement.style.webkitBoxOrient = '';
+            pElement.style.webkitLineClamp = '';
+            pElement.style.overflow = '';
+          }
+        });
+      }
+
+      updateLineCounts();
+
+      window.addEventListener('resize', updateLineCounts);
+    });
+  </script>
+</body>
+
+```
