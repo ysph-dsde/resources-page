@@ -5,9 +5,9 @@ project:
 website:
   title: "Resource Navigation Tool"
   page-navigation: true
-  back-to-top-navigation: true
+  back-to-top-navigation: false
   bread-crumbs: false
-  favicon: Images/DSDE-Social-Media-Profile.png
+  favicon: Images/DSDE-Visuals/DSDE-Social-Media-Profile.png
   search: true
   repo-url: https://github.com/ysph-dsde/resources-page
   issue-url: https://github.com/ysph-dsde/resources-page/issues
@@ -15,19 +15,11 @@ website:
   navbar:
     right:
       - text: "Resources"
-        href: Resources/index.qmd
+        href: Pages/Resources/index.qmd
       - text: Datasets
-        menu:
-          - text: "Overview"
-            href: datasets.qmd
-          - text: "Freely Accessible"
-            href: Freely-Accessible/index.qmd
-          - text: "Restricted Access"
-            href: Restricted-Access/index.qmd
-          - text: "License Required"
-            href: License-Required/index.qmd
+        href: Pages/Datasets/index.qmd
       - text: About Us
-        href: about-us.qmd
+        href: Pages/about-us.qmd
       - text: Contact
         href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/
         target: _blank
@@ -36,11 +28,11 @@ website:
     left: "This site was built on a ysph-dsde.github.io page. It was rendered using Quarto (v 1.6.3) and theme [flatly](https://github.com/thomaspark/bootswatch)." 
     center:
       - text: About Us
-        href: about-us.qmd
+        href: Pages/about-us.qmd
       - text: Resources
-        href: Resources/index.qmd
+        href: Pages/Resources/index.qmd
       - text: Datasets
-        href: datasets.qmd
+        href: Pages/Datasets/index.qmd
       - text: Contact
         href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/
     right: 
@@ -48,7 +40,7 @@ website:
         href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/
       - icon: github
         href: https://github.com/ysph-dsde
-      - icon: linkedin 
+      - icon: linkedin
         href: https://www.linkedin.com/showcase/public-health-data-science-and-data-equity-at-yale/
       - icon: envelope 
         href: mailto:admin.dsdeysph@yale.edu
@@ -58,7 +50,7 @@ format:
   html:
     theme:
       - flatly
-      - custom-styles/dsde-like-branding.scss
+      - _styles/dsde-like-branding.scss
     toc: true
     from: markdown+autolink_bare_uris
 

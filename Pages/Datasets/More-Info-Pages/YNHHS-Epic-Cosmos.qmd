@@ -10,8 +10,6 @@
   format: html
   filters:
     - parse-latex
-  editor: visual
-  image: cover.png
   markdown: 
   editor_options: 
   chunk_output_type: console
@@ -51,7 +49,7 @@ Remote access to a YNHHS secure device without requiring the YNHHS VPN. VDI incl
 
 Access de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. IRB applications is not required, but training is strongly recommended before usage.
 
-A secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. Suitable for AI research and development, and is well suited for analyzing large volumes of data in different forms (i.e. images, text, structured). 
+A secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. Suitable for AI research and development, and is well suited for analyzing large volumes of data in different forms (i.e. images, text, structured).
 
 This tool requires advanced data science skills with relational databases, Python, and SQL. Additional details can be found here: [OMOP Common Data Model](https://medicine.yale.edu/ybic/data-resources-services/omop-common-data-model/).
 
@@ -73,26 +71,24 @@ If you are not a member of a YU-YNHHS Covered Entity (e.g. YSPH), you will need 
 
     **For Non-Yale NetID holders:** read and sign the [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) training materials specific to your role on the project (i.e. for clinician's or researcher's). Submission directions for these documents can be found on the PDF.
 
-3.  Human Subjects Protection Training (HSPT) certificate from CITI completed within the last 3 years. Below is a summary of the process, and the complete directions can be found on the [It's Your Yale](https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training) page about HSPT. You can reach out to irb.training@yale.edu for further questions. 
+3.  Human Subjects Protection Training (HSPT) certificate from CITI completed within the last 3 years. Below is a summary of the process, and the complete directions can be found on the [It's Your Yale](https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training) page about HSPT. You can reach out to irb.training\@yale.edu for further questions.
 
     Researchers will need to complete the following CITI certificates:
 
     -   "Basic Training"
     -   One of the following two initial/basic Human Subjects Research modules: "Biomedical Research Basic" or "Social Behavioral Educational Researchers Basic".
 
-    For Yale-affiliates, it is preferable, though not required, to go through Workday to access the CITI training modules. Doing so will expedite recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) Institutional Review Board (IRB) system. In Workday, the CITI training link will show up as the "Human Subjects Protection Training – Initial/Refresher" course. You can reach out to your manager, learning@yale.edu, or irb.training@yale.edu to request manual assignment if needed.
+    For Yale-affiliates, it is preferable, though not required, to go through Workday to access the CITI training modules. Doing so will expedite recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) Institutional Review Board (IRB) system. In Workday, the CITI training link will show up as the "Human Subjects Protection Training – Initial/Refresher" course. You can reach out to your manager, learning\@yale.edu, or irb.training\@yale.edu to request manual assignment if needed.
 
-    Qualifying certificates completed through other institutions CITI subscriptions need to be emailed to irb.training@yale.edu. Please keep in mind that receiving CITI certification independently from a subscribing institution will incur charges.
+    Qualifying certificates completed through other institutions CITI subscriptions need to be emailed to irb.training\@yale.edu. Please keep in mind that receiving CITI certification independently from a subscribing institution will incur charges.
 
-4. 
-
+4.  
 
 ## Typical Timeline
 
 ::: callout-important
 Good things come with time.
 :::
-
 
 ## Sources
 

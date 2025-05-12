@@ -1044,9 +1044,44 @@ $theme-name: null !default;
 
 $navbar-bg: #00356B;
 $navbar-fg: #F0F0F0;
+$light-header-background: #f5f5f5;
 
-$link-color: #bd5319;
-$hover-color: lighten($link-color, 40%);
+$link-color-banner: #63aaff;
+$hover-color-banner: lighten($link-color-banner, 10%);
+
+$link-color-footer: #52515e;
+$hover-color-footer: lighten($navbar-bg, 10%);
+
+$link-color-tiles: #bd5319;
+$hover-color-tiles: lighten($link-color-tiles, 40%);
+
+
+:root {
+  --light-header-background: #{$light-header-background};
+  --link-color-banner: #{$link-color-banner};
+  --hover-color-banner: #{$hover-color-banner};
+  --link-color-footer: #{$link-color-footer};
+  --hover-color-footer: #{$hover-color-footer};
+  --link-color-tiles: #{$link-color-tiles};
+  --hover-color-tiles #{$hover-color-tiles};
+}
+
+// Tables
+
+$table-color: $navbar-fg !default;
+$table-accent-bg: rgba($navbar-fg, .05) !default;
+$table-hover-bg: rgba($navbar-fg, .075) !default;
+$table-border-color: body-mix(50%) !default;
+$table-dark-bg: body-mix(16%) !default;
+$table-dark-border-color: body-mix(23%) !default;
+
+$table-bg-scale: 0 !default;
+
+
+div.datatables {
+  color: #333;
+  font-size: 11pt;
+}
 
 
 // Heading font size customization
@@ -12983,58 +13018,255 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
 .a{
   color: #00356B;
 }
-
 .quarto-title-block .quarto-title-banner {
-  color: #00356B;
-  background: lighten(#dddddd, 3%);
+  color: #2e2e36;
+  background: var(--light-header-background);
 }
 .quarto-title-banner h1, .quarto-title-banner .h1, .quarto-title-banner h2, .quarto-title-banner .h2 {
   color: #2e2e36;
 }
 .quarto-title-banner a {
   text-decoration: none;
-  color: $link-color;
 }
 
-.dropdown-item {
-  
 
-
-.nav-item > a {
-  color: #F0F0F0
+/*-- scss: header --*/
+a.navbar-brand:hover {
+  color: var(--hover-color-banner);
 }
-.nav-item > a:hover {
-  color: lighten(#63aaff, 10%);
+.nav-item  a {
+  color: #F0F0F0;
+}
+.nav-item  a:hover {
+  color: var(--hover-color-banner);
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
+  color: var(--hover-color-banner);
 }
 .nav-link {
   color: #F0F0F0;
 }
-.navbar-nav .nav-link.active, .navbar-nav .nav-link.show {
-  color: lighten($link-color, 20%);
-}
-.tabset .nav-link {
-  color: #52515e;
-}
 
-.nav-footer a {
-  color: #6a6c6c;
-}
-.nav-footer a:hover {
-  color: lighten($link-color, 10%);
+
+/*-- scss: footer --*/
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 .nav-footer {
-  background: lighten(#dddddd, 3%);
+  background: var(--light-header-background);
 }
-
-
+.nav-footer a {
+  color: var(--link-color-footer);
+}
+.nav-footer a:hover {
+  color: var(--hover-color-footer);
+}
+ol, ul {
+  padding-left: 0rem;
+}
 .value-box {
   text-align: center;
 }
 
 
+/*-- scss: titles with metadata --*/
+.header {
+  width: 100%;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
 
-/*-- scss:titles --*/
+.form-control {
+  font-size: 0.9rem !important;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 10px;
+  color: #5a6570 !important;
+}
+.main-container {
+  display: flex;
+  flex: 1;
+}
+.sidebar-wrapper {
+  width: 290px;
+  padding: 10px;
+  margin-left: 20px;
+  border-right: 1px solid #ddd;
+  position: sticky;
+  top: 20px;
+  height: fit-content;
+  flex-shrink: 0;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-left: -10px;
+}
+.sort-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
+  gap: 20px 20px;
+}
+.tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 440px;
+  border: 1px solid #444;
+  border-radius: 0;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  background-color: white;
+  overflow: hidden;
+}
+.tile img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+}
+.tile h2 {
+  font-size: 18px;
+  padding: 6px;
+  color: #52505d;
+  margin: 10px 0 0 0;
+}
+.tile p {
+  font-size: 12px;
+  padding: 6px;
+  color: #52505d;
+  margin: 0;
+  flex-grow: 1;
+  overflow: hidden;
+  padding-bottom: 0.14em;
+}
+.card-header {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5 !important;
+  margin-top: auto;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  margin-left: 15px;
+}
+.checkbox-container input[type="checkbox"],
+.checkbox-container label {
+  align-self: center;
+}
+.checkbox-container label {
+  margin-left: 5px;
+}
+@media (max-width: 1024px) {
+  .tile {
+    width: calc(50% - 15px);
+  }
+}
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+  }
+  .tile {
+    width: 100%;
+  }
+}
 
+
+
+/*-- scss: titles static --*/
+
+
+
+
+
+/*-- scss: header tiles --*/
+
+/* Container holding the image and the text */
+.container_title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  column-gap: 10px;
+  row-gap: 30px;
+}
+
+.tile_title {
+  position: relative;
+  width: 32%; /* Adjust width as needed */
+  margin-bottom: 20px;
+  border: 1.5px solid #444;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.tile_title img {
+  display: block;
+  opacity: 0.75;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+.tile_title h1 {
+  position: absolute;
+  top: 10px;
+  margin-top: 0px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  color: white;
+  text-shadow: 1.5px 1px 0px #444;
+}
+.tile_title h2 {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  margin: 0;
+  color: white;
+  font-size: 18px;
+  text-shadow: 1.5px 1px 0px #444;
+  pointer-events: none;
+}
+.tile_title:hover {
+  transform: translateY(-5px);
+}
+.tile_icon {
+  position: absolute;
+  bottom: 20px;
+  right: 15px;
+  color: white;
+  font-size: 24px;
+  text-shadow: 1.5px 1px 0px black;
+  text-decoration: none;
+}
+
+
+
+/*-- scss: titles with metadata  OLD BUT KEEP --*/
+
+/*--
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -13046,42 +13278,54 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
 .tile {
   width: 32%;
   min-width: 300px;
-  height: fit-content;
+  height: 410px;  
   border: 1px solid #444;
   display: flex;
   flex-direction: column;
   align-items: left;
   justify-content: left;
   text-align: left;
-  border-radius: 0px;     /*-- round the edges --*/
   text-decoration: none;
+  border-radius: 0px;  
 }
-.tile h2{
+.tile h1{
   max-width: 300px;
-  font-size: 18px;
-  padding: 6px;
+  font-size: 25px;
+  padding-left: 6px;
+  padding-right: 6px;
   color: #52505d;
   border-bottom: none;
   margin-top: 10px;
   margin-bottom: 0px;
 }
+.tile h2{
+  max-width: 300px;
+  font-size: 18px;
+  padding-left: 6px;
+  padding-right: 6px;
+  color: #52505d;
+  border-bottom: none;
+  margin-top: 0px;
+  margin-bottom: auto;
+}
 .tile p{
   font-size: 12px;
-  padding: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
   color: #52505d;
-  margin-bottom: 10px;
 }
 .tile ul{
   font-size: 12px;
-  padding: 20px;
+  padding-left: 6px;
+  padding-right: 6px;
   color: #52505d;
-  margin-top: -30px;
+  margin-top: -15px;
   margin-bottom: -15px;
 }
 .image {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: 100%;
   height: 150px;
   object-fit: cover;
@@ -13091,62 +13335,6 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
     flex-wrap: wrap;
   }
 }
-
-
-
-/*-- scss:titles --*/
-
-/*
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: center;
-}
-.tile {
-  width: 250px;
-  height: fit-content;
-  border: 1px solid #ccc;
-  background-color:#fbf3eb;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: left;
-  text-align: left;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 0.3s, transform 0.3s;
-  border-radius: 8px;
-}
-.tile h2{
-  border: 1px solid #ccc;
-  padding: 6px;
-  max-width: 350px;
-  background-color:#52515e;
-  color: #F0F0F0;
-  font-size: 16px;
-}
-.tile p{
-  font-size: 12px;
-  color: #52505d;
-}
-.tile:hover {
-  background-color: #e0e0e0;
-  transform: scale(1.05);
-}
-.image {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: -20px;
-  width: 100%;
-  height: auto;
-}
-.title2 {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 16px;
-  max-width: 300px;
-}
-*/
+--*/
 
 // quarto-scss-analysis-annotation { "origin": null }

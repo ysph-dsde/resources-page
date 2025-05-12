@@ -1,8 +1,7 @@
 ---
-  title: "UK Biobank"
+  title: "Yale University Open Data Access (YODA)"
   title-block-banner: true
   format: html
-  editor: visual
   markdown: 
   editor_options: 
   chunk_output_type: console

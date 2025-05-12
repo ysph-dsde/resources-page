@@ -1,9 +1,7 @@
 ---
-  title: "Yale University Open Data Access (YODA)"
+  title: "NIH's All of Us"
   title-block-banner: true
   format: html
-  editor: visual
-  image: cover.png
   markdown: 
   editor_options: 
   chunk_output_type: console

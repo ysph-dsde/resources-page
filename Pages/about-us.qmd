@@ -3,7 +3,6 @@
   format:
     html:
       toc: false
-  editor: visual
   markdown: 
   editor_options: 
   chunk_output_type: console

@@ -5,8 +5,10 @@
 .Rhistory
 .RData
 .Ruserdata
-/.quarto/
-/docs/
+
 *_files
 *.html
-/Not Used/
+
+/.quarto/
+/docs/
+/Local Only/

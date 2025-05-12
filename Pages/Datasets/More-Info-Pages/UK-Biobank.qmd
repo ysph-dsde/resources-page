@@ -1,9 +1,7 @@
 ---
-  title: "NIH's All of Us"
+  title: "UK Biobank"
   title-block-banner: true
   format: html
-  editor: visual
-  image: cover_4.8x3.6.png
   markdown: 
   editor_options: 
   chunk_output_type: console
