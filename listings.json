@@ -1,47 +1,46 @@
 [
   {
-    "listing": "/Resources/International/index.html",
+    "listing": "/Pages/Resources/index.html",
     "items": []
   },
   {
-    "listing": "/Resources/YSPH/index.html",
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Datasets/License-Required/index.html",
     "items": []
   },
   {
-    "listing": "/Resources/index.html",
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Datasets/Restricted-Access/index.html",
     "items": []
   },
   {
-    "listing": "/Freely-Accessible/index.html",
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Resources/National/index.html",
     "items": []
   },
   {
-    "listing": "/Restricted-Access/index.html",
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Resources/Yale University/index.html",
     "items": []
   },
   {
-    "listing": "/Resources/YSM/index.html",
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Resources/YSM/index.html",
     "items": []
   },
   {
-    "listing": "/Resources/Yale University/index.html",
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Resources/index.html",
     "items": []
   },
   {
-    "listing": "/Resources/National/index.html",
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Resources/YSPH/index.html",
     "items": []
   },
   {
-    "listing": "/License-Required/index.html",
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Resources/International/index.html",
     "items": []
   },
   {
-    "listing": "/Not Used/Restricted-Access_blog/index.html",
-    "items": [
-      "/Not Used/Restricted-Access_blog/NIH All of Us/index.html",
-      "/Not Used/Restricted-Access_blog/UK Biobank/index.html",
-      "/Not Used/Restricted-Access_blog/YNHHS Epic Cosmos/index.html",
-      "/Not Used/Restricted-Access_blog/YODA/index.html"
-    ]
+    "listing": "/Local Only/Pages_old_replaced 05.11.2025/Datasets/Freely-Accessible/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Pages/Datasets/index.html",
+    "items": []
   }
 ]

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Resource Navigation Tool</title>
+<title>index – Resource Navigation Tool</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,23 +23,25 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./Images/DSDE-Visuals/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7c69cff971577d9baa8abe5eb8d37666.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<link href="../../../../Images/DSDE-Visuals/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<script src="../../../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-7c69cff971577d9baa8abe5eb8d37666.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,7 +69,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-national .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-items',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-items"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-national'] = new List('listing-national', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -78,7 +138,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../../../index.html">
     <span class="navbar-title">Resource Navigation Tool</span>
     </a>
   </div>
@@ -89,15 +149,15 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./Pages/Resources/index.html"> 
+    <a class="nav-link" href="../../../../Pages/Resources/index.html"> 
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Pages/Datasets/index.html"> 
+    <a class="nav-link" href="../../../../Pages/Datasets/index.html"> 
 <span class="menu-text">Datasets</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Pages/about-us.html"> 
+    <a class="nav-link" href="../../../../Pages/about-us.html"> 
 <span class="menu-text">About Us</span></a>
   </li>  
   <li class="nav-item">
@@ -112,110 +172,33 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
 
 
 
 
-<p><img src="Images/Wordmark-Data-Science-and-Data-Equity-black.png" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;" width="700"><br>
-</p>
-<p>Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice. Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.</p>
+<style>
+    .header {
+      width: 100%;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+    }
+</style>
+
+<div class="header">
+    <h1>Freely Accessible Resources</h1>
+    <p>A collection of freely accessible resources.</p>
+ </div>
 
 
-  <div class="container_title">
-    <div class="tile_title">
-      <a href="./Pages/Resources/index.html" title="Listing page">
-        <img src="Images/Firefly data scientists; illustration 75467.jpg" alt="Resources page" class="image">
-        <h1>Resources</h1>
-        <h2 class="anchored">See the Listing</h2>
-        <i class="tile_icon bi bi-arrow-right-circle-fill"></i>
-      </a>
-    </div>
-    <div class="tile_title">
-      <a href="./Pages/Datasets/index.html" title="Listing page">
-        <img src="Images/Firefly data science data equity 50124.jpg" alt="Datasets page" class="image">
-        <h1>Datasets</h1>
-        <h2 class="anchored">See the Listing</h2>
-        <i class="tile_icon bi bi-arrow-right-circle-fill"></i>
-      </a>
-    </div>
-  </div>
 
 
-<section id="navigating-the-site" class="level2">
-<h2 class="anchored" data-anchor-id="navigating-the-site">Navigating the Site</h2>
 
-  <div class="container_static">
-    <div class="tile_static">
-      <img src="Images/Firefly data science ai hub; watercolor image 92513.jpg" class="img">
-      <h2 class="h2 js-line-count anchored" style="pointer-events: none">National Center for Health Statistics (NCHS)</h2>
-      <p class="description">The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and...</p>
-      <div class="card-header_static py-1 px-2 border-bottom bg-light">
-        <small class="card-text inline-block">
-          &nbsp;
-          <a href="#" title="GitHub page" class="source-code card-text float-beginning inline-block tile_a">
-            <i class="bi-github"></i></a>
-          &nbsp;
-          <a href="#" title="Main site" class="source-code card-text float-beginning inline-block tile_a">
-            <i class="bi-globe"></i></a>
-          &nbsp;
-          <a href="#" title="Group site" class="source-code card-text float-beginning inline-block tile_a">
-            <i class="bi-people-fill"></i></a>
-          &nbsp;
-          <a href="#" title="View publication" class="source-code card-text float-beginning inline-block tile_a">
-            <i class="bi-journal-text"></i></a>
-          &nbsp;
-          <a href="#" title="Get more information" class="source-code card-text float-beginning inline-block tile_a">
-            <i class="bi-info-circle"></i></a>
-          <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
-        </small>
-      </div>
-    </div>
-  </div>
-
-<p>We have consolidated resources and links to datasets commonly used in public health from international, U.S., and Yale University sources. Each one is presented with a tile that contains salient details about the source and relevant links.</p>
-<table class="caption-top table">
-<caption>Demonstration of pipe table syntax</caption>
-<thead>
-<tr class="header">
-<th>Default</th>
-<th style="text-align: left;">Left</th>
-<th style="text-align: right;">Right</th>
-<th style="text-align: center;">Center</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>12</td>
-<td style="text-align: left;">12</td>
-<td style="text-align: right;">12</td>
-<td style="text-align: center;">12</td>
-</tr>
-<tr class="even">
-<td>123</td>
-<td style="text-align: left;">123</td>
-<td style="text-align: right;">123</td>
-<td style="text-align: center;">123</td>
-</tr>
-<tr class="odd">
-<td>1</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: center;">1</td>
-</tr>
-</tbody>
-</table>
-<p>Add some description about the the icons used in the tiles. Full list here: <a href="https://icons.getbootstrap.com/">Bootstrap Icons</a>.</p>
-
-
-</section>
-
-</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -633,7 +616,430 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+<div class="quarto-listing quarto-listing-container-custom" id="listing-national">
+
+
+  <meta charset="UTF-8">
+  <title>Freely Accessible Resources</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <style>
+    a {
+      color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1))
+    }
+    .main-container {
+      display: flex;
+      flex: 1;
+    }
+    .sidebar-wrapper {
+      width: 210px;
+      padding: 10px;
+      margin-left: 30px;
+      border-right: 1px solid #ddd;
+      position: sticky;
+      top: 20px;
+      height: fit-content;
+      flex-shrink: 0;
+    }
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+    }
+    .main-content {
+      flex-grow: 1;
+      padding: 20px;
+      margin-left: 20px;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: center;
+      gap: 20px 20px;
+    }
+
+    .tile {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 320px;
+      height: 440px;
+      border: 1px solid #444;
+      border-radius: 0;
+      text-align: left;
+      text-decoration: none;
+      color: inherit;
+      background-color: white;
+      overflow: hidden;
+    }
+
+    .tile img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .tile h2 {
+      font-size: 18px;
+      padding: 6px;
+      color: #52505d;
+      margin: 10px 0 0 0;
+    }
+
+    .tile p {
+      font-size: 12px;
+      padding: 6px;
+      color: #52505d;
+      margin: 0;
+      flex-grow: 1;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      padding-bottom: 0.14em;
+    }
+
+    .card-header {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #f1f1f1 !important;
+      margin-top: auto;
+    }
+
+    .image {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+    .checkbox-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .checkbox-container input[type="checkbox"],
+    .checkbox-container label {
+      align-self: center;
+    }
+
+    .checkbox-container label {
+      margin-left: 5px;
+    }
+
+    /* Reactive for media */
+    @media (max-width: 1024px) {
+      .tile {
+        width: calc(50% - 15px);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        margin-left: 0;
+      }
+      .tile {
+        width: 100%;
+      }
+    }
+  </style>
+
+
+  <div>
+    <div class="main-container">
+      <div class="sidebar-wrapper">
+        <aside class="sidebar">
+          <form id="categoryFilter1" class="form">
+            <h5>Category Type 1</h5>
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category1" value="National">
+                  <label style="margin-bottom: 0px;">National</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category1" value="Category2">
+                  <label style="margin-bottom: 0px;">Category2</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category1" value="Category1">
+                  <label style="margin-bottom: 0px;">Category1</label>
+                </div>
+              
+            
+          </form>
+          <br>
+          <form id="categoryFilter2" class="form">
+            <h5>Category Type 2</h5>
+            
+              
+              
+                
+              
+                
+              
+                
+              
+                
+              
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category2" value="Data">
+                  <label style="margin-bottom: 0px;">Data</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category2" value="Analytical Tool">
+                  <label style="margin-bottom: 0px;">Analytical Tool</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category2" value="TypeB">
+                  <label style="margin-bottom: 0px;">TypeB</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category2" value="TypeA">
+                  <label style="margin-bottom: 0px;">TypeA</label>
+                </div>
+              
+            
+          </form>
+        </aside>
+      </div>
+      <div class="main-content">
+        <div class="container">
+          
+            
+              
+                <div class="tile" data-categories1="National" data-categories2="Data Analytical Tool">
+                  <img src="public/images/Firefly data science ai hub; watercolor image 92513.jpg" class="image">
+                  <h2 class="js-line-count">The Viral Emergence Research Initiative</h2>
+                  <p class="description">An open data ecosystem made to power pandemic prediction.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                       
+                        <a href="https://www.viralemergence.org/data" title="Main site" class="source-code"><i class="bi-globe"></i></a>
+                      
+                       
+                        <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code"><i class="bi-people-fill"></i></a>
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Basic Research, Animal Research, Analytical Tools</p>
+                      
+                    </small>
+                  </div>
+                </div>
+              
+                <div class="tile" data-categories1="National" data-categories2="Data Analytical Tool">
+                  <img src="public/images/nhis.png" class="image">
+                  <h2 class="js-line-count">Open Science</h2>
+                  <p class="description">In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                       
+                        <a href="https://grubaughlab.com/open-science/" title="Main site" class="source-code"><i class="bi-globe"></i></a>
+                      
+                       
+                        <a href="https://grubaughlab.com/" title="Group site" class="source-code"><i class="bi-people-fill"></i></a>
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Basic Research, Analytical Tools, Consulting/Services</p>
+                      
+                    </small>
+                  </div>
+                </div>
+              
+            
+          
+            
+              
+                <div class="tile" data-categories1="Category2" data-categories2="TypeB">
+                  <img src="public/images/nhis.png" class="image">
+                  <h2 class="js-line-count">Open Science</h2>
+                  <p class="description">In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                       
+                        <a href="https://grubaughlab.com/open-science/" title="Main site" class="source-code"><i class="bi-globe"></i></a>
+                      
+                       
+                        <a href="https://grubaughlab.com/" title="Group site" class="source-code"><i class="bi-people-fill"></i></a>
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Basic Research, Analytical Tools</p>
+                      
+                    </small>
+                  </div>
+                </div>
+              
+            
+          
+            
+              
+                <div class="tile" data-categories1="Category1 Category2" data-categories2="TypeA TypeB">
+                  <img src="public/images/nhis.png" class="image">
+                  <h2 class="js-line-count">Mix</h2>
+                  <p class="description">Description for Mix</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                       
+                        <a href="https://github.com/username/repo3" title="GitHub page" class="source-code"><i class="bi-github"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="display:none; margin-bottom: 5px;"></p>
+                      
+                    </small>
+                  </div>
+                </div>
+              
+            
+          
+            
+              
+                <div class="tile" data-categories1="Category1" data-categories2="TypeB">
+                  <img src="public/images/nhis.png" class="image">
+                  <h2 class="js-line-count">Mix2</h2>
+                  <p class="description">Description for Mix</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                       
+                        <a href="https://github.com/username/repo3" title="GitHub page" class="source-code"><i class="bi-github"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="display:none; margin-bottom: 5px;"></p>
+                      
+                    </small>
+                  </div>
+                </div>
+              
+            
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    function updateLineCounts() {
+      document.querySelectorAll(".tile").forEach(function(tile) {
+        var h2Element = tile.querySelector(".js-line-count");
+        var lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
+        var height = h2Element.scrollHeight;
+        var lines = Math.floor(height / lineHeight);
+
+        // Set -webkit-line-clamp based on the lines for the <p> object
+        var clampValue;
+        if (lines >= 3) {
+          clampValue = 5;
+        } else if (lines === 2) {
+          clampValue = 7; /* Increased to better utilize space */
+        } else {
+          clampValue = 9; /* Increased to better utilize space */
+        }
+
+        // Adjust the clamp value based on the topic element presence
+        var topicElement = tile.querySelector('.topic');
+        if (topicElement && topicElement.style.display !== 'none') {
+          var topicHeight = topicElement.scrollHeight;
+          var topicLines = Math.floor(topicHeight / lineHeight);
+          if (clampValue !== null) {
+            clampValue -= topicLines;
+          }
+        } else {
+          // If no topic is provided, add 1 to clampValue
+          if (clampValue !== null) {
+            clampValue += 1;
+          }
+        }
+
+        var pElement = tile.querySelector("p.description");
+        if (clampValue) {
+          pElement.style.display = '-webkit-box';
+          pElement.style.webkitBoxOrient = 'vertical';
+          pElement.style.webkitLineClamp = clampValue;
+          pElement.style.overflow = 'hidden';
+        } else {
+          pElement.style.display = 'block';
+          pElement.style.webkitBoxOrient = '';
+          pElement.style.webkitLineClamp = '';
+          pElement.style.overflow = '';
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+      updateLineCounts();
+      window.addEventListener('resize', updateLineCounts);
+
+      const categoryFilter1 = document.getElementById('categoryFilter1');
+      const categoryFilter2 = document.getElementById('categoryFilter2');
+      const tiles = document.querySelectorAll('.tile');
+
+      function filterTiles() {
+        const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => input.value);
+        const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => input.value);
+
+        tiles.forEach(function(tile) {
+          const categories1 = (tile.getAttribute('data-categories1') || '').split(' ');
+          const categories2 = (tile.getAttribute('data-categories2') || '').split(' ');
+
+          const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
+          const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
+
+          if (matchesCategory1 && matchesCategory2) {
+            tile.style.display = 'block';
+            updateLineCounts(); // Ensure clamping is applied after filtering
+          } else {
+            tile.style.display = 'none';
+          }
+        });
+      }
+
+      categoryFilter1.addEventListener('change', filterTiles);
+      categoryFilter2.addEventListener('change', filterTiles);
+      filterTiles();
+    });
+  </script>
+
+
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
@@ -642,17 +1048,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <div class="nav-footer-center">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
-    <a class="nav-link" href="./Pages/about-us.html">
+    <a class="nav-link" href="../../../../Pages/about-us.html">
 <p>About Us</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./Pages/Resources/index.html">
+    <a class="nav-link" href="../../../../Pages/Resources/index.html">
 <p>Resources</p>
 </a>
   </li>  
     <li class="nav-item">
-    <a class="nav-link" href="./Pages/Datasets/index.html">
+    <a class="nav-link" href="../../../../Pages/Datasets/index.html">
 <p>Datasets</p>
 </a>
   </li>  
@@ -662,7 +1068,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Local Only/Pages_old_replaced 05.11.2025/Resources/International/index.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
