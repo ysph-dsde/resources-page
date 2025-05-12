@@ -1,0 +1,10 @@
+---
+  title: "NIH's All of Us"
+  title-block-banner: true
+  format: html
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+---
+
+![Free Adobe Stock photo by inspiring.team. File #: 284810520](images/AdobeStock_284810520.jpeg){fig-align="center"}

@@ -1,0 +1,27 @@
+---
+format:
+  html:
+    toc: false
+    code-fold: true
+    page-layout: custom
+    includes:
+      before-body: sidebar.html 
+back-to-top-navigation: true
+listing:
+  - template: views/index.ejs
+    contents: resources-listings.yml
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    page-size: 5
+---
+
+
+```{=html}
+<div class="header">
+    <h1>Resources</h1>
+    <p>A statement about resources.</p>
+ </div>
+```
+
+

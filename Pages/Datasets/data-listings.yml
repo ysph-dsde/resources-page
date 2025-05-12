@@ -1,0 +1,82 @@
+# -----------
+# yaml listing for the Datasets page in the Yale School of 
+# Public Health (YSPH) Resource Navigation Tool github.io page.
+# 
+# Filter by three categories: 
+#   1. Region and/or affiliation 
+#   2. Dataset content type
+#   3. Accessibility
+# 
+# Sort by title and date updated.
+# 
+# Author: Shelby Golden, M.S.
+#   Date: May 10th, 2025
+# 
+# Last Updated: 
+
+items:
+
+  # -----------
+  # Region/Affiliation by: Yale School of Public Health
+  - categories1:
+      - "Yale School of Public Health"
+    categories2:
+      - "Clinical Study/Surveys"
+    categories3:
+      - "Open Access"
+    tiles:
+      - title: The Health Attribution Library
+        description: |
+          We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. The Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations.
+        date-added: 2025-03-17
+        date-updated: 2025-03-17
+        image: Images/The Health Attribution Library.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.healthattribution.org/
+        group: https://www.carlsonlab.bio/
+      - title: Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)
+        description: |
+          The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a centralized platform housing data on immunogenicity from clinical trials of pneumococcal vaccines. The data on WISSPAR are primarily curated from outcomes tables from clinicaltrials.gov and are made available in a searchable format that can be readily used for downstream analyses. Fields included in the database include product, manufacturers, dosing schedule, age group, and geographic region. You can use the embedded tools to generate customizable visualizations, export data for further analyses, or just browse through clinical trial results.
+        date-added: 2025-04-07
+        date-updated: 2025-04-07
+        image: Images/wisspar.png
+        topic: "Clinical Study/Surveys"
+        site: https://wisspar.com/
+        group: https://medicine.yale.edu/lab/weinberger/
+  - categories1:
+      - "Yale School of Public Health"
+    categories2:
+      - "Basic Research Assays"
+    categories3:
+      - "Open Access"
+    tiles:
+      - title: Nextstrain
+        description: |
+          Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!
+        date-added: 2025-03-17
+        date-updated: 2025-03-17
+        image: Images/nextstrain.png
+        topic: "Basic Research Assays"
+        site: https://grubaughlab.com/nextstrain/
+        group: https://www.carlsonlab.bio/
+        
+  # -----------
+  # Region/Affiliation by: Yale School of Medicine
+  - categories1:
+      - "Yale School of Medicine"
+    categories2:
+      - "Clinical Study/Surveys"
+    categories3:
+      - "Restricted Access"
+    tiles:
+      - title: Yale University Open Data Access (YODA)
+        date-added: 2024-10-01
+        date-updated: 2025-03-20
+        description: |
+          In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
+        image: Images/YODA.png
+        topic: "Clinical Study/Surveys"
+        site: https://yoda.yale.edu/
+        group: https://medicine.yale.edu/core/
+        info: More-Info-Pages/YODA.qmd
+       
