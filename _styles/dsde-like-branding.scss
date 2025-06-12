@@ -194,6 +194,20 @@ ol, ul {
   background-color: var(--light-header-background) !important;
   margin-top: auto;
 }
+#showMoreBtn {
+  display: block;           /* Block display for full-width */
+  background-color: #fff;
+  border-radius: .25rem;
+  border-color: var(--link-color);
+  box-shadow: 0 .2rem .5rem #6c757d, 0 0 .05rem #6c757d;
+  color: #6c757d;
+  text-decoration: none;
+  font-size: .9em;
+  text-align: center;
+  left: 50%;
+  padding: .4rem .8rem;
+  transform: translate(-50%, 0);
+}
 .checkbox-container {
   display: flex;
   align-items: center;

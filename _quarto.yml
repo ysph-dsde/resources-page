@@ -5,7 +5,7 @@ project:
 website:
   title: "Resource Navigation Tool"
   page-navigation: true
-  back-to-top-navigation: false
+  back-to-top-navigation: true
   bread-crumbs: false
   favicon: Images/DSDE-Visuals/DSDE-Social-Media-Profile.png
   search: true

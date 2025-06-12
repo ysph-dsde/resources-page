@@ -6,14 +6,17 @@
   editor_options: 
   chunk_output_type: console
   page-navigation: false
+  back-to-top-navigation: true
 ---
-
 
 ![](Images/Wordmark-Data-Science-and-Data-Equity-black.png){style="display: block; margin-left: auto; margin-right: auto;" width="700"}\
 
 
-Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice. Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.
+Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice. 
 
+Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.
+
+\
 
 ```{=html}
 
@@ -27,6 +30,7 @@ Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH D
         <i class="tile_icon bi bi-arrow-right-circle-fill"></i>
       </a>
     </div>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <div class="tile_title" >
       <a href="Pages/Datasets/index.qmd" title="Listing page">
         <img src="Images/Firefly data science data equity 50124.jpg" alt="Datasets page" class="image">
@@ -40,6 +44,7 @@ Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH D
 
 ```
 
+\
 
 ## Navigating the Site
 
@@ -78,7 +83,7 @@ Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH D
 
 
 
-We have consolidated resources and links to datasets commonly used in public health from international, U.S., and Yale University sources. Each one is presented with a tile that contains salient details about the source and relevant links.
+We have consolidated resources and links to datasets commonly used in public health from international, American, and Yale University sources. Each one is presented with a tile that contains salient details about the source and relevant links. An example tile is shown on the left.
 
 | Default | Left | Right | Center |
 |---------|:-----|------:|:------:|

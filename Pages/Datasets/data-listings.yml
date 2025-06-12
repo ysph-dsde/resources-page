@@ -78,5 +78,41 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://yoda.yale.edu/
         group: https://medicine.yale.edu/core/
-        info: More-Info-Pages/YODA.qmd
-       
+        info: Restricted-Access/More-Info-Pages/YODA.qmd
+
+  # -----------
+  # Region/Affiliation by: US Government
+  - categories1:
+      - "U.S. Government"
+    categories2:
+      - "Clinical Study/Surveys"
+    categories3:
+      - "Open Access"
+      - "Restricted Access"
+    tiles:
+      - title: National Center for Health Statistics (NCHS)
+        date-added: 2025-03-20
+        date-updated: 2025-03-20
+        description: |
+          The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. We also collect data about what participants eat, drink, and take as supplements to determine how many nutrients are in their diet. These dietary interviews and blood tests help us measure the nutritional status of U.S. adults and children.
+          </br>
+          CDC's National Center for Health Statistics (NCHS) conducts NHANES. NHANES is the only national health survey that includes health exams, laboratory tests, and dietary interviews for participants of all ages.
+          </br>
+          NHANES data can help improve the health of Americans. Survey data have driven changes in how doctors treat patients and how public policy supports good health.
+        image: Images/nhanes.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.cdc.gov/nchs/index.html
+        info: Freely-AccessibleMore-Info-Pages/NHANES.qmd
+      - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
+        date-added: 2025-03-20
+        date-updated: 2025-03-20
+        description: |
+          The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. We also collect data about what participants eat, drink, and take as supplements to determine how many nutrients are in their diet. These dietary interviews and blood tests help us measure the nutritional status of U.S. adults and children.
+          </br>
+          CDC's National Center for Health Statistics (NCHS) conducts NHANES. NHANES is the only national health survey that includes health exams, laboratory tests, and dietary interviews for participants of all ages.
+          </br>
+          NHANES data can help improve the health of Americans. Survey data have driven changes in how doctors treat patients and how public policy supports good health.
+        image: Images/nhanes.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.cdc.gov/nchs/nhanes/
+        info: Freely-AccessibleMore-Info-Pages/NHANES.qmd
