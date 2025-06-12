@@ -18,7 +18,7 @@ listing:
 ```{=html}
 <div class="header">
     <h1>Datasets</h1>
-    <p style="max-width: 60%; margin: auto;">Explore our collection of datasets, curated to support a wide range of academic and research pursuits in public health.</p>
+    <p style="max-width: 50%; margin: auto; text-align: left;">Explore our collection of datasets, curated to support a wide range of academic and research pursuits in public health.</p>
  </div>
 ```
 

@@ -1,10 +1,22 @@
 ---
-  title: "NIH's All of Us"
+  title: "NHANES"
+  description: |
+         </br>
+         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. We also collect data about what participants eat, drink, and take as supplements to determine how many nutrients are in their diet. These dietary interviews and blood tests help us measure the nutritional status of U.S. adults and children.
+         </br>
+         </br>
+         CDC's National Center for Health Statistics (NCHS) conducts NHANES. NHANES is the only national health survey that includes health exams, laboratory tests, and dietary interviews for participants of all ages.
+         </br>
+         </br>
+         NHANES data can help improve the health of Americans. Survey data have driven changes in how doctors treat patients and how public policy supports good health.
   title-block-banner: true
   format: html
+  filters:
+    - parse-latex
   markdown: 
   editor_options: 
   chunk_output_type: console
 ---
 
-![Free Adobe Stock photo by inspiring.team. File #: 284810520](images/AdobeStock_284810520.jpeg){fig-align="center"}
+## Publications
+

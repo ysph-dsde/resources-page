@@ -1,10 +1,15 @@
 ---
   title: "NIH's All of Us"
+  description: |
+         </br>
+         All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.
   title-block-banner: true
   format: html
+  filters:
+    - parse-latex
   markdown: 
   editor_options: 
   chunk_output_type: console
 ---
 
-![Free Adobe Stock photo by inspiring.team. File #: 284810520](images/AdobeStock_284810520.jpeg){fig-align="center"}
+## Publications

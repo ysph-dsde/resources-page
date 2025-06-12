@@ -8,6 +8,7 @@
 
 *_files
 *.html
+*.pptx
 
 /.quarto/
 /docs/
