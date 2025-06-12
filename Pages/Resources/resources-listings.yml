@@ -167,36 +167,4 @@ items:
         image: Images/AdobeStock_323829966 cropped.jpeg
         topic: "Consulting/Services, Analytical Tools"
         site: https://research.computing.yale.edu/
-  ## TEMPORARY
-  - categories1:
-      - "Yale University"
-    categories2:
-      - "Analytical Tools"
-      - "Consulting/Services"
-      - "Other"
-    tiles:
-      - title: Data-Intensive Social Science Center (DISSC) at Yale
-        date-added: 2025-03-20
-        date-updated: 2025-03-20
-        description: |
-          A university-wide hub to support data-intensive social science research at the frontiers of each discipline.
-        image: Images/AdobeStock_802446835.jpeg
-        topic: "Consulting/Services, Analytical Tools, Other"
-        site: https://dissc.yale.edu/
-      - title: Yale Center for Research Computing (YCRC)
-        date-added: 2025-03-20
-        date-updated: 2025-03-20
-        description: |
-          The Yale Center for Research Computing (YCRC) is a computational core facility under the Office of the Provost created to support the advanced computing needs of the research community. The YCRC is staffed by a team of research scientists, application specialists, and systems administrators with expertise in supporting high performance computing (HPC) and computationally dependent disciplines.
-        image: Images/AdobeStock_323829966 cropped.jpeg
-        topic: "Consulting/Services, Analytical Tools, Other"
-        site: https://research.computing.yale.edu/
-      - title: Yale Center for Research Computing (YCRC)
-        date-added: 2025-03-20
-        date-updated: 2025-03-20
-        description: |
-          The Yale Center for Research Computing (YCRC) is a computational core facility under the Office of the Provost created to support the advanced computing needs of the research community. The YCRC is staffed by a team of research scientists, application specialists, and systems administrators with expertise in supporting high performance computing (HPC) and computationally dependent disciplines.
-        image: Images/AdobeStock_323829966 cropped.jpeg
-        topic: "Consulting/Services, Analytical Tools, Other"
-        site: https://research.computing.yale.edu/
         

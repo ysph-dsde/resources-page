@@ -17,7 +17,7 @@
 
 ## Overview
 
-Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic Cosmos data will require a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:
+Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic and Epic Cosmos data will need a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:
 
 :::::: columns
 ::: {.column style="text-align:right; width:25%"}
@@ -25,10 +25,16 @@ Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic Cosmos 
 
 \
 \
+\
 \hyperlink{https://medicine.yale.edu/ybic/data-resources-services/slicerdicer/}{Epic SlicerDicer}
 
 \
 \
+\
+\
+\
+\
+
 \hyperlink{https://medicine.yale.edu/ybic/computational-resources/ynhhs/#computational-health-platform}{Computational Health Platform (CHP)}\
 \
 \
@@ -45,9 +51,11 @@ Microsoft Office 365
 :::
 
 ::: {.column width="72%"}
-Remote access to a YNHHS secure device without requiring the YNHHS VPN. VDI includes the following software: SQL Server Management Studio, R, Stata, SAS, Office365, and Epic. It can be used to handle small-to-medium sized data, accessing Epic charts, SlicerDicer, and the CHP.
+Remote access to a YNHHS secure device without requiring the YNHHS VPN. VDI includes the following software: SQL Server Management Studio, R, Stata, SAS, Office365, and Epic. It can be used to handle small-to-medium sized data, accessing Epic charts, SlicerDicer, and the Computational Health Platform (CHP).
 
-Access de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. IRB applications is not required, but training is strongly recommended before usage.
+Access de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. Institutional Review Board (IRB) applications are not required to access de-identified data, but training is strongly recommended before usage. 
+
+Researchers can request access to the Epic Cosmos system, which will provide de-identified, summary count data for all participating Epic systems outside of YNHHS.
 
 A secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. Suitable for AI research and development, and is well suited for analyzing large volumes of data in different forms (i.e. images, text, structured).
 
@@ -57,44 +65,91 @@ Microsoft applications linked within the YNHHS organization.
 :::
 ::::::
 
+There are three levels of access available:
+
+::: {style="margin-left: 2rem"}
+-   RBA without an IRB give access to the afore mentioned resources but only supplies de-identified, summary count data produced within YNHHS Epic.
+-   RBA with an approved IRB gives access to individual-level data for Epic data produced within YNHHS that is strictly relevant to the IRB approved study.
+-   Epic Cosmos - RBA holders can gain access to de-identified, summary count data produced by Epic participating institutions outside of YNHHS upon special request.
+:::
+
+
+
+
 ### Do I Qualify?
 
-All Yale University and YNHHS (YU-YNHHS) Covered Entity faculty and licensed provides may submit and sponsor RBA requests. If you are within the Yale system, your manager or sponser with a YNHHS account must complete the ["YNHHS Researcher Basic Access"](https://shorturl.at/nJOS0) request on your behalf to start the process.
+All Yale University and YNHHS (YU-YNHHS) Covered Entity faculty and licensed provider may submit and sponsor RBA requests. If you are within the Yale system, your manager or sponser with a YNHHS account must complete the ["YNHHS Researcher Basic Access"](https://shorturl.at/nJOS0) request on your behalf to start the process.
 
 If you are not a member of a YU-YNHHS Covered Entity (e.g. YSPH), you will need a sponsor to submit a request on your behalf. Find the current "List of Covered Departments" under "Administrative Functions" on the [hippa.yale.edu](https://hipaa.yale.edu/resources/resource-documents-and-guidance) resources page.
 
 ## Step-by-Step
 
+::: {style="margin-left: 2rem"}
 1.  Your YU-YNHHS Covered Entity manager or sponsor will complete the ["YNHHS Researcher Basic Access"](https://shorturl.at/nJOS0) request on your behalf. This will give you YNHHS log-in credentials and identification authentication with Duo.
 
 2.  **For Yale NetID holders:** [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) courses in Workday, including the basic privacy and security module followed by the role specific module (i.e. for clinician's or researcher's).
 
     **For Non-Yale NetID holders:** read and sign the [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) training materials specific to your role on the project (i.e. for clinician's or researcher's). Submission directions for these documents can be found on the PDF.
 
-3.  Human Subjects Protection Training (HSPT) certificate from CITI completed within the last 3 years. Below is a summary of the process, and the complete directions can be found on the [It's Your Yale](https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training) page about HSPT. You can reach out to irb.training\@yale.edu for further questions.
+3.  Human Subjects Protection Training (HSPT) certificate from CITI that has been completed within the last 3 years. Below is a summary of the process and the complete directions can be found on the [It's Your Yale](https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training) page about HSPT. You can reach out to [irb.training@yale.edu](mailto:irb.training@yale.edu) for further questions.
 
     Researchers will need to complete the following CITI certificates:
 
-    -   "Basic Training"
-    -   One of the following two initial/basic Human Subjects Research modules: "Biomedical Research Basic" or "Social Behavioral Educational Researchers Basic".
+::: {style="margin-left: 2rem"}
+-   "Basic Training"
+-   One of the following two initial/basic Human Subjects Research modules: "Biomedical Research Basic" or "Social Behavioral Educational Researchers Basic".
+:::
 
-    For Yale-affiliates, it is preferable, though not required, to go through Workday to access the CITI training modules. Doing so will expedite recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) Institutional Review Board (IRB) system. In Workday, the CITI training link will show up as the "Human Subjects Protection Training – Initial/Refresher" course. You can reach out to your manager, learning\@yale.edu, or irb.training\@yale.edu to request manual assignment if needed.
+::: {style="margin-left: 0rem"}
+For Yale-affiliates, it is preferable, though not required, to go through Workday to access the CITI training modules. Doing so will expedite recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) IRB system. In Workday, the CITI training link will show up as the "Human Subjects Protection Training – Initial/Refresher" course. You can reach out to your manager, [learning@yale.edu](mainto:learning@yale.edu), or [irb.training@yale.edu](mainto:irb.training@yale.edu) to request manual assignment if needed.
 
-    Qualifying certificates completed through other institutions CITI subscriptions need to be emailed to irb.training\@yale.edu. Please keep in mind that receiving CITI certification independently from a subscribing institution will incur charges.
+Qualifying certificates completed through other institutions CITI subscriptions need to be emailed to [irb.training@yale.edu](mainto:irb.training@yale.edu). Please keep in mind that receiving CITI certification independently from a subscribing institution will incur charges.
+:::
 
-4.  
+4.  SlicerDicer
+
+::: {style="margin-left: 2rem"}
+- https://jdat.ynhh.org/AnalyticsPortal/helix
+:::
+
+:::
 
 ## Typical Timeline
 
 ::: callout-important
-Good things come with time.
+If you are looking to gain access to the individual-level YNHHS Epic data you will need to submit an IRB application. Time-to access in these cases is contingent upon the IRB's process that will vary for applications.
 :::
 
-## Sources
+::: {.panel-tabset}
 
+## YNHHS Epic
+
+Time to get RBA to YNHHS de-identified data.
+
+## Epic Cosmos
+
+Time to get access to de0identified data from all Epic centers outside YNHHS.
+
+:::
+
+
+## Important Links
+
+::: {style="margin-left: 2rem"}
+- [YNHHS Learning Management System (LMS)](https://ynhh.certpointsystems.com/): Center Point is where you can sign up for in-person or online training courses.
+- [MyAPPs](https://myapps.ynhh.org): Access to the VDI via a Citrix Workspace download. YNHHS DUO and YU/YNHHS VPN is required if not accessing on the YU or YNHHS network.
+
+:::
+
+## References
+
+The content provided here is a compilation of work from multiple groups throughout YU and YNHHS:
+
+::: {style="margin-left: 2rem"}
 1.  [Yale Biomedical Informatics & Computing](https://medicine.yale.edu/ybic)
 
+:::
 \
 \
 \
-Updated: April 16th, 2025
+Updated: June 12th, 2025

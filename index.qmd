@@ -83,16 +83,18 @@ Our mission is to develop and support a robust public health data science infras
 
 
 
-We have consolidated resources and links to datasets commonly used in public health from international, American, and Yale University sources. Each one is presented with a tile that contains salient details about the source and relevant links. An example tile is shown on the left.
+We have curated a comprehensive collection of resources and links to datasets commonly utilized in public health, sourced from international organizations, United States agencies, and Yale University. Each one is presented with a tile that contains salient details about the source with relevant links.
 
-| Default | Left | Right | Center |
-|---------|:-----|------:|:------:|
-| 12      | 12   |    12 |   12   |
-| 123     | 123  |   123 |  123   |
-| 1       | 1    |     1 |   1    |
+Each tile can have any combination of five hyperlinked icons:
 
-: Demonstration of pipe table syntax
+<i class="bi bi-github icon-red"></i> \  Links to code repositories for the dataset/resource.
 
+<i class="bi bi-globe icon-red"></i> \ Links to the main website of the dataset/resource.
 
-Add some description about the the icons used in the tiles. Full list here: [Bootstrap Icons](https://icons.getbootstrap.com/).
+<i class="bi bi-people icon-red"></i> \ Links to the websites of the research groups responsible for creating the dataset/resource.
+
+<i class="bi bi-journal-text icon-red"></i> \ Links to example publications utilizing the dataset/resource.
+
+<i class="bi bi-info-circle icon-red"></i> \ Links to a **Resource Navigation Tool** webpage with additional details about the dataset.
+
 

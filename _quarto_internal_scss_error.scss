@@ -13027,6 +13027,11 @@ $web-font-path: "https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0
 }
 .quarto-title-banner a {
   text-decoration: none;
+  color: var(--link-color);
+}
+
+.quarto-title-banner a:hover {
+  color: var(--hover-color);
 }
 
 
@@ -13163,19 +13168,20 @@ ol, ul {
   width: 100%;
   background-color: var(--light-header-background) !important;
   margin-top: auto;
-
+}
 #showMoreBtn {
-  background-color: #007bff; /* Blue background */
-  color: #ffffff;           /* White text color */
-  border: none;             /* No border */
-  border-radius: 5px;       /* Rounded corners */
-  padding: 10px 20px;       /* Padding */
-  font-size: 16px;          /* Font size */
-  cursor: pointer;          /* Pointer cursor on hover */
-  text-align: center;       /* Center text */
   display: block;           /* Block display for full-width */
-  margin: 20px auto;        /* Center button horizontally and add margin */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  background-color: #fff;
+  border-radius: .25rem;
+  border-color: var(--link-color);
+  box-shadow: 0 .2rem .5rem #6c757d, 0 0 .05rem #6c757d;
+  color: #6c757d;
+  text-decoration: none;
+  font-size: .9em;
+  text-align: center;
+  left: 50%;
+  padding: .4rem .8rem;
+  transform: translate(-50%, 0);
 }
 .checkbox-container {
   display: flex;
@@ -13328,8 +13334,156 @@ ol, ul {
   text-shadow: 1.5px 1px 0px black;
   text-decoration: none;
 }
+.icon-red {
+  color: var(--link-color);
+}
 
 
+
+/*-- scss: about-us people titles --*/
+
+body.people {
+  margin: 0;
+  padding: 0;
+}
+
+.people .tile-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px;
+}
+
+.people .tile {
+  display: flex;
+  flex-direction: row;
+  background-color: none;
+  border: none;
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(50% - 20px);
+  margin: 10px 0;
+  align-items: flex-start;
+  min-width: 600px;
+}
+
+.people .img-container {
+  flex: 0 0 200px;
+  margin-right: 20px;
+}
+
+.people .img-container img {
+  width: 100%;
+  height: 250px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.people .tile-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 0;
+  flex-grow: 999; /* Expand tile content to fill available space */
+  min-width: 0; /* Prevents the shrinkage */
+  margin
+}
+
+.people .tile-content h2 {
+  font-weight: bold;
+  margin-bottom: -5px;
+  color: #333;
+}
+
+.people .tile-content .title-paragraph {
+  font-size: 0.8em;
+  color: #666;
+  margin-bottom: 5px;
+  word-wrap: break-word;
+}
+
+.people .tile-content .description {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  word-wrap: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.people .contact-info {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.people .link-bar {
+  margin-left: 0.5em; 
+}
+
+.people .link-bar-text a {
+  color: var(--link-color);
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+.people .link-bar-text a:hover {
+  text-decoration: underline;
+}
+
+.people .profile-link {
+  font-size: 1em;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: var(--hover-color);
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  align-self: flex-start;
+}
+
+.people .profile-link:hover {
+  background-color: #0056b3;
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .people .tile {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .people .img-container {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .people .img-container img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .people .tile-content h2 {
+    font-size: 1em;
+  }
+
+  .people .tile-content .card-header {
+    margin-top: -4px;
+  }
+
+  .people .tile-content .title-paragraph,
+  .people .tile-content .description,
+  .people .contact-info {
+    font-size: 0.9em;
+  }
+
+  .people .profile-link {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+}
 
 /*-- scss: titles with metadata  OLD BUT KEEP --*/
 

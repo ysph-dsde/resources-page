@@ -78,10 +78,30 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://yoda.yale.edu/
         group: https://medicine.yale.edu/core/
-        info: Restricted-Access/More-Info-Pages/YODA.qmd
+        
+  # -----------
+  # Region/Affiliation by: Yale University
+  - categories1:
+      - "Yale University"
+    categories2:
+      - "Clinical Study/Surveys"
+    categories3:
+      - "Restricted Access"
+    tiles:
+      - title: Yale New Haven Health System (YNHHS) Epic
+        date-added: 2025-03-20
+        date-updated: 2025-03-20
+        description: |
+          Cosmos is a dataset created in collaboration with a community of health systems using Epic and is designed to improve patient care. By combining their data, participating organizations and Epic can make new discoveries and advance medicine. Cosmos also powers tools at the point of care, providing insights to clinicians that are tailored to the patient in front of them.
+        image: Images/YNHHS Epic Cosmos.png
+        topic: "Clinical Study/Surveys"
+        site: https://medicine.yale.edu/ybic/ynhhs-research-access/
+        group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
+        info: More-Info-Pages/Restricted-Access/YNHHS-Epic-Cosmos.qmd
 
   # -----------
   # Region/Affiliation by: US Government
+  # Open Access & Restricted Access
   - categories1:
       - "U.S. Government"
     categories2:
@@ -94,25 +114,160 @@ items:
         date-added: 2025-03-20
         date-updated: 2025-03-20
         description: |
-          The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. We also collect data about what participants eat, drink, and take as supplements to determine how many nutrients are in their diet. These dietary interviews and blood tests help us measure the nutritional status of U.S. adults and children.
-          </br>
-          CDC's National Center for Health Statistics (NCHS) conducts NHANES. NHANES is the only national health survey that includes health exams, laboratory tests, and dietary interviews for participants of all ages.
-          </br>
-          NHANES data can help improve the health of Americans. Survey data have driven changes in how doctors treat patients and how public policy supports good health.
-        image: Images/nhanes.png
+          The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and death records, medical records, interviews with people and healthcare providers, direct physical examinations, and laboratory testing. NCHS shares data, statistics, and analysis in multiple ways, including reports, dashboards, and data files. Including: Family Growth Survey, Health Care Surveys, Rapid Surveys, Health and Nutrition Examination Survey, Health Interview Survey, Vital Statistics, and a special compilation of linked surveys with administrative data. Here we specifically list the surveys that are not open access only.
+        image: Images/nchs.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/index.html
-        info: Freely-AccessibleMore-Info-Pages/NHANES.qmd
       - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
         date-added: 2025-03-20
         date-updated: 2025-03-20
         description: |
           The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. We also collect data about what participants eat, drink, and take as supplements to determine how many nutrients are in their diet. These dietary interviews and blood tests help us measure the nutritional status of U.S. adults and children.
           </br>
+          </br>
           CDC's National Center for Health Statistics (NCHS) conducts NHANES. NHANES is the only national health survey that includes health exams, laboratory tests, and dietary interviews for participants of all ages.
+          </br>
           </br>
           NHANES data can help improve the health of Americans. Survey data have driven changes in how doctors treat patients and how public policy supports good health.
         image: Images/nhanes.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nhanes/
-        info: Freely-AccessibleMore-Info-Pages/NHANES.qmd
+        info: More-Info-Pages/Freely-Accessible/NHANES.qmd
+      - title: NCHS's National Health Interview Survey (NHIS)
+        date-added: 2025-03-20
+        date-updated: 2025-03-20
+        description: |
+          The National Health Interview Survey (NHIS) monitors the health of people across the country—the U.S. population—by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults.
+          </br>
+          </br>
+          CDC's National Center for Health Statistics (NCHS) conducts NHIS. It is the nation's largest and oldest national health survey. NHIS began collecting data in 1957.
+          </br>
+          </br>
+          Each year, NHIS collects data from about 27,000 adults through confidential, face-to-face interviews throughout the year. Many of these adults also provide health information about children in their households.
+          </br>
+          </br>
+          NHIS collects data from civilians who don't live in institutions. Civilians are people not serving on active duty in the military. Institutionalized people live in places like correctional facilities, skilled-nursing homes, and mental (psychiatric) hospitals.
+        image: Images/nhis.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.cdc.gov/nchs/nhis/index.html
+      - title: NCHS's The National Health Care Surveys (NHCS)
+        date-added: 2025-04-08
+        date-updated: 2025-04-08
+        description: |
+          Overview: The National Health Care Surveys are a family of surveys that provide information about—
+          </br>
+          - Organizations and providers that deliver health care
+          - The healthcare services they provide
+          - The patients they serve across diverse healthcare settings
+          - Researchers, policymakers, and health professionals can use data from our surveys to understand providers, patients, and management and delivery of patient care in the United States.
+        image: Images/nhcs.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.cdc.gov/nchs/healthcare-surveys/about/index.html
+      - title: NCHS's Rapid Surveys System
+        date-added: 2025-04-08
+        date-updated: 2025-04-08
+        description: |
+          The National Center for Health Statistics (NCHS) fields Rapid Surveys fast and often. We can easily adapt these surveys to collect specific information as needs arise. This makes evidence-based decision making better and faster for those working to protect and improve health in the United States.
+          </br>
+          </br>
+          Rapid Surveys can be used to—
+          </br>
+          - Collect data on niche, emerging, or priority health topics
+          - Close health information gaps
+          - Learn how values and beliefs can affect access, care, and wellness
+          - Assess questionnaire design to ensure data collection is meaningful
+          - By getting the right data in the right hands at the right time, the NCHS Rapid Surveys System is helping make science more responsive and actionable.
+        image: Images/nchs_rapid_surveys.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.cdc.gov/nchs/rapid-surveys/about/index.html
+      - title: NCHS's National Vital Statistics System (NVSS)
+        date-added: 2025-04-08
+        date-updated: 2025-04-08
+        description: |
+          The National Vital Statistics System is the oldest and most successful example of inter-governmental data sharing in Public Health and the shared relationships, standards, and procedures form the mechanism by which NCHS collects and disseminates the Nation’s official vital statistics. These data are provided through contracts between NCHS and vital registration systems operated in the various jurisdictions legally responsible for the registration of vital events – births, deaths, marriages, divorces, and fetal deaths. Vital Statistics data are also available online. In the United States, legal authority for the registration of these events resides individually with the 50 States, 2 cities (Washington, DC, and New York City), and 5 territories (Puerto Rico, the Virgin Islands, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands). These jurisdictions are responsible for maintaining registries of vital events and for issuing copies of birth, marriage, divorce, and death certificates.
+        image: Images/nvss.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.cdc.gov/nchs/nvss/index.htm
+      - title: NCHS's Data Linkage Activities
+        date-added: 2025-04-08
+        date-updated: 2025-04-08
+        description: |
+          NCHS has developed a record linkage program designed to maximize the scientific value of the Center’s population-based surveys. Linked data files enable researchers to examine the factors that influence disability, chronic disease, health care utilization, morbidity, and mortality.
+          </br>
+          </br>
+          NCHS is currently linking various NCHS surveys with administrative data from the following:
+          </br>
+          - National Death Index (NDI)
+          - Centers for Medicare and Medicaid Services (CMS)
+          - Medicare
+          - Medicaid/CHIP
+          - United States Renal Data System (USRDS)
+          - Social Security Administration (SSA)
+          - Department of Housing and Urban Development (HUD)
+          - Department of Veterans Affairs (VA)
+        image: Images/nchs_data_linkage.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.cdc.gov/nchs/data-linkage/index.htm
+      - title: Surveillance, Epidemiology, and End Results Program (SEER)
+        date-added: 2025-03-20
+        date-updated: 2025-03-20
+        description: |
+          The Surveillance, Epidemiology, and End Results (SEER) Program provides information on cancer statistics in an effort to reduce the cancer burden among the U.S. population. SEER is supported by the Surveillance Research Program (SRP) in NCI's Division of Cancer Control and Population Sciences (DCCPS).
+        image: Images/seer.png
+        topic: "Clinical Study/Surveys"
+        site: https://seer.cancer.gov/
+
+  # Restricted Access
+  - categories1:
+      - "U.S. Government"
+    categories2:
+      - "Clinical Study/Surveys"
+    categories3:
+      - "Restricted Access"
+    tiles:
+      - title: National Institutes of Health's (NIH) All of Us (AOU)
+        date-added: 2025-03-19
+        date-updated: 2025-03-19
+        description: |
+          All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.
+        image: Images/NIH All of Us_4.8x3.6.png
+        topic: "Clinical Study/Surveys"
+        site: https://allofus.nih.gov/
+        info: More-Info-Pages/Restricted-Access/NIH_All-of-Us.qmd
+        
+  # Open Access
+  - categories1:
+      - "U.S. Government"
+    categories2:
+      - "Clinical Study/Surveys"
+      - "Basic Research Assays"
+    categories3:
+      - "Open Access"
+    tiles:
+      - title: data.gov
+        date-added: 2025-04-08
+        date-updated: 2025-04-08
+        description: |
+          Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
+        image: Images/data_gov.png
+        topic: "Clinical Study/Surveys, Basic Research Assays"
+        site: https://data.gov/
+      
+  # -----------
+  # Region/Affiliation by: Non-Governmental Organization
+  - categories1:
+      - "Non-Governmental Organization"
+    categories2:
+      - "Clinical Study/Surveys"
+    categories3:
+      - "Restricted Access"
+    tiles:
+      - title: UK Biobank
+        date-added: 2025-03-19
+        date-updated: 2025-03-19
+        description: |
+          The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
+        image: Images/UK Biobank.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.ukbiobank.ac.uk/
+        
