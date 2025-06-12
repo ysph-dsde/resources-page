@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>about-us – Resource Navigation Tool</title>
+<title>About Us – Resource Navigation Tool</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../Images/DSDE-Visuals/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -39,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-7c69cff971577d9baa8abe5eb8d37666.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e48d32058895037231cd65f547b71d9e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,14 +69,72 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-contributors .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-items',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-items"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-contributors'] = new List('listing-contributors', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="people nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -112,36 +172,257 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">About Us</h1>
+                      </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content quarto-banner-title-block page-columns page-full" id="quarto-document-content">
 
 
 
 
-<section id="about-us" class="level2">
-<h2 class="anchored" data-anchor-id="about-us">About Us</h2>
-<p>Details about the DSDE group as a whole.</p>
-</section>
-<section id="things-we-do" class="level2">
+
+<style>
+  #title-block-header {
+      margin-block-end: 0rem;
+      position: relative;
+      margin-top: -1px;
+      margin-bottom: 0;
+  }
+  .quarto-title-banner h1, .quarto-title-banner .h1, .quarto-title-banner h2, .quarto-title-banner .h2 {
+      color: #2e2e36;
+      font-weight: normal;
+      text-align: center;
+  }
+  .quarto-title-block .quarto-title-banner {
+      color: #2e2e36;
+      background: var(--light-header-background);
+      border-bottom: 1px solid #ddd;
+  }
+</style>
+<p><strong>Public Health Data Science and Data Equity (DSDE)</strong> aims to strategically support and elevate data science training, education, research and collaboration efforts at the Yale School of Public Health and promote data equity as a fundamental pillar of health equity.</p>
+<p>We aim to:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li>Elevate and transform public health research via cutting-edge data science discoveries and impactful implementation, with a focus on developing a novel framework of data equity and positive social change.</li>
+<li>Empower and enable the next generation of public health leaders with an essential mastery of core data science and artificial intelligence (AI) techniques.</li>
+</ul>
+</div>
+<p><br>
+</p>
+<div class="column-screen-inset">
+<div class="columns">
+<div class="column" style="width:40%;">
+<style>
+  .cool-block {
+    background: linear-gradient(135deg, #00356B, #7634A6 70%);
+    color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  .cool-block h2 {
+    margin-top: 0;
+    font-size: 2em;
+  }
+  .cool-block p {
+    font-size: 1em;
+    line-height: 1.5em;
+    text-align: left;
+  }
+  .cool-block ul {
+      text-align: left; /* Aligns the bullet points to the left */
+      margin: 0;
+      padding-left: 20px; /* Adds padding to left for indentation */
+    }
+</style>
+
+<div class="cool-block">
+  <h2 class="anchored">Our Vision</h2>
+  <p>We strive to make data science knowledge, tools, and resources available to communities near and far, promoting equitable scientific discoveries, policy decisions, public health practice, and healthcare.</p>
+</div>
+</div><div class="column" style="width:2%;">
+
+</div><div class="column" style="width:58%;">
+<div class="cool-block">
+  <h2 class="anchored">Our Mission</h2>
+  <p>Our mission is to reduce the barriers in utilization of data science and AI in public health training, research, and practice. We plan on achieving this by: enhancing education, leading responsible innovation, building infrastructure, creating a community, forming data science alliances, and promoting open knowledge locally and globally.</p>
+</div>
+</div>
+</div>
+</div>
+<p><br>
+</p>
+<section id="things-we-do" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="things-we-do">Things We Do</h2>
 <p>Our Data Enclave and Navigation platform is designed to empower YSPH students, staff, and faculty by providing a centralized resource for accessing data and data tools.</p>
 <p><strong>Comprehensive Data Enclave and Navigation Tool:</strong> Access a robust collection of resources designed to support your public health data projects, including resource sites for commonly used public health datasets with information about how to access the data, anticipated timelines for accessing and utilizes these different datasets, and example Yale studies that have been conducted and published using each of these specific datasets.</p>
 <p><strong>Public Health Data Resources:</strong> Discover curated Yale resources such as aggregations of data or computational resources that students, staff and faculty can use in their research.</p>
-<p>Brief statement about other things happeneing with DSDE, maybe also point to the Mukherjee lab site too? <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/resources/">Resources</a> and <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/services/">Services</a>.</p>
+<p>In addition to this Resource Navigation Tool, DSDE promotes data science training, education, research and collaboration efforts at the Yale School of Public Health through additional Resources and Services.</p>
+<p>Brief statement about other things happening with DSDE, maybe also point to the Mukherjee lab site too? <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/resources/">Resources</a> and <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/services/">Services</a>.</p>
+<p><br>
+</p>
+<div class="column-screen">
+<style>
+.subheader {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: var(--light-header-background);
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+</style>
+<div class="subheader">
+    <h2 class="anchored">People</h2>
+    <p style="max-width: 60%; margin: auto; text-align: left;">DSDE is a collaborative community driving the future of equitable public health at Yale. Below are some of the people on the team who contributed to the **Resource Navigation Tool**, and you can find out more about the whole team on our main <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/people/">YSPH webpage</a>.</p>
+</div>
+</div>
+<div id="listing-contributors" class="column-screen-inset quarto-listing quarto-listing-container-custom">
+
+
+  <meta charset="UTF-8">
+  <title>Resources with Features</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+  <div class="tile-container">
+    
+      
+        <div class="tile">
+          <div class="img-container">
+            <img src="Images/bhramar-mukherjee.jpeg" alt="Image for Bhramar Mukherjee, PhD">
+          </div>
+          <div class="tile-content">
+            <h2 class="anchored">Bhramar Mukherjee, PhD</h2>
+            <p class="title-paragraph">Senior Associate Dean of Public Health Data Science and Data Equity; Anna M.R. Lauder Professor of Biostatistics; Professor of Epidemiology (Chronic Diseases) and of Statistics and Data Science; Affiliated Faculty, Yale Institute for Global Health
+</p>
+            <div class="link-bar">
+              <small class="link-bar-text">
+                
+                  <a href="https://ysph.yale.edu/profile/bhramar-mukherjee/" title="YSPH Site"><i class="bi-globe"></i></a>
+                
+                
+                  <a href="https://ysph-dsde.github.io/mukherjee-lab/" title="Group Site"><i class="bi-people-fill"></i></a>
+                
+                
+                  <a href="https://www.linkedin.com/in/bhramar-mukherjee-483810320/" title="LinkedIn"><i class="bi-linkedin"></i></a>
+                
+              </small>
+            </div>
+            <p class="description">Professor Bhramar Mukherjee is the Anna M.R. Lauder Professor of Biostatistics and Professor of Chronic Disease Epidemiology at the Yale School of Public Health (YSPH). Professor Mukherjee serves as the inaugural Senior Associate Dean of Public Health Data Science and Data Equity at YSPH. She holds a secondary appointment in the Department of Statistics and Data Science and is affiliated with the MacMillan Center and the Institute for the Foundations of Data Science. She serves on the Yale Cancer Center Director’s cabinet.
+</p>
+            <div class="contact-info">
+              
+                Email: <a href="mailto:bhramar.mukherjee@yale.edu">bhramar.mukherjee@yale.edu</a><br>
+              
+              
+                Phone: <a href="tel:203-737-8644">203-737-8644</a>
+              
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="tile">
+          <div class="img-container">
+            <img src="Images/michaela-dinan.jpeg" alt="Image for Michaela Dinan, PhD">
+          </div>
+          <div class="tile-content">
+            <h2 class="anchored">Michaela Dinan, PhD</h2>
+            <p class="title-paragraph">Associate Professor Tenure; Co-Leader, Cancer Prevention and Control, Yale Cancer Center; Associate Director for Research Training and Education, Yale Cancer Center
+</p>
+            <div class="link-bar">
+              <small class="link-bar-text">
+                
+                  <a href="https://ysph.yale.edu/profile/michaela-dinan/" title="YSPH Site"><i class="bi-globe"></i></a>
+                
+                
+                
+              </small>
+            </div>
+            <p class="description">Dr. Michaela Dinan is an Associate Professor of Epidemiology in the Yale School of Public Health, and Co-Leader of the Cancer Prevention and Control Research Program at the Yale Comprehensive Cancer Center, Yale School of Medicine. She is also a member of the Cancer Outcomes, Public Policy, and Effectiveness Research (COPPER) Center. Dr. Dinan has extensive research expertise in leveraging existing real-world data sources as well as novel data linkages to examine oncology outcomes.
+</p>
+            <div class="contact-info">
+              
+                Email: <a href="mailto:michaela.dinan@yale.edu">michaela.dinan@yale.edu</a><br>
+              
+              
+                Phone: <a href="tel:203-785-7124">203-785-7124</a>
+              
+            </div>
+            
+          </div>
+        </div>
+      
+        <div class="tile">
+          <div class="img-container">
+            <img src="Images/shelby-golden.jpeg" alt="Image for Shelby Golden, M.S.">
+          </div>
+          <div class="tile-content">
+            <h2 class="anchored">Shelby Golden, M.S.</h2>
+            <p class="title-paragraph">Data Scientist I
+</p>
+            <div class="link-bar">
+              <small class="link-bar-text">
+                
+                  <a href="https://ysph.yale.edu/profile/shelby-golden/" title="YSPH Site"><i class="bi-globe"></i></a>
+                
+                
+                  <a href="https://ysph-dsde.github.io/mukherjee-lab/" title="Group Site"><i class="bi-people-fill"></i></a>
+                
+                
+                  <a href="https://www.linkedin.com/in/shelby-golden/" title="LinkedIn"><i class="bi-linkedin"></i></a>
+                
+              </small>
+            </div>
+            <p class="description">Shelby Golden is a data scientist with a background in computational mathematics, molecular biology, and biochemistry. She holds a Master of Science in Applied Computational Mathematics from Johns Hopkins University and dual Bachelor of Science degrees in Molecular, Cellular, Developmental Biology and Biochemistry with a minor in Engineering in Applied Mathematics.
+</p>
+            <div class="contact-info">
+              
+                Email: <a href="mailto:shelby.golden@yale.edu">shelby.golden@yale.edu</a><br>
+              
+              
+                Phone: <a href="tel:203-737-8644">203-737-8644</a>
+              
+            </div>
+            
+          </div>
+        </div>
+      
+    
+  </div>
+
+
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
+
+
+
 </section>
-<section id="people" class="level2">
-<h2 class="anchored" data-anchor-id="people">People</h2>
-<p>List of people who are from DSDE and collaborators working on the Resource Navigation Tool.</p>
-<p>Link to the whole team here: <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/people/">People</a></p>
 
-
-</section>
-
-</main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
