@@ -7,19 +7,18 @@ format:
     includes:
       before-body: sidebar.html 
 listing:
-  - template: views/index.ejs
+  - template: views/index_infoFilter.ejs
     contents: data-listings.yml
     categories: false
     sort-ui: false
     filter-ui: false
-    page-size: 5
 ---
 
 
 ```{=html}
 <div class="header">
     <h1>Datasets</h1>
-    <p>A statement about data.</p>
+    <p style="max-width: 60%; margin: auto;">Explore our collection of datasets, curated to support a wide range of academic and research pursuits in public health.</p>
  </div>
 ```
 
