@@ -26,7 +26,7 @@ Our mission is to develop and support a robust public health data science infras
       <a href="Pages/Resources/index.qmd" title="Listing page">
         <img src="Images/Firefly data scientists; illustration 75467.jpg" alt="Resources page" class="image">
         <h1>Resources</h1>
-        <h2>See the Listing</h2>
+        <h2>See the Listings</h2>
         <i class="tile_icon bi bi-arrow-right-circle-fill"></i>
       </a>
     </div>
@@ -35,7 +35,7 @@ Our mission is to develop and support a robust public health data science infras
       <a href="Pages/Datasets/index.qmd" title="Listing page">
         <img src="Images/Firefly data science data equity 50124.jpg" alt="Datasets page" class="image">
         <h1>Datasets</h1>
-        <h2>See the Listing</h2>
+        <h2>See the Listings</h2>
         <i class="tile_icon bi bi-arrow-right-circle-fill"></i>
       </a>
     </div>
@@ -47,6 +47,8 @@ Our mission is to develop and support a robust public health data science infras
 \
 
 ## Navigating the Site
+
+Explore our comprehensive collection of resources and datasets curated from international organizations, United States agencies, and Yale University that can support your public health research. Dataset listings come with detailed information on how to obtain the data, expected timelines for access and utilization, and examples of YSPH studies conducted and published using these specific datasets.
 
 
 ```{=html}
@@ -83,9 +85,7 @@ Our mission is to develop and support a robust public health data science infras
 
 
 
-We have curated a comprehensive collection of resources and links to datasets commonly utilized in public health, sourced from international organizations, United States agencies, and Yale University. Each one is presented with a tile that contains salient details about the source with relevant links.
-
-Each tile can have any combination of five hyperlinked icons:
+The resources and datasets are presented in tiles that contain salient details about the source, along with relevant links, like the one displayed on the left. Each tile can feature any combination of five hyperlinked icons:
 
 <i class="bi bi-github icon-red"></i> \  Links to code repositories for the dataset/resource.
 
@@ -96,5 +96,6 @@ Each tile can have any combination of five hyperlinked icons:
 <i class="bi bi-journal-text icon-red"></i> \ Links to example publications utilizing the dataset/resource.
 
 <i class="bi bi-info-circle icon-red"></i> \ Links to a **Resource Navigation Tool** webpage with additional details about the dataset.
+
 
 

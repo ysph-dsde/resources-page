@@ -38,7 +38,7 @@
 </style>
 ```
 
-**Public Health Data Science and Data Equity (DSDE)** aims to strategically support and elevate data science training, education, research and collaboration efforts at the Yale School of Public Health and promote data equity as a fundamental pillar of health equity.
+**Public Health Data Science and Data Equity (DSDE)** aims to strategically support and elevate data science training, education, research and collaboration efforts at the Yale School of Public Health (YSPH) and promote data equity as a fundamental pillar of health equity.
 
 We aim to:
 
@@ -53,37 +53,11 @@ We aim to:
 :::::: columns
 ::: {.column width="40%"}
 ```{=html}
-<style>
-  .cool-block {
-    background: linear-gradient(135deg, #00356B, #7634A6 70%);
-    color: #fff;
-    padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-  }
-  .cool-block h2 {
-    margin-top: 0;
-    font-size: 2em;
-  }
-  .cool-block p {
-    font-size: 1em;
-    line-height: 1.5em;
-    text-align: left;
-  }
-  .cool-block ul {
-      text-align: left; /* Aligns the bullet points to the left */
-      margin: 0;
-      padding-left: 20px; /* Adds padding to left for indentation */
-    }
-</style>
-
 <div class="cool-block">
-  <h2>Our Vision</h2>
+  <h2 style="pointer-events: none;">Our Vision</h2>
   <p>We strive to make data science knowledge, tools, and resources available to communities near and far, promoting equitable scientific discoveries, policy decisions, public health practice, and healthcare.</p>
 </div>
 ```
-
 :::
 
 ::: {.column width="2%"}
@@ -92,7 +66,7 @@ We aim to:
 ::: {.column width="58%"}
 ```{=html}
 <div class="cool-block">
-  <h2>Our Mission</h2>
+  <h2 style="pointer-events: none;">Our Mission</h2>
   <p>Our mission is to reduce the barriers in utilization of data science and AI in public health training, research, and practice. We plan on achieving this by: enhancing education, leading responsible innovation, building infrastructure, creating a community, forming data science alliances, and promoting open knowledge locally and globally.</p>
 </div>
 ```
@@ -102,18 +76,79 @@ We aim to:
 
 \
 
-## Things We Do
+## Other Things We Do
 
-Our Data Enclave and Navigation platform is designed to empower YSPH students, staff, and faculty by providing a centralized resource for accessing data and data tools.
+Building upon our core missions, DSDE is deeply committed to a spectrum of activities designed to foster innovation, collaboration, and leadership in the field of public health and epidemiology. Our efforts include a broad range of resources, events, and services that collectively contribute to the advancement of equitous, trustworthy, and impactful research in public health.
 
-**Comprehensive Data Enclave and Navigation Tool:** Access a robust collection of resources designed to support your public health data projects, including resource sites for commonly used public health datasets with information about how to access the data, anticipated timelines for accessing and utilizes these different datasets, and example Yale studies that have been conducted and published using each of these specific datasets.
+Each resource is designed to empower YSPH students, staff, and faculty to excel in public health data science. Whenever possible, we democratize our resources to ensure that public health professionals and researchers globally can benefit from and contribute to our collective mission of advancing public health data science and promoting data equity.
 
-**Public Health Data Resources:** Discover curated Yale resources such as aggregations of data or computational resources that students, staff and faculty can use in their research.
+\
 
+::::::: column-screen-inset
+:::::: columns
 
-In addition to this Resource Navigation Tool, DSDE promotes data science training, education, research and collaboration efforts at the Yale School of Public Health through additional Resources and Services.
+::: {.column width="33%"}
+```{=html}
+<div class="more-info-box">
+  <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/resources/" title="Listing page">
+    <div class="banner">
+      <img src="Images/AdobeStock_215933176.jpeg" alt="Banner Image">
+      <h2 style="pointer-events: none;">Other Resources</h2>
+    </div>
+    <div class="content">
+      <p>In addition to the <strong>Resource Navigation Tool</strong>, DSDE has curated and consolidated software developed by faculty and students at the school of public health and hosts various events geared towards accelerating impactful data-driven discoveries.</p>
+      <h3 style="pointer-events: none; position: absolute; bottom: 25px; left: 15px;">Find Out More</h3>
+      <i class="more-info-icon bi bi-arrow-right-circle-fill"></i>
+    </div>
+  </a>
+</div>
+```
+:::
 
-Brief statement about other things happening with DSDE, maybe also point to the Mukherjee lab site too? [Resources](https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/resources/) and [Services](https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/services/).
+::: {.column width="1%"}
+:::
+
+::: {.column width="32%"}
+```{=html}
+<div class="more-info-box">
+  <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/services/" title="Listing page">
+    <div class="banner">
+      <img src="Images/DSDE Education Materials crop_AS882982307.jpg" alt="Banner Image">
+      <h2 style="pointer-events: none;">Services</h2>
+    </div>
+    <div class="content">
+      <p>We directly support Yale researchers through consulting and contracting. We offer an array of services, including statistical analysis, data vsualization, implementation of AI/ML, R package development, dashboarding, and custom workshops/tutorials.</p>
+      <h3 style="pointer-events: none; position: absolute; bottom: 25px; left: 15px;">Find Out More</h3>
+      <i class="more-info-icon bi bi-arrow-right-circle-fill"></i>
+    </div>
+  </a>
+</div>
+```
+:::
+
+::: {.column width="1%"}
+:::
+
+::: {.column width="33%"}
+```{=html}
+<div class="more-info-box">
+  <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/resources/educational-materials/" title="Listing page">
+    <div class="banner">
+      <img src="Images/AdobeStock_215933176.jpeg" alt="Banner Image">
+      <h2 style="pointer-events: none;">Educational Materials and Events</h2>
+    </div>
+    <div class="content">
+      <p>As part of our mission to strengthen data science and analytical literacy in the next generation of public health leaders, DSDE hosts a variety of educational events, including our <i>Coffee, Cookies, and Coding (C-cubed)</i> workshops.</p>
+      <h3 style="pointer-events: none; position: absolute; bottom: 25px; left: 15px;">Find Out More</h3>
+      <i class="more-info-icon bi bi-arrow-right-circle-fill"></i>
+    </div>
+  </a>
+</div>
+```
+:::
+::::::
+:::::::
+
 
 \
 
@@ -132,7 +167,7 @@ Brief statement about other things happening with DSDE, maybe also point to the 
 </style>
 <div class="subheader">
     <h2>People</h2>
-    <p style="max-width: 60%; margin: auto; text-align: left;">DSDE is a collaborative community driving the future of equitable public health at Yale. Below are some of the people on the team who contributed to the **Resource Navigation Tool**, and you can find out more about the whole team on our main <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/people/">YSPH webpage</a>.</p>
+    <p style="max-width: 60%; margin: auto; text-align: left;">DSDE is a collaborative community driving the future of equitable public health at Yale. Below are some of the people on the team who contributed to the <strong>Resource Navigation Tool</strong>. You can find out more about the whole team on our main <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/people/">YSPH webpage</a>.</p>
 </div>
 ```
 :::

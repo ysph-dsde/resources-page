@@ -13387,11 +13387,11 @@ body.people {
   flex-basis: 0;
   flex-grow: 999; /* Expand tile content to fill available space */
   min-width: 0; /* Prevents the shrinkage */
-  margin
 }
 
 .people .tile-content h2 {
   font-weight: bold;
+  padding-top: 0px;
   margin-bottom: -5px;
   color: #333;
 }
@@ -13467,6 +13467,7 @@ body.people {
 @media (max-width: 480px) {
   .people .tile-content h2 {
     font-size: 1em;
+    padding-top: 0px;
   }
 
   .people .tile-content .card-header {
@@ -13482,6 +13483,136 @@ body.people {
   .people .profile-link {
     font-size: 0.9em;
     padding: 8px 12px;
+  }
+}
+
+
+/*-- scss: about us page - "cool block" for the mission and vision statement --*/
+
+.cool-block {
+  background: linear-gradient(135deg, #00356B, #7634A6 70%);
+  color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.cool-block h2 {
+  margin-top: 0;
+  font-size: 2em;
+}
+.cool-block p {
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: left;
+}
+.cool-block ul {
+  text-align: left; /* Aligns the bullet points to the left */
+  margin: 0;
+  padding-left: 20px; /* Adds padding to left for indentation */
+}
+
+/*-- scss: about us page - "more info" that links to other resources the groups does --*/
+
+.more-info-box {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  height: 600px; /* Uniform height for all boxes */
+  margin-top: 0px;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  padding: 0;
+  border: 1.5px solid #444;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.banner h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  text-shadow: 1.5px 1px 0px #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(100% - 20px); /* Ensure it does not overflow */
+}
+
+.banner h3 {
+  font-size: 18pt;
+  color: #333;
+  width: calc(100% - 20px); /* Ensure it does not overflow */
+}
+
+.content {
+  padding: 20px;
+  padding-top: 0px; /* Ensure it clears the banner height */
+}
+
+.content p {
+  margin-top: 20px;
+  text-align: left;
+  color: #333;
+  text-decoration: none !important;
+}
+
+.content a {
+  color: #00356B;
+  text-decoration: none !important;
+  position: absolute;
+  bottom: 10px;
+}
+
+.more-info-icon {
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
+  color: #333;
+  font-size: 24px;
+  padding: 3px;
+  text-decoration: none;
+}
+
+.more-info-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Container that holds the columns */
+.page-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensure space between columns */
+}
+
+.column-screen-inset {
+  flex: 0 1 300px; /* Take up approximately 38% width per column */
+  margin: 10px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+
+@media (max-width: 768px) {
+  .page-columns {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .column-screen-inset {
+    flex: 1 1 100%; /* Full width for each column when stacked */
+    margin: 10px 0; /* Adjust margin for vertical stacking */
   }
 }
 

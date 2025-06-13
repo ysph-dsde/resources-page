@@ -299,6 +299,9 @@ ol, ul {
 .tile_a:hover {
   color: var(--hover-color); /* Adjust the hover color as necessary */
 }
+.icon-red {
+  color: var(--link-color);
+}
 
 
 
@@ -317,6 +320,7 @@ ol, ul {
 .tile_title {
   position: relative;
   width: 38%; /* Adjust width as needed */
+  min-width: 275px;
   margin-bottom: 20px;
   border: 1.5px solid #444;
   overflow: hidden;
@@ -324,7 +328,7 @@ ol, ul {
 }
 .tile_title img {
   display: block;
-  opacity: 0.75;
+  filter: brightness(80%);
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
@@ -364,8 +368,36 @@ ol, ul {
   text-shadow: 1.5px 1px 0px black;
   text-decoration: none;
 }
-.icon-red {
-  color: var(--link-color);
+
+/* Responsive layout for different screen sizes */
+@media (max-width: 1000px) {
+  .tile_title {
+    width: 45%; /* Adjust the width for medium screens */
+  }
+}
+
+@media (max-width: 700px) {
+  .container_title {
+    flex-direction: column; /* Stack tiles vertically */
+  }
+
+  .tile_title {
+    width: 100%; /* Full width for each tile when stacked */
+  }
+}
+
+@media (max-width: 300px) {
+  .tile_title h1 {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+
+  .tile_title h2 {
+    font-size: 1em; /* Adjust font size for smaller screens */
+  }
+
+  .tile_icon {
+    font-size: 20px; /* Adjust icon size for smaller screens */
+  }
 }
 
 
@@ -422,6 +454,7 @@ body.people {
 .people .tile-content h2 {
   font-weight: bold;
   padding-top: 0px;
+  margin-top: 0px;
   margin-bottom: -5px;
   color: #333;
 }
@@ -434,6 +467,10 @@ body.people {
 }
 
 .people .tile-content .description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 8;
+  overflow: hidden;
   font-size: 0.9rem;
   margin-bottom: 10px;
   word-wrap: nowrap;
@@ -513,6 +550,134 @@ body.people {
   .people .profile-link {
     font-size: 0.9em;
     padding: 8px 12px;
+  }
+}
+
+
+/*-- scss: about us page - "cool block" for the mission and vision statement --*/
+
+.cool-block {
+  background: linear-gradient(135deg, #00356B, #7634A6 70%);
+  color: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+.cool-block h2 {
+  margin-top: 0;
+  font-size: 2em;
+}
+.cool-block p {
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: left;
+}
+.cool-block ul {
+  text-align: left; /* Aligns the bullet points to the left */
+  margin: 0;
+  padding-left: 20px; /* Adds padding to left for indentation */
+}
+
+/*-- scss: about us page - "more info" that links to other resources the groups does --*/
+
+.more-info-box {
+  position: relative;
+  width: 100%; /* Adjust width as needed */
+  height: 450px; /* Uniform height for all boxes */
+  margin-top: 0px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  padding: 0;
+}
+
+.more-info-box .banner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.more-info-box .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+
+.more-info-box .banner h2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  margin: 0;
+  text-shadow: 1.5px 1px 0px #444;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  width: calc(100% - 20px); /* Ensure it does not overflow */
+}
+
+.more-info-box h3 {
+  font-size: 18pt;
+  color: #333;
+  width: calc(100% - 20px); /* Ensure it does not overflow */
+  text-decoration: none !important;
+}
+
+.more-info-box .content {
+  padding: 20px;
+  padding-top: 0px; /* Ensure it clears the banner height */
+}
+
+.more-info-box .content p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+  margin-top: 20px;
+  text-align: left;
+  color: #333;
+  text-decoration: none !important;
+}
+
+.more-info-box .content a {
+  text-decoration: none !important;
+  position: absolute;
+  bottom: 10px;
+}
+
+.more-info-box .content a:hover {
+  text-decoration: none !important;
+}
+
+.more-info-icon {
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
+  color: #333;
+  font-size: 24px;
+  padding: 3px;
+  text-decoration: none;
+}
+
+.more-info-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Ensure no text in .more-info-box gets underlined on hover */
+.more-info-box:hover * {
+  text-decoration: none !important;
+}
+
+@media (max-width: 768px) {
+  .page-columns {
+    flex-direction: column; /* Stack columns vertically */
+  }
+
+  .column-screen-inset {
+    flex: 1 1 100%; /* Full width for each column when stacked */
+    margin: 10px 0; /* Adjust margin for vertical stacking */
   }
 }
 
