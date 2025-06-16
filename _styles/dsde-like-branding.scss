@@ -65,6 +65,19 @@ div.datatables {
 }
 
 
+/*-- scss: column formatting for media --*/
+@media (max-width: 768px) {
+.page-columns {
+  flex-direction: column; /* Stack columns vertically */
+}
+
+.column-screen-inset {
+  flex: 1 1 100%; /* Full width for each column when stacked */
+  margin: 10px 0; /* Adjust margin for vertical stacking */
+}
+}
+
+
 /*-- scss: header --*/
 a.navbar-brand:hover {
   color: var(--hover-color-banner);
@@ -679,6 +692,31 @@ body.people {
     flex: 1 1 100%; /* Full width for each column when stacked */
     margin: 10px 0; /* Adjust margin for vertical stacking */
   }
+}
+
+
+
+/*-- scss: citation pagination --*/
+
+.citations-box {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+}
+.citations-navigation {
+  text-align: center;
+  margin-top: 10px;
+}
+.citations-navigation button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+#citations-content li {
+  display: none; /* Hide all items by default, will be shown by JS */
+  font-size: 0.9em;
+  margin-bottom: 10px;
 }
 
 /*-- scss: titles with metadata  OLD BUT KEEP --*/

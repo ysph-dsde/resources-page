@@ -15,6 +15,25 @@
   chunk_output_type: console
 ---
 
+```{r}
+#| echo: false
+
+# Import necessary libraries
+suppressPackageStartupMessages({
+  library("stringr")
+  library("htmltools")
+  library("glue")
+  library("rentrez")
+  library("xml2")
+  library("clipr")
+})
+
+"%!in%" <- function(x,y)!("%in%"(x,y))
+
+# Load in the functions.
+source('./PubMed_Search_Functions.R')
+```
+
 ## Overview
 
 Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic and Epic Cosmos data will need a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:
@@ -141,6 +160,100 @@ Time to get access to de0identified data from all Epic centers outside YNHHS.
 
 :::
 
+## Publications
+
+```{r}
+#| echo: false
+
+# Fetch and format the citations.
+citations <- get_citations(
+  keywords = c("Yale New Haven Health System Epic", "Yale New Haven Health System Epic Cosmos", "YNHHS Epic", "YNHHS Epic Cosmos"), 
+  affiliation = "Yale School of Public Health")
+
+# Condition the output based on presence of articles.
+citations_html <- make_pub_list(citations)
+if(!any(str_detect(citations$citations, "No publications"))) {
+  citation_length <- length(citations$citations)
+  citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
+} else {
+  citation_length <- 0
+  citation_date   <- as.numeric(format(Sys.Date(), "%Y")) - as.numeric(str_extract("No publications found in the last 25 years.", "[0-9]{2}"))
+}
+
+```
+
+
+This section displays PubMed articles that mention the dataset and are authored by individuals affiliated with the Yale School of Public Health. Please note that the PubMed API does not distinguish between uppercase and lowercase characters when processing queries. As a result, there may be occasional mismatches in the search results.
+
+`r citation_length` citations released after `r citation_date` were found.
+
+::: {style="margin-left: 1rem"}
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+# Display formatted citations.
+cat(citations_html)
+```
+
+```{=html}
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">&#9664; Previous</button>
+  <button onclick="nextPage()">Next &#9654;</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let currentPage = 1;
+    const itemsPerPage = 3;
+    const citationsContent = document.getElementById("citations-content");
+
+    if (citationsContent) {
+      const numPages = Math.ceil(citationsContent.children.length / itemsPerPage);
+
+      function updateCitations() {
+        const items = citationsContent.children;
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.display = (i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage) ? "list-item" : "none";
+        }
+      }
+
+      function nextPage() {
+        if (currentPage < numPages) {
+          currentPage++;
+          updateCitations();
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 1) {
+          currentPage--;
+          updateCitations();
+        }
+      }
+
+      // Initial call to update citations on load
+      updateCitations();
+
+      // Attach functions to window object for button actions
+      window.nextPage = nextPage;
+      window.prevPage = prevPage;
+    }
+  });
+</script>
+```
+
+::: {.callout-note collapse="true"}
+The search PubMed query used to generate this list is:
+
+`r citations$query`
+:::
+
+:::
+
+
 ## References
 
 The content provided here is a compilation of work from multiple groups throughout YU and YNHHS:
@@ -149,7 +262,8 @@ The content provided here is a compilation of work from multiple groups througho
 1.  [Yale Biomedical Informatics & Computing](https://medicine.yale.edu/ybic)
 
 :::
+
 \
 \
 \
-Updated: June 12th, 2025
+Updated: June 15th, 2025
