@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-8ce6e8a3734635d99671abc2412dab0c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-e0517d503ce2bdd4ebc71549442d6b4d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -149,6 +149,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#step-by-step" id="toc-step-by-step" class="nav-link" data-scroll-target="#step-by-step">Step-by-Step</a></li>
   <li><a href="#typical-timeline" id="toc-typical-timeline" class="nav-link" data-scroll-target="#typical-timeline">Typical Timeline</a></li>
   <li><a href="#important-links" id="toc-important-links" class="nav-link" data-scroll-target="#important-links">Important Links</a></li>
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/Datasets/More-Info-Pages/Restricted-Access/YNHHS-Epic-Cosmos.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
@@ -277,6 +278,82 @@ Important
 </ul>
 </div>
 </section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<p>This section displays PubMed articles that mention the dataset and are authored by individuals affiliated with the Yale School of Public Health. Please note that the PubMed API does not distinguish between uppercase and lowercase characters when processing queries. As a result, there may be occasional mismatches in the search results.</p>
+<p>0 citations released after 2000 were found.</p>
+<div style="margin-left: 1rem">
+<div id="citations-box">
+<ul id="citations-content">
+<li>
+No publications found in the last 25 years.
+</li>
+</ul>
+</div>
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">◀ Previous</button>
+  <button onclick="nextPage()">Next ▶</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let currentPage = 1;
+    const itemsPerPage = 3;
+    const citationsContent = document.getElementById("citations-content");
+
+    if (citationsContent) {
+      const numPages = Math.ceil(citationsContent.children.length / itemsPerPage);
+
+      function updateCitations() {
+        const items = citationsContent.children;
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.display = (i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage) ? "list-item" : "none";
+        }
+      }
+
+      function nextPage() {
+        if (currentPage < numPages) {
+          currentPage++;
+          updateCitations();
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 1) {
+          currentPage--;
+          updateCitations();
+        }
+      }
+
+      // Initial call to update citations on load
+      updateCitations();
+
+      // Attach functions to window object for button actions
+      window.nextPage = nextPage;
+      window.prevPage = prevPage;
+    }
+  });
+</script>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The search PubMed query used to generate this list is:</p>
+<p>(“Yale New Haven Health System Epic”[Title/Abstract] OR “Yale New Haven Health System Epic” NOT “Yale New Haven Health System Epic”[Conflict of Interest Statements]) AND (“Yale New Haven Health System Epic Cosmos”[Title/Abstract] OR “Yale New Haven Health System Epic Cosmos” NOT “Yale New Haven Health System Epic Cosmos”[Conflict of Interest Statements]) AND (“YNHHS Epic”[Title/Abstract] OR “YNHHS Epic” NOT “YNHHS Epic”[Conflict of Interest Statements]) AND (“YNHHS Epic Cosmos”[Title/Abstract] OR “YNHHS Epic Cosmos” NOT “YNHHS Epic Cosmos”[Conflict of Interest Statements]) AND “Yale School of Public Health”[Affiliation] AND (2000:2025[dp])</p>
+</div>
+</div>
+</div>
+</div>
+</section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
 <p>The content provided here is a compilation of work from multiple groups throughout YU and YNHHS:</p>
@@ -288,7 +365,7 @@ Important
 <p><br>
 <br>
 <br>
-Updated: June 12th, 2025</p>
+Updated: June 15th, 2025</p>
 
 
 </section>
