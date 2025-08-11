@@ -43,6 +43,85 @@ div.datatables {
   font-size: 11pt;
 }
 
+
+/* Custom table for summarizing contents of datasets by program */
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  text-align: left;
+}
+/* Header cells */
+.custom-table th {
+  font-size: 18px; /* Font size for header */
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Body cells */
+.custom-table td {
+  font-size: 15px; /* Font size for rows */
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+.custom-table tr:first-child th {
+  border-top: 1px solid #ddd;
+  border-bottom: 2px solid #000;
+}
+.custom-table tr:last-child th {
+  border-bottom: 1px solid #ddd;
+}
+.custom-table ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.custom-table ul li {
+  position: relative;
+  padding-left: 1.2em;
+  margin-bottom: 4px;
+}
+.custom-table ul li::before {
+  content: '○';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  transform: translateY(20%);
+  font-size: 0.6em;
+  line-height: 1em;
+}
+.custom-table th.iteration, .custom-table td.iteration {
+  min-width: 130px;
+}
+.custom-table th.design, .custom-table td.design {
+  min-width: 225px;
+}
+.custom-table th.var, .custom-table td.var {
+  min-width: 225px;
+}
+
+
+/*-- header banner --*/
+
+#title-block-header {
+    margin-block-end: 0rem;
+    position: relative;
+    margin-top: -1px;
+    margin-bottom: 0;
+}
+.quarto-title-banner h1, .quarto-title-banner .h1, .quarto-title-banner h2, .quarto-title-banner .h2 {
+    color: #2e2e36;
+    font-weight: normal;
+    text-align: center;
+}
+.quarto-title-block .quarto-title-banner {
+    color: #2e2e36;
+    background: var(--light-header-background);
+    border-bottom: 1px solid #ddd;
+}
+
 /*-- scss:rules --*/
 
 .a{
