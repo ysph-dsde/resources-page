@@ -40,7 +40,7 @@ suppressPackageStartupMessages({
 source('./PubMed_Search_Functions.R')
 ```
 
-Updated: August 1st, 2025
+Updated: August 10th, 2025
 
 ## Overview
 
