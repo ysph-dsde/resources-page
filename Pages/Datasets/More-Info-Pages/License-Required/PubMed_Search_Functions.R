@@ -289,7 +289,7 @@ get_citations <- function(keywords = NULL, affiliation = NULL, start_years = 5, 
         retmax = max_results,
         use_history = TRUE)
     }, error = function(e) {
-      cat('Error during entrez_search:', '\n', e)
+      message('Error during entrez_search:', '\n', e)
       return(NULL)
     })
     
@@ -312,7 +312,7 @@ get_citations <- function(keywords = NULL, affiliation = NULL, start_years = 5, 
   pmid_summary <- tryCatch({
     fetch_summaries_in_batches(initial_search$web_history, batch_size = 500)
   }, error = function(e) {
-    cat('Error during entrez_summary:', '\n', e)
+    message('Error during entrez_summary:', '\n', e)
     return(NULL)
   })
   

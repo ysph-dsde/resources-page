@@ -31,6 +31,35 @@ suppressPackageStartupMessages({
 source('./PubMed_Search_Functions.R')
 ```
 
+
+## Access Overview
+
+### Do I Qualify?
+
+## Step-by-Step
+
+## Typical Timeline
+
+::: callout-important
+If you are looking to gain access to the individual-level YNHHS Epic data you will need to submit an IRB application. Time-to access in these cases is contingent upon the IRB's process that will vary for applications.
+:::
+
+::: {.panel-tabset}
+
+## YNHHS Epic
+
+Time to get RBA to YNHHS de-identified data.
+
+## Epic Cosmos
+
+Time to get access to de0identified data from all Epic centers outside YNHHS.
+
+:::
+
+
+## Important Links
+
+
 ## Publications
 
 ```{r}
@@ -43,6 +72,7 @@ citations <- get_citations(
 
 # Condition the output based on presence of articles.
 citations_html <- make_pub_list(citations)
+
 if(!any(str_detect(citations$citations, "No publications"))) {
   citation_length <- length(citations$citations)
   citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
@@ -124,7 +154,17 @@ The search PubMed query used to generate this list is:
 
 :::
 
+
+## References
+
+The content provided here is a compilation of work from multiple groups throughout YU and YNHHS:
+
+::: {style="margin-left: 2rem"}
+1.  [Yale Biomedical Informatics & Computing](https://medicine.yale.edu/ybic)
+
+:::
+
 \
 \
 \
-Updated: June 15th, 2025
+Updated: August 1st, 2025

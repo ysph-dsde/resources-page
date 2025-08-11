@@ -17,27 +17,6 @@
       filter-ui: false
 ---
 
-```{=html}
-<style>
-  #title-block-header {
-      margin-block-end: 0rem;
-      position: relative;
-      margin-top: -1px;
-      margin-bottom: 0;
-  }
-  .quarto-title-banner h1, .quarto-title-banner .h1, .quarto-title-banner h2, .quarto-title-banner .h2 {
-      color: #2e2e36;
-      font-weight: normal;
-      text-align: center;
-  }
-  .quarto-title-block .quarto-title-banner {
-      color: #2e2e36;
-      background: var(--light-header-background);
-      border-bottom: 1px solid #ddd;
-  }
-</style>
-```
-
 **Public Health Data Science and Data Equity (DSDE)** aims to strategically support and elevate data science training, education, research and collaboration efforts at the Yale School of Public Health (YSPH) and promote data equity as a fundamental pillar of health equity.
 
 We aim to:

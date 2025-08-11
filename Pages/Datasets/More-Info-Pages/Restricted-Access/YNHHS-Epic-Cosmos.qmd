@@ -1,5 +1,8 @@
 ---
-  title: "YNHHS Epic Cosmos"
+  title: |
+         Yale New Haven Health System (YNHHS) Epic 
+         </br>
+         and Epic Cosmos
   description: |
          </br>
          The Cosmos data set combines billions of clinical data points, made up of data from across the Epic community, to form the largest database of Electronic Health Record (EHR) patient information. Participating organizations provide a HIPAA-defined limited data set to the centralized Cosmos database. 
@@ -34,7 +37,7 @@ suppressPackageStartupMessages({
 source('./PubMed_Search_Functions.R')
 ```
 
-## Overview
+## Access Overview
 
 Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic and Epic Cosmos data will need a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:
 
@@ -167,11 +170,12 @@ Time to get access to de0identified data from all Epic centers outside YNHHS.
 
 # Fetch and format the citations.
 citations <- get_citations(
-  keywords = c("Yale New Haven Health System Epic", "Yale New Haven Health System Epic Cosmos", "YNHHS Epic", "YNHHS Epic Cosmos"), 
+  keywords = c("Yale New Haven Health System Epic", "Yale New Haven Health System Epic Cosmos", "YNHHS Epic", "YNHHS Epic Cosmos", "Electronic Health Record", "Electronic Health Records", "EHR"), 
   affiliation = "Yale School of Public Health")
 
 # Condition the output based on presence of articles.
 citations_html <- make_pub_list(citations)
+
 if(!any(str_detect(citations$citations, "No publications"))) {
   citation_length <- length(citations$citations)
   citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
