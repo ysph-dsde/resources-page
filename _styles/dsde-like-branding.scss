@@ -51,27 +51,30 @@ div.datatables {
   border-collapse: collapse;
   margin: 20px 0;
   text-align: left;
+  margin-top: 40px;
+  margin-bottom: 45px;
 }
 /* Header cells */
 .custom-table th {
   font-size: 18px; /* Font size for header */
   padding: 12px;
   border-bottom: 1px solid #ddd;
+  vertical-align: top;
 }
 
 /* Body cells */
 .custom-table td {
-  font-size: 15px; /* Font size for rows */
+  font-size: 15px;
   padding: 12px;
   border-bottom: 1px solid #ddd;
   vertical-align: top;
 }
-.custom-table tr:first-child th {
-  border-top: 1px solid #ddd;
+.custom-table thead {
+  border-top: 1px solid #000;
   border-bottom: 2px solid #000;
 }
-.custom-table tr:last-child th {
-  border-bottom: 1px solid #ddd;
+.custom-table tbody tr:last-child td {
+  border-bottom: 1px solid #000;
 }
 .custom-table ul {
   margin: 0;
@@ -92,14 +95,53 @@ div.datatables {
   font-size: 0.6em;
   line-height: 1em;
 }
-.custom-table th.iteration, .custom-table td.iteration {
-  min-width: 130px;
+.custom-table .hidden-content {
+  display: block;
+  margin: 0;
+  padding: 0;
 }
-.custom-table th.design, .custom-table td.design {
-  min-width: 225px;
+.custom-table th.toggle,
+.custom-table td.toggle {
+    width: 5px;
 }
-.custom-table th.var, .custom-table td.var {
-  min-width: 225px;
+.custom-table th.iteration,
+.custom-table td.iteration {
+    width: 120px;
+}
+
+.custom-table th.design,
+.custom-table td.design {
+    width: 225px;
+}
+
+.custom-table th.var,
+.custom-table td.var {
+    width: 225px;
+}
+.cell-hidden span::before {
+    content: '\200B';
+}
+.hidden {
+    display: none;
+}
+.row-content {
+    display: block;
+}
+.toggle-btn {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background: none;
+    padding: 0;
+    transform: rotate(-90deg);
+}
+.toggle-btn i {
+  transition: transform 0.25s;
+  color: #525252;
+}
+
+.toggle-btn.toggled i {
+  transform: rotate(90deg);
 }
 
 

@@ -5,6 +5,7 @@
          All of Us' (AoU) one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.
   title-block-banner: true
   format: html
+  editor: source
   filters:
     - parse-latex
   markdown: 
