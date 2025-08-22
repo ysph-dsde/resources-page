@@ -26,6 +26,37 @@ $hover-color: darken($link-color, 10%);
   --hover-color: #{$hover-color};
 }
 
+
+/* Information tabsets */
+
+.panel-tabset .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+    color: #e2e2e2 !important;
+    background-color: #2f2f2f !important;
+    border-color: none !important;
+}
+
+.panel-tabset .nav-item a {
+    color: #2f2f2f !important;
+    border-color: #e2e2e2 !important;
+}
+
+.panel-tabset .nav-tabs {
+    --bs-nav-tabs-border-width: 1px;
+    --bs-nav-tabs-border-color: #cecece !important;
+    border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+}
+
+.tab-content {
+    margin-top: 0px;
+    border-bottom: #cecece 1px solid !important;
+    border-left: #cecece 1px solid !important;
+    border-right: #cecece 1px solid !important;
+    margin-left: 0;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+
 // Tables
 
 $table-color: $navbar-fg !default;

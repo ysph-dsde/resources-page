@@ -665,7 +665,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 :::{.callout-caution collapse="true"}
-One project plan for the Continuous NHANES was to allow for survey and content updates to meet emerging public health needs. It is challenging to comprehensively summarize each change made since 1999, as the program has been administered every two years since then. A generalized summary with highlights of major changes is provided in the table below. Researchers interested in learning more about detailed protocol changes are encouraged to review the relevant documentation for each year available on the [NHANES Questionnaires, Datasets, and Related Documentation](https://wwwn.cdc.gov/nchs/nhanes/default.aspx) webpage, the brochere linked above, or the [NHANES Survey Methods and Analytic Guidelines](https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx) webpage, which consolidates some of the program's documentation\ [@data_nhanes; @nhanes_most_protocols].
+One project plan for the Continuous NHANES was to allow for survey and content updates to meet emerging public health needs. It is challenging to comprehensively summarize each change made since 1999, as the program has been administered every two years since then. A generalized summary with highlights of major changes is provided in the table above.
+
+Researchers interested in learning more about detailed protocol changes are encouraged to review the relevant documentation for each year available on the [NHANES Questionnaires, Datasets, and Related Documentation](https://wwwn.cdc.gov/nchs/nhanes/default.aspx) webpage, the brochere linked above, or the [NHANES Survey Methods and Analytic Guidelines](https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx) webpage, which consolidates some of the program's documentation\ [@data_nhanes; @nhanes_most_protocols].
 :::
 
 
@@ -763,7 +765,7 @@ In some cases, this warranted the consolidation of existing NHANES and NHES rese
               <strong>Dates:</strong> 1982-84, 1986, 1987, and 1992
               </br>
               </br>
-              <strong>Study Design:</strong> These series were designed to investigate the relationships between clinical, nutritional, and behavioral factors assessed in NHANES I and subsequent morbidity, mortality, and hospital utilization, as well as changes in risk factors, functional limitation, and institutionalization. 90-94% qualifying participants from NHANES I were traced for follow-up\ [@NHEFS].
+              <strong>Study Design:</strong> These series were designed to investigate the relationships between clinical, nutritional, and behavioral factors assessed in NHANES I and subsequent morbidity, mortality, and hospital utilization, as well as changes in risk factors, functional limitation, and institutionalization. 90-94% qualifying participants from NHANES I were traced for follow-up\ [@NHEFS; @Cox1996].
               </br>
               </br>
               <strong>Data Types:</strong>
@@ -774,50 +776,48 @@ In some cases, this warranted the consolidation of existing NHANES and NHES rese
                   <li>Death certificates of decedents</li>
                 </ul>
               </br>
-              <strong>Data Files:</strong> TXT, SAS, and PDF
+              <strong>Data Files:</strong> TXT and PDF
             </span>
           </td>
           <td class="var">
             <span class="hidden-content hidden">
+              There were variations in the variables captured during each longitudinal follow-up.
+              </br>
+              </br>
               <ul>
-                <li>Demographic (including twin status)</li>
+                <li>Demographic</li>
                 <li>Socioeconomic</li>
-                <li>Family characteristics</li>
                 <li>Geographic (state and urbanicity)</li>
-                <li>Sampling weights to reflect 24 million children of the base population</li>
-                <li>Medical and developmental history</li>
-                <li>School questionnaire (i.e. academic standing, use of special resources)</li>
-                <li>Psychological examination</li>
-                <li>Physical examination</li>
-                <li>Ear, nose, and throat examination</li>
-                <li>Diagnostic impressions (10 records including neurological)</li>
-                <li>Audiometry</li>
-                <li>Vision</li>
-                <li>Dental findings</li>
-                <li>Body measurements (13 sitting and 13 standing)</li>
-                <li>Bone age by X-ray</li>
+                <li>Living arrangement and household composition</li>
+                <li>History of selected medical conditions</li>
+                <li>Functional limitation</li>
+                <li>Smoking and alcohol habits</li>
+                <li>Exercise and weight</li>
+                <li>Vision and hearing</li>
+                <li>Health care facility overnight stay</li>
               </ul>
             <span class="hidden-content hidden">
           </td>
           <td>
             <span class="hidden-content hidden">
+              <strong>1982-1984 NHEFS:</strong>
+              </br>
               <ul>
-                <li>14,407 persons from NHANES I who were examined</li>
+                <li>14,407 persons who were examined in NHANES I</li>
                 <li>25-74 years of age</li>
                 <li>Noninstitutionalized civilian population</li>
                 <li>Sampling was restricted to the conterminous United States and excluded individuals residing in Native American reservations.</li>
                 <li>Emphasis by oversampling of the following groups: at or below the federal poverty line, preschool children (6 months - 5 years), women of child-bearing age, and persons aged 60-74 years old.</li>
-                </br>
-                </br>
-                <strong>1986 NHEFS</strong>
-                </br>
-                </br>
-                <strong></strong>
-                </br>
-                </br>
-                <strong></strong>
-                The 1986 NHEFS was conducted for members of the NHEFS cohort who were 55-74 years of age at their baseline examination and not known to be deceased at the 1982-1984 NHEFS (n = 3,980). The 1987 NHEFS was conducted for the entire nondeceased NHEFS cohort (n = 11,750). The fourth wave of data collection, the 1992 NHEFS, includes the entire nondeceased NHEFS cohort (n = 11,195).
               </ul>
+              </br>
+              </br>
+              <strong>1986 NHEFS:</strong> Focused on 3,980 participants who were 55-74 years of age and not known to be deceased in the 1982-1984 NHEFS.
+              </br>
+              </br>
+              <strong>1987 NHEFS:</strong> Focused on the entire nondeceased NHEFS cohort of 11,750 participants.
+              </br>
+              </br>
+              <strong>1992 NHEFS:</strong> Focused on the entire nondeceased NHEFS cohort of 11,195 participants.
             </span>
           </td>
         </tr>
@@ -826,30 +826,46 @@ In some cases, this warranted the consolidation of existing NHANES and NHES rese
           <td class="toggle">
             <button class="toggle-btn" data-target="row3b"><i class="fa fa-angle-down"></i></button>
           </td>
-          <td class="iteration"><a href="https://wwwn.cdc.gov/nchs/nhanes/search/nnyfs12.aspx" target="_blank">NHANES National Youth Fitness Survey (NNYFS)</a>\ [@nhes_III]</td>
+          <td class="iteration"><a href="https://wwwn.cdc.gov/nchs/nhanes/search/nnyfs12.aspx" target="_blank">NHANES National Youth Fitness Survey (NNYFS)</a>\ [@NNYFS]</td>
           <td class="design">
             <span class="hidden-content hidden">
               <strong>Dates:</strong> 2012
               </br>
               </br>
-              The study design, data types, and available files types are the same as those of NHES II\ [@Woolsey1974].
-            </span>
-          </td>
-          <td>
-            <span class="hidden-content hidden">
-              Variables tracked are the same as NHES II.
+              Technical documentation for this program is missing from the CDC's Archive website. The following information was pieced together from other program records, including brochures and summary reports\ [@NYFS_measurements].
+              </br>
+              </br>
+              <strong>NOTE:</strong> Much of the documentation for the program was archived, but the open access data appears to be accessible from the NNYFS webpage. Data releases and updates have been periodically released since 2012, with the latest recorded update being in October 2022\ [@NNYFS_whats_new].
             </span>
           </td>
           <td>
             <span class="hidden-content hidden">
               <ul>
-                <li>7,514 interviewed with 6,768 examined</li>
-                <li>12-17 years of age</li>
-                <li>Parents from the noninstitutionalized civilian population</li>
-                <li>Sampling was restricted to the conterminous United States.</li>
+                <li>Demographic</li>
+                <li>Geographic (state and urbanicity)</li>
+                <li>Height, weight and other measures of growth and development</li>
+                <li>A physical activity monitor to wear for 7 days to be mailed back in a prepaid envelope</li>
+                <li>A measurement of abdominal or core muscle strength</li>
+                <li>A measurement of lower body muscle strength (ages 6-15 years only)</li>
+                <li>A measurement of grip strength (ages 7-15 years only)</li>
+                <li>A measurement of upper body muscle strength (age 5-15 years only)</li>
+                <li>An assessment of coordination and balance (ages 3-5 years only)</li>
+                <li>A measurement of grip strength (ages 7-15 years only)</li>
+                <li>A treadmill fitness measure consisting of walking and running (ages 6-15 years only)</li>
+                <li>An interview related to your child’s eating habits</li>
+                <li>An interview related to your child’s physical activity (ages 12-15 years only)</li>
+                <li>Questions about smoking, alcohol and drug use (ages 12-15 years only)</li>
               </ul>
-              </br>
-              <strong>NOTE:</strong> Nearly 1/3$^{rd}$ of the children examined in NHES II were reexamined in NHES III. The Extended Data Tape (EDT) helps the user identify the entries present in both cycles to create a composite data set for longitudinal studies.
+            </span>
+          </td>
+          <td>
+            <span class="hidden-content hidden">
+              <ul>
+                <li>2,065 were screened, 1,640 interviewed with 1,576 examined\ [@NNYFS_responses]</li>
+                <li>6-15 years of age</li>
+                <li>Parents from the noninstitutionalized civilian population</li>
+                <li>All 50 States</li>
+              </ul>
             </span>
           </td>
         </tr>
@@ -864,93 +880,77 @@ In some cases, this warranted the consolidation of existing NHANES and NHES rese
               <strong>Dates:</strong> Multiple follow-ups after completion of NHANES III in 1994.
               </br>
               </br>
-              <strong>Study Design:</strong> Samples of persons were selected through complex, multistage, highly stratified, cluster samples of households. Similarly to NHES, participants were randomly selected from primary sampling units (PSUs) that were partitioned into segments based on geography, eligibility, and housing density\ [@Linder1965].
+              <strong>Study Design:</strong> Varies depending on the special study, assay, and available samples.
               </br>
               </br>
-              <strong>Data Types:</strong>\ [@Harvey1981]
+              <strong>Data Types:</strong>
               </br>
-              The following was collected from all participants
               <ul>
-                <li>Household interview</li>
-                <li>Available health records and history</li>
-                <li>Direct medical, dental, and dermatological examination (test results and measurements)</li>
-                <li>Vision and hearing tests</li>
-                <li>Anthropometric measurements</li>
-                <li>Hand-wrist X-rays for participants ages 1-17</li>
-                <li>Nutrient composition, frequency, and adequacy</li>
+                <li>Focused dietary data assessments</li>
+                <li>Imputation for missing values</li>
+                <li>Focused health outcomes measures include hepatic steatosis exams, spirometry, and natality</li>
+                <li>Hipbone geometry</li>
+                <li>Sera data from surplus biospecimens</li>
               </ul>
               </br>
-              Detailed examinations included the above list and
-              <ul>
-                <li>Supplement medical history for arthritis, respiratory and cardiovascular conditions</li>
-                <li>Health care needs questionnaire</li>
-                <li>General well-being questionnaire</li>
-                <li>Extended examination and tests</li>
-                <li>X-rays of the chest and hip and knee joints</li>
-              </ul>
-              </br>
-              <strong>Data Files:</strong> TXT, SAS, or XPT and PDF
+              <strong>Data Files:</strong> TXT, SAS, XPT, or exam specific files with PDF or HTML study documentation.
             </span>
           </td>
           <td class="var">
             <span class="hidden-content hidden">
-              Additional details concerning the two baseline populations are summarized in the [_Plan and Operation of the Health and Nutrition Examination Survey Series 1 Number 10a_](https://www.cdc.gov/nchs/data/series/sr_01/sr01_010a.pdf) PDF pg. 20.
+              Below is a summary of the special studies and assays available at the time of this writing\ [@surplus_sera].
               </br>
               </br>
               <ul>
-                <li>Demographic</li>
-                <li>Socioeconomic</li>
-                <li>Family characteristics</li>
-                <li>Geographic (state and urbanicity)</li>
-                <li>Sampling weights to reflect the population of 1-74 year olds within 60 age-sex-race groups at the midpoint of the survey</li>
-                <li>Medical history questionnaire, ages 1-11 years,</li>
-                <li>Medical history questionnaire, ages 12-74 years</li>
-                <li>Medical examination, ages 1-74 years</li>
-                <li>Health care needs, general medical history supplement, and respiratory and cardiovascular supplements, ages 25-74 years</li>
-                <li>General well-being and the CES-D depression scale developed by The National Institute of Mental Health, ages 25-74 years</li>
-                <li>Dental, ages 1-74 years</li>
-                <li>Dermatology, ages 1-74 years</li>
-                <li>Near and distant vision, ages 25-74 years</li>
-                <li>Ophthalmology, ages 1-74 years</li>
-                <li>Audiometric</li>
-                <li>Spirometry-best trials only, ages 25-74 years</li>
-                <li>Anthropometry goniometry, skeletal age, bone density, and cortical thickness, Ages 1-74 years</li>
-                <li>Arthritis</li>
-                <li>Chest X-ray, pulmonary diffusion, and tuberculin test results, ages 25-74 years</li>
-                <li>Electrocardiogram</li>
-                <li>Computer measurements and interpretations of electrocardiograms, ages 25-74 years</li>
-                <li>Biochemistry, serology, hematology, blood slides, urine dipstick</li>
-                <li>Model gram</li>
-                <li>Nutrient composition</li>
-                <li>Dietary frequency and adequacy, ages 1-74 years</li>
-                <li>24-hour food consumption intake, ages 1-74 years</li>
+                <li>Healthy Eating Index (HEI) (January 2000)</li>
+                <li>Multiple Imputation (June 2001, Updated August 2004)</li>
+                <li>Natality (January 2003)</li>
+                <li>Spirometry (Raw Curves) (June 2001)</li>
+                <li>Hip Bone Geometry Data (August 2003)</li>
+                <li>Vitamin K: Non-Hispanic White Women and Girls (January 2006)</li>
+                <li>Dietary Interview - Vitamin K and 3-Methylhistidine (February 2009)</li>
+                <li>Hepatic/Gallbladder Ultrasound and Hepatic Steatosis (HGUHS) (March 2011)</li>
+                <li>Hepatic/Gallbladder Ultrasound and Hepatic Steatosis - Second Exam (HGUHSSE) (March 2011)</li>
+                <li>Pertussis (NHANES III surplus sera) (July 2005)</li>
+                <li>Antibody to Cytomegalovirus IgG and IgM (January 2006)</li>
+                <li>Surplus Sera Optical Density to Cytomegalovirus (May 2006)</li>
+                <li>Surplus Sera Antibody to Human Herpes Virus 8 (Updated March 2007)</li>
+                <li>Surplus Sera Laboratory Component: Insulin Like Growth Factor (IGF-I and IGF Binding Protein-3) (Updated October 2006)</li>
+                <li>Surplus Sera Laboratory Component: Antibody to GAD65 (September 2006)</li>
+                <li>Surplus Sera Laboratory Component: Racial/Ethnic Variation in Sex Steroid Hormone Concentrations Across Age in US Men (October 2006)</li>
+                <li>Surplus Sera Laboratory Component: Antibody to Toxocara Larva Migrans (January 2007)</li>
+                <li>Surplus Sera Laboratory Component: Cystatin C (May 2007)</li>
+                <li>Surplus Sera Laboratory Component: Antibody to MUMPs (Updated June 2009)</li>
+                <li>Surplus Sera Laboratory Component: Antibody to Hepatitis E Virus IgG (August 2008)</li>
+                <li>Surplus Sera Laboratory Component: Antibody to Periodontal Pathogens (August 2008)</li>
+                <li>Surplus Sera Laboratory Component: Dialkylphosphates (May 2009)</li>
+                <li>Surplus Sera Laboratory Component: Inhibin B, Leuteinizing Hormone and Testosterone (Updated December 2009)</li>
+                <li>Surplus Sera Laboratory Component: Racial/Ethnic Variation in Sex Steroid Hormone Concentrations Across Age In US Men (October 2011)</li>
+                <li>Surplus Sera Laboratory Component: $\beta$-trace Protein $\beta$2 Microglobulin (April 2012)</li>
+                <li>Surplus Sera Laboratory Component: Cystatin C, $\beta$-trace Protein $\beta$2 Microglobulin (April 2012)</li>
+                <li>Surplus Sera Laboratory Component: Monoclonal Gammopathy of Undetermined Significance (August 2012)</li>
+                <li>Surplus Sera Laboratory Component: Partial Hepatitis C Virus RNA Sequences Isolated from Individuals (August 2012)</li>
+                <li>Surplus Sera Laboratory Component: IgG and IgM Antibody to Hepatitis E Virus (May 2013)</li>
+                <li>Monoclonal gammopathy of undetermined significance (January 2015)</li>
+                <li>Food Specific IgE(s) (Surplus Sera) (May 2015)</li>
+                <li>IgG Antibody to Hepatitis E Virus and anti-HEV Western Blot (September 2016)</li>
+                <li>Autoantibodies- Immunofluorescence data (August 2019)</li>
+                <li>Autoantibodies - Anti-DFS70 Autoantibody Analyses (Surplus) (July 2022)</li>
+                <li>Monoclonal Gammopathy of Undetermined Significance (MGUS) Mass Spectrometry - Serum (Surplus) (February 2025)</li>
               </ul>
             </span>
           </td>
           <td>
             <span class="hidden-content hidden">
+              Varies depending on the special study, assay, and available samples. Otherwise, the population and number of participants available are the same as for the primary NHANES III program\ [@nhanes_III].
+              </br>
+              </br>
               <ul>
-                <li>32,000 were contacted with 31,973 interviewed and, of these, 23,808 examined</li>
+                <li>39,695 were contacted with 33,994 interviewed and, of these, 30,818 examined. 493 received special, limited examinations in their home.</li>
+                <li>2 months of age and older</li>
                 <li>Noninstitutionalized civilian population</li>
-                <li>Sampling was restricted to the conterminous United States and excluded individuals residing in Native American reservations.</li>
-              </ul>
-              </br>
-              The base population surveyed and examined was divided into two groups of interest: one primarily focused on nutrition, and a subset of this group that underwent a more detailed process. Each of these had different sampling emphases, which is summarized below\ [@Rice1973; @nhanes_I].
-              </br>
-              </br>
-              <strong>Standard examination cohort:</strong>
-              </br>
-              <ul>
-                <li>1-74 years of age</li>
-                <li>Emphasis by oversampling of the following groups: at or below the federal poverty line, preschool children (6 months - 5 years), women of child-bearing age, and persons aged 60-74 years old.</li>
-              </ul>
-              </br>
-              <strong>Detailed examination cohort:</strong>
-              </br>
-              <ul>
-                <li>6,913 of the 32,000. 3,059 received detailed medical examinations during the survey and an additional 3,059 received detailed examinations after completion of the nutrition survey in October 1975. The last group is referred to as the NHANES I Augmentation group.</li>
-                <li>25-74 years of age</li>
-                <li>No oversampling relative to the national population</li>
+                <li>All 50 States</li>
+                <li>Emphasis by oversampling of the following groups: preschool children (2 months - 5 years), and persons aged 60 and over, Mexican-American persons, and non-Hispanic black persons\ [@nhanes_III; @nhne_design]</li>
               </ul>
             </span>
           </td>
@@ -972,30 +972,135 @@ The chapter dedicated to cross-cultural considerations, found in the [Plan and O
 
 ## Gaining Access
 
-Freely accessible vs restricted access
+Most of the data available through NHES, NHANES, and the ancillary programs is freely accessible for those wishing to use it for statistical analysis and reporting purposes. Researchers seeking to use the data should review and become familiar with the terms and conditions of the NCHS [Data User Agreement](#valuable-links), which covers the use of any data available from their office\ [@data_use_agreement].
 
-### Do I Qualify?
+Some of the more recent installments of the program offer additional levels of data with restricted access or provide researchers the option to generate their own data through the [Biospecimen Program](#valuable-links). Restricted data does not contain information that directly identifies participants, such as names, social security numbers, and addresses. However, it does include variables that could be used to identify participants when combined with other information, such as a person's job or county of residence, and sensitive information.
 
-### Step-by-Step
-
-### Typical Timeline
+Explore the information provided in the tabs below for details on access steps, limitations, and time expectations specific to the types of data you are seeking to acquire.
 
 
 ::: {.panel-tabset}
 
 ## Freely Accessible
 
-Links and time
+### Do I Qualify?
+
+All persons seeking to use the data for statistical analysis and reporting purposes are allowed to access and download the data.
+
+
+### Step-by-Step
+
+There are no specific steps required. Simply navigate to the webpage with the NHANES program installment you want to use and download it. Be aware that specific considerations are needed to combine two different installments or biannual Continuous NHANES datasets. Refer to the relevant data documentation or any of the [webinars and tutorials](#valuable-links) available for further directions on how to best handle survey design and protocol differences.
+
+
+### Typical Timeline
+
+There are no time constraints for accessing these data.
+
 
 ## Restrcited Access
 
-Links and time
+### Do I Qualify?
+
+All individuals seeking to use the data for statistical analysis and reporting purposes are allowed to submit a research proposal to the [NCHS Research Data Center (RDC)](https://www.cdc.gov/rdc/) through the Standard Application Process (SAP) available through the ResearchDataGov (RDG) portal\ [@rdc_process; @data_release_policy].
+
+
+### Step-by-Step
+
+
+It is recommended that the principal investigator (PI) or co-principal investigator
+(co-PI) create the application, as only they will be able to make edits to the application after submission.
+
+Researchers will need to demonstrate how their projects will benefit the agency or other agencies providing the data.
+
+
+::: {style="margin-left: 2rem"}
+- Search and select the datasets that you will need in your study and add them to your basket. Any data added to the same "basket" will be included in the same application. NOTE not all data can be accessed in the same way or at the same location. NOTE you will be able to add additional data to the application if you require.
+
+- When you are ready to proceed with the application, open the basket with your data and select **Start Application**.
+
+- 
+:::
+
+### Typical Timeline
+
+
+Researchers with an approved project will be allowed access to the restricted-use data for 36 months.
+
+
+### Other Comments
+
+The RDG portal serves applications for data from 13 agencies and 3 units that contribute to the federal statistical system (FSS), including NCHS as one of the agencies. Each agency has its own specific expectations in the application process. Many of these details are provided in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf) (some of which is copied below for convenience), but researchers are also encouraged to contact the RDC directly for additional details at rdca@cdc.gov.
+
+#### Data Distribution Centers
+
+Federal Statistical Research Data Centers (FSRDC)
+
+::: {style="margin-left: 2rem"}
+- Non-US citizens are generally encouraged to use FSRDCs.
+- **In-person:** Census Bureau facilities at partner institutions.
+- **Remote access:** A secure Virtual Desktop Interface (VDI) may be available.
+- Researchers must meet physical and information security requirements. They must obtain Census Bureau Special Sworn Status (SSS) and pass a background investigation.
+- **Software Available:** Anaconda, Gurobi, Intel Composer, Knittro, MADD, Mathematica, Matlab, OpenGeoda, R and Rstudio, SAS, Stat/Transfer, Stata, Stata-MP, SUDAAN, and Tomlab.
+:::
+
+NCHS Research Data Centers (RDCs)
+
+::: {style="margin-left: 2rem"}
+- **In-person:** Facilities are located in Hyattsville, MD, Atlanta, GA, and Rockville, MD and are accessible by appointment only.
+- Computers are not connected to the Internet and electronic devices are not permitted.
+- RDC Analyst reviews all materials and output.
+- **Software Available:** R, SAS, Stata, and SUDAAN.
+:::
+
+#### Required Documentation
+
+\ [@rdg_user_guide]
+
+::: {style="margin-left: 2rem"}
+- CV for each applicant.
+- If student project, student advisor agreement form.
+- Permission to use proprietary data.
+- Requested output must include Table Shells.
+- Variables requested must be provided in a data dictionary format that lists all variables (i.e., restricted-use, public-use and external) needed for the research project. Refer to the agency dataset data dictionaries for available variables.
+:::
+
 
 ## Biospecimens
 
-Links and time
+### Do I Qualify?
+
+Sometimes, a researcher may be interested in obtaining data that has not been collected or made available. These researchers can submit a proposal to generate (and fund) new data items through the [NHANES Biospecimen Program](#valuable-links).
+
+Requests are evaluated by the NHANES Project Officer and a technical panel to assess scientific merit. The NCHS Human Subject Contact and Ethics Review Board (ERB) then reviews the proposal to address any potential human subjects concerns, and the NCHS Confidentiality Officer assesses the disclosure risk\ [@data_release_policy].
+
+Any data developed using NHANES biospecimens will be made accessible either publicly or with restricted access permissions\ [@data_release_policy].
+
+
+### Step-by-Step
+
+### Typical Timeline
 
 :::
+
+
+
+## Valuable Links
+
+::: {style="margin-left: 2rem"}
+- [NCHS Data User Agreement](https://www.cdc.gov/nchs/policy/data-user-agreement.html): Find the data use limitations and expectations set by the NCHS for using their publicly available data\ [@data_use_agreement].
+
+- [NHANES Questionnaires, Datasets, and Related Documentation](https://wwwn.cdc.gov/nchs/nhanes/default.aspx): Find links to all installments or ancillary studies and the programs methods and oterh documentation\ [@data_nhanes].
+
+- [NHANES Biospecimen Program](https://www.cdc.gov/nchs/nhanes/biospecimen/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fnhanes%2Fmodules%2Fbiospecimen-redirect.html): Find the request forms for DNA, serum, plasma, and urine samples as well as genetic data produced from the NHANES biospeciments\ [@biospecimen_program].
+
+- [NHANES Webinars](https://www.cdc.gov/nchs/nhanes/updates/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fnhanes%2Fmodules%2Fwebinars.html): Find additional information and resources for program partners and data users, including updates and survey strategies\ [@webinars].
+
+- [NHANES Tutorials](https://wwwn.cdc.gov/nchs/nhanes/tutorials/default.aspx?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fnhanes%2Fmodules%2Fdata-analysis-tutorial.html): Find help understanding sample design, variance estimation, interpreting documentation with example analyses, software tips, and sample code\ [@tutorials].
+
+- [What NHANES Data Have Achieved](https://www.cdc.gov/nchs/nhanes/publications/data-accomplishments.html): Find a listing of the public health research inspired by NHANES data and the policy changes it has influenced\ [@achievements_nhanes].
+:::
+
 
 ## Publications
 
