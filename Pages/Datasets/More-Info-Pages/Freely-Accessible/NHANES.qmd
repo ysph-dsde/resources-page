@@ -1226,22 +1226,6 @@ When accessing the data, the researcher will need to provide the following docum
 - Requested variables must be provided in a data dictionary format that lists all necessary variables (i.e., restricted-use, public-use, and external) for the research project. Please refer to the agency dataset data dictionaries for the available variables.
 :::
 
-
-## Biospecimens
-
-### Do I Qualify?
-
-Sometimes, a researcher may be interested in obtaining data that has not been collected or made available. These researchers can submit a proposal to generate (and fund) new data items through the [NHANES Biospecimen Program](#valuable-links).
-
-Requests are evaluated by the NHANES Project Officer and a technical panel to assess scientific merit. The NCHS Human Subject Contact and Ethics Review Board (ERB) then reviews the proposal to address any potential human subjects concerns, and the NCHS Confidentiality Officer assesses the disclosure risk\ [@data_release_policy].
-
-Any data developed using NHANES biospecimens will be made accessible either publicly or with restricted access permissions\ [@data_release_policy].
-
-
-### Step-by-Step Guide
-
-### Typical Timeline
-
 :::
 
 
