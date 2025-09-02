@@ -967,6 +967,9 @@ The chapter dedicated to cross-cultural considerations, found in the [Plan and O
 :::
 
 
+![Test](Images/NCHS_RDC_Restricted_Timeline.png){style="float: none; display: block; margin-left: auto; margin-right: auto; width: 90%;"}
+
+
 ## Gaining Access
 
 Most of the data available through NHES, NHANES, and the ancillary programs is freely accessible for those wishing to use it for statistical analysis and reporting purposes. Researchers seeking to use the data should review and become familiar with the terms and conditions of the NCHS [Data User Agreement](#valuable-links), which covers the use of any data available from their office\ [@data_use_agreement].
@@ -1046,7 +1049,7 @@ The NCHS will not evaluate your study to assess its scientific merit nor its sub
 ### Typical Timeline
 
 
-![Tes](Images/NCHS_RDC_Restricted_Timeline.png){style="float: none; display: block; margin-left: auto; margin-right: auto; width: 90%;"}
+![Test](Images/NCHS_RDC_Restricted_Timeline.png){style="float: none; display: block; margin-left: auto; margin-right: auto; width: 90%;"}
 
 \
 \
