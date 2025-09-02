@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: docs
+  render:
+    - "!Local Only/"
 
 website:
   title: "Resource Navigation Tool"

@@ -966,10 +966,6 @@ Additional study design and content details are provided earlier in the [Methods
 The chapter dedicated to cross-cultural considerations, found in the [Plan and Operation of HHANES](https://www.cdc.gov/nchs/data/series/sr_01/sr01_019.pdf) documentation, acknowledged a need for cultural sensitivity and recognized unknown obstacles to implementation. It specifically noted that insufficient personnel on the core team were from or otherwise knowledgeable about the Hispanic population and cultures. This chapter highlighted that this was the first known attempt by the National Center for Health Statistics (NCHS) to conduct a survey focused on a specific ethnic group. This document details the strategies the team employed to address these shortcomings by hiring qualified personnel and forming task force committees intended to closely evaluate aspects of the program, from translation to survey content\ [@Feinleib1985].
 :::
 
-
-![Test](Images/NCHS_RDC_Restricted_Timeline.png){style="float: none; display: block; margin-left: auto; margin-right: auto; width: 90%;"}
-
-
 ## Gaining Access
 
 Most of the data available through NHES, NHANES, and the ancillary programs is freely accessible for those wishing to use it for statistical analysis and reporting purposes. Researchers seeking to use the data should review and become familiar with the terms and conditions of the NCHS [Data User Agreement](#valuable-links), which covers the use of any data available from their office\ [@data_use_agreement].
@@ -1047,12 +1043,6 @@ The NCHS will not evaluate your study to assess its scientific merit nor its sub
 
 
 ### Typical Timeline
-
-
-![Test](Images/NCHS_RDC_Restricted_Timeline.png){style="float: none; display: block; margin-left: auto; margin-right: auto; width: 90%;"}
-
-\
-\
 
 
 ```{=html}
