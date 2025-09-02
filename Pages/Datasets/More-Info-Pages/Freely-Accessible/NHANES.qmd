@@ -1046,7 +1046,7 @@ The NCHS will not evaluate your study to assess its scientific merit nor its sub
 ### Typical Timeline
 
 
-![Tes](Images/NCHS%RDC%Restricted-Use%Timeline.png){style="float: none; display: block; margin-left: auto; margin-right: auto; width: 90%;"}
+![Tes](Images/NCHS_RDC_Restricted_Timeline.png){style="float: none; display: block; margin-left: auto; margin-right: auto; width: 90%;"}
 
 \
 \
@@ -1054,7 +1054,7 @@ The NCHS will not evaluate your study to assess its scientific merit nor its sub
 
 ```{=html}
 <div class="container">
-  <img id="myImage" src="Images/NCHS%RDC%Restricted-Use%Timeline.png" alt="Zoomable Image">
+  <img id="myImage" src="Images/NCHS_RDC_Restricted_Timeline.png" alt="Zoomable Image">
   <figcaption class="caption">Click on the image to view larger.</figcaption>
 </div>
 
