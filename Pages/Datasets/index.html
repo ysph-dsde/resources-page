@@ -614,9 +614,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     - Three categories filter with sorting by title and date updated - May 10th, 2025
     - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
     - Allow filtering by the tiles with "info page" for June 16th demo - June 11th, 2025
+    - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
   </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-
 
 
   <div>
@@ -624,7 +624,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       <div class="sidebar-wrapper">
         <aside class="sidebar">
 
-        
+          
           
             
           
@@ -641,10 +641,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
+              <option value="default" selected="">No sorting</option>
               <option value="title-asc">Title A-Z</option>
               <option value="title-desc">Title Z-A</option>
-              <option value="date-asc">Date Updated: Oldest to Newest</option>
               <option value="date-desc">Date Updated: Newest to Oldest</option>
+              <option value="date-asc">Date Updated: Oldest to Newest</option>
             </select>
           </div>
           <form id="categoryFilter1" class="form">
@@ -729,14 +730,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         <div class="container" id="tilesContainer">
           
           
-                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access" data-info="no" data-title="The Health Attribution Library" data-date="2025-03-17">
+                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access" data-info="no" data-title="The Health Attribution Library" data-date="2025-03-17" data-ranking="4">
                   <img src="Images/The Health Attribution Library.png" class="image">
                   <h2 class="js-line-count">The Health Attribution Library</h2>
                   <p class="description">We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. The Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations.
 </p>
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
                        
                         &nbsp;
                         <a href="https://www.healthattribution.org/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
@@ -748,6 +748,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                           <i class="bi-people-fill"></i></a> 
                        
                        
+                       
                       
                        
                         <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p> 
@@ -757,14 +758,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access" data-info="no" data-title="Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)" data-date="2025-04-07">
+                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access" data-info="no" data-title="Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)" data-date="2025-04-07" data-ranking="4">
                   <img src="Images/wisspar.png" class="image">
                   <h2 class="js-line-count">Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)</h2>
                   <p class="description">The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a centralized platform housing data on immunogenicity from clinical trials of pneumococcal vaccines. The data on WISSPAR are primarily curated from outcomes tables from clinicaltrials.gov and are made available in a searchable format that can be readily used for downstream analyses. Fields included in the database include product, manufacturers, dosing schedule, age group, and geographic region. You can use the embedded tools to generate customizable visualizations, export data for further analyses, or just browse through clinical trial results.
 </p>
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
                        
                         &nbsp;
                         <a href="https://wisspar.com/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
@@ -776,6 +776,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                           <i class="bi-people-fill"></i></a> 
                        
                        
+                       
                       
                        
                         <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p> 
@@ -785,14 +786,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Basic%20Research%20Assays" data-categories3="Open%20Access" data-info="no" data-title="Nextstrain" data-date="2025-03-17">
+                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Basic%20Research%20Assays" data-categories3="Open%20Access" data-info="no" data-title="Nextstrain" data-date="2025-03-17" data-ranking="4">
                   <img src="Images/nextstrain.png" class="image">
                   <h2 class="js-line-count">Nextstrain</h2>
                   <p class="description">Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!
 </p>
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
                        
                         &nbsp;
                         <a href="https://grubaughlab.com/nextstrain/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
@@ -804,6 +804,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                           <i class="bi-people-fill"></i></a> 
                        
                        
+                       
                       
                        
                         <p class="topic" style="margin-bottom: 5px;">Basic Research Assays</p> 
@@ -813,14 +814,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="no" data-title="Yale University Open Data Access (YODA)" data-date="2025-03-20">
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="no" data-title="Yale University Open Data Access (YODA)" data-date="2025-03-20" data-ranking="3">
                   <img src="Images/YODA.png" class="image">
                   <h2 class="js-line-count">Yale University Open Data Access (YODA)</h2>
                   <p class="description">In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
 </p>
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
                        
                         &nbsp;
                         <a href="https://yoda.yale.edu/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
@@ -832,6 +832,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                           <i class="bi-people-fill"></i></a> 
                        
                        
+                       
                       
                        
                         <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p> 
@@ -841,14 +842,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20University" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="yes" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-03-20">
+                <div class="tile " data-categories1="Yale%20University" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="yes" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-03-20" data-ranking="3">
                   <img src="Images/YNHHS Epic Cosmos.png" class="image">
                   <h2 class="js-line-count">Yale New Haven Health System (YNHHS) Epic</h2>
                   <p class="description">Cosmos is a dataset created in collaboration with a community of health systems using Epic and is designed to improve patient care. By combining their data, participating organizations and Epic can make new discoveries and advance medicine. Cosmos also powers tools at the point of care, providing insights to clinicians that are tailored to the patient in front of them.
 </p>
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
                        
                         &nbsp;
                         <a href="https://medicine.yale.edu/ybic/ynhhs-research-access/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
@@ -858,6 +858,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                         &nbsp;
                         <a href="https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-people-fill"></i></a> 
+                       
                        
                        
                        
@@ -873,7 +874,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="National Center for Health Statistics (NCHS)" data-date="2025-03-20">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="National Center for Health Statistics (NCHS)" data-date="2025-03-20" data-ranking="1">
                   <img src="Images/nchs.png" class="image">
                   <h2 class="js-line-count">National Center for Health Statistics (NCHS)</h2>
                   <p class="description">The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and death records, medical records, interviews with people and healthcare providers, direct physical examinations, and laboratory testing. NCHS shares data, statistics, and analysis in multiple ways, including reports, dashboards, and data files. Including: Family Growth Survey, Health Care Surveys, Rapid Surveys, Health and Nutrition Examination Survey, Health Interview Survey, Vital Statistics, and a special compilation of linked surveys with administrative data. Here we specifically list the surveys that are not open access only.
@@ -881,10 +882,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/index.html" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -897,7 +898,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-03-20">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-03-20" data-ranking="2">
                   <img src="Images/nhanes.png" class="image">
                   <h2 class="js-line-count">NCHS's National Health and Nutrition Examination Survey (NHANES)</h2>
                   <p class="description">The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health\ [@about_nhanes; @achievements_nhanes]. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
@@ -908,10 +909,10 @@ Researchers can access both publicly available and restricted data produced by N
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/nhanes/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -928,7 +929,7 @@ Researchers can access both publicly available and restricted data produced by N
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-09-02">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-09-02" data-ranking="2">
                   <img src="Images/nhanes.png" class="image">
                   <h2 class="js-line-count">NCHS's National Health and Nutrition Examination Survey (NHANES)</h2>
                   <p class="description">Concise version
@@ -936,10 +937,10 @@ Researchers can access both publicly available and restricted data produced by N
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/nhanes/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -956,7 +957,7 @@ Researchers can access both publicly available and restricted data produced by N
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's National Health Interview Survey (NHIS)" data-date="2025-03-20">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's National Health Interview Survey (NHIS)" data-date="2025-03-20" data-ranking="2">
                   <img src="Images/nhis.png" class="image">
                   <h2 class="js-line-count">NCHS's National Health Interview Survey (NHIS)</h2>
                   <p class="description">The National Health Interview Survey (NHIS) monitors the health of people across the country—the U.S. population—by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults.
@@ -973,10 +974,10 @@ NHIS collects data from civilians who don't live in institutions. Civilians are 
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/nhis/index.html" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -989,7 +990,7 @@ NHIS collects data from civilians who don't live in institutions. Civilians are 
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's The National Health Care Surveys (NHCS)" data-date="2025-04-08">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's The National Health Care Surveys (NHCS)" data-date="2025-04-08" data-ranking="2">
                   <img src="Images/nhcs.png" class="image">
                   <h2 class="js-line-count">NCHS's The National Health Care Surveys (NHCS)</h2>
                   <p class="description">Overview: The National Health Care Surveys are a family of surveys that provide information about—
@@ -1002,10 +1003,10 @@ NHIS collects data from civilians who don't live in institutions. Civilians are 
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/healthcare-surveys/about/index.html" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -1018,7 +1019,7 @@ NHIS collects data from civilians who don't live in institutions. Civilians are 
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's Rapid Surveys System" data-date="2025-04-08">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's Rapid Surveys System" data-date="2025-04-08" data-ranking="1">
                   <img src="Images/nchs_rapid_surveys.png" class="image">
                   <h2 class="js-line-count">NCHS's Rapid Surveys System</h2>
                   <p class="description">The National Center for Health Statistics (NCHS) fields Rapid Surveys fast and often. We can easily adapt these surveys to collect specific information as needs arise. This makes evidence-based decision making better and faster for those working to protect and improve health in the United States.
@@ -1035,10 +1036,10 @@ Rapid Surveys can be used to—
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/rapid-surveys/about/index.html" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -1051,7 +1052,7 @@ Rapid Surveys can be used to—
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's National Vital Statistics System (NVSS)" data-date="2025-04-08">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's National Vital Statistics System (NVSS)" data-date="2025-04-08" data-ranking="1">
                   <img src="Images/nvss.png" class="image">
                   <h2 class="js-line-count">NCHS's National Vital Statistics System (NVSS)</h2>
                   <p class="description">The National Vital Statistics System is the oldest and most successful example of inter-governmental data sharing in Public Health and the shared relationships, standards, and procedures form the mechanism by which NCHS collects and disseminates the Nation’s official vital statistics. These data are provided through contracts between NCHS and vital registration systems operated in the various jurisdictions legally responsible for the registration of vital events – births, deaths, marriages, divorces, and fetal deaths. Vital Statistics data are also available online. In the United States, legal authority for the registration of these events resides individually with the 50 States, 2 cities (Washington, DC, and New York City), and 5 territories (Puerto Rico, the Virgin Islands, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands). These jurisdictions are responsible for maintaining registries of vital events and for issuing copies of birth, marriage, divorce, and death certificates.
@@ -1059,10 +1060,10 @@ Rapid Surveys can be used to—
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/nvss/index.htm" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -1075,7 +1076,7 @@ Rapid Surveys can be used to—
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's Data Linkage Activities" data-date="2025-04-08">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="NCHS's Data Linkage Activities" data-date="2025-04-08" data-ranking="2">
                   <img src="Images/nchs_data_linkage.png" class="image">
                   <h2 class="js-line-count">NCHS's Data Linkage Activities</h2>
                   <p class="description">NCHS has developed a record linkage program designed to maximize the scientific value of the Center’s population-based surveys. Linked data files enable researchers to examine the factors that influence disability, chronic disease, health care utilization, morbidity, and mortality.
@@ -1095,10 +1096,10 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/data-linkage/index.htm" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -1111,7 +1112,7 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="Surveillance, Epidemiology, and End Results Program (SEER)" data-date="2025-03-20">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="no" data-title="Surveillance, Epidemiology, and End Results Program (SEER)" data-date="2025-03-20" data-ranking="2">
                   <img src="Images/seer.png" class="image">
                   <h2 class="js-line-count">Surveillance, Epidemiology, and End Results Program (SEER)</h2>
                   <p class="description">The Surveillance, Epidemiology, and End Results (SEER) Program provides information on cancer statistics in an effort to reduce the cancer burden among the U.S. population. SEER is supported by the Surveillance Research Program (SRP) in NCI's Division of Cancer Control and Population Sciences (DCCPS).
@@ -1119,10 +1120,10 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://seer.cancer.gov/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -1135,7 +1136,7 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="yes" data-title="National Institutes of Health's (NIH) All of Us (AOU)" data-date="2025-03-19">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="yes" data-title="National Institutes of Health's (NIH) All of Us (AOU)" data-date="2025-03-19" data-ranking="3">
                   <img src="Images/NIH All of Us_4.8x3.6.png" class="image">
                   <h2 class="js-line-count">National Institutes of Health's (NIH) All of Us (AOU)</h2>
                   <p class="description">All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.
@@ -1143,10 +1144,10 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://allofus.nih.gov/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -1163,7 +1164,7 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys Basic%20Research%20Assays" data-categories3="Open%20Access" data-info="no" data-title="data.gov" data-date="2025-04-08">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys Basic%20Research%20Assays" data-categories3="Open%20Access" data-info="no" data-title="data.gov" data-date="2025-04-08" data-ranking="1">
                   <img src="Images/data_gov.png" class="image">
                   <h2 class="js-line-count">data.gov</h2>
                   <p class="description">Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
@@ -1171,10 +1172,10 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://data.gov/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -1187,7 +1188,7 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="Non-Governmental%20Organization" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="no" data-title="UK Biobank" data-date="2025-03-19">
+                <div class="tile hidden" data-categories1="Non-Governmental%20Organization" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="no" data-title="UK Biobank" data-date="2025-03-19" data-ranking="3">
                   <img src="Images/UK Biobank.png" class="image">
                   <h2 class="js-line-count">UK Biobank</h2>
                   <p class="description">The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
@@ -1195,10 +1196,10 @@ NCHS is currently linking various NCHS surveys with administrative data from the
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
                        
-                       
                         &nbsp;
                         <a href="https://www.ukbiobank.ac.uk/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-globe"></i></a> 
+                       
                        
                        
                        
@@ -1269,9 +1270,37 @@ NCHS is currently linking various NCHS surveys with administrative data from the
     let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
     let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
 
+    // Function to sort by default criteria: ranking then title
+    function sortByDefault() {
+      sortedTiles.forEach(tile => {
+        const rankAttr = tile.getAttribute('data-ranking');
+        if (rankAttr) {
+          tile.dataset.numericRanking = parseInt(rankAttr, 10);
+        }
+      });
+
+      sortedTiles.sort((a, b) => {
+        const titleA = a.getAttribute('data-title').toLowerCase();
+        const titleB = b.getAttribute('data-title').toLowerCase();
+        const rankingA = a.dataset.numericRanking;
+        const rankingB = b.dataset.numericRanking;
+
+        if (rankingA !== rankingB) {
+          return rankingA - rankingB;
+        }
+        return titleA.localeCompare(titleB);
+      });
+
+      sortedTiles.forEach(tile => {
+        tilesContainer.appendChild(tile);
+      });
+
+      filterTiles(); // Apply the current filter on new sorted order
+    }
+    
     // Initialize the display with the initial tiles shown
     sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove('hidden'));
-
+    
     showMoreBtn.addEventListener('click', function() {
       let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
       hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
@@ -1331,12 +1360,21 @@ NCHS is currently linking various NCHS surveys with administrative data from the
 
     function sortTiles() {
       const sortValue = sortOptions.value;
+      // Convert ranks to numbers before sorting
+      sortedTiles.forEach(tile => {
+        const rankAttr = tile.getAttribute('data-ranking');
+        if (rankAttr) {
+          tile.dataset.numericRanking = parseInt(rankAttr, 10);
+        }
+      });
 
       sortedTiles.sort((a, b) => {
         const titleA = a.getAttribute('data-title').toLowerCase();
         const titleB = b.getAttribute('data-title').toLowerCase();
         const dateA = parseDate(a.getAttribute('data-date'));
         const dateB = parseDate(b.getAttribute('data-date'));
+        const rankingA = a.dataset.numericRanking;
+        const rankingB = b.dataset.numericRanking;
 
         if (sortValue === 'title-asc') {
           return titleA.localeCompare(titleB);
@@ -1346,12 +1384,15 @@ NCHS is currently linking various NCHS surveys with administrative data from the
           return dateA - dateB;
         } else if (sortValue === 'date-desc') {
           return dateB - dateA;
+        } else {
+          // Default sorting: by ranking and then by title if same ranking
+          if (rankingA !== rankingB) {
+            return rankingA - rankingB;
+          }
+          return titleA.localeCompare(titleB);
         }
-
-        return 0;
       });
 
-      // Move tiles in the container based on sorted order
       sortedTiles.forEach(tile => {
         tilesContainer.appendChild(tile);
       });
@@ -1365,9 +1406,16 @@ NCHS is currently linking various NCHS surveys with administrative data from the
     if (infoCheckbox) {
       infoCheckbox.addEventListener('change', filterTiles);
     }
-    sortOptions.addEventListener('change', sortTiles);
+    sortOptions.addEventListener('change', function() {
+      if (sortOptions.value === "default") {
+        sortByDefault();
+      } else {
+        sortTiles();
+      }
+    });
 
-    filterTiles(); // Apply filters initially after DOM is ready
+    // Initial sort by default (ranking then title)
+    sortByDefault();
   });
 </script>
 
