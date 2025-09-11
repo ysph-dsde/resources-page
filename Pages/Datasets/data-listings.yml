@@ -2,17 +2,43 @@
 # yaml listing for the Datasets page in the Yale School of 
 # Public Health (YSPH) Resource Navigation Tool github.io page.
 # 
-# Filter by three categories: 
-#   1. Region and/or affiliation 
-#   2. Dataset content type
-#   3. Accessibility
-# 
-# Sort by title and date updated.
 # 
 # Author: Shelby Golden, M.S.
 #   Date: May 10th, 2025
 # 
-# Last Updated: 
+# Date last updated: Sep. 10th, 2025
+#   Last updated by: Shelby Golden
+# 
+# 
+# Filter/search behavior with the ejs file:
+#   - Filter by three categories: 1. region and/or affiliation, 2. dataset 
+#     content type, and 3. accessibility (i.e. restricted-use, license)
+#   - Sort tiles by "title" and "date-updated". The user can
+#     control how these two characteristics are sorted.
+#   - Default sorting of the tiles is by "ranking" (ascending) then "title"
+#     (A-Z)
+# 
+# 
+# When adding new tiles:
+#   - Under "items" each entry requires association with all three categories
+#     and metadata that gets added under "tiles" |-> "- title: ** ".
+#   - Group tiles with the SAME three categories together under the same "tiles".
+#     This causes all tiles listed under that subsection to get filtered together
+#     when the user selectes any or all three categories.
+#   - Mandatory "tiles" |-> "- title: ** " fields: "title", "description", 
+#     "date-added", "date-updated", "ranking," "image", "topic" to list the 
+#     second category.
+#   - Opional "tiles" |-> "- title: ** " fields: "site" for the main webpage for 
+#     the source, "group" for the lab or group webpage who provides the source,
+#     "github" for the codebase repository, "article" if there primary articles
+#     presenting the resource by the creators, and "info" that links to an
+#     internal page with additional details about the resource.
+# 
+# When editing existing tiles:
+#   - Ensure that the new links work as expected.
+#   - Change the "date-updated" entry for the tile you edited.
+#   - Change the "last updated" sections at the top of the page.
+
 
 items:
 
@@ -30,6 +56,7 @@ items:
           We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. The Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations.
         date-added: 2025-03-17
         date-updated: 2025-03-17
+        ranking: "4"
         image: Images/The Health Attribution Library.png
         topic: "Clinical Study/Surveys"
         site: https://www.healthattribution.org/
@@ -39,6 +66,7 @@ items:
           The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a centralized platform housing data on immunogenicity from clinical trials of pneumococcal vaccines. The data on WISSPAR are primarily curated from outcomes tables from clinicaltrials.gov and are made available in a searchable format that can be readily used for downstream analyses. Fields included in the database include product, manufacturers, dosing schedule, age group, and geographic region. You can use the embedded tools to generate customizable visualizations, export data for further analyses, or just browse through clinical trial results.
         date-added: 2025-04-07
         date-updated: 2025-04-07
+        ranking: "4"
         image: Images/wisspar.png
         topic: "Clinical Study/Surveys"
         site: https://wisspar.com/
@@ -55,6 +83,7 @@ items:
           Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!
         date-added: 2025-03-17
         date-updated: 2025-03-17
+        ranking: "4"
         image: Images/nextstrain.png
         topic: "Basic Research Assays"
         site: https://grubaughlab.com/nextstrain/
@@ -72,6 +101,7 @@ items:
       - title: Yale University Open Data Access (YODA)
         date-added: 2024-10-01
         date-updated: 2025-03-20
+        ranking: "3"
         description: |
           In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
         image: Images/YODA.png
@@ -91,6 +121,7 @@ items:
       - title: Yale New Haven Health System (YNHHS) Epic
         date-added: 2025-03-20
         date-updated: 2025-03-20
+        ranking: "3"
         description: |
           Cosmos is a dataset created in collaboration with a community of health systems using Epic and is designed to improve patient care. By combining their data, participating organizations and Epic can make new discoveries and advance medicine. Cosmos also powers tools at the point of care, providing insights to clinicians that are tailored to the patient in front of them.
         image: Images/YNHHS Epic Cosmos.png
@@ -113,6 +144,7 @@ items:
       - title: National Center for Health Statistics (NCHS)
         date-added: 2025-03-20
         date-updated: 2025-03-20
+        ranking: "1"
         description: |
           The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and death records, medical records, interviews with people and healthcare providers, direct physical examinations, and laboratory testing. NCHS shares data, statistics, and analysis in multiple ways, including reports, dashboards, and data files. Including: Family Growth Survey, Health Care Surveys, Rapid Surveys, Health and Nutrition Examination Survey, Health Interview Survey, Vital Statistics, and a special compilation of linked surveys with administrative data. Here we specifically list the surveys that are not open access only.
         image: Images/nchs.png
@@ -121,6 +153,7 @@ items:
       - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
         date-added: 2025-03-20
         date-updated: 2025-03-20
+        ranking: "2"
         description: |
          The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health\ [@about_nhanes; @achievements_nhanes]. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
          </br>
@@ -133,6 +166,7 @@ items:
       - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
         date-added: 2025-09-02
         date-updated: 2025-09-02
+        ranking: "2"
         description: |
          Concise version
         image: Images/nhanes.png
@@ -142,6 +176,7 @@ items:
       - title: NCHS's National Health Interview Survey (NHIS)
         date-added: 2025-03-20
         date-updated: 2025-03-20
+        ranking: "2"
         description: |
           The National Health Interview Survey (NHIS) monitors the health of people across the country—the U.S. population—by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults.
           </br>
@@ -159,6 +194,7 @@ items:
       - title: NCHS's The National Health Care Surveys (NHCS)
         date-added: 2025-04-08
         date-updated: 2025-04-08
+        ranking: "2"
         description: |
           Overview: The National Health Care Surveys are a family of surveys that provide information about—
           </br>
@@ -172,6 +208,7 @@ items:
       - title: NCHS's Rapid Surveys System
         date-added: 2025-04-08
         date-updated: 2025-04-08
+        ranking: "1"
         description: |
           The National Center for Health Statistics (NCHS) fields Rapid Surveys fast and often. We can easily adapt these surveys to collect specific information as needs arise. This makes evidence-based decision making better and faster for those working to protect and improve health in the United States.
           </br>
@@ -189,6 +226,7 @@ items:
       - title: NCHS's National Vital Statistics System (NVSS)
         date-added: 2025-04-08
         date-updated: 2025-04-08
+        ranking: "1"
         description: |
           The National Vital Statistics System is the oldest and most successful example of inter-governmental data sharing in Public Health and the shared relationships, standards, and procedures form the mechanism by which NCHS collects and disseminates the Nation’s official vital statistics. These data are provided through contracts between NCHS and vital registration systems operated in the various jurisdictions legally responsible for the registration of vital events – births, deaths, marriages, divorces, and fetal deaths. Vital Statistics data are also available online. In the United States, legal authority for the registration of these events resides individually with the 50 States, 2 cities (Washington, DC, and New York City), and 5 territories (Puerto Rico, the Virgin Islands, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands). These jurisdictions are responsible for maintaining registries of vital events and for issuing copies of birth, marriage, divorce, and death certificates.
         image: Images/nvss.png
@@ -197,6 +235,7 @@ items:
       - title: NCHS's Data Linkage Activities
         date-added: 2025-04-08
         date-updated: 2025-04-08
+        ranking: "2"
         description: |
           NCHS has developed a record linkage program designed to maximize the scientific value of the Center’s population-based surveys. Linked data files enable researchers to examine the factors that influence disability, chronic disease, health care utilization, morbidity, and mortality.
           </br>
@@ -217,6 +256,7 @@ items:
       - title: Surveillance, Epidemiology, and End Results Program (SEER)
         date-added: 2025-03-20
         date-updated: 2025-03-20
+        ranking: "2"
         description: |
           The Surveillance, Epidemiology, and End Results (SEER) Program provides information on cancer statistics in an effort to reduce the cancer burden among the U.S. population. SEER is supported by the Surveillance Research Program (SRP) in NCI's Division of Cancer Control and Population Sciences (DCCPS).
         image: Images/seer.png
@@ -234,6 +274,7 @@ items:
       - title: National Institutes of Health's (NIH) All of Us (AOU)
         date-added: 2025-03-19
         date-updated: 2025-03-19
+        ranking: "3"
         description: |
           All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.
         image: Images/NIH All of Us_4.8x3.6.png
@@ -253,6 +294,7 @@ items:
       - title: data.gov
         date-added: 2025-04-08
         date-updated: 2025-04-08
+        ranking: "1"
         description: |
           Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
         image: Images/data_gov.png
@@ -271,6 +313,7 @@ items:
       - title: UK Biobank
         date-added: 2025-03-19
         date-updated: 2025-03-19
+        ranking: "3"
         description: |
           The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
         image: Images/UK Biobank.png

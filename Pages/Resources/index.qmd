@@ -21,5 +21,3 @@ listing:
     <p style="max-width: 50%; margin: auto; text-align: left;">Yale offers a rich array of resources to support its academic community. These resources include access to specialized research databases, educational tools, and a variety of digital tools and platforms.</p>
  </div>
 ```
-
-

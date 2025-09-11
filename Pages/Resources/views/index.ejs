@@ -5,6 +5,7 @@
   <title>Resources with Features:
     - Two categories filter with sorting by title and date updated - May 10th, 2025
     - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
+    - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
   </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
@@ -16,10 +17,11 @@
         <aside class="sidebar">
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
+              <option value="default" selected>No sorting</option>
               <option value="title-asc">Title A-Z</option>
               <option value="title-desc">Title Z-A</option>
-              <option value="date-asc">Date Updated: Oldest to Newest</option>
               <option value="date-desc">Date Updated: Newest to Oldest</option>
+              <option value="date-asc">Date Updated: Oldest to Newest</option>
             </select>
           </div>
           <form id="categoryFilter1" class="form">
@@ -75,6 +77,7 @@
                 <div class="tile <%= (visibleTileCount < 9) ? '' : 'hidden' %>"
                      data-categories1="<%= item.categories1 ? item.categories1.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
                      data-categories2="<%= item.categories2 ? item.categories2.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
+                     data-ranking="<%= tile.ranking %>"
                      data-title="<%= tile.title %>"
                      data-date="<%= tile['date-updated'] %>">
                   <img src="<%- tile.image %>" class="image">
@@ -82,11 +85,6 @@
                   <p class="description"><%= tile.description %></p>
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                      <% if (tile.github) { %>
-                        &nbsp;
-                        <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a>
-                      <% } %>
                       <% if (tile.site) { %>
                         &nbsp;
                         <a href="<%= tile.site %>" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
@@ -96,6 +94,11 @@
                         &nbsp;
                         <a href="<%= tile.group %>" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-people-fill"></i></a>
+                      <% } %>
+                      <% if (tile.github) { %>
+                        &nbsp;
+                        <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-github"></i></a>
                       <% } %>
                       <% if (tile.article) { %>
                         &nbsp;
@@ -230,8 +233,42 @@
         }
       }
 
+      // Function to sort by ranking then title
+      function sortByDefault() {
+        sortedTiles.forEach(tile => {
+          const rankAttr = tile.getAttribute('data-ranking');
+          if (rankAttr) {
+            tile.dataset.numericRanking = parseInt(rankAttr, 10);
+          }
+        });
+
+        sortedTiles.sort((a, b) => {
+          const titleA = a.getAttribute('data-title').toLowerCase();
+          const titleB = b.getAttribute('data-title').toLowerCase();
+          const rankingA = a.dataset.numericRanking || 0;
+          const rankingB = b.dataset.numericRanking || 0;
+
+          if (rankingA !== rankingB) {
+            return rankingA - rankingB;
+          }
+          return titleA.localeCompare(titleB);
+        });
+
+        // Append sorted tiles back into the container
+        sortedTiles.forEach(tile => {
+          tilesContainer.appendChild(tile);
+        });
+
+        filterTiles(); // Apply the current filter on new sorted order
+      }
+
       function sortTiles() {
         const sortValue = sortOptions.value;
+
+        if (sortValue === 'default') {
+          sortByDefault();
+          return;
+        }
 
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
@@ -269,7 +306,9 @@
         tile.classList.remove('hidden');
         tile.style.display = 'block'; // Ensure initial tiles are displayed
       });
-      filterTiles(); // Apply filters initially
+
+      // Initial default sorting by ranking then title
+      sortByDefault();
     });
   </script>
 </body>
