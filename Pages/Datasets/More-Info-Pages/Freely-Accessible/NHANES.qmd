@@ -963,12 +963,14 @@ After the completion of NHANES II in 1980, an expert panel recommended that the 
 Additional study design and content details are provided earlier in the [Methods and Representational Differences](#methods-and-representational-differences) section.
 
 ::: {.callout-note collapse="true"}
+## Breaking Ground in Culture-Specific Research
+
 The chapter dedicated to cross-cultural considerations, found in the [Plan and Operation of HHANES](https://www.cdc.gov/nchs/data/series/sr_01/sr01_019.pdf) documentation, acknowledged a need for cultural sensitivity and recognized unknown obstacles to implementation. It specifically noted that insufficient personnel on the core team were from or otherwise knowledgeable about the Hispanic population and cultures. This chapter highlighted that this was the first known attempt by the National Center for Health Statistics (NCHS) to conduct a survey focused on a specific ethnic group. This document details the strategies the team employed to address these shortcomings by hiring qualified personnel and forming task force committees intended to closely evaluate aspects of the program, from translation to survey content\ [@Feinleib1985].
 :::
 
 ## Gaining Access
 
-Most of the data available through NHES, NHANES, and the ancillary programs is freely accessible for those wishing to use it for statistical analysis and reporting purposes. Researchers seeking to use the data should review and become familiar with the terms and conditions of the NCHS [Data User Agreement](#valuable-links), which covers the use of any data available from their office\ [@data_use_agreement].
+Most of the data available through NHES, NHANES, and the ancillary programs is publicly available for those wishing to use it for statistical analysis and reporting purposes. Researchers seeking to use the data should review and become familiar with the terms and conditions of the NCHS [Data User Agreement](#valuable-links), which covers the use of any data available from their office\ [@data_use_agreement].
 
 Some of the more recent installments of the program offer additional levels of data with restricted access or provide researchers the option to generate their own data through the [Biospecimen Program](#valuable-links). Restricted data does not contain information that directly identifies participants, such as names, social security numbers, and addresses. However, it does include variables that could be used to identify participants when combined with other information, such as a person's job or county of residence, and sensitive information.
 
@@ -978,7 +980,7 @@ Explore the information provided in the tabs below for details on access steps, 
 ::: {.panel-tabset}
 
 
-## Freely Accessible
+## Publicly Available
 
 ### Do I Qualify?
 

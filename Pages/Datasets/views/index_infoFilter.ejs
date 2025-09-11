@@ -6,17 +6,17 @@
     - Three categories filter with sorting by title and date updated - May 10th, 2025
     - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
     - Allow filtering by the tiles with "info page" for June 16th demo - June 11th, 2025
+    - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
   </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
-
 <body>
   <div>
     <div class="main-container">
       <div class="sidebar-wrapper">
         <aside class="sidebar">
 
-        <% let hasInfo = false; %>
+          <% let hasInfo = false; %>
           <% if (items && items[0].items && items[0].items.length > 0) { %>
             <% items[0].items.forEach(function(item) { 
               if (item.tiles) { 
@@ -43,10 +43,11 @@
 
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
+              <option value="default" selected>No sorting</option>
               <option value="title-asc">Title A-Z</option>
               <option value="title-desc">Title Z-A</option>
-              <option value="date-asc">Date Updated: Oldest to Newest</option>
               <option value="date-desc">Date Updated: Newest to Oldest</option>
+              <option value="date-asc">Date Updated: Oldest to Newest</option>
             </select>
           </div>
           <form id="categoryFilter1" class="form">
@@ -127,17 +128,13 @@
                      data-categories3="<%= item.categories3 ? item.categories3.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
                      data-info="<%= tile.info ? 'yes' : 'no' %>"
                      data-title="<%= tile.title %>"
-                     data-date="<%= tile['date-updated'] %>">
+                     data-date="<%= tile['date-updated'] %>"
+                     data-ranking="<%= tile.ranking %>">
                   <img src="<%= tile.image %>" class="image">
                   <h2 class="js-line-count"><%= tile.title %></h2>
                   <p class="description"><%= tile.description %></p>
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                      <% if (tile.github) { %> 
-                        &nbsp;
-                        <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
-                      <% } %> 
                       <% if (tile.site) { %> 
                         &nbsp;
                         <a href="<%= tile.site %>" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
@@ -147,6 +144,11 @@
                         &nbsp;
                         <a href="<%= tile.group %>" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
                           <i class="bi-people-fill"></i></a> 
+                      <% } %> 
+                      <% if (tile.github) { %> 
+                       &nbsp;
+                     <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                       <i class="bi-github"></i></a> 
                       <% } %> 
                       <% if (tile.article) { %> 
                         &nbsp;
@@ -230,9 +232,37 @@
     let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
     let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
 
+    // Function to sort by default criteria: ranking then title
+    function sortByDefault() {
+      sortedTiles.forEach(tile => {
+        const rankAttr = tile.getAttribute('data-ranking');
+        if (rankAttr) {
+          tile.dataset.numericRanking = parseInt(rankAttr, 10);
+        }
+      });
+
+      sortedTiles.sort((a, b) => {
+        const titleA = a.getAttribute('data-title').toLowerCase();
+        const titleB = b.getAttribute('data-title').toLowerCase();
+        const rankingA = a.dataset.numericRanking;
+        const rankingB = b.dataset.numericRanking;
+
+        if (rankingA !== rankingB) {
+          return rankingA - rankingB;
+        }
+        return titleA.localeCompare(titleB);
+      });
+
+      sortedTiles.forEach(tile => {
+        tilesContainer.appendChild(tile);
+      });
+
+      filterTiles(); // Apply the current filter on new sorted order
+    }
+    
     // Initialize the display with the initial tiles shown
     sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove('hidden'));
-
+    
     showMoreBtn.addEventListener('click', function() {
       let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
       hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
@@ -292,12 +322,21 @@
 
     function sortTiles() {
       const sortValue = sortOptions.value;
+      // Convert ranks to numbers before sorting
+      sortedTiles.forEach(tile => {
+        const rankAttr = tile.getAttribute('data-ranking');
+        if (rankAttr) {
+          tile.dataset.numericRanking = parseInt(rankAttr, 10);
+        }
+      });
 
       sortedTiles.sort((a, b) => {
         const titleA = a.getAttribute('data-title').toLowerCase();
         const titleB = b.getAttribute('data-title').toLowerCase();
         const dateA = parseDate(a.getAttribute('data-date'));
         const dateB = parseDate(b.getAttribute('data-date'));
+        const rankingA = a.dataset.numericRanking;
+        const rankingB = b.dataset.numericRanking;
 
         if (sortValue === 'title-asc') {
           return titleA.localeCompare(titleB);
@@ -307,12 +346,15 @@
           return dateA - dateB;
         } else if (sortValue === 'date-desc') {
           return dateB - dateA;
+        } else {
+          // Default sorting: by ranking and then by title if same ranking
+          if (rankingA !== rankingB) {
+            return rankingA - rankingB;
+          }
+          return titleA.localeCompare(titleB);
         }
-
-        return 0;
       });
 
-      // Move tiles in the container based on sorted order
       sortedTiles.forEach(tile => {
         tilesContainer.appendChild(tile);
       });
@@ -326,9 +368,16 @@
     if (infoCheckbox) {
       infoCheckbox.addEventListener('change', filterTiles);
     }
-    sortOptions.addEventListener('change', sortTiles);
+    sortOptions.addEventListener('change', function() {
+      if (sortOptions.value === "default") {
+        sortByDefault();
+      } else {
+        sortTiles();
+      }
+    });
 
-    filterTiles(); // Apply filters initially after DOM is ready
+    // Initial sort by default (ranking then title)
+    sortByDefault();
   });
 </script>
 </body>
