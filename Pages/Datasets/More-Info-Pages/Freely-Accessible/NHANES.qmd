@@ -68,7 +68,7 @@ We do not spend time distinguishing methodological differences if the same type 
         </tr>
     </thead>
     <tbody>
-        <!-- First Row -->
+        <!-- First Row
         <tr id="row1a">
             <td class="toggle">
               <button class="toggle-btn" data-target="row1a">
@@ -120,8 +120,8 @@ We do not spend time distinguishing methodological differences if the same type 
                 </ul>
               </span>
             </td>
-        </tr>
-        <!-- Second Row -->
+        </tr> -->
+        <!-- Second Row
         <tr id="row2a">
           <td class="toggle">
             <button class="toggle-btn" data-target="row2a"><i class="fa fa-angle-down"></i></button>
@@ -180,8 +180,8 @@ We do not spend time distinguishing methodological differences if the same type 
               </ul>
             </span>
           </td>
-        </tr>
-        <!-- Third Row -->
+        </tr> -->
+        <!-- Third Row
         <tr id="row3a">
           <td class="toggle">
             <button class="toggle-btn" data-target="row3a"><i class="fa fa-angle-down"></i></button>
@@ -212,7 +212,7 @@ We do not spend time distinguishing methodological differences if the same type 
               <strong>NOTE:</strong> Nearly 1/3$^{rd}$ of the children examined in NHES II were reexamined in NHES III. The Extended Data Tape (EDT) helps the user identify the entries present in both cycles to create a composite data set for longitudinal studies.
             </span>
           </td>
-        </tr>
+        </tr> -->
         <!-- Fourth Row -->
         <tr id="row4a">
           <td class="toggle">
