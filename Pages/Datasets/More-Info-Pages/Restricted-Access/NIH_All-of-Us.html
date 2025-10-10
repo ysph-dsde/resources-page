@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content=" All of Us’ (AoU) one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.">
+<meta name="description" content=" The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens&nbsp;1–4.   All of Us’ one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies&nbsp;1,5,6.">
 
 <title>NIH’s All of Us – Resource Navigation Tool</title>
 <style>
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-0425fdf4b4c2a8cc159ba430e3202e25.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-4e0d9d651efa7741ef3bd21bc0d0bcfc.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,7 +88,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -119,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">NIH’s All of Us</h1>
                   <div>
         <div class="description">
-          <p><br> All of Us’ (AoU) one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.</p>
+          <p><br> The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens&nbsp;<span class="citation" data-cites="overview participants intro_video snapshot"><sup><a href="#ref-overview" role="doc-biblioref">1</a>–<a href="#ref-snapshot" role="doc-biblioref">4</a></sup></span>. <br> <br> All of Us’ one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies&nbsp;<span class="citation" data-cites="overview data_sources data_browser"><sup><a href="#ref-overview" role="doc-biblioref">1</a>,<a href="#ref-data_sources" role="doc-biblioref">5</a>,<a href="#ref-data_browser" role="doc-biblioref">6</a></sup></span>.</p>
         </div>
       </div>
                 </div>
@@ -142,13 +192,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#access-overview" id="toc-access-overview" class="nav-link active" data-scroll-target="#access-overview">Access Overview</a>
-  <ul class="collapse">
-  <li><a href="#do-i-qualify" id="toc-do-i-qualify" class="nav-link" data-scroll-target="#do-i-qualify">Do I Qualify?</a></li>
-  </ul></li>
-  <li><a href="#step-by-step" id="toc-step-by-step" class="nav-link" data-scroll-target="#step-by-step">Step-by-Step</a></li>
-  <li><a href="#typical-timeline" id="toc-typical-timeline" class="nav-link" data-scroll-target="#typical-timeline">Typical Timeline</a></li>
-  <li><a href="#important-links" id="toc-important-links" class="nav-link" data-scroll-target="#important-links">Important Links</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link" data-scroll-target="#gaining-access">Gaining Access</a></li>
+  <li><a href="#valuable-links" id="toc-valuable-links" class="nav-link" data-scroll-target="#valuable-links">Valuable Links</a></li>
   <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -161,52 +207,124 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="access-overview" class="level2">
-<h2 class="anchored" data-anchor-id="access-overview">Access Overview</h2>
-<section id="do-i-qualify" class="level3">
-<h3 class="anchored" data-anchor-id="do-i-qualify">Do I Qualify?</h3>
+<p>Updated: October 10<span class="math inline">\(^{th}\)</span>, 2025</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Overseen and supported by the National Institutes of Health (NIH), the All of Us (AoU) initiative is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from participants with diverse backgrounds, including age, ethnicity, lifestyle, and geographic location, to create effective individualized treatments for these groups. Participation is available at no cost to anyone living in the U.S.&nbsp;<span class="citation" data-cites="overview participants intro_video"><sup><a href="#ref-overview" role="doc-biblioref">1</a>–<a href="#ref-intro_video" role="doc-biblioref">3</a></sup></span></p>
+<p>Currently, around 600,000 participants have agreed to share their electronic health records (EHR), completed the first three surveys, provided physical measurements, and donated at least one biospecimen for biobank storage. This effort has resulted in researchers gaining access to over 473,000 electronic health records and 611,000 biospecimens&nbsp;<span class="citation" data-cites="snapshot"><sup><a href="#ref-snapshot" role="doc-biblioref">4</a></sup></span>.</p>
+<p>The types of data collected include&nbsp;<span class="citation" data-cites="data_sources data_browser"><sup><a href="#ref-data_sources" role="doc-biblioref">5</a>,<a href="#ref-data_browser" role="doc-biblioref">6</a></sup></span>:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><strong>Electronic Health Records:</strong> The data is standardized following Observational Medical Outcomes Partnership Common Data Model (OMOP CDM) standards and is then compiled into eleven tables. These tables include information on basic demographics, visit details, conditions, device usage, labs, and procedures carried out by healthcare providers&nbsp;<span class="citation" data-cites="summary_methods"><sup><a href="#ref-summary_methods" role="doc-biblioref">7</a></sup></span>.</p></li>
+<li><p><strong>Biosamples And Bioassays (Genomics):</strong> Additional samples of blood, saliva, and/or urine are contributed by some participants for genomic sequencing assays.</p></li>
+<li><p><strong>Surveys:</strong> Each participant fills out core surveys that include questions about basic demographics, socioeconomic information, tobacco, alcohol, and recreational drug use, as well as overall health and daily activities. Participants can also choose to participate in five additional surveys on behavioral health, healthcare access, and family history&nbsp;<span class="citation" data-cites="survey_explorer"><sup><a href="#ref-survey_explorer" role="doc-biblioref">8</a></sup></span>.</p></li>
+<li><p><strong>Physical Measurements:</strong> There are three sources for physical measurements: electronic health records (EHRs), an in-person visit for baseline physical measurements, and self-reported height and weight.</p></li>
+<li><p><strong>Wearable Devices (Digital Health):</strong> Participants can choose to share health tracking data from wearable devices, such as Fitbit, which includes physical activity levels, heart rate, and sleep patterns.</p></li>
+<li><p><strong>Partnered Research Studies:</strong> Program partners can gather additional data and contribute it to the All of Us dataset, such as the <em>Exploring the Mind</em> study done in partnership with the National Institute of Mental Health.</p></li>
+</ul>
+</div>
 </section>
-</section>
-<section id="step-by-step" class="level2">
-<h2 class="anchored" data-anchor-id="step-by-step">Step-by-Step</h2>
-</section>
-<section id="typical-timeline" class="level2">
-<h2 class="anchored" data-anchor-id="typical-timeline">Typical Timeline</h2>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>If you are looking to gain access to the individual-level YNHHS Epic data you will need to submit an IRB application. Time-to access in these cases is contingent upon the IRB’s process that will vary for applications.</p>
-</div>
-</div>
+<section id="gaining-access" class="level2">
+<h2 class="anchored" data-anchor-id="gaining-access">Gaining Access</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">YNHHS Epic</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Epic Cosmos</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Public Tier</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Registered Tier</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Controlled Tier</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>Time to get RBA to YNHHS de-identified data.</p>
+<section id="do-i-qualify" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify">Do I Qualify?</h4>
+<p>All individuals seeking access can download aggregated and deidentified data&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p>
+</section>
+<section id="typical-timeline" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline">Typical Timeline</h4>
+<p>There are no time constraints for accessing these data.</p>
+</section>
+<section id="step-by-step-guide" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide">Step-by-Step Guide</h4>
+<p>No specific steps are required to access the publicly available data, which can be found on the <a href="https://www.researchallofus.org/data-tools/data-snapshots/">Data Snapshot</a> and <a href="https://databrowser.researchallofus.org/?_gl=1*137ufbe*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NTk4NjMwMjUkbzUkZzEkdDE3NTk4NjMxNDckajUyJGwwJGgxMTk5Nzc2MzM0">Data Browser</a> webpages&nbsp;<span class="citation" data-cites="data_browser snapshot"><sup><a href="#ref-snapshot" role="doc-biblioref">4</a>,<a href="#ref-data_browser" role="doc-biblioref">6</a></sup></span>.</p>
+</section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>Time to get access to de0identified data from all Epic centers outside YNHHS.</p>
+<section id="do-i-qualify-1" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify-1">Do I Qualify?</h4>
+<p>With the Registered Tier dataset, you can access individual-level data from electronic health records (EHRs), wearables, surveys, and physical measurements through the All of Us Researcher Workbench. Researchers affiliated with institutions that have signed the All of Us Data Use and Registration Agreement (DURA) can register for access for free&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p>
+<p>Check the <a href="https://www.researchallofus.org/institutional-agreements/">Registered Institutions</a> page to see if your institution is listed and which access level you can attain. If your institution is not listed, you can submit a request form linked on the same page&nbsp;<span class="citation" data-cites="aou_registered"><sup><a href="#ref-aou_registered" role="doc-biblioref">10</a></sup></span>.</p>
+</section>
+<section id="typical-timeline-1" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline-1">Typical Timeline</h4>
+<p>If your institution has an active DURA with All of Us at the preferred tier of access and you do not need an individual agreement, you can proceed with registering for a Workbench account and completing the training required for Registered Tier data access, which typically takes no more than a day. You will also need to set up 2-Step verification and verify your identity, with the time to complete these steps varying by researcher.</p>
+<p>The following timeline <a href="https://support.researchallofus.org/hc/en-us/articles/9707434641044-DURA-Infographic">infographic</a> shows what to expect from a DURA application if your institution is not already registered. Refer to <a href="https://support.researchallofus.org/hc/en-us/articles/35013049400468-Access-and-DURA-Support-Questions">Access and DURA Support Questions</a> for common questions about the application process&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p>
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+<img id="myImage" src="Images/All of Us_Researcher Workbench DURA Process Digital Infographic_Downloaded 06.01.2025.png" alt="Zoomable Image" title="Click to zoom in">
+<figcaption class="caption">
+The DURA application timeline varies, as institutions may experience different lengths of time during the application process. For additional questions, please contact <a href="mailto:aoudurasupport@vumc.org">aoudurasupport@vumc.org</a>&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.
+</figcaption>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src="zoom.js"></script>
+</section>
+<section id="step-by-step-guide-1" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide-1">Step-by-Step Guide</h4>
+<p>Once you have a Workbench account, you need to request access to Registered Tier-level data, which involves setting up Google 2-Step Verification, verifying your identity, and completing the Responsible Conduct of Research Training&nbsp;<span class="citation" data-cites="access_tiers support"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a>,<a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p>
+<p>You can find out more about the Responsible Conduct of Research Training process on the <a href="https://support.researchallofus.org/hc/en-us/articles/32792489923092-Registration-and-Account-Questions">Registration and Account Questions</a> page. Identity verification can be done through Login.gov or ID.me; more details can be found on the <a href="https://support.researchallofus.org/hc/en-us/articles/4407442809876-Identity-Verification">Identity Verification</a> page. If you encounter any issues, refer to the <a href="https://support.researchallofus.org/hc/en-us/articles/23968984529428-Troubleshooting-Identity-Verification-Issues">troubleshooting</a> guide or contact support at <a href="mailto:support@researchallofus.org" class="email">support@researchallofus.org</a>&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p>
+<p>After registering for a Workbench account and completing the steps to get Registered Tier-level data access, you will need to sign the Data User Code of Conduct (DUCC), which you can review <a href="https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy">here</a> under the Data Use Policies section&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p>
+<p>You must annually complete refresher training, re-attest to the Data User Code of Conduct, and update your contact information and institutional affiliation to maintain access.</p>
+</section>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<section id="do-i-qualify-2" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify-2">Do I Qualify?</h4>
+<p>The Controlled Tier is an optional extension to the Registered Tier, offering access to genomic data (short-read and long-read WGS, structural variants, genotyping arrays), previously suppressed demographic data from EHRs and surveys, and unshifted event dates. Researchers affiliated with institutions that have signed the All of Us Data Use and Registration Agreement (DURA) can register for free access&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p>
+<p>Check the <a href="https://www.researchallofus.org/institutional-agreements/">Registered Institutions</a> page to see if your institution is listed and which access level you can attain. If your institution is not listed, you can submit a request form linked on the same page&nbsp;<span class="citation" data-cites="aou_registered"><sup><a href="#ref-aou_registered" role="doc-biblioref">10</a></sup></span>.</p>
+</section>
+<section id="typical-timeline-2" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline-2">Typical Timeline</h4>
+<p>Controlled Tier access is an addition to the Registered Tier level and requires a signed agreement and permission from your institution before completing the training, which may vary for applicants. The additional training modules are not expected to take more than a day to complete.</p>
+</section>
+<section id="step-by-step-guide-2" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide-2">Step-by-Step Guide</h4>
+<p>You will first need to complete the steps to gain Registered Tier access. Then, you will ask your institution to sign an agreement and grant permission for you to access the Controlled Tier. Once these steps are completed, you will proceed with the additional training modules specific to the Controlled Tier.</p>
+<p>After registering for a Workbench account and completing the steps to get Registered and Controlled Tier-level data access, you will need to sign the Data User Code of Conduct (DUCC), which you can review <a href="https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy">here</a> under the Data Use Policies section&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p>
+<p>You must annually complete refresher training, re-attest to the Data User Code of Conduct, and update your contact information and institutional affiliation to maintain access.</p>
+</section>
 </div>
 </div>
 </div>
 </section>
-<section id="important-links" class="level2">
-<h2 class="anchored" data-anchor-id="important-links">Important Links</h2>
+<section id="valuable-links" class="level2">
+<h2 class="anchored" data-anchor-id="valuable-links">Valuable Links</h2>
+<div style="margin-left: 2rem">
+<ul>
+<li><p>All of Us <a href="https://allofus.nih.gov/">Research Program</a> and <a href="https://www.researchallofus.org/">Research Hub</a>: The The All of Us program maintains two primary websites: one with a participant log-in for program engagement and another tailored for researchers looking to access and utilize the data&nbsp;<span class="citation" data-cites="aou_main aou_research"><sup><a href="#ref-aou_main" role="doc-biblioref">12</a>,<a href="#ref-aou_research" role="doc-biblioref">13</a></sup></span>.</p></li>
+<li><p>All of Us <a href="https://allofus.nih.gov/article/all-us-research-program-protocol">Research Program Protocol</a>: Find the program protocol detailing the All of Us Research Program’s plans for data collection, enrollment criteria, data protection, and participant inclusion, with periodic updates and IRB oversight&nbsp;<span class="citation" data-cites="aou_protocol"><sup><a href="#ref-aou_protocol" role="doc-biblioref">14</a></sup></span>.</p></li>
+<li><p><a href="https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy">Data Access Tiers</a>: Learn more about the tiers of access, review the data dictionaries for each tier, as well as data user and reporting policies, and the Data User Code of Conduct (DUCC)&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p></li>
+<li><p><a href="https://support.researchallofus.org/hc/en-us/categories/360002157352-Getting-Started">Getting Started Support Page</a>: Find comprehensive documentation covering various topics, including getting started guides, common troubleshooting issues, methods and data processing protocols, billing information, and more&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p></li>
+<li><p><a href="https://support.researchallofus.org/hc/en-us/articles/360059633052-Featured-Workspaces">Featured Workspaces</a>: Find a list of workspaces that provide users with tutorials on how to use the Workbench, along with demonstrative projects to help you get started&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p></li>
+<li><p><a href="https://redcap.pmi-ops.org/surveys/index.php?__report=H9JRHMAELACWH37H&amp;pagenum=ALL">All of Us Publications and Articles Catalog</a>: Find the catalog of articles and publications related to the All of Us Research Program&nbsp;<span class="citation" data-cites="aou_publications"><sup><a href="#ref-aou_publications" role="doc-biblioref">15</a></sup></span>.</p></li>
+</ul>
+</div>
 </section>
 <section id="publications" class="level2">
 <h2 class="anchored" data-anchor-id="publications">Publications</h2>
 <p>This section displays PubMed articles that mention the dataset and are authored by individuals affiliated with the Yale School of Public Health. Please note that the PubMed API does not distinguish between uppercase and lowercase characters when processing queries. As a result, there may be occasional mismatches in the search results.</p>
-<p>11 citations released after 2020 were found.</p>
+<p>14 citations released after 2020 were found.</p>
 <div style="margin-left: 1rem">
 <div id="citations-box">
 <ul id="citations-content">
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/41068065/">Psychosocial Risk Factors and Perceived Well-Being in Survivors of Gastrointestinal Cancer.</a><br>Samuel D Butensky, Kurt S Schultz, Elizabeth L Godfrey, Jihoon Kim, Tara Sanft, <strong>Caroline H Johnson</strong>, Ira L Leeds, Sajid A Khan<br>Psychooncology. . doi: 10.1002/pon.70302.<br>PMID: 41068065
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40939242/">Factors associated with acute unscheduled care visits for asthma in the all of US dataset.</a><br>Deyaneira Gonzalez Rodriguez, <strong>Qinxin Yuan</strong>, <strong>Tolulope Bakare</strong>, Sangil Lee, R Andrew Taylor<br>Am J Emerg Med. 2025 Sep 2. doi: 10.1016/j.ajem.2025.09.002.<br>PMID: 40939242
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40778153/">Prevalence of Risk Factors and Established Cardiovascular Disease Among All of Us Participants: Benchmarking Against National Estimates.</a><br><strong>Mengjing Yang</strong>, <strong>Tinsae Admassu</strong>, <strong>Harlan M Krumholz</strong>, Chenxi Huang, Karthik Murugiah<br>medRxiv. 2025 Jul 23. pii: 2025.07.22.25331985. doi: 10.1101/2025.07.22.25331985.<br>PMID: 40778153
+</li>
 <li>
 <a href="https://pubmed.ncbi.nlm.nih.gov/40681351/">Age-, sex-, and ancestry-specific prevalence of hearing loss in UK Biobank and All of Us Research Program.</a><br>Jun He, Sharon G Curhan, Gary C Curhan, <strong>Renato Polimanti</strong><br>Aging Dis. 2025 Jul 16. doi: 10.14336/AD.2025.0754.<br>PMID: 40681351
 </li>
@@ -288,7 +406,7 @@ Important
   });
 </script>
 <div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -297,7 +415,7 @@ Note
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The search PubMed query used to generate this list is:</p>
 <p>(“All of Us”[Title/Abstract] OR “All of Us” NOT “All of Us”[Conflict of Interest Statements]) AND “Yale School of Public Health”[Affiliation] AND (2020:2025[dp])</p>
@@ -307,22 +425,59 @@ Note
 </div>
 </section>
 <section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>The content provided here is a compilation of work from multiple groups throughout YU and YNHHS:</p>
-<div style="margin-left: 2rem">
-<ol type="1">
-<li><a href="https://medicine.yale.edu/ybic">Yale Biomedical Informatics &amp; Computing</a></li>
-</ol>
-</div>
-<p><br>
-<br>
-<br>
-Updated: August 1st, 2025</p>
+
+
 
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-overview" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Us, A. of. <a href="https://allofus.nih.gov/article/program-overview">Research program overview</a>. <em>National Institutes of Health</em> (2024).</div>
+</div>
+<div id="ref-participants" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Us, A. of. <a href="https://allofus.nih.gov/article/participation">Participation</a>. <em>National Institutes of Health</em> (2023).</div>
+</div>
+<div id="ref-intro_video" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Khoury, M., Mayo, K., Schully, S. &amp; Ginsburg, G. <a href="https://support.researchallofus.org/hc/en-us/articles/9889519923476-From-All-of-Us-Research-to-All-of-Us-in-the-Real-World">From all of us research to all of us in the real world</a>. <em>National Institutes of Health</em> (2022).</div>
+</div>
+<div id="ref-snapshot" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Us, A. of. <em>Data Snapshots</em>. <a href="https://www.researchallofus.org/data-tools/data-snapshots/">https://www.researchallofus.org/data-tools/data-snapshots/</a> (2025).</div>
+</div>
+<div id="ref-data_sources" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/data-tools/data-sources/">Data sources</a>. <em>National Institutes of Health</em> (2025).</div>
+</div>
+<div id="ref-data_browser" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Us, A. of. <a href="https://databrowser.researchallofus.org/?_gl=1*137ufbe*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NTk4NjMwMjUkbzUkZzEkdDE3NTk4NjMxNDckajUyJGwwJGgxMTk5Nzc2MzM0">Data browser | all of us public data browser</a>. (2023).</div>
+</div>
+<div id="ref-summary_methods" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/data-tools/methods/">Data methods</a>. <em>National Institutes of Health</em> vol. 381.</div>
+</div>
+<div id="ref-survey_explorer" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/data-tools/survey-explorer/">Survey explorer</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-access_tiers" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/data-tools/data-access/">Data access tiers</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-aou_registered" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/institutional-agreements/">Registered institution</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-support" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Us, A. of. <a href="https://support.researchallofus.org/hc/en-us/categories/360002157352-Getting-Started">Getting started – user support</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-aou_main" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Us, A. of. <a href="https://allofus.nih.gov/">All of us research program</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-aou_research" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/">All of us research hub</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-aou_protocol" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Us, A. of. <a href="https://allofus.nih.gov/article/all-us-research-program-protocol">All of us research program protocol</a>. <em>National Institutes of Health</em> (2024).</div>
+</div>
+<div id="ref-aou_publications" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Us, A. of. <a href="https://redcap.pmi-ops.org/surveys/index.php?__report=H9JRHMAELACWH37H&amp;pagenum=ALL">All of us publications and articles catalog</a>. <em>National Institutes of Health</em>.</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
