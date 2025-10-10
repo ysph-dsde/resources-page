@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content=" Merative advances health and social care by providing innovative healthcare data and technology solutions, collaborating with thousands of providers and major organizations&nbsp;1,2. Their MarketScan Research Databases offer longitudinal, patient-level data on healthcare costs and outcomes, supporting diverse research applications with data from over 273 million patients and more than 2,600 peer-reviewed publications. MarketScan’s detailed and HIPAA-compliant data enhance research across disease areas, backed by powerful analytic tools&nbsp;3.   At Yale, the MarketScan database is licensed for research use by the Yale Biomedical Informatics and Computing (YBIC) office, with support from the Harvey Cushing/John Hay Whitney Medical Library and the Yale Center for Clinical Investigation. Yale researchers can access and analyze MarketScan data by submitting a request form for assistance from the YBIC team&nbsp;4,5.">
 
-<title>Yale University Open Data Access (YODA) – Resource Navigation Tool</title>
+<title>Merative’s MarketScan – Resource Navigation Tool</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -67,7 +88,37 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -115,8 +166,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Yale University Open Data Access (YODA)</h1>
-                      </div>
+      <h1 class="title">Merative’s MarketScan</h1>
+                  <div>
+        <div class="description">
+          <p><br> <a href="https://www.merative.com/">Merative</a> advances health and social care by providing innovative healthcare data and technology solutions, collaborating with thousands of providers and major organizations&nbsp;<span class="citation" data-cites="merative about_merative"><sup><a href="#ref-merative" role="doc-biblioref">1</a>,<a href="#ref-about_merative" role="doc-biblioref">2</a></sup></span>. Their MarketScan Research Databases offer longitudinal, patient-level data on healthcare costs and outcomes, supporting diverse research applications with data from over 273 million patients and more than 2,600 peer-reviewed publications. MarketScan’s detailed and HIPAA-compliant data enhance research across disease areas, backed by powerful analytic tools&nbsp;<span class="citation" data-cites="merative_marketscan_docs"><sup><a href="#ref-merative_marketscan_docs" role="doc-biblioref">3</a></sup></span>. <br> <br> At Yale, the <a href="https://medicine.yale.edu/ybic/data-resources-services/marketscan/">MarketScan database</a> is licensed for research use by the <a href="https://medicine.yale.edu/ybic/">Yale Biomedical Informatics and Computing (YBIC)</a> office, with support from the Harvey Cushing/John Hay Whitney Medical Library and the Yale Center for Clinical Investigation. Yale researchers can access and analyze MarketScan data by submitting a request form for assistance from the YBIC team&nbsp;<span class="citation" data-cites="ybic_marketscan ybic_access"><sup><a href="#ref-ybic_marketscan" role="doc-biblioref">4</a>,<a href="#ref-ybic_access" role="doc-biblioref">5</a></sup></span>.</p>
+        </div>
+      </div>
+                </div>
   </div>
     
   
@@ -131,8 +187,17 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link" data-scroll-target="#gaining-access">Gaining Access</a></li>
+  <li><a href="#valuable-links" id="toc-valuable-links" class="nav-link" data-scroll-target="#valuable-links">Valuable Links</a></li>
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/Datasets/More-Info-Pages/License-Required/MarketScan.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -141,16 +206,176 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/AdobeStock_284810520.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Free Adobe Stock photo by inspiring.team. File #: 284810520</figcaption>
-</figure>
+<p>Updated: October 10<span class="math inline">\(^{th}\)</span>, 2025</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Merative advances health and social care by innovatively providing healthcare data and technology solutions for patients, program managers, radiologists, and researchers. They collaborate with over 4,500 healthcare providers, top US health plans, government agencies, Fortune 100 employers, and all leading life sciences companies to drive shared health progress&nbsp;<span class="citation" data-cites="merative about_merative"><sup><a href="#ref-merative" role="doc-biblioref">1</a>,<a href="#ref-about_merative" role="doc-biblioref">2</a></sup></span>.</p>
+<p>Merative’s MarketScan Research Databases provide longitudinal, patient-level data that cover the full continuum of healthcare costs and outcomes, including detailed prescription drug information. These databases, with data from over 273 million unique patients across diverse care points, support numerous research applications such as pharmacoeconomic outcome evaluations, economic burden studies, and therapeutic pathway analyses, documented in more than 2,600 peer-reviewed publications&nbsp;<span class="citation" data-cites="merative_marketscan_docs"><sup><a href="#ref-merative_marketscan_docs" role="doc-biblioref">3</a></sup></span>.</p>
+<p>MarketScan offers several unique advantages: it includes comprehensive patient-level details, tracks the full continuum of care, and provides detailed prescription drug information for longitudinal research. Its large sample size supports studies on unique patient populations, and linked data enhance research across various disease areas, maintaining appropriate claims linkages and HIPAA compliance. Equipped with analytic tools for efficient data exploration, MarketScan facilitates understanding of disease progression, treatment patterns, and health outcomes for patients, employers, health plans, and government entities&nbsp;<span class="citation" data-cites="ybic_access merative_marketscan_docs"><sup><a href="#ref-merative_marketscan_docs" role="doc-biblioref">3</a>,<a href="#ref-ybic_access" role="doc-biblioref">5</a></sup></span>.</p>
+<p>The YBIC license includes the following MarketScan datasets&nbsp;<span class="citation" data-cites="ybic_access"><sup><a href="#ref-ybic_access" role="doc-biblioref">5</a></sup></span>:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><strong>Commercial Database (CCAE):</strong> Contains data from active employees, early retirees, COBRA continuees, and dependents with employer-sponsored plans, including lab results. Its table structure includes Inpatient Admissions, Facility Header, Inpatient Services, Outpatient Services, Outpatient Pharmaceutical Claims, Annual Enrollment Summary, Enrollment Detail, and Lab Results. This dataset represents approximately 69 million patients and 8.7 billion records.</p></li>
+<li><p><strong>Medicare Database (MDCR):</strong> Originally designed for Medicare-eligible retirees with employer-sponsored Medicare Supplemental and Medicare Advantage plans, primarily containing fee-for-service plan data. Its table structure matches that of the Commercial Database and includes both Medicare-paid and employer-paid supplemental insurance amounts, limited to plans where both types of payments are available and evident on claims. This dataset represents approximately 4 million patients and 1.55 billion records.</p></li>
+<li><p><strong>Medicaid Database (MDCD):</strong> Captures healthcare service use for Medicaid enrollees across various states, covering both fee-for-service and managed care plans. It includes records of inpatient services, admissions, outpatient services, prescription drug claims, long-term care, and demographic variables such as age, gender, Federal Aid, Disability, TANF, and race. This dataset represents approximately 28 million patients and 8.26 billion records.</p></li>
+<li><p><strong>Dental Database:</strong> An independent product that can be linked to specific years and versions of the Merative MarketScan Commercial Database and the MarketScan Medicare Database. This dataset represents approximately 28 million patients and 1.73 billion records.</p></li>
+<li><p><strong>Commercial Insurance Weights Database:</strong> The Merative MarketScan Commercial (CCAE) and Medicare (MDCR) Databases contain data on individuals with employer-sponsored insurance (ESI), either as primary or supplemental coverage. The MarketScan Commercial Insurance Weights, created using the Public Use Microdata Sample (PUMS) from the American Community Survey (ACS), project this data to the national population with ESI.</p></li>
+</ul>
+</div>
+</section>
+<section id="gaining-access" class="level2">
+<h2 class="anchored" data-anchor-id="gaining-access">Gaining Access</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Yale License</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="do-i-qualify" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify">Do I Qualify?</h4>
+<p>The YBIC has licensed the MarketScan database for Yale community members to use in their research.</p>
+</section>
+<section id="typical-timeline" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline">Typical Timeline</h4>
+<p>Time constraints may vary for applicants.</p>
+</section>
+<section id="step-by-step-guide" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide">Step-by-Step Guide</h4>
+<p>Researchers need to fill out an application requesting access, listing the dataset and population they want access to, describing their research plan, disclosing funding sources, and signing the data use agreement.</p>
+<p>After receiving approval, the <a href="https://library.medicine.yale.edu/">Harvey Cushing/John Hay Whitney Medical Library</a>, the <a href="https://medicine.yale.edu/center-clinical-investigation/">Yale Center for Clinical Investigation (YCIC)</a>, and YBIC will collaborate to assist with data retrieval, analysis, and ensuring compliance with data use agreements. The request form is accessible on the MarketScan Database <a href="https://datamed.library.medicine.yale.edu/marketscan">DataMed</a> webpage.</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="valuable-links" class="level2">
+<h2 class="anchored" data-anchor-id="valuable-links">Valuable Links</h2>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><a href="https://medicine.yale.edu/ybic/data-resources-services/marketscan/">YBIC - MarketScan</a>: Find links to the DataMed webpage for the dataset and training&nbsp;<span class="citation" data-cites="ybic_marketscan"><sup><a href="#ref-ybic_marketscan" role="doc-biblioref">4</a></sup></span>.</p></li>
+<li><p><a href="https://datamed.library.medicine.yale.edu/marketscan">MarketScan use at Yale</a>: Find additional details about the datasets covered by Yale’s license, access training, and apply for research access&nbsp;<span class="citation" data-cites="ybic_access"><sup><a href="#ref-ybic_access" role="doc-biblioref">5</a></sup></span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<p>This section displays PubMed articles that mention the dataset and are authored by individuals affiliated with the Yale School of Public Health. Please note that the PubMed API does not distinguish between uppercase and lowercase characters when processing queries. As a result, there may be occasional mismatches in the search results.</p>
+<p>9 citations released after 2020 were found.</p>
+<div style="margin-left: 1rem">
+<div id="citations-box">
+<ul id="citations-content">
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40778153/">Prevalence of Risk Factors and Established Cardiovascular Disease Among All of Us Participants: Benchmarking Against National Estimates.</a><br><strong>Mengjing Yang</strong>, <strong>Tinsae Admassu</strong>, <strong>Harlan M Krumholz</strong>, Chenxi Huang, Karthik Murugiah<br>medRxiv. 2025 Jul 23. pii: 2025.07.22.25331985. doi: 10.1101/2025.07.22.25331985.<br>PMID: 40778153
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/39978232/">Serum concentrations of persistent endocrine-disrupting chemicals in U.S. military personnel: A comparison by race/ethnicity and sex.</a><br>Karl C Alcover, Jordan McAdam, Hristina Denic-Roberts, Celia Byrne, Andreas Sjodin, Mark Davis, Richard Jones, <strong>Yawei Zhang</strong>, Jennifer A Rusiecki<br>Int J Hyg Environ Health. 2025 Feb 19. doi: 10.1016/j.ijheh.2025.114540.<br>PMID: 39978232
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/38248537/">United States Long-Term Trends in Adult BMI (1959-2018): Unraveling the Roots of the Obesity Epidemic.</a><br><strong>Julia Banas</strong>, <strong>Acree McDowell Cook</strong>, <strong>Karina Raygoza-Cortez</strong>, <strong>Daniel Davila</strong>, <strong>Melinda L Irwin</strong>, <strong>Leah M Ferrucci</strong>, <strong>Debbie L Humphries</strong><br>Int J Environ Res Public Health. 2024 Jan 9. doi: 10.3390/ijerph21010073.<br>PMID: 38248537
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/37789775/">Accelerated aging mediates the associations of unhealthy lifestyles with cardiovascular disease, cancer, and mortality.</a><br>Xueqin Li, Xingqi Cao, Jingyun Zhang, Jinjing Fu, Mayila Mohedaner, NA Danzengzhuoga, Xiaoyi Sun, Gan Yang, Zhenqing Yang, Chia-Ling Kuo, <strong>Xi Chen</strong>, Alan A Cohen, Zuyun Liu<br>J Am Geriatr Soc. 2023 Oct 4. doi: 10.1111/jgs.18611.<br>PMID: 37789775
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/37451576/">Associations between per- and polyfluoroalkyl substances, liver function, and daily alcohol consumption in a sample of U.S. adults.</a><br><strong>Xiuqi Ma</strong>, Jared A Fisher, Trang VoPham, <strong>Vasilis Vasiliou</strong>, <strong>Rena R Jones</strong><br>Environ Res. 2023 Jul 13. doi: 10.1016/j.envres.2023.116651.<br>PMID: 37451576
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/36972757/">A multivariate joint model to adjust for random measurement error while handling skewness and correlation in dietary data in an epidemiologic study of mortality.</a><br>George O Agogo, Leacky Muchene, Benedict Orindi, Terrence E Murphy, Henry Mwambi, <strong>Heather G Allore</strong><br>Ann Epidemiol. 2023 Mar 25. doi: 10.1016/j.annepidem.2023.03.007.<br>PMID: 36972757
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/36905605/">Nonexercise machine learning models for maximal oxygen uptake prediction in national population surveys.</a><br>Yuntian Liu, Jeph Herrin, Chenxi Huang, Rohan Khera, Lovedeep Singh Dhingra, Weilai Dong, Bobak J Mortazavi, <strong>Harlan M Krumholz</strong>, Yuan Lu<br>J Am Med Inform Assoc. . doi: 10.1093/jamia/ocad035.<br>PMID: 36905605
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/36841355/">Carbohydrate Intakes Below Recommendations With a High Intake of Fat Are Associated With Higher Prevalence of Metabolic Syndrome.</a><br>Dakota Dustin, Corina Kowalski, Meredith Salesses, <strong>Acree McDowell</strong>, Penny M Kris-Etherton, Martha Belury, LuAnn K Johnson, Zach Conrad<br>J Acad Nutr Diet. 2023 Feb 24. doi: 10.1016/j.jand.2023.02.011.<br>PMID: 36841355
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/35857325/">Association Between Rental Assistance Programs and Hemoglobin A1c Levels Among US Adults.</a><br>Andrew Fenelon, Kasia J Lipska, <strong>Whitney Denary</strong>, Kim M Blankenship, <strong>Penelope Schlesinger</strong>, <strong>Denise Esserman</strong>, <strong>Danya E Keene</strong><br>JAMA Netw Open. 2022 Jul 1. doi: 10.1001/jamanetworkopen.2022.22385.<br>PMID: 35857325
+</li>
+</ul>
+</div>
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">◀ Previous</button>
+  <button onclick="nextPage()">Next ▶</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    let currentPage = 1;
+    const itemsPerPage = 3;
+    const citationsContent = document.getElementById("citations-content");
+
+    if (citationsContent) {
+      const numPages = Math.ceil(citationsContent.children.length / itemsPerPage);
+
+      function updateCitations() {
+        const items = citationsContent.children;
+        for (let i = 0; i < items.length; i++) {
+          items[i].style.display = (i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage) ? "list-item" : "none";
+        }
+      }
+
+      function nextPage() {
+        if (currentPage < numPages) {
+          currentPage++;
+          updateCitations();
+        }
+      }
+
+      function prevPage() {
+        if (currentPage > 1) {
+          currentPage--;
+          updateCitations();
+        }
+      }
+
+      // Initial call to update citations on load
+      updateCitations();
+
+      // Attach functions to window object for button actions
+      window.nextPage = nextPage;
+      window.prevPage = prevPage;
+    }
+  });
+</script>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The search PubMed query used to generate this list is:</p>
+<p>(“National Health and Nutrition Examination Survey”[Title/Abstract] OR “National Health and Nutrition Examination Survey” NOT “National Health and Nutrition Examination Survey”[Conflict of Interest Statements]) AND (“NHANES”[Title/Abstract] OR “NHANES” NOT “NHANES”[Conflict of Interest Statements]) AND “Yale School of Public Health”[Affiliation] AND (2020:2025[dp])</p>
+</div>
+</div>
+</div>
 </div>
 
 
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-merative" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Merative. <a href="https://www.merative.com/">Healthcare data, technology and analytics</a>.</div>
+</div>
+<div id="ref-about_merative" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Merative. <a href="https://www.merative.com/company">About merative</a>.</div>
+</div>
+<div id="ref-merative_marketscan_docs" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Merative. <a href="https://www.merative.com/documents/merative-marketscan-research-databases">Merative MarketScan research databases</a>.</div>
+</div>
+<div id="ref-ybic_marketscan" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Informatics, Y. B. &amp; (YBIC), C. <a href="https://medicine.yale.edu/ybic/data-resources-services/marketscan/">MarketScan YBIC page</a>.</div>
+</div>
+<div id="ref-ybic_access" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Informatics, Y. B. &amp; (YBIC), C. <a href="https://datamed.library.medicine.yale.edu/marketscan">DataMed</a>.</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -597,7 +822,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/Datasets/More-Info-Pages/Restricted-Access/YODA.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/Datasets/More-Info-Pages/License-Required/MarketScan.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
