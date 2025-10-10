@@ -44,6 +44,7 @@ items:
 
   # -----------
   # Region/Affiliation by: Yale School of Public Health
+  # Open Access
   - categories1:
       - "Yale School of Public Health"
     categories2:
@@ -91,6 +92,7 @@ items:
         
   # -----------
   # Region/Affiliation by: Yale School of Medicine
+  # Restricted Access
   - categories1:
       - "Yale School of Medicine"
     categories2:
@@ -111,6 +113,7 @@ items:
         
   # -----------
   # Region/Affiliation by: Yale University
+  # Restricted Access
   - categories1:
       - "Yale University"
     categories2:
@@ -129,6 +132,12 @@ items:
         site: https://medicine.yale.edu/ybic/ynhhs-research-access/
         group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
         info: More-Info-Pages/Restricted-Access/YNHHS-Epic-Cosmos.qmd
+
+  # -----------
+  # Region/Affiliation by: American University
+  
+  # -----------
+  # Region/Affiliation by: International University
 
   # -----------
   # Region/Affiliation by: US Government
@@ -152,10 +161,10 @@ items:
         site: https://www.cdc.gov/nchs/index.html
       - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
         date-added: 2025-03-20
-        date-updated: 2025-03-20
+        date-updated: 2025-10-10
         ranking: "2"
         description: |
-         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health\ [@about_nhanes; @achievements_nhanes]. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
+         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health . Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
          </br>
          </br>
          Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
@@ -163,16 +172,6 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nhanes/
         info: More-Info-Pages/Freely-Accessible/NHANES.qmd
-      - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
-        date-added: 2025-09-02
-        date-updated: 2025-09-02
-        ranking: "2"
-        description: |
-         Concise version
-        image: Images/nhanes.png
-        topic: "Clinical Study/Surveys"
-        site: https://www.cdc.gov/nchs/nhanes/
-        info: More-Info-Pages/Freely-Accessible/NHANES2.qmd
       - title: NCHS's National Health Interview Survey (NHIS)
         date-added: 2025-03-20
         date-updated: 2025-03-20
@@ -273,10 +272,13 @@ items:
     tiles:
       - title: National Institutes of Health's (NIH) All of Us (AOU)
         date-added: 2025-03-19
-        date-updated: 2025-03-19
+        date-updated: 2025-10-10
         ranking: "3"
         description: |
-          All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform. Registered researchers can access data from surveys, genomic analyses, electronic health records, physical measurements, and wearables to study the full range of factors that influence health and disease.
+          The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens. 
+          </br>
+          </br>
+          All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies.
         image: Images/NIH All of Us_4.8x3.6.png
         topic: "Clinical Study/Surveys"
         site: https://allofus.nih.gov/
@@ -302,6 +304,9 @@ items:
         site: https://data.gov/
       
   # -----------
+  # Region/Affiliation by: International Government    
+      
+  # -----------
   # Region/Affiliation by: Non-Governmental Organization
   - categories1:
       - "Non-Governmental Organization"
@@ -319,4 +324,29 @@ items:
         image: Images/UK Biobank.png
         topic: "Clinical Study/Surveys"
         site: https://www.ukbiobank.ac.uk/
+        
+  # -----------
+  # Region/Affiliation by: Private Company
+  # License Required
+  - categories1:
+      - "Private Company"
+    categories2:
+      - "Clinical Study/Surveys"
+    categories3:
+      - "License Required"
+    tiles:
+      - title: Merative's MarketScan
+        description: |
+          Merative advances health and social care by providing innovative healthcare data and technology solutions, collaborating with thousands of providers and major organizations. Their MarketScan Research Databases offer longitudinal, patient-level data on healthcare costs and outcomes, supporting diverse research applications with data from over 273 million patients and more than 2,600 peer-reviewed publications. MarketScan's detailed and HIPAA-compliant data enhance research across disease areas, backed by powerful analytic tools.
+          </br>
+          </br>
+          At Yale, the MarketScan database is licensed for research use by the Yale Biomedical Informatics and Computing (YBIC) office, with support from the Harvey Cushing/John Hay Whitney Medical Library and the Yale Center for Clinical Investigation. Yale researchers can access and analyze MarketScan data by submitting a request form for assistance from the YBIC team.
+        date-added: 2025-03-1
+        date-updated: 2025-10-10
+        ranking: "2"
+        image: Images/marketscan_main.png
+        topic: "Clinical Study/Surveys"
+        site: https://datamed.library.medicine.yale.edu/marketscan
+        group: https://medicine.yale.edu/ybic/
+        info: More-Info-Pages/License-Required/MarketScan.qmd
         
