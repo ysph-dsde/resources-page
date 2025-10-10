@@ -29,7 +29,8 @@
 #     This causes all tiles listed under that subsection to get filtered together
 #     when the user selectes any or both categories.
 #   - Mandatory "tiles" |-> "- title: ** " fields: "title", "description", 
-#     "date-added", "date-updated", "image", "topic" to list the second category.
+#     "date-added", "date-updated", "ranking," "image", "topic" to list the 
+#     second category.
 #   - Opional "tiles" |-> "- title: ** " fields: "site" for the main webpage for 
 #     the source, "group" for the lab or group webpage who provides the source,
 #     "github" for the codebase repository, "article" if there primary articles
