@@ -39,11 +39,10 @@ suppressPackageStartupMessages({
 "%!in%" <- function(x,y)!("%in%"(x,y))
 
 # Load in the functions.
-source('./PubMed_Search_Functions.R')
+source('./PubMed Search_Functions.R')
 ```
 
 Updated: October 9$^{th}$, 2025
-
 
 ## Overview
 
@@ -341,8 +340,12 @@ When accessing the data, the researcher will need to provide the following docum
 
 # Fetch and format the citations.
 citations <- get_citations(
-  keywords = c("National Health and Nutrition Examination Survey", "NHANES"), 
-  affiliation = "Yale School of Public Health")
+  doi = c("10.3390/ijerph21010073", "10.1016/j.annepidem.2023.03.007", 
+          "10.1001/jama.2025.16533", "10.1093/jamia/ocad035", 
+          "10.1001/jamanetworkopen.2022.22385", "10.1001/jamanetworkopen.2025.16663",
+          "10.1001/jamanetworkopen.2022.9953"),
+  affiliation = "Yale School of Public Health"
+)
 
 # Condition the output based on presence of articles.
 citations_html <- make_pub_list(citations)
@@ -358,9 +361,7 @@ if(!any(str_detect(citations$citations, "No publications"))) {
 ```
 
 
-This section displays PubMed articles that mention the dataset and are authored by individuals affiliated with the Yale School of Public Health. Please note that the PubMed API does not distinguish between uppercase and lowercase characters when processing queries. As a result, there may be occasional mismatches in the search results.
-
-`r citation_length` citations released after `r citation_date` were found.
+This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.
 
 ::: {style="margin-left: 1rem"}
 
@@ -379,51 +380,7 @@ cat(citations_html)
   <button onclick="nextPage()">Next &#9654;</button>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let currentPage = 1;
-    const itemsPerPage = 3;
-    const citationsContent = document.getElementById("citations-content");
-
-    if (citationsContent) {
-      const numPages = Math.ceil(citationsContent.children.length / itemsPerPage);
-
-      function updateCitations() {
-        const items = citationsContent.children;
-        for (let i = 0; i < items.length; i++) {
-          items[i].style.display = (i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage) ? "list-item" : "none";
-        }
-      }
-
-      function nextPage() {
-        if (currentPage < numPages) {
-          currentPage++;
-          updateCitations();
-        }
-      }
-
-      function prevPage() {
-        if (currentPage > 1) {
-          currentPage--;
-          updateCitations();
-        }
-      }
-
-      // Initial call to update citations on load
-      updateCitations();
-
-      // Attach functions to window object for button actions
-      window.nextPage = nextPage;
-      window.prevPage = prevPage;
-    }
-  });
-</script>
+<script src="pagination.js"></script>
 ```
-
-::: {.callout-note collapse="true"}
-The search PubMed query used to generate this list is:
-
-`r citations$query`
-:::
 
 :::

@@ -2,7 +2,7 @@
 ## Define the coding parameters used in the environment.
 ##
 ##      Authors: Shelby Golden, M.S.
-## Date Created: June 15th, 2025
+## Date Created: October 12th, 2025
 ## 
 ## Description: All custom functions used to search for publications that use
 ##              a specific dataset and are affiliated with the Yale School of
@@ -14,7 +14,7 @@
 ##              More-Info-Pages subdirectories to allow them to be sourced.
 ##
 ## Functions
-##    1. build_search_query: Constructs a comprehensive search term based on
+##    1. build_search_query: Constructs a comprehensive search term based on 
 ##       specified keywords, affiliation, and a date range. The search term is 
 ##       assembled to query PubMed with multiple conditions combined using the 
 ##       AND operator.
@@ -32,12 +32,12 @@
 ##       detailed PubMed records in XML format. The function processes the XML 
 ##       data to retrieve authors and their affiliations for each article.
 ##
-##    5. get_citations: Searches for citations in PubMed using specified 
-##       keywords, affiliation, and a date range. The function dynamically 
-##       adjusts the search range if no records are found, incrementing the 
-##       range up to a specified maximum. It fetches detailed records, extracts 
-##       author affiliations, and formats the citations while highlighting 
-##       authors from a specified affiliation.
+##    5. get_citations: Searches for citations in PubMed using specified keywords, 
+##       affiliation, DOI, and a date range. The function dynamically adjusts the 
+##       search range if no records are found, incrementing the range up to a 
+##       specified maximum. It fetches detailed records, extracts author 
+##       affiliations, and formats the citations while highlighting authors from 
+##       a specified affiliation.
 ##
 ##    6. make_pub_list: This function processes a list of citations and formats 
 ##       them into an HTML structure with list items (`<li>`) and a search query 
@@ -51,12 +51,15 @@
 build_search_query <- function(keywords = NULL, affiliation = NULL, years = NULL) {
   #' @description
   #' Constructs a comprehensive search term based on specified keywords,
-  #' affiliation, and a date range. The search term is assembled to query PubMed 
+  #' affiliation, and a date range. The search term is assembled to query PubMed
   #' with multiple conditions combined using the AND operator.
   #'
-  #' @param keywords A string or vector of strings specifying the keywords to 
+  #' @param keywords A string or vector of strings specifying the keywords to
   #'                 search within the Title/Abstract fields. If NULL, this 
-  #'                 parameter is ignored.
+  #'                 parameter is ignored. Users can add additional keywords
+  #'                 searched as "OR" by adding them in a vector. If they want
+  #'                 to search together then they add them in the same string 
+  #'                 with " AND " separating them.
   #' @param affiliation A string specifying the affiliation to include in the 
   #'                    search term. If NULL, this parameter is ignored.
   #' @param years An integer specifying the number of past years to include in 
@@ -64,44 +67,57 @@ build_search_query <- function(keywords = NULL, affiliation = NULL, years = NULL
   #'
   #' @return A string representing the combined search query to be used for 
   #'         querying PubMed.
-  #' 
+  #'
   #' @examples
-  #' build_search_query(keywords = "cancer", affiliation = "Yale", years = 5)
+  #' build_search_query(keywords = c("cancer", "therapy"), affiliation = "Yale", years = 5)
   
+  # Get the current year to create date range
+  current_year <- as.numeric(format(Sys.Date(), "%Y"))
+  search_queries <- vector()
   
-  search_terms <- c()  # Initialize an empty vector to hold search terms
-  
-  if (!is.null(keywords) && length(keywords) > 0) {
-    # Combine keywords and construct the search term for keywords within Title/Abstract
-    keyword_terms <- paste0('"', keywords, '"[Title/Abstract] OR "', keywords, '"')
-    # Exclude keywords from Conflict of Interest Statements
-    keyword_not_coi <- paste0('(', keyword_terms, ' NOT "', keywords, '"[Conflict of Interest Statements])')
-    # Add the combined search term to the search terms vector
-    search_terms <- c(search_terms, keyword_not_coi)
+  if (!is.null(keywords)) {
+    # Loop through each keyword
+    for (keyword in keywords) {
+      # Split keywords combined with AND into individual words
+      keyword_terms <- strsplit(keyword, " AND ", fixed = TRUE)[[1]]
+      # Create the Title/Abstract search term for each individual keyword and 
+      # exclude them from Conflict of Interest Statements
+      keyword_query <- sapply(keyword_terms, function(term) {
+        paste0('("', term, '"[Title/Abstract] NOT "', term, '"[Conflict of Interest Statements])')
+      })
+      # Combine multiple keywords in a single string with AND
+      keyword_query_combined <- paste(keyword_query, collapse = " AND ")
+      
+      # Start building the full query
+      query <- paste0("(", keyword_query_combined)
+      if (!is.null(affiliation)) {
+        query <- paste0(query, " AND \"", affiliation, "\"[Affiliation]")
+      }
+      if (!is.null(years)) {
+        start_year <- current_year - years
+        year_range <- paste0(start_year, ':', current_year)
+        query <- paste0(query, " AND ", year_range, "[dp]")
+      }
+      query <- paste0(query, ")")
+      
+      # Add the query to the list of search queries
+      search_queries <- c(search_queries, query)
+    }
+  } else {
+    if (!is.null(affiliation)) {
+      query <- paste0("\"", affiliation, "\"[Affiliation]")
+      if (!is.null(years)) {
+        start_year <- current_year - years
+        year_range <- paste0(start_year, ':', current_year)
+        query <- paste0(query, " AND ", year_range, "[dp]")
+      }
+      search_queries <- c(search_queries, query)
+    }
   }
   
-  if (!is.null(affiliation)) {
-    # Construct the search term for affiliation
-    affiliation_term <- paste0('"', affiliation, '"[Affiliation]')
-    # Add the affiliation search term to the search terms vector
-    search_terms <- c(search_terms, affiliation_term)
-  }
-  
-  if (!is.null(years)) {
-    # Get the current year
-    current_year <- as.numeric(format(Sys.Date(), "%Y"))
-    # Calculate the start year based on the number of years provided
-    start_year <- current_year - years
-    # Construct the search term for the date range
-    date_range <- paste0(start_year, ':', current_year)
-    date_term <- paste0('(', date_range, '[dp])')
-    # Add the date range search term to the search terms vector
-    search_terms <- c(search_terms, date_term)
-  }
-  
-  # Combine all search terms with the AND operator
-  search_query <- paste(search_terms, collapse = ' AND ')
-  return(search_query)  # Return the final search query
+  # Combine all queries with the OR operator
+  search_query <- paste(search_queries, collapse = ' OR ')
+  return(search_query)
 }
 
 
@@ -238,19 +254,23 @@ extract_author_affiliations <- function(xml_data) {
 
 
 
-get_citations <- function(keywords = NULL, affiliation = NULL, start_years = 5, increment_years = 5, max_range_years = 25, max_results = 1000) {
+get_citations <- function(keywords = NULL, affiliation = NULL, doi = NULL, start_years = 5, increment_years = 5, max_range_years = 25, max_results = 1000) {
   #' @description 
-  #' Searches for citations in PubMed using specified keywords, affiliation, and 
+  #' Searches for citations in PubMed using specified keywords, affiliation, DOI, and
   #' a date range. The function dynamically adjusts the search range if no 
   #' records are found, incrementing the range up to a specified maximum. It 
   #' fetches detailed records, extracts author affiliations, and formats the 
   #' citations while highlighting authors from a specified affiliation.
   #'
   #' @param keywords A string or vector of strings specifying the keywords to 
-  #'                 search within the Title/Abstract fields. If NULL, this 
-  #'                 parameter is ignored.
+  #'                 search within the Title/Abstract fields. If a vector is 
+  #'                 provided, each keyword will be searched with "OR" operator. 
+  #'                 If a single string with keywords separated by "AND" is 
+  #'                 provided, it will be searched together.
   #' @param affiliation A string specifying the affiliation to include in the 
   #'                    search term. If NULL, this parameter is ignored.
+  #' @param doi A string or vector of strings specifying the DOI to search for. 
+  #'            If provided, other parameters are ignored.
   #' @param start_years An integer specifying the initial number of years to 
   #'                    include in the search range. Default is 5 years.
   #' @param increment_years An integer specifying the increment in years if no 
@@ -267,111 +287,150 @@ get_citations <- function(keywords = NULL, affiliation = NULL, start_years = 5, 
   #' 
   #' @examples
   #' # Fetching citations with specified parameters
-  #' citations_output <- get_citations(keywords = "All of Us", affiliation = "Yale School of Public Health", start_years = 5)
+  #' citations_output <- get_citations(keywords = "NHANES", affiliation = "Yale School of Public Health", start_years = 5)
   
-  
-  current_year <- as.numeric(format(Sys.Date(), "%Y"))
-  
-  # Initialize search parameters
-  years <- start_years
-  records_found <- FALSE
-  initial_search <- NULL
-  
-  # Loop through search attempts, incrementing the year range until records are found or the maximum range is reached
-  while (years <= max_range_years && !records_found) {
-    query_term <- build_search_query(keywords, affiliation, years)
-    
-    # Initial search on PubMed
-    initial_search <- tryCatch({
-      entrez_search(
-        db = 'pubmed',
-        term = query_term,
-        retmax = max_results,
-        use_history = TRUE)
+  fetch_detailed_metadata <- function(pmid) {
+    # Fetch detailed summary for each PubMed ID (PMID)
+    summary <- tryCatch({
+      entrez_summary(db = "pubmed", id = pmid)
     }, error = function(e) {
-      message('Error during entrez_search:', '\n', e)
+      message('Error during entrez_summary:', '\n', e)
       return(NULL)
     })
-    
-    records_found <- (!is.null(initial_search) && length(initial_search$ids) > 0)
-    
-    if (!records_found) {
-      years <- years + increment_years
+    if (is.null(summary)) {
+      return(list(journal = "Journal not available.",
+                  epub_date = "Date not available.",
+                  doi = "DOI not available.",
+                  uid = pmid))
+    } else {
+      return(list(journal = summary$fulljournalname %||% "Journal not available.",
+                  epub_date = summary$epubdate %||% summary$pubdate %||% "Date not available.",
+                  doi = summary$elocationid %||% "DOI not available.",
+                  uid = summary$uid))
     }
   }
   
-  # Check if no records were found after exhausting the date range
-  if (is.null(initial_search) || length(initial_search$ids) == 0) {
-    return(list(citations = paste0('No publications found in the last ', max_range_years, " years."), query = query_term))  # Return the list of citations and the search query used
+  process_records <- function(initial_search, affiliation = NULL) {
+    if (is.null(initial_search) || length(initial_search$ids) == 0) {
+      return(NULL)
+    }
+    
+    # Grab PubMed IDs (PMIDs)
+    pmids <- initial_search$ids
+    
+    # Fetch detailed PubMed records
+    xml_data <- fetch_detailed_pubmed_records(initial_search)
+    author_affiliation <- extract_author_affiliations(xml_data)
+    
+    # Initialize the citations vector
+    citations <- vector('character', length(author_affiliation))
+    
+    # Loop through each article to extract relevant details and format the citation
+    for (ii in seq_along(author_affiliation)) {
+      article <- author_affiliation[[ii]]
+      
+      title <- article$title
+      pmid <- article$pmid
+      authors_info <- article$authors
+      
+      # Format author names, bolding those affiliated with the specified institution (if affiliation is not NULL)
+      authors <- sapply(authors_info, function(author) {
+        name <- paste(author$fore_name, author$last_name)
+        if (!is.null(affiliation) && !is.null(author$affiliations) && any(grepl(affiliation, author$affiliations))) {
+          name <- paste0("<strong>", name, "</strong>")  # Use HTML for bold text
+        }
+        return(name)
+      })
+      
+      authors <- paste(authors, collapse = ', ')
+      
+      # Fetch detailed metadata
+      publication <- fetch_detailed_metadata(pmid)
+      
+      pmid_with_text <- glue('PMID: {publication$uid}')
+      title_hyperlink <- glue('<a href="https://pubmed.ncbi.nlm.nih.gov/{publication$uid}/">{title}</a>')
+      
+      citation <- paste0(
+        title_hyperlink, '<br>', 
+        authors, '<br>', 
+        publication$journal, ' ', 
+        publication$epub_date, ' ', 
+        publication$doi, '<br>', 
+        pmid_with_text
+      )
+      
+      citations[ii] <- citation
+    }
+    
+    return(citations)
   }
   
-  # Grab PubMed IDs (PMIDs)
-  pmids <- initial_search$ids
-  
-  # Fetch summaries in batches to avoid 'Too many UIDs' error
-  pmid_summary <- tryCatch({
-    fetch_summaries_in_batches(initial_search$web_history, batch_size = 500)
-  }, error = function(e) {
-    message('Error during entrez_summary:', '\n', e)
-    return(NULL)
-  })
-  
-  if (is.null(pmid_summary)) {
-    warning('No esummary records found.')
-    return('No publications found.')
-  }
-  
-  # Fetch detailed PubMed records
-  xml_data <- fetch_detailed_pubmed_records(initial_search)
-  author_affiliation <- extract_author_affiliations(xml_data)
-  
-  # Initialize the citations vector
-  citations <- vector('character', length(author_affiliation))
-  
-  # Loop through each article to extract relevant details and format the citation
-  for (ii in seq_along(author_affiliation)) {
-    article <- author_affiliation[[ii]]
+  if (!is.null(doi)) {
+    all_citations <- vector('list', length(doi))
+    all_queries <- vector('character', length(doi))
     
-    title <- article$title
-    pmid <- article$pmid
-    authors_info <- article$authors
-    
-    # Format author names, bolding those affiliated with the specified institution
-    authors <- sapply(authors_info, function(author) {
-      name <- paste(author$fore_name, author$last_name)
-      if (any(grepl("Yale School of Public Health", author$affiliations))) {
-        name <- paste0("<strong>", name, "</strong>")  # Use HTML for bold text
+    for (i in seq_along(doi)) {
+      query_term <- paste0(doi[i], "[doi]")
+      initial_search <- tryCatch({
+        entrez_search(db = 'pubmed', term = query_term, retmax = max_results, use_history = TRUE)
+      }, error = function(e) {
+        message('Error during entrez_search:', '\n', e)
+        return(NULL)
+      })
+      
+      citations <- process_records(initial_search, affiliation)
+      if (!is.null(citations)) {
+        all_citations[[i]] <- citations
       }
-      return(name)
-    })
+      all_queries[i] <- query_term
+    }
     
-    authors <- paste(authors, collapse = ', ')
+    all_citations <- unlist(all_citations, recursive = FALSE)
     
-    publication <- pmid_summary[[ii]]
-    epub_date <- paste0(publication$epubdate, '.')
-    journal <- paste0(publication$source, '.')
-    doi <- paste0(publication$elocationid, '.')
-    uid <- publication$uid
-    pmid_with_text <- glue('PMID: {uid}')
+    if (length(all_citations) == 0) {
+      return(list(citations = "No publications found.", query = all_queries))
+    } else {
+      return(list(citations = all_citations, query = all_queries))
+    }
+  } else if (!is.null(keywords)) {
+    current_year <- as.numeric(format(Sys.Date(), "%Y"))
     
-    # Hyperlink the title with PubMed URL
-    title_hyperlink <- glue('<a href="https://pubmed.ncbi.nlm.nih.gov/{uid}/">{title}</a>')
+    # Initialize search parameters
+    years <- start_years
+    records_found <- FALSE
+    initial_search <- NULL
     
-    # Format the citation string
-    citation <- paste0(
-      title_hyperlink, '<br>', 
-      authors, '<br>', 
-      journal, ' ', 
-      epub_date, ' ', 
-      doi, '<br>', 
-      pmid_with_text
-    )
+    # Loop through search attempts, incrementing the year range until records are found or the maximum range is reached
+    while (years <= max_range_years && !records_found) {
+      query_term <- build_search_query(keywords, affiliation, years)
+      
+      # Initial search on PubMed
+      initial_search <- tryCatch({
+        entrez_search(db = 'pubmed', term = query_term, retmax = max_results, use_history = TRUE)
+      }, error = function(e) {
+        message('Error during entrez_search:', '\n', e)
+        return(NULL)
+      })
+      
+      records_found <- (!is.null(initial_search) && length(initial_search$ids) > 0)
+      
+      if (!records_found) {
+        years <- years + increment_years
+      }
+    }
     
-    # Add citation to the vector
-    citations[ii] <- citation
+    # Check if no records were found after exhausting the date range
+    if (is.null(initial_search) || length(initial_search$ids) == 0) {
+      return(list(citations = paste0('No publications found in the last ', max_range_years, " years."), query = query_term))
+    }
+    
+    # Process the records and generate citations
+    all_citations <- process_records(initial_search, affiliation)
+    
+    return(list(citations = all_citations, query = query_term))
+  } else {
+    stop("Either 'keywords' or 'doi' must be provided.")
   }
-  
-  return(list(citations = citations, query = query_term))  # Return the list of citations and the search query used
 }
 
 
@@ -422,5 +481,4 @@ make_pub_list <- function(citations) {
     '</div>'  # Close the container div
   )))
 }
-
 
