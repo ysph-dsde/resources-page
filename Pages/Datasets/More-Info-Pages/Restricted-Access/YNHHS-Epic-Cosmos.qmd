@@ -35,7 +35,7 @@ suppressPackageStartupMessages({
 "%!in%" <- function(x,y)!("%in%"(x,y))
 
 # Load in the functions.
-source('./PubMed_Search_Functions.R')
+source('./PubMed Search_Functions.R')
 ```
 
 ## Access Overview
@@ -209,45 +209,7 @@ cat(citations_html)
   <button onclick="nextPage()">Next &#9654;</button>
 </div>
 
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    let currentPage = 1;
-    const itemsPerPage = 3;
-    const citationsContent = document.getElementById("citations-content");
-
-    if (citationsContent) {
-      const numPages = Math.ceil(citationsContent.children.length / itemsPerPage);
-
-      function updateCitations() {
-        const items = citationsContent.children;
-        for (let i = 0; i < items.length; i++) {
-          items[i].style.display = (i >= (currentPage - 1) * itemsPerPage && i < currentPage * itemsPerPage) ? "list-item" : "none";
-        }
-      }
-
-      function nextPage() {
-        if (currentPage < numPages) {
-          currentPage++;
-          updateCitations();
-        }
-      }
-
-      function prevPage() {
-        if (currentPage > 1) {
-          currentPage--;
-          updateCitations();
-        }
-      }
-
-      // Initial call to update citations on load
-      updateCitations();
-
-      // Attach functions to window object for button actions
-      window.nextPage = nextPage;
-      window.prevPage = prevPage;
-    }
-  });
-</script>
+<script src="pagination.js"></script>
 ```
 
 ::: {.callout-note collapse="true"}
