@@ -53,7 +53,7 @@ format:
   html:
     theme:
       - flatly
-      - _styles/dsde-like-branding.scss
+      - _styles/styles.scss
     toc: true
     from: markdown+autolink_bare_uris
 

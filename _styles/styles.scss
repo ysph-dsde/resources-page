@@ -1,5 +1,51 @@
 /*-- scss:defaults --*/
 
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'YaleNew';
+  src: url('_styles/Yale_typeface/YaleNew-Roman.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YaleNew';
+  src: url('_styles/Yale_typeface/YaleNew-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'YaleNew';
+  src: url('_styles/Yale_typeface/YaleNew-Italic.otf') format('opentype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'YaleNew';
+  src: url('_styles/Yale_typeface/YaleNew-BoldItalic.otf') format('opentype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* Apply the YaleNew typeface to the whole project */
+body {
+  font-family: 'Barlow', sans-serif !important;
+}
+
+/* Set the font for headings */
+h1, h2 {
+  font-family: 'YaleNew', serif;
+  font-weight: normal;
+}
+h3, h4, h5, h6 {
+  font-family: 'YaleNew', serif;
+  font-weight: bold;
+}
+
+
 // colors
 
 $navbar-bg: #00356B;
@@ -50,6 +96,12 @@ $hover-color: darken($link-color, 10%);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
+}
+.navbar-brand {
+    font-family: 'YaleNew', serif !important;
+}
+.navbar-nav {
+    font-family: 'YaleNew', serif !important;
 }
 
 /* Information tabsets */
@@ -453,7 +505,7 @@ ol, ul {
     transition: width 0.3s ease;
   }
   .sidebar-wrapper.expanded {
-    width: 100%;
+    width: 90%;
   }
   .sidebar {
     padding-top: 60px;
@@ -579,7 +631,7 @@ ol, ul {
     transition: width 0.3s ease;
   }
   .sidebar-wrapper.expanded {
-    width: 100%;
+    width: 290px;
   }
   .sidebar {
     padding-top: 60px;
@@ -610,6 +662,9 @@ ol, ul {
     left: 0;
     transform: translate(0, 0);
     margin: 0 auto;
+  }
+  .sidebar-wrapper.expanded {
+    width: 90%;
   }
 }
 
