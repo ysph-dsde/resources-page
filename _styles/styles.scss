@@ -99,9 +99,11 @@ $hover-color: darken($link-color, 10%);
 }
 .navbar-brand {
     font-family: 'YaleNew', serif !important;
+    font-size: 1.5rem !important;
 }
 .navbar-nav {
     font-family: 'YaleNew', serif !important;
+    font-size: 1.2rem;
 }
 
 /* Information tabsets */
@@ -484,17 +486,21 @@ ol, ul {
   display: none; /* Hide toggler by default */
   position: absolute; /* Align with the sidebar */
   top: 0; /* Align with the top of the sidebar */
-  left: 0;
+  right: -20px; /* Adjusted to move a few points to the left */
   z-index: 1000;
   background: #444;
   color: white;
-  border: 1px solid 525252; /* Add a red border to ensure visibility */
+  border: 1px solid #525252; /* Add a red border to ensure visibility */
   padding: 5px;
   font-size: 1em;
   cursor: pointer;
 }
 .sidebar-wrapper.expanded {
   width: 100%;
+  position: relative;
+}
+.sidebar-wrapper.expanded .sidebar-toggler {
+  right: -20px; /* Adjusted for expanded state as well */
 }
 
 /* Mobile adjustments */
@@ -508,10 +514,13 @@ ol, ul {
     width: 90%;
   }
   .sidebar {
-    padding-top: 60px;
+    padding-top: 0px !important;
+    height: 100vh; /* Full height to enable internal scrolling */
+    overflow-y: auto; /* Added to enable scrolling within the sidebar */
   }
   .sidebar-toggler {
     display: block; /* Show toggler on small screens */
+    right: -10px; /* Adjusted to move a few points to the left for small screens */
   }
 }
 
@@ -619,6 +628,12 @@ ol, ul {
     width: calc(40% - 15px);
     min-width: 320px;
   }
+  .sidebar-wrapper.expanded {
+    width: 290px;
+  }
+  .sidebar-toggler {
+    display: none;
+  }
 }
 @media (max-width: 1030px) {
   .tile {
@@ -634,7 +649,7 @@ ol, ul {
     width: 290px;
   }
   .sidebar {
-    padding-top: 60px;
+    padding-top: 0px !important;
   }
   .sidebar-toggler {
     display: block; /* Show toggler on small screens */
@@ -663,8 +678,22 @@ ol, ul {
     transform: translate(0, 0);
     margin: 0 auto;
   }
+  .sidebar-wrapper {
+    width: 0; /* Default to closed state for small screens */
+    height: 100%;
+    transition: width 0.3s ease;
+  }
   .sidebar-wrapper.expanded {
     width: 90%;
+  }
+  .sidebar {
+    padding-top: 0px !important;
+    height: 100vh; /* Full height to enable internal scrolling */
+    overflow-y: auto; /* Added to enable scrolling within the sidebar */
+  }
+  .sidebar-toggler {
+    display: block; /* Show toggler on small screens */
+    right: -10px; /* Adjusted to move a few points to the left for small screens */
   }
 }
 
@@ -808,16 +837,11 @@ ol, ul {
 
 @media (max-width: 480px) {
   .tile_title {
-    margin-bottom: 0px; /* Reduce vertical spacing */
-  }
-  .tile_title h1 {
-    font-size: 1.2em; /* Adjust font size for smaller screens */
-  }
-  .tile_title h2 {
-    font-size: 1em; /* Adjust font size for smaller screens */
+    margin-bottom: 0px;
   }
   .tile_icon {
-    font-size: 20px; /* Adjust icon size for smaller screens */
+    font-size: 20px;
+    bottom: 25px;
   }
 }
 

@@ -101,16 +101,14 @@ If your institution has an active DURA with All of Us at the preferred tier of a
 
 The following timeline <a href="https://support.researchallofus.org/hc/en-us/articles/9707434641044-DURA-Infographic">infographic</a> shows what to expect from a DURA application if your institution is not already registered. Refer to [Access and DURA Support Questions](https://support.researchallofus.org/hc/en-us/articles/35013049400468-Access-and-DURA-Support-Questions) for common questions about the application process\ [@support].
 
-![](Images/AllofUs_ResearcherWorkbench_DURA_Process_Infographic_Downloaded06012025.png){style="display: block; margin-left: auto; margin-right: auto;" width="620"}
-
+```{=html}
 <div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
   <img id="myImage" src="Images/AllofUs_ResearcherWorkbench_DURA_Process_Infographic_Downloaded06012025.png" alt="Zoomable Image" title="Click to zoom in">
   <figcaption class="caption">
-    The DURA application timeline varies, as institutions may experience different lengths of time during the application process. For additional questions, please contact <a href="mailto:aoudurasupport@vumc.org">aoudurasupport@vumc.org</a>\ [@support].
+    The DURA application timeline varies, as institutions may experience different lengths of time during the application process. For additional questions, please contact <a href="mailto:aoudurasupport@vumc.org">aoudurasupport@vumc.org</a>.
   </figcaption>
 </div>
 
-```{=html}
 <!-- The Modal -->
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
