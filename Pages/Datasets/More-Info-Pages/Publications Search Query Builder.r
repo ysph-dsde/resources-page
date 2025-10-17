@@ -75,3 +75,10 @@ build_search_query(
 
 ## ----------------------------------------------------------------
 ## RESTRICTED ACCESS
+
+## ----------------
+## MarketScan
+
+build_search_query(
+  keywords = c("All of Us"), 
+  affiliation = "Yale School of Public Health", years = 5)

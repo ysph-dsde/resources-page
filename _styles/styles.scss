@@ -428,9 +428,21 @@ ol, ul {
   margin: 0;
 }
 .header p {
-  max-width: 50%;
+  max-width: 60%;
   margin: auto;
+  padding-top: 10px;
   text-align: left;
+}
+
+.header ul {
+  max-width: 60%;
+  margin-left: 24%;
+  margin-right: 20%;
+  margin-top: 10px;
+  text-align: left;
+}
+.header ul li {
+  margin-bottom: 10px;
 }
 
 /* Small screens */
@@ -443,8 +455,18 @@ ol, ul {
         var(--light-header-background) 80%, 
         rgba(211, 211, 211, 0) 100%);
   }
+  .header h1 {
+    padding-top: 10px;
+  }
   .header p {
     max-width: 90%;
+  }
+  .header ul {
+    max-width: 90%;
+    margin-left: 13%;
+    margin-right: 5%;
+    margin-top: 10px;
+    text-align: left;
   }
 }
 
@@ -460,6 +482,9 @@ ol, ul {
   }
   .header p {
     max-width: 90%;
+  }
+  .header ul {
+    margin-top: 20px;
   }
 }
 
@@ -575,13 +600,14 @@ ol, ul {
   display: block;
 }
 .tile h2 {
-  font-size: 18px;
+  font-size: 1rem;
+  font-weight: bold;
   padding: 6px;
   color: #52505d;
   margin: 10px 0 0 0;
 }
 .tile p {
-  font-size: 12px;
+  font-size: 0.8rem;
   padding: 6px;
   color: #52505d;
   margin: 0;
