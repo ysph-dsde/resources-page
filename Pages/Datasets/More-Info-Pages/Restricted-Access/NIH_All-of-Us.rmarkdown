@@ -42,6 +42,8 @@ suppressPackageStartupMessages({
 source('./PubMed Search_Functions.R')
 ```
 
+
+
 Updated: October 10$^{th}$, 2025
 
 ## Overview
@@ -108,6 +110,8 @@ The following timeline <a href="https://support.researchallofus.org/hc/en-us/art
   </figcaption>
 </div>
 
+
+
 ```{=html}
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -118,6 +122,8 @@ The following timeline <a href="https://support.researchallofus.org/hc/en-us/art
 
 <script src="zoom.js"></script>
 ```
+
+
 
 
 #### Step-by-Step Guide
@@ -176,6 +182,8 @@ You must annually complete refresher training, re-attest to the Data User Code o
 
 ## Publications
 
+
+
 ```{r}
 #| echo: false
 
@@ -201,9 +209,13 @@ if(!any(str_detect(citations$citations, "No publications"))) {
 ```
 
 
+
+
 This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.
 
 ::: {style="margin-left: 1rem"}
+
+
 
 ```{r}
 #| echo: false
@@ -224,7 +236,10 @@ cat(citations_html)
 ```
 
 
+
+
 :::
 
 
 ## References
+
