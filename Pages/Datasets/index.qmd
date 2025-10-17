@@ -5,7 +5,7 @@ format:
     code-fold: true
     page-layout: custom
     includes:
-      before-body: sidebar.html 
+      before-body: views/sidebar.html 
 listing:
   - template: views/index_infoFilter.ejs
     contents: data-listings.yml
@@ -14,11 +14,9 @@ listing:
     filter-ui: false
 ---
 
-
 ```{=html}
 <div class="header">
     <h1>Datasets</h1>
-    <p style="max-width: 50%; margin: auto; text-align: left;">Explore our collection of datasets, curated to support a wide range of academic and research pursuits in public health.</p>
+    <p>Explore our collection of datasets, curated to support a wide range of academic and research pursuits in public health.</p>
 </div>
 ```
-

@@ -5,7 +5,7 @@ format:
     code-fold: true
     page-layout: custom
     includes:
-      before-body: sidebar.html 
+      before-body: views/sidebar.html 
 listing:
   - template: views/index.ejs
     contents: resources-listings.yml
@@ -14,10 +14,9 @@ listing:
     filter-ui: false
 ---
 
-
 ```{=html}
 <div class="header">
     <h1>Resources</h1>
-    <p style="max-width: 50%; margin: auto; text-align: left;">Yale offers a rich array of resources to support its academic community. These resources include access to specialized research databases, educational tools, and a variety of digital tools and platforms.</p>
+    <p>Yale offers a rich array of resources to support its academic community. These resources include access to specialized research databases, educational tools, and a variety of digital tools and platforms.</p>
  </div>
 ```

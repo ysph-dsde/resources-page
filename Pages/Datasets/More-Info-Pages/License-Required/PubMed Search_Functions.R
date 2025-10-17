@@ -32,12 +32,12 @@
 ##       detailed PubMed records in XML format. The function processes the XML 
 ##       data to retrieve authors and their affiliations for each article.
 ##
-##    5. get_citations: Searches for citations in PubMed using specified keywords, 
-##       affiliation, DOI, and a date range. The function dynamically adjusts the 
-##       search range if no records are found, incrementing the range up to a 
-##       specified maximum. It fetches detailed records, extracts author 
-##       affiliations, and formats the citations while highlighting authors from 
-##       a specified affiliation.
+##    5. get_citations: Searches for citations in PubMed using specified 
+##       keywords, affiliations, highlight names, DOI, and a date range. The 
+##       function dynamically adjusts the search range if no records are found, 
+##       incrementing the range up to a specified maximum. It fetches detailed 
+##       records, extracts author affiliations, and formats the citations while 
+##       highlighting authors from specified affiliations and specific names.
 ##
 ##    6. make_pub_list: This function processes a list of citations and formats 
 ##       them into an HTML structure with list items (`<li>`) and a search query 
@@ -254,21 +254,25 @@ extract_author_affiliations <- function(xml_data) {
 
 
 
-get_citations <- function(keywords = NULL, affiliation = NULL, doi = NULL, start_years = 5, increment_years = 5, max_range_years = 25, max_results = 1000) {
+get_citations <- function(keywords = NULL, affiliations = NULL, highlight_names = NULL, doi = NULL, start_years = 5, increment_years = 5, max_range_years = 25, max_results = 1000) {
   #' @description 
-  #' Searches for citations in PubMed using specified keywords, affiliation, DOI, and
-  #' a date range. The function dynamically adjusts the search range if no 
-  #' records are found, incrementing the range up to a specified maximum. It 
-  #' fetches detailed records, extracts author affiliations, and formats the 
-  #' citations while highlighting authors from a specified affiliation.
+  #' Searches for citations in PubMed using specified keywords, affiliations, 
+  #' highlight names, DOI, and a date range. The function dynamically adjusts 
+  #' the search range if no records are found, incrementing the range up to a 
+  #' specified maximum. It fetches detailed records, extracts author affiliations, 
+  #' and formats the citations while highlighting authors from specified 
+  #' affiliations and specific names.
   #'
   #' @param keywords A string or vector of strings specifying the keywords to 
   #'                 search within the Title/Abstract fields. If a vector is 
   #'                 provided, each keyword will be searched with "OR" operator. 
   #'                 If a single string with keywords separated by "AND" is 
   #'                 provided, it will be searched together.
-  #' @param affiliation A string specifying the affiliation to include in the 
-  #'                    search term. If NULL, this parameter is ignored.
+  #' @param affiliations A string or vector of strings specifying the affiliations 
+  #'                     to include in the search term. If NULL, this parameter 
+  #'                     is ignored.
+  #' @param highlight_names A vector of strings specifying specific author names 
+  #'                        to be highlighted. If NULL, this parameter is ignored.
   #' @param doi A string or vector of strings specifying the DOI to search for. 
   #'            If provided, other parameters are ignored.
   #' @param start_years An integer specifying the initial number of years to 
@@ -287,7 +291,7 @@ get_citations <- function(keywords = NULL, affiliation = NULL, doi = NULL, start
   #' 
   #' @examples
   #' # Fetching citations with specified parameters
-  #' citations_output <- get_citations(keywords = "NHANES", affiliation = "Yale School of Public Health", start_years = 5)
+  #' citations_output <- get_citations(keywords = "NHANES", affiliations = c("Yale School of Public Health", "Harvard Medical School"), highlight_names = c("John Doe", "Jane Smith"), start_years = 5)
   
   fetch_detailed_metadata <- function(pmid) {
     # Fetch detailed summary for each PubMed ID (PMID)
@@ -310,7 +314,7 @@ get_citations <- function(keywords = NULL, affiliation = NULL, doi = NULL, start
     }
   }
   
-  process_records <- function(initial_search, affiliation = NULL) {
+  process_records <- function(initial_search, affiliations = NULL, highlight_names = NULL) {
     if (is.null(initial_search) || length(initial_search$ids) == 0) {
       return(NULL)
     }
@@ -333,10 +337,17 @@ get_citations <- function(keywords = NULL, affiliation = NULL, doi = NULL, start
       pmid <- article$pmid
       authors_info <- article$authors
       
-      # Format author names, bolding those affiliated with the specified institution (if affiliation is not NULL)
+      # Format author names, bolding those affiliated with the specified institutions or specified names
       authors <- sapply(authors_info, function(author) {
         name <- paste(author$fore_name, author$last_name)
-        if (!is.null(affiliation) && !is.null(author$affiliations) && any(grepl(affiliation, author$affiliations))) {
+        highlight <- FALSE
+        if (!is.null(affiliations) && !is.null(author$affiliations) && any(sapply(affiliations, function(aff) any(grepl(aff, author$affiliations))))) {
+          highlight <- TRUE
+        }
+        if (!is.null(highlight_names) && name %in% highlight_names) {
+          highlight <- TRUE
+        }
+        if (highlight) {
           name <- paste0("<strong>", name, "</strong>")  # Use HTML for bold text
         }
         return(name)
@@ -378,7 +389,7 @@ get_citations <- function(keywords = NULL, affiliation = NULL, doi = NULL, start
         return(NULL)
       })
       
-      citations <- process_records(initial_search, affiliation)
+      citations <- process_records(initial_search, affiliations, highlight_names)
       if (!is.null(citations)) {
         all_citations[[i]] <- citations
       }
@@ -402,7 +413,7 @@ get_citations <- function(keywords = NULL, affiliation = NULL, doi = NULL, start
     
     # Loop through search attempts, incrementing the year range until records are found or the maximum range is reached
     while (years <= max_range_years && !records_found) {
-      query_term <- build_search_query(keywords, affiliation, years)
+      query_term <- build_search_query(keywords, affiliations, years)
       
       # Initial search on PubMed
       initial_search <- tryCatch({
@@ -425,7 +436,7 @@ get_citations <- function(keywords = NULL, affiliation = NULL, doi = NULL, start
     }
     
     # Process the records and generate citations
-    all_citations <- process_records(initial_search, affiliation)
+    all_citations <- process_records(initial_search, affiliations, highlight_names)
     
     return(list(citations = all_citations, query = query_term))
   } else {

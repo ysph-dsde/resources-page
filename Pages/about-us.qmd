@@ -31,31 +31,20 @@ We aim to:
 ```
 :::
 
-
-::::::: column-page-inset
-:::::: columns
-::: {.column width="40%"}
+::: column-page-inset
 ```{=html}
-<div class="cool-block">
-  <h2 style="pointer-events: none;">Our Vision</h2>
-  <p>We strive to make data science knowledge, tools, and resources available to communities near and far, promoting equitable scientific discoveries, policy decisions, public health practice, and healthcare.</p>
+<div class="cool-container">
+  <div class="cool-block left">
+    <h2 style="pointer-events: none;">Our Vision</h2>
+    <p>We strive to make data science knowledge, tools, and resources available to communities near and far, promoting equitable scientific discoveries, policy decisions, public health practice, and healthcare.</p>
+  </div>
+  <div class="cool-block right">
+    <h2 style="pointer-events: none;">Our Mission</h2>
+    <p>Our mission is to reduce the barriers in utilization of data science and AI in public health training, research, and practice. We plan on achieving this by: enhancing education, leading responsible innovation, building infrastructure, creating a community, forming data science alliances, and promoting open knowledge locally and globally.</p>
+  </div>
 </div>
 ```
 :::
-
-::: {.column width="2%"}
-:::
-
-::: {.column width="58%"}
-```{=html}
-<div class="cool-block">
-  <h2 style="pointer-events: none;">Our Mission</h2>
-  <p>Our mission is to reduce the barriers in utilization of data science and AI in public health training, research, and practice. We plan on achieving this by: enhancing education, leading responsible innovation, building infrastructure, creating a community, forming data science alliances, and promoting open knowledge locally and globally.</p>
-</div>
-```
-:::
-::::::
-:::::::
 
 \
 
