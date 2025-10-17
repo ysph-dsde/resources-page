@@ -9,7 +9,7 @@
   back-to-top-navigation: true
 ---
 
-![](Images/Wordmark-Data-Science-and-Data-Equity-black.png){style="display: block; margin-left: auto; margin-right: auto;" width="700"}\
+![](Images/Wordmark-Data-Science-and-Data-Equity-black.png){style="display: block; margin-left: auto; margin-right: auto;" width="620"}\
 
 
 Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice. 
@@ -93,7 +93,7 @@ The resources and datasets are presented in tiles that contain salient details a
 
 <i class="bi bi-people icon-red"></i> \ Links to the websites of the research groups responsible for creating the dataset/resource.
 
-<i class="bi bi-journal-text icon-red"></i> \ Links to example publications utilizing the dataset/resource.
+<i class="bi bi-journal-text icon-red"></i> \ Links to example publications that utilize the dataset/resource provided by the creators.
 
 <i class="bi bi-info-circle icon-red"></i> \ Links to a **Resource Navigation Tool** webpage with additional details about the dataset.
 
