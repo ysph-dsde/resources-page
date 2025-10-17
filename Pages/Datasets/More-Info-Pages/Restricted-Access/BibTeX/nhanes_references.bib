@@ -1,0 +1,558 @@
+@unpublished{Akinbami2017,
+   abstract = {Background
+The National Health and Nutrition Examination Survey (NHANES) produces national estimates that are representative of the total noninstitutionalized civilian U.S. population. The NHANES sample is selected using a complex, four-stage sample design. NHANES sample weights are used by analysts to produce estimates of the health statistics that would have been obtained if the entire sampling frame (the noninstitutionalized civilian U.S. population) had been surveyed. Sampling errors should be calculated for all survey estimates to assess their statistical reliability. Variance approximation procedures are required to provide reasonable, approximately unbiased, and design-consistent variance estimates for complex sample surveys like NHANES. The 2017–March 2020 files represent a unique public use data release from NHANES. The coronavirus disease 2019 (COVID-19) pandemic required suspension of data collection in March 2020. As a result, the partially completed NHANES 2019–2020 cycle was not nationally representative. Therefore, the 2019–March 2020 data were combined with the data from the 2017–2018 cycle to create the nationally representative 2017–March 2020 prepandemic data files.
+
+Objective
+This report describes the creation of the NHANES 2017–March 2020 prepandemic data files, including the selection of the appropriate NHANES sample design (2015–2018) to create sample weights and variance units for public-use data files. Additionally, the development of a factor applied to the primary sampling units to adjust the 2017–March 2020 data to fit the NHANES 2015–2018 sample design is described. Analyses to assess representativeness of the target population were performed, and a simulation to replicate the impact of interrupted data collection using earlier NHANES cycles was undertaken. Analytic guidance specific to use for prepandemic data files is also included.},
+   author = {Lara J. Akinbami M.D. and Te-Ching Chen Ph.D. and Orlando Davy M.P.H. and Cynthia L. Ogden Ph.D. and Steven Fink M.A. and Jason Clark M.S. and Minsun K. Riddles Ph.D. and Leyla K. Mohadjer Ph.D.},
+   city = {Hyattsville, MD},
+   doi = {https://dx.doi.org/10.15620/cdc:115434},
+   institution = {National Center for Health Statistics},
+   keywords = {NHANES,sampling,variance estimation,weighting adjustment},
+   month = {5},
+   title = {National Health and Nutrition Examination Survey, 2017–March 2020 prepandemic file: Sample design, estimation, and analytic guidelines},
+   url = {https://www.cdc.gov/nchs/data/series/sr_02/sr02-190.pdf},
+   year = {2022}
+}
+@misc{about_nhanes,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   month = {12},
+   title = {About NHANES},
+   url = {https://www.cdc.gov/nchs/nhanes/about/index.html},
+   year = {2024}
+}
+@misc{achievements_nhanes,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   month = {12},
+   title = {What NHANES Data Have Achieved},
+   url = {https://www.cdc.gov/nchs/nhanes/publications/data-accomplishments.html},
+   year = {2024}
+}
+@misc{history_nhanes,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   month = {11},
+   title = {History},
+   url = {https://archive.cdc.gov/#/details?q=nhanes&start=0&rows=10&url=https://www.cdc.gov/nchs/nhanes/history.htm},
+   year = {2015}
+}
+@misc{data_nhanes,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES Questionnaires, Datasets, and Related Documentation},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/default.aspx}
+}
+@misc{nhes_I,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHES I (1959-1962)},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/nhes1/default.aspx}
+}
+@misc{nhes_II,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHES II (1963-1965)},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/nhes2/default.aspx}
+}
+@misc{growth_chart,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   month = {11},
+   title = {NHANES 1963-1994: Growth Chart Data Documentation, Codebook, and Frequencies},
+   url = {https://wwwn.cdc.gov/nchs/data/nhes123/GROWTHCH.htm},
+   year = {2012}
+}
+@misc{nhes_III,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHES III (1966-1970)},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/nhes3/default.aspx}
+}
+@misc{nhanes_I,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES I (1971-1974)},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/nhanes1/default.aspx}
+}
+@misc{nhanes_II,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES II (1976-1980)},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/nhanes2/default.aspx}
+}
+@misc{hhanes,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {Hispanic HANES},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/hhanes/default.aspx}
+}
+@techReport{historic_nhanes_content,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   institution = {National Center for Health Statistics},
+   keywords = {Matrix,NHANES},
+   month = {5},
+   title = {Historic NHANES Contents Matrix},
+   url = {https://wwwn.cdc.gov/nchs/data/nhanes/Historical_NHANES_component_matrix.pdf},
+   year = {2009}
+}
+@techReport{continuous_brochure,
+   abstract = {The National Health and Nutrition Examination Survey (NHANES) is a program of studies designed to assess the health and nutritional status of adults and children in the United States. The survey is unique in combining interviews with physical examinations and laboratory tests.},
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   institution = {National Center for Health Statistics},
+   keywords = {NHANES Survey Content Brochure},
+   title = {National Health and Nutrition
+Examination Survey: 1999–2022 Survey Content Brochure},
+   url = {https://wwwn.cdc.gov/nchs/data/nhanes/survey_contents.pdf},
+   year = {2022}
+}
+@misc{nhanes_III,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES III (1988-1994)},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/nhanes3/default.aspx}
+}
+@unpublished{nhanes_III_adult_data_file,
+   abstract = {The National Center for Health Statistics (NCHS) of the Centers for Disease Control and Prevention (CDC) collects, analyzes, and disseminates data on the health status of U.S. residents. The results of surveys, analyses, and studies are made known through a number of data release mechanisms including publications, mainframe computer data files, CD-ROMs (Search and Retrieval Software, Statistical Export and Tabulation System (SETS)), and the
+Internet (http://www.cdc.gov/nchswww/nchshome.htm).
+
+The National Health and Nutrition Examination Survey (NHANES) is a periodic survey conducted by NCHS. The third National Health and Nutrition Examination Survey (NHANES III), conducted from 1988 through 1994, was the seventh in a series of these surveys based on a complex, multi-stage sample plan. It was designed to provide national estimates of the health and nutritional status of the United States' civilian, noninstitutionalized population aged two months and older.
+
+Data from NHANES III are being released in five public release data files:
+- NHANES III Household Adult Data File (Catalog Number 77560)
+- NHANES III Household Youth Data File (Catalog Number 77550)
+- NHANES III Examination Data File (Catalog Number 76200)
+- NHANES III Laboratory Data File (Catalog Number 76300)
+- NHANES III Dietary Recall Data Files (Catalog Number 76700)
+
+A table showing the location of the interview and examination components in the five NHANES III public release data files follows.},
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   city = {Hyattsville, MD},
+   institution = {National Center for Health Statistics},
+   month = {12},
+   pages = {5},
+   title = {NHANES III Household Adult Data File Documentation},
+   url = {https://wwwn.cdc.gov/nchs/data/nhanes3/1a/ADULT-acc.pdf},
+   year = {1996}
+}
+@misc{nhanes_most_protocols,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES Survey Methods and Analytic Guidelines},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx}
+}
+@misc{nhanes_2019_20,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES 2019-2020 Overview},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/continuousnhanes/overview.aspx?BeginYear=2019}
+}
+@misc{NHEFS,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES I - Epidemiologic Followup Study (NHEFS)},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/nhefs/default.aspx}
+}
+@misc{NNYFS,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES National Youth Fitness Survey (NNYFS) 2012},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/search/nnyfs12.aspx}
+}
+@unpublished{NYFS_measurements,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   institution = {National Center for Health Statistics},
+   keywords = {Fitness,Measurements,Measures,Youth},
+   month = {11},
+   title = {NYFS National Youth Fitness Survey Health Measurements List},
+   url = {https://archive.cdc.gov/www_cdc_gov/nchs/data/nnyfs/health_measurements.pdf},
+   year = {2011}
+}
+@misc{NNYFS_whats_new,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {Centers for Disease Control and Prevention Archive},
+   month = {2},
+   title = {What's New},
+   url = {https://archive.cdc.gov/#/details?url=https://www.cdc.gov/nchs/nnyfs/new_nnyfs.htm},
+   year = {2025}
+}
+@unpublished{NNYFS_responses,
+   abstract = {Unweighted Response Rates for the NHANES National Youth Fitness Survey (NNYFS), 2012: by Gender and Age.},
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   institution = {National Center for Heath Statistics},
+   keywords = {NNYFS 2012 Response Rates},
+   title = {NNYFS 2012 Response Rates},
+   url = {https://archive.cdc.gov/www_cdc_gov/nchs/data/nnyfs/response_rates_cps/rrt_nnyfs.pdf},
+   year = {2012}
+}
+@misc{surplus_sera,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES III (1988-1994) - Data Files},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/nhanes3/datafiles.aspx#augmented}
+}
+@misc{webinars,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   month = {12},
+   title = {Webinars},
+   url = {https://www.cdc.gov/nchs/nhanes/updates/index.html?CDC_AA_refVal=https\%3A\%2F\%2Fwww.cdc.gov\%2Fnchs\%2Fnhanes\%2Fmodules\%2Fwebinars.html},
+   year = {2024}
+}
+@misc{tutorials,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   title = {NHANES Tutorials},
+   url = {https://wwwn.cdc.gov/nchs/nhanes/tutorials/default.aspx?CDC_AA_refVal=https\%3A\%2F\%2Fwww.cdc.gov\%2Fnchs\%2Fnhanes\%2Fmodules\%2Fdata-analysis-tutorial.html}
+}
+@misc{biospecimen_program,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   month = {12},
+   title = {NHANES Biospecimen Program},
+   url = {https://www.cdc.gov/nchs/nhanes/biospecimen/index.html?CDC_AA_refVal=https\%3A\%2F\%2Fwww.cdc.gov\%2Fnchs\%2Fnhanes\%2Fmodules\%2Fbiospecimen-redirect.html},
+   year = {2024}
+}
+@misc{data_use_agreement,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   month = {9},
+   title = {Data User Agreement},
+   url = {https://www.cdc.gov/nchs/policy/data-user-agreement.html},
+   year = {2024}
+}
+@misc{rdc,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   journal = {National Center for Health Statistics},
+   month = {11},
+   title = {Research Data Center (RDC)},
+   url = {https://www.cdc.gov/rdc/},
+   year = {2024}
+}
+@unpublished{data_release_policy,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   city = {Hyattsville, MD},
+   institution = {National Center for Health Statistics},
+   keywords = {NHANES Data Release and Access Policy},
+   title = {NHANES Data Release and Access Policy},
+   url = {https://www.cdc.gov/nchs/nhanes/biospecimens/biospecimens.htm.}
+}
+@unpublished{protected_info_guide,
+   author = {Centers for Disease Control and Prevention (CDC) and National Center for Health Statistics (NCHS)},
+   city = {Hyattsville, MD},
+   institution = {National Center for Health Statistics},
+   month = {8},
+   title = {NHANES Protected Data-Information for NHANES Data Users},
+   url = {https://www.cdc.gov/rdc/b6pubeyond/pub600.htm},
+   year = {2022}
+}
+@misc{rdc_process,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {6},
+   title = {Application Process},
+   url = {https://www.cdc.gov/rdc/application-process/index.html},
+   year = {2025}
+}
+@misc{rdc_preparing,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Preparing for Application Submission},
+   url = {https://www.cdc.gov/rdc/application-process/submission.html?CDC_AAref_Val=https://www.cdc.gov/rdc/leftbrch/presubmit.htm},
+   year = {2024}
+}
+@misc{rdc_accessing_restricted,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Accessing Restricted Data},
+   url = {https://www.cdc.gov/rdc/application-process/accessing-restricted-data.html?CDC_AAref_Val=https://www.cdc.gov/rdc/leftbrch/UseRestricdt.htm},
+   year = {2024}
+}
+@misc{data_locations,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Location of Access},
+   url = {https://www.cdc.gov/rdc/location-of-access/index.html},
+   year = {2024}
+}
+@misc{fees_invoicing,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Fees and Invoicing},
+   url = {https://www.cdc.gov/rdc/application-process/fees-and-invoicing.html},
+   year = {2024}
+}
+@misc{nchs_rdc,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {NCHS RDC Locations},
+   url = {https://www.cdc.gov/rdc/location-of-access/nchs-rdc.html},
+   year = {2024}
+}
+@misc{fsrdc,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Federal Statistical RDC},
+   url = {https://www.cdc.gov/rdc/location-of-access/federal-statistical-rdc.html},
+   year = {2024}
+}
+@misc{rdc_review_committee,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Application Review and Committee Decision},
+   url = {https://www.cdc.gov/rdc/application-process/review-committee-decision.html},
+   year = {2024}
+}
+@misc{rdc_reference_materials,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {7},
+   title = {RDC Reference Materials},
+   url = {https://www.cdc.gov/rdc/application-process/reference-materials.html},
+   year = {2025}
+}
+@misc{confid_disc,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Confidentiality and Disclosure},
+   url = {https://www.cdc.gov/rdc/application-process/confidentiality-and-disclosure.html},
+   year = {2024}
+}
+@misc{publishing_guides,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Publishing Guidelines},
+   url = {https://www.cdc.gov/rdc/publishing-guidelines/index.html},
+   year = {2024}
+}
+@misc{data_output,
+   author = {Centers for Disease Control and Prevention (CDC) and Research Data Center (RDC)},
+   journal = {Research Data Center},
+   month = {11},
+   title = {Output Policies and Procedures},
+   url = {https://www.cdc.gov/rdc/output/index.html},
+   year = {2024}
+}
+@unpublished{TeChing2020,
+   abstract = {DHHS Publication No. 2020–1384
+
+Background
+The purpose of the National Health and Nutrition Examination Survey (NHANES) is to produce national estimates representative of the total noninstitutionalized civilian U.S. population. The sample for NHANES is selected using a complex, four-stage sample design. NHANES sample weights are used by analysts to produce estimates of the health-related statistics that would have been obtained if the entire sampling frame (i.e., the noninstitutionalized civilian U.S. population) had been surveyed. Sampling errors should be calculated for all survey estimates to aid in determining their statistical reliability. For complex sample surveys, exact mathematical formulas for variance estimates that fully incorporate the sample design are usually not available. Variance approximation procedures are required to provide reasonable, approximately unbiased, and designconsistent estimates of variance.
+
+Objective
+This report describes the NHANES 2015−2018 sample design and the methods used to create sample weights and variance units for the public-use data files, including sample weights for selected subsamples, such as the fasting subsample. The impacts of sample design changes on estimation for NHANES 2015−2018 are described. Approaches that data users can use to modify sample weights when combining survey cycles or when combining subsamples are also included.},
+   author = {Te-Ching Chen Ph.D. and Jason Clark M.S. and Minsun K. Riddles Ph.D. and Leyla K. Mohadjer Ph.D. and Tala H. I. Fakhouri Ph.D. M.P.H.},
+   city = {Hyattsville, MD},
+   institution = {National Center for Health Statistics},
+   keywords = {mobile examination center (MEC),variance estimation,weighting},
+   month = {4},
+   pages = {8-10;15},
+   title = {National Health and Nutrition Examination Survey, 2015−2018: Sample design and estimation procedures},
+   url = {https://www.cdc.gov/nchs/data/series/sr_02/sr02-184-508.pdf},
+   year = {2020}
+}
+@unpublished{Cox1996,
+   author = {Christine S. Cox and Sandra T. Rothwell and Mike Mussollno and Jennifer H. Madans and Dawn M. Scott and Madelyn A. Lane and Keith Zevallos and Cordell Golden and Cynthia Reuben and Joel C. Kleinman and Jacob J. Feldman},
+   city = {Hyattsville, MD},
+   institution = {National Center for Heath Statistics},
+   month = {7},
+   pages = {13},
+   title = {Public Use Data Tape Documentation NHANES I Epidemiologic Followup Study, 1992},
+   url = {https://wwwn.cdc.gov/nchs/data/nhefs/1992intv.pdf},
+   year = {1996}
+}
+@unpublished{Feindleib1994,
+   abstract = {This report describes the plan and operation of the third National Health and Nutrition Examination Survey, The sample for this study of the U,S, population was selected from households in 81 counties across the United States, About 40,000 persons 2 months of age and over were selected, including large samples of both young and old persons, About 12,000 of the sample persons were black Americans, 12,000 were Mexican-Americans, and the remaining 16,000 were of all other race and ethnicity groups, Ail selected persons were asked to complete an extensive interview and an examination in a large mobile examination center, The survey period is 1988–94, consisting of two phases of equal length and sample size, Both Phase 1 and Phase 2 were random samples of the US, population living in households. DHHS Publication No, (PHS) 94-1308.},
+   author = {Manning Feindleib M.D. Dr.P.H. and Jack R. Anderson and Jacob J. Feldman Ph.D. and Gail F. Fisher Ph.D. and Peter L. Hurley and Robert A. Israel and Stephen E. Nieberding and Charles J. Rothwell and Monroe G. Sirken Ph.D. and Robert S. Murphy M.S.P.H. and Kurt R. Maurer Ph.D. and Ronette Briefel Dr.P.H. R.D. and Clifford Johnson M.S.P.H. and Katherine M. Flegal Ph.D. and Anne C. Looker Ph.D. R.D. and Christopher T. Sempos Ph.D. and Jean S. Findlay M.S. and Vicki L. Burt SC.M. R.N. and Robert Krasowski M.S. M.A .},
+   city = {Hyattsville, MD},
+   institution = {U.S. Department of Health and Human Services},
+   month = {7},
+   pages = {6-9; 27-29},
+   title = {Plan and Operation of the Third National Health and Nutrition Examination Survey 1988-94},
+   url = {https://www.cdc.gov/nchs/data/series/sr_01/sr01_032.pdf},
+   year = {1994}
+}
+@unpublished{Feinleib1985,
+   abstract = {This report describes the plan and operation of the Hispanic Health and Nutrition Examination Survey (HHANES). The population for this study consisted of Mexican-Americans living in the five Southwestern States, Cuban-Americans living in Dade County, Florida, and Puerto Ricans living in portions of the States of New York, Connecticut, and New Jersey. Persons 6 months-74 years of age were included in the study. DHHS Publication No. (PHS) 85-1321.},
+   author = {Manning Feinleib M. D. Dr. P. H and Robert A. Israel and Jacob J. Feldman Ph. D. and Game J. Losee and Alvan O. Zarate Ph. D. and E. Earl Bryant and Stephen E. Nieberding and Gail F. Fisher Ph. D. and Monroe G. Sirken Ph. D. and Peter L. Hurley and Alice Haywood and Mary Grace Kovm Dr. P. H. and Robert S. Murphy and Catherine E. Woteki Ph. D. and Clifford L. Johnson and Suzanne G. Haynes Ph. D. and Kurt R. Maurer and Martin A. Baum Ph. D. and George A. Schnack and Donald E. Boesch and Gerald C. Sanders and William M. Spillane and William H. Senter and James C. Jacks and Phillip R. Beattie and David L. Larson and Sandra Surber Smith and John E. Mounts and Monroe G. Sirken Ph. D. and James T. Massey Ph. D.},
+   city = {Hyattsville, MD},
+   institution = {National Center for Health Statistics},
+   month = {10},
+   pages = {8-13; 30-37},
+   title = {Plan and Operation of the Hispanic Health and Nutrition Examination Survey 1982-84},
+   url = {https://www.cdc.gov/nchs/data/series/sr_01/sr01_019.pdf},
+   year = {1985}
+}
+@unpublished{Harvey1981,
+   author = {Clair Harvey and Kurt Maurer and Everette Collins and Evelyn Stanton and Dorothy Blodgett and Mary Dudley},
+   city = {Hyattsville, MD},
+   institution = {National Center for Health Statistics},
+   month = {5},
+   title = {Public Use Data Tape Documentation Medical History Questionnaire, Ages 1-11 National Health and Nutrition Examination Survey 1971-75},
+   url = {https://wwwn.cdc.gov/nchs/data/nhanes1/4067.pdf},
+   year = {1981}
+}
+@misc{sap_portal,
+   abstract = {ResearchDataGov.org is the home of the Standard Application Process (SAP): a single portal to discover and apply for access to confidential data assets in the federal statistical system (FSS).},
+   author = {Inter-University Consortium for Political and Social Research (ICPSR) at the University of Michigan and National Center for Science and Engineering Statistics},
+   journal = {Research Data Gov},
+   title = {About - RDG},
+   url = {https://www.researchdatagov.org/about}
+}
+@unpublished{rdg_user_guide,
+   author = {Inter-University Consortium for Political and Social Research (ICPSR) at the University of Michigan and National Center for Science and Engineering Statistics},
+   institution = {National Center for Science and Engineering Statistics},
+   month = {4},
+   pages = {3-22},
+   title = {ResearchDataGov.org (RDG) User Guide},
+   url = {https://manager.researchdatagov.org/RDG_User_Guide.pdf},
+   year = {2025}
+}
+@unpublished{Rothwell2014,
+   abstract = {DHHS Publication No. 2020–1384.
+
+Background
+Data collection for the National Health and Nutrition Examination Survey (NHANES) consists of a household screener, an interview, and a physical examination. The screener primarily determines whether any household members are eligible for the interview and examination. Eligibility is established using preset selection probabilities for the desired demographic subdomains. After an eligible sample person is selected, the interview collects person-level demographic, health, and nutrition information, as well as information about the household. The examination includes physical measurements, tests such as hearing and dental examinations, and the collection of blood and urine specimens for laboratory testing.
+
+Objectives
+This report provides some background on the NHANES program, beginning with the first survey cycle in the 1970s and highlighting significant changes since its inception. The report then describes the broad design specifications for the 2011–2014 survey cycle, including survey objectives, domain and precision specifications, and operational requirements unique to NHANES. The report also describes details of the survey design, including the calculation of sampling rates and sample selection methods. Documentation of survey content, data collection procedures, estimation methods, and methods to assess nonsampling errors are reported elsewhere.},
+   author = {Clifford L. Johnson M.S.P.H. and Sylvia M. Dohrmann M.S. and Vicki L. Burt Sc.M. R.N. and Leyla K. Mohadjer Ph.D.},
+   city = {Hyattsville, MD},
+   institution = {National Center for Health Statistics},
+   keywords = {NHANES,sampling rates,weighting},
+   month = {3},
+   pages = {7-11},
+   title = {National Health and Nutrition Examination Survey: Sample Design 2011–2014},
+   url = {https://www.cdc.gov/nchs/data/series/sr_02/sr02_162.pdf},
+   year = {2014}
+}
+@unpublished{Linder1965,
+   abstract = {A description of the first-cycle program of the NHES, including the statistical design, the pattern of examination, and the field procedures.},
+   author = {Forrest E. Linder and Theodore D. Woolsey and O. K. Sagen Ph.D. and Walt R. Simmons M.A. and Alice M. Waterhouse M.D. and James E. Kelly D.D.S. and Louis R. Stolcis M.A. and Iwao M. Mariyama Ph.D. and Robert D. Grove Ph.D. and Philip S. Lawrence Sc.D. and Monroe G. Sirken Ph.D. and Arthur J. McDowell and Sidney Binder},
+   city = {Washington DC},
+   institution = {U.S. Department of Health and Human Services},
+   month = {7},
+   pages = {6-12; 20-23},
+   title = {Plan and Initial Program of the Health Examination Survey Public Health Service Publication National Health Examination Surveys 1959-62},
+   url = {https://www.cdc.gov/nchs/data/series/sr_01/sr01_004.pdf},
+   year = {1965}
+}
+@unpublished{continuous_analytical_note,
+   abstract = {The sample design of NHANES 2007-2010 is different than the sample designs for earlier cycles of the continuous NHANES particularly with regard to oversampling of demographic subgroups of the population. This analytic note provides guidance for analyses that are based on survey data from 2007-2010 combined with data from earlier periods.},
+   author = {National Center for Health Statistics},
+   keywords = {Analytic Note Regarding 2007-2010 Survey Design Changes and Combining Data Across other NHANES Survey Cycles},
+   title = {Analytic Note Regarding 2007-2010 Survey Design Changes and Combining Data Across other Survey Cycles},
+   url = {https://wwwn.cdc.gov/nchs/data/nhanes/analyticguidelines/07-10-analytic-note.pdf}
+}
+@book{nhne_design,
+   abstract = {Sponsor: U.S. Environmental Protection Agency; Bookshelf ID: NBK234172},
+   author = {National Research Council (US) Committee on National Monitoring of Human Tissues and Board on Environmental Studies and Toxicology and Commission on Life Sciences},
+   city = {Washington, DC},
+   journal = {National Research Council (US) Committee on National Monitoring of Human Tissues},
+   publisher = {National Academies Press},
+   title = {Monitoring Human Tissues for Toxic Substances. Appendix D - The National Health and Nutrition Examination Survey},
+   url = {https://www.ncbi.nlm.nih.gov/books/NBK234172/},
+   year = {1991}
+}
+@unpublished{Rice1973,
+   abstract = {A description of a national health and nutrition examination survey of a probability sample of the U.S. population 1-74 years of age: Part A-Development, plan, and operation. Part B-Data collection forms of the survey. DHEW Publication No. (PHS) 79-1310.},
+   author = {Dorothy P. Rice and Robert A. Israel and Jacob J. Feldman Ph.D. and Gail F. Fisher Ph.D. and Elijah L. White and JR., Ph.D., James T. Baird and Robert C. Huber and Ph.D., Monroe G. Sirken and Peter L. Hurley and Ph.D., James M. Robey and Ph.D., Paul E. Leaverton and Alice Haywood},
+   city = {Hyattsville, MD},
+   institution = {U.S. Department of Health and Human Services},
+   pages = {20-23},
+   title = {Plan and Operation of the Health and Nutrition Examination Survey 1971-1973 - Part A},
+   url = {https://www.cdc.gov/nchs/data/series/sr_01/sr01_010a.pdf},
+   year = {1973}
+}
+@unpublished{Rice1981,
+   abstract = {A description of the National Health and Nutrition Examination Survey of a probability sample of the U.S. population 6 months through 74 years of age. DHHS publication; no. (PHS) 81-1317.},
+   author = {Dorothy P. Rice and Robert A. Israel and Jacob J. Feldman Ph.D. and Gail F. Fisher Ph.D. and Garrie J. Losee and Alvan O. Zarate Pj.D. and Earl E. Bryant and Robert C. Huber and Monroe G. Sirken Ph.D. and Peter L. Hurley and Alice Haywood and Robert S. Murphy and Jean Roberts and Sidney Abraham and Kurt R. Maurer and Phillip R. Beattie and Henry W. Miller and James T. Massey Ph.D.},
+   city = {Hyattsville, MD},
+   institution = {U.S. Department of Health and Human Services},
+   keywords = {DHHS publication,no (PHS) 81-1317 [DNLM},
+   month = {7},
+   pages = {7-9; 21-25},
+   title = {Plan and Operations of the Second National Health and Nutrition Survey, 1976-80 Programs and Collection Procedures},
+   url = {https://www.cdc.gov/nchs/data/series/sr_01/sr01_015.pdf},
+   year = {1981}
+}
+@unpublished{Secretary1967,
+   abstract = {A description of the Health Examination Survey’s second cycle, examinations of a probability sample of United States
+children 6-11 years of age. Library of Congress Catalog Card Number 67-61853.},
+   author = {John W Gardner Secretary and William H Stewart},
+   city = {Washington, DC},
+   institution = {U.S. Department of Health and Human Services},
+   month = {10},
+   pages = {8-15},
+   title = {Plan, Operation, and Response Results of a Program of Children's 6-11 Examinations National Health Examination Surveys 1963-65},
+   url = {https://www.cdc.gov/nchs/data/series/sr_01/sr01_005.pdf},
+   year = {1967}
+}
+@unpublished{Terry2021,
+   abstract = {Objective
+The continuous National Health and Nutrition Examination Survey began data collection in 1999 and proceeded without interruption until operations were suspended in March 2020 in response to the COVID-19 pandemic. Once the Division of Health and Nutrition Examination Surveys was able to determine and resume safe field operations, the next survey cycle was conducted between August 2021 and August 2023. This report describes the survey content, procedures, and methodologies implemented in the August 2021–August 2023 National Health and Nutrition Examination Survey cycle.
+
+Methods
+To collect data in a pandemic environment successfully, the Division of Health and Nutrition Examination Surveys made key changes to the survey operations, including adding telephone administration of household and dietary interviews, significantly reducing the length of the household interview and examination, and adding screening and safety measures at the Mobile Examination Center.},
+   author = {Ana L. Terry M.S. R.D. and Michele M. Chiappa B.A. and Juliana McAllister M.A. and David A. Woodwell M.P.H. and Jessica E. Graber Ph.D.},
+   city = {Hyattsville, MD},
+   doi = {https://dx.doi.org/10.15620/cdc/151927},
+   institution = {National Center for Health Statistics},
+   keywords = {COVID-19 pandemic,Mobile Examination Center,NHANES,field operations,survey design},
+   month = {5},
+   pages = {7-8},
+   title = {Plan and Operations of the National Health and Nutrition Examination Survey, August 2021–August 2023 Programs and Collection Procedures},
+   url = {https://www.cdc.gov/nchs/products/index.htm.},
+   year = {2024}
+}
+@unpublished{Woolsey1974,
+   abstract = {A description of the Health Examination Survey’s third cycle examinations of a probability sample of United States youths 12-17 years of age. Library of Congress Catalog Card Number 76-602407. DHEW Publication No. (HRA) 75-1018},
+   author = {Theodore D. Woolsey and Philip S. Lawrence Sc.D. and Oswald K. Sagen Ph.D. and Walt R. Simmons M.A. and Alice M. Waterhouse M.D. and James E. Kelly D.D.S. and Edward E. Minty and Margery R. Cunningham and Arthur J. McDowell and Paul T. Bruyere M.D. and James T. Baird Jr. and Henry W. Miller and Peter v. v. Hamill M.D. and Harold J. Dupuy Ph.D.},
+   city = {Rockville, MD},
+   institution = {U.S. Department of Health, Education, and Welfare},
+   month = {9},
+   pages = {7-10},
+   title = {Plan, Operation, and Response Results of a Program of Youth's 12-17 Examinations National Health Examination Surveys 1966-70},
+   url = {https://www.cdc.gov/nchs/data/series/sr_01/sr01_008.pdf},
+   year = {1974}
+}
+@unpublished{Zipf2013,
+   abstract = {Library of Congress Catalog Number 312’.0723s 80–607914.
+
+Background
+Starting in 1999, the National Health and Nutrition Examination Survey (NHANES) became a continuous, ongoing annual survey of the noninstitutionalized civilian resident population of the United States. A continuous survey allowed content to change to meet emerging needs.
+
+Objective
+This report describes how NHANES for 1999–2010 was designed and implemented. NHANES is a national survey designed to provide national estimates on various health-related topics.
+
+Methods
+The survey used in-person face-to-face interviews and physical examinations for data collection. Approximately 5,000 people per year participated in NHANES. The 5,000 people surveyed each year are representative of the entire U.S. population.},
+   author = {George Zipf M.S. and Michele Chiappa B.A. and Kathryn S. Porter M.D. and Yechiam Ostchega Ph.D. R.N. and Brenda G. Lewis M.P.H. and Jennifer Dostal B.S.},
+   city = {Hyattsville, MD},
+   institution = {U.S. Department of Health and Human Services},
+   keywords = {NHANES,field operations,mobile examination center,survey design},
+   month = {8},
+   pages = {8-12},
+   title = {National Health and Nutrition Examination Survey: Plan and Operations, 1999–2010},
+   url = {https://www.cdc.gov/nchs/data/series/sr_01/sr01_056.pdf},
+   year = {2013}
+}
+
+
+
+
+
+
+
+
+
