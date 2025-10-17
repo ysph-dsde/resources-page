@@ -101,6 +101,8 @@ If your institution has an active DURA with All of Us at the preferred tier of a
 
 The following timeline <a href="https://support.researchallofus.org/hc/en-us/articles/9707434641044-DURA-Infographic">infographic</a> shows what to expect from a DURA application if your institution is not already registered. Refer to [Access and DURA Support Questions](https://support.researchallofus.org/hc/en-us/articles/35013049400468-Access-and-DURA-Support-Questions) for common questions about the application process\ [@support].
 
+![](Images/All of Us_Researcher Workbench DURA Process Digital Infographic_Downloaded 06.01.2025.png){style="display: block; margin-left: auto; margin-right: auto;" width="620"}
+
 <div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
   <img id="myImage" src="Images/All of Us_Researcher Workbench DURA Process Digital Infographic_Downloaded 06.01.2025.png" alt="Zoomable Image" title="Click to zoom in">
   <figcaption class="caption">

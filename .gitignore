@@ -13,3 +13,6 @@
 /.quarto/
 /docs/
 /Local Only/
+
+/_quarto_internal_scss_error.scss
+Yale_typeface/
