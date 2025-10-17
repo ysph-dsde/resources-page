@@ -1,0 +1,386 @@
+---
+  title: "National Health and Nutrition Examination Survey"
+  description: |
+         </br>
+         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health\ [@about_nhanes; @achievements_nhanes]. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
+         </br>
+         </br>
+         Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
+  title-block-banner: true
+  format: 
+    html:
+      toc: true
+      toc-depth: 4
+  header-includes:
+    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
+  editor: source
+  bibliography: BibTeX/nhanes_references.bib
+  csl: BibTeX/nature.csl
+  filters:
+    - parse-latex
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| echo: false
+
+# Import necessary libraries
+suppressPackageStartupMessages({
+  library("stringr")
+  library("htmltools")
+  library("glue")
+  library("rentrez")
+  library("xml2")
+  library("clipr")
+})
+
+"%!in%" <- function(x,y)!("%in%"(x,y))
+
+# Load in the functions.
+source('./PubMed Search_Functions.R')
+```
+
+Updated: October 9$^{th}$, 2025
+
+## Overview
+
+The National Health and Nutrition Examination Survey (NHANES) is a program designed to assess the health and nutritional status of the U.S. population. Initiated under the National Health Survey Act of 1956, the program initially focused on statistically measuring the extent, distribution, and impact of chronic illnesses, such as cardiovascular disease and diabetes, and disabilities through three National Health Examination Surveys (NHES). In the 1970s, the program expanded to include research on diet-disease relationships, where it adopted the name NHANES\ [@Zipf2013; @history_nhanes].
+
+NHANES has significantly impacted public health by supplying essential data for developing public health strategies and policies, particularly through its detailed dietary research, which has informed national nutritional guidelines and initiatives to combat chronic diseases\ [@achievements_nhanes]. NHANES is representative of the U.S. population, utilizing complex, multistage, highly-stratified clusters to randomly select participants, ensuring generalizability to the U.S. population as a whole. The survey design often includes oversampling of underrepresented groups, such as ethnic minorities and vulnerable populations, to enhance research accuracy\ [@history_nhanes; @nhne_design; @Linder1965].
+
+There have been three NHES cycles, five NHANES installments, and four ancillary studies, each using different sampling methods and sometimes focusing on specific populations or health outcomes\ [@growth_chart; @NHEFS; @NNYFS; @nhanes_III; @data_nhanes]. The number of participants enrolled varies between each iteration, typically ranging from 5,000 to 10,000 participants per year\ [@Linder1965; @nhne_design; @Secretary1967; @Woolsey1974; @Harvey1981; @Rice1973; @historic_nhanes_content; @Feinleib1985; @Terry2021; @Rothwell2014].
+
+
+The types of data collected include:
+
+::: {style="margin-left: 2rem"}
+- **Demographic Data:** Basic demographics like age, gender, race, socioeconomic status, family characteristics, and geographic location information such as state and urbanicity.
+
+- **Health and Medical Examinations:** Medical history and records, physical and dental examinations, vision and hearing tests, X-rays, and anthropometric measurements such as height, weight, and body mass index.
+
+- **Laboratory Work:** Blood, urine, and other biological specimens are collected to test for nutritional biomarkers, environmental exposures, and indicators of infectious and chronic diseases.
+
+- **Psychosocial and Behavioral Data:** Psychological evaluations including measures of mental health and distress, behavioral assessments covering smoking, alcohol, and drug use, and physical activity and fitness measures.
+
+- **Questionnaire data:** Participants provide self-reported information on a variety of health-related topics, including medical history, health conditions, and behaviors like smoking and physical activity.
+
+- **Dietary Data:** Nutritional status assessments, including dietary intake, nutrient composition, dietary frequency, and 24-hour food consumption recall.
+
+- **Special Focus Variables:** Detailed examinations for chronic conditions including, but not limited to, child growth and development metrics, epidemiologic follow-ups, and specific tests and variables based on subpopulation-focused surveys such as the Hispanic Health and Nutrition Examination Survey (HHANES)\ [@NHEFS; @hhanes; @growth_chart; @NNYFS; @nhanes_III].
+:::
+
+
+Because NHANES collects data from different individuals in two-year cycles, it is a cross-sectional survey rather than a longitudinal one. The complex sampling design ensures nationally representative results when analyzed with the provided sample weights for each installment. 
+
+Researchers interested in combining cross-sectional iterations for longitudinal research should carefully review the recommendations provided in the [NHANES Questionnaires, Datasets, and Related Documentation](https://wwwn.cdc.gov/nchs/nhanes/default.aspx) on the CDC landing page for each program\ [@data_nhanes]. Additional support can be found in:
+
+::: {style="margin-left: 2rem"}
+- [Historical NHANES Component Matrix](https://wwwn.cdc.gov/nchs/data/nhanes/Historical_NHANES_component_matrix.pdf)\ [@historic_nhanes_content]
+
+- [National Health and Nutrition Examination Survey: 1999–2022 Survey Content Brochure](https://wwwn.cdc.gov/nchs/data/nhanes/survey_contents.pdf)\ [@continuous_brochure]
+
+- [NHANES Survey Methods and Analytic Guidelines](https://wwwn.cdc.gov/nchs/nhanes/analyticguidelines.aspx), which consolidates some of the program's documentation\ [@nhanes_most_protocols]
+
+- [2017–March 2020 Prepandemic File: Sample Design, Estimation, and Analytic Guidelines](https://www.cdc.gov/nchs/data/series/sr_02/sr02-190.pdf) for additional details\ [@Akinbami2017]
+:::
+
+## Gaining Access
+
+::: {.panel-tabset}
+
+### Publicly Available
+
+#### Do I Qualify?
+
+All persons seeking to use the data for statistical analysis and reporting purposes are allowed to access and download the data.
+
+#### Typical Timeline
+
+There are no time constraints for accessing these data.
+
+#### Step-by-Step Guide
+
+There are no specific steps required. Simply navigate to the webpage with the NHANES program installment you want to use and download it. Be aware that specific considerations are needed to combine two different installments or biannual Continuous NHANES datasets. Refer to the relevant data documentation or any of the [webinars and tutorials](#valuable-links) available for further directions on how to best handle survey design and protocol differences.
+
+
+### Restrcited Access
+
+#### Do I Qualify?
+
+All individuals seeking to use the data for statistical analysis and reporting purposes are allowed to submit a research proposal to the [NCHS Research Data Center (RDC)](https://www.cdc.gov/rdc/) through the Standard Application Process (SAP) available through the ResearchDataGov (RDG) portal\ [@rdc_process; @data_release_policy].
+
+Applicants must fulfill the following criteria during the application review process, and in some cases, after application approval. These criteria are summarized from the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf). If additional steps are required post-approval, the data-owning agency will contact you directly to initiate those processes.
+
+**Identification:** Verify your identity, job title, organizational affiliation, and skill level. Some agencies require confirmation of U.S. citizenship.
+
+**Training:** Some agencies require training on data use, data management, confidentiality, and cybersecurity following application approval.
+
+**Agreements:** Sign agreements such as non-disclosure agreements or data use agreements. Some data sources may require the creation of a security plan outlining how the researcher will protect the data.
+
+**Investigation:** Undergo a background check.
+
+#### How Is My Application Assessed?
+
+All applications submitted through SAP are evaluated against the same criteria, regardless of the agency or unit you are applying to for data, unless required by law or regulation. The full criteria are linked in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf), and summarized below\ [@rdg_user_guide]:
+
+**Statistical Purpose:** Data will be used solely for statistical purposes and not to identify individual persons or businesses, nor for law enforcement, legal cases, or regulatory actions.
+
+**Allowed Use:** The researcher plans to use the data in compliance with the applicable rules and restrictions.
+
+**Statistical Disclosure Limitation:** The researcher must be able to use techniques that protect the privacy of individuals, organizations, or businesses.
+
+**Demonstrated Need:** The researcher must show that confidential data is necessary to support their project goals and that publicly available data is insufficient.
+
+**Feasibility:** The researcher is able to achieve their project goals with the requested data. This is evaluated in three ways:
+
+::: {style="margin-left: 2rem"}
+- Project Design: Detailed methods planned and how the technical and logistical needs will be met.
+- Agency or Unit Support: Confirming beforehand that the agency can support the project through space, technical help, logistics, and preparation of the data.
+- Applicant Ability: The applicant has the knowledge, skills, and ability to carry out the project.
+:::
+
+**Maintaining Public Trust:** The project is expected to help maintain the public's trust and confidence in the agency or unit.
+
+
+In addition to these criteria, the NCHS Review Committee will assess whether the study has a well-defined research question that addresses a public health concern, whether the results will benefit the agencies providing the data, and the appropriateness of the planned output from the study (e.g., paper, journal article, or presentation)\ [@rdc_preparing].
+
+::: {.callout-important}
+The NCHS will not evaluate your study to assess its scientific merit nor its substantive, methodological, theoretical, or policy relevance. It also does not provide guarantees that output generated by the study will be released contingent on concerns related, but not limited to, privacy and is in alignment with the approved application.
+:::
+
+
+#### Typical Timeline
+
+```{=html}
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+  <img id="myImage" src="Images/NCHS_RDC_Restricted_Timeline.png" alt="Zoomable Image" title="Click to zoom in">
+  <figcaption class="caption">
+    A summary of the application process, including information on when additional reviews may be necessary.
+  </figcaption>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src="zoom.js"></script>
+```
+
+
+Upon receiving an application, your assigned RDC analyst and the review committee—comprising data system representatives and the confidentiality officer—will assess your application for approval, disapproval, or a request for revisions. If your application is denied by the committee, you will be provided with a justification for the decision. Researchers are allowed to request an appeal of the decision through SAP\ [@rdc_review_committee].
+
+At some point, your study may require an amendment to the approved application. Approval for amendments typically take no more than four weeks, but can take as many as eight to twelve weeks if the amendment request is complicated.
+
+#### Step-by-Step Guide
+
+The RDG portal provides access to applications for data from 13 agencies and 3 units within the Federal Statistical System (FSS), including the NCHS. Each agency may have additional expectations for the application process that you will need to include if you are requesting data from them. While many details are available in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf) or the [RDC Application Process](https://www.cdc.gov/rdc/application-process/index.html) webpage (some of which are summarized here), researchers are advised to contact the agencies or units from which they are requesting data before submitting their application.
+
+Example applications, data dictionaries, and complete details can be found on the [RDC Application Process](https://www.cdc.gov/rdc/application-process/index.html) webpage\ [@rdc_process]. The summary provided here is intended solely to offer an outline and introduce you to the location of relevant  information. You can reach the RDC directly at rdca@cdc.gov for further information\ [@rdg_user_guide].
+
+::: {style="margin-left: 2rem"}
+1. Confirm that your study requires access to restricted data and that the data available through the FSS will meet your research needs. Contact all agencies or units responsible for the data to confirm that the data you need can be combined with all of the data required for your analysis, whether restricted-use, publicly available, or non-FSS.
+
+    **NOTE:** Data access methods and locations may vary, especially if the data comes from different agencies or units within the FSS.
+    
+2. Decide on your preferred location of access, and confirm that you are eligible to gain access at that location. If you are not a U.S. citizen, it is recommended that you reach out to the facility where you intend to access the data prior to writing your proposal. Refer to the [Data Distribution Centers](#data-distribution-centers) section below for further details.
+
+3. The NCHS requires additional documents as \*.pdf or \*.docx and additional concerns to be addressed beyond the base SAP application. Before starting your application, it is recommended that you prepare the following:
+
+::: {style="margin-left: 2rem"}
+- A data dictionary listing all the requested variables from publicly available, restricted-use, and non-NCHS data sources. Much of this can be created in SAP. Refer to the [Providing the Public Use and Non-NCHS Data](https://www.cdc.gov/rdc/application-process/public-use-data.html) webpage for additional guidelines on preparing your application with these types of data.
+- Description of the research methodology.
+- List of supporting references.
+- Detailed description of the intended data product (e.g., paper, journal article, or presentation).
+- Timeline for managing the project within a three-year period.
+- In the **Agency Benefits** section, you must demonstrate how your project will benefit NCHS or other agencies providing the data.
+- Determine and decide on your preferred access location.
+:::
+
+4. In SAP, search for and select the datasets you need for your study, then add them to your basket. Any data added to the same basket will be included in a single application.
+
+    **NOTE:** You can add additional data to the application if needed after submission.
+
+5. When you are ready to proceed with the application, open your basket and select **Start Application**. It is recommended that the principal investigator (PI) or co-principal investigator (co-PI) create the application, as only they will be able to make edits after submission.
+
+6. In the application, you will need to provide researcher information, a description of the project that demonstrates the need for restricted-use data, and upload the required documents as \*.pdf or \*.docx. The standard SAP application and some agency- or unit-specific requirements can be found in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf).
+:::
+
+
+Upon receiving the application, the RDC director will assign your group an RDC analyst who will work with you throughout the entire process of applying for data, accessing the data, and finalizing the output of your results\ [@rdc_preparing]. The RDC analyst will:
+
+::: {style="margin-left: 2rem"}
+- Facilitate the review of your application and accept your NCHS-required confidentiality paperwork.
+- Accept payments incurred by accessing the data at a data center.
+- Create your analytical dataset by compiling the data requested in the data dictionary and combining it based on the variables you assign for linking. This dataset will be provided to you when you visit a data center.
+- After you complete your analysis at a data center, they will review your output for disclosure risk and provide you with the results.
+:::
+
+
+Approved applications must then complete the following steps in preparation to access and utilize the approved data.
+
+::: {style="margin-left: 2rem"}
+7. Discuss the committee's approval with your assigned RDC analyst and address any requests for revision as needed.
+
+8. Provide the RDC analyst with the approved data dictionary, public-use and non-NCHS data, descriptions of desired data linkages with their intended final format, and clearly defined derived variables, including any arithmetic code or algorithms.
+
+9. Complete the [Confidentiality and Disclosure](https://www.cdc.gov/rdc/application-process/confidentiality-an) training and forms, and provide them to the RDC analyst. Additional forms, documents, and tools for this step can also be found on the [RDC Reference Materials](https://www.cdc.gov/rdc/application-process/reference-materials.html) webpage\ [@rdc_reference_materials; @confid_disc].
+
+10. When invoiced, you will need to pay the fees incurred by your request and applicable to accessing the data at your intended location and frequency of access. Refer to [Fees and Invoicing](https://www.cdc.gov/rdc/application-process/fees-and-invoicing.html) for complete details\ [@fees_invoicing].
+
+11. Following completion of these steps, the RDC analyst will prepare your dataset. Once ready, set up an appointment to access the data at your chosen RDC location. Please schedule your appointment at least one week in advance.
+
+    **NOTE:** Different data centers have different procedures for gaining access and might incur additional fees depending on how frequently you intend to access the data. Refer to the [Data Distribution Centers](#data-distribution-centers) section and associated links for additional guidance.
+
+12. After completing your analysis, you must submit an output request to your RDC analyst for review and approval. Find the full details about requirements and expectations on the [Output Policies and Procedures](https://www.cdc.gov/rdc/output/index.html) webpage\ [@data_output].
+
+    **NOTE:** The NCHS does not provide guarantees that output generated by the study will be released contingent on concerns related, but not limited to, privacy and is in alignment with the approved application.
+
+13. When you have nearly completed your output, send it to your RDC analyst for review before submitting it for publication or distribution. Find the full details about requirements and expectations on the [Publishing Guidelines](https://www.cdc.gov/rdc/publishing-guidelines/index.html) webpage\ [@publishing_guides].
+:::
+
+::: {.callout-important}
+Amendments for project changes are possible but require additional approval prior to implementation. Common reasons for an amendment include, but are not limited to, changes in the research team, requests for additional variables, new methods, or requests for additional types of output\ [@rdc_process].  However, if you wish to change the scope or research question, a new application is required instead.
+
+Contact the RDC directly at rdca@cdc.gov for further guidance.
+:::
+
+
+#### Data Distribution Centers
+
+NCHS data is available at two types of data centers: the Census Bureau's Federal Statistical Research Data Centers (FSRDC) and the NCHS Research Data Centers (RDCs). Additional details about preparing to access your data at one of these sites can be found on the RDC [Location of Access](https://www.cdc.gov/rdc/location-of-access/index.html) webpage or their respective subpages: [FSRDC](https://www.cdc.gov/rdc/location-of-access/federal-statistical-rdc.html) and [NCHS RDC](https://www.cdc.gov/rdc/location-of-access/nchs-rdc.html)\ [@data_locations; @fsrdc; @nchs_rdc; @rdc_process].
+
+
+::: {.callout-important}
+You must submit an electronic copy of any notes or reference materials you need to your RDC analyst prior to visiting a center. Hard copies of these materials are not allowed. You are also not allowed to bring electronic communication devices, such as phones, pagers, laptops, into the RDC.
+:::
+
+You can request different software products or add-ons, though not all requests will be approved. Be aware that requesting additional software accommodations may delay the approval of your project. Contact the specific RDC where you plan to access your data for further guidance. 
+
+
+##### Federal Statistical Research Data Centers
+
+::: {style="margin-left: 2rem"}
+- You will be assigned both an NCHS RDC analyst and an FSRDC administrator from the location you intend to visit. Both have different roles.
+- Researchers must meet physical and information security requirements. They must obtain Census Bureau Special Sworn Status (SSS) and pass a background investigation.
+- You must be affiliated with a university or agency to qualify.
+- Non-U.S. citizens are generally encouraged to use FSRDCs.
+- **In-person:** Census Bureau facilities at partner institutions.
+- **Remote access:** A secure Virtual Desktop Interface (VDI) may be available.
+- **Software Available:** Anaconda, Gurobi, Intel Composer, Knittro, MADD, Mathematica, NATLAB, OpenGeoda, R and Rstudio, SAS, Stat/Transfer, Stata, Stata-MP, SUDAAN, and Tomlab.
+:::
+
+::: {.callout-important}
+If you are accessing an FSRDC, the data must be transferred from NCHS after completing all requirements outlined by your assigned RDC analyst seven days prior to your intended visit. These additional steps incur extra costs beyond the NCHS RDC data access fee and may delay data access.
+:::
+
+Previously, the roles of RDC analysts were listed. The FSRDC, or Census RDC, administrator will:
+
+::: {style="margin-left: 2rem"}
+- Be available to answer questions pertaining to SSS, access and entry to a FSRDC location, software availability, and additional, Census fees.
+- They may be available to help develop your application.
+- Transfer your output to the NCHS after you complete your analysis at a data center. Your RDC analyst will review your output for disclosure risk and provide you with the results.
+:::
+
+##### NCHS Research Data Centers
+
+::: {style="margin-left: 2rem"}
+- **In-person:** Facilities are located in Hyattsville, MD, Atlanta, GA, and Rockville, MD and are accessible by appointment only at least one week in advance.
+- **Remote access:** The computers are not connected to the internet, so remote access is not possible. 
+- **Software Available:** Microsoft Office products, R, SAS, Stata, Python, SPSS (v. 19), and SAS-callable SUDAAN.
+:::
+
+
+##### Required Documentation
+
+When accessing the data, the researcher will need to provide the following documentation in addition to an approved application:
+
+::: {style="margin-left: 2rem"}
+- Proof of identification, such as a REAL ID.
+- Curriculum vitae (CV) for each applicant.
+- For student projects, the student's advisor must provide an [agreement form](https://www.cdc.gov/rdc/data/b3/Student-Advisor-Agreement-12082022.pdf).
+- Permission to use proprietary data.
+- Requested output must include Table Shells.
+- Requested variables must be provided in a data dictionary format that lists all necessary variables (i.e., restricted-use, public-use, and external) for the research project. Please refer to the agency dataset data dictionaries for the available variables.
+:::
+
+:::
+
+## Valuable Links
+
+::: {style="margin-left: 2rem"}
+- [NHANES Questionnaires, Datasets, and Related Documentation](https://wwwn.cdc.gov/nchs/nhanes/default.aspx): Find links to all installments or ancillary studies and the programs methods and other documentation\ [@data_nhanes].
+
+- [NCHS Data User Agreement](https://www.cdc.gov/nchs/policy/data-user-agreement.html): Find the data use limitations and expectations set by the NCHS for using their publicly available data\ [@data_use_agreement].
+
+- [Confidentiality and Disclosure](https://www.cdc.gov/rdc/application-process/confidentiality-and-disclosure.html): Find the study participant confidentiality training, documentation, forms, and manual\ [@confid_disc]. Completion of these trainings and forms is required following the approval of your study proposal by the research committee.
+
+- [Application Process](https://www.cdc.gov/rdc/application-process/index.html): Find the complete step-by-step guide to applying for restricted use data from the RDC\ [@rdc_process]. Some of this information has been summarized for your convenience under the [Gaining Access - Restricted Access](#gaining-access) tab.
+
+- [RDC Reference Materials](https://www.cdc.gov/rdc/application-process/reference-materials.html): Find restricted-use data proposals, example applications, confidentiality and disclosure documents, rules, policies, and data protection toolkits\ [@rdc_reference_materials].
+
+- [NHANES Biospecimen Program](https://www.cdc.gov/nchs/nhanes/biospecimen/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fnhanes%2Fmodules%2Fbiospecimen-redirect.html): Find the request forms for DNA, serum, plasma, and urine samples as well as genetic data produced from the NHANES biospeciments\ [@biospecimen_program].
+
+- [NHANES Webinars](https://www.cdc.gov/nchs/nhanes/updates/index.html?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fnhanes%2Fmodules%2Fwebinars.html): Find additional information and resources for program partners and data users, including updates and survey strategies\ [@webinars].
+
+- [NHANES Tutorials](https://wwwn.cdc.gov/nchs/nhanes/tutorials/default.aspx?CDC_AA_refVal=https%3A%2F%2Fwww.cdc.gov%2Fnchs%2Fnhanes%2Fmodules%2Fdata-analysis-tutorial.html): Find help understanding sample design, variance estimation, interpreting documentation with example analyses, software tips, and sample code\ [@tutorials].
+
+- [What NHANES Data Have Achieved](https://www.cdc.gov/nchs/nhanes/publications/data-accomplishments.html): Find a listing of the public health research inspired by NHANES data and the policy changes it has influenced\ [@achievements_nhanes].
+:::
+
+
+## Publications
+
+```{r}
+#| echo: false
+
+# Fetch and format the citations.
+citations <- get_citations(
+  doi = c("10.3390/ijerph21010073", "10.1016/j.annepidem.2023.03.007", 
+          "10.1001/jama.2025.16533", "10.1093/jamia/ocad035", 
+          "10.1001/jamanetworkopen.2022.22385", "10.1001/jamanetworkopen.2025.16663",
+          "10.1001/jamanetworkopen.2022.9953"),
+  affiliation = "Yale School of Public Health"
+)
+
+# Condition the output based on presence of articles.
+citations_html <- make_pub_list(citations)
+
+if(!any(str_detect(citations$citations, "No publications"))) {
+  citation_length <- length(citations$citations)
+  citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
+} else {
+  citation_length <- 0
+  citation_date   <- as.numeric(format(Sys.Date(), "%Y")) - as.numeric(str_extract("No publications found in the last 25 years.", "[0-9]{2}"))
+}
+
+```
+
+
+This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.
+
+::: {style="margin-left: 1rem"}
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+# Display formatted citations.
+cat(citations_html)
+```
+
+```{=html}
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">&#9664; Previous</button>
+  <button onclick="nextPage()">Next &#9654;</button>
+</div>
+
+<script src="pagination.js"></script>
+```
+
+:::

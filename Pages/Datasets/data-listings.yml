@@ -171,6 +171,16 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nhanes/
         info: More-Info-Pages/Freely-Accessible/NHANES.qmd
+      - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
+        date-added: 2025-03-20
+        date-updated: 2025-10-10
+        ranking: "2"
+        description: |
+         Temp
+        image: Images/nhanes.png
+        topic: "Clinical Study/Surveys"
+        site: https://www.cdc.gov/nchs/nhanes/
+        info: More-Info-Pages/Restricted-Access/NHANES2.qmd
       - title: NCHS's National Health Interview Survey (NHIS)
         date-added: 2025-03-20
         date-updated: 2025-03-20
