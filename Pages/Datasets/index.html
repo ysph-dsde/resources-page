@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../Images/DSDE-Visuals/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<link href="../../Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-listing/list.min.js"></script>
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-917f1d4589832bd66ad72c925dead680.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e7ba5eafb11bcd7113c2232549b17e0f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -182,7 +182,7 @@ window.Quarto = {
 
 <div class="header">
     <h1>Datasets</h1>
-    <p style="max-width: 50%; margin: auto; text-align: left;">Explore our collection of datasets, curated to support a wide range of academic and research pursuits in public health.</p>
+    <p>Explore our collection of datasets, curated to support a wide range of academic and research pursuits in public health.</p>
 </div>
 
 
@@ -622,6 +622,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div>
     <div class="main-container">
       <div class="sidebar-wrapper">
+        <button class="sidebar-toggler">☰</button>
         <aside class="sidebar">
 
           
@@ -852,7 +853,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20University" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="yes" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-03-20" data-ranking="3">
+                <div class="tile " data-categories1="Yale%20University" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="no" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-03-20" data-ranking="3">
                   <img src="Images/YNHHS Epic Cosmos.png" class="image">
                   <h2 class="js-line-count">Yale New Haven Health System (YNHHS) Epic</h2>
                   <p class="description">Cosmos is a dataset created in collaboration with a community of health systems using Epic and is designed to improve patient care. By combining their data, participating organizations and Epic can make new discoveries and advance medicine. Cosmos also powers tools at the point of care, providing insights to clinicians that are tailored to the patient in front of them.
@@ -871,10 +872,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                        
                        
                        
-                       
-                        &nbsp;
-                        <a href="../../Pages/Datasets/More-Info-Pages/Restricted-Access/YNHHS-Epic-Cosmos.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
                       
                        
                         <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p> 
@@ -1437,6 +1434,24 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
     // Initial sort by default (ranking then title)
     sortByDefault();
   });
+  
+  
+  // Media view with folded sidebar
+  document.addEventListener('DOMContentLoaded', () => {
+  const sidebarToggler = document.querySelector('.sidebar-toggler');
+  const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+
+  console.log('sidebarToggler:', sidebarToggler); // Log for debugging
+  console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
+
+  if (sidebarToggler && sidebarWrapper) {
+    sidebarToggler.addEventListener('click', () => {
+      sidebarWrapper.classList.toggle('expanded');
+    });
+  } else {
+    console.error('Sidebar toggler or wrapper not found');
+  }
+});
 </script>
 
 

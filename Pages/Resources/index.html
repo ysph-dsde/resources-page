@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../Images/DSDE-Visuals/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<link href="../../Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-listing/list.min.js"></script>
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-917f1d4589832bd66ad72c925dead680.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e7ba5eafb11bcd7113c2232549b17e0f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -182,7 +182,7 @@ window.Quarto = {
 
 <div class="header">
     <h1>Resources</h1>
-    <p style="max-width: 50%; margin: auto; text-align: left;">Yale offers a rich array of resources to support its academic community. These resources include access to specialized research databases, educational tools, and a variety of digital tools and platforms.</p>
+    <p>Yale offers a rich array of resources to support its academic community. These resources include access to specialized research databases, educational tools, and a variety of digital tools and platforms.</p>
  </div>
 
 
@@ -622,6 +622,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div>
     <div class="main-container">
       <div class="sidebar-wrapper">
+        <button class="sidebar-toggler">☰</button>
         <aside class="sidebar">
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
@@ -1204,6 +1205,23 @@ Research is focused on the study of intact biological systems by developing meth
       // Initial default sorting by ranking then title
       sortByDefault();
     });
+    
+    // Media view with folded sidebar
+    document.addEventListener('DOMContentLoaded', () => {
+    const sidebarToggler = document.querySelector('.sidebar-toggler');
+    const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  
+    console.log('sidebarToggler:', sidebarToggler); // Log for debugging
+    console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
+  
+    if (sidebarToggler && sidebarWrapper) {
+      sidebarToggler.addEventListener('click', () => {
+        sidebarWrapper.classList.toggle('expanded');
+      });
+    } else {
+      console.error('Sidebar toggler or wrapper not found');
+    }
+  });
   </script>
 
 
