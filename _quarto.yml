@@ -10,7 +10,7 @@ website:
   page-navigation: true
   back-to-top-navigation: true
   bread-crumbs: false
-  favicon: Images/DSDE-Visuals/DSDE-Social-Media-Profile.png
+  favicon: Images/DSDE-Social-Media-Profile.png
   search: true
   repo-url: https://github.com/ysph-dsde/resources-page
   issue-url: https://github.com/ysph-dsde/resources-page/issues

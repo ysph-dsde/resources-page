@@ -14,6 +14,7 @@
   <div>
     <div class="main-container">
       <div class="sidebar-wrapper">
+        <button class="sidebar-toggler">☰</button>
         <aside class="sidebar">
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
@@ -310,6 +311,23 @@
       // Initial default sorting by ranking then title
       sortByDefault();
     });
+    
+    // Media view with folded sidebar
+    document.addEventListener('DOMContentLoaded', () => {
+    const sidebarToggler = document.querySelector('.sidebar-toggler');
+    const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+  
+    console.log('sidebarToggler:', sidebarToggler); // Log for debugging
+    console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
+  
+    if (sidebarToggler && sidebarWrapper) {
+      sidebarToggler.addEventListener('click', () => {
+        sidebarWrapper.classList.toggle('expanded');
+      });
+    } else {
+      console.error('Sidebar toggler or wrapper not found');
+    }
+  });
   </script>
 </body>
 

@@ -176,14 +176,16 @@ You must annually complete refresher training, re-attest to the Data User Code o
 
 ## Publications
 
-
 ```{r}
 #| echo: false
 
 # Fetch and format the citations.
 citations <- get_citations(
-  keywords = c("All of Us"), 
-  affiliation = "Yale School of Public Health")
+  doi = c("10.1093/jamia/ocae098", "10.14336/AD.2025.0754", "10.1101/2024.10.28.24316286",
+          "10.1101/2023.10.29.564615", "10.1111/dme.15322", "10.1101/2025.06.16.659952"),
+  affiliation = c("Yale School of Public Health", "Yale University"),
+  highlight_names = c("Bhramar Mukherjee")
+)
 
 # Condition the output based on presence of articles.
 citations_html <- make_pub_list(citations)

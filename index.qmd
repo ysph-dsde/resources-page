@@ -19,10 +19,9 @@ Our mission is to develop and support a robust public health data science infras
 \
 
 ```{=html}
-
 <body>
   <div class="container_title">
-    <div class="tile_title" >
+    <div class="tile_title">
       <a href="Pages/Resources/index.qmd" title="Listing page">
         <img src="Images/Firefly data scientists; illustration 75467.jpg" alt="Resources page" class="image">
         <h1>Resources</h1>
@@ -30,8 +29,7 @@ Our mission is to develop and support a robust public health data science infras
         <i class="tile_icon bi bi-arrow-right-circle-fill"></i>
       </a>
     </div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <div class="tile_title" >
+    <div class="tile_title">
       <a href="Pages/Datasets/index.qmd" title="Listing page">
         <img src="Images/Firefly data science data equity 50124.jpg" alt="Datasets page" class="image">
         <h1>Datasets</h1>
