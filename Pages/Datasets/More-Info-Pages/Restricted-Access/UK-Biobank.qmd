@@ -1,7 +1,23 @@
 ---
   title: "UK Biobank"
+  description: |
+         </br>
+         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health\ [@about_nhanes; @achievements_nhanes]. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
+         </br>
+         </br>
+         Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
   title-block-banner: true
-  format: html
+  format: 
+    html:
+      toc: true
+      toc-depth: 4
+  header-includes:
+    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
+  editor: source
+  bibliography: BibTeX/ukBiobank_references.bib
+  csl: BibTeX/nature.csl
+  filters:
+    - parse-latex
   markdown: 
   editor_options: 
   chunk_output_type: console
