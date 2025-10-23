@@ -1,0 +1,27 @@
+---
+format:
+  html:
+    toc: false
+    code-fold: true
+    page-layout: custom
+    includes:
+      before-body: views/sidebar.html 
+listing:
+  - template: views/index_infoFilter.ejs
+    contents: data-listings.yml
+    categories: false
+    sort-ui: false
+    filter-ui: false
+---
+
+```{=html}
+<div class="header">
+    <h1>Datasets</h1>
+    <p>Explore our curated collection of datasets, designed to support diverse academic and research endeavors in public health. Our datasets are categorized by access type:</p>
+<ul>
+  <li><strong>Freely Accessible</strong>: Open to everyone without any restrictions.</li>
+  <li><strong>Restricted Access</strong>: Available with certain conditions, such as applying for approval or signing a Data Use Agreement (DUA).</li>
+  <li><strong>Licensed Access</strong>: Requires a license to access. Some licensed datasets are freely accessible to Yale affiliates and are categorized under this requirement.</li>
+</ul>
+</div>
+```
