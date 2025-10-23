@@ -42,7 +42,7 @@ suppressPackageStartupMessages({
 source('./PubMed Search_Functions.R')
 ```
 
-Updated: October 10$^{th}$, 2025
+Updated: October 23$^{rd}$, 2025
 
 ## Overview
 
@@ -181,8 +181,10 @@ You must annually complete refresher training, re-attest to the Data User Code o
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.1093/jamia/ocae098", "10.14336/AD.2025.0754", "10.1101/2024.10.28.24316286",
-          "10.1101/2023.10.29.564615", "10.1111/dme.15322", "10.1101/2025.06.16.659952"),
+  doi = c("10.1093/jamia/ocae098", "10.1002/pon.70302", "10.1016/j.ajem.2025.09.002", 
+          "10.14336/AD.2025.0754", "10.1101/2024.10.28.24316286", 
+          "10.1101/2023.10.29.564615", "10.1111/dme.15322", 
+          "10.1101/2025.06.16.659952"),
   affiliation = c("Yale School of Public Health", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )

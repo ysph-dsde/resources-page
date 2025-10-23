@@ -154,11 +154,11 @@ items:
         date-updated: 2025-03-20
         ranking: "1"
         description: |
-          The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and death records, medical records, interviews with people and healthcare providers, direct physical examinations, and laboratory testing. NCHS shares data, statistics, and analysis in multiple ways, including reports, dashboards, and data files. Including: Family Growth Survey, Health Care Surveys, Rapid Surveys, Health and Nutrition Examination Survey, Health Interview Survey, Vital Statistics, and a special compilation of linked surveys with administrative data. Here we specifically list the surveys that are not open access only.
+          The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends.
         image: Images/nchs.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/index.html
-        #info: More-Info-Pages/Freely-Accessible/NCHS.qmd
+        info: More-Info-Pages/Freely-Accessible/NCHS.qmd
       - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
         date-added: 2025-03-20
         date-updated: 2025-10-10
