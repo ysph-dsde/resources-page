@@ -64,7 +64,7 @@ The types of data collected include:
 
 - **Psychosocial and Behavioral Data:** Psychological evaluations including measures of mental health and distress, behavioral assessments covering smoking, alcohol, and drug use, and physical activity and fitness measures.
 
-- **Questionnaire data:** Participants provide self-reported information on a variety of health-related topics, including medical history, health conditions, and behaviors like smoking and physical activity.
+- **Questionnaire Results:** Participants provide self-reported information on a variety of health-related topics, including medical history, health conditions, and behaviors like smoking and physical activity.
 
 - **Dietary Data:** Nutritional status assessments, including dietary intake, nutrient composition, dietary frequency, and 24-hour food consumption recall.
 
@@ -102,7 +102,7 @@ There are no time constraints for accessing these data.
 
 #### Step-by-Step Guide
 
-There are no specific steps required. Simply navigate to the webpage with the NHANES program installment you want to use and download it. Be aware that specific considerations are needed to combine two different installments or biannual Continuous NHANES datasets. Refer to the relevant data documentation or any of the [webinars and tutorials](#valuable-links) available for further directions on how to best handle survey design and protocol differences.
+There are no specific steps required. Simply navigate to the page with the NHANES program installment you want to use and download it. Be aware that specific considerations are needed to combine two different installments or biannual Continuous NHANES datasets. Refer to the relevant data documentation or any of the [webinars and tutorials](#valuable-links) available for further directions on how to best handle survey design and protocol differences.
 
 
 ### Restrcited Access
@@ -178,9 +178,11 @@ At some point, your study may require an amendment to the approved application. 
 
 #### Step-by-Step Guide
 
-The RDG portal provides access to applications for data from 13 agencies and 3 units within the Federal Statistical System (FSS), including the NCHS. Each agency may have additional expectations for the application process that you will need to include if you are requesting data from them. While many details are available in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf) or the [RDC Application Process](https://www.cdc.gov/rdc/application-process/index.html) webpage (some of which are summarized here), researchers are advised to contact the agencies or units from which they are requesting data before submitting their application.
+**a. Prepare Your Application Before Completing the Form**
 
-Example applications, data dictionaries, and complete details can be found on the [RDC Application Process](https://www.cdc.gov/rdc/application-process/index.html) webpage\ [@rdc_process]. The summary provided here is intended solely to offer an outline and introduce you to the location of relevant  information. You can reach the RDC directly at rdca@cdc.gov for further information\ [@rdg_user_guide].
+The RDG portal provides access to applications for data from 13 agencies and 3 units within the Federal Statistical System (FSS), including the NCHS. Each agency may have additional expectations for the application process that you will need to include if you are requesting data from them. While many details are available in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf) or the [RDC Application Process](https://www.cdc.gov/rdc/application-process/index.html) page (some of which are summarized here), researchers are advised to contact the agencies or units from which they are requesting data before submitting their application.
+
+Example applications, data dictionaries, and complete details can be found on the [RDC Application Process](https://www.cdc.gov/rdc/application-process/index.html) page\ [@rdc_process]. The summary provided here is intended solely to offer an outline and introduce you to the location of relevant  information. You can reach the RDC directly at rdca@cdc.gov for further information\ [@rdg_user_guide].
 
 ::: {style="margin-left: 2rem"}
 1. Confirm that your study requires access to restricted data and that the data available through the FSS will meet your research needs. Contact all agencies or units responsible for the data to confirm that the data you need can be combined with all of the data required for your analysis, whether restricted-use, publicly available, or non-FSS.
@@ -192,7 +194,7 @@ Example applications, data dictionaries, and complete details can be found on th
 3. The NCHS requires additional documents as \*.pdf or \*.docx and additional concerns to be addressed beyond the base SAP application. Before starting your application, it is recommended that you prepare the following:
 
 ::: {style="margin-left: 2rem"}
-- A data dictionary listing all the requested variables from publicly available, restricted-use, and non-NCHS data sources. Much of this can be created in SAP. Refer to the [Providing the Public Use and Non-NCHS Data](https://www.cdc.gov/rdc/application-process/public-use-data.html) webpage for additional guidelines on preparing your application with these types of data.
+- A data dictionary listing all the requested variables from publicly available, restricted-use, and non-NCHS data sources. Much of this can be created in SAP. Refer to the [Providing the Public Use and Non-NCHS Data](https://www.cdc.gov/rdc/application-process/public-use-data.html) page for additional guidelines on preparing your application with these types of data.
 - Description of the research methodology.
 - List of supporting references.
 - Detailed description of the intended data product (e.g., paper, journal article, or presentation).
@@ -200,16 +202,24 @@ Example applications, data dictionaries, and complete details can be found on th
 - In the **Agency Benefits** section, you must demonstrate how your project will benefit NCHS or other agencies providing the data.
 - Determine and decide on your preferred access location.
 :::
+:::
 
-4. In SAP, search for and select the datasets you need for your study, then add them to your basket. Any data added to the same basket will be included in a single application.
+**b. Complete the SAP Application Form**
+
+::: {style="margin-left: 2rem"}
+1. In SAP, search for and select the datasets you need for your study, then add them to your basket. Any data added to the same basket will be included in a single application.
 
     **NOTE:** You can add additional data to the application if needed after submission.
 
-5. When you are ready to proceed with the application, open your basket and select **Start Application**. It is recommended that the principal investigator (PI) or co-principal investigator (co-PI) create the application, as only they will be able to make edits after submission.
+2. When you are ready to proceed with the application, open your basket and select **Start Application**. It is recommended that the principal investigator (PI) or co-principal investigator (co-PI) create the application, as only they will be able to make edits after submission.
 
-6. In the application, you will need to provide researcher information, a description of the project that demonstrates the need for restricted-use data, and upload the required documents as \*.pdf or \*.docx. The standard SAP application and some agency- or unit-specific requirements can be found in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf).
+3. In the application, you will need to provide researcher information, a description of the project that demonstrates the need for restricted-use data, and upload the required documents as \*.pdf or \*.docx. The standard SAP application and some agency- or unit-specific requirements can be found in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf).
+
+4. Submit the application for review.
 :::
 
+
+**c. Review the Committee's Decision and Finalize the Application**
 
 Upon receiving the application, the RDC director will assign your group an RDC analyst who will work with you throughout the entire process of applying for data, accessing the data, and finalizing the output of your results\ [@rdc_preparing]. The RDC analyst will:
 
@@ -224,24 +234,30 @@ Upon receiving the application, the RDC director will assign your group an RDC a
 Approved applications must then complete the following steps in preparation to access and utilize the approved data.
 
 ::: {style="margin-left: 2rem"}
-7. Discuss the committee's approval with your assigned RDC analyst and address any requests for revision as needed.
+1. Discuss the committee's approval with your assigned RDC analyst and address any requests for revision as needed.
 
-8. Provide the RDC analyst with the approved data dictionary, public-use and non-NCHS data, descriptions of desired data linkages with their intended final format, and clearly defined derived variables, including any arithmetic code or algorithms.
+2. Provide the RDC analyst with the approved data dictionary, public-use and non-NCHS data, descriptions of desired data linkages with their intended final format, and clearly defined derived variables, including any arithmetic code or algorithms.
 
-9. Complete the [Confidentiality and Disclosure](https://www.cdc.gov/rdc/application-process/confidentiality-an) training and forms, and provide them to the RDC analyst. Additional forms, documents, and tools for this step can also be found on the [RDC Reference Materials](https://www.cdc.gov/rdc/application-process/reference-materials.html) webpage\ [@rdc_reference_materials; @confid_disc].
+3. Complete the [Confidentiality and Disclosure](https://www.cdc.gov/rdc/application-process/confidentiality-an) training and forms, and provide them to the RDC analyst. Additional forms, documents, and tools for this step can also be found on the [RDC Reference Materials](https://www.cdc.gov/rdc/application-process/reference-materials.html) page\ [@rdc_reference_materials; @confid_disc].
 
-10. When invoiced, you will need to pay the fees incurred by your request and applicable to accessing the data at your intended location and frequency of access. Refer to [Fees and Invoicing](https://www.cdc.gov/rdc/application-process/fees-and-invoicing.html) for complete details\ [@fees_invoicing].
+4. When invoiced, you will need to pay the fees incurred by your request and applicable to accessing the data at your intended location and frequency of access. Refer to [Fees and Invoicing](https://www.cdc.gov/rdc/application-process/fees-and-invoicing.html) for complete details\ [@fees_invoicing].
+:::
 
-11. Following completion of these steps, the RDC analyst will prepare your dataset. Once ready, set up an appointment to access the data at your chosen RDC location. Please schedule your appointment at least one week in advance.
+
+**d. Accessing the Data and Publication Expectations**
+
+::: {style="margin-left: 2rem"}
+1. After completing the steps in Part C, the RDC analyst will prepare your dataset. Once it is ready, set up an appointment to access the data at your chosen RDC location. Please schedule your appointment at least one week in advance.
 
     **NOTE:** Different data centers have different procedures for gaining access and might incur additional fees depending on how frequently you intend to access the data. Refer to the [Data Distribution Centers](#data-distribution-centers) section and associated links for additional guidance.
 
-12. After completing your analysis, you must submit an output request to your RDC analyst for review and approval. Find the full details about requirements and expectations on the [Output Policies and Procedures](https://www.cdc.gov/rdc/output/index.html) webpage\ [@data_output].
+2. Upon completion of your analysis, you must submit an output request to your RDC analyst for review and approval. Find the full details about the requirements and expectations on the [Output Policies and Procedures](https://www.cdc.gov/rdc/output/index.html) page\ [@data_output].
 
     **NOTE:** The NCHS does not provide guarantees that output generated by the study will be released contingent on concerns related, but not limited to, privacy and is in alignment with the approved application.
 
-13. When you have nearly completed your output, send it to your RDC analyst for review before submitting it for publication or distribution. Find the full details about requirements and expectations on the [Publishing Guidelines](https://www.cdc.gov/rdc/publishing-guidelines/index.html) webpage\ [@publishing_guides].
+7. When you have nearly completed your output, send it to your RDC analyst for review before submitting it for publication or distribution. Find the full details about requirements and expectations on the [Publishing Guidelines](https://www.cdc.gov/rdc/publishing-guidelines/index.html) page\ [@publishing_guides].
 :::
+
 
 ::: {.callout-important}
 Amendments for project changes are possible but require additional approval prior to implementation. Common reasons for an amendment include, but are not limited to, changes in the research team, requests for additional variables, new methods, or requests for additional types of output\ [@rdc_process].  However, if you wish to change the scope or research question, a new application is required instead.
@@ -252,7 +268,7 @@ Contact the RDC directly at rdca@cdc.gov for further guidance.
 
 #### Data Distribution Centers
 
-NCHS data is available at two types of data centers: the Census Bureau's Federal Statistical Research Data Centers (FSRDC) and the NCHS Research Data Centers (RDCs). Additional details about preparing to access your data at one of these sites can be found on the RDC [Location of Access](https://www.cdc.gov/rdc/location-of-access/index.html) webpage or their respective subpages: [FSRDC](https://www.cdc.gov/rdc/location-of-access/federal-statistical-rdc.html) and [NCHS RDC](https://www.cdc.gov/rdc/location-of-access/nchs-rdc.html)\ [@data_locations; @fsrdc; @nchs_rdc; @rdc_process].
+NCHS data is available at two types of data centers: the Census Bureau's Federal Statistical Research Data Centers (FSRDC) and the NCHS Research Data Centers (RDCs). Additional details about preparing to access your data at one of these sites can be found on the RDC [Location of Access](https://www.cdc.gov/rdc/location-of-access/index.html) page or their respective subpages: [FSRDC](https://www.cdc.gov/rdc/location-of-access/federal-statistical-rdc.html) and [NCHS RDC](https://www.cdc.gov/rdc/location-of-access/nchs-rdc.html)\ [@data_locations; @fsrdc; @nchs_rdc; @rdc_process].
 
 
 ::: {.callout-important}

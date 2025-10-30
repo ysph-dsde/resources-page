@@ -42,7 +42,7 @@ suppressPackageStartupMessages({
 source('./PubMed Search_Functions.R')
 ```
 
-Updated: October 23$^{rd}$, 2025
+Updated: October 29$^{th}$, 2025
 
 ## Overview
 
@@ -75,7 +75,7 @@ The types of data collected include\ [@data_sources; @data_browser]:
 
 #### Do I Qualify?
 
-All individuals seeking access can download aggregated and deidentified data\ [@access_tiers].
+All individuals seeking access can download aggregated and deidentified data\ [@access_tiers]. Any research using All of Us data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit.
 
 #### Typical Timeline
 
@@ -93,7 +93,10 @@ No specific steps are required to access the publicly available data, which can 
 
 With the Registered Tier dataset, you can access individual-level data from electronic health records (EHRs), wearables, surveys, and physical measurements through the All of Us Researcher Workbench. Researchers affiliated with institutions that have signed the All of Us Data Use and Registration Agreement (DURA) can register for access for free\ [@access_tiers].
 
+Any research using All of Us data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit.
+
 Check the [Registered Institutions](https://www.researchallofus.org/institutional-agreements/) page to see if your institution is listed and which access level you can attain. If your institution is not listed, you can submit a request form linked on the same page\ [@aou_registered].
+
 
 #### Typical Timeline
 
@@ -122,21 +125,95 @@ The following timeline <a href="https://support.researchallofus.org/hc/en-us/art
 
 #### Step-by-Step Guide
 
-Once you have a Workbench account, you need to request access to Registered Tier-level data, which involves setting up Google 2-Step Verification, verifying your identity, and completing the Responsible Conduct of Research Training\ [@access_tiers; @support].
+**a. Register for a Researcher Workbench Account**\ [@workbench_registration]
 
-You can find out more about the Responsible Conduct of Research Training process on the [Registration and Account Questions](https://support.researchallofus.org/hc/en-us/articles/32792489923092-Registration-and-Account-Questions) page. Identity verification can be done through Login.gov or ID.me; more details can be found on the [Identity Verification](https://support.researchallofus.org/hc/en-us/articles/4407442809876-Identity-Verification) page. If you encounter any issues, refer to the [troubleshooting](https://support.researchallofus.org/hc/en-us/articles/23968984529428-Troubleshooting-Identity-Verification-Issues) guide or contact support at support@researchallofus.org\ [@support].
+::: {style="margin-left: 2rem"}
+1. Open the Researcher Workbench [registration](https://www.researchallofus.org/register/) webpage and search your institution.
 
-After registering for a Workbench account and completing the steps to get Registered Tier-level data access, you will need to sign the Data User Code of Conduct (DUCC), which you can review [here](https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy) under the Data Use Policies section\ [@access_tiers].
+2. If your institution already has a DURA in place for the required tiers of access, you can proceed. Otherwise, select the "My Institution Isn't Listed" button to start the process of adding your institution.
 
+3. Click the "Create An Account" button, which will take you to the [Workbench Log In](https://workbench.researchallofus.org/login portal) portal. In the bottom-left corner, click "Create Account" again to start the registration process.
+
+4. Select your institution, enter your institution-affiliated email, and choose your role at the institution.
+
+5. Fill in the required fields and create a username associated with a new Google Account using the "\@researchallofus.org" domain, including:
+
+::: {style="margin-left: 2rem"}
+- Your institutional mailing address
+
+- Your research background, experience, and research interests (displayed publicly)
+
+- Link to your your professional profile or bio page below (if available)
+:::
+
+6. You will then be asked 15 questions about your identity, such as race, gender, sexual orientation, level of ambulation, etc., which you have the option to complete.
+
+7. Once all fields are completed, submit your request. Activation of your account typically takes 1-2 hours to complete.
+:::
+
+::: {.callout-important}
+A valid Virtual Private Network (VPN) must be used every time the All of Us Workbench is accessed. For Yale-affiliates, this will be the IST-provided VPN. Despite the protections offered by Yale's on-campus YaleSecure network, All of Us mandates the use of a VPN when accessing their portal at all times.
+:::
+
+**b. Request Access to Registered Tier-Level Data**\ [@access_tiers; @support]
+
+::: {style="margin-left: 2rem"}
+1. Configure your active Workbench account with Google 2-step verification
+
+2. Verify your identity through Login.gov or ID.me. More details about this process can be found on the [Identity Verification](https://support.researchallofus.org/hc/en-us/articles/4407442809876-Identity-Verification) page. If you encounter any issues, refer to the [troubleshooting](https://support.researchallofus.org/hc/en-us/articles/23968984529428-Troubleshooting-Identity-Verification-Issues) guide or contact support at support@researchallofus.org\ [@support].
+
+3. Navigate to the "Data Access Requirements" page, located in the sidebar under your profile name.
+
+4. 	Complete our Responsible Conduct of Research training. You can find out more about the Responsible Conduct of Research Training process on the [Registration and Account Questions](https://support.researchallofus.org/hc/en-us/articles/32792489923092-Registration-and-Account-Questions) page.
+
+5. Sign the Data User Code of Conduct (DUCC), which can be reviewed [here](https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy) under the "Data Use Policies" section\ [@access_tiers].
+:::
+
+::: {.callout-note}
 You must annually complete refresher training, re-attest to the Data User Code of Conduct, and update your contact information and institutional affiliation to maintain access.
+:::
+
+**c. Start a New Workspace to Analyze Data**\ [@create_workbench]
+
+Each time you want to access data, you will do so by creating a project called a "workspace." When opening a new workspace, you will provide the billing account information and answer a series of research statement questions.
+
+::: {.callout-caution}
+Note that some of these answers are made publicly available so the community can assess data use activities and report any concerns.
+:::
+
+::: {.callout-tip}
+New account holders will receive $300 in computational credits and can create a Google billing account if additional credits are needed.
+:::
+
+For example, you will be asked to provide:
+
+::: {style="margin-left: 2rem"}
+- Description of the project's purpose, including a summary that explains the specific scientific question(s) you intend to study, the scientific approaches you plan to use, and the anticipated findings from the study.
+
+- Description of the various ways you intend to disseminate your research findings, such as publication in a peer-reviewed journal, conference presentation, personal blog, social media, etc.
+
+- Choose statements regarding how (or if) your research outcomes might align with the All of Us Research Program Scientific Framework.
+
+- Disclose underrepresented populations that will be a focus of your research study, and specifically evaluate the appropriate use of American Indian and Alaska Native (AI/AN) population data.
+:::
+
+If you need assistance or would like help assessing whether your study might become stigmatizing, you can request that the Resource Access Board review your study summary prior to conducting the research.
+
+Once your workspace application is submitted, you can access data within the tier of controlled access you have permission to use in the All of Us cloud computing platform. This virtual environment comes with preloaded computational resources and tools, including R/RStudio, Jupyter Notebook with R and Python kernels, Cromwell, SQL, SAS, and a command-line application called "Cloud Analysis Terminal.
+
+::: {.callout-tip}
+Be mindful of the compute power and disk space you select, as these incur different charges on an hourly and monthly basis while the workspace is active.
+:::
+
 
 
 ### Controlled Tier
 
-
 #### Do I Qualify?
 
 The Controlled Tier is an optional extension to the Registered Tier, offering access to genomic data (short-read and long-read WGS, structural variants, genotyping arrays), previously suppressed demographic data from EHRs and surveys, and unshifted event dates. Researchers affiliated with institutions that have signed the All of Us Data Use and Registration Agreement (DURA) can register for free access\ [@access_tiers].
+
+Any research using All of Us data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit.
 
 Check the [Registered Institutions](https://www.researchallofus.org/institutional-agreements/) page to see if your institution is listed and which access level you can attain. If your institution is not listed, you can submit a request form linked on the same page\ [@aou_registered].
 
@@ -148,11 +225,61 @@ Controlled Tier access is an addition to the Registered Tier level and requires 
 
 #### Step-by-Step Guide
 
-You will first need to complete the steps to gain Registered Tier access. Then, you will ask your institution to sign an agreement and grant permission for you to access the Controlled Tier. Once these steps are completed, you will proceed with the additional training modules specific to the Controlled Tier.
+**a. Register for a Researcher Workbench Account and Complete Registered Tier-Level Access Requests**\ [@workbench_registration; @access_tiers; @support]
 
-After registering for a Workbench account and completing the steps to get Registered and Controlled Tier-level data access, you will need to sign the Data User Code of Conduct (DUCC), which you can review [here](https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy) under the Data Use Policies section\ [@access_tiers].
+You will first need to complete the steps to gain Registered Tier access, listed in the previous tab. If you have not completed these, please go back to those steps before proceeding.
 
-You must annually complete refresher training, re-attest to the Data User Code of Conduct, and update your contact information and institutional affiliation to maintain access.
+::: {.callout-important}
+A valid Virtual Private Network (VPN) must be used every time the All of Us Workbench is accessed. For Yale-affiliates, this will be the IST-provided VPN. Despite the protections offered by Yale's on-campus YaleSecure network, All of Us mandates the use of a VPN when accessing their portal at all times.
+:::
+
+**b. Request Access to Controlled Tier-Level Data**\ [@access_tiers; @support]
+
+::: {style="margin-left: 2rem"}
+1. If you have not, log into your [All of Us Workbench](https://workbench.researchallofus.org/login) account and navigate to the "Data Access Requirements" page, located in the sidebar under your profile name.
+
+2. Ask your institution to sign an agreement and grant permission for you to access the Controlled Tier. 
+
+3. Once approved, you will proceed with the additional training modules specific to the Controlled Tier.
+
+4. To complete the process, you need to sign the Data User Code of Conduct (DUCC), which can be reviewed [here](https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy) under the "Data Use Policies" section\ [@access_tiers].
+:::
+
+::: {.callout-note}
+As stated before, you must annually complete refresher training, re-attest to the Data User Code of Conduct, and update your contact information and institutional affiliation to maintain access.
+:::
+
+**c. Start a New Workspace to Analyze Data**\ [@create_workbench]
+
+Each time you want to access data, you will do so by creating a project called a "workspace." When opening a new workspace, you will provide the billing account information and answer a series of research statement questions.
+
+::: {.callout-caution}
+Note that some of these answers are made publicly available so the community can assess data use activities and report any concerns.
+:::
+
+::: {.callout-tip}
+New account holders will receive $300 in computational credits and can create a Google billing account if additional credits are needed.
+:::
+
+For example, you will be asked to provide:
+
+::: {style="margin-left: 2rem"}
+- Describe the purpose of the project with a summary explaining the specific scientific question(s) you intend to study, the scientific approaches you plan to use, and the anticipated findings from the study.
+
+- Provide a description of the various ways you intend to disseminate your research findings, such as publication in a peer-reviewed journal, conference presentation, personal blog, social media, etc.
+
+- Choose statements regarding how (or if) your research outcomes might align with the All of Us Research Program Scientific Framework.
+
+- Disclose underrepresented populations that will be a focus of your research study, and specifically evaluate the appropriate use of American Indian and Alaska Native (AI/AN) population data.
+:::
+
+If you need assistance or would like help assessing whether your study might become stigmatizing, you can request that the Resource Access Board review your study summary prior to conducting the research.
+
+Once your workspace application is submitted, you can access data within the tier of controlled access you have permission to use in the All of Us cloud computing platform. This virtual environment comes with preloaded computational resources and tools, including R/RStudio, Jupyter Notebook with R and Python kernels, Cromwell, SQL, SAS, and a command-line application called "Cloud Analysis Terminal.
+
+::: {.callout-tip}
+Be mindful of the compute power and disk space you select, as these incur different charges on an hourly and monthly basis while the workspace is active.
+:::
 
 :::
 

@@ -46,10 +46,26 @@ combined_keywords_and <- build_search_query(
 
 
 ## ----------------
+## NCHS
+
+build_search_query(
+  keywords = c("National Center for Health Statistics", "NCHS"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+
+## ----------------
 ## NHANES
 
 build_search_query(
   keywords = c("National Health and Nutrition Examination Survey", "NHANES"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+
+## ----------------
+## SEER
+
+build_search_query(
+  keywords = c("Surveillance, Epidemiology, and End Results Program", "SEER"), 
   affiliation = "Yale School of Public Health", years = 5)
 
 
@@ -82,3 +98,7 @@ build_search_query(
 build_search_query(
   keywords = c("All of Us"), 
   affiliation = "Yale School of Public Health", years = 5)
+
+
+
+

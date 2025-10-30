@@ -2,10 +2,10 @@
   title: "UK Biobank"
   description: |
          </br>
-         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health\ [@about_nhanes; @achievements_nhanes]. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
+         The UK Biobank offers a comprehensive dataset of biological, health, and lifestyle information from 500,000 participants recruited from 2006 to 2010 across 22 centers in Scotland, England, and Wales, with over 86% residing in urban areas. Participants have consistently provided data on health records, physical measurements, lifestyle and environment, questionnaires, and biospecimens\ [@about_us].
          </br>
          </br>
-         Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
+         UK Biobank continuously enhances its research value by integrating biomedical data with external sources and generating new data from biospecimens. Initiatives include lifestyle questionnaires, wearable technology, and extensive sleep surveys and image scans\ [@future_projects; @largest_sleep; @largest_imaging].
   title-block-banner: true
   format: 
     html:
@@ -23,4 +23,277 @@
   chunk_output_type: console
 ---
 
-![Free Adobe Stock photo by inspiring.team. File #: 284810520](images/AdobeStock_284810520.jpeg){fig-align="center"}
+```{r}
+#| echo: false
+
+# Import necessary libraries
+suppressPackageStartupMessages({
+  library("stringr")
+  library("htmltools")
+  library("glue")
+  library("rentrez")
+  library("xml2")
+  library("clipr")
+})
+
+"%!in%" <- function(x,y)!("%in%"(x,y))
+
+# Load in the functions.
+source('./PubMed Search_Functions.R')
+```
+
+Updated: October 23$^{rd}$, 2025
+
+## Overview
+
+UK Biobank provides an ongoing clinical study biobank offering the most comprehensive dataset of biological, health, and lifestyle information from half a million participants since initial recruitment in 2006\ [@who_we_are; @about_us]. Participants were recruited from 22 centers in Scotland, England, and Wales, with over 86% living in urban areas. Since recruitment from 2006 to 2010, these participants have consistently provided data on health records, physical measurements, lifestyle and environment, questionnaires, and biospecimens\ [@about_us; @our_participants].
+
+The UK Biobank continually enhances its research value by integrating biomedical data with external sources, collecting additional data points, and generating new data from biospecimens. They have introduced new research initiatives, including lifestyle questionnaires, wearable technology, and one of the world's largest sleep surveys and whole-body imaging projects\ [@largest_imaging; @largest_sleep; @future_projects].
+
+Participants were aged between 40 and 69 years and living in the UK when they joined the study between 2006 and 2010, with half being female. They represent various socioeconomic backgrounds, with more than 40,000 born outside the UK. Participants tend to be wealthier and healthier than the national average, reflecting a common 'healthy volunteer bias'\ [@who_we_are; @our_participants; @for_participant]. Despite this, the sufficient number of participants across various risk levels allows the findings to be broadly generalizable to the UK. 94.6% of participants are of white ethnicity, reflecting the national population at the time of recruitment (94.5% in the 2001 UK Census and 91.3% in 2011). Consequently, the data does not effectively represent disease risk across different ethnic groups\ [@our_participants].
+
+The types of data collected include\ [@types_of_data]:
+
+::: {style="margin-left: 2rem"}
+- **Demographic, Lifestyle, and Self-Reported Health Data:** Basic demographics and socioeconomic status; family characteristics like illnesses of parents and siblings; lifestyle habits such as physical activity and diet; sociodemographic factors like education and employment; and various medical conditions including eyesight and mental health\ [@data_demographics].
+
+- **Imaging:** Magnetic Resonance Imaging (MRI) scans of the brain, heart, and abdomen, full-body bone density scans (DXA/DEXA) scans, carotid ultrasound images, Optical Coherence Tomography (OCT) scans, and COVID-19 repeat scans\ [@data_imaging].
+
+- **Biomarker:** 251 metabolic biomarkers, 3,000 proteins using OLINK's proteomic assays, infectious disease antigens, 34 components in blood and urine, and blood counts including examples such as basophils, eosinophils, neutrophils, red blood cells, white blood cells, platelets, and haemoglobin\ [@data_biomarker].
+
+- **Genetic:** Around 850,000 genetic variants directly measured, more than 90 million variants predicted using statistical methods, whole exomes and genomes, and telomere length\ [@data_genetic].
+
+- **Health Records:** Coded hospital data for diagnoses and procedures, coded general practitioner (GP) data containing codes about diagnoses, prescriptions, and referrals (excluding confidential notes or letters), cancer diagnoses from national cancer registries, deaths data, and algorithmically classified outcomes based on qualifying diagnostic and/or procedural codes for conditions such as asthma, COPD, dementia, myocardial infarction, and stroke\ [@data_health_records].
+
+- **Physical Measurements:** Collected during the first "baseline" visit: participants’ height, weight, waist and hip circumference, lung capacity, body composition (muscle and fat mass), hand grip strength, heel bone density, blood pressure, arterial stiffness, vision, hearing, touchscreen tests for memory, fitness level and activity monitored for one week, and 12-lead electrocardiogram (ECG)\ [@data_physical_measures].
+
+- **Questionnaire Results:** Some participants completed detailed questionnaires covering topics such as diet (e.g., food preferences and a 24-hour food recall), cognitive function, occupational history, mental health, digestive health, pain, and overall health and wellbeing\ [@data_questionnaire].
+
+- **Environmental Data:** Air pollution near participants' residences, noise pollution, greenspace in participants' local areas, the nearby built environment and traffic intensity, the distance of their homes to the coast, and tap water minerals\ [@data_environment].
+:::
+
+
+## Gaining Access
+
+::: {.panel-tabset}
+
+### Research Plus and NCCR Data
+
+#### Do I Qualify?
+
+UK Biobank data are made available to eligible researchers from academic, charity, government, and commercial organizations worldwide for health-related research that serves the public interest. Any research using UK Biobank data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit.
+
+To be eligible to access the data, researchers must demonstrate a proven track record of legitimate health-related research. They must also be affiliated with a recognized research organization and operate from a country that complies with international regulations and is not subject to UK, US, or EU sanctions, as outlined in the [UK Biobank International Sanctions Policy](https://community.ukbiobank.ac.uk/hc/en-gb/articles/27945572270365-UK-Biobank-International-Sanctions-Policy). Additionally, the UK Biobank no longer accepts applications from insurance companies, as specified in the [Access to UK Biobank Data](https://www.ukbiobank.ac.uk/about-us/how-we-work/access-to-uk-biobank-data/) section under "Controlling Access."
+
+::: {.callout-important}
+UK Biobank ensures compliance with these eligibility requirements by conducting thorough background checks on researchers applying for data access. This is done by trained personnel who verify the legitimacy of the applicants and their research credentials.
+:::
+
+#### How Is My Application Assessed?
+
+The application process will involve the Access Committee (AC), a sub-committee of the UK Biobank Board. The AC, which meets on a quarterly basis, is responsible for making key access decisions, notably those regarding the use of depletable samples, recontact, or potentially contentious research. The AC will assess the application for:
+
+::: {style="margin-left: 2rem"}
+- The likelihood of the proposed research receiving approval
+- The proposed research's compliance with the required access criteria (including legal and ethical standards)
+- The availability of the requisite data and/or samples for the proposed research
+- The scientific justification for the amount of depletable sample required
+- The cost associated with providing the requested data and/or samples
+:::
+
+
+#### Typical Timeline
+
+Registration is reviewed within 10 working days
+
+A couple days to register the Access team to review the MRC certificate.
+
+Costs are per application, and each application grants 3 years of data access once approved, payment received, and Material Transfer Agreement executed.
+
+Data is usually released weekly, whereas samples are distributed following a predetermined schedule.
+
+#### Step-by-Step Guide
+
+All researchers must register, complete training modules, and sign user agreements in the UK Biobank Access Management System (AMS) before they can request data. The AMS allows you to manage your portfolio information and check which outstanding trainings need to be completed to gain access. Once certain criteria have been met, you can request data access through AMS, which you can then access via the DNAnexus UK Biobank cloud computing portal.
+
+::: {.callout-warning}
+It is recommended to use Google Chrome to access the AMS due to identified compatibility issues with certain browsers, such as Firefox and Safari.
+:::
+
+**a. Register for Access in the Access Management System (AMS)**
+
+::: {.callout-note}
+If your institution is not approved, you will not be able to complete AMS registration until it gains approval to access UK Biobank data.
+:::
+
+::: {style="margin-left: 2rem"}
+1. [Register](https://ams.ukbiobank.ac.uk/ams/signup) for an AMS account for free using your institution's email address.
+
+2. Verify your new account.
+
+3. To complete the registration process, log in to the [UK Biobank AMS](https://ams.ukbiobank.ac.uk/ams/) system using your recently verified credentials.
+
+4. You will then see a message window that prompts you to complete your registration by providing additional details about you. The mandatory fields include:
+
+::: {style="margin-left: 2rem"}
+- Your full name, phone number, and date of birth
+- An up-to-date resume/CV in English confirming your current position and institution, **OR** a link to a personal profile page on your institution's website
+- PubMed reference numbers for up to 5 peer-reviewed publications where you are listed as an author (if available)
+- Details of any complaints raised against you within the past 3 years (if applicable)
+- Name of the primary institution you are affiliated with that has approved access to UK Biobank data
+- Your email address with this institution and used for registration
+- Your position at this institution
+- List other institutions with which you plan to use the UK Biobank Resource (if applicable)
+:::
+
+5. The registration team will review your application and send a message within the AMS portal. They may contact you to request further details.
+
+:::
+
+**b. Complete the Training Modules and Sign the User Agreements**
+
+The Home page of your AMS portal will display notices about mandatory training along with any announcements or important information. Outstanding training module requests can be found on the Profile page in the "Training" section. Additionally, you can find previously uploaded Medical Research Council (MRC) certificates there.
+
+::: {.callout-note}
+You must annually complete the MRC course “Research, General Data Protection Regulation (GDPR) & Confidentiality” and upload the passing certificate. You may also be asked to recomplete the two introductory courses and their accompanying multiple-choice tests.
+:::
+
+::: {style="margin-left: 2rem"}
+1. Complete the [MRC course “Research, General Data Protection Regulation (GDPR) & Confidentiality”](https://bygsystems.net/mrcrsc-lms/login/index.php), which consists of 10 short video. If this is your first time logging into the MRC Centre for Research Policy Learning Management System, you will need to first create and verify a new account.
+
+2. Take the MRC course 10-question multiple-choice quiz. You must pass with a score of 70% or higher for the certificate to be accepted by the Access team.
+
+3. Save a PDF copy of the passing completion certificate and upload it in the "Upload MRC Certificate" section of your AMS Profile page.
+
+4. Complete the course video ["Introduction to using UK Biobank"](https://www.youtube.com/watch?v=rvm6olcElcM).
+
+5. Complete the course video ["Introduction to the UK Biobank Research Analysis Platform (RAP)"](https://www.youtube.com/watch?v=GfpT2zzvBaY).
+
+6. Take the two multiple-choice tests, found in the "Training" section of your AMS Profile page. You must pass with a score of 80% or higher to complete the process.
+:::
+
+The three courses listed are mandatory to gain access. UK Biobank has also released additional courses as part of this set, such as the ["Code Repository"](https://www.youtube.com/watch?v=lsZ_Fi8P2-s) course, which includes its own test.
+
+
+**c. Apply to Receive Data**
+
+Once registration is completed, an "Applications" page link will appear in the sidebar. There are two options when requesting access to data: data only or data and biospecimens. Both application types have distinct features but follow similar review processes, which are summarized below. Researchers can find specific details about the application contents in their AMS portals.
+
+::: {.callout-caution}
+Some of these answers are made publicly available so the community can assess data use activities and report any concerns.
+:::
+
+::: {style="margin-left: 2rem"}
+1. Complete one of the applications for either data only or data and biospecimens. For example, some of the fields in the application include:
+
+::: {style="margin-left: 2rem"}
+- A summary of the research you intend to conduct in the project, including the research questions, objectives, and scientific rationale (displayed publicly)
+- Keywords describing the research
+- Confirmations that the research will be used to perform health-related research and ultimately aims to improve public health
+- The type and size of the data requested
+- Confirmation if your research requires biospecimens, and if recontacting participants is needed
+- Description of the methods
+- A statement if the study will result in the generation of new data
+:::
+
+2. List of all project collaborators with their contact details.
+
+3. Indicate the tier of data you are requesting, as each tier comes with different associated costs. For more information on the fees, visit the biobank's [Fee Structure](https://www.ukbiobank.ac.uk/use-our-data/fees/) page.
+
+4. Submit the form for review by the AC, which meets quarterly. Refer to the previous section titled "How Is My Application Assessed?" for more details about this process.
+
+5. Approved applications will require the execution of the Material Transfer Agreement (MTA) and payment of access charges before the release of data and/or samples to the Applicant Principal Investigator (PI). Afterward, the materials will be released.
+
+Data is usually released weekly, whereas samples are distributed following a predetermined schedule.
+
+:::
+
+
+#### Accessing the Data
+
+In the past, researchers were required to download requested data and agree to delete it upon the completion of their study. With the introduction of the UK Biobank Research Analysis Platform (UKB-RAP), a secure cloud-based analysis environment, researchers now access and analyze the data directly on the platform, with few exceptions.
+
+After completing the training needed, you will then need to register for a UK Biobank data DNAnexus account and link it to your AMS account.
+
+Our in-house scientists then assess whether the research proposal qualifies as health-related research in the public interest. This means the findings should be likely to benefit the health and wellbeing of society, and should not cause harm, such as perpetuate stereotypes about certain groups. 
+
+If there is any doubt about this, or if the proposal raises any concerns, it is referred to UK Biobank's expert Access Committee (AC) which will consider the application in more detail, and seek ethics advice if needed.
+
+:::
+
+
+## Valuable Links
+
+::: {style="margin-left: 2rem"}
+- [Get started with UK Biobank](https://community.ukbiobank.ac.uk/hc/en-gb/categories/14494598931229-Get-started-with-UK-Biobank): Find articles about gaining access to UK Biobank data, links to policies, an FAQ for common problems, a listing of mandatory trainings, and articles on how to manage your active projects and share results\ [].
+
+- [Types of data](https://www.ukbiobank.ac.uk/about-our-data/types-of-data/): Explore a breakdown of the various data categories provided, with links to additional documentation and the relevant Showcase Data Browser pages\ [@types_of_data].
+
+- [Showcase Data Browser](https://biobank.ndph.ox.ac.uk/showcase/): Find data field descriptions, glossaries, meta-information linking schemas, high-level, de-identified summaries of data contents for each data field, and instructions on navigating the biobank system, along with technical information for researchers interested in using the data\ [@showcase; @showcase_user_guide].
+
+- [Use Our Data](https://www.ukbiobank.ac.uk/use-our-data/): Find links to relevant articles and webpages that guide researchers through data access applications, training and support options, financing, and facilitated collaboration\ [].
+
+- [Protecting the Data](https://www.ukbiobank.ac.uk/about-our-data/protecting-the-data/): Find information about the data security measures taken to ensure participant confidentiality and monitor the appropriate use of their data for research. Additionally, find a link to the UK Biobank data de-identification protocol\ [].
+
+- [UK Biobank YouTube](https://www.youtube.com/@uk_biobank): Find informative videos from UK Biobank staff and interviews with researchers discussing their findings using UK Biobank data. Subjects covered include training modules, conference recordings, and promotions of recent news or upcoming features on the platform\ [].
+
+- [UK Biobank GitHub](https://github.com/UK-Biobank): Find coded examples using the [UK Biobank Research Analysis Platform (UKB-RAP)](https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/), auditing tools to ensure data security in Git repositories, and example workflows for genomic and image analysis\ [].
+
+- [Our Future](https://www.ukbiobank.ac.uk/about-us/our-future/): Find information about upcoming expansion projects, outreach, infrastructure improvements, funding, and financial support\ [@future_projects].
+
+- [Research Stories](https://www.ukbiobank.ac.uk/research-stories/): Find a listing of articles highlighting impactful research conducted using UK Biobank data from across the globe\ [@research_stores].
+
+- [Researcher Events](https://www.ukbiobank.ac.uk/use-our-data/researcher-collaboration/researcher-events/): Find events specifically geared towards the research community\ [@events].
+
+- [News](https://www.ukbiobank.ac.uk/news/): Find the latest stories from UK Biobank, including news about data releases, new activities to enhance the data, and updates about people and funding. At the time of this writing, the biobank was celebrating the upcoming release of the largest collections of [whole body imaging](https://www.ukbiobank.ac.uk/news/record-breaking-human-imaging-project-crosses-the-finish-line/) and [sleep survey data](https://www.ukbiobank.ac.uk/news/uk-biobank-releases-worlds-largest-sleep-survey-data/)\ [@news; @largest_sleep; @largest_imaging].
+:::
+
+
+## Publications
+
+```{r}
+#| echo: false
+
+# Fetch and format the citations.
+citations <- get_citations(
+  doi = c("10.7326/M21-0065"),
+  affiliation = "Yale School of Public Health"
+)
+
+# Condition the output based on presence of articles.
+citations_html <- make_pub_list(citations)
+
+if(!any(str_detect(citations$citations, "No publications"))) {
+  citation_length <- length(citations$citations)
+  citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
+} else {
+  citation_length <- 0
+  citation_date   <- as.numeric(format(Sys.Date(), "%Y")) - as.numeric(str_extract("No publications found in the last 25 years.", "[0-9]{2}"))
+}
+
+```
+
+
+This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.
+
+::: {style="margin-left: 1rem"}
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+# Display formatted citations.
+cat(citations_html)
+```
+
+```{=html}
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">&#9664; Previous</button>
+  <button onclick="nextPage()">Next &#9654;</button>
+</div>
+
+<script src="pagination.js"></script>
+```
+
+:::
