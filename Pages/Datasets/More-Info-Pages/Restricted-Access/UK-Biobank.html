@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content=" The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health&nbsp;about_nhanes?,achievements_nhanes?. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.   Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community’s resources.">
+<meta name="description" content=" The UK Biobank offers a comprehensive dataset of biological, health, and lifestyle information from 500,000 participants recruited from 2006 to 2010 across 22 centers in Scotland, England, and Wales, with over 86% residing in urban areas. Participants have consistently provided data on health records, physical measurements, lifestyle and environment, questionnaires, and biospecimens&nbsp;1.   UK Biobank continuously enhances its research value by integrating biomedical data with external sources and generating new data from biospecimens. Initiatives include lifestyle questionnaires, wearable technology, and extensive sleep surveys and image scans&nbsp;2–4.">
 
 <title>UK Biobank – Resource Navigation Tool</title>
 <style>
@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../../site_libs/bootstrap/bootstrap-ec57f4cb02dda077bd1d117dc23d0d4c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../../site_libs/bootstrap/bootstrap-19c72debe01a73826ad54c6f04fdf83a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +90,35 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -102,6 +151,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../../../Pages/about-us.html"> 
 <span class="menu-text">About Us</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Feedback</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
+ <span class="dropdown-text">For Yale Affiliates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
+ <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/" target="_blank"> 
 <span class="menu-text">Contact</span></a>
@@ -120,7 +184,7 @@ ul.task-list li input[type="checkbox"] {
       <h1 class="title">UK Biobank</h1>
                   <div>
         <div class="description">
-          <p><br> The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health&nbsp;<span class="citation" data-cites="about_nhanes achievements_nhanes"><sup><a href="#ref-about_nhanes" role="doc-biblioref"><strong>about_nhanes?</strong></a>,<a href="#ref-achievements_nhanes" role="doc-biblioref"><strong>achievements_nhanes?</strong></a></sup></span>. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies. <br> <br> Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community’s resources.</p>
+          <p><br> The UK Biobank offers a comprehensive dataset of biological, health, and lifestyle information from 500,000 participants recruited from 2006 to 2010 across 22 centers in Scotland, England, and Wales, with over 86% residing in urban areas. Participants have consistently provided data on health records, physical measurements, lifestyle and environment, questionnaires, and biospecimens&nbsp;<span class="citation" data-cites="about_us"><sup><a href="#ref-about_us" role="doc-biblioref">1</a></sup></span>. <br> <br> UK Biobank continuously enhances its research value by integrating biomedical data with external sources and generating new data from biospecimens. Initiatives include lifestyle questionnaires, wearable technology, and extensive sleep surveys and image scans&nbsp;<span class="citation" data-cites="future_projects largest_sleep largest_imaging"><sup><a href="#ref-future_projects" role="doc-biblioref">2</a>–<a href="#ref-largest_imaging" role="doc-biblioref">4</a></sup></span>.</p>
         </div>
       </div>
                 </div>
@@ -138,8 +202,17 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link" data-scroll-target="#gaining-access">Gaining Access</a></li>
+  <li><a href="#valuable-links" id="toc-valuable-links" class="nav-link" data-scroll-target="#valuable-links">Valuable Links</a></li>
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/Datasets/More-Info-Pages/Restricted-Access/UK-Biobank.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -148,16 +221,305 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/AdobeStock_284810520.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Free Adobe Stock photo by inspiring.team. File #: 284810520</figcaption>
-</figure>
+<p>Updated: October 23<span class="math inline">\(^{rd}\)</span>, 2025</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>UK Biobank provides an ongoing clinical study biobank offering the most comprehensive dataset of biological, health, and lifestyle information from half a million participants since initial recruitment in 2006&nbsp;<span class="citation" data-cites="who_we_are about_us"><sup><a href="#ref-about_us" role="doc-biblioref">1</a>,<a href="#ref-who_we_are" role="doc-biblioref">5</a></sup></span>. Participants were recruited from 22 centers in Scotland, England, and Wales, with over 86% living in urban areas. Since recruitment from 2006 to 2010, these participants have consistently provided data on health records, physical measurements, lifestyle and environment, questionnaires, and biospecimens&nbsp;<span class="citation" data-cites="about_us our_participants"><sup><a href="#ref-about_us" role="doc-biblioref">1</a>,<a href="#ref-our_participants" role="doc-biblioref">6</a></sup></span>.</p>
+<p>The UK Biobank continually enhances its research value by integrating biomedical data with external sources, collecting additional data points, and generating new data from biospecimens. They have introduced new research initiatives, including lifestyle questionnaires, wearable technology, and one of the world’s largest sleep surveys and whole-body imaging projects&nbsp;<span class="citation" data-cites="largest_imaging largest_sleep future_projects"><sup><a href="#ref-future_projects" role="doc-biblioref">2</a>–<a href="#ref-largest_imaging" role="doc-biblioref">4</a></sup></span>.</p>
+<p>Participants were aged between 40 and 69 years and living in the UK when they joined the study between 2006 and 2010, with half being female. They represent various socioeconomic backgrounds, with more than 40,000 born outside the UK. Participants tend to be wealthier and healthier than the national average, reflecting a common ‘healthy volunteer bias’&nbsp;<span class="citation" data-cites="who_we_are our_participants for_participant"><sup><a href="#ref-who_we_are" role="doc-biblioref">5</a>–<a href="#ref-for_participant" role="doc-biblioref">7</a></sup></span>. Despite this, the sufficient number of participants across various risk levels allows the findings to be broadly generalizable to the UK. 94.6% of participants are of white ethnicity, reflecting the national population at the time of recruitment (94.5% in the 2001 UK Census and 91.3% in 2011). Consequently, the data does not effectively represent disease risk across different ethnic groups&nbsp;<span class="citation" data-cites="our_participants"><sup><a href="#ref-our_participants" role="doc-biblioref">6</a></sup></span>.</p>
+<p>The types of data collected include&nbsp;<span class="citation" data-cites="types_of_data"><sup><a href="#ref-types_of_data" role="doc-biblioref">8</a></sup></span>:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><strong>Demographic, Lifestyle, and Self-Reported Health Data:</strong> Basic demographics and socioeconomic status; family characteristics like illnesses of parents and siblings; lifestyle habits such as physical activity and diet; sociodemographic factors like education and employment; and various medical conditions including eyesight and mental health&nbsp;<span class="citation" data-cites="data_demographics"><sup><a href="#ref-data_demographics" role="doc-biblioref">9</a></sup></span>.</p></li>
+<li><p><strong>Imaging:</strong> Magnetic Resonance Imaging (MRI) scans of the brain, heart, and abdomen, full-body bone density scans (DXA/DEXA) scans, carotid ultrasound images, Optical Coherence Tomography (OCT) scans, and COVID-19 repeat scans&nbsp;<span class="citation" data-cites="data_imaging"><sup><a href="#ref-data_imaging" role="doc-biblioref">10</a></sup></span>.</p></li>
+<li><p><strong>Biomarker:</strong> 251 metabolic biomarkers, 3,000 proteins using OLINK’s proteomic assays, infectious disease antigens, 34 components in blood and urine, and blood counts including examples such as basophils, eosinophils, neutrophils, red blood cells, white blood cells, platelets, and haemoglobin&nbsp;<span class="citation" data-cites="data_biomarker"><sup><a href="#ref-data_biomarker" role="doc-biblioref">11</a></sup></span>.</p></li>
+<li><p><strong>Genetic:</strong> Around 850,000 genetic variants directly measured, more than 90 million variants predicted using statistical methods, whole exomes and genomes, and telomere length&nbsp;<span class="citation" data-cites="data_genetic"><sup><a href="#ref-data_genetic" role="doc-biblioref">12</a></sup></span>.</p></li>
+<li><p><strong>Health Records:</strong> Coded hospital data for diagnoses and procedures, coded general practitioner (GP) data containing codes about diagnoses, prescriptions, and referrals (excluding confidential notes or letters), cancer diagnoses from national cancer registries, deaths data, and algorithmically classified outcomes based on qualifying diagnostic and/or procedural codes for conditions such as asthma, COPD, dementia, myocardial infarction, and stroke&nbsp;<span class="citation" data-cites="data_health_records"><sup><a href="#ref-data_health_records" role="doc-biblioref">13</a></sup></span>.</p></li>
+<li><p><strong>Physical Measurements:</strong> Collected during the first “baseline” visit: participants’ height, weight, waist and hip circumference, lung capacity, body composition (muscle and fat mass), hand grip strength, heel bone density, blood pressure, arterial stiffness, vision, hearing, touchscreen tests for memory, fitness level and activity monitored for one week, and 12-lead electrocardiogram (ECG)&nbsp;<span class="citation" data-cites="data_physical_measures"><sup><a href="#ref-data_physical_measures" role="doc-biblioref">14</a></sup></span>.</p></li>
+<li><p><strong>Questionnaire Results:</strong> Some participants completed detailed questionnaires covering topics such as diet (e.g., food preferences and a 24-hour food recall), cognitive function, occupational history, mental health, digestive health, pain, and overall health and wellbeing&nbsp;<span class="citation" data-cites="data_questionnaire"><sup><a href="#ref-data_questionnaire" role="doc-biblioref">15</a></sup></span>.</p></li>
+<li><p><strong>Environmental Data:</strong> Air pollution near participants’ residences, noise pollution, greenspace in participants’ local areas, the nearby built environment and traffic intensity, the distance of their homes to the coast, and tap water minerals&nbsp;<span class="citation" data-cites="data_environment"><sup><a href="#ref-data_environment" role="doc-biblioref">16</a></sup></span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="gaining-access" class="level2">
+<h2 class="anchored" data-anchor-id="gaining-access">Gaining Access</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Research Plus and NCCR Data</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="do-i-qualify" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify">Do I Qualify?</h4>
+<p>UK Biobank data are made available to eligible researchers from academic, charity, government, and commercial organizations worldwide for health-related research that serves the public interest. Any research using UK Biobank data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit.</p>
+<p>To be eligible to access the data, researchers must demonstrate a proven track record of legitimate health-related research. They must also be affiliated with a recognized research organization and operate from a country that complies with international regulations and is not subject to UK, US, or EU sanctions, as outlined in the <a href="https://community.ukbiobank.ac.uk/hc/en-gb/articles/27945572270365-UK-Biobank-International-Sanctions-Policy">UK Biobank International Sanctions Policy</a>. Additionally, the UK Biobank no longer accepts applications from insurance companies, as specified in the <a href="https://www.ukbiobank.ac.uk/about-us/how-we-work/access-to-uk-biobank-data/">Access to UK Biobank Data</a> section under “Controlling Access.”</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>UK Biobank ensures compliance with these eligibility requirements by conducting thorough background checks on researchers applying for data access. This is done by trained personnel who verify the legitimacy of the applicants and their research credentials.</p>
+</div>
+</div>
+</section>
+<section id="how-is-my-application-assessed" class="level4">
+<h4 class="anchored" data-anchor-id="how-is-my-application-assessed">How Is My Application Assessed?</h4>
+<p>The application process will involve the Access Committee (AC), a sub-committee of the UK Biobank Board. The AC, which meets on a quarterly basis, is responsible for making key access decisions, notably those regarding the use of depletable samples, recontact, or potentially contentious research. The AC will assess the application for:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li>The likelihood of the proposed research receiving approval</li>
+<li>The proposed research’s compliance with the required access criteria (including legal and ethical standards)</li>
+<li>The availability of the requisite data and/or samples for the proposed research</li>
+<li>The scientific justification for the amount of depletable sample required</li>
+<li>The cost associated with providing the requested data and/or samples</li>
+</ul>
+</div>
+</section>
+<section id="typical-timeline" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline">Typical Timeline</h4>
+<p>Registration is reviewed within 10 working days</p>
+<p>A couple days to register the Access team to review the MRC certificate.</p>
+<p>Costs are per application, and each application grants 3 years of data access once approved, payment received, and Material Transfer Agreement executed.</p>
+<p>Data is usually released weekly, whereas samples are distributed following a predetermined schedule.</p>
+</section>
+<section id="step-by-step-guide" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide">Step-by-Step Guide</h4>
+<p>All researchers must register, complete training modules, and sign user agreements in the UK Biobank Access Management System (AMS) before they can request data. The AMS allows you to manage your portfolio information and check which outstanding trainings need to be completed to gain access. Once certain criteria have been met, you can request data access through AMS, which you can then access via the DNAnexus UK Biobank cloud computing portal.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is recommended to use Google Chrome to access the AMS due to identified compatibility issues with certain browsers, such as Firefox and Safari.</p>
+</div>
+</div>
+<p><strong>a. Register for Access in the Access Management System (AMS)</strong></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If your institution is not approved, you will not be able to complete AMS registration until it gains approval to access UK Biobank data.</p>
+</div>
+</div>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p><a href="https://ams.ukbiobank.ac.uk/ams/signup">Register</a> for an AMS account for free using your institution’s email address.</p></li>
+<li><p>Verify your new account.</p></li>
+<li><p>To complete the registration process, log in to the <a href="https://ams.ukbiobank.ac.uk/ams/">UK Biobank AMS</a> system using your recently verified credentials.</p></li>
+<li><p>You will then see a message window that prompts you to complete your registration by providing additional details about you. The mandatory fields include:</p></li>
+</ol>
+<div style="margin-left: 2rem">
+<ul>
+<li>Your full name, phone number, and date of birth</li>
+<li>An up-to-date resume/CV in English confirming your current position and institution, <strong>OR</strong> a link to a personal profile page on your institution’s website</li>
+<li>PubMed reference numbers for up to 5 peer-reviewed publications where you are listed as an author (if available)</li>
+<li>Details of any complaints raised against you within the past 3 years (if applicable)</li>
+<li>Name of the primary institution you are affiliated with that has approved access to UK Biobank data</li>
+<li>Your email address with this institution and used for registration</li>
+<li>Your position at this institution</li>
+<li>List other institutions with which you plan to use the UK Biobank Resource (if applicable)</li>
+</ul>
+</div>
+<ol start="5" type="1">
+<li>The registration team will review your application and send a message within the AMS portal. They may contact you to request further details.</li>
+</ol>
+</div>
+<p><strong>b. Complete the Training Modules and Sign the User Agreements</strong></p>
+<p>The Home page of your AMS portal will display notices about mandatory training along with any announcements or important information. Outstanding training module requests can be found on the Profile page in the “Training” section. Additionally, you can find previously uploaded Medical Research Council (MRC) certificates there.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You must annually complete the MRC course “Research, General Data Protection Regulation (GDPR) &amp; Confidentiality” and upload the passing certificate. You may also be asked to recomplete the two introductory courses and their accompanying multiple-choice tests.</p>
+</div>
+</div>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Complete the <a href="https://bygsystems.net/mrcrsc-lms/login/index.php">MRC course “Research, General Data Protection Regulation (GDPR) &amp; Confidentiality”</a>, which consists of 10 short video. If this is your first time logging into the MRC Centre for Research Policy Learning Management System, you will need to first create and verify a new account.</p></li>
+<li><p>Take the MRC course 10-question multiple-choice quiz. You must pass with a score of 70% or higher for the certificate to be accepted by the Access team.</p></li>
+<li><p>Save a PDF copy of the passing completion certificate and upload it in the “Upload MRC Certificate” section of your AMS Profile page.</p></li>
+<li><p>Complete the course video <a href="https://www.youtube.com/watch?v=rvm6olcElcM">“Introduction to using UK Biobank”</a>.</p></li>
+<li><p>Complete the course video <a href="https://www.youtube.com/watch?v=GfpT2zzvBaY">“Introduction to the UK Biobank Research Analysis Platform (RAP)”</a>.</p></li>
+<li><p>Take the two multiple-choice tests, found in the “Training” section of your AMS Profile page. You must pass with a score of 80% or higher to complete the process.</p></li>
+</ol>
+</div>
+<p>The three courses listed are mandatory to gain access. UK Biobank has also released additional courses as part of this set, such as the <a href="https://www.youtube.com/watch?v=lsZ_Fi8P2-s">“Code Repository”</a> course, which includes its own test.</p>
+<p><strong>c.&nbsp;Apply to Receive Data</strong></p>
+<p>Once registration is completed, an “Applications” page link will appear in the sidebar. There are two options when requesting access to data: data only or data and biospecimens. Both application types have distinct features but follow similar review processes, which are summarized below. Researchers can find specific details about the application contents in their AMS portals.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some of these answers are made publicly available so the community can assess data use activities and report any concerns.</p>
+</div>
+</div>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li>Complete one of the applications for either data only or data and biospecimens. For example, some of the fields in the application include:</li>
+</ol>
+<div style="margin-left: 2rem">
+<ul>
+<li>A summary of the research you intend to conduct in the project, including the research questions, objectives, and scientific rationale (displayed publicly)</li>
+<li>Keywords describing the research</li>
+<li>Confirmations that the research will be used to perform health-related research and ultimately aims to improve public health</li>
+<li>The type and size of the data requested</li>
+<li>Confirmation if your research requires biospecimens, and if recontacting participants is needed</li>
+<li>Description of the methods</li>
+<li>A statement if the study will result in the generation of new data</li>
+</ul>
+</div>
+<ol start="2" type="1">
+<li><p>List of all project collaborators with their contact details.</p></li>
+<li><p>Indicate the tier of data you are requesting, as each tier comes with different associated costs. For more information on the fees, visit the biobank’s <a href="https://www.ukbiobank.ac.uk/use-our-data/fees/">Fee Structure</a> page.</p></li>
+<li><p>Submit the form for review by the AC, which meets quarterly. Refer to the previous section titled “How Is My Application Assessed?” for more details about this process.</p></li>
+<li><p>Approved applications will require the execution of the Material Transfer Agreement (MTA) and payment of access charges before the release of data and/or samples to the Applicant Principal Investigator (PI). Afterward, the materials will be released.</p></li>
+</ol>
+<p>Data is usually released weekly, whereas samples are distributed following a predetermined schedule.</p>
+</div>
+</section>
+<section id="accessing-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="accessing-the-data">Accessing the Data</h4>
+<p>In the past, researchers were required to download requested data and agree to delete it upon the completion of their study. With the introduction of the UK Biobank Research Analysis Platform (UKB-RAP), a secure cloud-based analysis environment, researchers now access and analyze the data directly on the platform, with few exceptions.</p>
+<p>After completing the training needed, you will then need to register for a UK Biobank data DNAnexus account and link it to your AMS account.</p>
+<p>Our in-house scientists then assess whether the research proposal qualifies as health-related research in the public interest. This means the findings should be likely to benefit the health and wellbeing of society, and should not cause harm, such as perpetuate stereotypes about certain groups.</p>
+<p>If there is any doubt about this, or if the proposal raises any concerns, it is referred to UK Biobank’s expert Access Committee (AC) which will consider the application in more detail, and seek ethics advice if needed.</p>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="valuable-links" class="level2">
+<h2 class="anchored" data-anchor-id="valuable-links">Valuable Links</h2>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><a href="https://community.ukbiobank.ac.uk/hc/en-gb/categories/14494598931229-Get-started-with-UK-Biobank">Get started with UK Biobank</a>: Find articles about gaining access to UK Biobank data, links to policies, an FAQ for common problems, a listing of mandatory trainings, and articles on how to manage your active projects and share results&nbsp;[].</p></li>
+<li><p><a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/">Types of data</a>: Explore a breakdown of the various data categories provided, with links to additional documentation and the relevant Showcase Data Browser pages&nbsp;<span class="citation" data-cites="types_of_data"><sup><a href="#ref-types_of_data" role="doc-biblioref">8</a></sup></span>.</p></li>
+<li><p><a href="https://biobank.ndph.ox.ac.uk/showcase/">Showcase Data Browser</a>: Find data field descriptions, glossaries, meta-information linking schemas, high-level, de-identified summaries of data contents for each data field, and instructions on navigating the biobank system, along with technical information for researchers interested in using the data&nbsp;<span class="citation" data-cites="showcase showcase_user_guide"><sup><a href="#ref-showcase" role="doc-biblioref">17</a>,<a href="#ref-showcase_user_guide" role="doc-biblioref">18</a></sup></span>.</p></li>
+<li><p><a href="https://www.ukbiobank.ac.uk/use-our-data/">Use Our Data</a>: Find links to relevant articles and webpages that guide researchers through data access applications, training and support options, financing, and facilitated collaboration&nbsp;[].</p></li>
+<li><p><a href="https://www.ukbiobank.ac.uk/about-our-data/protecting-the-data/">Protecting the Data</a>: Find information about the data security measures taken to ensure participant confidentiality and monitor the appropriate use of their data for research. Additionally, find a link to the UK Biobank data de-identification protocol&nbsp;[].</p></li>
+<li><p><a href="https://www.youtube.com/@uk_biobank">UK Biobank YouTube</a>: Find informative videos from UK Biobank staff and interviews with researchers discussing their findings using UK Biobank data. Subjects covered include training modules, conference recordings, and promotions of recent news or upcoming features on the platform&nbsp;[].</p></li>
+<li><p><a href="https://github.com/UK-Biobank">UK Biobank GitHub</a>: Find coded examples using the <a href="https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/">UK Biobank Research Analysis Platform (UKB-RAP)</a>, auditing tools to ensure data security in Git repositories, and example workflows for genomic and image analysis&nbsp;[].</p></li>
+<li><p><a href="https://www.ukbiobank.ac.uk/about-us/our-future/">Our Future</a>: Find information about upcoming expansion projects, outreach, infrastructure improvements, funding, and financial support&nbsp;<span class="citation" data-cites="future_projects"><sup><a href="#ref-future_projects" role="doc-biblioref">2</a></sup></span>.</p></li>
+<li><p><a href="https://www.ukbiobank.ac.uk/research-stories/">Research Stories</a>: Find a listing of articles highlighting impactful research conducted using UK Biobank data from across the globe&nbsp;<span class="citation" data-cites="research_stores"><sup><a href="#ref-research_stores" role="doc-biblioref">19</a></sup></span>.</p></li>
+<li><p><a href="https://www.ukbiobank.ac.uk/use-our-data/researcher-collaboration/researcher-events/">Researcher Events</a>: Find events specifically geared towards the research community&nbsp;<span class="citation" data-cites="events"><sup><a href="#ref-events" role="doc-biblioref">20</a></sup></span>.</p></li>
+<li><p><a href="https://www.ukbiobank.ac.uk/news/">News</a>: Find the latest stories from UK Biobank, including news about data releases, new activities to enhance the data, and updates about people and funding. At the time of this writing, the biobank was celebrating the upcoming release of the largest collections of <a href="https://www.ukbiobank.ac.uk/news/record-breaking-human-imaging-project-crosses-the-finish-line/">whole body imaging</a> and <a href="https://www.ukbiobank.ac.uk/news/uk-biobank-releases-worlds-largest-sleep-survey-data/">sleep survey data</a>&nbsp;<span class="citation" data-cites="news largest_sleep largest_imaging"><sup><a href="#ref-largest_sleep" role="doc-biblioref">3</a>,<a href="#ref-largest_imaging" role="doc-biblioref">4</a>,<a href="#ref-news" role="doc-biblioref">21</a></sup></span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<p>This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.</p>
+<div style="margin-left: 1rem">
+<div id="citations-box">
+<ul id="citations-content">
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/34224262/">Mortality Among Persons Entering HIV Care Compared With the General U.S. Population : An Observational Study.</a><br>Jessie K Edwards, Stephen R Cole, Tiffany L Breger, Jacqueline E Rudolph, Lindsey M Filiatreau, Kate Buchacz, Elizabeth Humes, Peter F Rebeiro, Gypsyamber D’Souza, M John Gill, Michael J Silverberg, W Christopher Mathews, Michael A Horberg, Jennifer Thorne, H Irene Hall, <strong>Amy Justice</strong>, Vincent C Marconi, Viviane D Lima, Ronald J Bosch, Timothy R Sterling, Keri N Althoff, Richard D Moore, Michael Saag, Joseph J Eron<br>Annals of internal medicine 2021 Jul 6 doi: 10.7326/M21-0065<br>PMID: 34224262
+</li>
+</ul>
+</div>
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">◀ Previous</button>
+  <button onclick="nextPage()">Next ▶</button>
+</div>
+
+<script src="pagination.js"></script>
 </div>
 
 
+</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-about_us" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">About us. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-us/">https://www.ukbiobank.ac.uk/about-us/</a> (2025).</div>
+</div>
+<div id="ref-future_projects" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Our future. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-us/our-future/">https://www.ukbiobank.ac.uk/about-us/our-future/</a> (2025).</div>
+</div>
+<div id="ref-largest_sleep" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Fiddy, E. <span>UK</span> biobank releases world’s largest sleep survey data. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/news/uk-biobank-releases-worlds-largest-sleep-survey-data/">https://www.ukbiobank.ac.uk/news/uk-biobank-releases-worlds-largest-sleep-survey-data/</a> (2025).</div>
+</div>
+<div id="ref-largest_imaging" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Fiddy, E. Record-breaking human imaging project crosses the finish line: 100,000 volunteers provide science with most detailed look inside the body. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/news/record-breaking-human-imaging-project-crosses-the-finish-line/">https://www.ukbiobank.ac.uk/news/record-breaking-human-imaging-project-crosses-the-finish-line/</a> (2025).</div>
+</div>
+<div id="ref-who_we_are" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Who we are. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-us/who-we-are/">https://www.ukbiobank.ac.uk/about-us/who-we-are/</a> (2025).</div>
+</div>
+<div id="ref-our_participants" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Our participants. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/our-participants/">https://www.ukbiobank.ac.uk/about-our-data/our-participants/</a> (2025).</div>
+</div>
+<div id="ref-for_participant" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Taking part. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/taking-part/">https://www.ukbiobank.ac.uk/taking-part/</a> (2025).</div>
+</div>
+<div id="ref-types_of_data" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Types of data. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/</a> (2025).</div>
+</div>
+<div id="ref-data_demographics" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Demographic, lifestyle and self-reported health data. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/demographic-and-lifestyle-data/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/demographic-and-lifestyle-data/</a> (2025).</div>
+</div>
+<div id="ref-data_imaging" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Imaging data. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/imaging-data/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/imaging-data/</a> (2025).</div>
+</div>
+<div id="ref-data_biomarker" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Biomarker data. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/biomarker-data/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/biomarker-data/</a> (2025).</div>
+</div>
+<div id="ref-data_genetic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Genetic data. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/genetic-data/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/genetic-data/</a> (2025).</div>
+</div>
+<div id="ref-data_health_records" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Healthcare records. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/healthcare-records/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/healthcare-records/</a> (2025).</div>
+</div>
+<div id="ref-data_physical_measures" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Physical measurements. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/physical-measurements/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/physical-measurements/</a> (2025).</div>
+</div>
+<div id="ref-data_questionnaire" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Questionnaire data. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/questionnaire-data/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/questionnaire-data/</a> (2025).</div>
+</div>
+<div id="ref-data_environment" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Environmental data. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/about-our-data/types-of-data/environmental-data/">https://www.ukbiobank.ac.uk/about-our-data/types-of-data/environmental-data/</a> (2025).</div>
+</div>
+<div id="ref-showcase" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Showcase. <a href="https://biobank.ndph.ox.ac.uk/showcase/">https://biobank.ndph.ox.ac.uk/showcase/</a>.</div>
+</div>
+<div id="ref-showcase_user_guide" class="csl-entry" role="listitem">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline"><a href="https://biobank.ndph.ox.ac.uk/showcase/ukb/exinfo/ShowcaseUserGuide.pdf"><span>UK</span> biobank showcase user guide: Getting started</a>. (2017).</div>
+</div>
+<div id="ref-research_stores" class="csl-entry" role="listitem">
+<div class="csl-left-margin">19. </div><div class="csl-right-inline">Research stories. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/research-stories/">https://www.ukbiobank.ac.uk/research-stories/</a> (2025).</div>
+</div>
+<div id="ref-events" class="csl-entry" role="listitem">
+<div class="csl-left-margin">20. </div><div class="csl-right-inline">Researcher events. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/use-our-data/researcher-collaboration/researcher-events/">https://www.ukbiobank.ac.uk/use-our-data/researcher-collaboration/researcher-events/</a> (2025).</div>
+</div>
+<div id="ref-news" class="csl-entry" role="listitem">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline">News. <span>UK</span> biobank. <a href="https://www.ukbiobank.ac.uk/news/">https://www.ukbiobank.ac.uk/news/</a> (2025).</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -604,7 +966,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/Datasets/More-Info-Pages/Restricted-Access/UK-Biobank.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/Datasets/More-Info-Pages/Restricted-Access/UK-Biobank.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
@@ -634,6 +996,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     <li class="nav-item">
  (203) 737-8644
   </li>  
+    <li class="nav-item">
+ </li></ul><div style="margin-top: 0px;">Yale affiliates, provide feedback <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u">here</a>.<br>Non-affiliates, provide feedback <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u">here</a>.</div><ul class="footer-items list-unstyled" style="display:none;">
+    
 </ul>
     </div>
   </div>
