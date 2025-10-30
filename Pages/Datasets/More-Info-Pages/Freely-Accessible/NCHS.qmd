@@ -70,7 +70,7 @@ The program manages six crucial datasets for public health, each with its own in
 ## Valuable Links
 
 ::: {style="margin-left: 2rem"}
-- [National Center for Health Statistics](https://www.cdc.gov/nchs/index.html): Find a comprehensive listing of all the data offerings provided by NCHS\ [@main_page]. 
+- [National Center for Health Statistics](https://www.cdc.gov/nchs/index.html): Find a comprehensive listing of all the data offerings provided by NCHS\ [@main_page].
 :::
 
 

@@ -325,7 +325,8 @@ items:
         image: Images/UK Biobank.png
         topic: "Clinical Study/Surveys"
         site: https://www.ukbiobank.ac.uk/
-        #info: More-Info-Pages/Restricted-Access/UK-Biobank.qmd
+        github: https://github.com/UK-Biobank
+        info: More-Info-Pages/Restricted-Access/UK-Biobank.qmd
         
   # -----------
   # Region/Affiliation by: Private Company

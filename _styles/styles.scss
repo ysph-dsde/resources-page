@@ -105,6 +105,12 @@ $hover-color: darken($link-color, 10%);
     font-family: 'YaleNew', serif !important;
     font-size: 1.2rem;
 }
+.dropdown-item {
+    color: #212529 !important; /* var(--bs-body-color) for the body text */
+}
+.dropdown-item:hover {
+    color: #f0f0f0 !important;
+}
 
 /* Information tabsets */
 
