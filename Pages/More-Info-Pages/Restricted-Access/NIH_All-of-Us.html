@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content=" The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens&nbsp;1–4.   All of Us’ one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies&nbsp;1,5,6.">
+
+<title>NIH’s All of Us – Resource Navigation Tool</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-fb0bcb17d1beba8473d33297837e1783.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Resource Navigation Tool</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/datasets.html"> 
+<span class="menu-text">Datasets</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/about-us.html"> 
+<span class="menu-text">About Us</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Feedback</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
+ <span class="dropdown-text">For Yale Affiliates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
+ <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/" target="_blank"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">NIH’s All of Us</h1>
+                  <div>
+        <div class="description">
+          <p><br> The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens&nbsp;<span class="citation" data-cites="overview participants intro_video snapshot"><sup><a href="#ref-overview" role="doc-biblioref">1</a>–<a href="#ref-snapshot" role="doc-biblioref">4</a></sup></span>. <br> <br> All of Us’ one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies&nbsp;<span class="citation" data-cites="overview data_sources data_browser"><sup><a href="#ref-overview" role="doc-biblioref">1</a>,<a href="#ref-data_sources" role="doc-biblioref">5</a>,<a href="#ref-data_browser" role="doc-biblioref">6</a></sup></span>.</p>
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link" data-scroll-target="#gaining-access">Gaining Access</a></li>
+  <li><a href="#valuable-links" id="toc-valuable-links" class="nav-link" data-scroll-target="#valuable-links">Valuable Links</a></li>
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/More-Info-Pages/Restricted-Access/NIH_All-of-Us.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">×</span>
+        <h2 class="anchored">We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../../../Code/popup.js"></script>
+<p>Updated: October 29<span class="math inline">\(^{th}\)</span>, 2025</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>Overseen and supported by the National Institutes of Health (NIH), the All of Us (AoU) initiative is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from participants with diverse backgrounds, including age, ethnicity, lifestyle, and geographic location, to create effective individualized treatments for these groups. Participation is available at no cost to anyone living in the U.S.&nbsp;<span class="citation" data-cites="overview participants intro_video"><sup><a href="#ref-overview" role="doc-biblioref">1</a>–<a href="#ref-intro_video" role="doc-biblioref">3</a></sup></span></p>
+<p>Currently, around 600,000 participants have agreed to share their electronic health records (EHR), completed the first three surveys, provided physical measurements, and donated at least one biospecimen for biobank storage. This effort has resulted in researchers gaining access to over 473,000 electronic health records and 611,000 biospecimens&nbsp;<span class="citation" data-cites="snapshot"><sup><a href="#ref-snapshot" role="doc-biblioref">4</a></sup></span>.</p>
+<p>The types of data collected include&nbsp;<span class="citation" data-cites="data_sources data_browser"><sup><a href="#ref-data_sources" role="doc-biblioref">5</a>,<a href="#ref-data_browser" role="doc-biblioref">6</a></sup></span>:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><strong>Electronic Health Records:</strong> The data is standardized following Observational Medical Outcomes Partnership Common Data Model (OMOP CDM) standards and is then compiled into eleven tables. These tables include information on basic demographics, visit details, conditions, device usage, labs, and procedures carried out by healthcare providers&nbsp;<span class="citation" data-cites="summary_methods"><sup><a href="#ref-summary_methods" role="doc-biblioref">7</a></sup></span>.</p></li>
+<li><p><strong>Biosamples And Bioassays (Genomics):</strong> Additional samples of blood, saliva, and/or urine are contributed by some participants for genomic sequencing assays.</p></li>
+<li><p><strong>Surveys:</strong> Each participant fills out core surveys that include questions about basic demographics, socioeconomic information, tobacco, alcohol, and recreational drug use, as well as overall health and daily activities. Participants can also choose to participate in five additional surveys on behavioral health, healthcare access, and family history&nbsp;<span class="citation" data-cites="survey_explorer"><sup><a href="#ref-survey_explorer" role="doc-biblioref">8</a></sup></span>.</p></li>
+<li><p><strong>Physical Measurements:</strong> There are three sources for physical measurements: electronic health records (EHRs), an in-person visit for baseline physical measurements, and self-reported height and weight.</p></li>
+<li><p><strong>Wearable Devices (Digital Health):</strong> Participants can choose to share health tracking data from wearable devices, such as Fitbit, which includes physical activity levels, heart rate, and sleep patterns.</p></li>
+<li><p><strong>Partnered Research Studies:</strong> Program partners can gather additional data and contribute it to the All of Us dataset, such as the <em>Exploring the Mind</em> study done in partnership with the National Institute of Mental Health.</p></li>
+</ul>
+</div>
+</section>
+<section id="gaining-access" class="level2">
+<h2 class="anchored" data-anchor-id="gaining-access">Gaining Access</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Public Tier</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Registered Tier</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Controlled Tier</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="do-i-qualify" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify">Do I Qualify?</h4>
+<p>All individuals seeking access can download aggregated and deidentified data&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>. Any research using All of Us data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit.</p>
+</section>
+<section id="typical-timeline" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline">Typical Timeline</h4>
+<p>It typically takes one to two weeks to process applications, though it may take longer during busy periods such as grant submission months.</p>
+</section>
+<section id="step-by-step-guide" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide">Step-by-Step Guide</h4>
+<p>No specific steps are required to access the publicly available data, which can be found on the <a href="https://www.researchallofus.org/data-tools/data-snapshots/">Data Snapshot</a> and <a href="https://databrowser.researchallofus.org/?_gl=1*137ufbe*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NTk4NjMwMjUkbzUkZzEkdDE3NTk4NjMxNDckajUyJGwwJGgxMTk5Nzc2MzM0">Data Browser</a> webpages&nbsp;<span class="citation" data-cites="data_browser snapshot"><sup><a href="#ref-snapshot" role="doc-biblioref">4</a>,<a href="#ref-data_browser" role="doc-biblioref">6</a></sup></span>.</p>
+</section>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<section id="do-i-qualify-1" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify-1">Do I Qualify?</h4>
+<p>With the Registered Tier dataset, you can access individual-level data from electronic health records (EHRs), wearables, surveys, and physical measurements through the All of Us Researcher Workbench. Researchers affiliated with institutions that have signed the All of Us Data Use and Registration Agreement (DURA) can register for access for free&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p>
+<p>Any research using All of Us data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit.</p>
+<p>Check the <a href="https://www.researchallofus.org/institutional-agreements/">Registered Institutions</a> page to see if your institution is listed and which access level you can attain. If your institution is not listed, you can submit a request form linked on the same page&nbsp;<span class="citation" data-cites="aou_registered"><sup><a href="#ref-aou_registered" role="doc-biblioref">10</a></sup></span>.</p>
+</section>
+<section id="typical-timeline-1" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline-1">Typical Timeline</h4>
+<p>If your institution has an active DURA with All of Us at the preferred tier of access and you do not need an individual agreement, you can proceed with registering for a Workbench account and completing the training required for Registered Tier data access, which typically takes no more than a day. You will also need to set up 2-Step verification and verify your identity, with the time to complete these steps varying by researcher.</p>
+<p>The following timeline <a href="https://support.researchallofus.org/hc/en-us/articles/9707434641044-DURA-Infographic">infographic</a> shows what to expect from a DURA application if your institution is not already registered. Refer to <a href="https://support.researchallofus.org/hc/en-us/articles/35013049400468-Access-and-DURA-Support-Questions">Access and DURA Support Questions</a> for common questions about the application process&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p>
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+<img id="myImage" src="Images/AllofUs_DURA_Infographic_Downloaded06012025.png" alt="Zoomable Image" title="Click to zoom in">
+<figcaption class="caption">
+The DURA application timeline varies, as institutions may experience different lengths of time during the application process. For additional questions, please contact <a href="mailto:aoudurasupport@vumc.org">aoudurasupport@vumc.org</a>&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.
+</figcaption>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src="../../../../Code/zoom.js"></script>
+</section>
+<section id="step-by-step-guide-1" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide-1">Step-by-Step Guide</h4>
+<p><strong>a. Register for a Researcher Workbench Account</strong>&nbsp;<span class="citation" data-cites="workbench_registration"><sup><a href="#ref-workbench_registration" role="doc-biblioref">12</a></sup></span></p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Open the Researcher Workbench <a href="https://www.researchallofus.org/register/">registration</a> webpage and search your institution.</p></li>
+<li><p>If your institution already has a DURA in place for the required tiers of access, you can proceed. Otherwise, select the “My Institution Isn’t Listed” button to start the process of adding your institution.</p></li>
+<li><p>Click the “Create An Account” button, which will take you to the <a href="https://workbench.researchallofus.org/login%20portal">Workbench Log In</a> portal. In the bottom-left corner, click “Create Account” again to start the registration process.</p></li>
+<li><p>Select your institution, enter your institution-affiliated email, and choose your role at the institution.</p></li>
+<li><p>Fill in the required fields and create a username associated with a new Google Account using the “@researchallofus.org” domain, including:</p></li>
+</ol>
+<div style="margin-left: 2rem">
+<ul>
+<li><p>Your institutional mailing address</p></li>
+<li><p>Your research background, experience, and research interests (displayed publicly)</p></li>
+<li><p>Link to your your professional profile or bio page below (if available)</p></li>
+</ul>
+</div>
+<ol start="6" type="1">
+<li><p>You will then be asked 15 questions about your identity, such as race, gender, sexual orientation, level of ambulation, etc., which you have the option to complete.</p></li>
+<li><p>Once all fields are completed, submit your request. Activation of your account typically takes 1-2 hours to complete.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A valid Virtual Private Network (VPN) must be used every time the All of Us Workbench is accessed. For Yale-affiliates, this will be the IST-provided VPN. Despite the protections offered by Yale’s on-campus YaleSecure network, All of Us mandates the use of a VPN when accessing their portal at all times.</p>
+</div>
+</div>
+<p><strong>b. Request Access to Registered Tier-Level Data</strong>&nbsp;<span class="citation" data-cites="access_tiers support"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a>,<a href="#ref-support" role="doc-biblioref">11</a></sup></span></p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Configure your active Workbench account with Google 2-step verification</p></li>
+<li><p>Verify your identity through Login.gov or ID.me. More details about this process can be found on the <a href="https://support.researchallofus.org/hc/en-us/articles/4407442809876-Identity-Verification">Identity Verification</a> page. If you encounter any issues, refer to the <a href="https://support.researchallofus.org/hc/en-us/articles/23968984529428-Troubleshooting-Identity-Verification-Issues">troubleshooting</a> guide or contact support at <a href="mailto:support@researchallofus.org" class="email">support@researchallofus.org</a>&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p></li>
+<li><p>Navigate to the “Data Access Requirements” page, located in the sidebar under your profile name.</p></li>
+<li><p>Complete our Responsible Conduct of Research training. You can find out more about the Responsible Conduct of Research Training process on the <a href="https://support.researchallofus.org/hc/en-us/articles/32792489923092-Registration-and-Account-Questions">Registration and Account Questions</a> page.</p></li>
+<li><p>Sign the Data User Code of Conduct (DUCC), which can be reviewed <a href="https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy">here</a> under the “Data Use Policies” section&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You must annually complete refresher training, re-attest to the Data User Code of Conduct, and update your contact information and institutional affiliation to maintain access.</p>
+</div>
+</div>
+<p><strong>c.&nbsp;Start a New Workspace to Analyze Data</strong>&nbsp;<span class="citation" data-cites="create_workbench"><sup><a href="#ref-create_workbench" role="doc-biblioref">13</a></sup></span></p>
+<p>Each time you want to access data, you will do so by creating a project called a “Workspace.” When opening a new Workspace, you will provide the billing account information and answer a series of research statement questions.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Some of these answers are made publicly available so the community can assess data use activities and report any concerns.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>New account holders will receive $300 in computational credits and can create a Google billing account if additional credits are needed.</p>
+</div>
+</div>
+<p>For example, you will be asked to provide:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p>Description of the project’s purpose, including a summary that explains the specific scientific question(s) you intend to study, the scientific approaches you plan to use, and the anticipated findings from the study.</p></li>
+<li><p>Description of the various ways you intend to disseminate your research findings, such as publication in a peer-reviewed journal, conference presentation, personal blog, social media, etc.</p></li>
+<li><p>Choose statements regarding how (or if) your research outcomes might align with the All of Us Research Program Scientific Framework.</p></li>
+<li><p>Disclose underrepresented populations that will be a focus of your research study, and specifically evaluate the appropriate use of American Indian and Alaska Native (AI/AN) population data.</p></li>
+</ul>
+</div>
+<p>If you need assistance or would like help assessing whether your study might become stigmatizing, you can request that the Resource Access Board review your study summary prior to conducting the research.</p>
+<p>Once your Workspace application is submitted, you can access data within the tier of controlled access you have permission to use in the All of Us cloud computing platform. This virtual environment comes with preloaded computational resources and tools, including R/RStudio, Jupyter Notebook with R and Python kernels, Cromwell, SQL, SAS, and a command-line application called “Cloud Analysis Terminal.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be mindful of the compute power and disk space you select, as these incur different charges on an hourly and monthly basis while the Workspace is active.</p>
+</div>
+</div>
+</section>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<section id="do-i-qualify-2" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify-2">Do I Qualify?</h4>
+<p>The Controlled Tier is an optional extension to the Registered Tier, offering access to genomic data (short-read and long-read WGS, structural variants, genotyping arrays), previously suppressed demographic data from EHRs and surveys, and unshifted event dates. Researchers affiliated with institutions that have signed the All of Us Data Use and Registration Agreement (DURA) can register for free access&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p>
+<p>Any research using All of Us data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit.</p>
+<p>Check the <a href="https://www.researchallofus.org/institutional-agreements/">Registered Institutions</a> page to see if your institution is listed and which access level you can attain. If your institution is not listed, you can submit a request form linked on the same page&nbsp;<span class="citation" data-cites="aou_registered"><sup><a href="#ref-aou_registered" role="doc-biblioref">10</a></sup></span>.</p>
+</section>
+<section id="typical-timeline-2" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline-2">Typical Timeline</h4>
+<p>Controlled Tier access is an addition to the Registered Tier level and requires a signed agreement and permission from your institution before completing the training, which may vary for applicants. The additional training modules are not expected to take more than a day to complete.</p>
+</section>
+<section id="step-by-step-guide-2" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide-2">Step-by-Step Guide</h4>
+<p><strong>a. Register for a Researcher Workbench Account and Complete Registered Tier-Level Access Requests</strong>&nbsp;<span class="citation" data-cites="workbench_registration access_tiers support"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a>,<a href="#ref-support" role="doc-biblioref">11</a>,<a href="#ref-workbench_registration" role="doc-biblioref">12</a></sup></span></p>
+<p>You will first need to complete the steps to gain Registered Tier access, listed in the previous tab. If you have not completed these, please go back to those steps before proceeding.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A valid Virtual Private Network (VPN) must be used every time the All of Us Workbench is accessed. For Yale-affiliates, this will be the IST-provided VPN. Despite the protections offered by Yale’s on-campus YaleSecure network, All of Us mandates the use of a VPN when accessing their portal at all times.</p>
+</div>
+</div>
+<p><strong>b. Request Access to Controlled Tier-Level Data</strong>&nbsp;<span class="citation" data-cites="access_tiers support"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a>,<a href="#ref-support" role="doc-biblioref">11</a></sup></span></p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>If you have not, log into your <a href="https://workbench.researchallofus.org/login">All of Us Workbench</a> account and navigate to the “Data Access Requirements” page, located in the sidebar under your profile name.</p></li>
+<li><p>Ask your institution to sign an agreement and grant permission for you to access the Controlled Tier.</p></li>
+<li><p>Once approved, you will proceed with the additional training modules specific to the Controlled Tier.</p></li>
+<li><p>To complete the process, you need to sign the Data User Code of Conduct (DUCC), which can be reviewed <a href="https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy">here</a> under the “Data Use Policies” section&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>As stated before, you must annually complete refresher training, re-attest to the Data User Code of Conduct, and update your contact information and institutional affiliation to maintain access.</p>
+</div>
+</div>
+<p><strong>c.&nbsp;Start a New Workspace to Analyze Data</strong>&nbsp;<span class="citation" data-cites="create_workbench"><sup><a href="#ref-create_workbench" role="doc-biblioref">13</a></sup></span></p>
+<p>Each time you want to access data, you will do so by creating a project called a “Workspace.” When opening a new Workspace, you will provide the billing account information and answer a series of research statement questions.</p>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that some of these answers are made publicly available so the community can assess data use activities and report any concerns.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>New account holders will receive $300 in computational credits and can create a Google billing account if additional credits are needed.</p>
+</div>
+</div>
+<p>For example, you will be asked to provide:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p>Describe the purpose of the project with a summary explaining the specific scientific question(s) you intend to study, the scientific approaches you plan to use, and the anticipated findings from the study.</p></li>
+<li><p>Provide a description of the various ways you intend to disseminate your research findings, such as publication in a peer-reviewed journal, conference presentation, personal blog, social media, etc.</p></li>
+<li><p>Choose statements regarding how (or if) your research outcomes might align with the All of Us Research Program Scientific Framework.</p></li>
+<li><p>Disclose underrepresented populations that will be a focus of your research study, and specifically evaluate the appropriate use of American Indian and Alaska Native (AI/AN) population data.</p></li>
+</ul>
+</div>
+<p>If you need assistance or would like help assessing whether your study might become stigmatizing, you can request that the Resource Access Board review your study summary prior to conducting the research.</p>
+<p>Once your Workspace application is submitted, you can access data within the tier of controlled access you have permission to use in the All of Us cloud computing platform. This virtual environment comes with preloaded computational resources and tools, including R/RStudio, Jupyter Notebook with R and Python kernels, Cromwell, SQL, SAS, and a command-line application called “Cloud Analysis Terminal.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Be mindful of the compute power and disk space you select, as these incur different charges on an hourly and monthly basis while the Workspace is active.</p>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="valuable-links" class="level2">
+<h2 class="anchored" data-anchor-id="valuable-links">Valuable Links</h2>
+<div style="margin-left: 2rem">
+<ul>
+<li><p>All of Us <a href="https://allofus.nih.gov/">Research Program</a> and <a href="https://www.researchallofus.org/">Research Hub</a>: The The All of Us program maintains two primary websites: one with a participant log-in for program engagement and another tailored for researchers looking to access and utilize the data&nbsp;<span class="citation" data-cites="aou_main aou_research"><sup><a href="#ref-aou_main" role="doc-biblioref">14</a>,<a href="#ref-aou_research" role="doc-biblioref">15</a></sup></span>.</p></li>
+<li><p>All of Us <a href="https://allofus.nih.gov/article/all-us-research-program-protocol">Research Program Protocol</a>: Find the program protocol detailing the All of Us Research Program’s plans for data collection, enrollment criteria, data protection, and participant inclusion, with periodic updates and IRB oversight&nbsp;<span class="citation" data-cites="aou_protocol"><sup><a href="#ref-aou_protocol" role="doc-biblioref">16</a></sup></span>.</p></li>
+<li><p><a href="https://www.researchallofus.org/data-tools/data-access/?_gl=1*1o7ww0k*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NjAxMTExOTgkbzEwJGcxJHQxNzYwMTExMjU3JGoxJGwwJGgxNzgzOTY2NTIy">Data Access Tiers</a>: Learn more about the tiers of access, review the data dictionaries for each tier, as well as data user and reporting policies, and the Data User Code of Conduct (DUCC)&nbsp;<span class="citation" data-cites="access_tiers"><sup><a href="#ref-access_tiers" role="doc-biblioref">9</a></sup></span>.</p></li>
+<li><p><a href="https://support.researchallofus.org/hc/en-us/categories/360002157352-Getting-Started">Getting Started Support Page</a>: Find comprehensive documentation covering various topics, including getting started guides, common troubleshooting issues, methods and data processing protocols, billing information, and more&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p></li>
+<li><p><a href="https://support.researchallofus.org/hc/en-us/articles/360059633052-Featured-Workspaces">Featured Workspaces</a>: Find a list of Workspaces that provide users with tutorials on how to use the Workbench, along with demonstrative projects to help you get started&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p></li>
+<li><p><a href="https://redcap.pmi-ops.org/surveys/index.php?__report=H9JRHMAELACWH37H&amp;pagenum=ALL">All of Us Publications and Articles Catalog</a>: Find the catalog of articles and publications related to the All of Us Research Program&nbsp;<span class="citation" data-cites="aou_publications"><sup><a href="#ref-aou_publications" role="doc-biblioref">17</a></sup></span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<p>This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.</p>
+<div style="margin-left: 1rem">
+<div id="citations-box">
+<ul id="citations-content">
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/38742457/">To weight or not to weight? The effect of selection bias in 3 large electronic health record-linked biobanks and recommendations for practice.</a><br>Maxwell Salvatore, Ritoban Kundu, Xu Shi, Christopher R Friese, Seunggeun Lee, Lars G Fritsche, Alison M Mondul, David Hanauer, Celeste Leigh Pearce, <strong>Bhramar Mukherjee</strong><br>Journal of the American Medical Informatics Association : JAMIA doi: 10.1093/jamia/ocae098<br>PMID: 38742457
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/41068065/">Psychosocial Risk Factors and Perceived Well-Being in Survivors of Gastrointestinal Cancer.</a><br><strong>Samuel D Butensky</strong>, <strong>Kurt S Schultz</strong>, <strong>Elizabeth L Godfrey</strong>, <strong>Jihoon Kim</strong>, <strong>Tara Sanft</strong>, <strong>Caroline H Johnson</strong>, <strong>Ira L Leeds</strong>, <strong>Sajid A Khan</strong><br>Psycho-oncology doi: 10.1002/pon.70302<br>PMID: 41068065
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40939242/">Factors associated with acute unscheduled care visits for asthma in the all of US dataset.</a><br>Deyaneira Gonzalez Rodriguez, <strong>Qinxin Yuan</strong>, <strong>Tolulope Bakare</strong>, Sangil Lee, R Andrew Taylor<br>The American journal of emergency medicine 2025 Sep 2 doi: 10.1016/j.ajem.2025.09.002<br>PMID: 40939242
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40681351/">Age-, sex-, and ancestry-specific prevalence of hearing loss in UK Biobank and All of Us Research Program.</a><br><strong>Jun He</strong>, Sharon G Curhan, Gary C Curhan, <strong>Renato Polimanti</strong><br>Aging and disease 2025 Jul 16 doi: 10.14336/AD.2025.0754<br>PMID: 40681351
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/39574876/">Reducing Information and Selection Bias in EHR-Linked Biobanks via Genetics-Informed Multiple Imputation and Sample Weighting.</a><br>Maxwell Salvatore, Ritoban Kundu, Jiacong Du, Christopher R Friese, Alison M Mondul, David Hanauer, <strong>Haidong Lu</strong>, Celeste Leigh Pearce, <strong>Bhramar Mukherjee</strong><br>medRxiv : the preprint server for health sciences 2024 Oct 29 pii: 2024.10.28.24316286. doi: 10.1101/2024.10.28.24316286<br>PMID: 39574876
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/37961111/">JointPRS: A Data-Adaptive Framework for Multi-Population Genetic Risk Prediction Incorporating Genetic Correlation.</a><br><strong>Leqi Xu</strong>, <strong>Geyu Zhou</strong>, <strong>Wei Jiang</strong>, Haoyu Zhang, <strong>Yikai Dong</strong>, <strong>Leying Guan</strong>, <strong>Hongyu Zhao</strong><br>bioRxiv : the preprint server for biology 2024 Sep 12 pii: 2023.10.29.564615. doi: 10.1101/2023.10.29.564615<br>PMID: 37961111
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/38561918/">Weight-related discrimination, perceived stress and psychological and physical well-being of persons with type 2 diabetes: A mediation analysis.</a><br><strong>Samuel Akyirem</strong>, Emmanuel Ekpor, <strong>Diana Namumbejja Abwoye</strong>, <strong>Katie Wang</strong><br>Diabetic medicine : a journal of the British Diabetic Association 2024 Apr 1 doi: 10.1111/dme.15322<br>PMID: 38561918
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40611909/">Almost Free Enhancement of Multi-Population PRS: From Data-Fission to Pseudo-GWAS Subsampling.</a><br><strong>Leqi Xu</strong>, <strong>Yikai Dong</strong>, Xiaowei Zeng, Zeyu Bian, Geyu Zhou, <strong>Leying Guan</strong>, <strong>Hongyu Zhao</strong><br>bioRxiv : the preprint server for biology 2025 Jun 20 pii: 2025.06.16.659952. doi: 10.1101/2025.06.16.659952<br>PMID: 40611909
+</li>
+</ul>
+</div>
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">◀ Previous</button>
+  <button onclick="nextPage()">Next ▶</button>
+</div>
+
+<script src="../../../../Code/pagination.js"></script>
+</div>
+</section>
+<section id="references" class="level2">
+
+
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-overview" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Us, A. of. <a href="https://allofus.nih.gov/article/program-overview">Research program overview</a>. <em>National Institutes of Health</em> (2024).</div>
+</div>
+<div id="ref-participants" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Us, A. of. <a href="https://allofus.nih.gov/article/participation">Participation</a>. <em>National Institutes of Health</em> (2023).</div>
+</div>
+<div id="ref-intro_video" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Khoury, M., Mayo, K., Schully, S. &amp; Ginsburg, G. <a href="https://support.researchallofus.org/hc/en-us/articles/9889519923476-From-All-of-Us-Research-to-All-of-Us-in-the-Real-World">From all of us research to all of us in the real world</a>. <em>National Institutes of Health</em> (2022).</div>
+</div>
+<div id="ref-snapshot" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Us, A. of. <em>Data Snapshots</em>. <a href="https://www.researchallofus.org/data-tools/data-snapshots/">https://www.researchallofus.org/data-tools/data-snapshots/</a> (2025).</div>
+</div>
+<div id="ref-data_sources" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/data-tools/data-sources/">Data sources</a>. <em>National Institutes of Health</em> (2025).</div>
+</div>
+<div id="ref-data_browser" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Us, A. of. <a href="https://databrowser.researchallofus.org/?_gl=1*137ufbe*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NTk4NjMwMjUkbzUkZzEkdDE3NTk4NjMxNDckajUyJGwwJGgxMTk5Nzc2MzM0">Data browser | all of us public data browser</a>. (2023).</div>
+</div>
+<div id="ref-summary_methods" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/data-tools/methods/">Data methods</a>. <em>National Institutes of Health</em> vol. 381.</div>
+</div>
+<div id="ref-survey_explorer" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/data-tools/survey-explorer/">Survey explorer</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-access_tiers" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/data-tools/data-access/">Data access tiers</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-aou_registered" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/institutional-agreements/">Registered institution</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-support" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Us, A. of. <a href="https://support.researchallofus.org/hc/en-us/categories/360002157352-Getting-Started">Getting started – user support</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-workbench_registration" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/register/">Register – all of us research hub</a>.</div>
+</div>
+<div id="ref-create_workbench" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">Us, A. of. <a href="https://workbench.researchallofus.org/workspaces/build">Create workspace</a>. <em>Researcher Workbench</em>.</div>
+</div>
+<div id="ref-aou_main" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Us, A. of. <a href="https://allofus.nih.gov/">All of us research program</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-aou_research" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Us, A. of. <a href="https://www.researchallofus.org/">All of us research hub</a>. <em>National Institutes of Health</em>.</div>
+</div>
+<div id="ref-aou_protocol" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Us, A. of. <a href="https://allofus.nih.gov/article/all-us-research-program-protocol">All of us research program protocol</a>. <em>National Institutes of Health</em> (2024).</div>
+</div>
+<div id="ref-aou_publications" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Us, A. of. <a href="https://redcap.pmi-ops.org/surveys/index.php?__report=H9JRHMAELACWH37H&amp;pagenum=ALL">All of us publications and articles catalog</a>. <em>National Institutes of Health</em>.</div>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ysph-dsde\.github\.io\/resources-page\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This site was built on a ysph-dsde.github.io page. It was rendered using Quarto (v 1.6.3) and theme <a href="https://github.com/thomaspark/bootswatch">flatly</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/about-us.html">
+<p>About Us</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/resources.html">
+<p>Resources</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/datasets.html">
+<p>Datasets</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/More-Info-Pages/Restricted-Access/NIH_All-of-Us.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ysph-dsde">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/showcase/public-health-data-science-and-data-equity-at-yale/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:admin.dsdeysph@yale.edu">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ (203) 737-8644
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

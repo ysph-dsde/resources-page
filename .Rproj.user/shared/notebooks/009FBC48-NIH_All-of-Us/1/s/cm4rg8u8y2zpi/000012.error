@@ -1,1 +1,0 @@
-{"frames":[{"func":"source(\"./PubMed Search_Functions.R\")","file":"","line_number":0,"end_line_number":0,"character_number":0,"end_character_number":0}],"message":"Error in source(\"./PubMed Search_Functions.R\") : \n  ./PubMed Search_Functions.R:343:9: unexpected symbol\n342:         return(name)\n343:       })a\n             ^\n"}
