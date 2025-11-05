@@ -39,7 +39,7 @@
     </div>
 </div>
 
-<script src="../../../../Code/popup.js"></script>
+<script src="../../../Code/popup.js"></script>
 ```
 
 
@@ -125,7 +125,7 @@ If your institution has an active DURA with All of Us at the preferred tier of a
 The following timeline <a href="https://support.researchallofus.org/hc/en-us/articles/9707434641044-DURA-Infographic">infographic</a> shows what to expect from a DURA application if your institution is not already registered. Refer to [Access and DURA Support Questions](https://support.researchallofus.org/hc/en-us/articles/35013049400468-Access-and-DURA-Support-Questions) for common questions about the application process\ [@support].
 
 <div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
-  <img id="myImage" src="Images/AllofUs_DURA_Infographic_Downloaded06012025.png" alt="Zoomable Image" title="Click to zoom in">
+  <img id="myImage" src="../../../Images/Timelines/AllofUs_DURA_Infographic_Downloaded06012025.png" alt="Zoomable Image" title="Click to zoom in">
   <figcaption class="caption">
     The DURA application timeline varies, as institutions may experience different lengths of time during the application process. For additional questions, please contact <a href="mailto:aoudurasupport@vumc.org">aoudurasupport@vumc.org</a>\ [@support].
   </figcaption>
@@ -139,7 +139,7 @@ The following timeline <a href="https://support.researchallofus.org/hc/en-us/art
   <div id="caption"></div>
 </div>
 
-<script src="../../../../Code/zoom.js"></script>
+<script src="../../../Code/zoom.js"></script>
 ```
 
 
@@ -369,7 +369,7 @@ cat(citations_html)
   <button onclick="nextPage()">Next &#9654;</button>
 </div>
 
-<script src="../../../../Code/pagination.js"></script>
+<script src="../../../Code/pagination.js"></script>
 ```
 
 

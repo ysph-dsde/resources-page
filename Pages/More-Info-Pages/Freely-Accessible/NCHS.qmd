@@ -36,7 +36,7 @@
     </div>
 </div>
 
-<script src="../../../../Code/popup.js"></script>
+<script src="../../../Code/popup.js"></script>
 ```
 
 
@@ -140,7 +140,7 @@ cat(citations_html)
   <button onclick="nextPage()">Next &#9654;</button>
 </div>
 
-<script src="../../../../Code/pagination.js"></script>
+<script src="../../../Code/pagination.js"></script>
 ```
 
 :::
