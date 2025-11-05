@@ -236,7 +236,7 @@ window.Quarto = {
     </div>
 </div>
 
-<script src="../../../../Code/popup.js"></script>
+<script src="../../../Code/popup.js"></script>
 <p>Updated: October 21<span class="math inline">\(^{st}\)</span>, 2025</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
@@ -431,7 +431,7 @@ Note
   <button onclick="nextPage()">Next ▶</button>
 </div>
 
-<script src="../../../../Code/pagination.js"></script>
+<script src="../../../Code/pagination.js"></script>
 </div>
 
 
@@ -581,7 +581,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ysph-dsde\.github\.io\/resources-page\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

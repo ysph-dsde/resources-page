@@ -236,7 +236,7 @@ window.Quarto = {
     </div>
 </div>
 
-<script src="../../../../Code/popup.js"></script>
+<script src="../../../Code/popup.js"></script>
 <p>Updated: October 9<span class="math inline">\(^{th}\)</span>, 2025</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
@@ -329,7 +329,7 @@ Important
 <section id="typical-timeline-1" class="level4">
 <h4 class="anchored" data-anchor-id="typical-timeline-1">Typical Timeline</h4>
 <div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
-  <img id="myImage" src="Images/NCHS_RDC_Restricted_Timeline.png" alt="Zoomable Image" title="Click to zoom in">
+  <img id="myImage" src="../../../Images/Timelines/NCHS_RDC_Restricted_Timeline.png" alt="Zoomable Image" title="Click to zoom in">
   <figcaption class="caption">
     A summary of the application process, including information on when additional reviews may be necessary.
   </figcaption>
@@ -342,7 +342,7 @@ Important
   <div id="caption"></div>
 </div>
 
-<script src="../../../../Code/zoom.js"></script>
+<script src="../../../Code/zoom.js"></script>
 <p>Upon receiving an application, your assigned RDC analyst and the review committee—comprising data system representatives and the confidentiality officer—will assess your application for approval, disapproval, or a request for revisions. If your application is denied by the committee, you will be provided with a justification for the decision. Researchers are allowed to request an appeal of the decision through SAP&nbsp;<span class="citation" data-cites="rdc_review_committee"><sup><a href="#ref-rdc_review_committee" role="doc-biblioref">28</a></sup></span>.</p>
 <p>At some point, your study may require an amendment to the approved application. Approval for amendments typically take no more than four weeks, but can take as many as eight to twelve weeks if the amendment request is complicated.</p>
 </section>
@@ -556,7 +556,7 @@ Important
   <button onclick="nextPage()">Next ▶</button>
 </div>
 
-<script src="../../../../Code/pagination.js"></script>
+<script src="../../../Code/pagination.js"></script>
 </div>
 
 
@@ -775,7 +775,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ysph-dsde\.github\.io\/resources-page\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

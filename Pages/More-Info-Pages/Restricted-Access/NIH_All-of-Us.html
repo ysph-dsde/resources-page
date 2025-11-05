@@ -237,7 +237,7 @@ window.Quarto = {
     </div>
 </div>
 
-<script src="../../../../Code/popup.js"></script>
+<script src="../../../Code/popup.js"></script>
 <p>Updated: October 29<span class="math inline">\(^{th}\)</span>, 2025</p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
@@ -286,7 +286,7 @@ window.Quarto = {
 <p>If your institution has an active DURA with All of Us at the preferred tier of access and you do not need an individual agreement, you can proceed with registering for a Workbench account and completing the training required for Registered Tier data access, which typically takes no more than a day. You will also need to set up 2-Step verification and verify your identity, with the time to complete these steps varying by researcher.</p>
 <p>The following timeline <a href="https://support.researchallofus.org/hc/en-us/articles/9707434641044-DURA-Infographic">infographic</a> shows what to expect from a DURA application if your institution is not already registered. Refer to <a href="https://support.researchallofus.org/hc/en-us/articles/35013049400468-Access-and-DURA-Support-Questions">Access and DURA Support Questions</a> for common questions about the application process&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.</p>
 <div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
-<img id="myImage" src="Images/AllofUs_DURA_Infographic_Downloaded06012025.png" alt="Zoomable Image" title="Click to zoom in">
+<img id="myImage" src="../../../Images/Timelines/AllofUs_DURA_Infographic_Downloaded06012025.png" alt="Zoomable Image" title="Click to zoom in">
 <figcaption class="caption">
 The DURA application timeline varies, as institutions may experience different lengths of time during the application process. For additional questions, please contact <a href="mailto:aoudurasupport@vumc.org">aoudurasupport@vumc.org</a>&nbsp;<span class="citation" data-cites="support"><sup><a href="#ref-support" role="doc-biblioref">11</a></sup></span>.
 </figcaption>
@@ -298,7 +298,7 @@ The DURA application timeline varies, as institutions may experience different l
   <div id="caption"></div>
 </div>
 
-<script src="../../../../Code/zoom.js"></script>
+<script src="../../../Code/zoom.js"></script>
 </section>
 <section id="step-by-step-guide-1" class="level4">
 <h4 class="anchored" data-anchor-id="step-by-step-guide-1">Step-by-Step Guide</h4>
@@ -571,7 +571,7 @@ Tip
   <button onclick="nextPage()">Next ▶</button>
 </div>
 
-<script src="../../../../Code/pagination.js"></script>
+<script src="../../../Code/pagination.js"></script>
 </div>
 </section>
 <section id="references" class="level2">
@@ -724,7 +724,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ysph-dsde\.github\.io\/resources-page\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
