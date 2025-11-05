@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>resources – Resource Navigation Tool</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-fb0bcb17d1beba8473d33297837e1783.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing-1 .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-items',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: ["listing-items"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing-1'] = new List('listing-listing-1', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Resource Navigation Tool</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="../Pages/resources.html" aria-current="page"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Pages/datasets.html"> 
+<span class="menu-text">Datasets</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Pages/about-us.html"> 
+<span class="menu-text">About Us</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Feedback</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
+ <span class="dropdown-text">For Yale Affiliates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
+ <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/" target="_blank"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+<!-- main -->
+
+
+
+
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">×</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../Code/popup.js"></script>
+<div class="header">
+    <h1>Resources</h1>
+    <p>Yale offers a rich array of resources to support its academic community. These resources include access to specialized research databases, educational tools, and a variety of digital tools and platforms.</p>
+ </div>
+
+
+
+
+
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<div class="quarto-listing quarto-listing-container-custom" id="listing-listing-1">
+
+
+  <meta charset="UTF-8">
+  <title>Resources with Features:
+    - Two categories filter with sorting by title and date updated - May 10th, 2025
+    - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
+    - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
+  </title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+  <div>
+    <div class="main-container">
+      <div class="sidebar-wrapper">
+        <button class="sidebar-toggler">☰</button>
+        <aside class="sidebar">
+          <div class="sort-wrapper">
+            <select id="sortOptions" class="form-control" style="width: 94%;">
+              <option value="default" selected="">No sorting</option>
+              <option value="title-asc">Title A-Z</option>
+              <option value="title-desc">Title Z-A</option>
+              <option value="date-desc">Date Updated: Newest to Oldest</option>
+              <option value="date-asc">Date Updated: Oldest to Newest</option>
+            </select>
+          </div>
+          <form id="categoryFilter1" class="form">
+            <h5>Region and Affiliation</h5>
+            
+              
+              
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category1" value="Yale%20School%20of%20Public%20Health" id="category1-Yale%20School%20of%20Public%20Health">
+                  <label for="category1-Yale%20School%20of%20Public%20Health" style="margin-bottom: 0px;">Yale School of Public Health</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category1" value="Yale%20School%20of%20Medicine" id="category1-Yale%20School%20of%20Medicine">
+                  <label for="category1-Yale%20School%20of%20Medicine" style="margin-bottom: 0px;">Yale School of Medicine</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category1" value="Yale%20University" id="category1-Yale%20University">
+                  <label for="category1-Yale%20University" style="margin-bottom: 0px;">Yale University</label>
+                </div>
+              
+            
+          </form>
+
+          <br>
+
+          <form id="categoryFilter2" class="form">
+            <h5>Services Offered</h5>
+            
+              
+              
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category2" value="Analytical%20Tools" id="category2-Analytical%20Tools">
+                  <label for="category2-Analytical%20Tools" style="margin-bottom: 0px;">Analytical Tools</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category2" value="Datasets" id="category2-Datasets">
+                  <label for="category2-Datasets" style="margin-bottom: 0px;">Datasets</label>
+                </div>
+              
+                <div class="checkbox-container">
+                  <input type="checkbox" name="category2" value="Consulting%2FServices" id="category2-Consulting%2FServices">
+                  <label for="category2-Consulting%2FServices" style="margin-bottom: 0px;">Consulting/Services</label>
+                </div>
+              
+            
+          </form>
+        </aside>
+      </div>
+
+      <div class="main-content">
+        <div class="container" id="tilesContainer">
+          
+          
+                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Analytical%20Tools Datasets" data-ranking="3" data-title="The Viral Emergence Research Initiative" data-date="2025-03-17">
+                  <img src="../Images/Resources/Verena.png" class="image">
+                  <h2 class="js-line-count">The Viral Emergence Research Initiative</h2>
+                  <p class="description">An open data ecosystem made to power pandemic prediction.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://www.viralemergence.org/data" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                        &nbsp;
+                        <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-people-fill"></i></a>
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Analytical Tools, Datasets</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Analytical%20Tools Consulting%2FServices Datasets" data-ranking="3" data-title="Open Science" data-date="2025-03-17">
+                  <img src="../Images/Resources/Grubaugh.png" class="image">
+                  <h2 class="js-line-count">Open Science</h2>
+                  <p class="description">In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://grubaughlab.com/open-science/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                        &nbsp;
+                        <a href="https://grubaughlab.com/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-people-fill"></i></a>
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Analytical Tools, Consulting/Services, Datasets</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Analytical%20Tools Consulting%2FServices Datasets" data-ranking="2" data-title="Yale Biomedical Informatics &amp; Computing (YBIC)" data-date="2024-10-01">
+                  <img src="../Images/DSDE Identity/AdobeStock_802446835.jpeg" class="image">
+                  <h2 class="js-line-count">Yale Biomedical Informatics &amp; Computing (YBIC)</h2>
+                  <p class="description">Yale Biomedical Informatics &amp; Computing (YBIC) is a resource hub for researchers across Yale School of Medicine and Yale New Haven Health System. We offer a single point of entry for principal investigators to access diverse biomedical data sets, use advanced software and tools, and effectively integrate data science, informatics and computing into their research practices.As the Office of the Deputy Dean for Biomedical Informatics, we help researchers navigate the resources, services, and trainings that are available across Yale School of Medicine and YNHHS. YBIC houses expertise and infrastructure for AI Computing (CPU) and GPU. We support data storage and data sharing efforts across the university and health system.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://medicine.yale.edu/ybic/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Datasets, Consulting/Services, Analytical Tools</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Datasets" data-ranking="1" data-title="Harvey Cushing/John Hay Whitney Medical Library Research Data" data-date="2024-10-01">
+                  <img src="../Images/DSDE Identity/Firefly ai datahub 91076.jpg" class="image">
+                  <h2 class="js-line-count">Harvey Cushing/John Hay Whitney Medical Library Research Data</h2>
+                  <p class="description">The Harvey Cushing/John Hay Whitney Medical Library provides access to an extensive array of information resources and tools, offers research assistance and expertise, and delivers meaningful services to users, to support innovation and excellence in biomedical research, patient care, and the development of scholars and future leaders in healthcare.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://library.medicine.yale.edu/research-data/find-datasets" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Datasets</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Datasets" data-ranking="3" data-title="Polymer Screen" data-date="2025-03-20">
+                  <img src="../Images/Resources/Polymer Screen.png" class="image">
+                  <h2 class="js-line-count">Polymer Screen</h2>
+                  <p class="description">Combining polymer chemistry with quantitative proteomics, we have developed a quantitative guide for spatially-resolved extraction for more than 2100 MPs into native-nanodiscs. Searching for your protein(s) of interest will yield the preferred condition for optimal native extraction for that protein of interest serving as a starting point for structural and biochemical studies.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://polymerscreen.yale.edu/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                        &nbsp;
+                        <a href="https://www.theguptalab.com/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-people-fill"></i></a>
+                      
+                      
+                      
+                        &nbsp;
+                        <a href="https://doi.org/10.1038/s41592-024-02517-x" title="View publication" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-journal-text"></i></a>
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Datasets</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Consulting%2FServices" data-ranking="2" data-title="Yale Magnetic Resonance Research Center (MRRC) Analytical Tools" data-date="2025-04-07">
+                  <img src="../Images/DSDE Identity/Firefly machine learning; code 71123.jpg" class="image">
+                  <h2 class="js-line-count">Yale Magnetic Resonance Research Center (MRRC) Analytical Tools</h2>
+                  <p class="description">The Yale Magnetic Resonance Research Center (MRRC) was founded in 1986 as a result of the recognition that NMR applications, as pioneered by Yale scientists, have enormous potential in biomedical research. The MRRC is now an interdepartmental and interdisciplinary research laboratory that provides state-of-the-art MR equipment, infrastructure, and expertise for the development and application of MRI and MRS methodology in biomedical research. 
+<br>
+<br>
+Research is focused on the study of intact biological systems by developing methods for obtaining structural, functional, physiological and biochemical information by MRI, MRS and other techniques. Applications include fMRI for neurosurgery and neuroscience; brain, muscle, and liver energy metabolism; diabetes; adult and juvenile epilepsy; and psychiatric disorders.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                      
+                        &nbsp;
+                        <a href="https://medicine.yale.edu/mrrc/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-people-fill"></i></a>
+                      
+                      
+                        &nbsp;
+                        <a href="https://github.com/YaleMRRC" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-github"></i></a>
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Analytical Tools</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Consulting%2FServices" data-ranking="1" data-title="The Yale Center for Clinical Investigation (YCCI)" data-date="2025-04-08">
+                  <img src="../Images/DSDE Identity/Firefly data scientists; illustration 97073.jpg" class="image">
+                  <h2 class="js-line-count">The Yale Center for Clinical Investigation (YCCI)</h2>
+                  <p class="description">Clinical and translational research in today’s complex landscape requires a team-based effort that involves partnerships between investigators in different disciplines and from different institutions, as well as with the National Institutes of Health, industry, and the community.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Consulting/Services</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile " data-categories1="Yale%20University" data-categories2="Datasets" data-ranking="1" data-title="Yale Dataverse" data-date="2025-03-20">
+                  <img src="../Images/Resources/Yale Dataverse.png" class="image">
+                  <h2 class="js-line-count">Yale Dataverse</h2>
+                  <p class="description">Yale Dataverse is a data repository service for Yale University faculty, staff, students, and affiliates to share, preserve, and cite research data. Yale University Library hosts and manages Yale Dataverse to ensure research produced at Yale is accessible and discoverable to the global community.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://dataverse.yale.edu/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Datasets</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile " data-categories1="Yale%20University" data-categories2="Datasets" data-ranking="1" data-title="Yale University Library" data-date="2025-03-24">
+                  <img src="../Images/DSDE Identity/Firefly ai datahub 91076.jpg" class="image">
+                  <h2 class="js-line-count">Yale University Library</h2>
+                  <p class="description">Yale University Library has over 10,000 datasets ranging from statistical data to linguistics corpora, to GIS data, to image data sets.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://web.library.yale.edu/quicksearch/tips/find-data-sets" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Datasets</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile hidden" data-categories1="Yale%20University" data-categories2="Datasets" data-ranking="1" data-title="Wharton Research Data Services (WRDS)" data-date="2023-03-20">
+                  <img src="../Images/DSDE Identity/Firefly data science data equity 50124.jpg" class="image">
+                  <h2 class="js-line-count">Wharton Research Data Services (WRDS)</h2>
+                  <p class="description">Wharton Research Data Services, often referred to as WRDS, is a research platform that provides access to a variety of different datasets across multiple disciplines. While access to the WRDS platform is made available by the Yale School of Management, all Yale University faculty, students, and researchers are eligible for access and may use the currently available data. Access to WRDS requires users to have an individual account.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://guides.library.yale.edu/WRDS" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Datasets</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile hidden" data-categories1="Yale%20University" data-categories2="Analytical%20Tools" data-ranking="2" data-title="Storage Finder" data-date="2025-04-20">
+                  <img src="../Images/DSDE Identity/Firefly machine learning; code 38667.jpg" class="image">
+                  <h2 class="js-line-count">Storage Finder</h2>
+                  <p class="description">This tool will assist you in searching for storage options. Note that this is only for evaluation purposes and the proposed solutions are not the only possibilities. Your data workflow should determine what storage solution or combination of solutions is best for you with regards to your performance, cost and data protection needs. Please feel free to reach out to the Yale ITS Enterprise Storage team for additional consultation.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://storage-finder.yale.edu/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Analytical Tools</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile hidden" data-categories1="Yale%20University" data-categories2="Analytical%20Tools Consulting%2FServices" data-ranking="2" data-title="Data-Intensive Social Science Center (DISSC) at Yale" data-date="2025-03-20">
+                  <img src="../Images/DSDE Identity/AdobeStock_802446835.jpeg" class="image">
+                  <h2 class="js-line-count">Data-Intensive Social Science Center (DISSC) at Yale</h2>
+                  <p class="description">A university-wide hub to support data-intensive social science research at the frontiers of each discipline.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://dissc.yale.edu/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Consulting/Services, Analytical Tools</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+                <div class="tile hidden" data-categories1="Yale%20University" data-categories2="Analytical%20Tools Consulting%2FServices" data-ranking="2" data-title="Yale Center for Research Computing (YCRC)" data-date="2025-03-20">
+                  <img src="../Images/DSDE Identity/AdobeStock_323829966 cropped.jpeg" class="image">
+                  <h2 class="js-line-count">Yale Center for Research Computing (YCRC)</h2>
+                  <p class="description">The Yale Center for Research Computing (YCRC) is a computational core facility under the Office of the Provost created to support the advanced computing needs of the research community. The YCRC is staffed by a team of research scientists, application specialists, and systems administrators with expertise in supporting high performance computing (HPC) and computationally dependent disciplines.
+</p>
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://research.computing.yale.edu/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i></a>
+                      
+                      
+                      
+                      
+                      
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Consulting/Services, Analytical Tools</p>
+                      
+                    </small>
+                  </div>
+                </div>
+                
+              
+        </div>
+        <button id="showMoreBtn" class="btn btn-primary" style="display: block; margin: 20px auto;">Show More</button>
+        <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top" title="Back to top"><i class="bi bi-arrow-up"></i>Back to top</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function parseDate(dateStr) {
+      return new Date(dateStr);
+    }
+
+    function updateLineCounts() {
+      document.querySelectorAll(".tile").forEach(function (tile) {
+        const h2Element = tile.querySelector(".js-line-count");
+        const lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
+
+        const linesInH2 = Math.ceil(h2Element.scrollHeight / lineHeight);
+
+        const pElement = tile.querySelector("p.description");
+        pElement.style.display = '-webkit-box';
+        pElement.style.webkitBoxOrient = 'vertical';
+        pElement.style.overflow = 'hidden';
+
+        let clampValue = 10;
+
+        clampValue -= Math.max(0, linesInH2 - 1);
+
+        const topicElement = tile.querySelector('.topic');
+        if (topicElement && topicElement.style.display !== 'none') {
+          const linesInTopic = Math.ceil(topicElement.scrollHeight / lineHeight);
+          clampValue -= Math.max(0, linesInTopic - 1);
+        }
+
+        if (clampValue < 1) clampValue = 1; // Ensure at least one line is available for the description
+
+        pElement.style.webkitLineClamp = clampValue;
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+      updateLineCounts();
+      window.addEventListener('resize', updateLineCounts);
+
+      const categoryFilter1 = document.getElementById('categoryFilter1');
+      const categoryFilter2 = document.getElementById('categoryFilter2');
+      const sortOptions = document.getElementById('sortOptions');
+      const tilesContainer = document.getElementById('tilesContainer');
+      const tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
+
+      // Hold the sorted order of tiles
+      let sortedTiles = [...tiles];
+
+      const showMoreBtn = document.getElementById('showMoreBtn');
+      const initialLoadCount = 9; // 5 rows
+      const loadMoreCount = 3; // 1 row at a time
+
+      showMoreBtn.addEventListener('click', function() {
+        let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
+        hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
+          tile.classList.remove('hidden');
+          tile.style.display = 'block'; // Ensure display is set to block
+        });
+        updateLineCounts();
+        if (hiddenTiles.length <= loadMoreCount) {
+          showMoreBtn.style.display = 'none';
+        }
+      });
+
+      function filterTiles() {
+        const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
+        const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
+
+        let visibleTileCount = 0;
+
+        sortedTiles.forEach(function (tile) {
+          const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
+          const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
+
+          const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
+          const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
+
+          if (matchesCategory1 && matchesCategory2) {
+            tile.classList.add('filtered');
+            if (visibleTileCount < initialLoadCount) {
+              tile.classList.remove('hidden');
+              tile.style.display = 'block'; // Ensure display is set to block
+              visibleTileCount++;
+            } else {
+              tile.classList.add('hidden');
+              tile.style.display = 'none'; // Hide others
+            }
+          } else {
+            tile.classList.remove('filtered');
+            tile.classList.add('hidden');
+            tile.style.display = 'none'; // Hide if it doesn't match the filter
+          }
+        });
+
+        updateLineCounts();
+
+        if (sortedTiles.filter(tile => tile.classList.contains('hidden')).length === 0) {
+          showMoreBtn.style.display = 'none';
+        } else {
+          showMoreBtn.style.display = 'block';
+        }
+      }
+
+      // Function to sort by ranking then title
+      function sortByDefault() {
+        sortedTiles.forEach(tile => {
+          const rankAttr = tile.getAttribute('data-ranking');
+          if (rankAttr) {
+            tile.dataset.numericRanking = parseInt(rankAttr, 10);
+          }
+        });
+
+        sortedTiles.sort((a, b) => {
+          const titleA = a.getAttribute('data-title').toLowerCase();
+          const titleB = b.getAttribute('data-title').toLowerCase();
+          const rankingA = a.dataset.numericRanking || 0;
+          const rankingB = b.dataset.numericRanking || 0;
+
+          if (rankingA !== rankingB) {
+            return rankingA - rankingB;
+          }
+          return titleA.localeCompare(titleB);
+        });
+
+        // Append sorted tiles back into the container
+        sortedTiles.forEach(tile => {
+          tilesContainer.appendChild(tile);
+        });
+
+        filterTiles(); // Apply the current filter on new sorted order
+      }
+
+      function sortTiles() {
+        const sortValue = sortOptions.value;
+
+        if (sortValue === 'default') {
+          sortByDefault();
+          return;
+        }
+
+        sortedTiles.sort((a, b) => {
+          const titleA = a.getAttribute('data-title').toLowerCase();
+          const titleB = b.getAttribute('data-title').toLowerCase();
+          const dateA = parseDate(a.getAttribute('data-date'));
+          const dateB = parseDate(b.getAttribute('data-date'));
+
+          if (sortValue === 'title-asc') {
+            return titleA.localeCompare(titleB);
+          } else if (sortValue === 'title-desc') {
+            return titleB.localeCompare(titleA);
+          } else if (sortValue === 'date-asc') {
+            return dateA - dateB;
+          } else if (sortValue === 'date-desc') {
+            return dateB - dateA;
+          }
+
+          return 0;
+        });
+
+        // Maintain the original order after sorting
+        sortedTiles.forEach(tile => {
+          tilesContainer.appendChild(tile);
+        });
+
+        filterTiles(); // Apply the current filter on new sorted order
+      }
+
+      categoryFilter1.addEventListener('change', filterTiles);
+      categoryFilter2.addEventListener('change', filterTiles);
+      sortOptions.addEventListener('change', sortTiles);
+
+      // Initially load the first set of visible tiles
+      sortedTiles.slice(0, initialLoadCount).forEach(tile => {
+        tile.classList.remove('hidden');
+        tile.style.display = 'block'; // Ensure initial tiles are displayed
+      });
+
+      // Initial default sorting by ranking then title
+      sortByDefault();
+    });
+    
+    // Media view with folded sidebar
+    document.addEventListener('DOMContentLoaded', () => {
+      const sidebarToggler = document.querySelector('.sidebar-toggler');
+      const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+    
+      console.log('sidebarToggler:', sidebarToggler); // Log for debugging
+      console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
+    
+      if (sidebarToggler && sidebarWrapper) {
+        sidebarToggler.addEventListener('click', () => {
+          sidebarWrapper.classList.toggle('expanded');
+        });
+      } else {
+        console.error('Sidebar toggler or wrapper not found');
+      }
+    });
+  </script>
+
+
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This site was built on a ysph-dsde.github.io page. It was rendered using Quarto (v 1.6.3) and theme <a href="https://github.com/thomaspark/bootswatch">flatly</a>.</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../Pages/about-us.html">
+<p>About Us</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../Pages/resources.html">
+<p>Resources</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../Pages/datasets.html">
+<p>Datasets</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/resources.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ysph-dsde">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/showcase/public-health-data-science-and-data-equity-at-yale/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:admin.dsdeysph@yale.edu">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ (203) 737-8644
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
