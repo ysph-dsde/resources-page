@@ -23,6 +23,26 @@
   chunk_output_type: console
 ---
 
+```{=html}
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">&times;</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../../../Code/popup.js"></script>
+```
+
+
 ```{r}
 #| echo: false
 
@@ -119,7 +139,7 @@ The following timeline <a href="https://support.researchallofus.org/hc/en-us/art
   <div id="caption"></div>
 </div>
 
-<script src="zoom.js"></script>
+<script src="../../../../Code/zoom.js"></script>
 ```
 
 
@@ -175,10 +195,10 @@ You must annually complete refresher training, re-attest to the Data User Code o
 
 **c. Start a New Workspace to Analyze Data**\ [@create_workbench]
 
-Each time you want to access data, you will do so by creating a project called a "workspace." When opening a new workspace, you will provide the billing account information and answer a series of research statement questions.
+Each time you want to access data, you will do so by creating a project called a "Workspace." When opening a new Workspace, you will provide the billing account information and answer a series of research statement questions.
 
 ::: {.callout-caution}
-Note that some of these answers are made publicly available so the community can assess data use activities and report any concerns.
+Some of these answers are made publicly available so the community can assess data use activities and report any concerns.
 :::
 
 ::: {.callout-tip}
@@ -199,10 +219,10 @@ For example, you will be asked to provide:
 
 If you need assistance or would like help assessing whether your study might become stigmatizing, you can request that the Resource Access Board review your study summary prior to conducting the research.
 
-Once your workspace application is submitted, you can access data within the tier of controlled access you have permission to use in the All of Us cloud computing platform. This virtual environment comes with preloaded computational resources and tools, including R/RStudio, Jupyter Notebook with R and Python kernels, Cromwell, SQL, SAS, and a command-line application called "Cloud Analysis Terminal.
+Once your Workspace application is submitted, you can access data within the tier of controlled access you have permission to use in the All of Us cloud computing platform. This virtual environment comes with preloaded computational resources and tools, including R/RStudio, Jupyter Notebook with R and Python kernels, Cromwell, SQL, SAS, and a command-line application called "Cloud Analysis Terminal.
 
 ::: {.callout-tip}
-Be mindful of the compute power and disk space you select, as these incur different charges on an hourly and monthly basis while the workspace is active.
+Be mindful of the compute power and disk space you select, as these incur different charges on an hourly and monthly basis while the Workspace is active.
 :::
 
 
@@ -251,7 +271,7 @@ As stated before, you must annually complete refresher training, re-attest to th
 
 **c. Start a New Workspace to Analyze Data**\ [@create_workbench]
 
-Each time you want to access data, you will do so by creating a project called a "workspace." When opening a new workspace, you will provide the billing account information and answer a series of research statement questions.
+Each time you want to access data, you will do so by creating a project called a "Workspace." When opening a new Workspace, you will provide the billing account information and answer a series of research statement questions.
 
 ::: {.callout-caution}
 Note that some of these answers are made publicly available so the community can assess data use activities and report any concerns.
@@ -275,10 +295,10 @@ For example, you will be asked to provide:
 
 If you need assistance or would like help assessing whether your study might become stigmatizing, you can request that the Resource Access Board review your study summary prior to conducting the research.
 
-Once your workspace application is submitted, you can access data within the tier of controlled access you have permission to use in the All of Us cloud computing platform. This virtual environment comes with preloaded computational resources and tools, including R/RStudio, Jupyter Notebook with R and Python kernels, Cromwell, SQL, SAS, and a command-line application called "Cloud Analysis Terminal.
+Once your Workspace application is submitted, you can access data within the tier of controlled access you have permission to use in the All of Us cloud computing platform. This virtual environment comes with preloaded computational resources and tools, including R/RStudio, Jupyter Notebook with R and Python kernels, Cromwell, SQL, SAS, and a command-line application called "Cloud Analysis Terminal.
 
 ::: {.callout-tip}
-Be mindful of the compute power and disk space you select, as these incur different charges on an hourly and monthly basis while the workspace is active.
+Be mindful of the compute power and disk space you select, as these incur different charges on an hourly and monthly basis while the Workspace is active.
 :::
 
 :::
@@ -295,7 +315,7 @@ Be mindful of the compute power and disk space you select, as these incur differ
 
 - [Getting Started Support Page](https://support.researchallofus.org/hc/en-us/categories/360002157352-Getting-Started): Find comprehensive documentation covering various topics, including getting started guides, common troubleshooting issues, methods and data processing protocols, billing information, and more\ [@support].
 
-- [Featured Workspaces](https://support.researchallofus.org/hc/en-us/articles/360059633052-Featured-Workspaces): Find a list of workspaces that provide users with tutorials on how to use the Workbench, along with demonstrative projects to help you get started\ [@support].
+- [Featured Workspaces](https://support.researchallofus.org/hc/en-us/articles/360059633052-Featured-Workspaces): Find a list of Workspaces that provide users with tutorials on how to use the Workbench, along with demonstrative projects to help you get started\ [@support].
 
 - [All of Us Publications and Articles Catalog](https://redcap.pmi-ops.org/surveys/index.php?__report=H9JRHMAELACWH37H&pagenum=ALL): Find the catalog of articles and publications related to the All of Us Research Program\ [@aou_publications].
 :::
@@ -349,7 +369,7 @@ cat(citations_html)
   <button onclick="nextPage()">Next &#9654;</button>
 </div>
 
-<script src="pagination.js"></script>
+<script src="../../../../Code/pagination.js"></script>
 ```
 
 

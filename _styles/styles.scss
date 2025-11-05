@@ -112,6 +112,29 @@ $hover-color: darken($link-color, 10%);
     color: #f0f0f0 !important;
 }
 
+/* Callout Boxes */
+
+.callout-note.callout .callout-title-container {
+    color: #2c3e50;
+    font-weight: 500;
+}
+.callout-warning.callout .callout-title-container {
+    color: #ca820f;
+    font-weight: 500;
+}
+.callout-important.callout .callout-title-container {
+    color: #e74c3c;
+    font-weight: 500;
+}
+.callout-tip.callout .callout-title-container {
+    color: #149c81;
+    font-weight: 500;
+}
+.callout-caution.callout .callout-title-container {
+    color: #dd6d12;
+    font-weight: 500;
+}
+
 /* Information tabsets */
 
 .panel-tabset .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
@@ -154,6 +177,142 @@ $table-bg-scale: 0 !default;
 div.datatables {
   color: #333;
   font-size: 11pt;
+}
+
+/* Popup for Feedback */
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px 30px 30px 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+}
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #333 !important;
+    font-size: 28px !important;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+.close-button:hover,
+.close-button:focus {
+    color: #888 !important;
+}
+.form-links {
+    margin: 35px 0;
+    display: flex;
+    flex-direction: row; /* Default to side-by-side */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+    gap: 15px;
+    justify-content: center;
+    align-items: stretch; /* Make buttons same height */
+}
+.form-link {
+    background-color: #fff;
+    border-radius: .25rem;
+    border: 1px solid #444;
+    box-shadow: 0 .2rem .5rem #6c757d, 0 0 .05rem #6c757d;
+    color: #6c757d;
+    text-decoration: none;
+    font-size: .9em;
+    text-align: center;
+    padding: .4rem .8rem;
+    transition: all 0.3s ease;
+    flex: 1; /* Buttons grow to fill available space */
+    min-width: 180px; /* Minimum width before wrapping */
+    max-width: 250px; /* Maximum width to prevent buttons from being too wide */
+    display: block;
+}
+.form-link:hover {
+    background-color: lighten($navbar-bg, 10%);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 .3rem .7rem #6c757d, 0 0 .1rem #6c757d;
+}
+.popup h2 {
+    color: #333;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+.popup h2 > a.anchorjs-link {
+    display: none;
+}
+.popup p {
+    color: #666;
+    line-height: 1.5;
+}
+
+@media (min-width: 1200px) {
+    .popup-content {
+        max-width: 600px; /* Allow popup to be wider on very large screens */
+    }
+    .form-link {
+        max-width: 250px; /* Cap button width on very large screens */
+    }
+}
+@media (max-width: 767px) {
+    .popup {
+        z-index: 9999; /* Increased z-index to appear above navbar */
+    }
+    .popup-content {
+        width: 90%;
+        /* Center the popup vertically and horizontally */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0; /* Remove auto margin since we're using transform */
+        padding: 20px;
+        max-height: 80vh; /* Prevent popup from being too tall */
+        overflow-y: auto; /* Allow scrolling if content is too long */
+    }
+    .form-links {
+        flex-direction: column; /* Force vertical stacking on mobile */
+        gap: 10px;
+        margin: 25px 0; /* Reduced margin for mobile */
+    }
+    .form-link {
+        font-size: 0.85em;
+        padding: .5rem .6rem;
+        width: 80%;
+        margin: auto;
+        max-width: none; /* Remove width constraints on mobile */
+        min-width: auto;
+    }
+    .close-button {
+        z-index: 10000; /* Ensure close button is above everything */
+    }
+    .popup h2 {
+        margin-top: 20px;
+    }
 }
 
 
@@ -517,7 +676,7 @@ ol, ul {
   display: none; /* Hide toggler by default */
   position: absolute; /* Align with the sidebar */
   top: 0; /* Align with the top of the sidebar */
-  right: -20px; /* Adjusted to move a few points to the left */
+  right: -15px; /* Adjusted to move a few points to the left */
   z-index: 1000;
   background: #444;
   color: white;
@@ -531,7 +690,8 @@ ol, ul {
   position: relative;
 }
 .sidebar-wrapper.expanded .sidebar-toggler {
-  right: -20px; /* Adjusted for expanded state as well */
+  right: -15px; /* Adjusted for expanded state as well */
+  margin-top: -20px !important;
 }
 
 /* Mobile adjustments */
@@ -582,6 +742,8 @@ ol, ul {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
+  margin-right: 20px;
+  margin-bottom: 20px;
   gap: 20px 20px;
 }
 .tile {
@@ -596,7 +758,7 @@ ol, ul {
   text-align: left;
   text-decoration: none;
   color: inherit;
-  background-color: white;
+  background-color: #ffffff;
   overflow: hidden;
 }
 .tile img {
@@ -604,12 +766,15 @@ ol, ul {
   height: 150px;
   object-fit: cover;
   display: block;
+  padding-top: 0px;
 }
 .tile h2 {
   font-size: 1rem;
   font-weight: bold;
-  padding: 6px;
+  padding-left: 6px;
+  padding-right: 6px;
   color: #52505d;
+  border-bottom: none;
   margin: 10px 0 0 0;
 }
 .tile p {
@@ -625,7 +790,7 @@ ol, ul {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: var(--light-header-background) !important;
+  background-color: #f5f5f5 !important;
   margin-top: auto;
 }
 #showMoreBtn {
@@ -742,8 +907,9 @@ ol, ul {
   margin-bottom: 20px;
 }
 .tile_static {
-  height: 410px;  /* Fixed height, adaptable as necessary */
+  height: 440px;  /* Fixed height, adaptable as necessary */
   border: 1px solid #444;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -762,11 +928,12 @@ ol, ul {
   margin-bottom: 0px;
 }
 .tile_static p {
-  font-size: 12px;
+  font-size: 0.8rem;
   padding: 6px;
   color: #52505d;
   margin: 0;
   overflow: hidden;
+  padding-bottom: 0.14em;
   flex-grow: 1; /* Allow the description to take up any remaining space */
 }
 .tile_static img {

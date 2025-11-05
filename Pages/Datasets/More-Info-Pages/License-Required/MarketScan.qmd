@@ -23,6 +23,26 @@
   chunk_output_type: console
 ---
 
+```{=html}
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">&times;</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../../../Code/popup.js"></script>
+```
+
+
 ```{r}
 #| echo: false
 
@@ -87,7 +107,7 @@ Time constraints may vary for applicants.
 
 Researchers need to fill out an application requesting access, listing the dataset and population they want access to, describing their research plan, disclosing funding sources, and signing the data use agreement.
 
-After receiving approval, the [Harvey Cushing/John Hay Whitney Medical Library](https://library.medicine.yale.edu/), the [Yale Center for Clinical Investigation (YCCI)](https://medicine.yale.edu/center-clinical-investigation/), and YBIC will collaborate to assist with data retrieval, analysis, and ensuring compliance with data use agreements. The request form is accessible on the MarketScan Database [DataMed](https://datamed.library.medicine.yale.edu/marketscan) webpage.
+After receiving approval, the [Harvey Cushing/John Hay Whitney Medical Library](https://library.medicine.yale.edu/), the [Yale Center for Clinical Investigation (YCCI)](https://medicine.yale.edu/center-clinical-investigation/), and [YBIC](https://medicine.yale.edu/ybic/) will collaborate to assist with data retrieval, analysis, and ensuring compliance with data use agreements. The request form is accessible on the MarketScan Database [DataMed](https://datamed.library.medicine.yale.edu/marketscan) webpage.
 
 :::
 
@@ -147,7 +167,7 @@ cat(citations_html)
   <button onclick="nextPage()">Next &#9654;</button>
 </div>
 
-<script src="pagination.js"></script>
+<script src="../../../../Code/pagination.js"></script>
 ```
 
 :::

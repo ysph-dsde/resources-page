@@ -182,223 +182,223 @@
     </div>
   </div>
 
-<script>
-  function parseDate(dateStr) {
-    return new Date(dateStr);
-  }
-
-  function updateLineCounts() {
-    document.querySelectorAll(".tile").forEach(function (tile) {
-      const h2Element = tile.querySelector(".js-line-count");
-      const lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
-
-      const linesInH2 = Math.ceil(h2Element.scrollHeight / lineHeight);
-
-      const pElement = tile.querySelector("p.description");
-      pElement.style.display = '-webkit-box';
-      pElement.style.webkitBoxOrient = 'vertical';
-      pElement.style.overflow = 'hidden';
-
-      let clampValue = 10;
-
-      clampValue -= Math.max(0, linesInH2 - 1);
-
-      const topicElement = tile.querySelector('.topic');
-      if (topicElement && topicElement.style.display !== 'none') {
-        const linesInTopic = Math.ceil(topicElement.scrollHeight / lineHeight);
-        clampValue -= Math.max(0, linesInTopic - 1);
-      }
-
-      if (clampValue < 1) clampValue = 1; // Ensure at least one line is available for the description
-
-      pElement.style.webkitLineClamp = clampValue;
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    updateLineCounts();
-    window.addEventListener('resize', updateLineCounts);
-
-    const categoryFilter1 = document.getElementById('categoryFilter1');
-    const categoryFilter2 = document.getElementById('categoryFilter2');
-    const categoryFilter3 = document.getElementById('categoryFilter3');
-    const sortOptions = document.getElementById('sortOptions');
-    const tilesContainer = document.getElementById('tilesContainer');
-    
-    const showMoreBtn = document.getElementById('showMoreBtn');
-    const initialLoadCount = 9; // 3 rows of 3 tiles each
-    const loadMoreCount = 3; // 1 row of 3 tiles
-    
-    const infoCheckbox = document.getElementById('info-yes');
-    let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
-    let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
-
-    // Function to sort by default criteria: ranking then title
-    function sortByDefault() {
-      sortedTiles.forEach(tile => {
-        const rankAttr = tile.getAttribute('data-ranking');
-        if (rankAttr) {
-          tile.dataset.numericRanking = parseInt(rankAttr, 10);
-        }
-      });
-
-      sortedTiles.sort((a, b) => {
-        const titleA = a.getAttribute('data-title').toLowerCase();
-        const titleB = b.getAttribute('data-title').toLowerCase();
-        const rankingA = a.dataset.numericRanking;
-        const rankingB = b.dataset.numericRanking;
-
-        if (rankingA !== rankingB) {
-          return rankingA - rankingB;
-        }
-        return titleA.localeCompare(titleB);
-      });
-
-      sortedTiles.forEach(tile => {
-        tilesContainer.appendChild(tile);
-      });
-
-      filterTiles(); // Apply the current filter on new sorted order
+  <script>
+    function parseDate(dateStr) {
+      return new Date(dateStr);
     }
-    
-    // Initialize the display with the initial tiles shown
-    sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove('hidden'));
-    
-    showMoreBtn.addEventListener('click', function() {
-      let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
-      hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
-        tile.classList.remove('hidden');
-        tile.style.display = 'block'; // Ensure display is set to block
+  
+    function updateLineCounts() {
+      document.querySelectorAll(".tile").forEach(function (tile) {
+        const h2Element = tile.querySelector(".js-line-count");
+        const lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
+  
+        const linesInH2 = Math.ceil(h2Element.scrollHeight / lineHeight);
+  
+        const pElement = tile.querySelector("p.description");
+        pElement.style.display = '-webkit-box';
+        pElement.style.webkitBoxOrient = 'vertical';
+        pElement.style.overflow = 'hidden';
+  
+        let clampValue = 10;
+  
+        clampValue -= Math.max(0, linesInH2 - 1);
+  
+        const topicElement = tile.querySelector('.topic');
+        if (topicElement && topicElement.style.display !== 'none') {
+          const linesInTopic = Math.ceil(topicElement.scrollHeight / lineHeight);
+          clampValue -= Math.max(0, linesInTopic - 1);
+        }
+  
+        if (clampValue < 1) clampValue = 1; // Ensure at least one line is available for the description
+  
+        pElement.style.webkitLineClamp = clampValue;
       });
+    }
+  
+    document.addEventListener('DOMContentLoaded', function() {
       updateLineCounts();
-      if (hiddenTiles.length <= loadMoreCount) {
-        showMoreBtn.style.display = 'none';
-      }
-    });
-
-    function filterTiles() {
-      const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
-      const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
-      const selectedCategories3 = Array.from(categoryFilter3.querySelectorAll('input[name="category3"]:checked')).map(input => decodeURIComponent(input.value));
-      const selectedInfo = infoCheckbox && infoCheckbox.checked ? 'yes' : 'all';
-
-      let visibleTileCount = 0;
-
-      sortedTiles.forEach(function(tile) {
-        const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
-        const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
-        const categories3 = (tile.getAttribute('data-categories3') || '').split(' ').map(cat => decodeURIComponent(cat));
-        const infoAvailable = tile.getAttribute('data-info');
-
-        const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
-        const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
-        const matchesCategory3 = selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
-        const matchesInfo = selectedInfo === 'all' || infoAvailable === selectedInfo;
-
-        if (matchesCategory1 && matchesCategory2 && matchesCategory3 && matchesInfo) {
-          tile.classList.add('filtered');
-          if (visibleTileCount < initialLoadCount) {
-            tile.classList.remove('hidden');
-            tile.style.display = 'block'; // Ensure display is set to block
-            visibleTileCount++;
-          } else {
-            tile.classList.add('hidden');
-            tile.style.display = 'none'; // Hide others
+      window.addEventListener('resize', updateLineCounts);
+  
+      const categoryFilter1 = document.getElementById('categoryFilter1');
+      const categoryFilter2 = document.getElementById('categoryFilter2');
+      const categoryFilter3 = document.getElementById('categoryFilter3');
+      const sortOptions = document.getElementById('sortOptions');
+      const tilesContainer = document.getElementById('tilesContainer');
+      
+      const showMoreBtn = document.getElementById('showMoreBtn');
+      const initialLoadCount = 9; // 3 rows of 3 tiles each
+      const loadMoreCount = 3; // 1 row of 3 tiles
+      
+      const infoCheckbox = document.getElementById('info-yes');
+      let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
+      let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
+  
+      // Function to sort by default criteria: ranking then title
+      function sortByDefault() {
+        sortedTiles.forEach(tile => {
+          const rankAttr = tile.getAttribute('data-ranking');
+          if (rankAttr) {
+            tile.dataset.numericRanking = parseInt(rankAttr, 10);
           }
-        } else {
-          tile.classList.remove('filtered');
-          tile.classList.add('hidden');
-          tile.style.display = 'none'; // Hide if it doesn't match the filter
-        }
-      });
-
-      updateLineCounts();
-
-      if (sortedTiles.filter(tile => tile.classList.contains('hidden')).length === 0) {
-        showMoreBtn.style.display = 'none';
-      } else {
-        showMoreBtn.style.display = 'block';
-      }
-    }
-
-    function sortTiles() {
-      const sortValue = sortOptions.value;
-      // Convert ranks to numbers before sorting
-      sortedTiles.forEach(tile => {
-        const rankAttr = tile.getAttribute('data-ranking');
-        if (rankAttr) {
-          tile.dataset.numericRanking = parseInt(rankAttr, 10);
-        }
-      });
-
-      sortedTiles.sort((a, b) => {
-        const titleA = a.getAttribute('data-title').toLowerCase();
-        const titleB = b.getAttribute('data-title').toLowerCase();
-        const dateA = parseDate(a.getAttribute('data-date'));
-        const dateB = parseDate(b.getAttribute('data-date'));
-        const rankingA = a.dataset.numericRanking;
-        const rankingB = b.dataset.numericRanking;
-
-        if (sortValue === 'title-asc') {
-          return titleA.localeCompare(titleB);
-        } else if (sortValue === 'title-desc') {
-          return titleB.localeCompare(titleA);
-        } else if (sortValue === 'date-asc') {
-          return dateA - dateB;
-        } else if (sortValue === 'date-desc') {
-          return dateB - dateA;
-        } else {
-          // Default sorting: by ranking and then by title if same ranking
+        });
+  
+        sortedTiles.sort((a, b) => {
+          const titleA = a.getAttribute('data-title').toLowerCase();
+          const titleB = b.getAttribute('data-title').toLowerCase();
+          const rankingA = a.dataset.numericRanking;
+          const rankingB = b.dataset.numericRanking;
+  
           if (rankingA !== rankingB) {
             return rankingA - rankingB;
           }
           return titleA.localeCompare(titleB);
+        });
+  
+        sortedTiles.forEach(tile => {
+          tilesContainer.appendChild(tile);
+        });
+  
+        filterTiles(); // Apply the current filter on new sorted order
+      }
+      
+      // Initialize the display with the initial tiles shown
+      sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove('hidden'));
+      
+      showMoreBtn.addEventListener('click', function() {
+        let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
+        hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
+          tile.classList.remove('hidden');
+          tile.style.display = 'block'; // Ensure display is set to block
+        });
+        updateLineCounts();
+        if (hiddenTiles.length <= loadMoreCount) {
+          showMoreBtn.style.display = 'none';
         }
       });
-
-      sortedTiles.forEach(tile => {
-        tilesContainer.appendChild(tile);
+  
+      function filterTiles() {
+        const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
+        const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
+        const selectedCategories3 = Array.from(categoryFilter3.querySelectorAll('input[name="category3"]:checked')).map(input => decodeURIComponent(input.value));
+        const selectedInfo = infoCheckbox && infoCheckbox.checked ? 'yes' : 'all';
+  
+        let visibleTileCount = 0;
+  
+        sortedTiles.forEach(function(tile) {
+          const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
+          const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
+          const categories3 = (tile.getAttribute('data-categories3') || '').split(' ').map(cat => decodeURIComponent(cat));
+          const infoAvailable = tile.getAttribute('data-info');
+  
+          const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
+          const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
+          const matchesCategory3 = selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
+          const matchesInfo = selectedInfo === 'all' || infoAvailable === selectedInfo;
+  
+          if (matchesCategory1 && matchesCategory2 && matchesCategory3 && matchesInfo) {
+            tile.classList.add('filtered');
+            if (visibleTileCount < initialLoadCount) {
+              tile.classList.remove('hidden');
+              tile.style.display = 'block'; // Ensure display is set to block
+              visibleTileCount++;
+            } else {
+              tile.classList.add('hidden');
+              tile.style.display = 'none'; // Hide others
+            }
+          } else {
+            tile.classList.remove('filtered');
+            tile.classList.add('hidden');
+            tile.style.display = 'none'; // Hide if it doesn't match the filter
+          }
+        });
+  
+        updateLineCounts();
+  
+        if (sortedTiles.filter(tile => tile.classList.contains('hidden')).length === 0) {
+          showMoreBtn.style.display = 'none';
+        } else {
+          showMoreBtn.style.display = 'block';
+        }
+      }
+  
+      function sortTiles() {
+        const sortValue = sortOptions.value;
+        // Convert ranks to numbers before sorting
+        sortedTiles.forEach(tile => {
+          const rankAttr = tile.getAttribute('data-ranking');
+          if (rankAttr) {
+            tile.dataset.numericRanking = parseInt(rankAttr, 10);
+          }
+        });
+  
+        sortedTiles.sort((a, b) => {
+          const titleA = a.getAttribute('data-title').toLowerCase();
+          const titleB = b.getAttribute('data-title').toLowerCase();
+          const dateA = parseDate(a.getAttribute('data-date'));
+          const dateB = parseDate(b.getAttribute('data-date'));
+          const rankingA = a.dataset.numericRanking;
+          const rankingB = b.dataset.numericRanking;
+  
+          if (sortValue === 'title-asc') {
+            return titleA.localeCompare(titleB);
+          } else if (sortValue === 'title-desc') {
+            return titleB.localeCompare(titleA);
+          } else if (sortValue === 'date-asc') {
+            return dateA - dateB;
+          } else if (sortValue === 'date-desc') {
+            return dateB - dateA;
+          } else {
+            // Default sorting: by ranking and then by title if same ranking
+            if (rankingA !== rankingB) {
+              return rankingA - rankingB;
+            }
+            return titleA.localeCompare(titleB);
+          }
+        });
+  
+        sortedTiles.forEach(tile => {
+          tilesContainer.appendChild(tile);
+        });
+  
+        filterTiles(); // Apply the current filter on new sorted order
+      }
+  
+      categoryFilter1.addEventListener('change', filterTiles);
+      categoryFilter2.addEventListener('change', filterTiles);
+      categoryFilter3.addEventListener('change', filterTiles);
+      if (infoCheckbox) {
+        infoCheckbox.addEventListener('change', filterTiles);
+      }
+      sortOptions.addEventListener('change', function() {
+        if (sortOptions.value === "default") {
+          sortByDefault();
+        } else {
+          sortTiles();
+        }
       });
-
-      filterTiles(); // Apply the current filter on new sorted order
-    }
-
-    categoryFilter1.addEventListener('change', filterTiles);
-    categoryFilter2.addEventListener('change', filterTiles);
-    categoryFilter3.addEventListener('change', filterTiles);
-    if (infoCheckbox) {
-      infoCheckbox.addEventListener('change', filterTiles);
-    }
-    sortOptions.addEventListener('change', function() {
-      if (sortOptions.value === "default") {
-        sortByDefault();
+  
+      // Initial sort by default (ranking then title)
+      sortByDefault();
+    });
+    
+    
+    // Media view with folded sidebar
+    document.addEventListener('DOMContentLoaded', () => {
+      const sidebarToggler = document.querySelector('.sidebar-toggler');
+      const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+    
+      console.log('sidebarToggler:', sidebarToggler); // Log for debugging
+      console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
+    
+      if (sidebarToggler && sidebarWrapper) {
+        sidebarToggler.addEventListener('click', () => {
+          sidebarWrapper.classList.toggle('expanded');
+        });
       } else {
-        sortTiles();
+        console.error('Sidebar toggler or wrapper not found');
       }
     });
-
-    // Initial sort by default (ranking then title)
-    sortByDefault();
-  });
-  
-  
-  // Media view with folded sidebar
-  document.addEventListener('DOMContentLoaded', () => {
-  const sidebarToggler = document.querySelector('.sidebar-toggler');
-  const sidebarWrapper = document.querySelector('.sidebar-wrapper');
-
-  console.log('sidebarToggler:', sidebarToggler); // Log for debugging
-  console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
-
-  if (sidebarToggler && sidebarWrapper) {
-    sidebarToggler.addEventListener('click', () => {
-      sidebarWrapper.classList.toggle('expanded');
-    });
-  } else {
-    console.error('Sidebar toggler or wrapper not found');
-  }
-});
-</script>
+  </script>
 </body>
 
 ```
