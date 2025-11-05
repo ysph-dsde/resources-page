@@ -1,14 +1,38 @@
 [
   {
-    "listing": "/Pages/datasets.html",
+    "listing": "/Pages/Datasets/License-Required/index.html",
     "items": []
   },
   {
-    "listing": "/Pages/about-us.html",
+    "listing": "/Pages/Datasets/Restricted-Access/index.html",
     "items": []
   },
   {
-    "listing": "/Pages/resources.html",
+    "listing": "/Pages/Resources/National/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Pages/Resources/Yale University/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Pages/Resources/YSM/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Pages/Resources/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Pages/Resources/YSPH/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Pages/Resources/International/index.html",
+    "items": []
+  },
+  {
+    "listing": "/Pages/Datasets/Freely-Accessible/index.html",
     "items": []
   }
 ]
