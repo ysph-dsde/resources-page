@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-19c72debe01a73826ad54c6f04fdf83a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fb0bcb17d1beba8473d33297837e1783.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -195,10 +195,28 @@ window.Quarto = {
 
 
 
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">×</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../Code/popup.js"></script>
 <div class="header">
     <h1>Resources</h1>
     <p>Yale offers a rich array of resources to support its academic community. These resources include access to specialized research databases, educational tools, and a variety of digital tools and platforms.</p>
  </div>
+
+
 
 
 
@@ -1221,20 +1239,20 @@ Research is focused on the study of intact biological systems by developing meth
     
     // Media view with folded sidebar
     document.addEventListener('DOMContentLoaded', () => {
-    const sidebarToggler = document.querySelector('.sidebar-toggler');
-    const sidebarWrapper = document.querySelector('.sidebar-wrapper');
-  
-    console.log('sidebarToggler:', sidebarToggler); // Log for debugging
-    console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
-  
-    if (sidebarToggler && sidebarWrapper) {
-      sidebarToggler.addEventListener('click', () => {
-        sidebarWrapper.classList.toggle('expanded');
-      });
-    } else {
-      console.error('Sidebar toggler or wrapper not found');
-    }
-  });
+      const sidebarToggler = document.querySelector('.sidebar-toggler');
+      const sidebarWrapper = document.querySelector('.sidebar-wrapper');
+    
+      console.log('sidebarToggler:', sidebarToggler); // Log for debugging
+      console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
+    
+      if (sidebarToggler && sidebarWrapper) {
+        sidebarToggler.addEventListener('click', () => {
+          sidebarWrapper.classList.toggle('expanded');
+        });
+      } else {
+        console.error('Sidebar toggler or wrapper not found');
+      }
+    });
   </script>
 
 
@@ -1300,9 +1318,6 @@ No matching items
     <li class="nav-item">
  (203) 737-8644
   </li>  
-    <li class="nav-item">
- </li></ul><div style="margin-top: 0px;">Yale affiliates, provide feedback <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u">here</a>.<br>Non-affiliates, provide feedback <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u">here</a>.</div><ul class="footer-items list-unstyled" style="display:none;">
-    
 </ul>
     </div>
   </div>
