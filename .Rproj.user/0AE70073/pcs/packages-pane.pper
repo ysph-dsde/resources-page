@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": true,
+        "libraryPath": "/Users/sg2736/Desktop/DSDE/Projects/YSPH-DSDE Repos/resources-page/renv/library/macos/R-4.4/aarch64-apple-darwin20",
+        "installDependencies": true
+    }
+}

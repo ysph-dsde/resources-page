@@ -1,0 +1,119 @@
+---
+  format: 
+    html:
+      toc: false
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+  page-navigation: false
+  back-to-top-navigation: true
+---
+
+```{=html}
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">&times;</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>&nbsp;&nbsp;&nbsp;
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="Code/popup.js"></script>
+```
+
+
+![](Images/Wordmark-Data-Science-and-Data-Equity-black.png){style="display: block; margin-left: auto; margin-right: auto;" width="600"}\
+
+
+Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice.
+
+Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.
+
+\
+
+```{=html}
+<body>
+  <div class="container_title">
+    <div class="tile_title">
+      <a href="Pages/Resources/index.qmd" title="Listing page">
+        <img src="Images/Firefly data scientists; illustration 75467.jpg" alt="Resources page" class="image">
+        <h1>Resources</h1>
+        <h2>See the Listings</h2>
+        <i class="tile_icon bi bi-arrow-right-circle-fill"></i>
+      </a>
+    </div>
+    <div class="tile_title">
+      <a href="Pages/Datasets/index.qmd" title="Listing page">
+        <img src="Images/Firefly data science data equity 50124.jpg" alt="Datasets page" class="image">
+        <h1>Datasets</h1>
+        <h2>See the Listings</h2>
+        <i class="tile_icon bi bi-arrow-right-circle-fill"></i>
+      </a>
+    </div>
+  </div>
+</body>
+
+```
+
+\
+
+## Navigating the Site
+
+Explore our comprehensive collection of resources and datasets curated from international organizations, United States agencies, and Yale University that can support your public health research. Dataset listings come with detailed information on how to obtain the data, expected timelines for access and utilization, and examples of YSPH studies conducted and published using these specific datasets.
+
+
+```{=html}
+<body>
+  <div class="container_static">
+    <div class="tile_static">
+      <img src="Images/Firefly data science ai hub; watercolor image 92513.jpg" class="img">
+      <h2 class="h2 js-line-count" style="pointer-events: none">National Center for Health Statistics (NCHS)</h2>
+      <p class="description">The National Center for Health Statistics is the nation's source for official health statistics. We collect, analyze, and share data and statistics to guide programs and policies that improve the health of people across the United States. NCHS collects data from many sources of health information: birth and...</p>
+      <div class="card-header_static py-1 px-2 border-bottom bg-light">
+        <small class="card-text inline-block">
+          &nbsp;
+          <a href="#" title="GitHub page" class="source-code card-text float-beginning inline-block tile_a">
+            <i class="bi-github"></i></a>
+          &nbsp;
+          <a href="#" title="Main site" class="source-code card-text float-beginning inline-block tile_a">
+            <i class="bi-globe"></i></a>
+          &nbsp;
+          <a href="#" title="Group site" class="source-code card-text float-beginning inline-block tile_a">
+            <i class="bi-people-fill"></i></a>
+          &nbsp;
+          <a href="#" title="View publication" class="source-code card-text float-beginning inline-block tile_a">
+            <i class="bi-journal-text"></i></a>
+          &nbsp;
+          <a href="#" title="Get more information" class="source-code card-text float-beginning inline-block tile_a">
+            <i class="bi-info-circle"></i></a>
+          <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
+        </small>
+      </div>
+    </div>
+  </div>
+</body>
+```
+
+
+
+The resources and datasets are presented in tiles that contain salient details about the source, along with relevant links, like the one displayed on the left. Each tile can feature any combination of five hyperlinked icons:
+
+<i class="bi bi-github icon-red"></i> \  Links to code repositories for the dataset/resource.
+
+<i class="bi bi-globe icon-red"></i> \ Links to the main website of the dataset/resource.
+
+<i class="bi bi-people icon-red"></i> \ Links to the websites of the research groups responsible for creating the dataset/resource.
+
+<i class="bi bi-journal-text icon-red"></i> \ Links to example publications that utilize the dataset/resource provided by the creators.
+
+<i class="bi bi-info-circle icon-red"></i> \ Links to a **Resource Navigation Tool** webpage with additional details about the dataset.
+
+
+

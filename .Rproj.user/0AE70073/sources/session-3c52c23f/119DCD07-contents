@@ -1,0 +1,157 @@
+---
+  format:
+    html:
+      toc: false
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+  back-to-top-navigation: true
+  listing:
+    - id: contributors
+      template: ../Code/Listing_About-Us/about-us-formatting.ejs
+      contents: ../Code/Listing_About-Us/about-us-listings.yml
+      categories: false
+      sort-ui: false
+      filter-ui: false
+---
+
+
+```{=html}
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">&times;</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../Code/popup.js"></script>
+```
+
+
+::: {.column-screen}
+```{=html}
+<div class="alt_header">
+    <h2 style="pointer-events: none;">About Us</h2>
+    <p style="text-align: left;"><strong>Public Health Data Science and Data Equity (DSDE)</strong> aims to strategically support and elevate data science training, education, research and collaboration efforts at the Yale School of Public Health (YSPH) and promote data equity as a fundamental pillar of health equity.</p>
+</br>
+We aim to:
+</br>
+<ul>
+    <li>Elevate and transform public health research via cutting-edge data science discoveries and impactful implementation, with a focus on developing a novel framework of data equity and positive social change.</li>
+    <li>Empower and enable the next generation of public health leaders with an essential mastery of core data science and artificial intelligence (AI) techniques.</li>
+  </ul>
+</div>
+```
+:::
+
+::: column-page-inset
+```{=html}
+<div class="cool-container">
+  <div class="cool-block left">
+    <h2 style="pointer-events: none;">Our Vision</h2>
+    <p>We strive to make data science knowledge, tools, and resources available to communities near and far, promoting equitable scientific discoveries, policy decisions, public health practice, and healthcare.</p>
+  </div>
+  <div class="cool-block right">
+    <h2 style="pointer-events: none;">Our Mission</h2>
+    <p>Our mission is to reduce the barriers in utilization of data science and AI in public health training, research, and practice. We plan on achieving this by: enhancing education, leading responsible innovation, building infrastructure, creating a community, forming data science alliances, and promoting open knowledge locally and globally.</p>
+  </div>
+</div>
+```
+:::
+
+\
+
+::: column-screen
+```{=html}
+<div class="subheader">
+    <h2>Other Things We Do</h2>
+    <p style="text-align: left;">Building upon our core missions, DSDE is deeply committed to a spectrum of activities designed to foster innovation, collaboration, and leadership in the field of public health and epidemiology. Our efforts include a broad range of resources, events, and services that collectively contribute to the advancement of equitous, trustworthy, and impactful research in public health.
+</br>
+</br>
+Each resource is designed to empower YSPH students, staff, and faculty to excel in public health data science. Whenever possible, we democratize our resources to ensure that public health professionals and researchers globally can benefit from and contribute to our collective mission of advancing public health data science and promoting data equity.</p>
+</div>
+```
+:::
+
+::: column-page-inset
+```{=html}
+<div class="info-container">
+  <div class="info-box">
+    <div class="more-info-box">
+      <div class="banner">
+        <img src="../Images/DSDE Identity/DSDE Education Materials crop_AS882982307.jpg" alt="Banner Image">
+        <h2 style="pointer-events: none;">Educational Materials and Events</h2>
+      </div>
+      <div class="content">
+        <p>As part of our mission to strengthen data science and analytical literacy in the next generation of public health leaders, DSDE hosts a variety of educational events, including our <i>Coffee, Cookies, and Coding (C-cubed)</i> workshops.</p>
+      </div>
+      <div class="footer">
+        <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/resources/educational-materials/" title="Listing page">
+          <h3 style="pointer-events: none;">Find Out More</h3>
+          <i class="more-info-icon bi bi-arrow-right-circle-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="more-info-box">
+      <div class="banner">
+        <img src="../Images/DSDE Identity/AdobeStock_215933176.jpeg" alt="Banner Image">
+        <h2 style="pointer-events: none;">Services</h2>
+      </div>
+      <div class="content">
+        <p>We directly support Yale researchers through consulting and contracting. We offer an array of services, including statistical analysis, data visualization, implementation of AI/ML, R package development, dashboarding, and custom workshops/tutorials.</p>
+      </div>
+      <div class="footer">
+        <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/services/" title="Listing page">
+          <h3 style="pointer-events: none;">Find Out More</h3>
+          <i class="more-info-icon bi bi-arrow-right-circle-fill"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="centered-box">
+  <div class="more-info-box">
+    <div class="banner">
+      <img src="../Images/DSDE Identity/DSDE_AS1004839280.jpeg" alt="Banner Image">
+      <h2 style="pointer-events: none;">Other Resources</h2>
+    </div>
+    <div class="content">
+      <p>In addition to the <strong>Resource Navigation Tool</strong>, DSDE has curated and consolidated software developed by faculty and students at the school of public health and hosts various events geared towards accelerating impactful data-driven discoveries.</p>
+    </div>
+    <div class="footer">
+      <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/resources/" title="Listing page">
+        <h3 style="pointer-events: none;">Find Out More</h3>
+        <i class="more-info-icon bi bi-arrow-right-circle-fill"></i>
+      </a>
+    </div>
+  </div>
+</div>
+```
+:::
+
+\
+
+::: column-screen
+```{=html}
+</style>
+<div class="subheader" style="margin-bottom: 30px">
+    <h2>People</h2>
+    <p style="text-align: left;">DSDE is a collaborative community driving the future of equitable public health at Yale. Below are some of the people on the team who contributed to the <strong>Resource Navigation Tool</strong>. You can find out more about the whole team on our main <a href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/people/">YSPH webpage</a>.</p>
+</div>
+```
+:::
+
+::: {#contributors .column-screen-inset}
+:::

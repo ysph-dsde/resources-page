@@ -1,0 +1,54 @@
+```{=html}
+
+<head>
+  <meta charset="UTF-8">
+  <title>Resources with Features</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body class="people">
+  <div class="tile-container">
+    <% if (items[0] && items[0].items && items[0].items.tiles) { %>
+      <% items[0].items.tiles.forEach(function(tile) { %>
+        <div class="tile">
+          <div class="img-container">
+            <img src="<%= tile.image %>" alt="Image for <%= tile.name %>">
+          </div>
+          <div class="tile-content">
+            <h2><%= tile.name %></h2>
+            <p class="title-paragraph"><%= tile.titles %></p>
+            <div class="link-bar">
+              <small class="link-bar-text">
+                <% if (tile['ysph-site']) { %>
+                  <a href="<%= tile['ysph-site'] %>" title="YSPH Site"><i class="bi-globe"></i></a>
+                <% } %>
+                <% if (tile.group) { %>
+                  <a href="<%= tile.group %>" title="Group Site"><i class="bi-people-fill"></i></a>
+                <% } %>
+                <% if (tile.linkedin) { %>
+                  <a href="<%= tile.linkedin %>" title="LinkedIn"><i class="bi-linkedin"></i></a>
+                <% } %>
+              </small>
+            </div>
+            <p class="description"><%= tile.bio %></p>
+            <div class="contact-info">
+              <% if (tile.email) { %>
+                Email: <a href="mailto:<%= tile.email %>"><%= tile.email %></a><br>
+              <% } %>
+              <% if (tile.phone) { %>
+                Phone: <a href="tel:<%= tile.phone %>"><%= tile.phone %></a>
+              <% } %>
+            </div>
+            <% if (tile.profile_link) { %>
+              <a class="profile-link" href="<%= tile.profile_link %>">View Full Profile</a>
+            <% } %>
+          </div>
+        </div>
+      <% }); %>
+    <% } else { %>
+      <p>No tiles available.</p>
+    <% } %>
+  </div>
+</body>
+
+```
+

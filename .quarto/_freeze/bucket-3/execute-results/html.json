@@ -1,0 +1,15 @@
+{
+  "hash": "db69ca7185ef23527051d131fd82d68e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\n  title: \"License Required\"\n  title-block-banner: \"#ae8b2d50\"\n  title-block-banner-color: \"#2e2e36\"\n  format: html\n  editor: visual\n  markdown: \n  editor_options: \n  chunk_output_type: console\n---\n\n\n\n\n## \n\n\n\n\n{{< lipsum 1 >}}\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

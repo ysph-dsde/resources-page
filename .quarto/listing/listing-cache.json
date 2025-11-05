@@ -1,0 +1,13 @@
+{
+  "listingMap": {
+    "Pages/about-us.qmd": [
+      "../Code/Listing_About-Us/about-us-listings.yml"
+    ],
+    "Pages/datasets.qmd": [
+      "../Code/Listing_Datasets/data-listings.yml"
+    ],
+    "Pages/resources.qmd": [
+      "../Code/Listing_Resources/resources-listings.yml"
+    ]
+  }
+}

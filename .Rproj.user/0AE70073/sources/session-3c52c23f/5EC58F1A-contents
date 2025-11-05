@@ -1,0 +1,146 @@
+---
+  title: "National Center for Health Statistics (NCHS)"
+  description: |
+         </br>
+         The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends\ [@about; @data_tools].
+  title-block-banner: true
+  format: 
+    html:
+      toc: true
+      toc-depth: 4
+  header-includes:
+    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
+  editor: source
+  bibliography: BibTeX/general_references.bib
+  csl: BibTeX/nature.csl
+  filters:
+    - parse-latex
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+---
+
+```{=html}
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">&times;</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../../../Code/popup.js"></script>
+```
+
+
+```{r}
+#| echo: false
+
+# Import necessary libraries
+suppressPackageStartupMessages({
+  library("stringr")
+  library("htmltools")
+  library("glue")
+  library("rentrez")
+  library("xml2")
+  library("clipr")
+})
+
+"%!in%" <- function(x,y)!("%in%"(x,y))
+
+# Load in the functions.
+source('./PubMed Search_Functions.R')
+```
+
+Updated: October 23$^{rd}$, 2025
+
+## Overview
+
+The National Center for Health Statistics (NCHS), part of the Centers for Disease Control and Prevention (CDC), is the nation's principal health statistics agency. It collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. NCHS gathers information from various sources, including birth and death records, medical records, interviews, physical examinations, and laboratory testing\ [@main_page; @about; @data_tools].
+
+Policymakers and public health professionals use NCHS data to identify health problems and develop policies and programs. The data is shared through reports, dashboards, and data files, measuring the health of the U.S. population, monitoring health trends, identifying disparities, documenting healthcare access and usage, supporting research, and guiding public policies and programs\ [@about].
+
+
+
+## Gaining Access
+
+The program manages six crucial datasets for public health, each with its own information page detailing the programs and data offerings\ [@main_page; @data_tools]. You can find more about how to gain access to these program data on their respective pages from the [Dataset](../../../datasets/index.html) main page. They are:
+
+::: {style="margin-left: 2rem"}
+- **Family Growth Survey:** Provides data on family life, marriage and divorce, pregnancy, infertility, use of contraception, and men's and women's health.
+
+- **Health Care Surveys:** Collects information on the usage and quality of health care services, including hospital visits, outpatient and emergency department visits, and long-term care.
+
+- **Rapid Surveys:** Gathers timely data on emerging public health issues, allowing for rapid response and policy adjustments.
+
+- **Health and Nutrition Examination Survey:** Combines interviews and physical examinations to assess the health and nutritional status of adults and children in the United States.
+
+- **Health Interview Survey:** Collects data on a broad range of health topics through personal interviews, providing insights into health status, health care access, and progress toward national health objectives.
+
+- **Vital Statistics:** Includes data on births, deaths, marriages, and divorces, providing essential information for understanding population health trends and outcomes.
+:::
+
+## Valuable Links
+
+::: {style="margin-left: 2rem"}
+- [National Center for Health Statistics](https://www.cdc.gov/nchs/index.html): Find a comprehensive listing of all the data offerings provided by NCHS\ [@main_page].
+:::
+
+
+## Publications
+
+```{r}
+#| echo: false
+
+# Fetch and format the citations.
+citations <- get_citations(
+  doi = c("10.7326/M21-0065", "10.1001/jamanetworkopen.2025.7695",
+          "10.1007/s10995-025-04150-2", "10.1016/S2589-7500(21)00214-4",
+          "10.1038/s41467-025-58236-0", "10.1016/j.ijid.2025.108020"),
+  affiliation = "Yale School of Public Health"
+)
+
+# Condition the output based on presence of articles.
+citations_html <- make_pub_list(citations)
+
+if(!any(str_detect(citations$citations, "No publications"))) {
+  citation_length <- length(citations$citations)
+  citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
+} else {
+  citation_length <- 0
+  citation_date   <- as.numeric(format(Sys.Date(), "%Y")) - as.numeric(str_extract("No publications found in the last 25 years.", "[0-9]{2}"))
+}
+
+```
+
+
+This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.
+
+::: {style="margin-left: 1rem"}
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+# Display formatted citations.
+cat(citations_html)
+```
+
+```{=html}
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">&#9664; Previous</button>
+  <button onclick="nextPage()">Next &#9654;</button>
+</div>
+
+<script src="../../../../Code/pagination.js"></script>
+```
+
+:::

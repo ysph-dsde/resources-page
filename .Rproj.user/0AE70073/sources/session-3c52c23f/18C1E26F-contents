@@ -1,0 +1,475 @@
+---
+  title: "UK Biobank"
+  description: |
+         </br>
+         The UK Biobank offers a comprehensive dataset of biological, health, and lifestyle information from 500,000 participants recruited from 2006 to 2010 across 22 centers in Scotland, England, and Wales, with over 86% residing in urban areas. Participants have consistently provided data on health records, physical measurements, lifestyle and environment, questionnaires, and biospecimens\ [@about_us].
+         </br>
+         </br>
+         UK Biobank continuously enhances its research value by integrating biomedical data with external sources and generating new data from biospecimens. Initiatives include lifestyle questionnaires, wearable technology, and extensive sleep surveys and image scans\ [@future_projects; @largest_sleep; @largest_imaging].
+  title-block-banner: true
+  format: 
+    html:
+      toc: true
+      toc-depth: 4
+  header-includes:
+    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
+  editor: source
+  bibliography: BibTeX/ukBiobank_references.bib
+  csl: BibTeX/nature.csl
+  filters:
+    - parse-latex
+  markdown: 
+  editor_options: 
+  chunk_output_type: console
+---
+
+```{=html}
+<div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">&times;</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../../../Code/popup.js"></script>
+```
+
+
+```{r}
+#| echo: false
+
+# Import necessary libraries
+suppressPackageStartupMessages({
+  library("stringr")
+  library("htmltools")
+  library("glue")
+  library("rentrez")
+  library("xml2")
+  library("clipr")
+})
+
+"%!in%" <- function(x,y)!("%in%"(x,y))
+
+# Load in the functions.
+source('./PubMed Search_Functions.R')
+```
+
+Updated: October 23$^{rd}$, 2025
+
+## Overview
+
+UK Biobank provides an ongoing clinical study biobank offering the most comprehensive dataset of biological, health, and lifestyle information from half a million participants since initial recruitment in 2006\ [@who_we_are; @about_us]. Participants were recruited from 22 centers in Scotland, England, and Wales, with over 86% living in urban areas. Since recruitment from 2006 to 2010, these participants have consistently provided data on health records, physical measurements, lifestyle and environment, questionnaires, and biospecimens\ [@about_us; @our_participants].
+
+The UK Biobank continually enhances its research value by integrating biomedical data with external sources, collecting additional data points, and generating new data from biospecimens. They have introduced new research initiatives, including lifestyle questionnaires, wearable technology, and one of the world's largest sleep surveys and whole-body imaging projects\ [@largest_imaging; @largest_sleep; @future_projects].
+
+Participants were aged between 40 and 69 years and living in the UK when they joined the study between 2006 and 2010, with half being female. They represent various socioeconomic backgrounds, with more than 40,000 born outside the UK. Participants tend to be wealthier and healthier than the national average, reflecting a common 'healthy volunteer bias'\ [@who_we_are; @our_participants; @for_participant]. Despite this, the sufficient number of participants across various risk levels allows the findings to be broadly generalizable to the UK. 94.6% of participants are of white ethnicity, reflecting the national population at the time of recruitment (94.5% in the 2001 UK Census and 91.3% in 2011). Consequently, the data does not effectively represent disease risk across different ethnic groups\ [@our_participants].
+
+The types of data collected include\ [@types_of_data]:
+
+::: {style="margin-left: 2rem"}
+- **Demographic, Lifestyle, and Self-Reported Health Data:** Basic demographics and socioeconomic status; family characteristics like illnesses of parents and siblings; lifestyle habits such as physical activity and diet; sociodemographic factors like education and employment; and various medical conditions including eyesight and mental health\ [@data_demographics].
+
+- **Imaging:** Magnetic Resonance Imaging (MRI) scans of the brain, heart, and abdomen, full-body bone density scans (DXA/DEXA) scans, carotid ultrasound images, Optical Coherence Tomography (OCT) scans, and COVID-19 repeat scans\ [@data_imaging].
+
+- **Biomarker:** 251 metabolic biomarkers, 3,000 proteins using OLINK's proteomic assays, infectious disease antigens, 34 components in blood and urine, and blood counts including examples such as basophils, eosinophils, neutrophils, red blood cells, white blood cells, platelets, and haemoglobin\ [@data_biomarker].
+
+- **Genetic:** Around 850,000 genetic variants directly measured, more than 90 million variants predicted using statistical methods, whole exomes and genomes, and telomere length\ [@data_genetic].
+
+- **Health Records:** Coded hospital data for diagnoses and procedures, coded general practitioner (GP) data containing codes about diagnoses, prescriptions, and referrals (excluding confidential notes or letters), cancer diagnoses from national cancer registries, deaths data, and algorithmically classified outcomes based on qualifying diagnostic and/or procedural codes for conditions such as asthma, COPD, dementia, myocardial infarction, and stroke\ [@data_health_records].
+
+- **Physical Measurements:** Collected during the first "baseline" visit: participants’ height, weight, waist and hip circumference, lung capacity, body composition (muscle and fat mass), hand grip strength, heel bone density, blood pressure, arterial stiffness, vision, hearing, touchscreen tests for memory, fitness level and activity monitored for one week, and 12-lead electrocardiogram (ECG)\ [@data_physical_measures].
+
+- **Questionnaire Results:** Some participants completed detailed questionnaires covering topics such as diet (e.g., food preferences and a 24-hour food recall), cognitive function, occupational history, mental health, digestive health, pain, and overall health and wellbeing\ [@data_questionnaire].
+
+- **Environmental Data:** Air pollution near participants' residences, noise pollution, greenspace in participants' local areas, the nearby built environment and traffic intensity, the distance of their homes to the coast, and tap water minerals\ [@data_environment].
+:::
+
+
+## Gaining Access
+
+::: {.panel-tabset}
+
+### Data Resource
+
+#### Do I Qualify?
+
+UK Biobank data are made available to eligible researchers from academic, charity, government, and commercial organizations worldwide for health-related research that serves the public interest. Any research using UK Biobank data must aim to positively impact public health and wellbeing while adhering to stringent ethical standards. The research must not cause harm, discrimination, mistreatment, or marginalization of any social groups, thus supporting inclusivity and societal benefit\ [@access_overview].
+
+To be eligible to access the data, researchers must demonstrate a proven track record of legitimate health-related research. They must also be affiliated with a recognized research organization and operate from a country that complies with international regulations and is not subject to UK, US, or EU sanctions, as outlined in the [UK Biobank International Sanctions Policy](https://community.ukbiobank.ac.uk/hc/en-gb/articles/27945572270365-UK-Biobank-International-Sanctions-Policy)\ [@sanctions_policy; @eligibility]. Additionally, the UK Biobank no longer accepts applications from insurance companies, as specified in the [Access to UK Biobank Data](https://www.ukbiobank.ac.uk/about-us/how-we-work/access-to-uk-biobank-data/) section under "Controlling Access"\ [@access_overview].
+
+::: {.callout-important}
+UK Biobank ensures compliance with these eligibility requirements by conducting thorough background checks on researchers applying for data access. This is done by trained personnel who verify the legitimacy of the applicants and their research credentials\ [@access_overview].
+:::
+
+#### How Is My Application Assessed?
+
+The application process will involve the UK Biobank Scientific Team and [Access Committee (AC)](https://www.ukbiobank.ac.uk/about-us/people-and-governance/the-uk-biobank-board-of-trustees/access-committee/), a sub-committee of the UK Biobank Board\ [@access_committee; @access_procedures]. The scientific team will evaluate the information provided in the data request application to determine if the application meets the required access criteria\ [@step1_register].
+
+The AC, which meets on a quarterly basis, is responsible for making key access decisions, notably those regarding the use of depletable samples, recontact, or potentially contentious research. The AC will assess the application for\ [@step1_register]:
+
+::: {style="margin-left: 2rem"}
+- The likelihood of the proposed research receiving approval
+- The proposed research's compliance with the required access criteria (including legal and ethical standards)
+- The availability of the requisite data and/or samples for the proposed research
+- The scientific justification for the amount of depletable sample required
+- The cost associated with providing the requested data and/or samples
+:::
+
+There are four possible outcomes\ [@access_procedures]:
+
+::: {style="margin-left: 2rem"}
+i) The UK Biobank Scientific Team approves the application and presents it to the Access Sub-Committee, which may raise any queries.
+
+ii) The application is sent back to the Applicant Principal Investigator (PI) for revisions.
+
+iii) The UK Biobank Scientific Team recommends the application for denial and escalates it to the Access Sub-Committee, which will review and discuss it. The Sub-Committee may approve or decline the application, providing reasons and suggestions for a successful future application if applicable.
+
+iv) The UK Biobank Scientific Team forwards the application to the Access Sub-Committee for detailed consideration and approval due to unusual, contentious, ethical-legal, or other novel issues.
+:::
+
+Additional details describing how applications are evaluated, and the responsibilities involved, can be found in the [Access Procedures](https://www.ukbiobank.ac.uk/use-our-data/eligibility/) document, available under the section "Key Documents." Specifically, refer to Section C10, "Roles of the Parties in the Application Review Process"\ [@eligibility; @access_procedures].
+
+::: {.callout-important}
+Most of the details summarized in the remaining sections about "Gaining Access" were sourced from the [Access Procedures](https://www.ukbiobank.ac.uk/use-our-data/eligibility/) document\ [@eligibility; @access_procedures]. If any information was supplemented or sourced from other resources, it is cited accordingly.
+:::
+
+#### Typical Timeline
+
+Registration is reviewed within 5 days of receipt, and typically no more than 10 working days\ [@step1_time_to_review].
+
+A couple days to register the Access team to review the MRC certificate.
+
+Costs are per application, and each application grants 3 years of data access once approved, payment received, and Material Transfer Agreement executed.
+
+All approved projects will have a minimum of 3 years to conduct their research, with the option to apply for extensions of 12 months, 2 years, or 3 years if necessary\ [@extension].
+
+It will generally take a matter of weeks from application submission for an application to be
+approved, but may take longer for complex applications to be approved.
+
+Data is usually released weekly, whereas samples are distributed following a predetermined schedule\ [@step1_register].
+
+#### Step-by-Step Guide
+
+All researchers must register, complete training modules, and sign user agreements in the UK Biobank Access Management System (AMS) before they can request data\ [@step3_complete_training]. The AMS allows you to manage your portfolio information and check which outstanding trainings need to be completed to gain access.
+
+Data is accessed via the DNAnexus UK Biobank cloud computing portal, Research Analysis Platform (UKB-RAP), provided in conjunction with Amazon Web Services (AWS). UK Biobank offers the opportunity to request data downloads, which are individually assessed and approved by the UK Biobank Access and Scientific Teams. These teams make a recommendation to the Access Committee, which then reviews the application\ [@download_exemptions]. More details on this process can be found below.
+
+::: {.callout-warning}
+It is recommended to use Google Chrome to access the AMS due to identified compatibility issues with certain browsers, such as Firefox and Safari.
+:::
+
+**a. Register for Access in the Access Management System (AMS)**\ [@step1_how_register; @apply_for_access_overview]
+
+::: {.callout-note}
+If your institution is not approved, you will not be able to complete AMS registration until it gains approval to access UK Biobank data.
+:::
+
+::: {.callout-caution}
+Some of these answers, along with details of the research the user participates in, are made publicly available on the UK Biobank website. You can find a list of all ongoing, approved projects on their [Existing Projects](https://www.ukbiobank.ac.uk/projects/) page\ [@existing_projects].
+:::
+
+::: {style="margin-left: 2rem"}
+1. [Register](https://ams.ukbiobank.ac.uk/ams/signup) for an AMS account for free using your institution's email address.
+
+2. Verify your new account using the 24-hour verification link sent to your registration email.
+
+3. To complete the registration process, log in to the [UK Biobank AMS](https://ams.ukbiobank.ac.uk/ams/) system using your recently verified credentials.
+
+4. You will then see a message window that prompts you to complete your registration by providing additional details about you. The mandatory fields include:
+
+::: {style="margin-left: 2rem"}
+- Your full name, phone number, and date of birth
+- An up-to-date resume/CV in English confirming your current position and institution, **OR** a link to a personal profile page on your institution's website
+- PubMed reference numbers for up to 5 peer-reviewed publications where you are listed as an author (if available)
+- Details of any complaints raised against you within the past 3 years (if applicable)
+- Name of the primary institution you are affiliated with that has approved access to UK Biobank data
+- Your email address with this institution and used for registration
+- Your position at this institution
+- List other institutions with which you plan to use the UK Biobank Resource (if applicable)
+:::
+
+5. The registration team will review your application and send a message within the AMS portal. They may contact you to request further details.
+:::
+
+**b. Complete the Training Modules**\ [@step3_complete_training]
+
+The Home page of your AMS portal will display notices about mandatory training along with any announcements or important information. Outstanding training module requests can be found on the Profile page in the "Training" section. Additionally, you can find previously uploaded Medical Research Council (MRC) certificates there.
+
+::: {.callout-note}
+You must annually complete the MRC course “Research, General Data Protection Regulation (GDPR) & Confidentiality” and upload the passing certificate\ [@step1_how_register]. You may also be asked to recomplete the two introductory courses and their accompanying multiple-choice tests.
+:::
+
+::: {style="margin-left: 2rem"}
+1. Complete the MRC course [“Research, General Data Protection Regulation (GDPR) & Confidentiality”](https://bygsystems.net/mrcrsc-lms/login/index.php), which consists of 10 short video. If this is your first time logging into the MRC Centre for Research Policy Learning Management System, you will need to first create and verify a new account.
+
+2. Take the MRC course 10-question multiple-choice quiz. You must pass with a score of 70% or higher for the certificate to be accepted by the Access team.
+
+3. Save a PDF copy of the passing completion certificate and upload it in the "Upload MRC Certificate" section of your AMS Profile page.
+
+4. Complete the course video ["Introduction to using UK Biobank"](https://www.youtube.com/watch?v=rvm6olcElcM)\ [@youtube_course1].
+
+5. Complete the course video ["Introduction to the UK Biobank Research Analysis Platform (RAP)"](https://www.youtube.com/watch?v=GfpT2zzvBaY)\ [@youtube_course2].
+
+6. Take the two multiple-choice tests, found in the "Training" section of your AMS Profile page. You must pass with a score of 80% or higher on both tests to complete the process.
+:::
+
+The three listed courses are mandatory to gain access. Additionally, UK Biobank has recently released the ["Code Repository"](https://www.youtube.com/watch?v=lsZ_Fi8P2-s) course, which includes its own multiple-choice test\ [@youtube_code].
+
+
+**c. Apply to Receive Data**\ [@access_overview;  @apply_for_access_overview]
+
+Once registration is completed, an "Applications" page link will appear in the sidebar\ [@step1_register]. There are two options when requesting access to data: data only or data and biospecimens. Both application types have distinct features but follow similar review processes, which are summarized below. Researchers can find specific details about the application contents in their AMS portals.
+
+::: {.callout-caution}
+Some of these answers, along with details of the research the user participates in, are made publicly available on the UK Biobank website. You can find a list of all ongoing, approved projects on their [Existing Projects](https://www.ukbiobank.ac.uk/projects/) page\ [@existing_projects].
+:::
+
+::: {style="margin-left: 2rem"}
+1. The applicant PI must complete and submit an application for either data only or data and biospecimens. Some of the fields in the application might include:
+
+::: {style="margin-left: 2rem"}
+- A summary of the research you intend to conduct in the project, including the research questions, objectives, and scientific rationale (displayed publicly)
+- Keywords describing the research
+- Confirmations that the research will be used to perform health-related research and ultimately aims to improve public health
+- The type and size of the data requested
+- Confirmation if your research requires biospecimens, and if recontacting participants is needed
+- Description of the methods
+- A statement if the study will result in the generation of new data
+:::
+
+2. List all project collaborators along with their contact details. Additionally, you must include contact information for a signatory authorized to sign the Material Transfer Agreement (MTA) on behalf of each institution collaborators are from.
+
+3. Indicate the tier of data you are requesting, as each tier comes with different associated costs. For more information on the fees, visit the biobank's [Fee Structure](https://www.ukbiobank.ac.uk/use-our-data/fees/) page\ [@fees].
+
+4. Submit the form for review by the UK Biobank Scientific Team and AC, which meets quarterly. Refer to the previous section titled "How Is My Application Assessed?" for more details about this process.
+
+5. Approved applications will require the execution of the MTA and payment of access charges within 90 days of receiving the notice. Only then will the data and/or samples be released to the Applicant PI\ [@step1_register].
+
+::: {.callout-note}
+Data is usually released weekly, whereas samples are distributed following a predetermined schedule\ [@step1_register].
+:::
+:::
+
+If your application was rejected, you can apply for reconsideration, as detailed in Section C4.4-5 of "Application Reviewed" found in the [Access Procedures](https://www.ukbiobank.ac.uk/use-our-data/eligibility/) document available under the section "Key Documents"\ [@eligibility; @access_procedures].
+
+**d. Accessing the Data**
+
+::: {style="margin-left: 2rem"}
+1. Approved applications with a signed MTA and paid fees will have a project status of "Underway" on AMS, enabling associated researchers to access the data in the UKB-RAP\ [@step3_complete_training].
+
+2. Create a DNAnexus account and associate it with your UK Biobank AMS account: [Connect Your Account to UK Biobank](https://ukbiobank.dnanexus.com/panx/associate).
+
+::: {.callout-caution}
+There is no additional charge by UK Biobank to access the RAP. However, certain activities within the RAP will incur costs payable to the platform provider, DNAnexus. These include fees for data storage (both uploaded and derived data), computing and analysis (based on instance type), and data transfer charges. To assist researchers in managing these costs, UK Biobank provides an initial &#163;40 of credit towards these expenses upon joining UKB-RAP\ [@fees].
+
+In addition to signing agreements with UK Biobank, researchers using the RAP will also need to accept certain terms and conditions to use DNAnexus. These terms can be found on their [Subscription Terms of Service](https://www.dnanexus.com/terms) page\ [@dnanexus_terms_service].
+:::
+
+3. All approved projects will have a minimum of 3 years to conduct their research, with the option to apply for extensions of 12 months, 2 years, or 3 years if necessary\ [@extension].
+
+4. To maintain access for the duration of a research project, the researcher must do the following. For more details about how UK Biobank expects PIs and researchers to manage ongoing projects, refer to the [Step 4: Manage your project](https://community.ukbiobank.ac.uk/hc/en-gb/sections/14494681669789-Step-4-Manage-your-project) list of articles\ [@step4_manage_projects; @eligibility].
+
+::: {style="margin-left: 2rem"}
+i. All researchers must keep their information in the AMS updated and ensure their training is current\ [@eligibility].
+
+ii. Applicant PIs and Lead Investigators at Collaborator Institutions must annually submit a project report, confirming project affiliates, compliance with the MTA, security expectations, and providing project updates along with an outline of activities planned for the next 12 months. For more details, refer to [Submitting an annual report](https://community.ukbiobank.ac.uk/hc/en-gb/articles/15013553517213-Submitting-an-annual-report)\ [@annual_report].
+:::
+
+5. Researchers are expected to promptly notify the UK Biobank when their project has been completed, regardless of the remaining time allowed to complete the project.
+:::
+
+
+#### Return of Results and Publication Expectations
+
+The UK Biobank has specific expectations and procedures for conducting research using their data, including the handling of generated results, the code used to analyze data, and any form of publication of findings. Some of these are summarized below.
+
+Researchers are encouraged to review the [Guidance on Researcher Responsibilities](https://community.ukbiobank.ac.uk/hc/en-gb/articles/28019735378333-Guidance-on-Researcher-Responsibilities) and [Step 5: Return your results](https://community.ukbiobank.ac.uk/hc/en-gb/sections/16453252216989-Step-5-Return-your-results) pages, as well as Section B8 "Publication of findings, summary datasets and return of results" in the [Access Procedures](https://www.ukbiobank.ac.uk/use-our-data/eligibility/) document, available under the "Key Documents" section, to fully understand these expectations\ [@eligibility; @access_procedures; @researcher_responsibilities; @return_results].
+
+::: {.callout-important}
+The UK Biobank provides specific guidelines for acknowledgments in publications, reports, and press releases. These can be reviewed in the previously linked articles and on their [Communications guidelines](https://community.ukbiobank.ac.uk/hc/en-gb/articles/24818044276765-Communications-guidelines) page\ [@communication_guidelines]. For example, you must include the following statement in the Acknowledgments section of your paper or wherever possible in reference search tools\ [@submitting_pubs]:
+
+> "This research has been conducted using the UK Biobank Resource under Application Number xxxxx."
+
+:::
+
+**Summary of the Return of Results**\ [@return_results]
+
+::: {style="margin-left: 2rem"}
+i. 
+:::
+
+Further, when a researcher has completed their analysis, there is an option to return data via the RAP directly to UK
+Biobank.
+
+B8.7 Within the earlier of 6 months of publication or 12 months of when the Approved Research Project
+was completed, the Applicant PI is required to provide the results data behind them, for inclusion
+in the Resource in such detail and format as UK Biobank reasonably requires.
+
+B8.8 UK Biobank acknowledges that many publications require the publication of summary data tables
+alongside the main article. UK Biobank supports this approach but would note that such summary
+data table should not include any Participant Level Data. The summary data should also be returned
+to UK Biobank as part of the results data. 
+
+To return the results data to UK Biobank – the data which underpins the findings – within 6  months of publication of the findings. This includes findings published on preprint servers, unless the same research has been submitted for peer review to an alternate journal within this 6-month timeframe.
+
+**Summary of Publication Expectations**\ [@researcher_responsibilities; @submitting_pubs]
+
+::: {style="margin-left: 2rem"}
+i. Researchers are expected to publish a commensurate level of findings within the first 3 years of receiving approval for their research project. If this is not possible, the Applicant PI must provide a reasonable explanation, such as in the annual project report, detailing why this is not feasible and providing an estimation of when the findings can be published.
+
+ii. Researchers are expected to publish their findings in an academic journal or via an open-source publication site as soon as possible after the project's completion, and no later than 6 months afterward.
+
+iii. UK Biobank supports publishing summary data tables, scans, and images alongside main articles but notes that these should not include any Participant Level Data or features that might be identifiable, such as reconstructions of the head and skull.
+
+You are encouraged to contact UK Biobank regarding any concerns about using summary data tables, scans, and images at access@ukbiobank.ac.uk prior to submitting the publication.
+
+iv. UK Biobank does not require the PI to obtain approval before publishing. However, the Applicant PI must provide a copy of any report on their project's findings and/or any press release to UK Biobank at least 2 weeks before the first public presentation or publication (e.g., meeting abstract, online report, pre-print server, and journal).
+
+This notification can be fulfilled by [submitting a request](https://community.ukbiobank.ac.uk/hc/en-gb/requests/new) or submitting the materials through the AMS.
+
+v. For press releases, especially those likely to provoke controversy or attract significant public attention, the Applicant PI must follow the [Communications guidelines](https://community.ukbiobank.ac.uk/hc/en-gb/articles/24818044276765-Communications-guidelines) and share a copy of the release with the UK Biobank communications team at communications@ukbiobank.ac.uk\ [@communication_guidelines].
+
+vi. To use UK Biobank scans or images in a publication, you will need to [submit a request](https://community.ukbiobank.ac.uk/hc/en-gb/requests/new) with the image and Project ID. Any approved images should include the following acknowledgment:
+
+> Reproduced by kind permission of UK Biobank &copy;
+
+vii. You must acknowledge any data linked to in your analysis. For example:
+
+> "this work uses data provided by patients and collected by the NHS as part of their care and support."
+:::
+
+
+:::{.callout-tip}
+Researchers are not obliged to, but may choose to publicize their code, example notebooks, or tools so that they can be freely used by other researchers within the RAP.
+
+Those interested in doing so might consider taking the additional ["Code Repository"](https://www.youtube.com/watch?v=lsZ_Fi8P2-s) course in AMS, which includes its own multiple-choice test. Researchers should also review the UK Biobank GitHub for code support, including tools like the [UKB-Git-Audit-Tool](https://github.com/UK-Biobank/UKB-Git-Audit-Tool), which scans the project's Git commit history for any potentially confidential information\ [@youtube_code; @github].
+:::
+
+
+#### Requesting Downloading Data
+
+In the past, researchers had to download requested data and agree to delete it upon completing their study. With the introduction of the UK Biobank RAP, researchers are now encouraged to access all data for their research directly on the platform. However, there may be extenuating circumstances that the UKB-RAP cannot accommodate. For example, researchers might:
+
+::: {style="margin-left: 2rem"}
+- Require tools or specialized software not yet integrated with the UKB-RAP
+- Face prohibitive costs for specific cloud-based analyses
+- Require substantial compute power (GPUs) that exceeds the current capacity of the UKB-RAP
+:::
+
+
+To ensure accessibility for health-related research, the UK Biobank AC will assess applications to download certain types of data. You can find the full exemption policy here: [UK Biobank exemptions from the UKB-RAP by default policy](https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/uk-biobank-exemptions-from-the-ukb-rap-by-default-policy/)\ [@download_exemptions]. If approved, researchers will then be allowed to temporarily download the data.
+
+::: {.callout-important}
+All projects with approval to temporarily download data will be subject to Tier 3 fees\ [@fees].
+:::
+
+::: {.callout-note}
+Certain large datasets, including the Whole Genome Sequence data and the Whole Exome Sequence data, will only be available through the RAP. Researchers are expected not to attempt to circumvent the requirement to access these datasets solely via the RAP. For example, researchers must not make minor modifications (such as adding a ‘0’ to the data content) and then treat the data as derived to qualify for download.
+:::
+
+For more information about UK Biobank's policies and common FAQs on downloading data, please refer to the [Downloading data](https://community.ukbiobank.ac.uk/hc/en-gb/sections/19968411606301-Downloading-data) page\ [@downloading_data].
+
+
+#### Financial Support\ [@financial_support]
+
+UK Biobank offers reduced access fees for researchers from Low and Low-Middle Income Countries and for postgraduate students. With the reduced fee, you will be able to access all datasets through the RAP but will not have permission to request waivers to download any data\ [@fees].
+
+For students seeking reduced fees, you will need to meet the following criteria:
+
+::: {style="margin-left: 2rem"}
+i) The application must be submitted by a student or their supervisor exclusively for the purpose of completing a postgraduate student project (e.g., MSc, PhD, or equivalent). The student must be the lead author of any resulting publications.
+
+ii) The application is not allowed to be used for other research purposes, nor can it be utilized for multiple student (or other) projects.
+
+iii) Collaborators must have a specific and relevant role in the student’s research project and may only be included at the discretion of UK Biobank.
+:::
+
+You can learn more about applying for [Financial Support](https://www.ukbiobank.ac.uk/use-our-data/fees/financial-support/) on the UK Biobank page dedicated to this topic.
+
+
+:::
+
+
+## Valuable Links
+
+::: {style="margin-left: 2rem"}
+- [Get started with UK Biobank](https://community.ukbiobank.ac.uk/hc/en-gb/categories/14494598931229-Get-started-with-UK-Biobank): Find articles about gaining access to UK Biobank data, links to policies, an FAQ for common problems, a listing of mandatory trainings, and articles on how to manage your active projects and share results\ [].
+
+- [Types of data](https://www.ukbiobank.ac.uk/about-our-data/types-of-data/): Explore a breakdown of the various data categories provided, with links to additional documentation and the relevant Showcase Data Browser pages\ [@types_of_data].
+
+- [Showcase Data Browser](https://biobank.ndph.ox.ac.uk/showcase/): Find data field descriptions, glossaries, meta-information linking schemas, high-level, de-identified summaries of data contents for each data field, and instructions on navigating the biobank system, along with technical information for researchers interested in using the data\ [@showcase; @showcase_user_guide].
+
+- [Use Our Data](https://www.ukbiobank.ac.uk/use-our-data/): Find links to relevant articles and webpages that guide researchers through data access applications, training and support options, financing, and facilitated collaboration\ [].
+
+- [Protecting the Data](https://www.ukbiobank.ac.uk/about-our-data/protecting-the-data/): Find information about the data security measures taken to ensure participant confidentiality and monitor the appropriate use of their data for research. Additionally, find a link to the UK Biobank data de-identification protocol\ [@protecting_data].
+
+- [UK Biobank YouTube](https://www.youtube.com/@uk_biobank): Find informative videos from UK Biobank staff and interviews with researchers discussing their findings using UK Biobank data. Subjects covered include training modules, conference recordings, and promotions of recent news or upcoming features on the platform\ [@youtube].
+
+- [UK Biobank GitHub](https://github.com/UK-Biobank): Find coded examples using the [UK Biobank Research Analysis Platform (UKB-RAP)](https://www.ukbiobank.ac.uk/use-our-data/research-analysis-platform/), auditing tools to ensure data security in Git repositories, and example workflows for genomic and image analysis\ [@github; @rap].
+
+- [Our Future](https://www.ukbiobank.ac.uk/about-us/our-future/): Find information about upcoming expansion projects, outreach, infrastructure improvements, funding, and financial support\ [@future_projects].
+
+- [Researcher Events](https://www.ukbiobank.ac.uk/use-our-data/researcher-collaboration/researcher-events/): Find events specifically geared towards the research community\ [@events].
+
+- [Existing projects](https://www.ukbiobank.ac.uk/projects/), [Publications](https://www.ukbiobank.ac.uk/discoveries-and-impact/publications/), and [Research Stories](https://www.ukbiobank.ac.uk/research-stories/): Find a list of ongoing and completed research projects using UK Biobank data, as well as articles highlighting impactful research conducted with UK Biobank data from around the world\ [@existing_projects; @publications; @research_stories].
+
+- [News](https://www.ukbiobank.ac.uk/news/): Find the latest stories from UK Biobank, including news about data releases, new activities to enhance the data, and updates about people and funding. At the time of this writing, the biobank was celebrating the upcoming release of the largest collections of [whole body imaging](https://www.ukbiobank.ac.uk/news/record-breaking-human-imaging-project-crosses-the-finish-line/) and [sleep survey data](https://www.ukbiobank.ac.uk/news/uk-biobank-releases-worlds-largest-sleep-survey-data/)\ [@news; @largest_sleep; @largest_imaging].
+:::
+
+
+## Publications
+
+```{r}
+#| echo: false
+
+# Fetch and format the citations.
+citations <- get_citations(
+  doi = c("10.7326/M21-0065"),
+  affiliation = "Yale School of Public Health"
+)
+
+# Condition the output based on presence of articles.
+citations_html <- make_pub_list(citations)
+
+if(!any(str_detect(citations$citations, "No publications"))) {
+  citation_length <- length(citations$citations)
+  citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
+} else {
+  citation_length <- 0
+  citation_date   <- as.numeric(format(Sys.Date(), "%Y")) - as.numeric(str_extract("No publications found in the last 25 years.", "[0-9]{2}"))
+}
+
+```
+
+
+This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.
+
+::: {style="margin-left: 1rem"}
+
+```{r}
+#| echo: false
+#| results: 'asis'
+
+# Display formatted citations.
+cat(citations_html)
+```
+
+```{=html}
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">&#9664; Previous</button>
+  <button onclick="nextPage()">Next &#9654;</button>
+</div>
+
+<script src="../../../../Code/pagination.js"></script>
+```
+
+:::

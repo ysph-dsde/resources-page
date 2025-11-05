@@ -1,0 +1,9 @@
+"0","# Load in the functions.
+source('./PubMed Search_Functions.R')
+"
+"2","Error in source(""./PubMed Search_Functions.R"") : 
+  ./PubMed Search_Functions.R:343:9: unexpected symbol
+342:         return(name)
+343:       })a
+             ^
+"

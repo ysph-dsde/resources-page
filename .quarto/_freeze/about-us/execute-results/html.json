@@ -1,0 +1,15 @@
+{
+  "hash": "cff0f4de2e223f57e23738dbb5116886",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\n  format: html\n  editor: visual\n  markdown: \n  editor_options: \n  chunk_output_type: console\n  back-to-top-navigation: true\n---\n\n\n\n## About Us\n\nQuarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.\n\n\n\n::: {.cell}\n\n```{.r .cell-code}\n1 + 1\n```\n\n::: {.cell-output .cell-output-stdout}\n\n```\n[1] 2\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
