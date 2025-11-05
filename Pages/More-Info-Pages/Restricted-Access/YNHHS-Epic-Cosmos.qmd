@@ -38,6 +38,8 @@ suppressPackageStartupMessages({
 source('./PubMed Search_Functions.R')
 ```
 
+<small>Updated: November 5<sup>th</sup>, 2025</small>
+
 ## Access Overview
 
 Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic and Epic Cosmos data will need a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:

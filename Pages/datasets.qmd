@@ -30,7 +30,7 @@ listing:
     </div>
 </div>
 
-<script src="../../Code/popup.js"></script>
+<script src="../Code/popup.js"></script>
 ```
 
 

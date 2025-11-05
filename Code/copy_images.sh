@@ -17,8 +17,7 @@
 #    3. Make this file executable `chmod +x Code/copy_images.sh`
 #    4. Run the script `./Code/copy_images.sh`
 #    5. Verify if the images were copied `ls -R _site`
-#    6. Remove them if so `rm -rf _site/Images`
-#    7. Publish using `quarto publish gh-pages --no-render`
+#    6. Publish using `quarto publish gh-pages --no-render`
 #
 # Author: Shelby Golden, M.S.
 #   Date: Nov 2025

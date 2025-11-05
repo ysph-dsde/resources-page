@@ -62,7 +62,7 @@ suppressPackageStartupMessages({
 source('./PubMed Search_Functions.R')
 ```
 
-Updated: October 21$^{st}$, 2025
+<small>Updated: October 21<sup>th</sup>, 2025</small>
 
 ## Overview
 

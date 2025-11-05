@@ -62,7 +62,7 @@ suppressPackageStartupMessages({
 source('./PubMed Search_Functions.R')
 ```
 
-Updated: October 23$^{rd}$, 2025
+<small>Updated: November 5<sup>th</sup>, 2025</small>
 
 ## Overview
 
@@ -143,18 +143,23 @@ Most of the details summarized in the remaining sections about "Gaining Access" 
 
 #### Typical Timeline
 
-Registration is reviewed within 5 days of receipt, and typically no more than 10 working days\ [@step1_time_to_review].
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+  <img id="myImage" src="../../../Images/Timelines/UKBiobank_Timeline.png" alt="Zoomable Image" title="Click to zoom in">
+  <figcaption class="caption">
+    A summary of the application process, including information on when additional reviews may be necessary\ [@step1_time_to_review; @extension; @step1_register].
+  </figcaption>
+</div>
 
-A couple days to register the Access team to review the MRC certificate.
+```{=html}
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
 
-Costs are per application, and each application grants 3 years of data access once approved, payment received, and Material Transfer Agreement executed.
-
-All approved projects will have a minimum of 3 years to conduct their research, with the option to apply for extensions of 12 months, 2 years, or 3 years if necessary\ [@extension].
-
-It will generally take a matter of weeks from application submission for an application to be
-approved, but may take longer for complex applications to be approved.
-
-Data is usually released weekly, whereas samples are distributed following a predetermined schedule\ [@step1_register].
+<script src="../../../Code/zoom.js"></script>
+```
 
 #### Step-by-Step Guide
 
@@ -221,7 +226,7 @@ You must annually complete the MRC course “Research, General Data Protection R
 6. Take the two multiple-choice tests, found in the "Training" section of your AMS Profile page. You must pass with a score of 80% or higher on both tests to complete the process.
 :::
 
-The three listed courses are mandatory to gain access. Additionally, UK Biobank has recently released the ["Code Repository"](https://www.youtube.com/watch?v=lsZ_Fi8P2-s) course, which includes its own multiple-choice test\ [@youtube_code].
+The three listed courses are mandatory to gain access. Additionally, UK Biobank has recently released the ["Code Repository"](https://www.youtube.com/watch?v=lsZ_Fi8P2-s) course, which includes its own multiple-choice test. This course is planned to become mandatory starting March 31$^{st}$, 2026\ [@youtube_code].
 
 
 **c. Apply to Receive Data**\ [@access_overview;  @apply_for_access_overview]
@@ -289,7 +294,7 @@ ii. Applicant PIs and Lead Investigators at Collaborator Institutions must annua
 
 #### Return of Results and Publication Expectations
 
-The UK Biobank has specific expectations and procedures for conducting research using their data, including the handling of generated results, the code used to analyze data, and any form of publication of findings. Some of these are summarized below.
+The UK Biobank has specific expectations and procedures for conducting research using their data, which include the handling of generated results, the code used to analyze the data, and any form of publication of findings. These procedures are outlined below, with some of them being critical both to maintain access to the data and to fulfill the UK Biobank data use agreements.
 
 Researchers are encouraged to review the [Guidance on Researcher Responsibilities](https://community.ukbiobank.ac.uk/hc/en-gb/articles/28019735378333-Guidance-on-Researcher-Responsibilities) and [Step 5: Return your results](https://community.ukbiobank.ac.uk/hc/en-gb/sections/16453252216989-Step-5-Return-your-results) pages, as well as Section B8 "Publication of findings, summary datasets and return of results" in the [Access Procedures](https://www.ukbiobank.ac.uk/use-our-data/eligibility/) document, available under the "Key Documents" section, to fully understand these expectations\ [@eligibility; @access_procedures; @researcher_responsibilities; @return_results].
 
@@ -302,23 +307,10 @@ The UK Biobank provides specific guidelines for acknowledgments in publications,
 
 **Summary of the Return of Results**\ [@return_results]
 
-::: {style="margin-left: 2rem"}
-i. 
-:::
+Researchers are required to return all key individual-level variables derived from bulk data, as well as any related research outputs, within 6 months following the publication of their results or 12 months after the conclusion of their project, whichever occurs first. This submission must include a comprehensive data dictionary, any well-annotated code or methods used, and the corresponding DOI.
 
-Further, when a researcher has completed their analysis, there is an option to return data via the RAP directly to UK
-Biobank.
+This transfer can be accomplished using the RAP system to directly send the generated information to UK Biobank. For detailed guidance on what is expected when returning results, please refer to the full guide available on the [Returning your results to UK Biobank](https://community.ukbiobank.ac.uk/hc/en-gb/articles/15030738339229-Returning-your-results-to-UK-Biobank) webpage\ [@return_results].
 
-B8.7 Within the earlier of 6 months of publication or 12 months of when the Approved Research Project
-was completed, the Applicant PI is required to provide the results data behind them, for inclusion
-in the Resource in such detail and format as UK Biobank reasonably requires.
-
-B8.8 UK Biobank acknowledges that many publications require the publication of summary data tables
-alongside the main article. UK Biobank supports this approach but would note that such summary
-data table should not include any Participant Level Data. The summary data should also be returned
-to UK Biobank as part of the results data. 
-
-To return the results data to UK Biobank – the data which underpins the findings – within 6  months of publication of the findings. This includes findings published on preprint servers, unless the same research has been submitted for peer review to an alternate journal within this 6-month timeframe.
 
 **Summary of Publication Expectations**\ [@researcher_responsibilities; @submitting_pubs]
 
@@ -344,8 +336,8 @@ vi. To use UK Biobank scans or images in a publication, you will need to [submit
 vii. You must acknowledge any data linked to in your analysis. For example:
 
 > "this work uses data provided by patients and collected by the NHS as part of their care and support."
-:::
 
+:::
 
 :::{.callout-tip}
 Researchers are not obliged to, but may choose to publicize their code, example notebooks, or tools so that they can be freely used by other researchers within the RAP.
@@ -401,15 +393,19 @@ You can learn more about applying for [Financial Support](https://www.ukbiobank.
 ## Valuable Links
 
 ::: {style="margin-left: 2rem"}
-- [Get started with UK Biobank](https://community.ukbiobank.ac.uk/hc/en-gb/categories/14494598931229-Get-started-with-UK-Biobank): Find articles about gaining access to UK Biobank data, links to policies, an FAQ for common problems, a listing of mandatory trainings, and articles on how to manage your active projects and share results\ [].
+- [Get started with UK Biobank](https://community.ukbiobank.ac.uk/hc/en-gb/categories/14494598931229-Get-started-with-UK-Biobank): Find articles about gaining access to UK Biobank data, links to policies, an FAQ for common problems, a listing of mandatory trainings, and articles on how to manage your active projects and share results\ [@get_started].
+
+- [UK Biobank DNAnexus](https://www.dnanexus.com/partnerships/ukbiobank) and [About the Research Analysis Platform](https://dnanexus.gitbook.io/uk-biobank-rap): Find more about the DNAnexus RAP platform developed for UK Biobank, as well as the database documentation. This includes the [Tools library](https://dnanexus.gitbook.io/uk-biobank-rap/working-on-the-research-analysis-platform/running-analysis-jobs/tools-library), which contains listings of all the analytical tools available to researchers\ [@dnanexus_uk_biobank; @dnanexus_tools; @dnanexus_about].
 
 - [Types of data](https://www.ukbiobank.ac.uk/about-our-data/types-of-data/): Explore a breakdown of the various data categories provided, with links to additional documentation and the relevant Showcase Data Browser pages\ [@types_of_data].
 
 - [Showcase Data Browser](https://biobank.ndph.ox.ac.uk/showcase/): Find data field descriptions, glossaries, meta-information linking schemas, high-level, de-identified summaries of data contents for each data field, and instructions on navigating the biobank system, along with technical information for researchers interested in using the data\ [@showcase; @showcase_user_guide].
 
-- [Use Our Data](https://www.ukbiobank.ac.uk/use-our-data/): Find links to relevant articles and webpages that guide researchers through data access applications, training and support options, financing, and facilitated collaboration\ [].
+- [Use Our Data](https://www.ukbiobank.ac.uk/use-our-data/): Find links to relevant articles and webpages that guide researchers through data access applications, training and support options, financing, and facilitated collaboration\ [@use_data].
 
 - [Protecting the Data](https://www.ukbiobank.ac.uk/about-our-data/protecting-the-data/): Find information about the data security measures taken to ensure participant confidentiality and monitor the appropriate use of their data for research. Additionally, find a link to the UK Biobank data de-identification protocol\ [@protecting_data].
+
+- [Existing projects](https://www.ukbiobank.ac.uk/projects/), [Publications](https://www.ukbiobank.ac.uk/discoveries-and-impact/publications/), and [Research Stories](https://www.ukbiobank.ac.uk/research-stories/): Find a list of ongoing and completed research projects using UK Biobank data, as well as articles highlighting impactful research conducted with UK Biobank data from around the world\ [@existing_projects; @publications; @research_stories].
 
 - [UK Biobank YouTube](https://www.youtube.com/@uk_biobank): Find informative videos from UK Biobank staff and interviews with researchers discussing their findings using UK Biobank data. Subjects covered include training modules, conference recordings, and promotions of recent news or upcoming features on the platform\ [@youtube].
 
@@ -418,8 +414,6 @@ You can learn more about applying for [Financial Support](https://www.ukbiobank.
 - [Our Future](https://www.ukbiobank.ac.uk/about-us/our-future/): Find information about upcoming expansion projects, outreach, infrastructure improvements, funding, and financial support\ [@future_projects].
 
 - [Researcher Events](https://www.ukbiobank.ac.uk/use-our-data/researcher-collaboration/researcher-events/): Find events specifically geared towards the research community\ [@events].
-
-- [Existing projects](https://www.ukbiobank.ac.uk/projects/), [Publications](https://www.ukbiobank.ac.uk/discoveries-and-impact/publications/), and [Research Stories](https://www.ukbiobank.ac.uk/research-stories/): Find a list of ongoing and completed research projects using UK Biobank data, as well as articles highlighting impactful research conducted with UK Biobank data from around the world\ [@existing_projects; @publications; @research_stories].
 
 - [News](https://www.ukbiobank.ac.uk/news/): Find the latest stories from UK Biobank, including news about data releases, new activities to enhance the data, and updates about people and funding. At the time of this writing, the biobank was celebrating the upcoming release of the largest collections of [whole body imaging](https://www.ukbiobank.ac.uk/news/record-breaking-human-imaging-project-crosses-the-finish-line/) and [sleep survey data](https://www.ukbiobank.ac.uk/news/uk-biobank-releases-worlds-largest-sleep-survey-data/)\ [@news; @largest_sleep; @largest_imaging].
 :::
@@ -432,8 +426,10 @@ You can learn more about applying for [Financial Support](https://www.ukbiobank.
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.7326/M21-0065"),
-  affiliation = "Yale School of Public Health"
+  doi = c("10.1001/jamapsychiatry.2024.4694", "10.1001/jamanetworkopen.2022.30690",
+          "10.1001/jamacardio.2025.0492", "10.1002/cam4.70327",
+          "10.1038/s44161-025-00685-3", "10.1016/j.jagp.2023.08.015"),
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine")
 )
 
 # Condition the output based on presence of articles.
