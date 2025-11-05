@@ -23,7 +23,7 @@ items:
         Senior Associate Dean of Public Health Data Science and Data Equity; Anna M.R. Lauder Professor of Biostatistics; Professor of Epidemiology (Chronic Diseases) and of Statistics and Data Science; Affiliated Faculty, Yale Institute for Global Health
       bio: |
         Professor Bhramar Mukherjee is the Anna M.R. Lauder Professor of Biostatistics and Professor of Chronic Disease Epidemiology at the Yale School of Public Health (YSPH). Professor Mukherjee serves as the inaugural Senior Associate Dean of Public Health Data Science and Data Equity at YSPH. She holds a secondary appointment in the Department of Statistics and Data Science and is affiliated with the MacMillan Center and the Institute for the Foundations of Data Science. She serves on the Yale Cancer Center Director’s cabinet.
-      image: Images/bhramar-mukherjee.jpeg
+      image: ../Images/People/bhramar-mukherjee.jpeg
       email: bhramar.mukherjee@yale.edu
       phone: 203-737-8644
       ysph-site: https://ysph.yale.edu/profile/bhramar-mukherjee/
@@ -36,7 +36,7 @@ items:
         Associate Professor Tenure; Co-Leader, Cancer Prevention and Control, Yale Cancer Center; Associate Director for Research Training and Education, Yale Cancer Center
       bio: |
         Dr. Michaela Dinan is an Associate Professor of Epidemiology in the Yale School of Public Health, and Co-Leader of the Cancer Prevention and Control Research Program at the Yale Comprehensive Cancer Center, Yale School of Medicine. She is also a member of the Cancer Outcomes, Public Policy, and Effectiveness Research (COPPER) Center. Dr. Dinan has extensive research expertise in leveraging existing real-world data sources as well as novel data linkages to examine oncology outcomes.
-      image: Images/michaela-dinan.jpeg
+      image: ../Images/People/michaela-dinan.jpeg
       email: michaela.dinan@yale.edu
       phone: 203-785-7124
       ysph-site: https://ysph.yale.edu/profile/michaela-dinan/
@@ -47,7 +47,7 @@ items:
         Data Scientist I
       bio: |
         Shelby Golden is a data scientist with a background in computational mathematics, molecular biology, and biochemistry. She holds a Master of Science in Applied Computational Mathematics from Johns Hopkins University and dual Bachelor of Science degrees in Molecular, Cellular, Developmental Biology and Biochemistry with a minor in Engineering in Applied Mathematics.
-      image: Images/shelby-golden.jpeg
+      image: ../Images/People/shelby-golden.jpeg
       email: shelby.golden@yale.edu
       phone: 203-737-8644
       ysph-site: https://ysph.yale.edu/profile/shelby-golden/

@@ -58,7 +58,7 @@ items:
         date-added: 2025-03-17
         date-updated: 2025-03-17
         ranking: "4"
-        image: Images/The Health Attribution Library.png
+        image: ../Images/Datasets/The Health Attribution Library.png
         topic: "Clinical Study/Surveys"
         site: https://www.healthattribution.org/
         group: https://www.carlsonlab.bio/
@@ -68,7 +68,7 @@ items:
         date-added: 2025-04-07
         date-updated: 2025-04-07
         ranking: "4"
-        image: Images/wisspar.png
+        image: ../Images/Datasets/WISSPAR.png
         topic: "Clinical Study/Surveys"
         site: https://wisspar.com/
         group: https://medicine.yale.edu/lab/weinberger/
@@ -85,7 +85,7 @@ items:
         date-added: 2025-03-17
         date-updated: 2025-03-17
         ranking: "4"
-        image: Images/nextstrain.png
+        image: ../Images/Datasets/Nextstrain.png
         topic: "Basic Research Assays"
         site: https://grubaughlab.com/nextstrain/
         group: https://www.carlsonlab.bio/
@@ -106,7 +106,7 @@ items:
         ranking: "3"
         description: |
           In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
-        image: Images/YODA.png
+        image: ../Images/Datasets/YODA.png
         topic: "Clinical Study/Surveys"
         site: https://yoda.yale.edu/
         group: https://medicine.yale.edu/core/
@@ -127,7 +127,7 @@ items:
         ranking: "3"
         description: |
           Cosmos is a dataset created in collaboration with a community of health systems using Epic and is designed to improve patient care. By combining their data, participating organizations and Epic can make new discoveries and advance medicine. Cosmos also powers tools at the point of care, providing insights to clinicians that are tailored to the patient in front of them.
-        image: Images/YNHHS Epic Cosmos.png
+        image: ../Images/Datasets/YNHHS Epic Cosmos.png
         topic: "Clinical Study/Surveys"
         site: https://medicine.yale.edu/ybic/ynhhs-research-access/
         group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
@@ -155,7 +155,7 @@ items:
         ranking: "1"
         description: |
           The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends.
-        image: Images/nchs.png
+        image: ../Images/Datasets/NCHS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/index.html
         info: More-Info-Pages/Freely-Accessible/NCHS.qmd
@@ -168,7 +168,7 @@ items:
          </br>
          </br>
          Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
-        image: Images/nhanes.png
+        image: ../Images/Datasets/NHANES.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nhanes/
         info: More-Info-Pages/Freely-Accessible/NHANES.qmd
@@ -187,7 +187,7 @@ items:
           </br>
           </br>
           NHIS collects data from civilians who don't live in institutions. Civilians are people not serving on active duty in the military. Institutionalized people live in places like correctional facilities, skilled-nursing homes, and mental (psychiatric) hospitals.
-        image: Images/nhis.png
+        image: ../Images/Datasets/NHIS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nhis/index.html
       - title: NCHS's The National Health Care Surveys (NHCS)
@@ -201,7 +201,7 @@ items:
           - The healthcare services they provide
           - The patients they serve across diverse healthcare settings
           - Researchers, policymakers, and health professionals can use data from our surveys to understand providers, patients, and management and delivery of patient care in the United States.
-        image: Images/nhcs.png
+        image: ../Images/Datasets/NHCS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/healthcare-surveys/about/index.html
       - title: NCHS's Rapid Surveys System
@@ -219,7 +219,7 @@ items:
           - Learn how values and beliefs can affect access, care, and wellness
           - Assess questionnaire design to ensure data collection is meaningful
           - By getting the right data in the right hands at the right time, the NCHS Rapid Surveys System is helping make science more responsive and actionable.
-        image: Images/nchs_rapid_surveys.png
+        image: ../Images/Datasets/NCHS Rapid Surveys.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/rapid-surveys/about/index.html
       - title: NCHS's National Vital Statistics System (NVSS)
@@ -228,7 +228,7 @@ items:
         ranking: "1"
         description: |
           The National Vital Statistics System is the oldest and most successful example of inter-governmental data sharing in Public Health and the shared relationships, standards, and procedures form the mechanism by which NCHS collects and disseminates the Nation’s official vital statistics. These data are provided through contracts between NCHS and vital registration systems operated in the various jurisdictions legally responsible for the registration of vital events – births, deaths, marriages, divorces, and fetal deaths. Vital Statistics data are also available online. In the United States, legal authority for the registration of these events resides individually with the 50 States, 2 cities (Washington, DC, and New York City), and 5 territories (Puerto Rico, the Virgin Islands, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands). These jurisdictions are responsible for maintaining registries of vital events and for issuing copies of birth, marriage, divorce, and death certificates.
-        image: Images/nvss.png
+        image: ../Images/Datasets/NVSS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nvss/index.htm
       - title: NCHS's Data Linkage Activities
@@ -249,7 +249,7 @@ items:
           - Social Security Administration (SSA)
           - Department of Housing and Urban Development (HUD)
           - Department of Veterans Affairs (VA)
-        image: Images/nchs_data_linkage.png
+        image: ../Images/Datasets/NCHS Data Linkage.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/data-linkage/index.htm
       - title: Surveillance, Epidemiology, and End Results Program (SEER)
@@ -258,7 +258,7 @@ items:
         ranking: "2"
         description: |
           The Surveillance, Epidemiology, and End Results (SEER) Program provides information on cancer statistics in an effort to reduce the cancer burden among the U.S. population. SEER is supported by the Surveillance Research Program (SRP) in NCI's Division of Cancer Control and Population Sciences (DCCPS).
-        image: Images/seer.png
+        image: ../Images/Datasets/SEER.png
         topic: "Clinical Study/Surveys"
         site: https://seer.cancer.gov/
         info: More-Info-Pages/Freely-Accessible/SEER.qmd
@@ -280,7 +280,7 @@ items:
           </br>
           </br>
           All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies.
-        image: Images/NIH All of Us_4.8x3.6.png
+        image: ../Images/Datasets/NIH All of Us_4.8x3.6.png
         topic: "Clinical Study/Surveys"
         site: https://allofus.nih.gov/
         info: More-Info-Pages/Restricted-Access/NIH_All-of-Us.qmd
@@ -300,7 +300,7 @@ items:
         ranking: "1"
         description: |
           Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
-        image: Images/data_gov.png
+        image: ../Images/Datasets/Data Gov.png
         topic: "Clinical Study/Surveys, Basic Research Assays"
         site: https://data.gov/
       
@@ -322,7 +322,7 @@ items:
         ranking: "3"
         description: |
           The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
-        image: Images/UK Biobank.png
+        image: ../Images/Datasets/UK Biobank.png
         topic: "Clinical Study/Surveys"
         site: https://www.ukbiobank.ac.uk/
         github: https://github.com/UK-Biobank
@@ -347,7 +347,7 @@ items:
         date-added: 2025-03-1
         date-updated: 2025-10-10
         ranking: "2"
-        image: Images/marketscan_main.png
+        image: ../Images/Datasets/MarketScan_Main.png
         topic: "Clinical Study/Surveys"
         site: https://datamed.library.medicine.yale.edu/marketscan
         group: https://medicine.yale.edu/ybic/

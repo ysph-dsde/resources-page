@@ -18,9 +18,9 @@ website:
   navbar:
     right:
       - text: "Resources"
-        href: Pages/Resources/index.qmd
+        href: Pages/resources.qmd
       - text: "Datasets"
-        href: Pages/Datasets/index.qmd
+        href: Pages/datasets.qmd
       - text: "About Us"
         href: Pages/about-us.qmd
       - text: "Feedback"
@@ -41,9 +41,9 @@ website:
       - text: About Us
         href: Pages/about-us.qmd
       - text: Resources
-        href: Pages/Resources/index.qmd
+        href: Pages/resources.qmd
       - text: Datasets
-        href: Pages/Datasets/index.qmd
+        href: Pages/datasets.qmd
       - text: Contact
         href: https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/
     right: 

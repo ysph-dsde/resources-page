@@ -15,6 +15,7 @@
       filter-ui: false
 ---
 
+
 ```{=html}
 <div id="formsPopup" class="popup">
     <div class="popup-content">
@@ -86,7 +87,7 @@ Each resource is designed to empower YSPH students, staff, and faculty to excel 
   <div class="info-box">
     <div class="more-info-box">
       <div class="banner">
-        <img src="Images/DSDE Education Materials crop_AS882982307.jpg" alt="Banner Image">
+        <img src="../Images/DSDE Identity/DSDE Education Materials crop_AS882982307.jpg" alt="Banner Image">
         <h2 style="pointer-events: none;">Educational Materials and Events</h2>
       </div>
       <div class="content">
@@ -104,7 +105,7 @@ Each resource is designed to empower YSPH students, staff, and faculty to excel 
   <div class="info-box">
     <div class="more-info-box">
       <div class="banner">
-        <img src="Images/AdobeStock_215933176.jpeg" alt="Banner Image">
+        <img src="../Images/DSDE Identity/AdobeStock_215933176.jpeg" alt="Banner Image">
         <h2 style="pointer-events: none;">Services</h2>
       </div>
       <div class="content">
@@ -123,7 +124,7 @@ Each resource is designed to empower YSPH students, staff, and faculty to excel 
 <div class="centered-box">
   <div class="more-info-box">
     <div class="banner">
-      <img src="Images/DSDE_AS1004839280.jpeg" alt="Banner Image">
+      <img src="../Images/DSDE Identity/DSDE_AS1004839280.jpeg" alt="Banner Image">
       <h2 style="pointer-events: none;">Other Resources</h2>
     </div>
     <div class="content">
