@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-fb0bcb17d1beba8473d33297837e1783.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-551e52cacc035378b4714f18b8614cc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -153,8 +153,10 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <script src="Code/popup.js"></script>
-<p><img src="Images/Wordmark-Data-Science-and-Data-Equity-black.png" class="img-fluid" style="display: block; margin-left: auto; margin-right: auto;" width="600"><br>
-</p>
+<div class="landing-banner"></div>
+<div class="logo-container">
+    <img src="Images/Wordmark-Data-Science-and-Data-Equity-blues.png" alt="Logo" class="logo">
+</div>
 <p>Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice.</p>
 <p>Our mission is to develop and support a robust public health data science infrastructure that ensures secure and equitable data access and facilitates the translation of methodologies into user-friendly, open-source software tools and publicly available datasets. We strive to make high-quality public health resources accessible to all and foster an environment where data-driven decision-making can thrive.</p>
 <p><br>
@@ -215,11 +217,11 @@ ul.task-list li input[type="checkbox"] {
   </div>
 
 <p>The resources and datasets are presented in tiles that contain salient details about the source, along with relevant links, like the one displayed on the left. Each tile can feature any combination of five hyperlinked icons:</p>
-<p><i class="bi bi-github icon-red"></i> &nbsp; Links to code repositories for the dataset/resource.</p>
-<p><i class="bi bi-globe icon-red"></i> &nbsp;Links to the main website of the dataset/resource.</p>
-<p><i class="bi bi-people icon-red"></i> &nbsp;Links to the websites of the research groups responsible for creating the dataset/resource.</p>
-<p><i class="bi bi-journal-text icon-red"></i> &nbsp;Links to example publications that utilize the dataset/resource provided by the creators.</p>
-<p><i class="bi bi-info-circle icon-red"></i> &nbsp;Links to a <strong>Resource Navigation Tool</strong> webpage with additional details about the dataset.</p>
+<p><i class="bi bi-github" style="color: var(--link-color);"></i> &nbsp; Links to code repositories for the dataset/resource.</p>
+<p><i class="bi bi-globe" style="color: var(--link-color);"></i> &nbsp;Links to the main website of the dataset/resource.</p>
+<p><i class="bi bi-people" style="color: var(--link-color);"></i> &nbsp;Links to the websites of the research groups responsible for creating the dataset/resource.</p>
+<p><i class="bi bi-journal-text" style="color: var(--link-color);"></i> &nbsp;Links to example publications that utilize the dataset/resource provided by the creators.</p>
+<p><i class="bi bi-info-circle" style="color: var(--link-color);"></i> &nbsp;Links to a <strong>Resource Navigation Tool</strong> webpage with additional details about the dataset.</p>
 
 
 </section>
@@ -315,7 +317,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ysph-dsde\.github\.io\/resources-page\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

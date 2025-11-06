@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fb0bcb17d1beba8473d33297837e1783.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-551e52cacc035378b4714f18b8614cc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -255,7 +255,7 @@ div.csl-indent {
 <a href="https://pubmed.ncbi.nlm.nih.gov/34740555/">Evaluating the reliability of mobility metrics from aggregated mobile phone data as proxies for SARS-CoV-2 transmission in the USA: a population-based study.</a><br>Nishant Kishore, Aimee R Taylor, Pierre E Jacob, Navin Vembar, <strong>Ted Cohen</strong>, Caroline O Buckee, Nicolas A Menzies<br>The Lancet. Digital health 2021 Nov 2 doi: 10.1016/S2589-7500(21)00214-4<br>PMID: 34740555
 </li>
 <li>
-<a href="https://pubmed.ncbi.nlm.nih.gov/40122917/">Floods and cause-specific mortality in the United States applying a triply robust approach.</a><br><strong>Lingzhi Chu</strong>, <strong>Joshua L Warren</strong>, Erica S Spatz, <strong>Sarah Lowe</strong>, <strong>Yuan Lu</strong>, <strong>Xiaomei Ma</strong>, <strong>Joseph S Ross</strong>, <strong>Harlan M Krumholz</strong>, <strong>Kai Chen</strong><br>Nature communications 2025 Mar 23 doi: 10.1038/s41467-025-58236-0<br>PMID: 40122917
+<a href="https://pubmed.ncbi.nlm.nih.gov/40122917/">Floods and cause-specific mortality in the United States applying a triply robust approach.</a><br><strong>Lingzhi Chu</strong>, <strong>Joshua L Warren</strong>, <strong>Erica S Spatz</strong>, <strong>Sarah Lowe</strong>, <strong>Yuan Lu</strong>, <strong>Xiaomei Ma</strong>, <strong>Joseph S Ross</strong>, <strong>Harlan M Krumholz</strong>, <strong>Kai Chen</strong><br>Nature communications 2025 Mar 23 doi: 10.1038/s41467-025-58236-0<br>PMID: 40122917
 </li>
 <li>
 <a href="https://pubmed.ncbi.nlm.nih.gov/40886796/">Changes in pneumococcal deaths in the USA following the COVID-19 pandemic.</a><br><strong>Lianhan Shang</strong>, <strong>Stephanie Perniciaro</strong>, <strong>Daniel M Weinberger</strong><br>International journal of infectious diseases : IJID : official publication of the International Society for Infectious Diseases 2025 Aug 29 doi: 10.1016/j.ijid.2025.108020<br>PMID: 40886796
@@ -376,7 +376,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ysph-dsde\.github\.io\/resources-page\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-fb0bcb17d1beba8473d33297837e1783.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-551e52cacc035378b4714f18b8614cc1.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -380,13 +380,13 @@ Note
 <div id="citations-box">
 <ul id="citations-content">
 <li>
-<a href="https://pubmed.ncbi.nlm.nih.gov/35878815/">Oral Anticancer Agent (OAA) Adherence and Survival in Elderly Patients With Metastatic Renal Cell Carcinoma (mRCC).</a><br><strong>Michaela A Dinan</strong>, Lauren E Wilson, Melissa A Greiner, Lisa P Spees, Jessica E Pritchard, Tian Zhang, Deborah Kaye, Daniel George, Charles D Scales, Chris D Baggett, Cary P Gross, Michael S Leapman, Stephanie B Wheeler<br>Urology 2022 Jul 22 doi: 10.1016/j.urology.2022.07.012<br>PMID: 35878815
+<a href="https://pubmed.ncbi.nlm.nih.gov/35878815/">Oral Anticancer Agent (OAA) Adherence and Survival in Elderly Patients With Metastatic Renal Cell Carcinoma (mRCC).</a><br><strong>Michaela A Dinan</strong>, Lauren E Wilson, Melissa A Greiner, Lisa P Spees, Jessica E Pritchard, Tian Zhang, Deborah Kaye, Daniel George, Charles D Scales, Chris D Baggett, <strong>Cary P Gross</strong>, <strong>Michael S Leapman</strong>, Stephanie B Wheeler<br>Urology 2022 Jul 22 doi: 10.1016/j.urology.2022.07.012<br>PMID: 35878815
 </li>
 <li>
 <a href="https://pubmed.ncbi.nlm.nih.gov/35398288/">The age-dependent association of risk factors with pancreatic cancer.</a><br>C Yuan, J Kim, Q L Wang, A A Lee, A Babic, NA NA, L T Amundadottir, A P Klein, D Li, M L McCullough, G M Petersen, <strong>H A Risch</strong>, R Z Stolzenberg-Solomon, K Perez, K Ng, E L Giovannucci, M J Stampfer, P Kraft, B M Wolpin<br>Annals of oncology : official journal of the European Society for Medical Oncology 2022 Apr 6 doi: 10.1016/j.annonc.2022.03.276<br>PMID: 35398288
 </li>
 <li>
-<a href="https://pubmed.ncbi.nlm.nih.gov/36202695/">End-of-life care trajectories among older adults with lung cancer.</a><br><strong>Amy J Davidoff</strong>, Maureen E Canavan, Elizabeth Prsic, Maureen Saphire, <strong>Shi-Yi Wang</strong>, Carolyn J Presley<br>Journal of geriatric oncology 2022 Oct 4 doi: 10.1016/j.jgo.2022.09.010<br>PMID: 36202695
+<a href="https://pubmed.ncbi.nlm.nih.gov/36202695/">End-of-life care trajectories among older adults with lung cancer.</a><br><strong>Amy J Davidoff</strong>, <strong>Maureen E Canavan</strong>, Elizabeth Prsic, Maureen Saphire, <strong>Shi-Yi Wang</strong>, <strong>Carolyn J Presley</strong><br>Journal of geriatric oncology 2022 Oct 4 doi: 10.1016/j.jgo.2022.09.010<br>PMID: 36202695
 </li>
 <li>
 <a href="https://pubmed.ncbi.nlm.nih.gov/37593228/">Racial/ethnic disparities in the cause of death among patients with prostate cancer in the United States from 1995 to 2019: a population-based retrospective cohort study.</a><br>Hongmei Zeng, Mengyuan Xu, Yingwei Xie, Sergiusz Nawrocki, Jakub Morze, Xianhui Ran, Tianhao Shan, Changfa Xia, Yixin Wang, <strong>Lingeng Lu</strong>, Xue Qin Yu, Catarina Machado Azeredo, John S Ji, Xiaomei Yuan, Katherine Curi-Quinto, Yuexin Liu, Bingsheng Liu, Tao Wang, Hao Ping, Edward L Giovannucci<br>EClinicalMedicine 2023 Aug 3 doi: 10.1016/j.eclinm.2023.102138<br>PMID: 37593228
@@ -552,7 +552,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/ysph-dsde\.github\.io\/resources-page\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
