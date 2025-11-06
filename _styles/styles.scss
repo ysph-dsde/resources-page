@@ -61,6 +61,11 @@ $hover-color-footer: lighten($navbar-bg, 10%);
 $link-color: #bd5319;
 $hover-color: darken($link-color, 10%);
 
+$dsde-purple: #7634a6;
+$dsde-purple-light: #bd82fb;
+$dsde-blue: #00356b;
+$dsde-blue-light: #3e70a1;
+
 
 :root {
   --light-header-background: #{$light-header-background};
@@ -105,6 +110,31 @@ $hover-color: darken($link-color, 10%);
     font-family: 'YaleNew', serif !important;
     font-size: 1.2rem;
 }
+@media (max-width: 470px) {
+    .navbar-title {
+      font-size: clamp(1.3rem, 5vw, 1.5rem);
+    }
+    .navbar-brand {
+      text-align: left;
+      line-height: 1;
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+    }
+}
+@media (max-width: 383px) {
+    .navbar-title {
+      font-size: 1.7rem;
+    }
+    .navbar-brand {
+      margin-right: -1.2rem !important;
+      text-align: left;
+      line-height: 1;
+      white-space: normal !important;
+      overflow: visible !important;
+      text-overflow: clip !important;
+    }
+}
 .dropdown-item {
     color: #212529 !important; /* var(--bs-body-color) for the body text */
 }
@@ -114,26 +144,116 @@ $hover-color: darken($link-color, 10%);
 
 /* Callout Boxes */
 
-.callout-note.callout .callout-title-container {
-    color: #2c3e50;
-    font-weight: 500;
+.callout-note.callout {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .callout-title-container {
+      color: #2c3e50;
+      font-weight: 500;
+  }
 }
-.callout-warning.callout .callout-title-container {
-    color: #ca820f;
-    font-weight: 500;
+div.callout-warning.callout {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .callout-title-container {
+      color: #ca820f;
+      font-weight: 500;
+  }
 }
-.callout-important.callout .callout-title-container {
-    color: #e74c3c;
-    font-weight: 500;
+div.callout-important.callout {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .callout-title-container {
+      color: #e74c3c;
+      font-weight: 500;
+  }
 }
-.callout-tip.callout .callout-title-container {
-    color: #149c81;
-    font-weight: 500;
+.callout-tip.callout {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .callout-title-container {
+      color: #149c81;
+      font-weight: 500;
+  }
 }
-.callout-caution.callout .callout-title-container {
-    color: #dd6d12;
-    font-weight: 500;
+.callout-caution.callout {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+  .callout-title-container {
+      color: #dd6d12;
+      font-weight: 500;
+  }
 }
+
+/* Index page banner styling */
+
+.landing-banner {
+    background-image: url('Images/DSDE LinkedIn Banner Option 3.png');
+    background-size: cover; /* Ensure the image covers the banner area */
+    background-position: left center; /* Align the background image to center-left */
+    width: 100vw; /* Extend the banner to some width of the viewport */
+    height: calc(26vw + 80px);
+    position: relative; /* Position relative to allow overlap */
+    left: -25vw; /* Move the banner entirely off the left side */
+    z-index: 1; /* Ensure it’s behind the navbar */
+    margin-bottom: -5rem;
+    margin-top: -3rem;
+}
+.logo-container {
+    position: relative;
+    width: 100%; /* Default to 100% width for responsiveness */
+    max-width: calc(800px - 10vw);
+    height: auto;
+    background-color: var(--bs-body-bg);
+    z-index: 2;
+    padding: 20px;
+    margin-left: auto;
+}
+.logo-container::before {
+    content: '';
+    position: absolute;
+    top: -20px; /* Extend background area above */
+    bottom: 0px; /* Extend background area below */
+    left: calc(-20px - (6vw - 10%)); /* Extend background area to the left */
+    right: calc(-300px - (50vw - 100%)); /* Extend background area to the right */
+    background-color: var(--bs-body-bg);
+    z-index: -1; /* Place it behind the logo container content */
+}
+.logo {
+    max-width: 100%;
+    height: auto;
+}
+@media (max-width: 1200px) {
+    .logo-container::before {
+        right: calc(-200px - (50vw - 100%)); /* Adjust the extent of the background for smaller screens */
+    }
+}
+@media (max-width: 800px) {
+    .landing-banner {
+        left: -20vw;
+        margin-bottom: -2.5rem;
+    }
+    .logo-container::before {
+        right: calc(-200px - (50vw - 100%)); /* Adjust the extent of the background for smaller screens */
+        left: calc(-20px + (5vw + 100%));
+    }
+}
+@media (max-width: 600px) {
+    .landing-banner {
+        left: -15vw;
+        margin-bottom: -2rem;
+    }
+    .logo-container {
+        width: 200px;
+    }
+    .logo-container::before {
+        right: calc(-70px - (50vw - 100%)); /* Adjust the extent of the background for smaller screens */
+    }
+    .logo-container {
+      width: 100%;
+    }
+}
+
 
 /* Information tabsets */
 
@@ -235,13 +355,13 @@ div.datatables {
     align-items: stretch; /* Make buttons same height */
 }
 .form-link {
-    background-color: #fff;
+    background-color: lighten($dsde-purple, 50%);
     border-radius: .25rem;
     border: 1px solid #444;
     box-shadow: 0 .2rem .5rem #6c757d, 0 0 .05rem #6c757d;
-    color: #6c757d;
+    color: #444;
     text-decoration: none;
-    font-size: .9em;
+    font-size: 0.9em;
     text-align: center;
     padding: .4rem .8rem;
     transition: all 0.3s ease;
@@ -251,8 +371,8 @@ div.datatables {
     display: block;
 }
 .form-link:hover {
-    background-color: lighten($navbar-bg, 10%);
-    color: white;
+    background-color: lighten($dsde-purple, 20%);
+    color: #f4f4f4;
     text-decoration: none;
     transform: translateY(-2px);
     box-shadow: 0 .3rem .7rem #6c757d, 0 0 .1rem #6c757d;
@@ -753,12 +873,13 @@ ol, ul {
   width: calc(30% - 15px);
   min-width: 320px;
   height: 440px;
-  border: 1px solid #444;
+  border: 0.9px solid #444;
   border-radius: 0;
   text-align: left;
   text-decoration: none;
   color: inherit;
   background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   overflow: hidden;
 }
 .tile img {
@@ -767,12 +888,15 @@ ol, ul {
   object-fit: cover;
   display: block;
   padding-top: 0px;
+  cursor: default;
 }
 .tile h2 {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  line-height: 1;
   font-weight: bold;
   padding-left: 6px;
   padding-right: 6px;
+  padding-bottom: 6px;
   color: #52505d;
   border-bottom: none;
   margin: 10px 0 0 0;
@@ -786,22 +910,26 @@ ol, ul {
   overflow: hidden;
   padding-bottom: 0.14em;
 }
-.card-header {
+.card-header.py-1.px-2.border-bottom.bg-light {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #f5f5f5 !important;
+  background-color: var(--quarto-scss-export-light-header-background) !important;
   margin-top: auto;
+}
+.card-text i {
+  font-size: 1.2em;
 }
 #showMoreBtn {
   display: block;
   background-color: #fff;
   border-radius: .25rem;
   border-color: #444;
-  box-shadow: 0 .2rem .5rem #6c757d, 0 0 .05rem #6c757d;
-  color: #6c757d;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: #52505d;
   text-decoration: none;
-  font-size: .9em;
+  font-size: 0.9em;
+  font-weight: 500;
   text-align: center;
   left: 50%;
   padding: .4rem .8rem;
@@ -908,7 +1036,7 @@ ol, ul {
 }
 .tile_static {
   height: 440px;  /* Fixed height, adaptable as necessary */
-  border: 1px solid #444;
+  border: 0.9px solid #444;
   border-radius: 0;
   display: flex;
   flex-direction: column;
@@ -919,13 +1047,14 @@ ol, ul {
 }
 .tile_static h2 {
   max-width: 300px;
-  font-size: 18px;
+  font-size: 1.2rem;
+  line-height: 1;
   padding-left: 6px;
   padding-right: 6px;
+  padding-bottom: 6px;
   color: #52505d;
   border-bottom: none;
-  margin-top: 10px;
-  margin-bottom: 0px;
+  margin: 10px 0 0 0;
 }
 .tile_static p {
   font-size: 0.8rem;
@@ -941,12 +1070,13 @@ ol, ul {
   height: 150px;
   object-fit: cover;
   display: block;
+  cursor: default;
 }
 .card-header_static {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background-color: #f5f5f5 !important;
+  background-color: var(--quarto-scss-export-light-header-background) !important;
   margin-top: auto;
 }
 .tile_a {
@@ -957,6 +1087,7 @@ ol, ul {
 }
 .icon-red {
   color: var(--link-color);
+  font-size: 1.2em;
 }
 
 
@@ -1073,6 +1204,7 @@ body.people {
   min-width: 300px; /* Adjusted for smaller screens */
   height: auto;
   box-sizing: border-box;
+  box-shadow: none;
 }
 .people .img-container {
   flex: 0 0 180px;
@@ -1331,7 +1463,7 @@ body.people {
   gap: 15px; /* Space between blocks */
 }
 .cool-block {
-  background: linear-gradient(135deg, rgba(0, 53, 107, 0.15), rgba(118, 52, 166, 0.15) 70%);
+  background: linear-gradient(135deg, rgba(94, 94, 188, 0.35), rgba(150, 66, 210, 0.25) 66%);
   border: 1px solid #444;
   color: #444;
   padding: 30px;
@@ -1532,6 +1664,10 @@ body.people {
 .citations-navigation button {
   padding: 5px 10px;
   margin: 0 5px;
+  font-size: 0.9em;
+  color: #444;
+  border: 1px solid #444 !important;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   cursor: pointer;
 }
 #citations-content li {

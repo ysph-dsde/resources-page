@@ -28,9 +28,12 @@
 <script src="Code/popup.js"></script>
 ```
 
-
-![](Images/Wordmark-Data-Science-and-Data-Equity-black.png){style="display: block; margin-left: auto; margin-right: auto;" width="600"}\
-
+```{=html}
+<div class="landing-banner"></div>
+<div class="logo-container">
+    <img src="Images/Wordmark-Data-Science-and-Data-Equity-blues.png" alt="Logo" class="logo">
+</div>
+```
 
 Welcome to the Yale School of Public Health Data Science and Data Equity (YSPH DSDE) Data Concierge site. This Data Concierge was established to support the mission of DSDE in reducing barriers to utilizing data science and AI in public health training, research, and practice.
 
@@ -105,15 +108,15 @@ Explore our comprehensive collection of resources and datasets curated from inte
 
 The resources and datasets are presented in tiles that contain salient details about the source, along with relevant links, like the one displayed on the left. Each tile can feature any combination of five hyperlinked icons:
 
-<i class="bi bi-github icon-red"></i> \  Links to code repositories for the dataset/resource.
+<i class="bi bi-github" style="color: var(--link-color);"></i> \  Links to code repositories for the dataset/resource.
 
-<i class="bi bi-globe icon-red"></i> \ Links to the main website of the dataset/resource.
+<i class="bi bi-globe" style="color: var(--link-color);"></i> \ Links to the main website of the dataset/resource.
 
-<i class="bi bi-people icon-red"></i> \ Links to the websites of the research groups responsible for creating the dataset/resource.
+<i class="bi bi-people" style="color: var(--link-color);"></i> \ Links to the websites of the research groups responsible for creating the dataset/resource.
 
-<i class="bi bi-journal-text icon-red"></i> \ Links to example publications that utilize the dataset/resource provided by the creators.
+<i class="bi bi-journal-text" style="color: var(--link-color);"></i> \ Links to example publications that utilize the dataset/resource provided by the creators.
 
-<i class="bi bi-info-circle icon-red"></i> \ Links to a **Resource Navigation Tool** webpage with additional details about the dataset.
+<i class="bi bi-info-circle" style="color: var(--link-color);"></i> \ Links to a **Resource Navigation Tool** webpage with additional details about the dataset.
 
 
 
