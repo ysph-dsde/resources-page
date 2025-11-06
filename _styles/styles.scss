@@ -363,7 +363,7 @@ div.datatables {
     text-decoration: none;
     font-size: 0.9em;
     text-align: center;
-    padding: .4rem .8rem;
+    padding: 0.8rem;
     transition: all 0.3s ease;
     flex: 1; /* Buttons grow to fill available space */
     min-width: 180px; /* Minimum width before wrapping */
@@ -371,7 +371,7 @@ div.datatables {
     display: block;
 }
 .form-link:hover {
-    background-color: lighten($dsde-purple, 20%);
+    background-color: lighten($dsde-purple, 10%);
     color: #f4f4f4;
     text-decoration: none;
     transform: translateY(-2px);
@@ -416,12 +416,12 @@ div.datatables {
     }
     .form-links {
         flex-direction: column; /* Force vertical stacking on mobile */
-        gap: 10px;
+        gap: 15px;
         margin: 25px 0; /* Reduced margin for mobile */
     }
     .form-link {
         font-size: 0.85em;
-        padding: .5rem .6rem;
+        padding: 0.8rem 0.6rem;
         width: 80%;
         margin: auto;
         max-width: none; /* Remove width constraints on mobile */
@@ -684,6 +684,13 @@ a.navbar-brand:hover {
 }
 .nav-footer a {
   color: var(--link-color-footer);
+}
+.nav-footer-left a, .nav-footer-right a {
+  color: var(--link-color);
+  text-decoration: underline;
+}
+.nav-footer i {
+  color: var(--link-color-footer) !important;
 }
 .nav-footer a:hover {
   color: var(--hover-color-footer);
@@ -1463,13 +1470,13 @@ body.people {
   gap: 15px; /* Space between blocks */
 }
 .cool-block {
-  background: linear-gradient(135deg, rgba(94, 94, 188, 0.35), rgba(150, 66, 210, 0.25) 66%);
+  background: linear-gradient(135deg, rgba(79, 79, 159, 0.6), rgba(150, 66, 210, 0.20) 60%);
   border: 1px solid #444;
-  color: #444;
+  color: #1c1c1c;
   padding: 30px;
   margin-top: 15px;
   border-radius: 5px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 20px rgba(57, 41, 68, 0.2);
   text-align: center;
   box-sizing: border-box;
 }
