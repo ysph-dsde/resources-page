@@ -380,7 +380,8 @@ citations <- get_citations(
           "10.1001/jama.2025.16533", "10.1093/jamia/ocad035", 
           "10.1001/jamanetworkopen.2022.22385", "10.1001/jamanetworkopen.2025.16663",
           "10.1001/jamanetworkopen.2022.9953"),
-  affiliation = "Yale School of Public Health"
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine"),
+  highlight_names = c("Bhramar Mukherjee")
 )
 
 # Condition the output based on presence of articles.

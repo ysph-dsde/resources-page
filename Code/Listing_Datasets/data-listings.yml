@@ -110,27 +110,20 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://yoda.yale.edu/
         group: https://medicine.yale.edu/core/
-        
-  # -----------
-  # Region/Affiliation by: Yale University
-  # Restricted Access
-  - categories1:
-      - "Yale University"
-    categories2:
-      - "Clinical Study/Surveys"
-    categories3:
-      - "Restricted Access"
-    tiles:
       - title: Yale New Haven Health System (YNHHS) Epic
         date-added: 2025-03-20
         date-updated: 2025-03-20
         ranking: "3"
         description: |
           Cosmos is a dataset created in collaboration with a community of health systems using Epic and is designed to improve patient care. By combining their data, participating organizations and Epic can make new discoveries and advance medicine. Cosmos also powers tools at the point of care, providing insights to clinicians that are tailored to the patient in front of them.
-        image: ../Images/Datasets/YNHHS Epic Cosmos.png
+        image: ../Images/Datasets/YNHHS Epic.png
         topic: "Clinical Study/Surveys"
         site: https://medicine.yale.edu/ybic/ynhhs-research-access/
         group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
+        #info: More-Info-Pages/Restricted-Access/YNHHS-Epic.qmd
+        
+  # -----------
+  # Region/Affiliation by: Yale University
 
   # -----------
   # Region/Affiliation by: American University
@@ -330,6 +323,26 @@ items:
         
   # -----------
   # Region/Affiliation by: Private Company
+  # Restricted Access
+  - categories1:
+      - "Private Company"
+    categories2:
+      - "Clinical Study/Surveys"
+    categories3:
+      - "Restricted Access"
+    tiles:
+      - title: Epic Cosmos
+        date-added: 2025-11-06
+        date-updated: 2025-11-06
+        ranking: "3"
+        description: |
+          Cosmos is a dataset created in collaboration with a community of health systems using Epic and is designed to improve patient care. By combining their data, participating organizations and Epic can make new discoveries and advance medicine. Cosmos also powers tools at the point of care, providing insights to clinicians that are tailored to the patient in front of them.
+        image: ../Images/Datasets/Epic Cosmos.png
+        topic: "Clinical Study/Surveys"
+        site: https://medicine.yale.edu/ybic/ynhhs-research-access/
+        group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
+        #info: More-Info-Pages/Restricted-Access/Epic-Cosmos.qmd
+        
   # License Required
   - categories1:
       - "Private Company"

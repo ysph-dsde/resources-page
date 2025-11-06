@@ -312,6 +312,19 @@ Researchers are required to return all key individual-level variables derived fr
 This transfer can be accomplished using the RAP system to directly send the generated information to UK Biobank. For detailed guidance on what is expected when returning results, please refer to the full guide available on the [Returning your results to UK Biobank](https://community.ukbiobank.ac.uk/hc/en-gb/articles/15030738339229-Returning-your-results-to-UK-Biobank) webpage\ [@return_results].
 
 
+:::{.callout-tip collapse="true"}
+# Sharing Code and Using Git and GitHub
+
+Researchers are not obligated, but may choose to share their code, example notebooks, or tools to be freely utilized by other researchers.
+
+The UK Biobank offers supporting materials to assist researchers in appropriately using Git and GitHub with sensitive data. Recently, they released the ["Code Repository"](https://www.youtube.com/watch?v=lsZ_Fi8P2-s) course in AMS, which includes a multiple-choice test. Additionally, they have articles provide guidance on using Git and GitHub with their data, including links to instructional content and online courses about managing code-based projects. These resources are available on the [Using Code Repositories](https://community.ukbiobank.ac.uk/hc/en-gb/sections/31205109578013-Using-Code-Repositories) page\ [@code_repo_guides; @youtube_code].
+
+Researchers are also encouraged to review the UK Biobank GitHub for code support, including tools like the [UKB-Git-Audit-Tool](https://github.com/UK-Biobank/UKB-Git-Audit-Tool), which scans the project's Git commit history for any potentially confidential information\ [@github].
+
+The DSDE team organizes freely accessible workshops featuring real-world, hands-on examples that participants are encouraged to explore or attend. Some of our workshops, including ["Getting Started with Git and GitHub,"](https://ysph-dsde.github.io/Book-of-Workshops/Git-and-GitHub/) are being adapted for asynchronous learning on our Book of Workshops webpage\ [@book_workshops_git]. You can find information on upcoming workshops on our [events](https://ysph.yale.edu/research/research-centers-and-initiatives/public-health-data-science-and-data-equity/events/) page, and past workshop materials are available on the [Book of Workshops](https://ysph-dsde.github.io/Book-of-Workshops/).
+:::
+
+
 **Summary of Publication Expectations**\ [@researcher_responsibilities; @submitting_pubs]
 
 ::: {style="margin-left: 2rem"}
@@ -337,12 +350,6 @@ vii. You must acknowledge any data linked to in your analysis. For example:
 
 > "this work uses data provided by patients and collected by the NHS as part of their care and support."
 
-:::
-
-:::{.callout-tip}
-Researchers are not obliged to, but may choose to publicize their code, example notebooks, or tools so that they can be freely used by other researchers within the RAP.
-
-Those interested in doing so might consider taking the additional ["Code Repository"](https://www.youtube.com/watch?v=lsZ_Fi8P2-s) course in AMS, which includes its own multiple-choice test. Researchers should also review the UK Biobank GitHub for code support, including tools like the [UKB-Git-Audit-Tool](https://github.com/UK-Biobank/UKB-Git-Audit-Tool), which scans the project's Git commit history for any potentially confidential information\ [@youtube_code; @github].
 :::
 
 
@@ -429,7 +436,8 @@ citations <- get_citations(
   doi = c("10.1001/jamapsychiatry.2024.4694", "10.1001/jamanetworkopen.2022.30690",
           "10.1001/jamacardio.2025.0492", "10.1002/cam4.70327",
           "10.1038/s44161-025-00685-3", "10.1016/j.jagp.2023.08.015"),
-  affiliation = c("Yale School of Public Health", "Yale School of Medicine")
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine"),
+  highlight_names = c("Bhramar Mukherjee")
 )
 
 # Condition the output based on presence of articles.

@@ -251,7 +251,8 @@ citations <- get_citations(
   doi = c("10.1016/j.urology.2022.07.012", "10.1016/j.annonc.2022.03.276", 
           "10.1016/j.jgo.2022.09.010", "10.1016/j.eclinm.2023.102138", 
           "10.59249/IAJU7580"),
-  affiliation = "Yale School of Public Health"
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine"),
+  highlight_names = c("Bhramar Mukherjee")
 )
 
 # Condition the output based on presence of articles.
