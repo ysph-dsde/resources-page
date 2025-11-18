@@ -12,7 +12,7 @@
 ##              to update the listed publications.
 
 # The same functions are used in all data type folders.
-source('./Freely-Accessible/PubMed Search_Functions.R')
+source('Pages/More-Info-Pages/Freely-Accessible/PubMed Search_Functions.R')
 
 
 ## Example usage:
@@ -93,10 +93,18 @@ build_search_query(
 ## RESTRICTED ACCESS
 
 ## ----------------
-## MarketScan
+## All of Us
 
 build_search_query(
   keywords = c("All of Us"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+
+## ----------------
+## UK Biobank
+
+build_search_query(
+  keywords = c("UK Biobank"), 
   affiliation = "Yale School of Public Health", years = 5)
 
 

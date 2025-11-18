@@ -1,8 +1,6 @@
 ---
   title: |
-         Yale New Haven Health System (YNHHS) Epic 
-         </br>
-         and Epic Cosmos
+         Yale New Haven Health System (YNHHS) Epic
   description: |
          </br>
          The Cosmos data set combines billions of clinical data points, made up of data from across the Epic community, to form the largest database of Electronic Health Record (EHR) patient information. Participating organizations provide a HIPAA-defined limited data set to the centralized Cosmos database. 
@@ -38,131 +36,198 @@ suppressPackageStartupMessages({
 source('./PubMed Search_Functions.R')
 ```
 
-<small>Updated: November 5<sup>th</sup>, 2025</small>
+<small>Updated: October 29<sup>th</sup>, 2025</small>
 
-## Access Overview
+## Overview
 
-Researchers wanting to use the Yale New Haven Health System (YNHHS) Epic and Epic Cosmos data will need a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which affords access to:
+The Yale New Haven Hospital System (YNHHS) utilizes an electronic medical record (EMR) system provided by the Epic Corporation. This system digitizes all patient chart information, including medical history, allergies, current medications, laboratory and radiology results, and visit notes. Patients within the YNHHS network—which includes Greenwich Hospital, Bridgeport Hospital, Yale New Haven Hospital, Northeast Medical Group, and affiliated physicians—will have their EMR records maintained in the YNHHS Epic system.
 
-:::::: columns
-::: {.column style="text-align:right; width:25%"}
-[Virtual Desktop Infrastructure (VDI)](https://medicine.yale.edu/ybic/computational-resources/ynhhs/#virtual-desktop-infrastructure)
+YNHHS provides a wide range of medical services, including emergency care, primary care, and over 100 specialties such as oncology, cardiovascular care, and neurology. The YNHHS facts and figures section and annual reports indicate that over the past few years, there have been approximately 150 thousand inpatient visits, 3.5 to 4 million outpatient encounters, and 350 thousand emergency department visits annually.
 
-\
-\
-\
-\hyperlink{https://medicine.yale.edu/ybic/data-resources-services/slicerdicer/}{Epic SlicerDicer}
+The Epic Cosmos data combines inpatient and outpatient charts into a single, longitudinal patient record, removing any duplicated records that may arise from being seen at multiple Cosmos organizations. The data provided to researchers adheres to [HIPAA-defined limited data set](https://privacyruleandresearch.nih.gov/pr_08.asp) rules. The de-identified dataset in Cosmos ensures strong patient privacy protections by suppressing geographic data, using date-shifting to offset patient dates consistently, and suppressing the source organization. More details can be found in the Data Dictionary, which provides notes on the transformation of individual data elements.
 
-\
-\
-\
-\
-\
-\
-
-\hyperlink{https://medicine.yale.edu/ybic/computational-resources/ynhhs/#computational-health-platform}{Computational Health Platform (CHP)}\
-\
-\
-\
-
-\
-\
-
-Microsoft Office 365
-:::
-
-::: {.column width="3%"}
-<!-- empty column to create gap -->
-:::
-
-::: {.column width="72%"}
-Remote access to a YNHHS secure device without requiring the YNHHS VPN. VDI includes the following software: SQL Server Management Studio, R, Stata, SAS, Office365, and Epic. It can be used to handle small-to-medium sized data, accessing Epic charts, SlicerDicer, and the Computational Health Platform (CHP).
-
-Access de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. Institutional Review Board (IRB) applications are not required to access de-identified data, but training is strongly recommended before usage. 
-
-Researchers can request access to the Epic Cosmos system, which will provide de-identified, summary count data for all participating Epic systems outside of YNHHS.
-
-A secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. Suitable for AI research and development, and is well suited for analyzing large volumes of data in different forms (i.e. images, text, structured).
-
-This tool requires advanced data science skills with relational databases, Python, and SQL. Additional details can be found here: [OMOP Common Data Model](https://medicine.yale.edu/ybic/data-resources-services/omop-common-data-model/).
-
-Microsoft applications linked within the YNHHS organization.
-:::
-::::::
-
-There are three levels of access available:
+The types of data collected in the EMR are continuously expanding. For example, data accessible to researchers currently includes:
 
 ::: {style="margin-left: 2rem"}
--   RBA without an IRB give access to the afore mentioned resources but only supplies de-identified, summary count data produced within YNHHS Epic.
--   RBA with an approved IRB gives access to individual-level data for Epic data produced within YNHHS that is strictly relevant to the IRB approved study.
--   Epic Cosmos - RBA holders can gain access to de-identified, summary count data produced by Epic participating institutions outside of YNHHS upon special request.
+- **Patient Information:** Demographic details such as age, sex, gender identity, race, ethnicity, location, patient status, and family history, social history elements like tobacco and substance use, birth control, social determinants of health, allergy information, and detailed birth history.
+
+- **Visits and Encounters:** Patient encounters and admissions including encounter type, classification, department and provider specialties, and visit reasons, as well as clinical notes from various medical documentation and patient experience data from MyChart usage and patient-reported outcomes.
+
+- **Medical Data:** Diagnoses, clinical and billed procedures, and vital signs such as blood pressure, pulse, temperature, respiratory rate, SpO2 levels, height, weight, BMI, and head circumference.
+
+- **Lab and Genomics:** Lab results such as component-specific results, susceptibility results, and reference ranges, in addition to genomic variant data like allelic state and chromosome details, and biosamples for genomic assays including blood, saliva, and urine samples.
+
+- **Health Assessments:** Information on cancer staging, immunizations, and eye exams, with details on stage group, immunization type, and visual acuity.
+
+- **Specialty Data:** Records data on hospital-acquired infections and various infection types, surgical procedures, transplant data for liver and kidney transplants, and health tracking data from wearable devices.
+
+- **Research and Analytics:** Geographic factors like RUCA and Social Vulnerability Index, risk scores for conditions such as cardiovascular disease and diabetes, and data from research studies detailing study type, enrollment, and partnered research contributions.
+
+- **Miscellaneous:** Encompasses peer group information on various types of hospitals, medication data including prescriptions and patient-reported medications, and additional lab results.
 :::
 
+:::{.callout-tip}
+## Leverage Expert Analysis for Your Research Needs!
 
+The Joint Data Analytics Team (JDAT) offers customized reporting and data analysis from the Epic data system, specializing in research support. With a team of 60 informaticists and analysts, JDAT works closely with users to understand their data needs and efficiently retrieve information. JDAT supports projects such as cohort population counts, grant application statistics, retrospective reviews, custom data extracts, and report development.
 
-
-### Do I Qualify?
-
-All Yale University and YNHHS (YU-YNHHS) Covered Entity faculty and licensed provider may submit and sponsor RBA requests. If you are within the Yale system, your manager or sponser with a YNHHS account must complete the ["YNHHS Researcher Basic Access"](https://shorturl.at/nJOS0) request on your behalf to start the process.
-
-If you are not a member of a YU-YNHHS Covered Entity (e.g. YSPH), you will need a sponsor to submit a request on your behalf. Find the current "List of Covered Departments" under "Administrative Functions" on the [hippa.yale.edu](https://hipaa.yale.edu/resources/resource-documents-and-guidance) resources page.
-
-## Step-by-Step
-
-::: {style="margin-left: 2rem"}
-1.  Your YU-YNHHS Covered Entity manager or sponsor will complete the ["YNHHS Researcher Basic Access"](https://shorturl.at/nJOS0) request on your behalf. This will give you YNHHS log-in credentials and identification authentication with Duo.
-
-2.  **For Yale NetID holders:** [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) courses in Workday, including the basic privacy and security module followed by the role specific module (i.e. for clinician's or researcher's).
-
-    **For Non-Yale NetID holders:** read and sign the [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) training materials specific to your role on the project (i.e. for clinician's or researcher's). Submission directions for these documents can be found on the PDF.
-
-3.  Human Subjects Protection Training (HSPT) certificate from CITI that has been completed within the last 3 years. Below is a summary of the process and the complete directions can be found on the [It's Your Yale](https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training) page about HSPT. You can reach out to [irb.training@yale.edu](mailto:irb.training@yale.edu) for further questions.
-
-    Researchers will need to complete the following CITI certificates:
-
-::: {style="margin-left: 2rem"}
--   "Basic Training"
--   One of the following two initial/basic Human Subjects Research modules: "Biomedical Research Basic" or "Social Behavioral Educational Researchers Basic".
+Find directions to submit a research data request [here](https://medicine.yale.edu/ybic/data-resources-services/how-to-submit-a-research-data-request/). Learn more on the [Epic Data Requests for Researchers](https://medicine.yale.edu/center-clinical-investigation/research-services/systems/epic/epic-data-requests/) webpage.
 :::
 
-::: {style="margin-left: 0rem"}
-For Yale-affiliates, it is preferable, though not required, to go through Workday to access the CITI training modules. Doing so will expedite recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) IRB system. In Workday, the CITI training link will show up as the "Human Subjects Protection Training – Initial/Refresher" course. You can reach out to your manager, [learning@yale.edu](mainto:learning@yale.edu), or [irb.training@yale.edu](mainto:irb.training@yale.edu) to request manual assignment if needed.
-
-Qualifying certificates completed through other institutions CITI subscriptions need to be emailed to [irb.training@yale.edu](mainto:irb.training@yale.edu). Please keep in mind that receiving CITI certification independently from a subscribing institution will incur charges.
-:::
-
-4.  SlicerDicer
-
-::: {style="margin-left: 2rem"}
-- https://jdat.ynhh.org/AnalyticsPortal/helix
-:::
-
-:::
-
-## Typical Timeline
-
-::: callout-important
-If you are looking to gain access to the individual-level YNHHS Epic data you will need to submit an IRB application. Time-to access in these cases is contingent upon the IRB's process that will vary for applications.
-:::
+## Gaining Access
 
 ::: {.panel-tabset}
 
-## YNHHS Epic
+### Researcher Basic Access (RBA)
 
-Time to get RBA to YNHHS de-identified data.
+#### Do I Qualify?
 
-## Epic Cosmos
+To get access to YNHHS Epic data, you need:
 
-Time to get access to de0identified data from all Epic centers outside YNHHS.
+::: {style="margin-left: 2rem"}
+i. To either work for a Yale University-YNHHS (YU-YNHHS) Covered Entity (e.g., YNHHS or YSM), OR have a sponsor who can request access for you.
+
+ii. Someone with a YNHHS account (either your manager or sponsor) to submit the "YNHHS Researcher Basic Access" request.
+:::
+
+::: {style="margin-left: 2rem"}
+:::{.callout-important}
+All YNHHS/YSM faculty and licensed providers can submit and sponsor access requests.
+:::
+:::
+
+Are you affiliated with YNHHS or Yale School of Medicine?
+
+::: {style="margin-left: 2rem"}
+- If yes: Your manager can request access for you.
+
+- If no: You'll need to find a sponsor with a YNHHS account to request access for you.
+:::
+
+::: {style="margin-left: 2rem"}
+:::{.callout-note}
+## How do I know if my department is a Covered Entity?
+
+To check if your department is a YU-YNHHS Covered Entity, see the "List of Covered Departments" under "Administrative Functions" on the hippa.yale.edu [Resource Documents and Guidance](https://hipaa.yale.edu/resources/resource-documents-and-guidance) page.
+:::
+:::
+
+Qualifying researchers can apply for RBA without needing Institutional Review Board (IRB) approval, granting them access to de-identified, summary count data. If researchers with RBA later obtain IRB approval, they can then request access to individual-level data relevant to their IRB-approved study.
+
+#### Typical Timeline
+
+Time varies for approval of RBA requests.
+
+It may take 24 hours for new passwords to be completed.
+
+#### Step-by-Step Guide
+
+**a: Manager or Sponsor Requests RBA on Your Behalf**
+
+Your YU-YNHHS Covered Entity manager or sponsor will complete the [YNHHS Researcher Basic Access](https://shorturl.at/nJOS0) request on your behalf.
+
+**b: Complete Account Setup and Enrollment**
+
+After your request is approved, you'll get access to the Researcher Basic Access (RBA) [RBA SharePoint](https://yaleedu.sharepoint.com/:u:/r/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&web=1&e=JRVkM0) site. Throughout the instructions below, specific guides and documents in SharePoint will be mentioned that provide detailed instructions for each step.
+
+For technical support, contact the YNHH Service Desk at 203-688-HELP (4357) or [helpdesk@ynhh.org](mailto:helpdesk@ynhh.org). You may need to verify your identity and account permissions when requested.
+
+::: {style="margin-left: 2rem"}
+1. When your application is approved, you will receive a welcome letter from YNHHS containing your YNHH Network ID and a temporary password. Follow the instructions in the letter to reset your password.
+
+:::{.callout-important}
+Your YNHH NetID also serves as your Epic username. 
+:::
+
+2. Enroll in Duo Multi-Factor Authentication through the Password Self Service Portal. Full details are available in the "YNHH Duo Enrollment" document on the RBA SharePoint.
+
+3. After completing these steps, you'll have access to the [MyApps Portal](htps://myapps.ynhh.org/) - a secure platform providing access to Epic and the YNHH Virtual Desktop Infrastructure (VDI). Log in with your YNHHS NetID and password to verify your credentials.
+
+:::{.callout-important}
+This portal provides primary or alternative access to content depending on your role and work location. For guidance, view the "Accessing YNHH VDI & Epic" document on the RBA SharePoint.
+:::
+
+:::
+
+**c: Training**
+
+#### Publications Expectations
+
+Epic requires that
+
+
+#### Included Tools and Applications
+
+Researchers seeking access to YNHHS Epic data will need a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHHS NetID and Duo Access, which provides access to:
+
+<table class="definition-table">
+  <tr>
+    <td class="left-column">
+      <a href="https://medicine.yale.edu/ybic/computational-resources/ynhhs/#virtual-desktop-infrastructure">Virtual Desktop Infrastructure (VDI)</a>
+    </td>
+    <td class="gap-column">
+      <!-- empty column to create gap -->
+    </td>
+    <td class="right-column">
+      <p>Remote access to a YNHHS secure device without requiring the YNHHS VPN is available through VDI, which includes software such as SQL Server Management Studio, R, Stata, SAS, Office365, and Epic. This setup is suitable for handling small-to-medium sized data, as well as accessing Epic charts, SlicerDicer, and the Computational Health Platform (CHP).</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="left-column">
+      <a href="https://medicine.yale.edu/ybic/data-resources-services/slicerdicer/">Epic SlicerDicer</a>
+    </td>
+    <td class="gap-column">
+      <!-- empty column to create gap -->
+    </td>
+    <td class="right-column">
+      <p>Access de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. While Institutional Review Board (IRB) applications are not required to access de-identified data, training is strongly recommended before usage.</p>
+      <p>Researchers can also request access to the Epic Cosmos system, which provides de-identified summary count data for all participating Epic systems outside of YNHHS.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="left-column">
+      <a href="https://medicine.yale.edu/ybic/computational-resources/ynhhs/#computational-health-platform">Computational Health Platform (CHP)</a>
+    </td>
+    <td class="gap-column">
+      <!-- empty column to create gap -->
+    </td>
+    <td class="right-column">
+      <p>A secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. It is suitable for AI research and development and is well suited for analyzing large volumes of data in various forms (e.g., images, text, structured).</p>
+      <p>This tool requires advanced data science skills with relational databases, Python, and SQL. Additional details can be found here: <a href="https://medicine.yale.edu/ybic/data-resources-services/omop-common-data-model/">OMOP Common Data Model</a>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td class="left-column">
+      Microsoft Office 365
+    </td>
+    <td class="gap-column">
+      <!-- empty column to create gap -->
+    </td>
+    <td class="right-column">
+      <p>Access Microsoft applications integrated within the YNHHS organization.</p>
+    </td>
+  </tr>
+</table>
 
 :::
 
 
-## Important Links
+## Valuable Links
 
 ::: {style="margin-left: 2rem"}
 - [YNHHS Learning Management System (LMS)](https://ynhh.certpointsystems.com/): Center Point is where you can sign up for in-person or online training courses.
-- [MyAPPs](https://myapps.ynhh.org): Access to the VDI via a Citrix Workspace download. YNHHS DUO and YU/YNHHS VPN is required if not accessing on the YU or YNHHS network.
+
+- [MyAPPs](https://myapps.ynhh.org): Find the portal for accessing the VDI using Citrix Workspace. Ensure that YNHHS DUO and YU/YNHHS VPN are utilized if access is attempted outside the Yale University or YNHHS network.
+
+- [RBA SharePoint](https://yaleedu.sharepoint.com/:u:/r/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&web=1&e=vQamcY): Find details about what RBA provides, along with supporting documents such as how-to guides for accessing the VDI, enrolling in Duo, links to training portals, and user guides for researchers.
+
+- [JDAT Analytics Portal](https://jdat.ynhh.org/AnalyticsPortal): Submit requests to the JDAT team, make Helix requests (Yale’s customized data warehouse system), and find YNHHS-created training for tools like Epic's Slicer Dicer.
+
+- [Epic UserWeb](https://userweb.epic.com/): Find Epic training materials, documentation, community discussions, support resources, updates, customization options, and access to your Epic profile.
+
+- [Epic University](https://training.epic.com/): A subdomain of the UserWeb, find training opportunities and access to coursework necessary to obtain certificates, such as the Super User Badge, with courses organized by the Epic team.
+
+- [Galaxy](https://galaxy.epic.com/?#Home): A subdomain of the UserWeb, find comprehensive resource that provides documentation, announcements, best practices, and implementation guides related to the Epic dataset.
 
 :::
 

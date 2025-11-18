@@ -375,5 +375,4 @@ cat(citations_html)
 
 :::
 
-
 ## References

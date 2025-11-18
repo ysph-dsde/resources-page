@@ -110,6 +110,9 @@ $dsde-blue-light: #3e70a1;
     font-family: 'YaleNew', serif !important;
     font-size: 1.2rem;
 }
+.navbar #quarto-search {
+    margin-left: 0 !important;
+}
 @media (max-width: 470px) {
     .navbar-title {
       font-size: clamp(1.3rem, 5vw, 1.5rem);
@@ -127,7 +130,7 @@ $dsde-blue-light: #3e70a1;
       font-size: 1.7rem;
     }
     .navbar-brand {
-      margin-right: -1.2rem !important;
+      padding-right: -0.5rem !important;
       text-align: left;
       line-height: 1;
       white-space: normal !important;
@@ -207,6 +210,7 @@ div.callout-important.callout {
     background-color: var(--bs-body-bg);
     z-index: 2;
     padding: 20px;
+    padding-bottom: 40px;
     margin-left: auto;
 }
 .logo-container::before {
@@ -245,6 +249,7 @@ div.callout-important.callout {
     }
     .logo-container {
         width: 200px;
+        padding-bottom: 30px;
     }
     .logo-container::before {
         right: calc(-70px - (50vw - 100%)); /* Adjust the extent of the background for smaller screens */
@@ -509,15 +514,12 @@ div.datatables {
   margin-top: 40px;
   margin-bottom: 45px;
 }
-/* Header cells */
 .custom-table th {
   font-size: 18px; /* Font size for header */
   padding: 12px;
   border-bottom: 1px solid #ddd;
   vertical-align: top;
 }
-
-/* Body cells */
 .custom-table td {
   font-size: 15px;
   padding: 12px;
@@ -599,6 +601,44 @@ div.datatables {
   transform: rotate(90deg);
 }
 
+
+/* Custom table for providing definitions and descriptions */
+
+.definition-table {
+  border-collapse: separate;
+  border-spacing: 0 5px;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+.definition-table td {
+  padding: 0px;
+  font-size: 0.95rem;
+  font-weight: bold;
+}
+.definition-table a {
+  font-weight: bold;
+}
+.definition-table p {
+  font-weight: normal;
+}
+.definition-table p a {
+  font-weight: normal;
+}
+.definition-table .left-column {
+  text-align: right;
+  width: 25%;
+  vertical-align: top;
+}
+.definition-table .gap-column {
+  width: 3%;
+}
+.definition-table .right-column {
+  width: 72%;
+  vertical-align: top;
+}
+.definition-table .right-column p + p {
+  margin-top: 10px; /* Adjust the value to increase/decrease space between paragraphs */
+}
 
 /*-- header banner --*/
 
@@ -1528,15 +1568,16 @@ body.people {
   justify-content: center;
 }
 .info-box {
-  width: calc(50% - 20px);
-  margin: 10px;
+  width: calc(50% - 30px);
+  margin: 15px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
 }
 .centered-box {
   width: 45%;
   margin: 20px auto;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 0px;
 }
 .more-info-box {
@@ -1546,9 +1587,14 @@ body.people {
   overflow: hidden;
   transition: transform 0.3s;
   padding: 0;
-  border: 2px solid #ccc;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, 
+    rgba(211, 211, 211, 0) 0%, 
+    var(--light-header-background) 20%, 
+    var(--light-header-background) 80%, 
+    rgba(211, 211, 211, 0) 100%);
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -1637,6 +1683,9 @@ body.people {
   .info-box {
     width: 70%;
     margin: 10px auto;
+  }
+  .info-box:first-child {
+    margin-top: 20px;
   }
   .centered-box {
     width: 70%;

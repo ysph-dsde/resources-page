@@ -120,7 +120,7 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://medicine.yale.edu/ybic/ynhhs-research-access/
         group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
-        #info: More-Info-Pages/Restricted-Access/YNHHS-Epic.qmd
+        info: More-Info-Pages/Restricted-Access/YNHHS-Epic.qmd
         
   # -----------
   # Region/Affiliation by: Yale University
@@ -341,7 +341,7 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://medicine.yale.edu/ybic/ynhhs-research-access/
         group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
-        #info: More-Info-Pages/Restricted-Access/Epic-Cosmos.qmd
+        info: More-Info-Pages/Restricted-Access/Epic-Cosmos.qmd
         
   # License Required
   - categories1:
