@@ -20,26 +20,6 @@
   chunk_output_type: console
 ---
 
-```{=html}
-<div id="formsPopup" class="popup">
-    <div class="popup-content">
-        <span class="close-button">&times;</span>
-        <h2>We'd Love Your Feedback!</h2>
-        <p>Thank you for visiting our website! We value your feedback and use it to continually improve our services. Yale affiliates will find a link to our suggestion box included in their form.</p>
-        
-        <div class="form-links">
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
-        </div>
-        
-        <p><small>Forms will open in a new tab</small></p>
-    </div>
-</div>
-
-<script src="../../../Code/popup.js"></script>
-```
-
-
 ```{r}
 #| echo: false
 

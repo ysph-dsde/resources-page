@@ -136,7 +136,7 @@ For technical support, contact the YNHH Service Desk at 203-688-HELP (4357) or [
 1. When your application is approved, you will receive a welcome letter from YNHHS containing your YNHH Network ID and a temporary password. Follow the instructions in the letter to reset your password.
 
 :::{.callout-important}
-Your YNHH NetID also serves as your Epic username. 
+Your YNHH NetID also serves as your Epic username.
 :::
 
 2. Enroll in Duo Multi-Factor Authentication through the Password Self Service Portal. Full details are available in the "YNHH Duo Enrollment" document on the RBA SharePoint.
@@ -169,7 +169,7 @@ Researchers seeking access to YNHHS Epic data will need a Researcher Basic Acces
       <!-- empty column to create gap -->
     </td>
     <td class="right-column">
-      <p>Remote access to a YNHHS secure device without requiring the YNHHS VPN is available through VDI, which includes software such as SQL Server Management Studio, R, Stata, SAS, Office365, and Epic. This setup is suitable for handling small-to-medium sized data, as well as accessing Epic charts, SlicerDicer, and the Computational Health Platform (CHP).</p>
+      <p>Provides remote access to a YNHHS secure device without requiring the YNHHS VPN. Each device is suited with software such as SQL Server Management Studio, R, Stata, SAS, Office365, and Epic, and is where researchers can access Kamino/CHP. This set up can handling small-to-medium sized data, as well as accessing Epic charts, SlicerDicer, and the Computational Health Platform (CHP).</p>
     </td>
   </tr>
   <tr>

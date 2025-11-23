@@ -14,6 +14,8 @@
 /.quarto/
 /docs/
 /_site/
+/_includes/
+/site_libs/
 /Local Only/
 /Images/
 
