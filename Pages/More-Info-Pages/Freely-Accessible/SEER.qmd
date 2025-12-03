@@ -1,45 +1,23 @@
 ---
-  title: "Surveillance, Epidemiology, and</br>End Results Program (SEER)"
-  description: |
-         </br>
-         The Surveillance, Epidemiology, and End Results Program (SEER) has provided vital cancer statistics since 1973, now covering 45.9% of the US population and recording around 17 million cases. SEER data includes demographics, tumor characteristics, treatments, and outcomes from various registries, providing national representation of different racial and ethnic groups\ [@about_seer; @program_overview].
-         </br>
-         </br>
-          Researchers can access SEER Research Data, SEER Research Plus and NCCR Data, Supplementary Datasets, and Specialized Datasets, each offering varying levels of detail. SEER also provides software tools like SEER\*Explorer, NCCR\*Explorer, SEER\*Stat, SEERPrep, and SEER\*DMS for efficient data access and analysis\ [@data_apps; @explorer_tools; @methods_tools; @data_software].
-  title-block-banner: true
-  format: 
-    html:
-      toc: true
-      toc-depth: 4
-  header-includes:
-    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
-  editor: source
-  bibliography: BibTeX/seer_references.bib
-  csl: BibTeX/nature.csl
-  filters:
-    - parse-latex
-  markdown: 
-  editor_options: 
-  chunk_output_type: console
+title-block-banner: true
+title: |
+  Surveillance, Epidemiology, and</br>End Results Program (SEER)
+description: |
+  </br>
+  The Surveillance, Epidemiology, and End Results Program (SEER) has provided vital cancer statistics since 1973, now covering 45.9% of the US population and recording around 17 million cases. SEER data includes demographics, tumor characteristics, treatments, and outcomes from various registries, providing national representation of different racial and ethnic groups\ [@about_seer; @program_overview].
+  </br>
+  </br>
+  Researchers can access SEER Research Data, SEER Research Plus and NCCR Data, Supplementary Datasets, and Specialized Datasets, each offering varying levels of detail. SEER also provides software tools like SEER\*Explorer, NCCR\*Explorer, SEER\*Stat, SEERPrep, and SEER\*DMS for efficient data access and analysis\ [@data_apps; @explorer_tools; @methods_tools; @data_software].
+include-in-header: ../../../_includes/feedback_popup.html
+bibliography: BibTeX/seer_references.bib
+csl: ../../../Code/nature.csl
 ---
 
 ```{r}
 #| echo: false
 
-# Import necessary libraries
-suppressPackageStartupMessages({
-  library("stringr")
-  library("htmltools")
-  library("glue")
-  library("rentrez")
-  library("xml2")
-  library("clipr")
-})
-
-"%!in%" <- function(x,y)!("%in%"(x,y))
-
 # Load in the functions.
-source('./PubMed Search_Functions.R')
+source('../../../Code/PubMed Search_Functions.R')
 ```
 
 <small>Updated: October 21<sup>th</sup>, 2025</small>
@@ -231,7 +209,7 @@ citations <- get_citations(
   doi = c("10.1016/j.urology.2022.07.012", "10.1016/j.annonc.2022.03.276", 
           "10.1016/j.jgo.2022.09.010", "10.1016/j.eclinm.2023.102138", 
           "10.59249/IAJU7580"),
-  affiliation = c("Yale School of Public Health", "Yale School of Medicine"),
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )
 

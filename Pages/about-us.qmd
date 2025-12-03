@@ -1,18 +1,14 @@
 ---
-  format:
-    html:
-      toc: false
-  markdown: 
-  editor_options: 
-  chunk_output_type: console
-  back-to-top-navigation: true
-  listing:
-    - id: contributors
-      template: ../Code/Listing_About-Us/about-us-formatting.ejs
-      contents: ../Code/Listing_About-Us/about-us-listings.yml
-      categories: false
-      sort-ui: false
-      filter-ui: false
+format:
+  html:
+    toc: false
+listing:
+  - id: contributors
+    template: ../Code/Listing_About-Us/about-us-formatting.ejs
+    contents: ../Code/Listing_About-Us/about-us-listings.yml
+    categories: false
+    sort-ui: false
+    filter-ui: false
 ---
 
 

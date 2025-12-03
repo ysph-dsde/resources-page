@@ -43,6 +43,24 @@
 ##       them into an HTML structure with list items (`<li>`) and a search query 
 ##       description.
 
+## ----------------------------------------------------------------
+## SET UP THE ENVIRONMENT
+
+# Import necessary libraries
+suppressPackageStartupMessages({
+  library("stringr")     # String manipulation functions
+  library("htmltools")   # Tools for HTML generation and output
+  library("glue")        # String interpolation
+  library("rentrez")     # Interface to NCBI's Entrez databases
+  library("xml2")        # Working with XML files
+  library("clipr")       # Read and write from the system clipboard
+})
+
+# Function to select "Not In"
+"%!in%" <- function(x,y)!("%in%"(x,y))
+
+
+
 
 ## ----------------------------------------------------------------
 ## FUNCTIONS

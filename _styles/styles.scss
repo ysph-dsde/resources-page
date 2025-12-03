@@ -143,6 +143,7 @@ $dsde-blue-light: #3e70a1;
 }
 .dropdown-item:hover {
     color: #f0f0f0 !important;
+    background-color: lighten($link-color-footer, 10%) !important;
 }
 
 /* Callout Boxes */

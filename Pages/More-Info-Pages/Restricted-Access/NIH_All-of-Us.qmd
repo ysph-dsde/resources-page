@@ -1,45 +1,23 @@
 ---
-  title: "NIH's All of Us"
-  description: |
-         </br>
-         The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens\ [@overview; @participants; @intro_video; @snapshot]. 
-         </br>
-         </br>
-         All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies\ [@overview; @data_sources; @data_browser].
-  title-block-banner: true
-  format: 
-    html:
-      toc: true
-      toc-depth: 4
-  header-includes:
-    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
-  editor: source
-  bibliography: BibTeX/aou_references.bib
-  csl: BibTeX/nature.csl
-  filters:
-    - parse-latex
-  markdown: 
-  editor_options: 
-  chunk_output_type: console
+title-block-banner: true
+title: |
+  NIH's All of Us
+description: |
+  </br>
+  The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens\ [@overview; @participants; @intro_video; @snapshot].
+  </br>
+  </br>
+  All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies\ [@overview; @data_sources; @data_browser].
+include-in-header: ../../../_includes/feedback_popup.html
+bibliography: BibTeX/aou_references.bib
+csl: ../../../Code/nature.csl
 ---
 
 ```{r}
 #| echo: false
 
-# Import necessary libraries
-suppressPackageStartupMessages({
-  library("stringr")
-  library("htmltools")
-  library("glue")
-  library("rentrez")
-  library("xml2")
-  library("clipr")
-})
-
-"%!in%" <- function(x,y)!("%in%"(x,y))
-
 # Load in the functions.
-source('./PubMed Search_Functions.R')
+source('../../../Code/PubMed Search_Functions.R')
 ```
 
 <small>Updated: October 29<sup>th</sup>, 2025</small>
@@ -84,8 +62,6 @@ It typically takes one to two weeks to process applications, though it may take 
 #### Step-by-Step Guide
 
 No specific steps are required to access the publicly available data, which can be found on the [Data Snapshot](https://www.researchallofus.org/data-tools/data-snapshots/) and [Data Browser](https://databrowser.researchallofus.org/?_gl=1*137ufbe*_ga*OTMwMDkxNjY5LjE3MzMxNTE0MTY.*_ga_MQVR5DG2C4*czE3NTk4NjMwMjUkbzUkZzEkdDE3NTk4NjMxNDckajUyJGwwJGgxMTk5Nzc2MzM0) webpages\ [@data_browser; @snapshot].
-
-
 
 ### Registered Tier
 
@@ -312,7 +288,7 @@ citations <- get_citations(
           "10.14336/AD.2025.0754", "10.1101/2024.10.28.24316286", 
           "10.1101/2023.10.29.564615", "10.1111/dme.15322", 
           "10.1101/2025.06.16.659952"),
-  affiliation = c("Yale School of Public Health", "Yale University"),
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )
 
@@ -352,7 +328,7 @@ cat(citations_html)
 <script src="../../../Code/pagination.js"></script>
 ```
 
-
 :::
+
 
 ## References

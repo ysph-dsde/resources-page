@@ -1,45 +1,23 @@
 ---
-  title: "Merative's MarketScan"
-  description: |
-         </br>
-         <a href="https://www.merative.com/">Merative</a> advances health and social care by providing innovative healthcare data and technology solutions, collaborating with thousands of providers and major organizations\ [@merative; @about_merative]. Their MarketScan Research Databases offer longitudinal, patient-level data on healthcare costs and outcomes, supporting diverse research applications with data from over 273 million patients and more than 2,600 peer-reviewed publications. MarketScan's detailed and HIPAA-compliant data enhance research across disease areas, backed by powerful analytic tools\ [@merative_marketscan_docs].
-         </br>
-         </br>
-         At Yale, the <a href="https://medicine.yale.edu/ybic/data-resources-services/marketscan/">MarketScan database</a> is licensed for research use by the <a href="https://medicine.yale.edu/ybic/">Yale Biomedical Informatics and Computing (YBIC)</a> office, with support from the <a href="https://library.medicine.yale.edu/">Harvey Cushing/John Hay Whitney Medical Library</a> and the <a href="https://medicine.yale.edu/center-clinical-investigation/">Yale Center for Clinical Investigation (YCCI)</a>. Yale researchers can access and analyze MarketScan data by submitting a request form for assistance from the YBIC team\ [@ybic_marketscan; @ybic_access].
-  title-block-banner: true
-  format: 
-    html:
-      toc: true
-      toc-depth: 4
-  header-includes:
-    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
-  editor: source
-  bibliography: BibTeX/references.bib
-  csl: BibTeX/nature.csl
-  filters:
-    - parse-latex
-  markdown: 
-  editor_options: 
-  chunk_output_type: console
+title-block-banner: true
+title: |
+  Merative's MarketScan
+description: |
+  </br>
+  <a href="https://www.merative.com/">Merative</a> advances health and social care by providing innovative healthcare data and technology solutions, collaborating with thousands of providers and major organizations\ [@merative; @about_merative]. Their MarketScan Research Databases offer longitudinal, patient-level data on healthcare costs and outcomes, supporting diverse research applications with data from over 273 million patients and more than 2,600 peer-reviewed publications. MarketScan's detailed and HIPAA-compliant data enhance research across disease areas, backed by powerful analytic tools\ [@merative_marketscan_docs].
+  </br>
+  </br>
+  At Yale, the <a href="https://medicine.yale.edu/ybic/data-resources-services/marketscan/">MarketScan database</a> is licensed for research use by the <a href="https://medicine.yale.edu/ybic/">Yale Biomedical Informatics and Computing (YBIC)</a> office, with support from the <a href="https://library.medicine.yale.edu/">Harvey Cushing/John Hay Whitney Medical Library</a> and the <a href="https://medicine.yale.edu/center-clinical-investigation/">Yale Center for Clinical Investigation (YCCI)</a>. Yale researchers can access and analyze MarketScan data by submitting a request form for assistance from the YBIC team\ [@ybic_marketscan; @ybic_access].
+include-in-header: ../../../_includes/feedback_popup.html
+bibliography: BibTeX/references.bib
+csl: ../../../Code/nature.csl
 ---
 
 ```{r}
 #| echo: false
 
-# Import necessary libraries
-suppressPackageStartupMessages({
-  library("stringr")
-  library("htmltools")
-  library("glue")
-  library("rentrez")
-  library("xml2")
-  library("clipr")
-})
-
-"%!in%" <- function(x,y)!("%in%"(x,y))
-
 # Load in the functions.
-source('./PubMed Search_Functions.R')
+source('../../../Code/PubMed Search_Functions.R')
 ```
 
 <small>Updated: October 10<sup>th</sup>, 2025</small>
@@ -110,7 +88,7 @@ citations <- get_citations(
           "10.1001/jamanetworkopen.2022.22101", "10.1016/j.vaccine.2021.04.003",
           "10.3390/ijerph192114445", "10.1016/j.clml.2024.07.017",
           "10.1200/OP-24-00978"),
-  affiliation = c("Yale School of Public Health", "Yale School of Medicine"),
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )
 

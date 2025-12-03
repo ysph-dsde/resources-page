@@ -1,45 +1,23 @@
 ---
-  title: "National Health and Nutrition Examination Survey"
-  description: |
-         </br>
-         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health\ [@about_nhanes; @achievements_nhanes]. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
-         </br>
-         </br>
-         Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
-  title-block-banner: true
-  format: 
-    html:
-      toc: true
-      toc-depth: 4
-  header-includes:
-    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
-  editor: source
-  bibliography: BibTeX/nhanes_references.bib
-  csl: BibTeX/nature.csl
-  filters:
-    - parse-latex
-  markdown: 
-  editor_options: 
-  chunk_output_type: console
+title-block-banner: true
+title: |
+  National Health and Nutrition Examination Survey
+description: |
+  </br>
+  The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health\ [@about_nhanes; @achievements_nhanes]. Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
+  </br>
+  </br>
+  Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
+include-in-header: ../../../_includes/feedback_popup.html
+bibliography: BibTeX/nhanes_references.bib
+csl: ../../../Code/nature.csl
 ---
 
 ```{r}
 #| echo: false
 
-# Import necessary libraries
-suppressPackageStartupMessages({
-  library("stringr")
-  library("htmltools")
-  library("glue")
-  library("rentrez")
-  library("xml2")
-  library("clipr")
-})
-
-"%!in%" <- function(x,y)!("%in%"(x,y))
-
 # Load in the functions.
-source('./PubMed Search_Functions.R')
+source('../../../Code/PubMed Search_Functions.R')
 ```
 
 <small>Updated: October 9<sup>th</sup>, 2025</small>
@@ -360,7 +338,7 @@ citations <- get_citations(
           "10.1001/jama.2025.16533", "10.1093/jamia/ocad035", 
           "10.1001/jamanetworkopen.2022.22385", "10.1001/jamanetworkopen.2025.16663",
           "10.1001/jamanetworkopen.2022.9953"),
-  affiliation = c("Yale School of Public Health", "Yale School of Medicine"),
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )
 

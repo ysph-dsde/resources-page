@@ -21,6 +21,14 @@ website:
         href: Pages/resources.qmd
       - text: "Datasets"
         href: Pages/datasets.qmd
+      - text: "Feedback"
+        menu:
+          - text: "For Yale Affiliates"
+            href: https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u
+            target: _blank
+          - text: "For Non-Yale Affiliates"
+            href: https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u
+            target: _blank
       - text: "About Us"
         href: Pages/about-us.qmd
       - text: "Contact"
@@ -55,10 +63,22 @@ format:
     include-in-header: 
       - _includes/google_analytics.html
       - _includes/functional_scripts.html
-      - _includes/feedback_popup.html
+      #- _includes/feedback_popup.html
+    header-includes:
+      - <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+      - <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    toc: true
+    toc-depth: 4
     theme:
       - flatly
       - _styles/styles.scss
-    toc: true
     from: markdown+autolink_bare_uris
 
+
+editor: source
+filters:
+    - parse-latex
+
+markdown: 
+  editor_options: 
+    chunk_output_type: console

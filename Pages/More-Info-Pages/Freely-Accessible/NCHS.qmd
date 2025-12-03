@@ -1,42 +1,20 @@
 ---
-  title: "National Center for Health Statistics (NCHS)"
-  description: |
-         </br>
-         The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends\ [@about; @data_tools].
-  title-block-banner: true
-  format: 
-    html:
-      toc: true
-      toc-depth: 4
-  header-includes:
-    - '<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">'
-  editor: source
-  bibliography: BibTeX/general_references.bib
-  csl: BibTeX/nature.csl
-  filters:
-    - parse-latex
-  markdown: 
-  editor_options: 
-  chunk_output_type: console
+title-block-banner: true
+title: |
+  National Center for Health Statistics (NCHS)
+description: |
+  </br>
+  The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends\ [@about; @data_tools].
+include-in-header: ../../../_includes/feedback_popup.html
+bibliography: BibTeX/general_references.bib
+csl: ../../../Code/nature.csl
 ---
 
 ```{r}
 #| echo: false
 
-# Import necessary libraries
-suppressPackageStartupMessages({
-  library("stringr")
-  library("htmltools")
-  library("glue")
-  library("rentrez")
-  library("xml2")
-  library("clipr")
-})
-
-"%!in%" <- function(x,y)!("%in%"(x,y))
-
 # Load in the functions.
-source('./PubMed Search_Functions.R')
+source('../../../Code/PubMed Search_Functions.R')
 ```
 
 <small>Updated: October 23<sup>th</sup>, 2025</small>
@@ -84,7 +62,7 @@ citations <- get_citations(
   doi = c("10.7326/M21-0065", "10.1001/jamanetworkopen.2025.7695",
           "10.1007/s10995-025-04150-2", "10.1016/S2589-7500(21)00214-4",
           "10.1038/s41467-025-58236-0", "10.1016/j.ijid.2025.108020"),
-  affiliation = c("Yale School of Public Health", "Yale School of Medicine"),
+  affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )
 

@@ -2,9 +2,6 @@
   format: 
     html:
       toc: false
-  markdown: 
-  editor_options: 
-  chunk_output_type: console
   page-navigation: false
   back-to-top-navigation: true
 ---

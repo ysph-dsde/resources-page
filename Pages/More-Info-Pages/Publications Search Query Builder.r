@@ -108,5 +108,13 @@ build_search_query(
   affiliation = "Yale School of Public Health", years = 5)
 
 
+## ----------------
+## YNHHS 
+
+build_search_query(
+  keywords = c("Yale New Haven Health System", "YNHHS"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+
 
 
