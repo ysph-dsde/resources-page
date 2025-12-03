@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-f02b9937c905377287fbe6092dcaf642.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-e4b0cc2a50dfe8b67b08f7f58b6f22cd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -156,37 +156,8 @@ ul.task-list li input[type="checkbox"] {
  * Need to try generalizing the zoom script so that it can be applied
  * globally.
  -->
-<!--
- * This script handles the functionality for a timed feedback popup modal that
- * appears after a specified delay when users visit the webpage.
- * 
- * It includes the following features:
- *    1. Displaying a feedback popup after a configurable time delay.
- *    2. Opening multiple Microsoft Forms links in new tabs.
- *    3. Configurable delay timing with common preset options commented.
- *
- * Author: Shelby Golden, M.S.
- *   Date: November 2025
- * 
- * Note: Written with the assistance of Yale's AI, Clarity.
- -->
- 
- </head><body class="nav-fixed fullcontent"><div id="formsPopup" class="popup">
-    <div class="popup-content">
-        <span class="close-button">×</span>
-        <h2>We'd Love Your Feedback!</h2>
-        <p>Thank you for visiting our website! We value your feedback and use it to continually enhance our services. At the end of the feedback survey, you will have the chance to suggest new workshops and asynchronous materials.</p>
-        
-        <div class="form-links">
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMjhSTjVOWjQ0MkFIM0hDS0pVQ0tZN1kzMi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5URFBRQ1ZVUFlFVEY0MElSNTlSSzJTWkhXNS4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
-        </div>
-        
-        <p><small>Forms will open in a new tab</small></p>
-    </div>
-</div>
-
-<script src="../Code/popup.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -218,9 +189,9 @@ window.Quarto = {
 };
 </script>
 
+</head>
 
-
-
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -245,6 +216,21 @@ window.Quarto = {
     <a class="nav-link active" href="../Pages/datasets.html" aria-current="page"> 
 <span class="menu-text">Datasets</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Feedback</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
+ <span class="dropdown-text">For Yale Affiliates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
+ <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../Pages/about-us.html"> 
 <span class="menu-text">About Us</span></a>
@@ -940,10 +926,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="no" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-03-20" data-ranking="3">
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Restricted%20Access" data-info="yes" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-03-20" data-ranking="3">
                   <img src="../Images/Datasets/YNHHS Epic.png" class="image">
                   <h2 class="js-line-count">Yale New Haven Health System (YNHHS) Epic</h2>
-                  <p class="description">Cosmos is a dataset created in collaboration with a community of health systems using Epic and is designed to improve patient care. By combining their data, participating organizations and Epic can make new discoveries and advance medicine. Cosmos also powers tools at the point of care, providing insights to clinicians that are tailored to the patient in front of them.
+                  <p class="description">The Yale New Haven Hospital System (YNHHS) utilizes Epic's electronic medical record (EMR) system, digitizing patient medical data across its network of hospitals and clinics. YNHHS offers a wide range of medical services, including emergency care and over 100 specialties. This extensive service provision allows for the inclusion of comprehensive medical data such as medical history, allergies, medications, laboratory and radiology results, and visit notes in their EMR system. Annually, YNHHS handles approximately 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits.
+<br>
+<br>
+Epic Cosmos combines inpatient and outpatient records into a single, longitudinal patient record, eliminating duplicated records across multiple organizations. The dataset is HIPAA-compliant and enhances patient privacy by suppressing geographic information, shifting patient dates, and concealing the source organization.
 </p>
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
@@ -959,6 +948,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                        
                        
                        
+                       
+                        &nbsp;
+                        <a href="../Pages/More-Info-Pages/Restricted-Access/YNHHS-Epic.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-info-circle"></i></a>
                       
                        
                         <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p> 

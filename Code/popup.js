@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 2 minutes: var delayTime = 120000;
     // 3 minutes: var delayTime = 180000; (current setting)
     // 5 minutes: var delayTime = 300000;
-    var delayTime = 5000; // Change this to adjust the delay
+    var delayTime = 120000; // Change this to adjust the delay
     
     var formsPopup = document.getElementById("formsPopup");
     var closeBtn = document.querySelector(".close-button");

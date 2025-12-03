@@ -21,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -40,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-f02b9937c905377287fbe6092dcaf642.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-e4b0cc2a50dfe8b67b08f7f58b6f22cd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -157,6 +177,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 
 <script src="../../../Code/popup.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 
 
@@ -186,6 +208,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="../../../Pages/datasets.html"> 
 <span class="menu-text">Datasets</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Feedback</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
+ <span class="dropdown-text">For Yale Affiliates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
+ <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="../../../Pages/about-us.html"> 
 <span class="menu-text">About Us</span></a>
@@ -231,9 +268,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link active" data-scroll-target="#gaining-access">Gaining Access</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link" data-scroll-target="#gaining-access">Gaining Access</a></li>
   <li><a href="#valuable-links" id="toc-valuable-links" class="nav-link" data-scroll-target="#valuable-links">Valuable Links</a></li>
-  <li><a href="#important-links" id="toc-important-links" class="nav-link" data-scroll-target="#important-links">Important Links</a></li>
   <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
@@ -256,6 +293,37 @@ ul.task-list li input[type="checkbox"] {
 <li>Epic Cosmos - RBA holders can gain access to de-identified, summary count data produced by Epic participating institutions outside of YNHHS upon special request.</li>
 </ul>
 </div>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The Epic Cosmos data combines inpatient and outpatient charts into a single, longitudinal patient record, removing any duplicated records that may arise from being seen at multiple Cosmos organizations. The data provided to researchers adheres to <a href="https://privacyruleandresearch.nih.gov/pr_08.asp">HIPAA-defined limited data set</a> rules. In Cosmos, the de-identified dataset enhances patient privacy protections by suppressing geographic information, consistently shifting patient dates, and concealing the source organization. More details can be found in their Data Dictionary, which provides notes on the transformation of individual data elements.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Leverage Expert Analysis for Your Research Needs!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Joint Data Analytics Team (JDAT) offers customized reporting and data analysis from the Epic data system, specializing in research support. With a team of 60 informaticists and analysts, JDAT works closely with users to understand their data needs and efficiently retrieve information. JDAT supports projects such as cohort population counts, grant application statistics, retrospective reviews, custom data extracts, and report development&nbsp;<span class="citation" data-cites="ycci_epic_ehr"><sup><a href="#ref-ycci_epic_ehr" role="doc-biblioref">1</a></sup></span>.</p>
+<p>Click <a href="https://medicine.yale.edu/ybic/data-resources-services/how-to-submit-a-research-data-request/">here</a> for directions on submitting a Helix research data request with JDAT, Yale’s customized data warehouse system. Learn more on the <a href="https://medicine.yale.edu/center-clinical-investigation/">Yale Center for Clinical Investigation</a>’s <a href="https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx">Epic Electronic Health Record</a> SharePoint page, which is also accessible from their <a href="https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/">For Researchers &amp; Research Professionals</a> webpage&nbsp;<span class="citation" data-cites="jdat_helix ycci_epic_ehr ybic_for_researchers"><sup><a href="#ref-ycci_epic_ehr" role="doc-biblioref">1</a>–<a href="#ref-ybic_for_researchers" role="doc-biblioref">3</a></sup></span>.</p>
+</div>
+</div>
+<p>The types of data collected in the EMR are continuously expanding. For example, researchers currently have access to the following data&nbsp;<span class="citation" data-cites="epic_overview"><sup><a href="#ref-epic_overview" role="doc-biblioref">4</a></sup></span>:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><strong>Patient Information:</strong> Limited demographic details such as age, sex, gender identity, race, ethnicity, location, patient status, and family history, social history elements like tobacco and substance use, birth control, social determinants of health, allergy information, and detailed birth history.</p></li>
+<li><p><strong>Visits and Encounters:</strong> Patient encounters and admissions including encounter type, classification, department and provider specialties, and visit reasons, as well as clinical notes from various medical documentation and patient experience data from MyChart usage and patient-reported outcomes.</p></li>
+<li><p><strong>Medical Data:</strong> Diagnoses, clinical and billed procedures, and vital signs such as blood pressure, pulse, temperature, respiratory rate, SpO2 levels, height, weight, BMI, and head circumference.</p></li>
+<li><p><strong>Lab and Genomics:</strong> Lab results such as component-specific results, susceptibility results, and reference ranges, in addition to genomic variant data like allelic state and chromosome details, and biosamples for genomic assays including blood, saliva, and urine samples.</p></li>
+<li><p><strong>Health Assessments:</strong> Information on cancer staging, immunizations, and eye exams, with details on stage group, immunization type, and visual acuity.</p></li>
+<li><p><strong>Specialty Data:</strong> Records data on hospital-acquired infections and various infection types, surgical procedures, transplant data for liver and kidney transplants, and health tracking data from wearable devices.</p></li>
+<li><p><strong>Research and Analytics:</strong> Geographic factors like RUCA and Social Vulnerability Index, risk scores for conditions such as cardiovascular disease and diabetes, and data from research studies detailing study type, enrollment, and partnered research contributions.</p></li>
+<li><p><strong>Miscellaneous:</strong> Encompasses peer group information on various types of hospitals, medication data including prescriptions and patient-reported medications, and additional lab results.</p></li>
+</ul>
+</div>
+</section>
 <section id="gaining-access" class="level2">
 <h2 class="anchored" data-anchor-id="gaining-access">Gaining Access</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -323,32 +391,63 @@ Note
 <li><p>If you did not link your Workday account with CITI, save the completion certificate and send it to <a href="mainto:irb.training@yale.edu">irb.training@yale.edu</a>. If you accessed CITI through Workday, your record should auto-update.</p></li>
 </ol>
 </div>
-<p><strong>c: </strong></p>
+<p><strong>c: Accessing Epic Cosmos</strong></p>
+<p>Accessing the Epic Cosmos SlicerDicer is done through the Epic Cosmos portal, and not the YNHH VDI. You can either open this portal from the Epic UserWeb by navigating to the “Show All” drop down menu and selecting “Cosmos” under “Support”. Or, you can directly access Cosmos at <a href="https://cosmos.epichosted.com/EpicCareLink_AUTH/common/epic_check.asp">cosmos.epichosted.com</a>.</p>
+<p><strong>d: Training</strong></p>
+<p>Training based on role. Can list out the ones for “Generating reports” and “research”</p>
+<p>“Cosmos Portal &amp; Analytics Resources” in Galaxy for additional learning materials for using Epic and it’s analytical tools like SlicerDicer</p>
+<p><a href="https://cosmos.epichosted.com/EpicCareLink_AUTH/common/epic_check.asp">Library of Learning Dashboards</a></p>
+</section>
+<section id="certifications" class="level4">
+<h4 class="anchored" data-anchor-id="certifications">Certifications</h4>
+</section>
+<section id="publications-expectations" class="level4">
+<h4 class="anchored" data-anchor-id="publications-expectations">Publications Expectations</h4>
+<p>Epic provides data users with a checklist for preparing data for publications, emphasized in the user agreement, “Cosmos Rules of the Road”. The full instructions and expectations can be found in the Galaxy “Cosmos Publication Checklist” article and the “Cosmos Rules of the Road”, which outlines some of the Data Use Agreement terms&nbsp;<span class="citation" data-cites="epic_publication_checklist"><sup><a href="#ref-epic_publication_checklist" role="doc-biblioref">5</a></sup></span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data Privacy: Low Count Suppression
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When transferring results off the VDI or sharing SlicerDicer graphs, it is imperative to follow Epic’s process to prevent the exportation of line-level data. No counts less than 10 can be individually noted (report as &lt;11).</p>
+<p>Review the <a href="https://resdac.org/articles/cms-cell-size-suppression-policy">Centers for Medicare and Medicaid Services (CMS) Cell Size Suppression Policy</a> outlined by the Research Data Assistance Center (ResDAC) for examples of how to appropriately suppress low counts&nbsp;<span class="citation" data-cites="cms_supression_policy"><sup><a href="#ref-cms_supression_policy" role="doc-biblioref">6</a></sup></span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reporting Citations of Your Findings
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Researchers are obligated to provide a list of citations for any publications or references to their research conducted using Cosmos. This list must be submitted to the Governing Council on a semi-annual basis.</p>
+</div>
+</div>
 </section>
 </div>
 </div>
 </div>
-<p>:::</p>
 </section>
 <section id="valuable-links" class="level2">
 <h2 class="anchored" data-anchor-id="valuable-links">Valuable Links</h2>
 <div style="margin-left: 2rem">
 <ul>
-<li><p><a href="https://ynhh.certpointsystems.com/">YNHHS Learning Management System (LMS)</a>: Center Point is where you can sign up for in-person or online training courses.</p></li>
-<li><p><a href="https://myapps.ynhh.org">MyAPPs</a>: Find the portal for accessing the VDI using Citrix Workspace. Ensure that YNHHS DUO and YU/YNHHS VPN are utilized if access is attempted outside the Yale University or YNHHS network.</p></li>
-<li><p><a href="https://jdat.ynhh.org/AnalyticsPortal">JDAT Analytics Portal</a>: Submit requests to the JDAT team, make Helix requests (Yale’s customized data warehouse system), and find YNHHS-created training for tools like Epic’s Slicer Dicer.</p></li>
-<li><p><a href="https://userweb.epic.com/">Epic UserWeb</a>: Find Epic training materials, documentation, community discussions, support resources, updates, customization options, and access to your Epic profile.</p></li>
-<li><p><a href="https://training.epic.com/">Epic University</a>: A subdomain of the UserWeb, find training opportunities and access to coursework necessary to obtain certificates, such as the Super User Badge, with courses organized by the Epic team.</p></li>
-<li><p><a href="https://galaxy.epic.com/?#Home">Galaxy</a>: A subdomain of the UserWeb, find comprehensive resource that provides documentation, announcements, best practices, and implementation guides related to the Epic dataset.</p></li>
-</ul>
-</div>
-</section>
-<section id="important-links" class="level2">
-<h2 class="anchored" data-anchor-id="important-links">Important Links</h2>
-<div style="margin-left: 2rem">
-<ul>
-<li><a href="https://ynhh.certpointsystems.com/">YNHHS Learning Management System (LMS)</a>: Center Point is where you can sign up for in-person or online training courses.</li>
-<li><a href="https://myapps.ynhh.org">MyAPPs</a>: Access to the VDI via a Citrix Workspace download. YNHHS DUO and YU/YNHHS VPN is required if not accessing on the YU or YNHHS network.</li>
+<li><p><a href="https://ynhh.certpointsystems.com/">YNHH Learning Management System (LMS)</a>: Center Point Systems is where you can sign up for YNHH-created in-person or online training courses&nbsp;<span class="citation" data-cites="ynhhs_lms"><sup><a href="#ref-ynhhs_lms" role="doc-biblioref">7</a></sup></span>.</p></li>
+<li><p><a href="https://myapps.ynhh.org">MyAPPs</a>: Find the portal to access the VDI through Citrix Workspace. Ensure your YNHH Duo is active for authentication and use your YU/YNHHS VPN if accessing from outside the Yale University or YNHHS network.</p></li>
+<li><p><a href="https://yaleedu.sharepoint.com/:u:/r/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=vQamcY">JDAT RBA SharePoint</a>: Find details about what RBA provides, along with supporting documents such as how-to guides for accessing the VDI, enrolling in Duo, links to training portals, and user guides for researchers&nbsp;<span class="citation" data-cites="jdat_sharepoint"><sup><a href="#ref-jdat_sharepoint" role="doc-biblioref">8</a></sup></span>.</p></li>
+<li><p><a href="https://itstraining.ynhh.org">YNHH IT SharePoint</a>: Find IT support materials, guides for navigating the Epic VDI software, notices of upcoming training events and system updates, and training requirements for researchers using Epic data. To access the Epic-specific documentation, click the blue “Training &amp; Support Material” drop-down menu and select “Epic Training” to access the “Epic Training Portal”&nbsp;<span class="citation" data-cites="ynhhs_its_sharepoint"><sup><a href="#ref-ynhhs_its_sharepoint" role="doc-biblioref">9</a></sup></span>.</p></li>
+<li><p><a href="https://jdat.ynhh.org/AnalyticsPortal">JDAT Analytics Portal</a>: Submit a Helix request to have JDAT compile your research data. Additionally, access JDAT-created training for tools like Epic’s SlicerDicer&nbsp;<span class="citation" data-cites="jdat_helix"><sup><a href="#ref-jdat_helix" role="doc-biblioref">2</a></sup></span>.</p></li>
+<li><p><a href="https://userweb.epic.com/">Epic UserWeb</a>: Find Epic training materials, documentation, community discussions, support resources, updates, customization options, and access to your Epic profile&nbsp;<span class="citation" data-cites="epic_user_web"><sup><a href="#ref-epic_user_web" role="doc-biblioref">10</a></sup></span>.</p></li>
+<li><p><a href="https://training.epic.com/">Epic University</a>: A subdomain of the UserWeb, find training opportunities and access to coursework necessary to obtain certificates, such as the Super User Badge, with courses organized by the Epic team. Learn more about advanced training options on our <a href="../../../Pages/More-Info-Pages/Restricted-Access/Epic-Cosmos.html">Epic Cosmos</a> information webpage&nbsp;<span class="citation" data-cites="epic_training"><sup><a href="#ref-epic_training" role="doc-biblioref">11</a></sup></span>.</p></li>
+<li><p><a href="https://galaxy.epic.com/?#Home">Galaxy</a>: A subdomain of the UserWeb, find comprehensive resource that provides documentation, announcements, best practices, and implementation guides related to the Epic dataset&nbsp;<span class="citation" data-cites="epic_galaxy"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">12</a></sup></span>.</p></li>
 </ul>
 </div>
 </section>
@@ -359,7 +458,7 @@ Note
 <div id="citations-box">
 <ul id="citations-content">
 <li>
-<a href="https://pubmed.ncbi.nlm.nih.gov/34224262/">Mortality Among Persons Entering HIV Care Compared With the General U.S. Population : An Observational Study.</a><br>Jessie K Edwards, Stephen R Cole, Tiffany L Breger, Jacqueline E Rudolph, Lindsey M Filiatreau, Kate Buchacz, Elizabeth Humes, Peter F Rebeiro, Gypsyamber D’Souza, M John Gill, Michael J Silverberg, W Christopher Mathews, Michael A Horberg, Jennifer Thorne, H Irene Hall, <strong>Amy Justice</strong>, Vincent C Marconi, Viviane D Lima, Ronald J Bosch, Timothy R Sterling, Keri N Althoff, Richard D Moore, Michael Saag, Joseph J Eron<br>Annals of internal medicine 2021 Jul 6 doi: 10.7326/M21-0065<br>PMID: 34224262
+<a href="https://pubmed.ncbi.nlm.nih.gov/38742457/">To weight or not to weight? The effect of selection bias in 3 large electronic health record-linked biobanks and recommendations for practice.</a><br>Maxwell Salvatore, Ritoban Kundu, Xu Shi, Christopher R Friese, Seunggeun Lee, Lars G Fritsche, Alison M Mondul, David Hanauer, Celeste Leigh Pearce, <strong>Bhramar Mukherjee</strong><br>Journal of the American Medical Informatics Association : JAMIA doi: 10.1093/jamia/ocae098<br>PMID: 38742457
 </li>
 </ul>
 </div>
@@ -373,17 +472,49 @@ Note
 </div>
 </section>
 <section id="references" class="level2">
-<h2 class="anchored" data-anchor-id="references">References</h2>
-<p>The content provided here is a compilation of work from multiple groups throughout YU and YNHHS:</p>
-<div style="margin-left: 2rem">
-<ol type="1">
-<li><a href="https://medicine.yale.edu/ybic">Yale Biomedical Informatics &amp; Computing</a></li>
-</ol>
-</div>
+
+
 
 </section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-ycci_epic_ehr" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Koo, G. &amp; Clinical Investigation (YCCI), Y. C. for. Epic electronic health record. Epic electronic health record. <a href="https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx">https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx</a>.</div>
+</div>
+<div id="ref-jdat_helix" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">JDAT. Helix request. <span>JDAT</span> analytics portal. <a href="https://jdat.ynhh.org/AnalyticsPortal/helix">https://jdat.ynhh.org/AnalyticsPortal/helix</a>.</div>
+</div>
+<div id="ref-ybic_for_researchers" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Computing (YBIC), Y. B. I. \&amp;. For researchers &amp; research professionals. <a href="https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/">https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/</a>.</div>
+</div>
+<div id="ref-epic_overview" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Epic. Overview of cosmos. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!96!100278332,100278342&amp;from=RecentlyViewed">https://galaxy.epic.com/?#Browse/page=1!68!96!100278332,100278342&amp;from=RecentlyViewed</a> (2025).</div>
+</div>
+<div id="ref-epic_publication_checklist" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">Epic. Cosmos publication checklist. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!50!100130418&amp;from=Favorites">https://galaxy.epic.com/?#Browse/page=1!68!50!100130418&amp;from=Favorites</a> (2024).</div>
+</div>
+<div id="ref-cms_supression_policy" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">University of Minnesota School of Public Health - Health Policy &amp; Management, Medicare and Medicaid Services (CMS), C. for &amp; (ResDAC), R. D. A. C. <span>CMS</span> cell size suppression policy. Learn about <span>CMS</span> data. <a href="https://resdac.org/articles/cms-cell-size-suppression-policy">https://resdac.org/articles/cms-cell-size-suppression-policy</a> (2024).</div>
+</div>
+<div id="ref-ynhhs_lms" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Health, Y. N. H. Learning management. <a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/">https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/</a>.</div>
+</div>
+<div id="ref-jdat_sharepoint" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">JDAT. <span>YNHHS</span> researcher access. <a href="https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?ovuser=dd8cbebb-2139-4df8-b411-4e3e87abeb5c\%2Cdaniella.meeker\%40yale.edu&amp;OR=Teams-HL&amp;CT=1731517231695&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDA5MDEwMTQyMyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ\%3D\%3D&amp;CID=508a63a1-a0c8-6000-fc99-56cf5d8658bf&amp;cidOR=SPO">https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?ovuser=dd8cbebb-2139-4df8-b411-4e3e87abeb5c\%2Cdaniella.meeker\%40yale.edu&amp;OR=Teams-HL&amp;CT=1731517231695&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDA5MDEwMTQyMyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ\%3D\%3D&amp;CID=508a63a1-a0c8-6000-fc99-56cf5d8658bf&amp;cidOR=SPO</a>.</div>
+</div>
+<div id="ref-ynhhs_its_sharepoint" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">ITS, Y. N. H. H. <span>YNHHS</span> training. <a href="https://itstraining.ynhh.org/">https://itstraining.ynhh.org/</a>.</div>
+</div>
+<div id="ref-epic_user_web" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Epic. Epic <span>UserWeb</span>. <a href="https://userweb.epic.com/">https://userweb.epic.com/</a>.</div>
+</div>
+<div id="ref-epic_training" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Epic. Training. Epic training. <a href="https://training.epic.com/">https://training.epic.com/</a>.</div>
+</div>
+<div id="ref-epic_galaxy" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Epic. Galaxy. Galaxy. <a href="https://galaxy.epic.com/?#Home">https://galaxy.epic.com/?#Home</a>.</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

@@ -39,7 +39,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-f02b9937c905377287fbe6092dcaf642.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-e4b0cc2a50dfe8b67b08f7f58b6f22cd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -125,42 +125,13 @@ ul.task-list li input[type="checkbox"] {
  * Need to try generalizing the zoom script so that it can be applied
  * globally.
  -->
-<!--
- * This script handles the functionality for a timed feedback popup modal that
- * appears after a specified delay when users visit the webpage.
- * 
- * It includes the following features:
- *    1. Displaying a feedback popup after a configurable time delay.
- *    2. Opening multiple Microsoft Forms links in new tabs.
- *    3. Configurable delay timing with common preset options commented.
- *
- * Author: Shelby Golden, M.S.
- *   Date: November 2025
- * 
- * Note: Written with the assistance of Yale's AI, Clarity.
- -->
- 
- </head><body class="nav-fixed fullcontent"><div id="formsPopup" class="popup">
-    <div class="popup-content">
-        <span class="close-button">×</span>
-        <h2>We'd Love Your Feedback!</h2>
-        <p>Thank you for visiting our website! We value your feedback and use it to continually enhance our services. At the end of the feedback survey, you will have the chance to suggest new workshops and asynchronous materials.</p>
-        
-        <div class="form-links">
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMjhSTjVOWjQ0MkFIM0hDS0pVQ0tZN1kzMi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5URFBRQ1ZVUFlFVEY0MElSNTlSSzJTWkhXNS4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
-        </div>
-        
-        <p><small>Forms will open in a new tab</small></p>
-    </div>
-</div>
-
-<script src="./Code/popup.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 
+</head>
 
-
-
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -185,6 +156,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./Pages/datasets.html"> 
 <span class="menu-text">Datasets</span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Feedback</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
+ <span class="dropdown-text">For Yale Affiliates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
+ <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./Pages/about-us.html"> 
 <span class="menu-text">About Us</span></a>
