@@ -4,10 +4,10 @@ title: |
   Yale New Haven Health System (YNHHS) Epic
 description: |
   </br>
-  The <a href="https://www.ynhhs.org/">Yale New Haven Hospital System (YNHHS)</a> utilizes Epic's electronic medical record (EMR) system, digitizing patient medical data across its network of hospitals and clinics. YNHHS offers a wide range of medical services, including emergency care and over 100 specialties\ [@ynhhs; @ynhh_faq; @ynhhs_service]. This extensive service provision allows for the inclusion of comprehensive medical data such as medical history, allergies, medications, laboratory and radiology results, and visit notes in their EMR system. Annually, YNHHS handles approximately 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits\ [@ynhhs_2023_report; @ynhhs_facts_figures].
+  The <a href="https://www.ynhhs.org/">Yale New Haven Hospital System (YNHHS)</a> uses Epic's EMR system to digitize comprehensive patient data across its network, supporting various medical services\ [@ynhhs; @ynhh_faq; @ynhhs_service]. Annually, they manage around 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits\ [@ynhhs_2023_report; @ynhhs_facts_figures]. Epic Cosmos integrates these records into a single, HIPAA-compliant longitudinal patient record, enhancing privacy by eliminating duplicates and obscuring identifiable information\ [@nih_privacy_rule; @epic_galaxy_resources].
   </br>
   </br>
-  Epic Cosmos combines inpatient and outpatient records into a single, longitudinal patient record, eliminating duplicated records across multiple organizations. The dataset is HIPAA-compliant and enhances patient privacy by suppressing geographic information, shifting patient dates, and concealing the source organization\ [@nih_privacy_rule; @epic_galaxy_resources].
+  Special thanks to <a href="https://medicine.yale.edu/profile/richard-hintz/">Richard Hintz</a> and <a href="https://medicine.yale.edu/profile/claudia-coronel-moreno/">Claudia Coronel-Moreno</a> from Yale's Center for Clinical Investigation, and to <a href="https://medicine.yale.edu/profile/soundari-sureshanand/">Soundari Sureshanand</a> from the Joint Data Analytics Team, for their invaluable help in creating this resource page.
 include-in-header: ../../../_includes/feedback_popup.html
 bibliography: BibTeX/ynhhs_epic_references.bib
 csl: ../../../Code/nature.csl
@@ -28,10 +28,12 @@ The [Yale New Haven Hospital System (YNHHS)](https://www.ynhhs.org/) utilizes an
 
 YNHHS provides a wide range of medical services, including emergency care, primary care, and over 100 specialties such as oncology, cardiovascular care, and neurology\ [@ynhhs_service]. The YNHHS facts and figures section and annual reports indicate that over the past few years, there have been approximately 150 thousand inpatient visits, 3.5 to 4 million outpatient encounters, and 350 thousand emergency department visits annually\ [@ynhhs_2023_report; @ynhhs_facts_figures; @ynhh_faq].
 
-The Epic Cosmos data combines inpatient and outpatient charts into a single, longitudinal patient record, removing any duplicated records that may arise from being seen at multiple Cosmos organizations. The data provided to researchers adheres to [HIPAA-defined limited data set](https://privacyruleandresearch.nih.gov/pr_08.asp) rules\ [@nih_privacy_rule]. In Cosmos, the de-identified dataset enhances patient privacy protections by suppressing geographic information, consistently shifting patient dates, and concealing the source organization\ [@epic_galaxy_resources; @epic_overview]. More details can be found in their Data Dictionary, which provides notes on the transformation of individual data elements.
+Epic Cosmos combines inpatient and outpatient charts into unified, longitudinal patient records while removing duplicates that may arise from patients receiving care at multiple Cosmos organizations. The data provided to researchers adheres to [HIPAA-defined limited data set](https://privacyruleandresearch.nih.gov/pr_08.asp) standards. To enhance patient privacy protections, the de-identified dataset suppresses geographic information, consistently shifts patient dates, and conceals source organizations. Detailed information on individual data element transformation processes is available in the [Cosmos Data Domain Encyclopedia](https://galaxy.epic.com/Redirect.aspx?DocumentID=100198880&PrefDocID=156634) and the Data Dictionary (accessible through the Cosmos portal).
 
 :::{.callout-tip}
 ## Leverage Expert Analysis for Your Research Needs!
+
+The Research Informatics Office (RIO), operated by the [Yale Biomedical Informatics and Computing (YBIC)](https://medicine.yale.edu/ybic/about/), hosts open office hours every Thursday for researchers using Epic. Contact [Soundari Sureshanand](mailto:soundari.sureshanand@yale.edu) to request the Zoom link\ [@ybic_about].
 
 The Joint Data Analytics Team (JDAT) offers customized reporting and data analysis from the Epic data system, specializing in research support. With a team of 60 informaticists and analysts, JDAT works closely with users to understand their data needs and efficiently retrieve information. JDAT supports projects such as cohort population counts, grant application statistics, retrospective reviews, custom data extracts, and report development\ [@ycci_epic_ehr].
 
@@ -140,7 +142,7 @@ b. Log into the YNHH portal ([sts2.ynhh.org]()) using the YNHH User ID.
 
 c. From the Epic UserWeb main page ([userweb.epic.com]()), request an Epic UserWeb profile.
 
-d. Complete the profile using credentials from the associated Epic organization. For instance, use the \@yale.edu email for Yale University affiliates.
+d. Complete the profile using credentials from the associated Epic organization. For instance, use the "\@yale.edu" email for Yale University affiliates.
 
 e. Follow any setup instructions or verification steps to finalize the account.
 :::
@@ -149,16 +151,32 @@ e. Follow any setup instructions or verification steps to finalize the account.
 
 **c: Training**
 
-Users of YNHHS Epic data analytic tools, such as SlicerDicer, are expected to be competent and aware of the tools' limitations. The following trainings are recommended as a starting point.
+::: {style="margin-left: 2rem"}
+1. All Epic users are required to complete the ["Epic Research User Curriculum"](https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/curricula/145), available on the YNHH Learning Management System\ [@ynhhs_its_sharepoint; @ynhhs_lms_epic_user_course].
+
+2. Users of YNHHS Epic data analytic tools, such as SlicerDicer, are expected to be proficient and aware of the tools' limitations. The following training courses are recommended for researchers intending to use these tools for Epic Reporting tasks:
 
 ::: {style="margin-left: 2rem"}
-i. "Epic Reporting Fundamentals" - available on [YNHH Learning Management System (LMS)](https://ynhh.certpointsystems.com/)\ [@ynhhs_lms_reporting_fundamentals; @jdat_sharepoint]
+i. ["Epic Reporting Fundamentals"](https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/6442111f-51e4-4aaf-8961-76858d0cbaad) - available on [YNHH Learning Management System (LMS)](https://ynhh.certpointsystems.com/)\ [@ynhhs_lms_reporting_fundamentals; @jdat_sharepoint]
 
-ii. SlicerDicer-related courses ("Available SlicerDicer Models", "SlicerDicer Quick Start Guide", and "SlicerDicer Quick Epic Demo") - available on the [JDAT Analytics Portal](https://jdat.ynhh.org/AnalyticsPortal)\ [@jdat_slicerdicer_training]
+ii. ["Epic SlicerDicer Fundamentals"](https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/92931157-135d-4719-83ef-00d6370a1939) - available on the YNHH LMS\ [@ynhhs_lms_reporting_fundamentals; @jdat_sharepoint]
+:::
 
-iii. "Epic SlicerDicer E-Learning Course" - available on the YNHH LMS\ [@ynhhs_lms_slicer_dicer; @ybic_slicerdicer]
+::: {.callout-tip}
+## Additional SlicerDicer Guides
 
-iv. "Epic Research User Curriculum" - available on the YNHH LMS\ [@ynhhs_its_sharepoint; @ynhhs_lms_epic_user_course]
+For those seeking additional resources to learn how to use Epic's SlicerDicer tool, it is recommended to review the "SlicerDicer" article available in Galaxy or to access one of the weLearning modules created by the Epic community, which can be found [here](https://welearning.epic.com/Browse?app=1000129)\ [@epic_welearning_slicerdicer; @epic_galaxy_slicerdicer].
+
+Additional courses offered by JDAT and YNHH are also available for exploration:
+
+::: {style="margin-left: 2rem"}
+i. [SlicerDicer-related courses](https://jdat.ynhh.org/AnalyticsPortal/training/2) ("Available SlicerDicer Models", "SlicerDicer Quick Start Guide", and "SlicerDicer Quick Epic Demo") - available on the [JDAT Analytics Portal](https://jdat.ynhh.org/AnalyticsPortal)\ [@jdat_slicerdicer_training]
+
+ii. ["Epic SlicerDicer E-Learning Course"](https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/78d8b535-22a2-4a97-ad30-e22ab13189bd) - available on the YNHH LMS\ [@ynhhs_lms_slicer_dicer; @ybic_slicerdicer]
+:::
+
+:::
+
 :::
 
 For some, a manager or supervisor might assign training modules accessible through the YNHH LMS, the JDAT Analytics Portal, or [Epic University](https://training.epic.com/). Further information on training expectations can be found in the "DTS Epic Training Course Catalog". For example, the "Research" section lists mandatory trainings for non-clinical research users. This document is accessible from two locations:
@@ -171,10 +189,10 @@ For some, a manager or supervisor might assign training modules accessible throu
 
 It may be necessary to review role-based training requirements, which can be found in the "Roles and Course Spreadsheet" that is also accessible from both webpages.
 
-::: {.callout-tip}
-## Additional SlicerDicer Guides
+::: {.callout-warning}
+## Retraining Requirements for Inactive Users
 
-For those seeking additional resources to learn how to use Epic's SlicerDicer tool, it is recommended to review the 'SlicerDicer' article available in Galaxy or to access one of the weLearning modules created by the Epic community, which can be found [here](https://welearning.epic.com/Browse?app=1000129)\ [@epic_welearning_slicerdicer; @epic_galaxy_slicerdicer].
+Users who have not accessed YNHHS Epic for a year or longer must complete role-specific training before regaining access\ [@ynhhs_course_catalog].
 :::
 
 
@@ -276,7 +294,7 @@ Researchers seeking access to YNHHS Epic data will need a Researcher Basic Acces
 
 - [Epic UserWeb](https://userweb.epic.com/): Find Epic training materials, documentation, community discussions, support resources, updates, customization options, and access to your Epic profile\ [@epic_user_web].
 
-- [Epic University](https://training.epic.com/): A subdomain of the UserWeb, find training opportunities and access to coursework necessary to obtain certificates, such as the Super User Badge, with courses organized by the Epic team. Learn more about advanced training options on our [Epic Cosmos](Epic-Cosmos.qmd) information webpage\ [@epic_training].
+- [Epic University](https://training.epic.com/): A subdomain of the UserWeb, find training opportunities and access to coursework necessary to obtain certificates, such as the Super User Badge, with courses organized by the Epic team\ [@epic_training]. Learn more about advanced training options on our [Epic Cosmos](Epic-Cosmos.qmd) information webpage.
 
 - [Galaxy](https://galaxy.epic.com/?#Home): A subdomain of the UserWeb, find comprehensive resource that provides documentation, announcements, best practices, and implementation guides related to the Epic dataset\ [@epic_galaxy].
 
@@ -334,6 +352,5 @@ cat(citations_html)
 ```
 
 :::
-
 
 ## References

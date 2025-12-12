@@ -60,14 +60,14 @@ Explore our comprehensive collection of resources and datasets curated from inte
       <div class="card-header_static py-1 px-2 border-bottom bg-light">
         <small class="card-text inline-block">
           &nbsp;
-          <a href="#" title="GitHub page" class="source-code card-text float-beginning inline-block tile_a">
-            <i class="bi-github"></i></a>
-          &nbsp;
           <a href="#" title="Main site" class="source-code card-text float-beginning inline-block tile_a">
             <i class="bi-globe"></i></a>
           &nbsp;
           <a href="#" title="Group site" class="source-code card-text float-beginning inline-block tile_a">
             <i class="bi-people-fill"></i></a>
+          &nbsp;
+          <a href="#" title="GitHub page" class="source-code card-text float-beginning inline-block tile_a">
+            <i class="bi-github"></i></a>
           &nbsp;
           <a href="#" title="View publication" class="source-code card-text float-beginning inline-block tile_a">
             <i class="bi-journal-text"></i></a>

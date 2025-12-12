@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Resources with Features</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
 <body class="people">
   <div class="tile-container">
@@ -26,6 +27,12 @@
                 <% } %>
                 <% if (tile.linkedin) { %>
                   <a href="<%= tile.linkedin %>" title="LinkedIn"><i class="bi-linkedin"></i></a>
+                <% } %>
+                <% if (tile.google_scholar) { %>
+                  <a href="<%= tile.google_scholar %>" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
+                <% } %>
+                <% if (tile.orcid) { %>
+                  <a href="<%= tile.orcid %>" title="ORCID"><i class="ai ai-orcid"></i></a>
                 <% } %>
               </small>
             </div>

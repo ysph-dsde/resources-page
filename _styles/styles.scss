@@ -1137,7 +1137,11 @@ ol, ul {
   color: var(--link-color);
   font-size: 1.2em;
 }
-
+@media (max-width: 1000px) {
+  .tile_static h2 {
+    padding-top: 10px;
+  }
+}
 
 
 /*-- scss: header tiles --*/
