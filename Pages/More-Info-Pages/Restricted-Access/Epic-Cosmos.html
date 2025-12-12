@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content=" The Cosmos data set combines billions of clinical data points, made up of data from across the Epic community, to form the largest database of Electronic Health Record (EHR) patient information. Participating organizations provide a HIPAA-defined limited data set to the centralized Cosmos database.   With over 34,200 Clinics and 1,522 Hospitals participating in Cosmos, researchers can access a representative sample of patients who seek healthcare. You can learn more about the latest features of Cosmos on Epic UserWeb, available to all Yale New Haven Health System (YNHHS) research users and on the Yale Cosmos Teams Site.">
+<meta name="description" content=" Cosmos compiles Epic electronic medical record (EMR) data from nearly 2,000 participating hospitals globally, creating a comprehensive dataset with analytical tools like SlicerDicer and the Data Science Virtual Machine (DSVM) to advance medical research. This network encompasses half a million physicians caring for 300 million patients, generating billions of high-quality, longitudinal clinical data points. Cosmos integrates and de-identifies patient records to create unified longitudinal profiles while eliminating duplicates.   Special thanks to Richard Hintz and Claudia Coronel-Moreno from Yale’s Center for Clinical Investigation, and to Soundari Sureshanand from the Joint Data Analytics Team, for their invaluable help in creating this resource page.">
 
 <title>Epic Cosmos – Resource Navigation Tool</title>
 <style>
@@ -60,7 +60,7 @@ div.csl-indent {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-e4b0cc2a50dfe8b67b08f7f58b6f22cd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-4b9eaea2f0bfe36b0cd022ecbe11ae3c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -146,44 +146,13 @@ div.csl-indent {
  * Need to try generalizing the zoom script so that it can be applied
  * globally.
  -->
-<!--
- * This script handles the functionality for a timed feedback popup modal that
- * appears after a specified delay when users visit the webpage.
- * 
- * It includes the following features:
- *    1. Displaying a feedback popup after a configurable time delay.
- *    2. Opening multiple Microsoft Forms links in new tabs.
- *    3. Configurable delay timing with common preset options commented.
- *
- * Author: Shelby Golden, M.S.
- *   Date: November 2025
- * 
- * Note: Written with the assistance of Yale's AI, Clarity.
- -->
- 
- </head><body class="nav-fixed"><div id="formsPopup" class="popup">
-    <div class="popup-content">
-        <span class="close-button">×</span>
-        <h2>We'd Love Your Feedback!</h2>
-        <p>Thank you for visiting our website! We value your feedback and use it to continually enhance our services. At the end of the feedback survey, you will have the chance to suggest new workshops and asynchronous materials.</p>
-        
-        <div class="form-links">
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMjhSTjVOWjQ0MkFIM0hDS0pVQ0tZN1kzMi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
-            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5URFBRQ1ZVUFlFVEY0MElSNTlSSzJTWkhXNS4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
-        </div>
-        
-        <p><small>Forms will open in a new tab</small></p>
-    </div>
-</div>
-
-<script src="../../../Code/popup.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 
+</head>
 
-
-
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -245,7 +214,7 @@ div.csl-indent {
       <h1 class="title"><p>Epic Cosmos</p></h1>
                   <div>
         <div class="description">
-          <p><br> The Cosmos data set combines billions of clinical data points, made up of data from across the Epic community, to form the largest database of Electronic Health Record (EHR) patient information. Participating organizations provide a HIPAA-defined limited data set to the centralized Cosmos database. <br> <br> With over 34,200 Clinics and 1,522 Hospitals participating in Cosmos, researchers can access a representative sample of patients who seek healthcare. You can learn more about the latest features of Cosmos on <a href="https://signin.epic.com/adfs/ls/?wa=wsignin1.0&amp;wtrealm=https%3a%2f%2fuserweb.epic.com%2f&amp;wctx=rm%3d1%26id%3dpassive%26ru%3d%252F&amp;wct=2025-04-16T00%3a32%3a32Z&amp;wreply=https%3a%2f%2fuserweb.epic.com%2f">Epic UserWeb</a>, available to all Yale New Haven Health System (YNHHS) research users and on the <a href="https://teams.microsoft.com/l/team/19%3AJTlr92eAMEnJsBJmV1Uymbla8oek8ePqASKzxPE7mrQ1%40thread.tacv2/conversations?groupId=aa0ac073-1651-4dee-a59e-884bef65ea6b&amp;tenantId=dd8cbebb-2139-4df8-b411-4e3e87abeb5c">Yale Cosmos Teams</a> Site.</p>
+          <p><br> Cosmos compiles Epic electronic medical record (EMR) data from nearly 2,000 participating hospitals globally, creating a comprehensive dataset with analytical tools like SlicerDicer and the Data Science Virtual Machine (DSVM) to advance medical research. This network encompasses half a million physicians caring for 300 million patients, generating billions of high-quality, longitudinal clinical data points. Cosmos integrates and de-identifies patient records to create unified longitudinal profiles while eliminating duplicates. <br> <br> Special thanks to <a href="https://medicine.yale.edu/profile/richard-hintz/">Richard Hintz</a> and <a href="https://medicine.yale.edu/profile/claudia-coronel-moreno/">Claudia Coronel-Moreno</a> from Yale’s Center for Clinical Investigation, and to <a href="https://medicine.yale.edu/profile/soundari-sureshanand/">Soundari Sureshanand</a> from the Joint Data Analytics Team, for their invaluable help in creating this resource page.</p>
         </div>
       </div>
                 </div>
@@ -270,6 +239,7 @@ div.csl-indent {
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link" data-scroll-target="#gaining-access">Gaining Access</a></li>
+  <li><a href="#additional-certifications" id="toc-additional-certifications" class="nav-link" data-scroll-target="#additional-certifications">Additional Certifications</a></li>
   <li><a href="#valuable-links" id="toc-valuable-links" class="nav-link" data-scroll-target="#valuable-links">Valuable Links</a></li>
   <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
@@ -283,34 +253,14 @@ div.csl-indent {
 
 
 
-<p><small>Updated: November 5<sup>th</sup>, 2025</small></p>
-<p>the proportions of patients represented in Cosmos compare well to the United States Census.</p>
-<p>There are three levels of access available:</p>
-<div style="margin-left: 2rem">
-<ul>
-<li>RBA without an IRB give access to the afore mentioned resources but only supplies de-identified, summary count data produced within YNHHS Epic.</li>
-<li>RBA with an approved IRB gives access to individual-level data for Epic data produced within YNHHS that is strictly relevant to the IRB approved study.</li>
-<li>Epic Cosmos - RBA holders can gain access to de-identified, summary count data produced by Epic participating institutions outside of YNHHS upon special request.</li>
-</ul>
-</div>
+<p><small>Updated: December 12<sup>th</sup>, 2025</small></p>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>The Epic Cosmos data combines inpatient and outpatient charts into a single, longitudinal patient record, removing any duplicated records that may arise from being seen at multiple Cosmos organizations. The data provided to researchers adheres to <a href="https://privacyruleandresearch.nih.gov/pr_08.asp">HIPAA-defined limited data set</a> rules. In Cosmos, the de-identified dataset enhances patient privacy protections by suppressing geographic information, consistently shifting patient dates, and concealing the source organization. More details can be found in their Data Dictionary, which provides notes on the transformation of individual data elements.</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Leverage Expert Analysis for Your Research Needs!
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>The Joint Data Analytics Team (JDAT) offers customized reporting and data analysis from the Epic data system, specializing in research support. With a team of 60 informaticists and analysts, JDAT works closely with users to understand their data needs and efficiently retrieve information. JDAT supports projects such as cohort population counts, grant application statistics, retrospective reviews, custom data extracts, and report development&nbsp;<span class="citation" data-cites="ycci_epic_ehr"><sup><a href="#ref-ycci_epic_ehr" role="doc-biblioref">1</a></sup></span>.</p>
-<p>Click <a href="https://medicine.yale.edu/ybic/data-resources-services/how-to-submit-a-research-data-request/">here</a> for directions on submitting a Helix research data request with JDAT, Yale’s customized data warehouse system. Learn more on the <a href="https://medicine.yale.edu/center-clinical-investigation/">Yale Center for Clinical Investigation</a>’s <a href="https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx">Epic Electronic Health Record</a> SharePoint page, which is also accessible from their <a href="https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/">For Researchers &amp; Research Professionals</a> webpage&nbsp;<span class="citation" data-cites="jdat_helix ycci_epic_ehr ybic_for_researchers"><sup><a href="#ref-ycci_epic_ehr" role="doc-biblioref">1</a>–<a href="#ref-ybic_for_researchers" role="doc-biblioref">3</a></sup></span>.</p>
-</div>
-</div>
-<p>The types of data collected in the EMR are continuously expanding. For example, researchers currently have access to the following data&nbsp;<span class="citation" data-cites="epic_overview"><sup><a href="#ref-epic_overview" role="doc-biblioref">4</a></sup></span>:</p>
+<p>Cosmos is a comprehensive dataset that compiles records voluntarily contributed by health systems using Epic for electronic medical record (EMR) management. More than just a data repository, Cosmos provides a complete data warehouse and analytical infrastructure, including tools such as SlicerDicer and the Data Science Virtual Machine (DSVM), designed to facilitate scientific discoveries and advance medicine.</p>
+<p>The network currently encompasses nearly 2,000 hospitals across the country and globally, with almost half a million physicians caring for approximately 300 million patients. This collaboration creates a dataset containing billions of high-quality, representative, longitudinal clinical data points. Notably, the patient demographics represented in Cosmos closely align with those of the United States Census, enhancing its research utility. All participating organizations and members of the Cosmos Governing Council can be viewed on the <a href="https://cosmos.epic.com/community/">Cosmos Community</a> page.</p>
+<p>Epic Cosmos combines inpatient and outpatient charts into unified, longitudinal patient records while removing duplicates that may arise from patients receiving care at multiple Cosmos organizations. The data provided to researchers adheres to <a href="https://privacyruleandresearch.nih.gov/pr_08.asp">HIPAA-defined limited data set</a> standards. To enhance patient privacy protections, the de-identified dataset suppresses geographic information, consistently shifts patient dates, and conceals source organizations. Detailed information on individual data element transformation processes is available in the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100198880&amp;PrefDocID=156634">Cosmos Data Domain Encyclopedia</a> and the <a href="https://galaxy.epic.com/Search/GetFile?url=1%2168%21100%21100149584&amp;from=KitMembers">Data Dictionary</a> (also accessible through the Cosmos portal).</p>
+<p>The <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100278332&amp;PrefDocID=167630">Cosmos Overview</a> page provides an invaluable introduction to Epic’s resource, outlining essential information for both non-sponsored and third-party sponsored research projects. This includes guidance on Cosmos data usage, project tracking procedures, and publication expectations, with additional details available in the corresponding data access level sections on this webpage.</p>
+<p>The types of data collected in the EMR are continuously expanding. For example, researchers currently have access to the following data&nbsp;<span class="citation" data-cites="epic_overview"><sup><a href="#ref-epic_overview" role="doc-biblioref">1</a></sup></span>:</p>
 <div style="margin-left: 2rem">
 <ul>
 <li><p><strong>Patient Information:</strong> Limited demographic details such as age, sex, gender identity, race, ethnicity, location, patient status, and family history, social history elements like tobacco and substance use, birth control, social determinants of health, allergy information, and detailed birth history.</p></li>
@@ -327,39 +277,59 @@ Leverage Expert Analysis for Your Research Needs!
 <section id="gaining-access" class="level2">
 <h2 class="anchored" data-anchor-id="gaining-access">Gaining Access</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Researcher Basic Access (RAB)</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Cosmos Basic Access</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <section id="do-i-qualify" class="level4">
 <h4 class="anchored" data-anchor-id="do-i-qualify">Do I Qualify?</h4>
-<p>Yale University users with Research Basic Access (RBA) can apply for access to Epic Cosmos data.</p>
+<p>Basic access provides users with entry to the Cosmos data portal, allowing them to query the limited dataset using SlicerDicer, create dashboards with custom elements, and share dashboards with other Cosmos users.</p>
+<p>While Yale University-Yale New Haven Hospital System (YU-YNHHS) manages access to YNHHS Epic data through Research Basic Access (RBA), Epic coordinates with YU-YNHHS to manage researcher access to Epic Cosmos data. According to their rules, any researcher seeking access to Epic Cosmos must already have RBA to the YNHHS Epic data. Full instructions for obtaining RBA are available on our <a href="../../../Pages/More-Info-Pages/Restricted-Access/YNHHS-Epic.html">Yale New Haven Health System (YNHHS) Epic</a> information webpage.</p>
+<p>Researchers in the “Your Community” category (directly affiliated partners) may require additional review by the Cosmos Governing Council to gain access to Epic Cosmos. External Collaborators (e.g., pharma employees, contractors, etc.) are typically not intended to have access to Epic Cosmos, but special approval requests can be submitted to the Cosmos Governing Council. These qualification tiers are illustrated in Epic’s infographic below.</p>
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+<img id="myImage" src="../../../Images/Other Infographics/Granting Cosmos Portal Access to Users_Infographic_Downloaded12082025.png" alt="Zoomable Image" title="Click to zoom in">
+<figcaption class="caption">
+Epic Cosmos user request process and requirements infographic from “Granting Cosmos Portal Access to Users” by Epic, last approved by the Cosmos Governing Council on April 20<sup>th</sup>, 2023.
+</figcaption>
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src="../../../Code/zoom.js"></script>
 </section>
 <section id="typical-timeline" class="level4">
 <h4 class="anchored" data-anchor-id="typical-timeline">Typical Timeline</h4>
-<p>It takes a couple of days for CITI trainings to show up on Workday. Completed ceritifcates take no more than 2 business days to be reflected on Workday. Time for recognition of completion varies if not done through Workday.</p>
-<p>Note that CITI training is involved and may take between 1-2 weeks to complete.</p>
+<p>CITI training completion typically takes 1-2 weeks, as the training is comprehensive and involved. Once completed, certificates take no more than 2 business days to be reflected in Workday. Note that recognition timing may vary if training is completed outside of Workday.</p>
 </section>
 <section id="step-by-step-guide" class="level4">
 <h4 class="anchored" data-anchor-id="step-by-step-guide">Step-by-Step Guide</h4>
-<p>If you haven’t obtained RBA yet, please follow the instructions provided on the <a href="YNHHS-Epic.html">YNHHS Epic</a> webpage.</p>
+<p>This page assumes researchers have RBA. Follow the <a href="../../../Pages/More-Info-Pages/Restricted-Access/YNHHS-Epic.html">YNHHS Epic</a> webpage instructions to obtain RBA if needed.</p>
 <p><strong>a: Complete Yale’s HIPAA Training</strong></p>
-<p><strong>For Yale NetID holders:</strong> Complete the <a href="https://hipaa.yale.edu/training/training-modules">HIPAA Privacy and Security</a> courses in Workday, including the basic privacy and security module followed by the role-specific module (e.g., for clinicians or researchers).</p>
-<p><strong>For Non-Yale NetID holders:</strong> Read and sign the <a href="https://hipaa.yale.edu/training/training-modules">HIPAA Privacy and Security</a> training materials specific to your role on the project (e.g., for clinicians or researchers). Submission directions for these documents can be found on the PDF.</p>
+<div style="margin-left: 2rem">
+<p><strong>For Yale NetID holders:</strong> Complete the <a href="https://hipaa.yale.edu/training/training-modules">HIPAA Privacy and Security</a> courses in Workday, including the basic privacy and security module, followed by the role-specific module (e.g., for clinicians or researchers).</p>
+<p><strong>For Non-Yale NetID holders:</strong> Read and sign the <a href="https://hipaa.yale.edu/training/training-modules">HIPAA Privacy and Security</a> training materials specific to your role on the project (e.g., for clinicians or researchers). Submission directions for these documents can be found on the accompanying PDF.</p>
+</div>
 <p><strong>b: Obtain a Human Subjects Protection Training (HSPT) Certificate from CITI</strong></p>
-<p>Human Subjects Protection Training (HSPT) certificate from CITI that has been completed within the last 3 years. Below is a summary of the process, and the complete directions can be found on the <a href="https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training">It’s Your Yale</a> page about HSPT.</p>
-<p>Researchers will need to complete the following CITI certificates:</p>
+<p>A Human Subjects Protection Training (HSPT) certificate from CITI completed within the last three years is required. Below is a summary of the process, and the complete directions can be found on the <a href="https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training">It’s Your Yale</a> page about HSPT.</p>
+<p>Researchers need to complete the following CITI certificates:</p>
 <div style="margin-left: 2rem">
 <ul>
 <li>“Basic Training”</li>
 <li>One of the following two initial/basic Human Subjects Research modules: “Biomedical Research Basic” or “Social Behavioral Educational Researchers Basic”.</li>
 </ul>
 </div>
-<p>If you have already completed your CITI certification through another institution, please send a copy to <a href="mailto:irb.training@yale.edu">irb.training@yale.edu</a> and skip to Section C. For further questions, you can also contact this email address.</p>
-<p><strong>For Yale Employee:</strong> It is preferable, though not required, to access the CITI training modules through Workday. This will expedite the recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) IRB system.</p>
+<p>If CITI certification was completed at another institution, a copy should be emailed to <a href="mailto:irb.training@yale.edu">irb.training@yale.edu</a> before proceeding to Section C. For further inquiries, the same email address can be used.</p>
+<p>If you have not yet received an HSPT certificate or if your certificate is more than three years old, you will need to complete the training in CITI. First, access CITI or link your CITI account with your Yale Workday account.</p>
+<p><strong>b.i: Accessing CITI and Linking It</strong></p>
+<div style="margin-left: 2rem">
+<p><strong>For Yale Employees:</strong> It is preferable, though not required, to access the CITI training modules through Workday. This will expedite the recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) IRB system.</p>
 <div style="margin-left: 2rem">
 <ol type="1">
 <li><p>Open the <a href="https://www.myworkday.com/yale/learning">Learning Homepage</a> in Workday.</p></li>
-<li><p>The CITI training link will appear as the “Human Subjects Protection Training – Initial/Refresher” course under the Required Training section. If it does not appear, i) ensure your name is listed in the IRES IRB pending study or submission, ii) reach out to your manager, or iii) contact <a href="mainto:learning@yale.edu">learning@yale.edu</a> or <a href="mainto:irb.training@yale.edu">irb.training@yale.edu</a> to request a manual assignment.</p></li>
+<li><p>The CITI training link will appear as the “Human Subjects Protection Training – Initial/Refresher” course under the “Required Training” section. If it does not appear, ensure that your name is listed in the IRES IRB pending study or submission. If it still does not appear, contact your manager or reach out to <a href="mailto:learning@yale.edu">learning@yale.edu</a> or <a href="mailto:irb.training@yale.edu">irb.training@yale.edu</a> to request a manual assignment.</p></li>
 </ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -371,39 +341,93 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If available, you may need to complete the “Compliance Assessment” to indicate that you are conducting human subjects research.</p>
+<p>If available, complete the “Compliance Assessment” to indicate that you are conducting human subjects research.</p>
 </div>
 </div>
 <ol start="3" type="1">
-<li><p>Once you access the “Human Subjects Protection Training – Initial/Refresher” course page, click the “Enroll” button to proceed. This will change the course status to <strong>Start Program</strong>.</p></li>
-<li><p>A button labeled <strong>Start Program</strong>, or <strong>Retake Program</strong> if you are taking this as a refresher, will appear under the course photo. Click it to proceed.</p></li>
+<li><p>Once the “Human Subjects Protection Training – Initial/Refresher” course page is accessed, the “Enroll” button should be clicked to proceed.</p></li>
+<li><p>A button labeled “Start Program”, or “Retake Program” if being taken as a refresher, will appear under the course photo. Click it to proceed.</p></li>
 <li><p>Log into <a href="https://www.citiprogram.org/index.cfm?pageID=668">CITI</a> using the “Yale University Training Opportunities” Single Sign-On (SSO).</p></li>
 </ol>
 </div>
-<p><strong>For Non-Yale Employee:</strong> If you are not a Yale employee, you will need to access CITI through your institution or log in directly from their <a href="https://about.citiprogram.org/">main webpage</a>. Please be aware that pursuing certification independently may incur charges. You can find the current costs for CITI courses on their <a href="https://about.citiprogram.org/courses/?reset=true">Explore Our Courses</a> webpage.</p>
-<p><strong>For All Applicants:</strong></p>
-<p>The previous steps guide applicants on how to access CITI courses and detail how Yale employees can expedite recognition of their certification by using Workday. Once you have access to a CITI account, follow these steps to complete your certification.</p>
+<p><strong>For Non-Yale Employees:</strong> Non-Yale employees should access CITI through their own institution or directly via the <a href="https://about.citiprogram.org/">main webpage</a>. Pursuing certification independently may incur charges. Current costs for CITI courses can be found on the <a href="https://about.citiprogram.org/courses/?reset=true">Explore Our Courses</a> webpage.</p>
+</div>
+<p><strong>b.ii: Register for the Certification</strong></p>
+<p>Once access to CITI courses is granted, follow these steps to complete the certification:</p>
 <div style="margin-left: 2rem">
 <ol type="a">
-<li><p>In CITI, click “Add a Course” and scroll to the bottom to find the initial/basic CITI HSP Training under the Human Subjects Research heading.</p></li>
-<li><p>Indicate your intent to take a Human Subjects Research course and select either “Biomedical Research” or “Social Behavioral Educational Researchers”. When prompted, confirm that you want to receive the basic course, specifically the “Biomedical Research-Basic Course”.</p></li>
-<li><p>Complete the course modules and attain a passing grade of at least 70% on the assessment.</p></li>
-<li><p>If you did not link your Workday account with CITI, save the completion certificate and send it to <a href="mainto:irb.training@yale.edu">irb.training@yale.edu</a>. If you accessed CITI through Workday, your record should auto-update.</p></li>
+<li><p>In CITI, select “Add a Course” and scroll to the bottom to find the initial/basic CITI HSP Training under the Human Subjects Research heading.</p></li>
+<li><p>Indicate the intent to take a Human Subjects Research course and select either “Biomedical Research” or “Social Behavioral Educational Researchers.” When prompted, confirm the selection of the “Biomedical Research-Basic Course.”</p></li>
+<li><p>Complete the course modules and achieve a passing grade of at least 70% on the assessment.</p></li>
+<li><p>If the Workday account was not linked with CITI, save the completion certificate and send it to <a href="mailto:irb.training@yale.edu">irb.training@yale.edu</a>. If accessed through Workday, the record should auto-update.</p></li>
 </ol>
 </div>
-<p><strong>c: Accessing Epic Cosmos</strong></p>
-<p>Accessing the Epic Cosmos SlicerDicer is done through the Epic Cosmos portal, and not the YNHH VDI. You can either open this portal from the Epic UserWeb by navigating to the “Show All” drop down menu and selecting “Cosmos” under “Support”. Or, you can directly access Cosmos at <a href="https://cosmos.epichosted.com/EpicCareLink_AUTH/common/epic_check.asp">cosmos.epichosted.com</a>.</p>
-<p><strong>d: Training</strong></p>
-<p>Training based on role. Can list out the ones for “Generating reports” and “research”</p>
-<p>“Cosmos Portal &amp; Analytics Resources” in Galaxy for additional learning materials for using Epic and it’s analytical tools like SlicerDicer</p>
-<p><a href="https://cosmos.epichosted.com/EpicCareLink_AUTH/common/epic_check.asp">Library of Learning Dashboards</a></p>
+<p><strong>c: Training</strong></p>
+<p>Individuals are expected to have completed the YNHHS Epic RBA application process, including all mandatory training for that level of access. YNHH and JDAT provide training specifically tailored for the YNHHS Epic portal within the YNHH Virtual Desktop Infrastructure (VDI), which differs from the training provided by Epic for similar analytic tools available in the Cosmos data portal, such as SlicerDicer.</p>
+<p>To help users get acclimated to these differences, the following resources are recommended by Epic:</p>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li><p><a href="https://cosmos.epichosted.com/EpicCareLink_AUTH/common/epic_check.asp?mode=OIOSAML&amp;dashboardId=100160">Cosmos Learning Home</a> - available on <a href="https://cosmos.epichosted.com/">Cosmos</a></p></li>
+<li><p><a href="https://galaxy.epic.com/?#Browse/page=1!68!642!100074365&amp;from=Galaxy-Redirect">“Cosmos Portal &amp; Analytics Resources”</a> - available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a>&nbsp;<span class="citation" data-cites="epic_galaxy epic_galaxy_resources"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">2</a>,<a href="#ref-epic_galaxy_resources" role="doc-biblioref">3</a></sup></span></p></li>
+<li><p><a href="https://welearning.epic.com/Details?csn=300004">Here’s How… SlicerDicer [POSS043]</a> - available on <a href="https://welearning.epic.com/Browse?app=1000129">weLearning</a>&nbsp;<span class="citation" data-cites="epic_welearning_slicerdicer"><sup><a href="#ref-epic_welearning_slicerdicer" role="doc-biblioref">4</a></sup></span></p></li>
+<li><p>Archived <a href="https://galaxy.epic.com/?#Browse/page=1!68!95!100195036,100195042&amp;from=Galaxy-Redirect">Past Slice of the Month Sessions</a> showcasing researchers using Cosmos in various ways for their own research projects.</p></li>
+</ol>
+</div>
+<p>Detailed training requirements, role descriptions, and expectations can be found in the Cosmos Setup and Support Guide under the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&amp;PrefDocID=97645">Cosmos Training and Support</a> section. These are summarized below. Optional trainings are available for those pursuing additional certifications in Data Science and Data Architecture. For a complete list, refer to the Cosmos Training and Support section.</p>
+<p><strong>c.i: Required Training</strong></p>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li><p><a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=3833820&amp;PrefDocID=97513">User Agreement</a> - available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a>&nbsp;<span class="citation" data-cites="epic_galaxy epic_galaxy_resources"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">2</a>,<a href="#ref-epic_galaxy_resources" role="doc-biblioref">3</a></sup></span></p></li>
+<li><p>“Explore SlicerDicer” - available on <a href="https://cosmos.epichosted.com/">Cosmos</a>. From the main Cosmos landing page, hover over the “Explore” tab in the top bar to display the drop-down menu, and select “Explore SlicerDicer” under the “Explore” section.</p></li>
+</ol>
+</div>
+<p><strong>c.ii: Recommended Training</strong></p>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li><p><a href="https://galaxy.epic.com/Search/GetFile?Url=1!68!100!100161049">Responsible Use Document and Assessment</a> - available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a>&nbsp;<span class="citation" data-cites="epic_galaxy epic_galaxy_resources"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">2</a>,<a href="#ref-epic_galaxy_resources" role="doc-biblioref">3</a></sup></span></p></li>
+<li><p><a href="https://welearning.epic.com/Browse?q=cosmos">Cosmos eLearning Videos</a> - available on <a href="https://welearning.epic.com/Browse?app=1000129">weLearning</a></p></li>
+<li><p>Select materials from the <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;VersionID=1277&amp;ViewID=train-tracks&amp;ApplicationID=150&amp;TrackID=XLOID-54789-XLOCSN-757608-XVE-1277-EXACT-0-CERTCSN-757610">Cosmos Super User Badge</a> training - available on <a href="https://training.epic.com/">Epic University</a>. Under the “Super User in the Portal” section, access:</p></li>
+</ol>
+<div style="margin-left: 2rem">
+<ol type="a">
+<li>Self-Study materials</li>
+<li>Project</li>
+</ol>
+</div>
+<ol start="4" type="i">
+<li><p>Select materials from the <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;ViewID=train-tracks&amp;VersionID=1277&amp;ApplicationID=150&amp;TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780">Cosmos Researcher User Badge</a> training - available on <a href="https://training.epic.com/">Epic University</a>. Under the “Data Literacy for Cosmos Researcher” section access the “Self-Study” materials.</p></li>
+<li><p><a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&amp;PrefDocID=145166">“Cosmos Publication Checklist”</a> - available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a> with summarized notes below&nbsp;<span class="citation" data-cites="epic_galaxy epic_galaxy_resources"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">2</a>,<a href="#ref-epic_galaxy_resources" role="doc-biblioref">3</a></sup></span></p></li>
+</ol>
+</div>
+<p><strong>d: Finalize and Submit Access Application</strong></p>
+<p>The preceding steps help applicants prepare for filling out the <a href="https://forms.office.com/r/bs54AxkuGb">Cosmos Basic Access Request</a> form. Once these steps have been completed, fill out the YNHH Cosmos Basic Access Request form, following applicable guidelines, to initiate the approval process.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+SlicerDicer Proficiency Assessment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Applicants may be required to demonstrate their proficiency with SlicerDicer upon request.</p>
+</div>
+</div>
 </section>
-<section id="certifications" class="level4">
-<h4 class="anchored" data-anchor-id="certifications">Certifications</h4>
+<section id="accessing-epic-cosmos" class="level4">
+<h4 class="anchored" data-anchor-id="accessing-epic-cosmos">Accessing Epic Cosmos</h4>
+<p>Access to the Epic Cosmos SlicerDicer is through the Epic Cosmos portal, not the YNHH VDI. You can open this portal from the <a href="https://userweb.epic.com/">Epic UserWeb</a> by navigating to the “Show All” drop-down menu and selecting “Cosmos” under the “Support” section.</p>
+<p>If you encounter any issues logging into Cosmos, please contact JDAT for assistance. If the issue persists, reach out to <a href="#mailto:CosmosUserRequests@Epic.com">CosmosUserRequests@Epic.com</a>.</p>
+</section>
+<section id="initiating-collaborative-projects" class="level4">
+<h4 class="anchored" data-anchor-id="initiating-collaborative-projects">Initiating Collaborative Projects</h4>
+<p>Researchers with Cosmos Basic Access can share code and datasets with peers who are collaborators on specific research questions. These collaboration networks are created using the Cosmos <strong>Projects</strong> tool. Directions on how to create and maintain projects can be found in the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100061177&amp;PrefDocID=127868">“Cosmos Tip Sheet: Create and Monitor Projects”</a>.</p>
+<p>Certified Cosmos Data Science users can share code with the entire Cosmos community via Cosmos’s GitLab. For more details, please refer to the Data Science certificate tab below.</p>
 </section>
 <section id="publications-expectations" class="level4">
 <h4 class="anchored" data-anchor-id="publications-expectations">Publications Expectations</h4>
-<p>Epic provides data users with a checklist for preparing data for publications, emphasized in the user agreement, “Cosmos Rules of the Road”. The full instructions and expectations can be found in the Galaxy “Cosmos Publication Checklist” article and the “Cosmos Rules of the Road”, which outlines some of the Data Use Agreement terms&nbsp;<span class="citation" data-cites="epic_publication_checklist"><sup><a href="#ref-epic_publication_checklist" role="doc-biblioref">5</a></sup></span>.</p>
+<p>Epic provides data users with a checklist for preparing data for publications, emphasized in the user agreement, <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=4024320&amp;PrefDocID=113401">“Cosmos Rules of the Road”</a>. The full instructions and expectations can be found in the Galaxy <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&amp;PrefDocID=145166">“Cosmos Publication Checklist”</a> article and the “Cosmos Rules of the Road”, which outlines some of the Data Use Agreement terms&nbsp;<span class="citation" data-cites="epic_publication_checklist epic_rules_of_road"><sup><a href="#ref-epic_publication_checklist" role="doc-biblioref">5</a>,<a href="#ref-epic_rules_of_road" role="doc-biblioref">6</a></sup></span>.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -415,7 +439,7 @@ Data Privacy: Low Count Suppression
 </div>
 <div class="callout-body-container callout-body">
 <p>When transferring results off the VDI or sharing SlicerDicer graphs, it is imperative to follow Epic’s process to prevent the exportation of line-level data. No counts less than 10 can be individually noted (report as &lt;11).</p>
-<p>Review the <a href="https://resdac.org/articles/cms-cell-size-suppression-policy">Centers for Medicare and Medicaid Services (CMS) Cell Size Suppression Policy</a> outlined by the Research Data Assistance Center (ResDAC) for examples of how to appropriately suppress low counts&nbsp;<span class="citation" data-cites="cms_supression_policy"><sup><a href="#ref-cms_supression_policy" role="doc-biblioref">6</a></sup></span>.</p>
+<p>Review the <a href="https://resdac.org/articles/cms-cell-size-suppression-policy">Centers for Medicare and Medicaid Services (CMS) Cell Size Suppression Policy</a> outlined by the Research Data Assistance Center (ResDAC) for examples of how to appropriately suppress low counts&nbsp;<span class="citation" data-cites="cms_supression_policy"><sup><a href="#ref-cms_supression_policy" role="doc-biblioref">7</a></sup></span>.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-important callout-titled">
@@ -428,9 +452,273 @@ Reporting Citations of Your Findings
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Researchers are obligated to provide a list of citations for any publications or references to their research conducted using Cosmos. This list must be submitted to the Governing Council on a semi-annual basis.</p>
+<p>Researchers are obligated to provide a list of citations for any publications or references to their research conducted using Cosmos. This list must be submitted to the Governing Council on a semi-annual basis&nbsp;<span class="citation" data-cites="epic_rules_of_road"><sup><a href="#ref-epic_rules_of_road" role="doc-biblioref">6</a></sup></span>.</p>
 </div>
 </div>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="additional-certifications" class="level2">
+<h2 class="anchored" data-anchor-id="additional-certifications">Additional Certifications</h2>
+<p>Individuals have the opportunity to obtain additional certifications beyond a Cosmos Basic Access account, granting them extra permissions and capabilities with Epic data. For YNHHS employees, obtaining Super User certification is mandatory, and it is highly encouraged for all YU employees.</p>
+<p>As previously noted, detailed training requirements, role descriptions, and expectations can be found in the Cosmos Setup and Support Guide under the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&amp;PrefDocID=97645">Cosmos Training and Support</a> section. Relevant details are summarized below for each certification track.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Super User</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">Researcher</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false">Data Scientist</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-4" role="tab" aria-controls="tabset-2-4" aria-selected="false">Data Architect</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<section id="do-i-qualify-1" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify-1">Do I Qualify?</h4>
+<p>Epic expects one Super User for every 10 standard Cosmos Users, with each Super User spending at least an hour each week engaging with Cosmos by performing tasks such as:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li>Building experience with the Cosmos portal tools and processes.</li>
+<li>Attending <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100086530&amp;PrefDocID=97645">Cosmos meetings</a> for collaboration and questions.</li>
+<li>Sending feedback or significant questions to Epic.</li>
+<li>Assisting colleagues with using Cosmos tools, including SlicerDicer queries and peer reviews.</li>
+</ul>
+</div>
+<p>Anyone with Cosmos Basic Access is eligible to request the training be assigned to their account.</p>
+</section>
+<section id="typical-timeline-1" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline-1">Typical Timeline</h4>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Coming Soon
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="step-by-step-guide-1" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide-1">Step-by-Step Guide</h4>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Email <a href="mailto:registrations@epic.com">registrations@epic.com</a> to request the Cosmos Super User training be added to one’s profile.</p></li>
+<li><p>Once approved by the Epic team, applicants will receive a welcome email to the Cosmos resource.</p></li>
+<li><p>Complete all the <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;VersionID=1277&amp;ViewID=train-tracks&amp;TrackID=XLOID-54789-XLOCSN-757608-XVE-1277-EXACT-0-CERTCSN-757610">Cosmos Super User Badge</a> training modules on <a href="https://training.epic.com/">Epic University</a>.</p></li>
+<li><p>Watch the <a href="https://welearning.epic.com/Browse?q=cosmos">Cosmos eLearning Videos</a>, available on <a href="https://welearning.epic.com/Browse?app=1000129">weLearning</a>.</p></li>
+<li><p>In addition, Epic recommends the following supplementary trainings:</p></li>
+</ol>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li><p>Select materials from the <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;ViewID=train-tracks&amp;VersionID=1277&amp;ApplicationID=150&amp;TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780">Cosmos Researcher User Badge</a> training available on <a href="https://training.epic.com/">Epic University</a>. Under the “Data Literacy for Cosmos Researcher” section, access the “Self-Study” materials.</p></li>
+<li><p>Review the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&amp;PrefDocID=145166">“Cosmos Publication Checklist”</a> available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a>.</p></li>
+</ol>
+</div>
+<ol start="6" type="1">
+<li>Optional training is also available; for a complete list, refer to the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&amp;PrefDocID=97645">Cosmos Training and Support</a> section.</li>
+</ol>
+</div>
+</section>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<section id="do-i-qualify-2" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify-2">Do I Qualify?</h4>
+<p>Obtaining the Researcher certification is recommended for those who plan to publish or extensively share their findings using Cosmos data. Anyone with Cosmos Basic Access can request the assignment of this training to their account.</p>
+</section>
+<section id="typical-timeline-2" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline-2">Typical Timeline</h4>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Coming Soon
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="step-by-step-guide-2" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide-2">Step-by-Step Guide</h4>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Attain Cosmos Super User status, as described in the previous tab.</p></li>
+<li><p>Email <a href="mailto:registrations@epic.com">registrations@epic.com</a> to request the Cosmos Researcher User training be added to one’s profile.</p></li>
+<li><p>Once approved by the Epic team, applicants will receive a welcome email to the Cosmos resource.</p></li>
+<li><p>Complete all the <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;ViewID=train-tracks&amp;VersionID=1277&amp;ApplicationID=150&amp;TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780">Cosmos Researcher User Badge</a> training modules on <a href="https://training.epic.com/">Epic University</a>.</p></li>
+<li><p>Review the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&amp;PrefDocID=145166">“Cosmos Publication Checklist”</a> available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a>&nbsp;<span class="citation" data-cites="epic_galaxy epic_galaxy_resources"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">2</a>,<a href="#ref-epic_galaxy_resources" role="doc-biblioref">3</a></sup></span>.</p></li>
+<li><p>Optional training is also available; for a complete list, refer to the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&amp;PrefDocID=97645">Cosmos Training and Support</a> section.</p></li>
+</ol>
+</div>
+</section>
+</div>
+<div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
+<section id="do-i-qualify-3" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify-3">Do I Qualify?</h4>
+<p>A Data Scientist is responsible for importing datasets prepared by a Data Architect into any Cosmos-supported data science tool, such as Python or R, to perform analyses and address research questions. Individuals with Cosmos Basic Access are eligible to request the training be assigned to their account, but note that prior experience with data science tools available in Cosmos, such as Python and R, is assumed.</p>
+</section>
+<section id="typical-timeline-3" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline-3">Typical Timeline</h4>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Coming Soon
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="step-by-step-guide-3" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide-3">Step-by-Step Guide</h4>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Attain Researcher status, as described in the previous tab.</p></li>
+<li><p>Complete the “Class Prerequisites” and “Cosmos Responsible Use” sections in the <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;VersionID=1253&amp;ViewID=train-tracks&amp;ApplicationID=150&amp;TrackID=XLOID-109908-XLOCSN-678383-XVE-1253-EXACT-0-CERTCSN-678764">Cosmos for Data Scientists</a> training track on Epic University.</p></li>
+<li><p>Fill out the <a href="https://forms.office.com/r/48tzGY44vr">YNHH Cosmos Data Science &amp; Data Architect Training Request</a> form, following applicable guidelines, to initiate the approval process.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+SlicerDicer Proficiency Assessment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Applicants may be required to demonstrate their proficiency with SlicerDicer upon request.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Course Payment Requirements
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Funding for Epic-led Cosmos courses must be provided by the individual or their sponsor. A Charge of Accounts (COA) number will be required in the form application for the RIO Finance team.</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li><p>Email Dr.&nbsp;Jonathan Quang (<a href="mailto:jonathan.quang@yale.edu">jonathan.quang@yale.edu</a>; <a href="mailto:jonathan.quang@lmhosp.org">jonathan.quang@lmhosp.org</a>) or Dr.&nbsp;Daniella Meeker (<a href="mailto:daniella.meeker@yale.edu">daniella.meeker@yale.edu</a>) to request approval for the Cosmos for Data Scientists training.</p></li>
+<li><p>Once approval is received from either Dr.&nbsp;Quang or Dr.&nbsp;Meeker, email <a href="mailto:registrations@epic.com">registrations@epic.com</a> to request the Cosmos for Data Scientists training be added to the profile.</p></li>
+<li><p>Complete all the remaining <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;VersionID=1253&amp;ViewID=train-tracks&amp;ApplicationID=150&amp;TrackID=XLOID-109908-XLOCSN-678383-XVE-1253-EXACT-0-CERTCSN-678764">Cosmos for Data Scientists</a> training modules on Epic University.</p></li>
+<li><p>In addition, Epic recommends the following supplementary trainings:</p></li>
+</ol>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li><p>The SQL II self-study materials, <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=3778112&amp;PrefDocID=122679">“RPT121i SQL II,”</a> are available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a>.</p></li>
+<li><p>The <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100160836&amp;PrefDocID=150295">“Cosmos Data Science White Paper Library,”</a> a collection of articles covering data science best practices, is available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a>.</p></li>
+</ol>
+</div>
+<ol start="8" type="1">
+<li>Optional training is also available; for a complete list, refer to the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&amp;PrefDocID=97645">Cosmos Training and Support</a> section.</li>
+</ol>
+</div>
+</section>
+<section id="initiating-collaborative-projects-1" class="level4">
+<h4 class="anchored" data-anchor-id="initiating-collaborative-projects-1">Initiating Collaborative Projects</h4>
+<p>With Cosmos Basic Access, researchers can share code and datasets with collaborators assigned to relevant Cosmos <strong>Projects</strong>. Instructions for establishing a Cosmos <strong>Project</strong> are detailed above under the Cosmos Basic Access tab.</p>
+<p>Certified Cosmos Data Science users can share code with the entire Cosmos community via Cosmos’s GitLab. Directions on how to create and maintain projects can be found in the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100271330&amp;PrefDocID=166747">“Cosmos Tip Sheet: Navigate the Cosmos GitLab”</a>. Additional rules and expectations regarding sharing research work with Cosmos users, as well as other engagement opportunities available to Data Science users, can be found in the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100274279&amp;PrefDocID=167006">“Collaborating in Cosmos”</a> article.</p>
+</section>
+<section id="included-tools-and-applications" class="level4">
+<h4 class="anchored" data-anchor-id="included-tools-and-applications">Included Tools and Applications</h4>
+<p>Certified Data Science users gain access to a dedicated Data Science Virtual Machine (DSVM) which features:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><strong>Hardware:</strong> 2.7GHz, eight-core CPU with 32GB RAM</li>
+<li><strong>Database access:</strong> Direct SQL query capabilities</li>
+<li><strong>Storage:</strong> Networked file sharing among project members</li>
+</ul>
+</div>
+<p>The DSVM includes preloaded analytical tools such as RStudio and R, Jupyter notebooks with a Python kernel, and SQL Server Management Studio. Storage allocation provides 20GB of folder space and a 20GB SQL database for both project-level and individual user resources. For detailed information on available software, see the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100185447&amp;PrefDocID=150295">Available Data Science Packages</a> article, which describes all packages included in the DSVM.</p>
+</section>
+</div>
+<div id="tabset-2-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-4-tab">
+<section id="do-i-qualify-4" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify-4">Do I Qualify?</h4>
+<p>A Data Architect is expected to be knowledgeable about the Cosmos data model, write SQL queries against the de-identified database, and build data marts that extract data relevant to research projects. These extracts are then made available to researchers with Data Scientist credentials to perform analyses using Cosmos-supported data science tools to address research questions.</p>
+<p>Anyone with Cosmos Basic Access is eligible to request the training be assigned to their account. This training can be pursued either in addition to the Data Science track, or as an alternative to it.</p>
+</section>
+<section id="typical-timeline-4" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline-4">Typical Timeline</h4>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Coming Soon
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="step-by-step-guide-4" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide-4">Step-by-Step Guide</h4>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Attain Researcher status, as described in the previous tab.</p></li>
+<li><p>Complete the “Class Prerequisites” and “Cosmos Responsible Use” sections in the <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;VersionID=1253&amp;ViewID=train-tracks&amp;ApplicationID=150&amp;TrackID=XLOID-81177-XLOCSN-663234-XVE-1253-EXACT-0-CERTCSN-663236">Cosmos Data Model for Data Architects</a> training track on Epic University.</p></li>
+<li><p>Fill out the <a href="https://forms.office.com/r/48tzGY44vr">YNHH Cosmos Data Science &amp; Data Architect Training Request</a> form, following applicable guidelines, to initiate the approval process.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+SlicerDicer Proficiency Assessment
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Applicants may be required to demonstrate their proficiency with SlicerDicer upon request.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Course Payment Requirements
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Funding for Epic-led Cosmos courses must be provided by the individual or their sponsor. A Charge of Accounts (COA) number will be required in the form application for the RIO Finance team.</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li><p>Email Dr.&nbsp;Jonathan Quang (<a href="mailto:jonathan.quang@yale.edu">jonathan.quang@yale.edu</a>; <a href="mailto:jonathan.quang@lmhosp.org">jonathan.quang@lmhosp.org</a>) or Dr.&nbsp;Daniella Meeker (<a href="mailto:daniella.meeker@yale.edu">daniella.meeker@yale.edu</a>) to request approval for the Cosmos for Data Scientists training.</p></li>
+<li><p>Once approval is received from either Dr.&nbsp;Quang or Dr.&nbsp;Meeker, email <a href="mailto:registrations@epic.com">registrations@epic.com</a> to request the Cosmos for Data Scientists training be added to the profile.</p></li>
+<li><p>Complete all the remaining <a href="https://training.epic.com/CourseCatalog#/?LocationID=1&amp;VersionID=1253&amp;ViewID=train-tracks&amp;ApplicationID=150&amp;TrackID=XLOID-81177-XLOCSN-663234-XVE-1253-EXACT-0-CERTCSN-663236">Cosmos Data Model for Data Architects</a> training modules on Epic University.</p></li>
+<li><p>In addition, Epic recommends the following supplementary trainings:</p></li>
+</ol>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li>The <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100160836&amp;PrefDocID=150295">“Cosmos Data Science White Paper Library,”</a> a collection of articles covering data science best practices, is available on <a href="https://galaxy.epic.com/?#Home">Galaxy</a>.</li>
+</ol>
+</div>
+<ol start="8" type="1">
+<li>Optional training is also available; for a complete list, refer to the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&amp;PrefDocID=97645">Cosmos Training and Support</a> section.</li>
+</ol>
+</div>
+</section>
+<section id="included-tools-and-applications-1" class="level4">
+<h4 class="anchored" data-anchor-id="included-tools-and-applications-1">Included Tools and Applications</h4>
+<p>Certified Data Science users gain access to a dedicated DSVM, as described in the previous tab. It includes preloaded analytical tools, such as SQL Server Management Studio, from which Data Architects can query the de-identified Cosmos dataset.</p>
 </section>
 </div>
 </div>
@@ -440,14 +728,11 @@ Reporting Citations of Your Findings
 <h2 class="anchored" data-anchor-id="valuable-links">Valuable Links</h2>
 <div style="margin-left: 2rem">
 <ul>
-<li><p><a href="https://ynhh.certpointsystems.com/">YNHH Learning Management System (LMS)</a>: Center Point Systems is where you can sign up for YNHH-created in-person or online training courses&nbsp;<span class="citation" data-cites="ynhhs_lms"><sup><a href="#ref-ynhhs_lms" role="doc-biblioref">7</a></sup></span>.</p></li>
-<li><p><a href="https://myapps.ynhh.org">MyAPPs</a>: Find the portal to access the VDI through Citrix Workspace. Ensure your YNHH Duo is active for authentication and use your YU/YNHHS VPN if accessing from outside the Yale University or YNHHS network.</p></li>
-<li><p><a href="https://yaleedu.sharepoint.com/:u:/r/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=vQamcY">JDAT RBA SharePoint</a>: Find details about what RBA provides, along with supporting documents such as how-to guides for accessing the VDI, enrolling in Duo, links to training portals, and user guides for researchers&nbsp;<span class="citation" data-cites="jdat_sharepoint"><sup><a href="#ref-jdat_sharepoint" role="doc-biblioref">8</a></sup></span>.</p></li>
-<li><p><a href="https://itstraining.ynhh.org">YNHH IT SharePoint</a>: Find IT support materials, guides for navigating the Epic VDI software, notices of upcoming training events and system updates, and training requirements for researchers using Epic data. To access the Epic-specific documentation, click the blue “Training &amp; Support Material” drop-down menu and select “Epic Training” to access the “Epic Training Portal”&nbsp;<span class="citation" data-cites="ynhhs_its_sharepoint"><sup><a href="#ref-ynhhs_its_sharepoint" role="doc-biblioref">9</a></sup></span>.</p></li>
-<li><p><a href="https://jdat.ynhh.org/AnalyticsPortal">JDAT Analytics Portal</a>: Submit a Helix request to have JDAT compile your research data. Additionally, access JDAT-created training for tools like Epic’s SlicerDicer&nbsp;<span class="citation" data-cites="jdat_helix"><sup><a href="#ref-jdat_helix" role="doc-biblioref">2</a></sup></span>.</p></li>
-<li><p><a href="https://userweb.epic.com/">Epic UserWeb</a>: Find Epic training materials, documentation, community discussions, support resources, updates, customization options, and access to your Epic profile&nbsp;<span class="citation" data-cites="epic_user_web"><sup><a href="#ref-epic_user_web" role="doc-biblioref">10</a></sup></span>.</p></li>
-<li><p><a href="https://training.epic.com/">Epic University</a>: A subdomain of the UserWeb, find training opportunities and access to coursework necessary to obtain certificates, such as the Super User Badge, with courses organized by the Epic team. Learn more about advanced training options on our <a href="../../../Pages/More-Info-Pages/Restricted-Access/Epic-Cosmos.html">Epic Cosmos</a> information webpage&nbsp;<span class="citation" data-cites="epic_training"><sup><a href="#ref-epic_training" role="doc-biblioref">11</a></sup></span>.</p></li>
-<li><p><a href="https://galaxy.epic.com/?#Home">Galaxy</a>: A subdomain of the UserWeb, find comprehensive resource that provides documentation, announcements, best practices, and implementation guides related to the Epic dataset&nbsp;<span class="citation" data-cites="epic_galaxy"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">12</a></sup></span>.</p></li>
+<li><p><a href="https://userweb.epic.com/">Epic UserWeb</a>: Find Epic training materials, documentation, community discussions, support resources, updates, customization options, and access to your Epic profile&nbsp;<span class="citation" data-cites="epic_user_web"><sup><a href="#ref-epic_user_web" role="doc-biblioref">8</a></sup></span>.</p></li>
+<li><p><a href="https://training.epic.com/">Epic University</a>: A subdomain of the UserWeb, find training opportunities and access to coursework necessary to obtain certificates, such as the Super User Badge, with courses organized by the Epic team&nbsp;<span class="citation" data-cites="epic_training"><sup><a href="#ref-epic_training" role="doc-biblioref">9</a></sup></span>. Learn more about advanced training options on our <a href="../../../Pages/More-Info-Pages/Restricted-Access/Epic-Cosmos.html">Epic Cosmos</a> information webpage.</p></li>
+<li><p><a href="https://galaxy.epic.com/?#Home">Galaxy</a>: A subdomain of the UserWeb, find comprehensive resource that provides documentation, announcements, best practices, and implementation guides related to the Epic dataset&nbsp;<span class="citation" data-cites="epic_galaxy"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">2</a></sup></span>.</p></li>
+<li><p><a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100086530&amp;PrefDocID=97645">“Staying in the Loop and Providing Cosmos Feedback”</a>: Find meetings and other opportunities to engage with and provide feedback to the Cosmos support, training, and administration teams. The table also outlines the typical level of access participants have, such as Super User.</p></li>
+<li><p><a href="https://galaxy.epic.com/?#Browse/page=1!68!95!100272699&amp;from=Galaxy-Redirect">“Guidance for Conducting Externally Funded Research Using Cosmos”</a>: Find expectations and guidelines for conducting externally funded research using Epic Cosmos data.</p></li>
 </ul>
 </div>
 </section>
@@ -478,41 +763,32 @@ Reporting Citations of Your Findings
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-ycci_epic_ehr" class="csl-entry" role="listitem">
-<div class="csl-left-margin">1. </div><div class="csl-right-inline">Koo, G. &amp; Clinical Investigation (YCCI), Y. C. for. Epic electronic health record. Epic electronic health record. <a href="https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx">https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx</a>.</div>
-</div>
-<div id="ref-jdat_helix" class="csl-entry" role="listitem">
-<div class="csl-left-margin">2. </div><div class="csl-right-inline">JDAT. Helix request. <span>JDAT</span> analytics portal. <a href="https://jdat.ynhh.org/AnalyticsPortal/helix">https://jdat.ynhh.org/AnalyticsPortal/helix</a>.</div>
-</div>
-<div id="ref-ybic_for_researchers" class="csl-entry" role="listitem">
-<div class="csl-left-margin">3. </div><div class="csl-right-inline">Computing (YBIC), Y. B. I. \&amp;. For researchers &amp; research professionals. <a href="https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/">https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/</a>.</div>
-</div>
 <div id="ref-epic_overview" class="csl-entry" role="listitem">
-<div class="csl-left-margin">4. </div><div class="csl-right-inline">Epic. Overview of cosmos. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!96!100278332,100278342&amp;from=RecentlyViewed">https://galaxy.epic.com/?#Browse/page=1!68!96!100278332,100278342&amp;from=RecentlyViewed</a> (2025).</div>
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Epic. Overview of cosmos. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!96!100278332,100278342&amp;from=RecentlyViewed">https://galaxy.epic.com/?#Browse/page=1!68!96!100278332,100278342&amp;from=RecentlyViewed</a> (2025).</div>
+</div>
+<div id="ref-epic_galaxy" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Epic. Galaxy. Galaxy. <a href="https://galaxy.epic.com/?#Home">https://galaxy.epic.com/?#Home</a>.</div>
+</div>
+<div id="ref-epic_galaxy_resources" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">Epic. Cosmos portal &amp; analytics resources. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!642!100074365&amp;from=Galaxy-Redirect">https://galaxy.epic.com/?#Browse/page=1!68!642!100074365&amp;from=Galaxy-Redirect</a> (2025).</div>
+</div>
+<div id="ref-epic_welearning_slicerdicer" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">Community, E. <span>SlicerDicer</span> lessons. <span class="nocase">weLearning</span>. <a href="https://welearning.epic.com/Browse?app=1000129">https://welearning.epic.com/Browse?app=1000129</a>.</div>
 </div>
 <div id="ref-epic_publication_checklist" class="csl-entry" role="listitem">
 <div class="csl-left-margin">5. </div><div class="csl-right-inline">Epic. Cosmos publication checklist. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!50!100130418&amp;from=Favorites">https://galaxy.epic.com/?#Browse/page=1!68!50!100130418&amp;from=Favorites</a> (2024).</div>
 </div>
+<div id="ref-epic_rules_of_road" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Epic. <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=4024320&amp;PrefDocID=113401">Cosmos rules of the road</a>. (2024).</div>
+</div>
 <div id="ref-cms_supression_policy" class="csl-entry" role="listitem">
-<div class="csl-left-margin">6. </div><div class="csl-right-inline">University of Minnesota School of Public Health - Health Policy &amp; Management, Medicare and Medicaid Services (CMS), C. for &amp; (ResDAC), R. D. A. C. <span>CMS</span> cell size suppression policy. Learn about <span>CMS</span> data. <a href="https://resdac.org/articles/cms-cell-size-suppression-policy">https://resdac.org/articles/cms-cell-size-suppression-policy</a> (2024).</div>
-</div>
-<div id="ref-ynhhs_lms" class="csl-entry" role="listitem">
-<div class="csl-left-margin">7. </div><div class="csl-right-inline">Health, Y. N. H. Learning management. <a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/">https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/</a>.</div>
-</div>
-<div id="ref-jdat_sharepoint" class="csl-entry" role="listitem">
-<div class="csl-left-margin">8. </div><div class="csl-right-inline">JDAT. <span>YNHHS</span> researcher access. <a href="https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?ovuser=dd8cbebb-2139-4df8-b411-4e3e87abeb5c\%2Cdaniella.meeker\%40yale.edu&amp;OR=Teams-HL&amp;CT=1731517231695&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDA5MDEwMTQyMyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ\%3D\%3D&amp;CID=508a63a1-a0c8-6000-fc99-56cf5d8658bf&amp;cidOR=SPO">https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?ovuser=dd8cbebb-2139-4df8-b411-4e3e87abeb5c\%2Cdaniella.meeker\%40yale.edu&amp;OR=Teams-HL&amp;CT=1731517231695&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDA5MDEwMTQyMyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ\%3D\%3D&amp;CID=508a63a1-a0c8-6000-fc99-56cf5d8658bf&amp;cidOR=SPO</a>.</div>
-</div>
-<div id="ref-ynhhs_its_sharepoint" class="csl-entry" role="listitem">
-<div class="csl-left-margin">9. </div><div class="csl-right-inline">ITS, Y. N. H. H. <span>YNHHS</span> training. <a href="https://itstraining.ynhh.org/">https://itstraining.ynhh.org/</a>.</div>
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">University of Minnesota School of Public Health - Health Policy &amp; Management, Medicare and Medicaid Services (CMS), C. for &amp; (ResDAC), R. D. A. C. <span>CMS</span> cell size suppression policy. Learn about <span>CMS</span> data. <a href="https://resdac.org/articles/cms-cell-size-suppression-policy">https://resdac.org/articles/cms-cell-size-suppression-policy</a> (2024).</div>
 </div>
 <div id="ref-epic_user_web" class="csl-entry" role="listitem">
-<div class="csl-left-margin">10. </div><div class="csl-right-inline">Epic. Epic <span>UserWeb</span>. <a href="https://userweb.epic.com/">https://userweb.epic.com/</a>.</div>
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Epic. Epic <span>UserWeb</span>. <a href="https://userweb.epic.com/">https://userweb.epic.com/</a>.</div>
 </div>
 <div id="ref-epic_training" class="csl-entry" role="listitem">
-<div class="csl-left-margin">11. </div><div class="csl-right-inline">Epic. Training. Epic training. <a href="https://training.epic.com/">https://training.epic.com/</a>.</div>
-</div>
-<div id="ref-epic_galaxy" class="csl-entry" role="listitem">
-<div class="csl-left-margin">12. </div><div class="csl-right-inline">Epic. Galaxy. Galaxy. <a href="https://galaxy.epic.com/?#Home">https://galaxy.epic.com/?#Home</a>.</div>
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Epic. Training. Epic training. <a href="https://training.epic.com/">https://training.epic.com/</a>.</div>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
