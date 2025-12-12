@@ -12,7 +12,7 @@
 ##              to update the listed publications.
 
 # The same functions are used in all data type folders.
-source('Pages/More-Info-Pages/Freely-Accessible/PubMed Search_Functions.R')
+source('Code/PubMed Search_Functions.R')
 
 
 ## Example usage:
@@ -109,7 +109,19 @@ build_search_query(
 
 
 ## ----------------
-## YNHHS 
+## Epic Cosmos
+
+build_search_query(
+  keywords = c("Epic Cosmos"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+build_search_query(
+  keywords = c("Epic Cosmos"), 
+  affiliation = "Yale School of Medicine", years = 5)
+
+
+## ----------------
+## YNHHS Epic
 
 build_search_query(
   keywords = c("Yale New Haven Health System", "YNHHS"), 

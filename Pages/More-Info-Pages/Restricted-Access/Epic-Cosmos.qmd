@@ -4,7 +4,7 @@ title: |
   Epic Cosmos
 description: |
   </br>
-  Cosmos compiles Epic electronic medical record (EMR) data from nearly 2,000 participating hospitals globally, creating a comprehensive dataset with analytical tools like SlicerDicer and the Data Science Virtual Machine (DSVM) to advance medical research. This network encompasses half a million physicians caring for 300 million patients, generating billions of high-quality, longitudinal clinical data points. Cosmos integrates and de-identifies patient records to create unified longitudinal profiles while eliminating duplicates.
+  Cosmos compiles Epic electronic medical record (EMR) data from nearly 2,000 participating hospitals globally, creating a comprehensive dataset with analytical tools like SlicerDicer and the Data Science Virtual Machine (DSVM) to advance medical research\ [@epic_cosmos_about; @ybic_cosmos]. This network encompasses half a million physicians caring for 300 million patients, generating billions of high-quality, longitudinal clinical data points\ [@epic_community]. Cosmos integrates and de-identifies patient records to create unified longitudinal profiles while eliminating duplicates\ [@epic_overview].
   </br>
   </br>
   Special thanks to <a href="https://medicine.yale.edu/profile/richard-hintz/">Richard Hintz</a> and <a href="https://medicine.yale.edu/profile/claudia-coronel-moreno/">Claudia Coronel-Moreno</a> from Yale's Center for Clinical Investigation, and to <a href="https://medicine.yale.edu/profile/soundari-sureshanand/">Soundari Sureshanand</a> from the Joint Data Analytics Team, for their invaluable help in creating this resource page.
@@ -23,13 +23,13 @@ source('../../../Code/PubMed Search_Functions.R')
 
 ## Overview
 
-Cosmos is a comprehensive dataset that compiles records voluntarily contributed by health systems using Epic for electronic medical record (EMR) management. More than just a data repository, Cosmos provides a complete data warehouse and analytical infrastructure, including tools such as SlicerDicer and the Data Science Virtual Machine (DSVM), designed to facilitate scientific discoveries and advance medicine.
+Cosmos is a comprehensive dataset that compiles records voluntarily contributed by health systems using Epic for electronic medical record (EMR) management. More than just a data repository, Cosmos provides a complete data warehouse and analytical infrastructure, including tools such as SlicerDicer and the Data Science Virtual Machine (DSVM), designed to facilitate scientific discoveries and advance medicine\ [@epic_cosmos_about; @ybic_cosmos].
 
-The network currently encompasses nearly 2,000 hospitals across the country and globally, with almost half a million physicians caring for approximately 300 million patients. This collaboration creates a dataset containing billions of high-quality, representative, longitudinal clinical data points. Notably, the patient demographics represented in Cosmos closely align with those of the United States Census, enhancing its research utility. All participating organizations and members of the Cosmos Governing Council can be viewed on the [Cosmos Community](https://cosmos.epic.com/community/) page.
+The network currently encompasses nearly 2,000 hospitals across the country and globally, with almost half a million physicians caring for approximately 300 million patients. This collaboration creates a dataset containing billions of high-quality, representative, longitudinal clinical data points\ [@epic_community]. Notably, the patient demographics represented in Cosmos closely align with those of the United States Census, enhancing its research utility\ [@epic_overview]. All participating organizations and members of the Cosmos Governing Council can be viewed on the [Cosmos Community](https://cosmos.epic.com/community/) page\ [@epic_community].
 
-Epic Cosmos combines inpatient and outpatient charts into unified, longitudinal patient records while removing duplicates that may arise from patients receiving care at multiple Cosmos organizations. The data provided to researchers adheres to [HIPAA-defined limited data set](https://privacyruleandresearch.nih.gov/pr_08.asp) standards. To enhance patient privacy protections, the de-identified dataset suppresses geographic information, consistently shifts patient dates, and conceals source organizations. Detailed information on individual data element transformation processes is available in the [Cosmos Data Domain Encyclopedia](https://galaxy.epic.com/Redirect.aspx?DocumentID=100198880&PrefDocID=156634) and the [Data Dictionary](https://galaxy.epic.com/Search/GetFile?url=1%2168%21100%21100149584&from=KitMembers) (also accessible through the Cosmos portal).
+Epic Cosmos combines inpatient and outpatient charts into unified, longitudinal patient records while removing duplicates that may arise from patients receiving care at multiple Cosmos organizations. The data provided to researchers adheres to [HIPAA-defined limited data set](https://privacyruleandresearch.nih.gov/pr_08.asp) standards\ [@epic_overview]. To enhance patient privacy protections, the de-identified dataset suppresses geographic information, consistently shifts patient dates, and conceals source organizations. Detailed information on individual data element transformation processes is available in the [Cosmos Data Domain Encyclopedia](https://galaxy.epic.com/Redirect.aspx?DocumentID=100198880&PrefDocID=156634) and the [Data Dictionary](https://galaxy.epic.com/Search/GetFile?url=1%2168%21100%21100149584&from=KitMembers) (also accessible through the Cosmos portal)\ [@epic_cosmos_data_encyclopedia; @epic_data_dictionary].
 
-The [Cosmos Overview](https://galaxy.epic.com/Redirect.aspx?DocumentID=100278332&PrefDocID=167630) page provides an invaluable introduction to Epic's resource, outlining essential information for both non-sponsored and third-party sponsored research projects. This includes guidance on Cosmos data usage, project tracking procedures, and publication expectations, with additional details available in the corresponding data access level sections on this webpage.
+The [Cosmos Overview](https://galaxy.epic.com/Redirect.aspx?DocumentID=100278332&PrefDocID=167630) page provides an invaluable introduction to Epic's resource, outlining essential information for both non-sponsored and third-party sponsored research projects\ [@epic_overview]. This includes guidance on Cosmos data usage, project tracking procedures, and publication expectations, with additional details available in the corresponding data access level sections on this webpage.
 
 The types of data collected in the EMR are continuously expanding. For example, researchers currently have access to the following data\ [@epic_overview]:
 
@@ -60,16 +60,16 @@ The types of data collected in the EMR are continuously expanding. For example, 
 
 #### Do I Qualify?
 
-Basic access provides users with entry to the Cosmos data portal, allowing them to query the limited dataset using SlicerDicer, create dashboards with custom elements, and share dashboards with other Cosmos users.
+Basic access provides users with entry to the Cosmos data portal, allowing them to query the limited dataset using SlicerDicer, create dashboards with custom elements, and share dashboards with other Cosmos users\ [@epic_setup_guide].
 
-While Yale University-Yale New Haven Hospital System (YU-YNHHS) manages access to YNHHS Epic data through Research Basic Access (RBA), Epic coordinates with YU-YNHHS to manage researcher access to Epic Cosmos data. According to their rules, any researcher seeking access to Epic Cosmos must already have RBA to the YNHHS Epic data. Full instructions for obtaining RBA are available on our [Yale New Haven Health System (YNHHS) Epic](YNHHS-Epic.qmd) information webpage.
+While Yale University-Yale New Haven Hospital System (YU-YNHHS) manages access to YNHHS Epic data through Research Basic Access (RBA), Epic coordinates with YU-YNHHS to manage researcher access to Epic Cosmos data. According to their rules, any researcher seeking access to Epic Cosmos must already have RBA to the YNHHS Epic data. Full instructions for obtaining RBA are available on our [Yale New Haven Health System (YNHHS) Epic](YNHHS-Epic.qmd) information webpage\ [@epic_granting_access].
 
-Researchers in the "Your Community" category (directly affiliated partners) may require additional review by the Cosmos Governing Council to gain access to Epic Cosmos. External Collaborators (e.g., pharma employees, contractors, etc.) are typically not intended to have access to Epic Cosmos, but special approval requests can be submitted to the Cosmos Governing Council. These qualification tiers are illustrated in Epic's infographic below.
+Researchers in the "Your Community" category (directly affiliated partners) may require additional review by the Cosmos Governing Council to gain access to Epic Cosmos. External Collaborators (e.g., pharma employees, contractors, etc.) are typically not intended to have access to Epic Cosmos, but special approval requests can be submitted to the Cosmos Governing Council. These qualification tiers are illustrated in Epic's infographic below\ [@epic_granting_access].
 
 <div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
   <img id="myImage" src="../../../Images/Other Infographics/Granting Cosmos Portal Access to Users_Infographic_Downloaded12082025.png" alt="Zoomable Image" title="Click to zoom in">
   <figcaption class="caption">
-    Epic Cosmos user request process and requirements infographic from "Granting Cosmos Portal Access to Users" by Epic, last approved by the Cosmos Governing Council on April 20<sup>th</sup>, 2023.
+    Epic Cosmos user request process and requirements infographic from "Granting Cosmos Portal Access to Users" by Epic, last approved by the Cosmos Governing Council on April 20<sup>th</sup>, 2023\ [@epic_granting_access].
   </figcaption>
 </div>
 
@@ -86,7 +86,7 @@ Researchers in the "Your Community" category (directly affiliated partners) may 
 
 #### Typical Timeline
 
-CITI training completion typically takes 1-2 weeks, as the training is comprehensive and involved. Once completed, certificates take no more than 2 business days to be reflected in Workday. Note that recognition timing may vary if training is completed outside of Workday.
+CITI training completion typically takes 1-2 weeks, as the training is comprehensive and involved. Once completed, certificates take no more than 2 business days to be reflected in Workday. Note that recognition timing may vary if training is completed outside of Workday\ [@yale_human_subject].
 
 #### Step-by-Step Guide
 
@@ -95,15 +95,15 @@ This page assumes researchers have RBA. Follow the [YNHHS Epic](YNHHS-Epic.qmd) 
 **a: Complete Yale's HIPAA Training**
 
 ::: {style="margin-left: 2rem"}
-**For Yale NetID holders:** Complete the [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) courses in Workday, including the basic privacy and security module, followed by the role-specific module (e.g., for clinicians or researchers).
+**For Yale NetID holders:** Complete the [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) courses in Workday, including the basic privacy and security module, followed by the role-specific module (e.g., for clinicians or researchers)\ [@yale_hippa].
 
-**For Non-Yale NetID holders:** Read and sign the [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) training materials specific to your role on the project (e.g., for clinicians or researchers). Submission directions for these documents can be found on the accompanying PDF.
+**For Non-Yale NetID holders:** Read and sign the [HIPAA Privacy and Security](https://hipaa.yale.edu/training/training-modules) training materials specific to your role on the project (e.g., for clinicians or researchers). Submission directions for these documents can be found on the accompanying PDF\ [@yale_hippa].
 :::
 
 
 **b: Obtain a Human Subjects Protection Training (HSPT) Certificate from CITI**
 
-A Human Subjects Protection Training (HSPT) certificate from CITI completed within the last three years is required. Below is a summary of the process, and the complete directions can be found on the [It's Your Yale](https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training) page about HSPT.
+A Human Subjects Protection Training (HSPT) certificate from CITI completed within the last three years is required. Below is a summary of the process, and the complete directions can be found on the [It's Your Yale](https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training) page about HSPT\ [@yale_human_subject].
 
 Researchers need to complete the following CITI certificates:
 
@@ -137,7 +137,7 @@ If available, complete the "Compliance Assessment" to indicate that you are cond
 5. Log into [CITI](https://www.citiprogram.org/index.cfm?pageID=668) using the "Yale University Training Opportunities" Single Sign-On (SSO).
 :::
 
-**For Non-Yale Employees:** Non-Yale employees should access CITI through their own institution or directly via the [main webpage](https://about.citiprogram.org/). Pursuing certification independently may incur charges. Current costs for CITI courses can be found on the [Explore Our Courses](https://about.citiprogram.org/courses/?reset=true) webpage.
+**For Non-Yale Employees:** Non-Yale employees should access CITI through their own institution or directly via the [main webpage](https://about.citiprogram.org/). Pursuing certification independently may incur charges. Current costs for CITI courses can be found on the [Explore Our Courses](https://about.citiprogram.org/courses/?reset=true) webpage\ [@citi_courses].
 :::
 
 **b.ii: Register for the Certification**
@@ -155,61 +155,63 @@ d. If the Workday account was not linked with CITI, save the completion certific
 :::
 
 
-**c: Training**
+**c: Mastering SlicerDicer in the Cosmos Environment**
 
-Individuals are expected to have completed the YNHHS Epic RBA application process, including all mandatory training for that level of access. YNHH and JDAT provide training specifically tailored for the YNHHS Epic portal within the YNHH Virtual Desktop Infrastructure (VDI), which differs from the training provided by Epic for similar analytic tools available in the Cosmos data portal, such as SlicerDicer.
+Individuals are expected to have completed the YNHHS Epic RBA application process, including all mandatory training for that level of access. YNHH and Joint Data Analytics Team (JDAT) provide training specifically tailored for the YNHHS Epic portal within the YNHH Virtual Desktop Infrastructure (VDI), which differs from the training provided by Epic for similar analytic tools available in the Cosmos data portal, such as SlicerDicer\ [@epic_setup_guide; @epic_setup_guide_training].
+
+:::{.callout-note}
+## SlicerDicer Proficiency Assessment
+
+Applicants may be required to demonstrate their proficiency with SlicerDicer upon request.
+:::
 
 To help users get acclimated to these differences, the following resources are recommended by Epic:
 
 ::: {style="margin-left: 2rem"}
-i. [Cosmos Learning Home](https://cosmos.epichosted.com/EpicCareLink_AUTH/common/epic_check.asp?mode=OIOSAML&dashboardId=100160) - available on [Cosmos](https://cosmos.epichosted.com/)
+i. ["Cosmos Portal & Analytics Resources"](https://galaxy.epic.com/?#Browse/page=1!68!642!100074365&from=Galaxy-Redirect) - available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_galaxy_resources]
 
-ii. ["Cosmos Portal & Analytics Resources"](https://galaxy.epic.com/?#Browse/page=1!68!642!100074365&from=Galaxy-Redirect) - available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_galaxy; @epic_galaxy_resources]
+ii. [Here's How... SlicerDicer [POSS043]](https://welearning.epic.com/Details?csn=300004) - available on [weLearning](https://welearning.epic.com/Browse?app=1000129)\ [@epic_welearning_slicerdicer]
 
-iii. [Here's How... SlicerDicer [POSS043]](https://welearning.epic.com/Details?csn=300004) - available on [weLearning](https://welearning.epic.com/Browse?app=1000129)\ [@epic_welearning_slicerdicer]
-
-iv. Archived [Past Slice of the Month Sessions](https://galaxy.epic.com/?#Browse/page=1!68!95!100195036,100195042&from=Galaxy-Redirect) showcasing researchers using Cosmos in various ways for their own research projects.
+iii. Archived [Past Slice of the Month Sessions](https://galaxy.epic.com/?#Browse/page=1!68!95!100195036,100195042&from=Galaxy-Redirect) showcasing researchers using Cosmos in various ways for their own research projects\ [@epic_user_meetings].
 :::
 
-Detailed training requirements, role descriptions, and expectations can be found in the Cosmos Setup and Support Guide under the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section. These are summarized below. Optional trainings are available for those pursuing additional certifications in Data Science and Data Architecture. For a complete list, refer to the Cosmos Training and Support section.
 
-**c.i: Required Training**
+**d: Submit Access Application**
+
+The preceding steps help applicants prepare for filling out the [Cosmos Basic Access Request](https://forms.office.com/r/bs54AxkuGb) form\ [@cosmos_basic_access_form]. Once these steps have been completed, fill out the YNHH Cosmos Basic Access Request form, following applicable guidelines, to initiate the approval process\ [@ybic_cosmos].
+
+
+**e: Training**
+
+Complete training requirements, role descriptions, and expectations can be found in the C[Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section of the Cosmos Setup and Support Guide, with key points summarized below\ [@epic_setup_guide; @epic_setup_guide_training]. Optional training modules for Data Science and Data Architecture certifications are also available through the same section.
+
+**e.i: Required Training**
 
 ::: {style="margin-left: 2rem"}
-i. [User Agreement](https://galaxy.epic.com/Redirect.aspx?DocumentID=3833820&PrefDocID=97513) - available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_galaxy; @epic_galaxy_resources]
+i. [User Agreement](https://galaxy.epic.com/Redirect.aspx?DocumentID=3833820&PrefDocID=97513) - available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_user_agreement]
 
-ii. "Explore SlicerDicer" - available on [Cosmos](https://cosmos.epichosted.com/). From the main Cosmos landing page, hover over the "Explore" tab in the top bar to display the drop-down menu, and select "Explore SlicerDicer" under the "Explore" section.
+ii. "Explore SlicerDicer" - available on [Cosmos](https://cosmos.epichosted.com/). From the main Cosmos landing page, hover over the "Explore" tab in the top bar to display the drop-down menu, and select "Explore SlicerDicer" under the "Explore" section\ [@epic_cosmos].
 :::
 
-**c.ii: Recommended Training**
+**e.ii: Recommended Training**
 
 ::: {style="margin-left: 2rem"}
-i. [Responsible Use Document and Assessment](https://galaxy.epic.com/Search/GetFile?Url=1!68!100!100161049) - available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_galaxy; @epic_galaxy_resources]
+i. [Responsible Use Document and Assessment](https://galaxy.epic.com/Search/GetFile?Url=1!68!100!100161049) - available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_responsible_use]
 
-ii. [Cosmos eLearning Videos](https://welearning.epic.com/Browse?q=cosmos) - available on [weLearning](https://welearning.epic.com/Browse?app=1000129)
+ii. [Cosmos Learning Home](https://cosmos.epichosted.com/EpicCareLink_AUTH/common/epic_check.asp?mode=OIOSAML&dashboardId=100160) - available on [Cosmos](https://cosmos.epichosted.com/)\ [@epic_cosmos_learning_home]
 
-iii. Select materials from the [Cosmos Super User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1277&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-54789-XLOCSN-757608-XVE-1277-EXACT-0-CERTCSN-757610) training - available on [Epic University](https://training.epic.com/). Under the "Super User in the Portal" section, access:
+iii. [Cosmos eLearning Videos](https://welearning.epic.com/Browse?q=cosmos) - available on [weLearning](https://welearning.epic.com/Browse?app=1000129)\ [@epic_cosmos_welearning]
+
+iv. ["Cosmos Publication Checklist"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&PrefDocID=145166) - available on [Galaxy](https://galaxy.epic.com/?#Home) with summarized notes below\ [@epic_publication_checklist]
+
+v. Select materials from the [Cosmos Super User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1277&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-54789-XLOCSN-757608-XVE-1277-EXACT-0-CERTCSN-757610) training - available on [Epic University](https://training.epic.com/)\ [@super_user_badge]. Under the "Super User in the Portal" section, access:
 
 ::: {style="margin-left: 2rem"}
 a. Self-Study materials
 b. Project
 :::
 
-iv. Select materials from the [Cosmos Researcher User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&ViewID=train-tracks&VersionID=1277&ApplicationID=150&TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780) training - available on [Epic University](https://training.epic.com/). Under the "Data Literacy for Cosmos Researcher" section access the "Self-Study" materials.
-
-v. ["Cosmos Publication Checklist"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&PrefDocID=145166) - available on [Galaxy](https://galaxy.epic.com/?#Home) with summarized notes below\ [@epic_galaxy; @epic_galaxy_resources]
-
-:::
-
-
-**d: Finalize and Submit Access Application**
-
-The preceding steps help applicants prepare for filling out the [Cosmos Basic Access Request](https://forms.office.com/r/bs54AxkuGb) form. Once these steps have been completed, fill out the YNHH Cosmos Basic Access Request form, following applicable guidelines, to initiate the approval process.
-
-:::{.callout-note}
-## SlicerDicer Proficiency Assessment
-
-Applicants may be required to demonstrate their proficiency with SlicerDicer upon request.
+vi. Select materials from the [Cosmos Researcher User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&ViewID=train-tracks&VersionID=1277&ApplicationID=150&TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780) training - available on [Epic University](https://training.epic.com/)\ [@researcher_badge]. Under the "Data Literacy for Cosmos Researcher" section access the "Self-Study" materials.
 :::
 
 
@@ -221,7 +223,7 @@ If you encounter any issues logging into Cosmos, please contact JDAT for assista
 
 #### Initiating Collaborative Projects
 
-Researchers with Cosmos Basic Access can share code and datasets with peers who are collaborators on specific research questions. These collaboration networks are created using the Cosmos **Projects** tool. Directions on how to create and maintain projects can be found in the ["Cosmos Tip Sheet: Create and Monitor Projects"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100061177&PrefDocID=127868).
+Researchers with Cosmos Basic Access can share code and datasets with peers who are collaborators on specific research questions\ [@epic_collaborating]. These collaboration networks are created using the Cosmos **Projects** tool. Directions on how to create and maintain projects can be found in the ["Cosmos Tip Sheet: Create and Monitor Projects"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100061177&PrefDocID=127868)\ [@create_monitor_projects].
 
 Certified Cosmos Data Science users can share code with the entire Cosmos community via Cosmos's GitLab. For more details, please refer to the Data Science certificate tab below.
 
@@ -246,10 +248,9 @@ Researchers are obligated to provide a list of citations for any publications or
 :::
 
 
-
 ## Additional Certifications
 
-Individuals have the opportunity to obtain additional certifications beyond a Cosmos Basic Access account, granting them extra permissions and capabilities with Epic data. For YNHHS employees, obtaining Super User certification is mandatory, and it is highly encouraged for all YU employees.
+Individuals have the opportunity to obtain additional certifications beyond a Cosmos Basic Access account, granting them extra permissions and capabilities with Epic data\ [@epic_setup_guide]. For YNHHS employees, obtaining Super User certification is mandatory, and it is highly encouraged for all YU employees\ [@ynhhs_course_catalog].
 
 As previously noted, detailed training requirements, role descriptions, and expectations can be found in the Cosmos Setup and Support Guide under the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section. Relevant details are summarized below for each certification track.
 
@@ -259,7 +260,7 @@ As previously noted, detailed training requirements, role descriptions, and expe
 
 #### Do I Qualify?
 
-Epic expects one Super User for every 10 standard Cosmos Users, with each Super User spending at least an hour each week engaging with Cosmos by performing tasks such as:
+Epic expects one Super User for every 10 standard Cosmos Users, with each Super User spending at least an hour each week engaging with Cosmos by performing tasks such as\ [@epic_setup_guide]:
 
 ::: {style="margin-left: 2rem"}
 - Building experience with the Cosmos portal tools and processes.
@@ -283,19 +284,19 @@ Anyone with Cosmos Basic Access is eligible to request the training be assigned 
 
 2. Once approved by the Epic team, applicants will receive a welcome email to the Cosmos resource.
 
-3. Complete all the [Cosmos Super User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1277&ViewID=train-tracks&TrackID=XLOID-54789-XLOCSN-757608-XVE-1277-EXACT-0-CERTCSN-757610) training modules on [Epic University](https://training.epic.com/).
+3. Complete all the [Cosmos Super User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1277&ViewID=train-tracks&TrackID=XLOID-54789-XLOCSN-757608-XVE-1277-EXACT-0-CERTCSN-757610) training modules on [Epic University](https://training.epic.com/)\ [@super_user_badge].
 
-4. Watch the [Cosmos eLearning Videos](https://welearning.epic.com/Browse?q=cosmos), available on [weLearning](https://welearning.epic.com/Browse?app=1000129).
+4. Watch the [Cosmos eLearning Videos](https://welearning.epic.com/Browse?q=cosmos), available on [weLearning](https://welearning.epic.com/Browse?app=1000129)\ [@epic_cosmos_welearning].
 
 5. In addition, Epic recommends the following supplementary trainings:
 
 ::: {style="margin-left: 2rem"}
-i. Select materials from the [Cosmos Researcher User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&ViewID=train-tracks&VersionID=1277&ApplicationID=150&TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780) training available on [Epic University](https://training.epic.com/). Under the "Data Literacy for Cosmos Researcher" section, access the "Self-Study" materials.
+i. Select materials from the [Cosmos Researcher User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&ViewID=train-tracks&VersionID=1277&ApplicationID=150&TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780) training available on [Epic University](https://training.epic.com/)\ [@researcher_badge]. Under the "Data Literacy for Cosmos Researcher" section, access the "Self-Study" materials.
 
-ii. Review the ["Cosmos Publication Checklist"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&PrefDocID=145166) available on [Galaxy](https://galaxy.epic.com/?#Home).
+ii. Review the ["Cosmos Publication Checklist"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&PrefDocID=145166) available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_publication_checklist].
 :::
 
-6. Optional training is also available; for a complete list, refer to the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section.
+6. Optional training is also available; for a complete list, refer to the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section\ [@epic_setup_guide_training].
 
 :::
 
@@ -304,7 +305,7 @@ ii. Review the ["Cosmos Publication Checklist"](https://galaxy.epic.com/Redirect
 
 #### Do I Qualify?
 
-Obtaining the Researcher certification is recommended for those who plan to publish or extensively share their findings using Cosmos data. Anyone with Cosmos Basic Access can request the assignment of this training to their account.
+Obtaining the Researcher certification is recommended for those who plan to publish or extensively share their findings using Cosmos data. Anyone with Cosmos Basic Access can request the assignment of this training to their account\ [@epic_setup_guide].
 
 #### Typical Timeline
 
@@ -321,11 +322,11 @@ Obtaining the Researcher certification is recommended for those who plan to publ
 
 3. Once approved by the Epic team, applicants will receive a welcome email to the Cosmos resource.
 
-4. Complete all the [Cosmos Researcher User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&ViewID=train-tracks&VersionID=1277&ApplicationID=150&TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780) training modules on [Epic University](https://training.epic.com/).
+4. Complete all the [Cosmos Researcher User Badge](https://training.epic.com/CourseCatalog#/?LocationID=1&ViewID=train-tracks&VersionID=1277&ApplicationID=150&TrackID=XLOID-76499-XLOCSN-758778-XVE-1277-EXACT-0-CERTCSN-758780) training modules on [Epic University](https://training.epic.com/)\ [@researcher_badge].
 
-5. Review the ["Cosmos Publication Checklist"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&PrefDocID=145166) available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_galaxy; @epic_galaxy_resources].
+5. Review the ["Cosmos Publication Checklist"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100130418&PrefDocID=145166) available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_publication_checklist].
 
-6. Optional training is also available; for a complete list, refer to the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section.
+6. Optional training is also available; for a complete list, refer to the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section\ [@epic_setup_guide_training].
 :::
 
 
@@ -334,7 +335,7 @@ Obtaining the Researcher certification is recommended for those who plan to publ
 
 #### Do I Qualify?
 
-A Data Scientist is responsible for importing datasets prepared by a Data Architect into any Cosmos-supported data science tool, such as Python or R, to perform analyses and address research questions. Individuals with Cosmos Basic Access are eligible to request the training be assigned to their account, but note that prior experience with data science tools available in Cosmos, such as Python and R, is assumed.
+A Data Scientist is responsible for importing datasets prepared by a Data Architect into any Cosmos-supported data science tool, such as Python or R, to perform analyses and address research questions. Individuals with Cosmos Basic Access are eligible to request the training be assigned to their account, but note that prior experience with data science tools available in Cosmos, such as Python and R, is assumed\ [@epic_setup_guide].
 
 #### Typical Timeline
 
@@ -347,9 +348,9 @@ A Data Scientist is responsible for importing datasets prepared by a Data Archit
 ::: {style="margin-left: 2rem"}
 1. Attain Researcher status, as described in the previous tab.
 
-2. Complete the "Class Prerequisites" and "Cosmos Responsible Use" sections in the [Cosmos for Data Scientists](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1253&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-109908-XLOCSN-678383-XVE-1253-EXACT-0-CERTCSN-678764) training track on Epic University.
+2. Complete the "Class Prerequisites" and "Cosmos Responsible Use" sections in the [Cosmos for Data Scientists](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1253&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-109908-XLOCSN-678383-XVE-1253-EXACT-0-CERTCSN-678764) training track on Epic University\ [@data_sci_badge].
 
-3. Fill out the [YNHH Cosmos Data Science & Data Architect Training Request](https://forms.office.com/r/48tzGY44vr) form, following applicable guidelines, to initiate the approval process.
+3. Fill out the [YNHH Cosmos Data Science & Data Architect Training Request](https://forms.office.com/r/48tzGY44vr) form, following applicable guidelines, to initiate the approval process\ [@cosmos_data_sci_architect_form].
 
 :::{.callout-note}
 ## SlicerDicer Proficiency Assessment
@@ -360,36 +361,36 @@ Applicants may be required to demonstrate their proficiency with SlicerDicer upo
 :::{.callout-important}
 ## Course Payment Requirements
 
-Funding for Epic-led Cosmos courses must be provided by the individual or their sponsor. A Charge of Accounts (COA) number will be required in the form application for the RIO Finance team.
+Funding for Epic-led Cosmos courses must be provided by the individual or their sponsor. A Charge of Accounts (COA) number will be required in the form application for the Research Informatics Office (RIO) Finance team.
 :::
 
 4. Email Dr. Jonathan Quang ([jonathan.quang@yale.edu](mailto:jonathan.quang@yale.edu); [jonathan.quang@lmhosp.org](mailto:jonathan.quang@lmhosp.org)) or Dr. Daniella Meeker ([daniella.meeker@yale.edu](mailto:daniella.meeker@yale.edu)) to request approval for the Cosmos for Data Scientists training.
 
 5. Once approval is received from either Dr. Quang or Dr. Meeker, email [registrations@epic.com](mailto:registrations@epic.com) to request the Cosmos for Data Scientists training be added to the profile.
 
-6. Complete all the remaining [Cosmos for Data Scientists](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1253&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-109908-XLOCSN-678383-XVE-1253-EXACT-0-CERTCSN-678764) training modules on Epic University.
+6. Complete all the remaining [Cosmos for Data Scientists](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1253&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-109908-XLOCSN-678383-XVE-1253-EXACT-0-CERTCSN-678764) training modules on Epic University\ [@data_sci_badge].
 
-7. In addition, Epic recommends the following supplementary trainings:
+7. In addition, Epic recommends the following supplementary trainings\ [@epic_setup_guide_training]:
 
 ::: {style="margin-left: 2rem"}
-i. The SQL II self-study materials, ["RPT121i SQL II,"](https://galaxy.epic.com/Redirect.aspx?DocumentID=3778112&PrefDocID=122679) are available on [Galaxy](https://galaxy.epic.com/?#Home).
+i. The SQL II self-study materials, ["RPT121i SQL II,"](https://galaxy.epic.com/Redirect.aspx?DocumentID=3778112&PrefDocID=122679) are available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@epic_sql_II].
 
-ii. The ["Cosmos Data Science White Paper Library,"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100160836&PrefDocID=150295) a collection of articles covering data science best practices, is available on [Galaxy](https://galaxy.epic.com/?#Home).
+ii. The ["Cosmos Data Science White Paper Library,"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100160836&PrefDocID=150295) a collection of articles covering data science best practices, is available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@data_sci_how_to_papers].
 :::
 
-8. Optional training is also available; for a complete list, refer to the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section.
+8. Optional training is also available; for a complete list, refer to the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section\ [@epic_setup_guide].
 :::
 
 
 #### Initiating Collaborative Projects
 
-With Cosmos Basic Access, researchers can share code and datasets with collaborators assigned to relevant Cosmos **Projects**. Instructions for establishing a Cosmos **Project** are detailed above under the Cosmos Basic Access tab.
+With Cosmos Basic Access, researchers can share code and datasets with collaborators assigned to relevant Cosmos **Projects**\ [@epic_collaborating]. Instructions for establishing a Cosmos **Project** are detailed above under the Cosmos Basic Access tab.
 
-Certified Cosmos Data Science users can share code with the entire Cosmos community via Cosmos's GitLab. Directions on how to create and maintain projects can be found in the ["Cosmos Tip Sheet: Navigate the Cosmos GitLab"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100271330&PrefDocID=166747). Additional rules and expectations regarding sharing research work with Cosmos users, as well as other engagement opportunities available to Data Science users, can be found in the ["Collaborating in Cosmos"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100274279&PrefDocID=167006) article.
+Certified Cosmos Data Science users can share code with the entire Cosmos community via Cosmos's GitLab. Directions on how to create and maintain projects can be found in the ["Cosmos Tip Sheet: Navigate the Cosmos GitLab"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100271330&PrefDocID=166747)\ [@epic_cosmos_gitlab]. Additional rules and expectations regarding sharing research work with Cosmos users, as well as other engagement opportunities available to Data Science users, can be found in the ["Collaborating in Cosmos"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100274279&PrefDocID=167006) article\ [@epic_collaborating].
 
 #### Included Tools and Applications
 
-Certified Data Science users gain access to a dedicated Data Science Virtual Machine (DSVM) which features:
+Certified Data Science users gain access to a dedicated Data Science Virtual Machine (DSVM) which features\ [@epic_cosmos_data_sci_overview; @ybic_cosmos]:
 
 ::: {style="margin-left: 2rem"}
 - **Hardware:** 2.7GHz, eight-core CPU with 32GB RAM
@@ -397,14 +398,14 @@ Certified Data Science users gain access to a dedicated Data Science Virtual Mac
 - **Storage:** Networked file sharing among project members
 :::
 
-The DSVM includes preloaded analytical tools such as RStudio and R, Jupyter notebooks with a Python kernel, and SQL Server Management Studio. Storage allocation provides 20GB of folder space and a 20GB SQL database for both project-level and individual user resources. For detailed information on available software, see the [Available Data Science Packages](https://galaxy.epic.com/Redirect.aspx?DocumentID=100185447&PrefDocID=150295) article, which describes all packages included in the DSVM.
+The DSVM includes preloaded analytical tools such as RStudio and R, Jupyter notebooks with a Python kernel, and SQL Server Management Studio. Storage allocation provides 20GB of folder space and a 20GB SQL database for both project-level and individual user resources. For detailed information on available software, see the [Available Data Science Packages](https://galaxy.epic.com/Redirect.aspx?DocumentID=100185447&PrefDocID=150295) article, which describes all packages included in the DSVM\ [@dsvm_software].
 
 
 ### Data Architect
 
 #### Do I Qualify?
 
-A Data Architect is expected to be knowledgeable about the Cosmos data model, write SQL queries against the de-identified database, and build data marts that extract data relevant to research projects. These extracts are then made available to researchers with Data Scientist credentials to perform analyses using Cosmos-supported data science tools to address research questions.
+A Data Architect is expected to be knowledgeable about the Cosmos data model, write SQL queries against the de-identified database, and build data marts that extract data relevant to research projects. These extracts are then made available to researchers with Data Scientist credentials to perform analyses using Cosmos-supported data science tools to address research questions\ [@epic_setup_guide].
 
 Anyone with Cosmos Basic Access is eligible to request the training be assigned to their account. This training can be pursued either in addition to the Data Science track, or as an alternative to it.
 
@@ -419,9 +420,9 @@ Anyone with Cosmos Basic Access is eligible to request the training be assigned 
 ::: {style="margin-left: 2rem"}
 1. Attain Researcher status, as described in the previous tab.
 
-2. Complete the "Class Prerequisites" and "Cosmos Responsible Use" sections in the [Cosmos Data Model for Data Architects](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1253&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-81177-XLOCSN-663234-XVE-1253-EXACT-0-CERTCSN-663236) training track on Epic University.
+2. Complete the "Class Prerequisites" and "Cosmos Responsible Use" sections in the [Cosmos Data Model for Data Architects](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1253&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-81177-XLOCSN-663234-XVE-1253-EXACT-0-CERTCSN-663236) training track on Epic University\ [@data_architects_badge].
 
-3. Fill out the [YNHH Cosmos Data Science & Data Architect Training Request](https://forms.office.com/r/48tzGY44vr) form, following applicable guidelines, to initiate the approval process.
+3. Fill out the [YNHH Cosmos Data Science & Data Architect Training Request](https://forms.office.com/r/48tzGY44vr) form, following applicable guidelines, to initiate the approval process\ [@cosmos_data_sci_architect_form].
 
 :::{.callout-note}
 ## SlicerDicer Proficiency Assessment
@@ -432,27 +433,27 @@ Applicants may be required to demonstrate their proficiency with SlicerDicer upo
 :::{.callout-important}
 ## Course Payment Requirements
 
-Funding for Epic-led Cosmos courses must be provided by the individual or their sponsor. A Charge of Accounts (COA) number will be required in the form application for the RIO Finance team.
+Funding for Epic-led Cosmos courses must be provided by the individual or their sponsor. A Charge of Accounts (COA) number will be required in the form application for the Research Informatics Office (RIO) Finance team.
 :::
 
 4. Email Dr. Jonathan Quang ([jonathan.quang@yale.edu](mailto:jonathan.quang@yale.edu); [jonathan.quang@lmhosp.org](mailto:jonathan.quang@lmhosp.org)) or Dr. Daniella Meeker ([daniella.meeker@yale.edu](mailto:daniella.meeker@yale.edu)) to request approval for the Cosmos for Data Scientists training.
 
 5. Once approval is received from either Dr. Quang or Dr. Meeker, email [registrations@epic.com](mailto:registrations@epic.com) to request the Cosmos for Data Scientists training be added to the profile.
 
-6. Complete all the remaining [Cosmos Data Model for Data Architects](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1253&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-81177-XLOCSN-663234-XVE-1253-EXACT-0-CERTCSN-663236) training modules on Epic University.
+6. Complete all the remaining [Cosmos Data Model for Data Architects](https://training.epic.com/CourseCatalog#/?LocationID=1&VersionID=1253&ViewID=train-tracks&ApplicationID=150&TrackID=XLOID-81177-XLOCSN-663234-XVE-1253-EXACT-0-CERTCSN-663236) training modules on Epic University\ [@data_architects_badge].
 
 7. In addition, Epic recommends the following supplementary trainings:
 
 ::: {style="margin-left: 2rem"}
-i. The ["Cosmos Data Science White Paper Library,"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100160836&PrefDocID=150295) a collection of articles covering data science best practices, is available on [Galaxy](https://galaxy.epic.com/?#Home).
+i. The ["Cosmos Data Science White Paper Library,"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100160836&PrefDocID=150295) a collection of articles covering data science best practices, is available on [Galaxy](https://galaxy.epic.com/?#Home)\ [@data_sci_how_to_papers].
 :::
 
-8. Optional training is also available; for a complete list, refer to the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section.
+8. Optional training is also available; for a complete list, refer to the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section\ [@epic_setup_guide].
 :::
 
 #### Included Tools and Applications
 
-Certified Data Science users gain access to a dedicated DSVM, as described in the previous tab. It includes preloaded analytical tools, such as SQL Server Management Studio, from which Data Architects can query the de-identified Cosmos dataset.
+Certified Data Science users gain access to a dedicated DSVM, as described in the previous tab. It includes preloaded analytical tools, such as SQL Server Management Studio, from which Data Architects can query the de-identified Cosmos dataset\ [@epic_cosmos_data_sci_overview].
 
 :::
 
@@ -466,9 +467,9 @@ Certified Data Science users gain access to a dedicated DSVM, as described in th
 
 - [Galaxy](https://galaxy.epic.com/?#Home): A subdomain of the UserWeb, find comprehensive resource that provides documentation, announcements, best practices, and implementation guides related to the Epic dataset\ [@epic_galaxy].
 
-- ["Staying in the Loop and Providing Cosmos Feedback"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100086530&PrefDocID=97645): Find meetings and other opportunities to engage with and provide feedback to the Cosmos support, training, and administration teams. The table also outlines the typical level of access participants have, such as Super User.
+- ["Staying in the Loop and Providing Cosmos Feedback"](https://galaxy.epic.com/Redirect.aspx?DocumentID=100086530&PrefDocID=97645): Find meetings and other opportunities to engage with and provide feedback to the Cosmos support, training, and administration teams. The table also outlines the typical level of access participants have, such as Super User\ [@epic_staying_in_loop].
 
-- ["Guidance for Conducting Externally Funded Research Using Cosmos"](https://galaxy.epic.com/?#Browse/page=1!68!95!100272699&from=Galaxy-Redirect): Find expectations and guidelines for conducting externally funded research using Epic Cosmos data.
+- ["Guidance for Conducting Externally Funded Research Using Cosmos"](https://galaxy.epic.com/?#Browse/page=1!68!95!100272699&from=Galaxy-Redirect): Find expectations and guidelines for conducting externally funded research using Epic Cosmos data\ [@epic_guidance_externally_funded].
 :::
 
 
@@ -479,7 +480,7 @@ Certified Data Science users gain access to a dedicated DSVM, as described in th
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.1093/jamia/ocae098"),
+  doi = c("10.1111/acem.70035", "10.1001/jama.2025.4735"),
   affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )
