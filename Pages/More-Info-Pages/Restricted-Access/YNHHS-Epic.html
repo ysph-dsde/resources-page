@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.39">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content=" The Yale New Haven Hospital System (YNHHS) uses Epic’s EMR system to digitize comprehensive patient data across its network, supporting various medical services&nbsp;1–3. Annually, they manage around 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits&nbsp;4,5. Epic Cosmos integrates these records into a single, HIPAA-compliant longitudinal patient record, enhancing privacy by eliminating duplicates and obscuring identifiable information&nbsp;6,7.   Special thanks to Richard Hintz and Claudia Coronel-Moreno from Yale’s Center for Clinical Investigation, and to Soundari Sureshanand from the Joint Data Analytics Team, for their invaluable help in creating this resource page.">
+
+<title>Yale New Haven Health System (YNHHS) Epic – Resource Navigation Tool</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<link href="../../../Images/DSDE-Social-Media-Profile.png" rel="icon" type="image/png">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap-4b9eaea2f0bfe36b0cd022ecbe11ae3c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<!--
+ * This script integrates Google Analytics with your webpage, enabling you to 
+ * track and analyze visitor traffic.
+ * 
+ * It includes the following features:
+ *    1. Asynchronously loading the Google Analytics tracking library.
+ *    2. Setting up the global `dataLayer` array used by Google Analytics.
+ *    3. Defining the `gtag` function for configuring and sending data to Google Analytics.
+ *    4. Initializing Google Analytics with your tracking ID.
+ *
+ * Author: Shelby Golden, M.S.
+ *   Date: November 2025
+-->
+
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KV3PT76L62"></script>
+<script>
+  // Initialize the dataLayer array if it doesn't already exist
+  window.dataLayer = window.dataLayer || [];
+  
+  // Define the gtag function to push arguments onto the dataLayer
+  function gtag(){dataLayer.push(arguments);}
+  
+  // Record a pageview with the current timestamp
+  gtag('js', new Date());
+
+  // Configure Google Analytics with your tracking ID
+  gtag('config', 'G-KV3PT76L62');
+</script>
+<!--
+ * This script provides the following functionalities:
+ * 
+ * 1. Modal Image Viewer with Zoom and Pan:
+ *    - Opens/closes the modal when an image is clicked.
+ *    - Centers the image initially.
+ *    - Zooms in/out with the mouse wheel.
+ *    - Pans the zoomed-in image using mouse drag.
+ *    - Enforces minimum and maximum zoom levels.
+ * 
+ * 2. Client-Side Pagination for Citations:
+ *    - Controls visibility of citation items by page.
+ *    - Determines number of pages based on citation count.
+ *    - Updates display when the page changes.
+ *    - Handles next/previous page navigation.
+ * 
+ * Author: Shelby Golden, M.S.
+ *   Date: November 2025
+ * 
+ * Note: Written with the assistance of Yale's AI, Clarity.
+ -->
+
+<script src="../../../Code/pagination.js"></script>
+
+
+<!--
+ * Need to try generalizing the zoom script so that it can be applied
+ * globally.
+ -->
+<!--
+ * This script handles the functionality for a timed feedback popup modal that
+ * appears after a specified delay when users visit the webpage.
+ * 
+ * It includes the following features:
+ *    1. Displaying a feedback popup after a configurable time delay.
+ *    2. Opening multiple Microsoft Forms links in new tabs.
+ *    3. Configurable delay timing with common preset options commented.
+ *
+ * Author: Shelby Golden, M.S.
+ *   Date: November 2025
+ * 
+ * Note: Written with the assistance of Yale's AI, Clarity.
+ -->
+ 
+ </head><body class="nav-fixed"><div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">×</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually enhance our services. At the end of the feedback survey, you will have the chance to suggest new workshops and asynchronous materials.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMjhSTjVOWjQ0MkFIM0hDS0pVQ0tZN1kzMi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5URFBRQ1ZVUFlFVEY0MElSNTlSSzJTWkhXNS4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../../Code/popup.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+
+
+
+
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">Resource Navigation Tool</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/resources.html"> 
+<span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/datasets.html"> 
+<span class="menu-text">Datasets</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Feedback</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
+ <span class="dropdown-text">For Yale Affiliates</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
+ <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/about-us.html"> 
+<span class="menu-text">About Us</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/" target="_blank"> 
+<span class="menu-text">Contact</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title"><p>Yale New Haven Health System (YNHHS) Epic</p></h1>
+                  <div>
+        <div class="description">
+          <p><br> The <a href="https://www.ynhhs.org/">Yale New Haven Hospital System (YNHHS)</a> uses Epic’s EMR system to digitize comprehensive patient data across its network, supporting various medical services&nbsp;<span class="citation" data-cites="ynhhs ynhh_faq ynhhs_service"><sup><a href="#ref-ynhhs" role="doc-biblioref">1</a>–<a href="#ref-ynhhs_service" role="doc-biblioref">3</a></sup></span>. Annually, they manage around 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits&nbsp;<span class="citation" data-cites="ynhhs_2023_report ynhhs_facts_figures"><sup><a href="#ref-ynhhs_2023_report" role="doc-biblioref">4</a>,<a href="#ref-ynhhs_facts_figures" role="doc-biblioref">5</a></sup></span>. Epic Cosmos integrates these records into a single, HIPAA-compliant longitudinal patient record, enhancing privacy by eliminating duplicates and obscuring identifiable information&nbsp;<span class="citation" data-cites="nih_privacy_rule epic_galaxy_resources"><sup><a href="#ref-nih_privacy_rule" role="doc-biblioref">6</a>,<a href="#ref-epic_galaxy_resources" role="doc-biblioref">7</a></sup></span>. <br> <br> Special thanks to <a href="https://medicine.yale.edu/profile/richard-hintz/">Richard Hintz</a> and <a href="https://medicine.yale.edu/profile/claudia-coronel-moreno/">Claudia Coronel-Moreno</a> from Yale’s Center for Clinical Investigation, and to <a href="https://medicine.yale.edu/profile/soundari-sureshanand/">Soundari Sureshanand</a> from the Joint Data Analytics Team, for their invaluable help in creating this resource page.</p>
+        </div>
+      </div>
+                </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link" data-scroll-target="#gaining-access">Gaining Access</a></li>
+  <li><a href="#valuable-links" id="toc-valuable-links" class="nav-link" data-scroll-target="#valuable-links">Valuable Links</a></li>
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/More-Info-Pages/Restricted-Access/YNHHS-Epic.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+
+<p><small>Updated: December 3<sup>rd</sup>, 2025</small></p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The <a href="https://www.ynhhs.org/">Yale New Haven Hospital System (YNHHS)</a> utilizes an electronic medical record (EMR) system provided by the Epic Corporation. This system digitizes all patient chart information, including medical history, allergies, current medications, laboratory and radiology results, and visit notes. Patients within the YNHHS network—which includes Greenwich Hospital, Bridgeport Hospital, Yale New Haven Hospital, Northeast Medical Group, and affiliated physicians—will have their EMR records maintained in the YNHHS Epic system&nbsp;<span class="citation" data-cites="ynhhs ynhh_faq"><sup><a href="#ref-ynhhs" role="doc-biblioref">1</a>,<a href="#ref-ynhh_faq" role="doc-biblioref">2</a></sup></span>.</p>
+<p>YNHHS provides a wide range of medical services, including emergency care, primary care, and over 100 specialties such as oncology, cardiovascular care, and neurology&nbsp;<span class="citation" data-cites="ynhhs_service"><sup><a href="#ref-ynhhs_service" role="doc-biblioref">3</a></sup></span>. The YNHHS facts and figures section and annual reports indicate that over the past few years, there have been approximately 150 thousand inpatient visits, 3.5 to 4 million outpatient encounters, and 350 thousand emergency department visits annually&nbsp;<span class="citation" data-cites="ynhhs_2023_report ynhhs_facts_figures ynhh_faq"><sup><a href="#ref-ynhh_faq" role="doc-biblioref">2</a>,<a href="#ref-ynhhs_2023_report" role="doc-biblioref">4</a>,<a href="#ref-ynhhs_facts_figures" role="doc-biblioref">5</a></sup></span>.</p>
+<p>Epic Cosmos combines inpatient and outpatient charts into unified, longitudinal patient records while removing duplicates that may arise from patients receiving care at multiple Cosmos organizations. The data provided to researchers adheres to <a href="https://privacyruleandresearch.nih.gov/pr_08.asp">HIPAA-defined limited data set</a> standards&nbsp;<span class="citation" data-cites="epic_overview"><sup><a href="#ref-epic_overview" role="doc-biblioref">8</a></sup></span>. To enhance patient privacy protections, the de-identified dataset suppresses geographic information, consistently shifts patient dates, and conceals source organizations. Detailed information on individual data element transformation processes is available in the <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100198880&amp;PrefDocID=156634">Cosmos Data Domain Encyclopedia</a> and the <a href="https://galaxy.epic.com/Search/GetFile?url=1%2168%21100%21100149584&amp;from=KitMembers">Data Dictionary</a> (also accessible through the Cosmos portal)&nbsp;<span class="citation" data-cites="epic_cosmos_data_encyclopedia epic_data_dictionary"><sup><a href="#ref-epic_cosmos_data_encyclopedia" role="doc-biblioref">9</a>,<a href="#ref-epic_data_dictionary" role="doc-biblioref">10</a></sup></span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Leverage Expert Analysis for Your Research Needs!
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The Research Informatics Office (RIO), operated by the <a href="https://medicine.yale.edu/ybic/about/">Yale Biomedical Informatics and Computing (YBIC)</a>, hosts open office hours every Thursday for researchers using Epic. Contact <a href="mailto:soundari.sureshanand@yale.edu">Soundari Sureshanand</a> to request the Zoom link&nbsp;<span class="citation" data-cites="ybic_about"><sup><a href="#ref-ybic_about" role="doc-biblioref">11</a></sup></span>.</p>
+<p>The Joint Data Analytics Team (JDAT) offers customized reporting and data analysis from the Epic data system, specializing in research support. With a team of 60 informaticists and analysts, JDAT works closely with users to understand their data needs and efficiently retrieve information. JDAT supports projects such as cohort population counts, grant application statistics, retrospective reviews, custom data extracts, and report development&nbsp;<span class="citation" data-cites="ycci_epic_ehr"><sup><a href="#ref-ycci_epic_ehr" role="doc-biblioref">12</a></sup></span>.</p>
+<p>Click <a href="https://medicine.yale.edu/ybic/data-resources-services/how-to-submit-a-research-data-request/">here</a> for directions on submitting a Helix research data request with JDAT, Yale’s customized data warehouse system. Learn more on the <a href="https://medicine.yale.edu/center-clinical-investigation/">Yale Center for Clinical Investigation</a>’s <a href="https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx">Epic Electronic Health Record</a> SharePoint page, which is also accessible from their <a href="https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/">For Researchers &amp; Research Professionals</a> webpage&nbsp;<span class="citation" data-cites="jdat_helix ycci_epic_ehr ybic_for_researchers"><sup><a href="#ref-ycci_epic_ehr" role="doc-biblioref">12</a>–<a href="#ref-ybic_for_researchers" role="doc-biblioref">14</a></sup></span>.</p>
+</div>
+</div>
+<p>The types of data collected in the EMR are continuously expanding. For example, researchers currently have access to the following data&nbsp;<span class="citation" data-cites="epic_overview"><sup><a href="#ref-epic_overview" role="doc-biblioref">8</a></sup></span>:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><strong>Patient Information:</strong> Limited demographic details such as age, sex, gender identity, race, ethnicity, location, patient status, and family history, social history elements like tobacco and substance use, birth control, social determinants of health, allergy information, and detailed birth history.</p></li>
+<li><p><strong>Visits and Encounters:</strong> Patient encounters and admissions including encounter type, classification, department and provider specialties, and visit reasons, as well as clinical notes from various medical documentation and patient experience data from MyChart usage and patient-reported outcomes.</p></li>
+<li><p><strong>Medical Data:</strong> Diagnoses, clinical and billed procedures, and vital signs such as blood pressure, pulse, temperature, respiratory rate, SpO2 levels, height, weight, BMI, and head circumference.</p></li>
+<li><p><strong>Lab and Genomics:</strong> Lab results such as component-specific results, susceptibility results, and reference ranges, in addition to genomic variant data like allelic state and chromosome details, and biosamples for genomic assays including blood, saliva, and urine samples.</p></li>
+<li><p><strong>Health Assessments:</strong> Information on cancer staging, immunizations, and eye exams, with details on stage group, immunization type, and visual acuity.</p></li>
+<li><p><strong>Specialty Data:</strong> Records data on hospital-acquired infections and various infection types, surgical procedures, transplant data for liver and kidney transplants, and health tracking data from wearable devices.</p></li>
+<li><p><strong>Research and Analytics:</strong> Geographic factors like RUCA and Social Vulnerability Index, risk scores for conditions such as cardiovascular disease and diabetes, and data from research studies detailing study type, enrollment, and partnered research contributions.</p></li>
+<li><p><strong>Miscellaneous:</strong> Encompasses peer group information on various types of hospitals, medication data including prescriptions and patient-reported medications, and additional lab results.</p></li>
+</ul>
+</div>
+</section>
+<section id="gaining-access" class="level2">
+<h2 class="anchored" data-anchor-id="gaining-access">Gaining Access</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Researcher Basic Access (RBA)</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="do-i-qualify" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify">Do I Qualify?</h4>
+<p>To get access to YNHHS Epic data, you need&nbsp;<span class="citation" data-cites="ybic_rba_access_overview"><sup><a href="#ref-ybic_rba_access_overview" role="doc-biblioref">15</a></sup></span>:</p>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li><p>To either work for a Yale University-YNHHS (YU-YNHHS) Covered Entity (e.g., YNHHS or YSM), OR have a sponsor who can request access for you.</p></li>
+<li><p>Someone with a YNHH account (either your manager or sponsor) to submit the “YNHHS Researcher Basic Access” request.</p></li>
+</ol>
+</div>
+<div style="margin-left: 2rem">
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>All YNHH/YSM faculty and licensed providers can submit and sponsor access requests.</p>
+</div>
+</div>
+</div>
+<p>Are you affiliated with YNHHS or Yale School of Medicine?</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p>If yes: Your manager can request access for you.</p></li>
+<li><p>If no: You’ll need to find a sponsor with a YNHH account to request access for you.</p></li>
+</ul>
+</div>
+<div style="margin-left: 2rem">
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+How do I know if my department is a Covered Entity?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>To check if your department is a YU-YNHHS Covered Entity, see the “List of Covered Departments” under “Administrative Functions” on the hippa.yale.edu <a href="https://hipaa.yale.edu/resources/resource-documents-and-guidance">Resource Documents and Guidance</a> page&nbsp;<span class="citation" data-cites="yale_hippa"><sup><a href="#ref-yale_hippa" role="doc-biblioref">16</a></sup></span>.</p>
+</div>
+</div>
+</div>
+<p>Qualifying researchers can apply for RBA without needing Institutional Review Board (IRB) approval, granting them access to de-identified, summary count data. If researchers with RBA later obtain IRB approval, they can then request access to individual-level data relevant to their IRB-approved study&nbsp;<span class="citation" data-cites="ybic_slicerdicer"><sup><a href="#ref-ybic_slicerdicer" role="doc-biblioref">17</a></sup></span>.</p>
+</section>
+<section id="typical-timeline" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline">Typical Timeline</h4>
+<p>The approval process is the most significant and variable source of time constraints. The time required for RBA request approvals can vary. Resetting passwords typically takes about 24 hours, while granting Learning Management System (LMS) access after network ID creation usually takes 48 hours. Reviewing and approving Epic UserWeb profiles may take a few days, but this duration can also vary.</p>
+</section>
+<section id="step-by-step-guide" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide">Step-by-Step Guide</h4>
+<p><strong>a: Manager or Sponsor Requests RBA on Your Behalf</strong></p>
+<p>Your YU-YNHHS Covered Entity manager or sponsor will complete the <a href="https://shorturl.at/nJOS0">YNHHS Researcher Basic Access</a> request on your behalf&nbsp;<span class="citation" data-cites="ybic_rba_access_overview"><sup><a href="#ref-ybic_rba_access_overview" role="doc-biblioref">15</a></sup></span>.</p>
+<p><strong>b: Complete Account Setup and Enrollment</strong></p>
+<p>After the request is approved, access will be provided to the <a href="https://yaleedu.sharepoint.com/:u:/r/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=JRVkM0">RBA SharePoint</a> site&nbsp;<span class="citation" data-cites="jdat_sharepoint"><sup><a href="#ref-jdat_sharepoint" role="doc-biblioref">18</a></sup></span>. Guides with further detailed steps are referenced in this SharePoint site. For technical support for external or offsite users, contact the YNHH Service Desk at 203-688-HELP (4357) or <a href="mailto:helpdesk@ynhh.org">helpdesk@ynhh.org</a>. It may be necessary to verify identity and account permissions when requested&nbsp;<span class="citation" data-cites="jdat_sharepoint_user_guide"><sup><a href="#ref-jdat_sharepoint_user_guide" role="doc-biblioref">19</a></sup></span>.</p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li>Upon approval of the application, a welcome letter from YNHH will be sent containing the YNHH Network ID and a temporary password. Follow the instructions in the letter to reset the password&nbsp;<span class="citation" data-cites="jdat_sharepoint_user_guide"><sup><a href="#ref-jdat_sharepoint_user_guide" role="doc-biblioref">19</a></sup></span>.</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The YNHH NetID also serves as the Epic username.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li><p>Enroll in Duo Multi-Factor Authentication through the Password Self Service Portal. Full details are available in the “YNHH Duo Enrollment” document on the RBA SharePoint&nbsp;<span class="citation" data-cites="jdat_sharepoint_duo"><sup><a href="#ref-jdat_sharepoint_duo" role="doc-biblioref">20</a></sup></span>.</p></li>
+<li><p>Once these steps are completed, the <a href="https://myapps.ynhh.org/">MyApps Portal</a> will be accessible. This secure platform provides access to Epic and the YNHH Virtual Desktop Infrastructure (VDI). Log in with the YNHH NetID and password to verify credentials. Full details are available in the “Accessing YNHH VDI &amp; Epic (MyApps Portal)” document on the RBA SharePoint&nbsp;<span class="citation" data-cites="jdat_sharepoint_myapps"><sup><a href="#ref-jdat_sharepoint_myapps" role="doc-biblioref">21</a></sup></span>.</p></li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The minimum supported operating systems are Windows 10 and macOS Catalina. An OS upgrade is required if the device does not meet these requirements. An HTML5 web browser (e.g., Microsoft Edge, Google Chrome, Firefox) is also necessary.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>This portal provides primary or alternative access to content depending on your role and work location. For guidance, view the “Accessing YNHH VDI &amp; Epic” document on the RBA SharePoint.</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li>An Epic UserWeb profile needs to be created using the YNHH NetID. Remember that the YNHH NetID also serves as the Epic username&nbsp;<span class="citation" data-cites="stanford_epic"><sup><a href="#ref-stanford_epic" role="doc-biblioref">22</a></sup></span>.</li>
+</ol>
+<div style="margin-left: 2rem">
+<ol type="a">
+<li><p>Navigate to <a href="https://userweb.epic.com/">Epic UserWeb</a>. If directed to the YNHH log-in portal (<a href="">sts2.ynhh.org</a>), proceed to the next step. If the Epic UserWeb sign-in page (<a href="">signin.epic.com</a>) appears, type “Yale New Haven Health System” in the “Find your Organization” search bar and select the appropriate option to continue.</p></li>
+<li><p>Log into the YNHH portal (<a href="">sts2.ynhh.org</a>) using the YNHH User ID.</p></li>
+<li><p>From the Epic UserWeb main page (<a href="">userweb.epic.com</a>), request an Epic UserWeb profile.</p></li>
+<li><p>Complete the profile using credentials from the associated Epic organization. For instance, use the “@yale.edu” email for Yale University affiliates.</p></li>
+<li><p>Follow any setup instructions or verification steps to finalize the account.</p></li>
+</ol>
+</div>
+</div>
+<p><strong>c: Training</strong></p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>All Epic users are required to complete the <a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/curricula/145">“Epic Research User Curriculum”</a>, available on the YNHH Learning Management System&nbsp;<span class="citation" data-cites="ynhhs_its_sharepoint ynhhs_lms_epic_user_course"><sup><a href="#ref-ynhhs_its_sharepoint" role="doc-biblioref">23</a>,<a href="#ref-ynhhs_lms_epic_user_course" role="doc-biblioref">24</a></sup></span>.</p></li>
+<li><p>Users of YNHHS Epic data analytic tools, such as SlicerDicer, are expected to be proficient and aware of the tools’ limitations. The following training courses are recommended for researchers intending to use these tools for Epic Reporting tasks:</p></li>
+</ol>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li><p><a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/6442111f-51e4-4aaf-8961-76858d0cbaad">“Epic Reporting Fundamentals”</a> - available on <a href="https://ynhh.certpointsystems.com/">YNHH Learning Management System (LMS)</a>&nbsp;<span class="citation" data-cites="ynhhs_lms_reporting_fundamentals jdat_sharepoint"><sup><a href="#ref-jdat_sharepoint" role="doc-biblioref">18</a>,<a href="#ref-ynhhs_lms_reporting_fundamentals" role="doc-biblioref">25</a></sup></span></p></li>
+<li><p><a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/92931157-135d-4719-83ef-00d6370a1939">“Epic SlicerDicer Fundamentals”</a> - available on the YNHH LMS&nbsp;<span class="citation" data-cites="ynhhs_lms_reporting_fundamentals jdat_sharepoint"><sup><a href="#ref-jdat_sharepoint" role="doc-biblioref">18</a>,<a href="#ref-ynhhs_lms_reporting_fundamentals" role="doc-biblioref">25</a></sup></span></p></li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Additional SlicerDicer Guides
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>For those seeking additional resources to learn how to use Epic’s SlicerDicer tool, it is recommended to review the “SlicerDicer” article available in Galaxy or to access one of the weLearning modules created by the Epic community, which can be found <a href="https://welearning.epic.com/Browse?app=1000129">here</a>&nbsp;<span class="citation" data-cites="epic_welearning_slicerdicer epic_galaxy_slicerdicer"><sup><a href="#ref-epic_welearning_slicerdicer" role="doc-biblioref">26</a>,<a href="#ref-epic_galaxy_slicerdicer" role="doc-biblioref">27</a></sup></span>.</p>
+<p>Additional courses offered by JDAT and YNHH are also available for exploration:</p>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li><p><a href="https://jdat.ynhh.org/AnalyticsPortal/training/2">SlicerDicer-related courses</a> (“Available SlicerDicer Models”, “SlicerDicer Quick Start Guide”, and “SlicerDicer Quick Epic Demo”) - available on the <a href="https://jdat.ynhh.org/AnalyticsPortal">JDAT Analytics Portal</a>&nbsp;<span class="citation" data-cites="jdat_slicerdicer_training"><sup><a href="#ref-jdat_slicerdicer_training" role="doc-biblioref">28</a></sup></span></p></li>
+<li><p><a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/78d8b535-22a2-4a97-ad30-e22ab13189bd">“Epic SlicerDicer E-Learning Course”</a> - available on the YNHH LMS&nbsp;<span class="citation" data-cites="ynhhs_lms_slicer_dicer ybic_slicerdicer"><sup><a href="#ref-ybic_slicerdicer" role="doc-biblioref">17</a>,<a href="#ref-ynhhs_lms_slicer_dicer" role="doc-biblioref">29</a></sup></span></p></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<p>For some, a manager or supervisor might assign training modules accessible through the YNHH LMS, the JDAT Analytics Portal, or <a href="https://training.epic.com/">Epic University</a>. Further information on training expectations can be found in the “DTS Epic Training Course Catalog”. For example, the “Research” section lists mandatory trainings for non-clinical research users. This document is accessible from two locations:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p>The <a href="https://ynhh.certpointsystems.com/">YNHH LMS</a>: Open the “Epic Course Catalog” embedded document and select the “View our Epic Course Catalog” hyperlink&nbsp;<span class="citation" data-cites="ynhhs_lms"><sup><a href="#ref-ynhhs_lms" role="doc-biblioref">30</a></sup></span>.</p></li>
+<li><p>The YNHH IT SharePoint (<a href="https://itstraining.ynhh.org">itstraining.ynhh.org</a>): Click the blue “Training &amp; Support Material” drop-down menu and select “Epic Training”. The catalog is linked in the right “Quick Links” sidebar&nbsp;<span class="citation" data-cites="ynhhs_its_sharepoint ynhhs_training_info ynhhs_course_catalog"><sup><a href="#ref-ynhhs_its_sharepoint" role="doc-biblioref">23</a>,<a href="#ref-ynhhs_training_info" role="doc-biblioref">31</a>,<a href="#ref-ynhhs_course_catalog" role="doc-biblioref">32</a></sup></span>.</p></li>
+</ul>
+</div>
+<p>It may be necessary to review role-based training requirements, which can be found in the “Roles and Course Spreadsheet” that is also accessible from both webpages.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Retraining Requirements for Inactive Users
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Users who have not accessed YNHHS Epic for a year or longer must complete role-specific training before regaining access&nbsp;<span class="citation" data-cites="ynhhs_course_catalog"><sup><a href="#ref-ynhhs_course_catalog" role="doc-biblioref">32</a></sup></span>.</p>
+</div>
+</div>
+</section>
+<section id="accessing-requested-jdat-research-data" class="level4">
+<h4 class="anchored" data-anchor-id="accessing-requested-jdat-research-data">Accessing Requested JDAT Research Data</h4>
+<p>As mentioned above, JDAT provides customized reporting and data analysis from the Epic data system for research projects. Once the approved request is ready, accessing the data may be necessary from the YNHH OneDrive. This can be done by using the Office 365 application installed on the YNHHS VDI. Full details are available in the “Accessing YNHH OneDrive” document on the RBA SharePoint&nbsp;<span class="citation" data-cites="jdat_sharepoint_onedrive"><sup><a href="#ref-jdat_sharepoint_onedrive" role="doc-biblioref">33</a></sup></span>.</p>
+</section>
+<section id="publications-expectations" class="level4">
+<h4 class="anchored" data-anchor-id="publications-expectations">Publications Expectations</h4>
+<p>Epic provides data users with a checklist for preparing data for publications, emphasized in the user agreement, “Cosmos Rules of the Road”. The full instructions and expectations can be found in the Galaxy “Cosmos Publication Checklist” article and the “Cosmos Rules of the Road”, which outlines some of the Data Use Agreement terms&nbsp;<span class="citation" data-cites="epic_publication_checklist epic_rules_of_road"><sup><a href="#ref-epic_publication_checklist" role="doc-biblioref">34</a>,<a href="#ref-epic_rules_of_road" role="doc-biblioref">35</a></sup></span>.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data Privacy: Low Count Suppression
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When transferring results off the VDI or sharing SlicerDicer graphs, it is imperative to follow Epic’s process to prevent the exportation of line-level data. No counts less than 10 can be individually noted (report as &lt;11).</p>
+<p>Review the <a href="https://resdac.org/articles/cms-cell-size-suppression-policy">Centers for Medicare and Medicaid Services (CMS) Cell Size Suppression Policy</a> outlined by the Research Data Assistance Center (ResDAC) for examples of how to appropriately suppress low counts&nbsp;<span class="citation" data-cites="cms_supression_policy"><sup><a href="#ref-cms_supression_policy" role="doc-biblioref">36</a></sup></span>.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Reporting Citations of Your Findings
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Researchers are obligated to provide a list of citations for any publications or references to their research conducted using Cosmos. This list must be submitted to the Governing Council on a semi-annual basis&nbsp;<span class="citation" data-cites="epic_rules_of_road"><sup><a href="#ref-epic_rules_of_road" role="doc-biblioref">35</a></sup></span>.</p>
+</div>
+</div>
+</section>
+<section id="included-tools-and-applications" class="level4">
+<h4 class="anchored" data-anchor-id="included-tools-and-applications">Included Tools and Applications</h4>
+<p>Researchers seeking access to YNHHS Epic data will need a Researcher Basic Access (RBA) account. Qualifying researchers will receive a YNHH NetID and Duo Access, which provides access to&nbsp;<span class="citation" data-cites="ybic_rba_access_overview"><sup><a href="#ref-ybic_rba_access_overview" role="doc-biblioref">15</a></sup></span>:</p>
+<table class="definition-table">
+<tbody><tr>
+<!-- Row 1 -->
+<td class="left-column">
+<a href="https://medicine.yale.edu/ybic/computational-resources/ynhhs/#virtual-desktop-infrastructure">Virtual Desktop Infrastructure (VDI)</a>
+</td>
+<td class="gap-column">
+<!-- empty column to create gap -->
+</td>
+<td class="right-column">
+<p>
+Provides remote access to a YNHHS secure device without requiring the YNHHS VPN. Each device is suited with software such as SQL Server Management Studio, R, Stata, SAS, Office365, and Epic, and is where researchers can access Kamino/CHP. This set up can handling small-to-medium sized data, as well as accessing Epic charts, SlicerDicer, and the Computational Health Platform (CHP)&nbsp;<span class="citation" data-cites="ybic_hosted_resources"><sup><a href="#ref-ybic_hosted_resources" role="doc-biblioref">37</a></sup></span>.
+</p>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr>
+<td class="left-column">
+<a href="https://medicine.yale.edu/ybic/data-resources-services/slicerdicer/">Epic SlicerDicer</a>
+</td>
+<td class="gap-column">
+<!-- empty column to create gap -->
+</td>
+<td class="right-column">
+<p>
+Access de-identified summary count data representing the entire YNHHS patient dataset for data exploration, analytics, and reporting. While IRB applications are not required for accessing this de-identified data, training is strongly recommended. Refer to the “Step-by-Step Guide” Part C: Training section for more details&nbsp;<span class="citation" data-cites="ybic_slicerdicer ycci_epic_ehr"><sup><a href="#ref-ycci_epic_ehr" role="doc-biblioref">12</a>,<a href="#ref-ybic_slicerdicer" role="doc-biblioref">17</a></sup></span>.
+</p>
+<p>
+Researchers can also request access to the Epic Cosmos system, which provides de-identified summary count data for all participating Epic systems outside of YNHHS. Learn more on our <a href="../../../Pages/More-Info-Pages/Restricted-Access/Epic-Cosmos.html">Epic Cosmos</a> information webpage.
+</p>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr>
+<td class="left-column">
+<a href="https://medicine.yale.edu/ybic/computational-resources/ynhhs/#computational-health-platform">Computational Health Platform (CHP)</a>
+</td>
+<td class="gap-column">
+<!-- empty column to create gap -->
+</td>
+<td class="right-column">
+<p>
+A secure, compliant, and collaborative high-performance computing cluster specifically designed for clinical data analysis. It is suitable for AI research and development and is well suited for analyzing large volumes of data in various forms (e.g., images, text, structured)&nbsp;<span class="citation" data-cites="ybic_hosted_resources"><sup><a href="#ref-ybic_hosted_resources" role="doc-biblioref">37</a></sup></span>.
+</p>
+<p>
+This tool requires advanced data science skills with relational databases, Python, and SQL. Additional details can be found here: <a href="https://medicine.yale.edu/ybic/data-resources-services/omop-common-data-model/">OMOP Common Data Model</a>&nbsp;<span class="citation" data-cites="ybic_omp"><sup><a href="#ref-ybic_omp" role="doc-biblioref">38</a></sup></span>.
+</p>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr>
+<td class="left-column">
+Microsoft Office 365
+</td>
+<td class="gap-column">
+<!-- empty column to create gap -->
+</td>
+<td class="right-column">
+<p>
+Access Microsoft applications integrated within the YNHHS organization through the VDI. As noted above, this is how you can retrieve JDAT-requested data&nbsp;<span class="citation" data-cites="jdat_sharepoint_onedrive"><sup><a href="#ref-jdat_sharepoint_onedrive" role="doc-biblioref">33</a></sup></span>.
+</p>
+</td>
+</tr>
+</tbody></table>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="valuable-links" class="level2">
+<h2 class="anchored" data-anchor-id="valuable-links">Valuable Links</h2>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><a href="https://ynhh.certpointsystems.com/">YNHH Learning Management System (LMS)</a>: Center Point Systems is where you can sign up for YNHH-created in-person or online training courses&nbsp;<span class="citation" data-cites="ynhhs_lms"><sup><a href="#ref-ynhhs_lms" role="doc-biblioref">30</a></sup></span>.</p></li>
+<li><p><a href="https://myapps.ynhh.org">MyAPPs</a>: Find the portal to access the VDI through Citrix Workspace. Ensure your YNHH Duo is active for authentication and use your YU/YNHHS VPN if accessing from outside the Yale University or YNHHS network&nbsp;<span class="citation" data-cites="jdat_sharepoint_myapps"><sup><a href="#ref-jdat_sharepoint_myapps" role="doc-biblioref">21</a></sup></span>.</p></li>
+<li><p><a href="https://yaleedu.sharepoint.com/:u:/r/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=vQamcY">JDAT RBA SharePoint</a>: Find details about what RBA provides, along with supporting documents such as how-to guides for accessing the VDI, enrolling in Duo, links to training portals, and user guides for researchers&nbsp;<span class="citation" data-cites="jdat_sharepoint"><sup><a href="#ref-jdat_sharepoint" role="doc-biblioref">18</a></sup></span>.</p></li>
+<li><p><a href="https://itstraining.ynhh.org">YNHH IT SharePoint</a>: Find IT support materials, guides for navigating the Epic VDI software, notices of upcoming training events and system updates, and training requirements for researchers using Epic data. To access the Epic-specific documentation, click the blue “Training &amp; Support Material” drop-down menu and select “Epic Training” to access the “Epic Training Portal”&nbsp;<span class="citation" data-cites="ynhhs_its_sharepoint"><sup><a href="#ref-ynhhs_its_sharepoint" role="doc-biblioref">23</a></sup></span>.</p></li>
+<li><p><a href="https://jdat.ynhh.org/AnalyticsPortal">JDAT Analytics Portal</a>: Submit a Helix request to have JDAT compile your research data. Additionally, access JDAT-created training for tools like Epic’s SlicerDicer&nbsp;<span class="citation" data-cites="jdat_helix"><sup><a href="#ref-jdat_helix" role="doc-biblioref">13</a></sup></span>.</p></li>
+<li><p><a href="https://userweb.epic.com/">Epic UserWeb</a>: Find Epic training materials, documentation, community discussions, support resources, updates, customization options, and access to your Epic profile&nbsp;<span class="citation" data-cites="epic_user_web"><sup><a href="#ref-epic_user_web" role="doc-biblioref">39</a></sup></span>.</p></li>
+<li><p><a href="https://training.epic.com/">Epic University</a>: A subdomain of the UserWeb, find training opportunities and access to coursework necessary to obtain certificates, such as the Super User Badge, with courses organized by the Epic team&nbsp;<span class="citation" data-cites="epic_training"><sup><a href="#ref-epic_training" role="doc-biblioref">40</a></sup></span>. Learn more about advanced training options on our <a href="../../../Pages/More-Info-Pages/Restricted-Access/Epic-Cosmos.html">Epic Cosmos</a> information webpage.</p></li>
+<li><p><a href="https://galaxy.epic.com/?#Home">Galaxy</a>: A subdomain of the UserWeb, find comprehensive resource that provides documentation, announcements, best practices, and implementation guides related to the Epic dataset&nbsp;<span class="citation" data-cites="epic_galaxy"><sup><a href="#ref-epic_galaxy" role="doc-biblioref">41</a></sup></span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<p>This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.</p>
+<div style="margin-left: 1rem">
+<div id="citations-box">
+<ul id="citations-content">
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/37546792/">Use of Electronic Health Records to Characterize Patients with Uncontrolled Hypertension in Two Large Health System Networks.</a><br><strong>Yuan Lu</strong>, Ellen C Keeley, Eric Barrette, Rhonda M Cooper-DeHoff, Sanket S Dhruva, Jenny Gaffney, Ginger Gamble, Bonnie Handke, <strong>Chenxi Huang</strong>, <strong>Harlan M Krumholz</strong>, Caitrin W McDonough Rowe, <strong>Wade Schulz</strong>, Kathryn Shaw, Myra Smith, Jennifer Woodard, Patrick Young, Keondae Ervin, <strong>Joseph S Ross</strong><br>medRxiv : the preprint server for health sciences 2023 Jul 28 pii: 2023.07.26.23293225. doi: 10.1101/2023.07.26.23293225<br>PMID: 37546792
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/39581517/">A Multicenter Evaluation of the Impact of Therapies on Deep Learning-Based Electrocardiographic Hypertrophic Cardiomyopathy Markers.</a><br><strong>Lovedeep S Dhingra</strong>, <strong>Veer Sangha</strong>, <strong>Arya Aminorroaya</strong>, Robyn Bryde, Andrew Gaballa, Adel H Ali, Nandini Mehra, <strong>Harlan M Krumholz</strong>, <strong>Sounok Sen</strong>, Christopher M Kramer, Matthew W Martinez, Milind Y Desai, <strong>Evangelos K Oikonomou</strong>, <strong>Rohan Khera</strong><br>The American journal of cardiology 2024 Nov 23 doi: 10.1016/j.amjcard.2024.11.028<br>PMID: 39581517
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/38581644/">A Multimodal Video-Based AI Biomarker for Aortic Stenosis Development and Progression.</a><br><strong>Evangelos K Oikonomou</strong>, <strong>Gregory Holste</strong>, Neal Yuan, Andreas Coppi, <strong>Robert L McNamara</strong>, <strong>Norrisa A Haynes</strong>, <strong>Amit N Vora</strong>, <strong>Eric J Velazquez</strong>, <strong>Fan Li</strong>, Venu Menon, Samir R Kapadia, <strong>Thomas M Gill</strong>, Girish N Nadkarni, <strong>Harlan M Krumholz</strong>, Zhangyang Wang, David Ouyang, <strong>Rohan Khera</strong><br>JAMA cardiology doi: 10.1001/jamacardio.2024.0595<br>PMID: 38581644
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40063022/">Estimated Effectiveness of Nirsevimab Against Respiratory Syncytial Virus.</a><br><strong>Hanmeng Xu</strong>, <strong>Camila Aparicio</strong>, <strong>Aanchal Wats</strong>, <strong>Barbara L Araujo</strong>, <strong>Virginia E Pitzer</strong>, <strong>Joshua L Warren</strong>, <strong>Eugene D Shapiro</strong>, <strong>Linda M Niccolai</strong>, <strong>Daniel M Weinberger</strong>, <strong>Carlos R Oliveira</strong><br>JAMA network open 2025 Mar 3 doi: 10.1001/jamanetworkopen.2025.0380<br>PMID: 40063022
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/39289597/">Use of electronic health records to characterize patients with uncontrolled hypertension in two large health system networks.</a><br><strong>Yuan Lu</strong>, Ellen C Keeley, Eric Barrette, Rhonda M Cooper-DeHoff, Sanket S Dhruva, Jenny Gaffney, Ginger Gamble, Bonnie Handke, <strong>Chenxi Huang</strong>, <strong>Harlan M Krumholz</strong>, Caitrin W McDonough, <strong>Wade Schulz</strong>, Kathryn Shaw, Myra Smith, Jennifer Woodard, <strong>Patrick Young</strong>, Keondae Ervin, <strong>Joseph S Ross</strong><br>BMC cardiovascular disorders 2024 Sep 18 doi: 10.1186/s12872-024-04161-x<br>PMID: 39289597
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40238120/">Artificial Intelligence-Enabled Prediction of Heart Failure Risk From Single-Lead Electrocardiograms.</a><br><strong>Lovedeep S Dhingra</strong>, <strong>Arya Aminorroaya</strong>, <strong>Aline F Pedroso</strong>, <strong>Akshay Khunte</strong>, <strong>Veer Sangha</strong>, Daniel McIntyre, Clara K Chow, Folkert W Asselbergs, Luisa C C Brant, Sandhi M Barreto, Antonio Luiz P Ribeiro, <strong>Harlan M Krumholz</strong>, <strong>Evangelos K Oikonomou</strong>, <strong>Rohan Khera</strong><br>JAMA cardiology doi: 10.1001/jamacardio.2025.0492<br>PMID: 40238120
+</li>
+</ul>
+</div>
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">◀ Previous</button>
+  <button onclick="nextPage()">Next ▶</button>
+</div>
+
+<script src="../../../Code/pagination.js"></script>
+</div>
+</section>
+<section id="references" class="level2">
+
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-ynhhs" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">(YNHHS), Y. N. H. H. S. Yale new haven health - connecticut’s leading healthcare system. <a href="https://www.ynhhs.org/">https://www.ynhhs.org/</a>.</div>
+</div>
+<div id="ref-ynhh_faq" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">(YNHHS), Y. N. H. H. S. Electronic medical record <span>FAQ</span>. <a href="https://www.ynhh.org/tools/emrfaq">https://www.ynhh.org/tools/emrfaq</a>.</div>
+</div>
+<div id="ref-ynhhs_service" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">(YNHHS), Y. N. H. H. S. Services. <a href="https://www.ynhh.org/services">https://www.ynhh.org/services</a>.</div>
+</div>
+<div id="ref-ynhhs_2023_report" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">(YNHHS), Y. N. H. H. S. 2023 annual report. <a href="https://www.ynhhs.org/about/annual-reports/2023">https://www.ynhhs.org/about/annual-reports/2023</a> (2023).</div>
+</div>
+<div id="ref-ynhhs_facts_figures" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">(YNHHS), Y. N. H. H. S. Facts and figures. <a href="https://www.ynhhs.org/about/corporate-overview/system-statistics">https://www.ynhhs.org/about/corporate-overview/system-statistics</a>.</div>
+</div>
+<div id="ref-nih_privacy_rule" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">Health (NIH), N. I. of. How can covered entities use and disclose protected health information for research and comply with the privacy rule? <span>HIPAA</span> privacy rule and its impacts on research. <a href="https://privacyruleandresearch.nih.gov/pr_08.asp">https://privacyruleandresearch.nih.gov/pr_08.asp</a> (2007).</div>
+</div>
+<div id="ref-epic_galaxy_resources" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">Epic. Cosmos portal &amp; analytics resources. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!642!100074365&amp;from=Galaxy-Redirect">https://galaxy.epic.com/?#Browse/page=1!68!642!100074365&amp;from=Galaxy-Redirect</a> (2025).</div>
+</div>
+<div id="ref-epic_overview" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">Epic. Overview of cosmos. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!96!100278332,100278342&amp;from=RecentlyViewed">https://galaxy.epic.com/?#Browse/page=1!68!96!100278332,100278342&amp;from=RecentlyViewed</a> (2025).</div>
+</div>
+<div id="ref-epic_cosmos_data_encyclopedia" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">Epic. Cosmos data domain encyclopedia. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!600!100198880&amp;from=Galaxy-Redirect">https://galaxy.epic.com/?#Browse/page=1!68!600!100198880&amp;from=Galaxy-Redirect</a>.</div>
+</div>
+<div id="ref-epic_data_dictionary" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">Epic. <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=100153082&amp;PrefDocID=149434">Data dictionary</a>. (2025).</div>
+</div>
+<div id="ref-ybic_about" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">Computing (YBIC), Y. B. I. \&amp;. About <span>YBIC</span>. <a href="https://medicine.yale.edu/ybic/">https://medicine.yale.edu/ybic/</a>.</div>
+</div>
+<div id="ref-ycci_epic_ehr" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">Koo, G. &amp; Clinical Investigation (YCCI), Y. C. for. Epic electronic health record. Epic electronic health record. <a href="https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx">https://yaleedu.sharepoint.com/sites/YaleCenterClinicalInvestigation/SitePages/Epic-(EHR).aspx</a>.</div>
+</div>
+<div id="ref-jdat_helix" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">JDAT. Helix request. <span>JDAT</span> analytics portal. <a href="https://jdat.ynhh.org/AnalyticsPortal/helix">https://jdat.ynhh.org/AnalyticsPortal/helix</a>.</div>
+</div>
+<div id="ref-ybic_for_researchers" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">Computing (YBIC), Y. B. I. \&amp;. For researchers &amp; research professionals. <a href="https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/">https://medicine.yale.edu/center-clinical-investigation/for-researchers-and-research-staff/</a>.</div>
+</div>
+<div id="ref-ybic_rba_access_overview" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Computing (YBIC), Y. B. I. \&amp;. <span>YNHHS</span> research access. <a href="https://medicine.yale.edu/ybic/ynhhs-research-access/">https://medicine.yale.edu/ybic/ynhhs-research-access/</a>.</div>
+</div>
+<div id="ref-yale_hippa" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Office, Y. H. P. <span>HIPPA</span> resource documents and guidance. Health insurance portability and accountability act. <a href="https://hipaa.yale.edu/resources/resource-documents-and-guidance">https://hipaa.yale.edu/resources/resource-documents-and-guidance</a> (2025).</div>
+</div>
+<div id="ref-ybic_slicerdicer" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Computing (YBIC), Y. B. I. \&amp;. <span>SlicerDicer</span>. Data resources &amp; services. <a href="https://medicine.yale.edu/ybic/data-resources-services/slicerdicer/">https://medicine.yale.edu/ybic/data-resources-services/slicerdicer/</a>.</div>
+</div>
+<div id="ref-jdat_sharepoint" class="csl-entry" role="listitem">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline">JDAT. <span>YNHHS</span> researcher access. <a href="https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?ovuser=dd8cbebb-2139-4df8-b411-4e3e87abeb5c\%2Cdaniella.meeker\%40yale.edu&amp;OR=Teams-HL&amp;CT=1731517231695&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDA5MDEwMTQyMyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ\%3D\%3D&amp;CID=508a63a1-a0c8-6000-fc99-56cf5d8658bf&amp;cidOR=SPO">https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?ovuser=dd8cbebb-2139-4df8-b411-4e3e87abeb5c\%2Cdaniella.meeker\%40yale.edu&amp;OR=Teams-HL&amp;CT=1731517231695&amp;clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI1MC8yNDA5MDEwMTQyMyIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ\%3D\%3D&amp;CID=508a63a1-a0c8-6000-fc99-56cf5d8658bf&amp;cidOR=SPO</a>.</div>
+</div>
+<div id="ref-jdat_sharepoint_user_guide" class="csl-entry" role="listitem">
+<div class="csl-left-margin">19. </div><div class="csl-right-inline">JDAT. <a href="https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=JRVkM0&amp;CID=f8914368-d902-44a4-b252-fe00b561eeb9">Researcher basic access new user guide</a>. (2024).</div>
+</div>
+<div id="ref-jdat_sharepoint_duo" class="csl-entry" role="listitem">
+<div class="csl-left-margin">20. </div><div class="csl-right-inline">Health, Y. N. H., JDAT &amp; Authentication, D. M.-F. <a href="https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=JRVkM0&amp;CID=f8914368-d902-44a4-b252-fe00b561eeb9">Password self service <span>DUO</span> enrollment</a>.</div>
+</div>
+<div id="ref-jdat_sharepoint_myapps" class="csl-entry" role="listitem">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline">Health, Y. N. H. &amp; JDAT. <a href="https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=JRVkM0&amp;CID=f8914368-d902-44a4-b252-fe00b561eeb9">Accessing <span>YNHH</span> <span>VDI</span> &amp; epic (<span>MyApps</span> portal)</a>. (2024).</div>
+</div>
+<div id="ref-stanford_epic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">22. </div><div class="csl-right-inline">University, S. Epic <span>UserWeb</span> account creation. <span>STAnford</span> research repository (<span>STARR</span>) tools. <a href="https://med.stanford.edu/starr-tools/other-resources/cosmos/epic-userweb-account-creation.html">https://med.stanford.edu/starr-tools/other-resources/cosmos/epic-userweb-account-creation.html</a>.</div>
+</div>
+<div id="ref-ynhhs_its_sharepoint" class="csl-entry" role="listitem">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline">ITS, Y. N. H. H. <span>YNHHS</span> training. <a href="https://itstraining.ynhh.org/">https://itstraining.ynhh.org/</a>.</div>
+</div>
+<div id="ref-ynhhs_lms_epic_user_course" class="csl-entry" role="listitem">
+<div class="csl-left-margin">24. </div><div class="csl-right-inline">Health, Y. N. H. Epic research user curriculum. Learning management. <a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/curricula/145">https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/curricula/145</a>.</div>
+</div>
+<div id="ref-ynhhs_lms_reporting_fundamentals" class="csl-entry" role="listitem">
+<div class="csl-left-margin">25. </div><div class="csl-right-inline">Health, Y. N. H. Epic reporting fundamentals. Learning management. <a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/6442111f-51e4-4aaf-8961-76858d0cbaad">https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/6442111f-51e4-4aaf-8961-76858d0cbaad</a> (2025).</div>
+</div>
+<div id="ref-epic_welearning_slicerdicer" class="csl-entry" role="listitem">
+<div class="csl-left-margin">26. </div><div class="csl-right-inline">Community, E. <span>SlicerDicer</span> lessons. <span class="nocase">weLearning</span>. <a href="https://welearning.epic.com/Browse?app=1000129">https://welearning.epic.com/Browse?app=1000129</a>.</div>
+</div>
+<div id="ref-epic_galaxy_slicerdicer" class="csl-entry" role="listitem">
+<div class="csl-left-margin">27. </div><div class="csl-right-inline">Epic. <span>SlicerDicer</span>. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=8400!108!483!100244827&amp;from=Galaxy-Redirect">https://galaxy.epic.com/?#Browse/page=8400!108!483!100244827&amp;from=Galaxy-Redirect</a> (2024).</div>
+</div>
+<div id="ref-jdat_slicerdicer_training" class="csl-entry" role="listitem">
+<div class="csl-left-margin">28. </div><div class="csl-right-inline">JDAT. <span>SlicerDicer</span> training. <span>JDAT</span> analytics portal. <a href="https://jdat.ynhh.org/AnalyticsPortal/training/2">https://jdat.ynhh.org/AnalyticsPortal/training/2</a>.</div>
+</div>
+<div id="ref-ynhhs_lms_slicer_dicer" class="csl-entry" role="listitem">
+<div class="csl-left-margin">29. </div><div class="csl-right-inline">Health, Y. N. H. Epic <span>SlicerDicer</span> e-learning course. Learning management. <a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/78d8b535-22a2-4a97-ad30-e22ab13189bd">https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/learner/courses/78d8b535-22a2-4a97-ad30-e22ab13189bd</a> (2025).</div>
+</div>
+<div id="ref-ynhhs_lms" class="csl-entry" role="listitem">
+<div class="csl-left-margin">30. </div><div class="csl-right-inline">Health, Y. N. H. Learning management. <a href="https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/">https://ynhh.certpointsystems.com/lms/basicportal/ynhhs/en-US/</a>.</div>
+</div>
+<div id="ref-ynhhs_training_info" class="csl-entry" role="listitem">
+<div class="csl-left-margin">31. </div><div class="csl-right-inline">ITS, Y. N. H. H. Epic training information sheet.</div>
+</div>
+<div id="ref-ynhhs_course_catalog" class="csl-entry" role="listitem">
+<div class="csl-left-margin">32. </div><div class="csl-right-inline">ITS, Y. N. H. H. &amp; Training, D. <span>DTS</span> epic training course catalog. (2025).</div>
+</div>
+<div id="ref-jdat_sharepoint_onedrive" class="csl-entry" role="listitem">
+<div class="csl-left-margin">33. </div><div class="csl-right-inline">JDAT. <a href="https://yaleedu.sharepoint.com/sites/ResearcherBasicAccess/SitePages/CollabHome.aspx?csf=1&amp;web=1&amp;e=JRVkM0&amp;CID=f8914368-d902-44a4-b252-fe00b561eeb9">Locating <span>JDAT</span>-research data via <span>OneDrive</span></a>. (2024).</div>
+</div>
+<div id="ref-epic_publication_checklist" class="csl-entry" role="listitem">
+<div class="csl-left-margin">34. </div><div class="csl-right-inline">Epic. Cosmos publication checklist. Galaxy. <a href="https://galaxy.epic.com/?#Browse/page=1!68!50!100130418&amp;from=Favorites">https://galaxy.epic.com/?#Browse/page=1!68!50!100130418&amp;from=Favorites</a> (2024).</div>
+</div>
+<div id="ref-epic_rules_of_road" class="csl-entry" role="listitem">
+<div class="csl-left-margin">35. </div><div class="csl-right-inline">Epic. <a href="https://galaxy.epic.com/Redirect.aspx?DocumentID=4024320&amp;PrefDocID=113401">Cosmos rules of the road</a>. (2024).</div>
+</div>
+<div id="ref-cms_supression_policy" class="csl-entry" role="listitem">
+<div class="csl-left-margin">36. </div><div class="csl-right-inline">University of Minnesota School of Public Health - Health Policy &amp; Management, Medicare and Medicaid Services (CMS), C. for &amp; (ResDAC), R. D. A. C. <span>CMS</span> cell size suppression policy. Learn about <span>CMS</span> data. <a href="https://resdac.org/articles/cms-cell-size-suppression-policy">https://resdac.org/articles/cms-cell-size-suppression-policy</a> (2024).</div>
+</div>
+<div id="ref-ybic_hosted_resources" class="csl-entry" role="listitem">
+<div class="csl-left-margin">37. </div><div class="csl-right-inline">Computing (YBIC), Y. B. I. \&amp;. <span>YNHHS</span> hosted resources. Computational resources. <a href="https://medicine.yale.edu/ybic/computational-resources/ynhhs/">https://medicine.yale.edu/ybic/computational-resources/ynhhs/</a>.</div>
+</div>
+<div id="ref-ybic_omp" class="csl-entry" role="listitem">
+<div class="csl-left-margin">38. </div><div class="csl-right-inline">Computing (YBIC), Y. B. I. \&amp;. <span>OMOP</span> common data model. Data resources &amp; services. <a href="https://medicine.yale.edu/ybic/data-resources-services/omop-common-data-model/">https://medicine.yale.edu/ybic/data-resources-services/omop-common-data-model/</a>.</div>
+</div>
+<div id="ref-epic_user_web" class="csl-entry" role="listitem">
+<div class="csl-left-margin">39. </div><div class="csl-right-inline">Epic. Epic <span>UserWeb</span>. <a href="https://userweb.epic.com/">https://userweb.epic.com/</a>.</div>
+</div>
+<div id="ref-epic_training" class="csl-entry" role="listitem">
+<div class="csl-left-margin">40. </div><div class="csl-right-inline">Epic. Training. Epic training. <a href="https://training.epic.com/">https://training.epic.com/</a>.</div>
+</div>
+<div id="ref-epic_galaxy" class="csl-entry" role="listitem">
+<div class="csl-left-margin">41. </div><div class="csl-right-inline">Epic. Galaxy. Galaxy. <a href="https://galaxy.epic.com/?#Home">https://galaxy.epic.com/?#Home</a>.</div>
+</div>
+</div></section></div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>This site is hosted on <a href="https://github.com/ysph-dsde">ysph-dsde.github.io</a>, rendered with Quarto (v1.6.3), and styled using a modified version of <a href="https://github.com/thomaspark/bootswatch">flatly</a> with Yale School of Public Health branding, incorporating Data Science and Data Equity color schemes.</p>
+</div>   
+    <div class="nav-footer-center">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/about-us.html">
+<p>About Us</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/resources.html">
+<p>Resources</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="../../../Pages/datasets.html">
+<p>Datasets</p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/contact-us/">
+<p>Contact</p>
+</a>
+  </li>  
+</ul>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/More-Info-Pages/Restricted-Access/YNHHS-Epic.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://ysph.yale.edu/public-health-research-and-practice/research-centers-and-initiatives/public-health-data-science-and-data-equity/">
+      <i class="bi bi-globe" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ysph-dsde">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/showcase/public-health-data-science-and-data-equity-at-yale/">
+      <i class="bi bi-linkedin" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item compact">
+    <a class="nav-link" href="mailto:admin.dsdeysph@yale.edu">
+      <i class="bi bi-envelope" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+ (203) 737-8644
+  </li>  
+    <li class="nav-item">
+ </li></ul><div style="margin-top: 0px;">Yale affiliates, provide feedback <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u">here</a>.<br>Non-affiliates, provide feedback <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u">here</a>.</div><ul class="footer-items list-unstyled" style="display:none;">
+    
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
