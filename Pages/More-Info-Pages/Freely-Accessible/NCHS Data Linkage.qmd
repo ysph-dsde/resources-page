@@ -6,7 +6,7 @@ description: |
   </br>
   The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends\ [@about; @data_tools].
 include-in-header: ../../../_includes/feedback_popup.html
-bibliography: BibTeX/general_references.bib
+bibliography: BibTeX/all_nchs_references.bib
 csl: ../../../Code/nature.csl
 ---
 
