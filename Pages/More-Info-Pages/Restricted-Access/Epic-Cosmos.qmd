@@ -183,7 +183,7 @@ The preceding steps help applicants prepare for filling out the [Cosmos Basic Ac
 
 **e: Training**
 
-Complete training requirements, role descriptions, and expectations can be found in the C[Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section of the Cosmos Setup and Support Guide, with key points summarized below\ [@epic_setup_guide; @epic_setup_guide_training]. Optional training modules for Data Science and Data Architecture certifications are also available through the same section.
+Complete training requirements, role descriptions, and expectations can be found in the [Cosmos Training and Support](https://galaxy.epic.com/Redirect.aspx?DocumentID=100170435&PrefDocID=97645) section of the Cosmos Setup and Support Guide, with key points summarized below\ [@epic_setup_guide; @epic_setup_guide_training]. Optional training modules for Data Science and Data Architecture certifications are also available through the same section.
 
 **e.i: Required Training**
 
@@ -305,7 +305,7 @@ ii. Review the ["Cosmos Publication Checklist"](https://galaxy.epic.com/Redirect
 
 #### Do I Qualify?
 
-Obtaining the Researcher certification is recommended for those who plan to publish or extensively share their findings using Cosmos data. Anyone with Cosmos Basic Access can request the assignment of this training to their account\ [@epic_setup_guide].
+Obtaining the Researcher certification is recommended for those who plan to publish or extensively share their findings using Cosmos data\ [@epic_setup_guide]. Anyone with Cosmos Basic Access can request the assignment of this training to their account.
 
 #### Typical Timeline
 
@@ -335,7 +335,9 @@ Obtaining the Researcher certification is recommended for those who plan to publ
 
 #### Do I Qualify?
 
-A Data Scientist is responsible for importing datasets prepared by a Data Architect into any Cosmos-supported data science tool, such as Python or R, to perform analyses and address research questions. Individuals with Cosmos Basic Access are eligible to request the training be assigned to their account, but note that prior experience with data science tools available in Cosmos, such as Python and R, is assumed\ [@epic_setup_guide].
+A Data Scientist is responsible for importing datasets prepared by a Data Architect into any Cosmos-supported data science tool, such as Python or R, to perform analyses and address research questions\ [@epic_setup_guide].
+
+Individuals with Cosmos Basic Access are eligible to request the training be assigned to their account, but note that prior experience with data science tools available in Cosmos, such as Python and R, is assumed. This training can be pursued either in addition to the Data Architect track, or as an alternative to it.
 
 #### Typical Timeline
 
@@ -480,7 +482,7 @@ Certified Data Science users gain access to a dedicated DSVM, as described in th
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.1111/acem.70035", "10.1001/jama.2025.4735"),
+  doi = c("10.1001/jamaoncol.2025.4560", "10.1111/acem.70035", "10.1001/jama.2025.4735"),
   affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )

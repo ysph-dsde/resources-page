@@ -164,25 +164,17 @@ items:
         image: ../Images/Datasets/NHANES.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nhanes/
-        info: More-Info-Pages/Freely-Accessible/NHANES.qmd
+        info: More-Info-Pages/Freely-Accessible/NCHS NHANES.qmd
       - title: NCHS's National Health Interview Survey (NHIS)
         date-added: 2025-03-20
         date-updated: 2025-03-20
         ranking: "2"
         description: |
-          The National Health Interview Survey (NHIS) monitors the health of people across the country—the U.S. population—by collecting and analyzing data on a broad range of health topics. NHIS focuses on the health of U.S. children and adults.
-          </br>
-          </br>
-          CDC's National Center for Health Statistics (NCHS) conducts NHIS. It is the nation's largest and oldest national health survey. NHIS began collecting data in 1957.
-          </br>
-          </br>
-          Each year, NHIS collects data from about 27,000 adults through confidential, face-to-face interviews throughout the year. Many of these adults also provide health information about children in their households.
-          </br>
-          </br>
-          NHIS collects data from civilians who don't live in institutions. Civilians are people not serving on active duty in the military. Institutionalized people live in places like correctional facilities, skilled-nursing homes, and mental (psychiatric) hospitals.
+          The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center.
         image: ../Images/Datasets/NHIS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nhis/index.html
+        info: More-Info-Pages/Freely-Accessible/NCHS NHIS.qmd
       - title: NCHS's The National Health Care Surveys (NHCS)
         date-added: 2025-04-08
         date-updated: 2025-04-08
@@ -197,6 +189,7 @@ items:
         image: ../Images/Datasets/NHCS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/healthcare-surveys/about/index.html
+        #info: More-Info-Pages/Freely-Accessible/NCHS NHCS.qmd
       - title: NCHS's Rapid Surveys System
         date-added: 2025-04-08
         date-updated: 2025-04-08
@@ -215,6 +208,7 @@ items:
         image: ../Images/Datasets/NCHS Rapid Surveys.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/rapid-surveys/about/index.html
+        #info: More-Info-Pages/Freely-Accessible/NCHS Rapid Survey.qmd
       - title: NCHS's National Vital Statistics System (NVSS)
         date-added: 2025-04-08
         date-updated: 2025-04-08
@@ -224,6 +218,7 @@ items:
         image: ../Images/Datasets/NVSS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nvss/index.htm
+        #info: More-Info-Pages/Freely-Accessible/NCHS NVSS.qmd
       - title: NCHS's Data Linkage Activities
         date-added: 2025-04-08
         date-updated: 2025-04-08
@@ -245,6 +240,7 @@ items:
         image: ../Images/Datasets/NCHS Data Linkage.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/data-linkage/index.htm
+        #info: More-Info-Pages/Freely-Accessible/NCHS Data Linkage.qmd
       - title: Surveillance, Epidemiology, and End Results Program (SEER)
         date-added: 2025-03-20
         date-updated: 2025-03-20

@@ -47,7 +47,7 @@ Our mission is to develop and support a robust public health data science infras
 
 ## Navigating the Site
 
-Explore our comprehensive collection of resources and datasets curated from international organizations, United States agencies, and Yale University that can support your public health research. Dataset listings come with detailed information on how to obtain the data, expected timelines for access and utilization, and examples of YSPH studies conducted and published using these specific datasets.
+Navigate to our comprehensive collection of resources and datasets using the tile below. These resources, curated from international organizations, United States agencies, and Yale University, support public health research with detailed access information, timelines, and examples of published Yale-affiliated studies utilizing these datasets.
 
 
 ```{=html}
@@ -83,8 +83,7 @@ Explore our comprehensive collection of resources and datasets curated from inte
 ```
 
 
-
-The resources and datasets are presented in tiles that contain salient details about the source, along with relevant links, like the one displayed on the left. Each tile can feature any combination of five hyperlinked icons:
+Each resource is presented in its own tile with salient details about the source and relevant links, as shown in the example on the left. Every tile can feature any combination of five hyperlinked icons:
 
 <i class="bi bi-github" style="color: var(--link-color);"></i> \  Links to code repositories for the dataset/resource.
 
