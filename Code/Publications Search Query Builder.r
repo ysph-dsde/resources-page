@@ -62,6 +62,14 @@ build_search_query(
 
 
 ## ----------------
+## NHIS
+
+build_search_query(
+  keywords = c("NCHS's National Health Interview Survey", "NHIS"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+
+## ----------------
 ## SEER
 
 build_search_query(
@@ -69,6 +77,24 @@ build_search_query(
   affiliation = "Yale School of Public Health", years = 5)
 
 
+## ----------------
+## NHCS's
+
+build_search_query(
+  keywords = c("National Health Care Survey", "NHCS"), 
+  affiliation = "Yale School of Medicine", years = 5)
+
+build_search_query(
+  keywords = c("National Ambulatory Medical Care Survey", "NAMCS"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+build_search_query(
+  keywords = c("National Electronic Health Records Survey", "NEHRS"), 
+  affiliation = "Yale", years = 5)
+
+build_search_query(
+  keywords = c("National Hospital Ambulatory Medical Care Survey", "NHAMCS"), 
+  affiliation = "Yale School of Public Health", years = 5)
 
 
 ## ----------------------------------------------------------------

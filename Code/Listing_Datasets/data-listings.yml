@@ -112,7 +112,7 @@ items:
         group: https://medicine.yale.edu/core/
       - title: Yale New Haven Health System (YNHHS) Epic
         date-added: 2025-03-20
-        date-updated: 2025-03-20
+        date-updated: 2025-12-03
         ranking: "3"
         description: |
           The Yale New Haven Hospital System (YNHHS) uses Epic's EMR system to digitize comprehensive patient data across its network, supporting various medical services. Annually, they manage around 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits. Epic Cosmos integrates these records into a single, HIPAA-compliant longitudinal patient record, enhancing privacy by eliminating duplicates and obscuring identifiable information.
@@ -144,7 +144,7 @@ items:
     tiles:
       - title: National Center for Health Statistics (NCHS)
         date-added: 2025-03-20
-        date-updated: 2025-03-20
+        date-updated: 2025-10-23
         ranking: "1"
         description: |
           The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends.
@@ -167,7 +167,7 @@ items:
         info: More-Info-Pages/Freely-Accessible/NCHS NHANES.qmd
       - title: NCHS's National Health Interview Survey (NHIS)
         date-added: 2025-03-20
-        date-updated: 2025-03-20
+        date-updated: 2025-12-18
         ranking: "2"
         description: |
           The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center.
@@ -175,21 +175,16 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nhis/index.html
         info: More-Info-Pages/Freely-Accessible/NCHS NHIS.qmd
-      - title: NCHS's The National Health Care Surveys (NHCS)
+      - title: NCHS's The National Health Care Survey (NHCS)
         date-added: 2025-04-08
-        date-updated: 2025-04-08
+        date-updated: 2025-12-22
         ranking: "2"
         description: |
-          Overview: The National Health Care Surveys are a family of surveys that provide information about—
-          </br>
-          - Organizations and providers that deliver health care
-          - The healthcare services they provide
-          - The patients they serve across diverse healthcare settings
-          - Researchers, policymakers, and health professionals can use data from our surveys to understand providers, patients, and management and delivery of patient care in the United States.
+          The National Hospital Care Surveys (NHCS) collect and disseminate data to provide comprehensive understanding of hospital healthcare services in the United States through five active surveys. The data across all programs include patient demographics, diagnoses, treatments, procedures, and outcomes from emergency departments, inpatient units, office-based providers, health centers, and residential care communities. Data are accessible through reports, freely accessible files, and restricted access files and can be used to inform health policy decisions, monitor care quality, examine healthcare disparities, and more.
         image: ../Images/Datasets/NHCS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/healthcare-surveys/about/index.html
-        #info: More-Info-Pages/Freely-Accessible/NCHS NHCS.qmd
+        info: More-Info-Pages/Freely-Accessible/NCHS NHCS All.qmd
       - title: NCHS's Rapid Surveys System
         date-added: 2025-04-08
         date-updated: 2025-04-08
@@ -243,7 +238,7 @@ items:
         #info: More-Info-Pages/Freely-Accessible/NCHS Data Linkage.qmd
       - title: Surveillance, Epidemiology, and End Results Program (SEER)
         date-added: 2025-03-20
-        date-updated: 2025-03-20
+        date-updated: 2025-10-21
         ranking: "2"
         description: |
           The Surveillance, Epidemiology, and End Results (SEER) Program provides information on cancer statistics in an effort to reduce the cancer burden among the U.S. population. SEER is supported by the Surveillance Research Program (SRP) in NCI's Division of Cancer Control and Population Sciences (DCCPS).
@@ -262,7 +257,7 @@ items:
     tiles:
       - title: National Institutes of Health's (NIH) All of Us (AOU)
         date-added: 2025-03-19
-        date-updated: 2025-10-10
+        date-updated: 2025-10-29
         ranking: "3"
         description: |
           The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens. 
@@ -307,7 +302,7 @@ items:
     tiles:
       - title: UK Biobank
         date-added: 2025-03-19
-        date-updated: 2025-03-19
+        date-updated: 2025-11-05
         ranking: "3"
         description: |
           The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
@@ -329,7 +324,7 @@ items:
     tiles:
       - title: Epic Cosmos
         date-added: 2025-11-06
-        date-updated: 2025-11-06
+        date-updated: 2025-12-12
         ranking: "3"
         description: |
           Cosmos compiles Epic electronic medical record (EMR) data from nearly 2,000 participating hospitals globally, creating a comprehensive dataset with analytical tools like SlicerDicer and the Data Science Virtual Machine (DSVM) to advance medical research. This network encompasses half a million physicians caring for 300 million patients, generating billions of high-quality, longitudinal clinical data points. Cosmos integrates and de-identifies patient records to create unified longitudinal profiles while eliminating duplicates.

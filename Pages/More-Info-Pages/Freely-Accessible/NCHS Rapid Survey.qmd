@@ -1,10 +1,10 @@
 ---
 title-block-banner: true
 title: |
-  National Center for Health Statistics (NCHS)
+  Rapid Surveys System
 description: |
   </br>
-  The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends\ [@about; @data_tools].
+  The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center\ [@about_nhis; @feinleib93].
 include-in-header: ../../../_includes/feedback_popup.html
 bibliography: BibTeX/all_nchs_references.bib
 csl: ../../../Code/nature.csl
@@ -17,38 +17,282 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: October 23<sup>th</sup>, 2025</small>
+<small>Updated: December 18<sup>th</sup>, 2025</small>
 
 ## Overview
 
-The National Center for Health Statistics (NCHS), part of the Centers for Disease Control and Prevention (CDC), is the nation's principal health statistics agency. It collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. NCHS gathers information from various sources, including birth and death records, medical records, interviews, physical examinations, and laboratory testing\ [@main_page; @about; @data_tools].
 
-Policymakers and public health professionals use NCHS data to identify health problems and develop policies and programs. The data is shared through reports, dashboards, and data files, measuring the health of the U.S. population, monitoring health trends, identifying disparities, documenting healthcare access and usage, supporting research, and guiding public policies and programs\ [@about].
+The types of data collected include\ [@nhis_2025_docs; @nhis_2019_update; @feinleib89]:
 
+::: {style="margin-left: 2rem"}
+- **Demographic Data:** Basic demographics such as age, gender, race, socioeconomic status, family characteristics, and geographic location information such as state and urbanicity.
+
+:::
 
 
 ## Gaining Access
 
-The program manages six crucial datasets for public health, each with its own information page detailing the programs and data offerings\ [@main_page; @data_tools]. You can find more about how to gain access to these program data on their respective pages from the [Dataset](../../../datasets/index.html) main page. They are:
+::: {.panel-tabset}
+
+### Publicly Available
+
+#### Do I Qualify?
+
+All individuals seeking to use the data for statistical analysis and reporting purposes may access and download it.
+
+#### Typical Timeline
+
+There are no time constraints for accessing these data.
+
+#### Step-by-Step Guide
+
+There are no specific steps required. Simply navigate to the [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html) page, find the NHIS program installment link you want to use, and download the data from there\ [@nhis_data].
+
+
+### Restrcited Access
+
+#### Do I Qualify?
+
+Individuals seeking to use data for statistical analysis and reporting may submit research proposals to the [NCHS Research Data Center (RDC)](https://www.cdc.gov/rdc/) through the Standard Application Process (SAP) via the [ResearchDataGov (RDG)](https://www.researchdatagov.org/) portal\ [@rdc_process; @data_release_policy].
+
+Applicants must fulfill criteria during application review and, in some cases, after approval. The four core criteria below are summarized from the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf)\ [@rdg_user_guide]. If additional post-approval steps are required, data-owning agencies contact applicants directly to initiate those processes.
 
 ::: {style="margin-left: 2rem"}
-- **Family Growth Survey:** Provides data on family life, marriage and divorce, pregnancy, infertility, use of contraception, and men's and women's health.
+i. **Identification:** Researchers verify identity, job title, organizational affiliation, and skill level. Some agencies require U.S. citizenship confirmation.
 
-- **Health Care Surveys:** Collects information on the usage and quality of health care services, including hospital visits, outpatient and emergency department visits, and long-term care.
+ii. **Training:** Some agencies require post-approval training on data use, management, confidentiality, and cybersecurity.
 
-- **Rapid Surveys:** Gathers timely data on emerging public health issues, allowing for rapid response and policy adjustments.
+iii. **Agreements:** Researchers sign agreements such as non-disclosure or data use agreements. Some data sources require security plans outlining data protection methods.
 
-- **Health and Nutrition Examination Survey:** Combines interviews and physical examinations to assess the health and nutritional status of adults and children in the United States.
+iv. **Investigation:** Researchers undergo background checks.
+:::
 
-- **Health Interview Survey:** Collects data on a broad range of health topics through personal interviews, providing insights into health status, health care access, and progress toward national health objectives.
+#### How Is My Application Assessed?
 
-- **Vital Statistics:** Includes data on births, deaths, marriages, and divorces, providing essential information for understanding population health trends and outcomes.
+All applications submitted through SAP are evaluated against the same criteria regardless of the agency or unit, unless required by law or regulation. Full criteria are available in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf) and summarized below\ [@rdg_user_guide]:
+
+::: {style="margin-left: 2rem"}
+i. **Statistical Purpose:** Data is used solely for statistical purposes, not to identify individuals or businesses, nor for law enforcement, legal cases, or regulatory actions.
+
+ii. **Allowed Use:** Researchers plan to use data in compliance with applicable rules and restrictions.
+
+iii. **Statistical Disclosure Limitation:** Researchers must employ techniques that protect individual, organizational, or business privacy.
+
+iv. **Demonstrated Need:** Researchers must demonstrate that confidential data is necessary for project goals and that publicly available data is insufficient.
+
+v. **Feasibility:** Researchers can achieve project goals with requested data. This is evaluated in three ways:
+
+::: {style="margin-left: 2rem"}
+a) **Project Design:** Detailed planned methods and how technical and logistical needs will be met.
+
+b) **Agency or Unit Support:** Confirmation that agencies can provide space, technical assistance, logistics, and data preparation.
+
+c) **Applicant Ability:** Applicants possess the knowledge, skills, and ability to execute the project.
+:::
+
+vi. **Maintaining Public Trust:** Projects are expected to maintain public trust and confidence in the agency or unit.
+:::
+
+Additionally, the NCHS Review Committee evaluates studies for well-defined public health research questions, benefits to data-providing agencies, and appropriateness of planned outputs (papers, articles, presentations)\ [@rdc_preparing].
+
+::: {.callout-important}
+NCHS does not evaluate studies for scientific merit or relevance (substantive, methodological, theoretical, or policy). Study output release is not guaranteed due to privacy concerns and application compliance requirements.
+:::
+
+
+#### Typical Timeline
+
+```{=html}
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+  <img id="myImage" src="../../../Images/Timelines/NCHS_RDC_Restricted_Timeline.png" alt="Zoomable Image" title="Click to zoom in">
+  <figcaption class="caption">
+    A summary of the application process, including information on when additional reviews may be necessary.
+  </figcaption>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src="../../../Code/zoom.js"></script>
+```
+
+
+Upon receiving applications, assigned RDC analysts and the review committee—comprised of data system representatives and the confidentiality officer—assess applications for approval, disapproval, or revision requests. If denied, researchers receive justification for the decision and may request appeals through SAP\ [@rdc_review_committee].
+
+Studies may require amendments to approved applications. Amendment approvals typically take up to four weeks, but complicated requests may require eight to twelve weeks.
+
+#### Step-by-Step Guide
+
+**a. Prepare Your Application Before Completing the Form**
+
+The RDG portal provides access to applications for data from 13 agencies and 3 units within the Federal Statistical System (FSS), including NCHS. Each agency may have additional application requirements. While the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf) and [RDC Application Process](https://www.cdc.gov/rdc/application-process/index.html) page contain detailed information, researchers are encouraged to contact relevant agencies before submitting applications\ [@rdg_user_guide; @rdc_process].
+
+Example applications, data dictionaries, and complete details are available on the [RDC Application Process](https://www.cdc.gov/rdc/application-process/index.html) page\ [@rdc_process]. This summary provides an outline and directs researchers to relevant information sources. Contact the RDC at [rdca@cdc.gov](mailto:rdca@cdc.gov) for further assistance\ [@rdg_user_guide].
+
+::: {style="margin-left: 2rem"}
+1. Confirm the study requires restricted data access and that FSS data will meet research needs. Contact all relevant agencies or units to verify that required data can be combined, whether restricted-use, publicly available, or non-FSS.
+    
+2. Select a preferred access location and confirm eligibility. Non-U.S. citizens should contact the intended facility before writing proposals to confirm eligibility for data access. Refer to the [Data Distribution Centers](#data-distribution-centers) section for more details.
+
+:::{.callout-warning}
+Data access methods and locations may vary, especially if the data comes from different agencies or units within the FSS.
+:::
+
+3. The NCHS requires additional documents as \*.pdf or \*.docx and additional concerns to be addressed beyond the base SAP application. Before starting the application, it is recommended to prepare the following:
+
+::: {style="margin-left: 2rem"}
+i. A data dictionary listing all requested variables from publicly available, restricted-use, and non-NCHS data sources, which can largely be created using SAP. Refer to the [Providing the Public Use and Non-NCHS Data](https://www.cdc.gov/rdc/application-process/public-use-data.html) page for additional guidelines on preparing applications with these data types\ [@public_use].
+
+ii. A description of the research methodology and a list of supporting references.
+
+iii. A detailed description of the intended data product (e.g., paper, journal article, or presentation).
+
+iv. A timeline for managing the project within a three-year period.
+
+v. An explanation of how the project will benefit NCHS or other data-providing agencies for the **Agency Benefits** section of the application.
+:::
+
+:::
+
+**b. Complete the SAP Application Form**
+
+::: {style="margin-left: 2rem"}
+1. In SAP, search for and select the datasets needed for the study and add them to the checkout basket. Any data added to the same basket will be included in a single application.
+
+:::{.callout-note}
+Additional data can be added to the application if needed after submission.
+:::
+
+2. When ready to proceed, open the basket and select **Start Application**. It is recommended that the principal investigator (PI) or co-principal investigator (co-PI) create the application, as only they will be able to make edits after submission.
+
+3. In the application, the researcher will need to provide their information, a description of the project that demonstrates the need for restricted-use data, and upload the required documents as \*.pdf or \*.docx. The SAP application and some agency- or unit-specific requirements can be found in the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf)\ [@rdg_user_guide].
+
+4. Submit the application for review.
+:::
+
+
+**c. Review the Committee's Decision and Finalize the Application**
+
+Upon receiving the application, the RDC director will assign the group an RDC analyst who will work with them throughout the entire process of applying for data, accessing the data, and finalizing the output of their results\ [@rdc_preparing]. The RDC analyst will:
+
+::: {style="margin-left: 2rem"}
+- Facilitate application review and accept NCHS-required confidentiality paperwork.
+- Accept payments incurred by data center access.
+- Create datasets by compiling data specified in data dictionaries and linking using designated variables. Analytical datasets are provided during data center visits.
+- Review results for disclosure risk and provide them once analysis is completed at data centers.
+:::
+
+Researchers with approved applications must complete the following steps to prepare for data access and utilization.
+
+::: {style="margin-left: 2rem"}
+1. Discuss the committee's approval with the assigned RDC analyst and address any revision requests as needed.
+
+2. Provide the RDC analyst with approved data dictionaries, public-use and non-NCHS data, descriptions of desired data linkages with intended final formats, and clearly defined derived variables, including arithmetic code or algorithms.
+
+3. Complete the [Confidentiality and Disclosure](https://www.cdc.gov/rdc/application-process/confidentiality-an) training and forms, then provide them to the RDC analyst. Additional forms, documents, and tools are available on the [RDC Reference Materials](https://www.cdc.gov/rdc/application-process/reference-materials.html) page\ [@rdc_reference_materials; @confid_disc].
+
+4. When invoiced, pay fees incurred by the request and applicable to data access at the intended location and frequency. Complete details are in [Fees and Invoicing](https://www.cdc.gov/rdc/application-process/fees-and-invoicing.html)\ [@fees_invoicing].
+:::
+
+Amendments for project changes are possible but require additional approval prior to implementation. Common reasons for an amendment include, but are not limited to, changes in the research team, requests for additional variables, new methods, or requests for additional types of output\ [@rdc_process]. However, if the scope or research question changes, a new application is required instead.
+
+Contact the RDC directly at [rdca@cdc.gov](mailto:rdca@cdc.gov) for further guidance.
+
+
+**d. Accessing the Data and Publication Expectations**
+
+::: {style="margin-left: 2rem"}
+1. After completing the steps in Part C, the RDC analyst will prepare the dataset. Once it is ready, schedule an appointment to access the data at the chosen RDC location. Schedule appointments at least one week in advance.
+
+:::{.callout-note}
+Different data centers have different access procedures and may incur additional fees depending on frequency of data access. Refer to the [Data Distribution Centers](#data-distribution-centers) section and associated links for additional guidance.
+:::
+
+2. Upon completion of analysis, submit an output request to the RDC analyst for review and approval. Full details about requirements and expectations are on the [Output Policies and Procedures](https://www.cdc.gov/rdc/output/index.html) page\ [@data_output].
+
+:::{.callout-warning}
+NCHS does not guarantee that study-generated output will be released due to concerns related to, but not limited to, privacy and alignment with the approved application.
+:::
+
+3. When output is nearly complete, send it to the RDC analyst for review before submitting for publication or distribution. Full details about requirements and expectations are on the [Publishing Guidelines](https://www.cdc.gov/rdc/publishing-guidelines/index.html) page\ [@publishing_guides].
+:::
+
+
+#### Data Distribution Centers
+
+NCHS data is available at two types of data centers: the Census Bureau's Federal Statistical Research Data Centers (FSRDC) and the NCHS Research Data Centers (RDCs). Additional details about preparing to access data at one of these sites can be found on the RDC [Location of Access](https://www.cdc.gov/rdc/location-of-access/index.html) page or their respective subpages: [FSRDC](https://www.cdc.gov/rdc/location-of-access/federal-statistical-rdc.html) and [NCHS RDC](https://www.cdc.gov/rdc/location-of-access/nchs-rdc.html)\ [@data_locations; @fsrdc; @nchs_rdc; @rdc_process].
+
+::: {.callout-important}
+Submit an electronic copy of any notes or reference materials needed to the RDC analyst prior to visiting a center. Hard copies of these materials are not allowed. Electronic communication devices, such as phones, pagers, and laptops, are also not permitted in the RDC.
+:::
+
+Different software products or add-ons can be requested, though not all requests will be approved. Be aware that requesting additional software accommodations may delay project approval. Contact the specific RDC where data will be accessed for further guidance.
+
+
+##### Federal Statistical Research Data Centers
+
+Researchers must be affiliated with a university or agency to qualify for FSRDC access. They must also meet physical and information security requirements, including obtaining Census Bureau Special Sworn Status (SSS) and passing a background investigation. Non-U.S. citizens are generally encouraged to use FSRDCs.
+
+Researchers are assigned both an NCHS RDC analyst and an FSRDC administrator from the location they intend to visit. The NCHS RDC analyst roles were described previously under Part C of the [Step-by-Step Guide](#step-by-step-guide-1). The FSRDC (Census RDC) administrator will:
+
+::: {style="margin-left: 2rem"}
+- Be available to answer questions pertaining to SSS, access and entry to a FSRDC location, software availability, and additional Census fees.
+- They may be available to help develop the application.
+- Transfer output to the NCHS after researchers complete their analysis at a data center. The RDC analyst will review the output for disclosure risk and provide researchers with the results.
+:::
+
+If accessing an FSRDC, the data must be transferred from NCHS after completing all requirements outlined by the assigned RDC analyst seven days prior to the intended visit. These additional steps incur extra costs beyond the NCHS RDC data access fee and may delay data access.
+
+::: {style="margin-left: 2rem"}
+- **In-person:** Census Bureau facilities at partner institutions.
+- **Remote access:** A secure Virtual Desktop Interface (VDI) may be available.
+- **Software Available:** Anaconda, Gurobi, Intel Composer, Knittro, MADD, Mathematica, NATLAB, OpenGeoda, R and Rstudio, SAS, Stat/Transfer, Stata, Stata-MP, SUDAAN, and Tomlab.
+:::
+
+##### NCHS Research Data Centers
+
+::: {style="margin-left: 2rem"}
+- **In-person:** Facilities located in Hyattsville, MD, Atlanta, GA, and Rockville, MD require appointments scheduled at least one week in advance.
+- **Remote access:** Not available due to computers being disconnected from the internet.
+- **Software Available:** Microsoft Office products, R, SAS, Stata, Python, SPSS (v. 19), and SAS-callable SUDAAN.
+:::
+
+
+##### Required Documentation
+
+When accessing the data, researchers must provide the following documentation in addition to an approved application:
+
+::: {style="margin-left: 2rem"}
+- Proof of identification, such as a REAL ID
+- Curriculum vitae (CV) for each applicant
+- For student projects, an [agreement form](https://www.cdc.gov/rdc/data/b3/Student-Advisor-Agreement-12082022.pdf) completed by the student's advisor\ [@student_app]
+- Permission to use proprietary data
+- Table shells for requested output
+- Data dictionary listing all necessary variables (restricted-use, public-use, and external) for the research project (refer to agency dataset data dictionaries for available variables)
+:::
+
 :::
 
 ## Valuable Links
 
 ::: {style="margin-left: 2rem"}
-- [National Center for Health Statistics](https://www.cdc.gov/nchs/index.html): Find a comprehensive listing of all the data offerings provided by NCHS\ [@main_page].
+- [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html): Find links to all installments or ancillary studies and their associated program methods and documentation\ [@nhis_data].
+
+- [NHIS Restricted Data](https://www.cdc.gov/nchs/nhis/documentation/index.html): Find links to all installments classified as restricted data and their associated program methods and documentation\ [@nhis_restricted_data].
+
+- [NCHS Data User Agreement](https://www.cdc.gov/nchs/policy/data-user-agreement.html): Find the data use limitations and expectations set by NCHS for using their publicly available data\ [@data_use_agreement].
+
+- [Confidentiality and Disclosure](https://www.cdc.gov/rdc/application-process/confidentiality-and-disclosure.html): Find study participant confidentiality training, documentation, forms, and manual\ [@confid_disc]. These trainings and forms must be completed following approval of the study proposal by the research committee.
+
+- [Application Process](https://www.cdc.gov/rdc/application-process/index.html): Find the complete step-by-step guide for applying for restricted-use data from the RDC\ [@rdc_process]. Key information is summarized under the [Gaining Access - Restricted Access](#gaining-access) tab.
+
+- [RDC Reference Materials](https://www.cdc.gov/rdc/application-process/reference-materials.html): Find restricted-use data proposals, example applications, confidentiality and disclosure documents, rules, policies, and data protection toolkits\ [@rdc_reference_materials].
+
+- [NHIS Results and Publications](https://www.cdc.gov/nchs/nhis/products/index.html): Find reports and publications using NHIS data, statistics accessible in interactive data query systems and Morbidity and Mortality Weekly Report (MMWR) QuickStats, as well as archived reports\ [@nhis_pub].
 :::
 
 
@@ -59,9 +303,7 @@ The program manages six crucial datasets for public health, each with its own in
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.7326/M21-0065", "10.1001/jamanetworkopen.2025.7695",
-          "10.1007/s10995-025-04150-2", "10.1016/S2589-7500(21)00214-4",
-          "10.1038/s41467-025-58236-0", "10.1016/j.ijid.2025.108020"),
+  doi = c("10.1016/j.amjmed.2024.02.032"),
   affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )

@@ -4,7 +4,7 @@ title: |
   National Center for Health Statistics (NCHS)
 description: |
   </br>
-  The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends\ [@about; @data_tools].
+  The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends\ [@nchs_about; @data_tools].
 include-in-header: ../../../_includes/feedback_popup.html
 bibliography: BibTeX/all_nchs_references.bib
 csl: ../../../Code/nature.csl
@@ -21,15 +21,13 @@ source('../../../Code/PubMed Search_Functions.R')
 
 ## Overview
 
-The National Center for Health Statistics (NCHS), part of the Centers for Disease Control and Prevention (CDC), is the nation's principal health statistics agency. It collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. NCHS gathers information from various sources, including birth and death records, medical records, interviews, physical examinations, and laboratory testing\ [@main_page; @about; @data_tools].
+The National Center for Health Statistics (NCHS), part of the Centers for Disease Control and Prevention (CDC), is the nation's principal health statistics agency. It collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. NCHS gathers information from various sources, including birth and death records, medical records, interviews, physical examinations, and laboratory testing\ [@nchs_main_page; @nchs_about; @data_tools].
 
-Policymakers and public health professionals use NCHS data to identify health problems and develop policies and programs. The data is shared through reports, dashboards, and data files, measuring the health of the U.S. population, monitoring health trends, identifying disparities, documenting healthcare access and usage, supporting research, and guiding public policies and programs\ [@about].
-
-
+Policymakers and public health professionals use NCHS data to identify health problems and develop policies and programs. The data is shared through reports, dashboards, and data files, measuring the health of the U.S. population, monitoring health trends, identifying disparities, documenting healthcare access and usage, supporting research, and guiding public policies and programs\ [@nchs_about].
 
 ## Gaining Access
 
-The program manages six crucial datasets for public health, each with its own information page detailing the programs and data offerings\ [@main_page; @data_tools]. You can find more about how to gain access to these program data on their respective pages from the [Dataset](../../../datasets/index.html) main page. They are:
+The program manages six crucial datasets for public health, each detailed on individual information pages\ [@nchs_main_page; @data_tools]. Access information for each program's data is available on their respective pages from our [Dataset](../../datasets.qmd) listing page.
 
 ::: {style="margin-left: 2rem"}
 - **Family Growth Survey:** Provides data on family life, marriage and divorce, pregnancy, infertility, use of contraception, and men's and women's health.
@@ -48,7 +46,7 @@ The program manages six crucial datasets for public health, each with its own in
 ## Valuable Links
 
 ::: {style="margin-left: 2rem"}
-- [National Center for Health Statistics](https://www.cdc.gov/nchs/index.html): Find a comprehensive listing of all the data offerings provided by NCHS\ [@main_page].
+- [National Center for Health Statistics](https://www.cdc.gov/nchs/index.html): Find a comprehensive listing of all the data offerings provided by NCHS\ [@nchs_main_page].
 :::
 
 
