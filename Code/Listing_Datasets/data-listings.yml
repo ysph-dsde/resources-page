@@ -178,7 +178,7 @@ items:
       - title: NCHS's The National Health Care Survey (NHCS)
         date-added: 2025-04-08
         date-updated: 2025-12-22
-        ranking: "2"
+        ranking: "1"
         description: |
           The National Hospital Care Surveys (NHCS) collect and disseminate data to provide comprehensive understanding of hospital healthcare services in the United States through five active surveys. The data across all programs include patient demographics, diagnoses, treatments, procedures, and outcomes from emergency departments, inpatient units, office-based providers, health centers, and residential care communities. Data are accessible through reports, freely accessible files, and restricted access files and can be used to inform health policy decisions, monitor care quality, examine healthcare disparities, and more.
         image: ../Images/Datasets/NHCS.png
@@ -190,20 +190,11 @@ items:
         date-updated: 2025-04-08
         ranking: "1"
         description: |
-          The National Center for Health Statistics (NCHS) fields Rapid Surveys fast and often. We can easily adapt these surveys to collect specific information as needs arise. This makes evidence-based decision making better and faster for those working to protect and improve health in the United States.
-          </br>
-          </br>
-          Rapid Surveys can be used to—
-          </br>
-          - Collect data on niche, emerging, or priority health topics
-          - Close health information gaps
-          - Learn how values and beliefs can affect access, care, and wellness
-          - Assess questionnaire design to ensure data collection is meaningful
-          - By getting the right data in the right hands at the right time, the NCHS Rapid Surveys System is helping make science more responsive and actionable.
+          The Rapid Surveys System (RSS) is a time-sensitive data collection platform launched by the National Center for Health Statistics in 2022 to quickly gather actionable health data on emerging concerns. RSS leverages commercially available probability-based online panels, recruiting approximately 4,000 adults per round through AmeriSpeak and KnowledgePanel using address-based sampling methods. While prioritizing speed and flexibility over traditional survey precision, RSS provides nationally representative estimates to support real-time evidence-based public health decision making.
         image: ../Images/Datasets/NCHS Rapid Surveys.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/rapid-surveys/about/index.html
-        #info: More-Info-Pages/Freely-Accessible/NCHS Rapid Survey.qmd
+        info: More-Info-Pages/Freely-Accessible/NCHS Rapid Survey.qmd
       - title: NCHS's National Vital Statistics System (NVSS)
         date-added: 2025-04-08
         date-updated: 2025-04-08

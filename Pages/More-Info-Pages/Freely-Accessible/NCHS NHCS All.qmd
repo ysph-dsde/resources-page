@@ -4,7 +4,7 @@ title: |
   National Hospital Care Surveys (NHCS)
 description: |
   </br>
-  The National Hospital Care Surveys (NHCS) collect and disseminate data to provide comprehensive understanding of hospital healthcare services in the United States. The data includes patient demographics, diagnoses, treatments, procedures, and outcomes from emergency departments, inpatient units, office-based providers, health centers, and residential care communities, and is accessible through reports and data files to inform health policy decisions, monitor care quality, and examine healthcare disparities\ [@nhcs_all_about].
+  The National Hospital Care Surveys (NHCS) collect and disseminate data to provide comprehensive understanding of hospital healthcare services in the United States through five active surveys. The data across all programs include patient demographics, diagnoses, treatments, procedures, and outcomes from emergency departments, inpatient units, office-based providers, health centers, and residential care communities. Data are accessible through reports, freely accessible files, and restricted access files and can be used to inform health policy decisions, monitor care quality, examine healthcare disparities, and more\ [@nhcs_all_about].
 include-in-header: ../../../_includes/feedback_popup.html
 bibliography: BibTeX/all_nchs_references.bib
 csl: ../../../Code/nature.csl
@@ -17,7 +17,7 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: December 22<sup>th</sup>, 2025</small>
+<small>Updated: December 22<sup>nd</sup>, 2025</small>
 
 ## Overview
 
@@ -62,9 +62,13 @@ Unlike the currently maintained surveys, these discontinued surveys do not have 
 ::: {style="margin-left: 2rem"}
 - [**Home and Hospice Care Survey (NHHCS):**](https://archive.cdc.gov/www_cdc_gov/nchs/nhhcs/index.htm) Gathered comprehensive data on home health and hospice care agencies, focusing on three key areas: patient characteristics, services provided, and agency details. The survey ran from 1992 to 2007, with data collection occurring in 1992, 1993, 1994, 1996, 1998, 2000, and 2007. In 2012, it transitioned into NPALS, which was previously known as NSLTCP\ [@npals_about_alt; @nhhcs_about_archived].
 
+- [**Home Health Aide Survey (NHHAS):**](https://archive.cdc.gov/www_cdc_gov/nchs/nhhcs/nhhas.htm) Conducted in 2007 as a supplement to the NHHCS, NHHAS was the first national probability survey of home health aides employed by agencies providing home health and/or hospice care. Sponsored by the Assistant Secretary for Planning and Evaluation (ASPE), NHHAS gathered data on aides' recruitment, training, job history, and more, through interviews with 3,377 aides. It allowed comparisons with the 2004 National Nursing Assistant Survey to understand direct care workers across different settings\ [@nhhas_about_archived; @rdc_site_index].
+
 - [**Hospital Discharge Survey (NHDS):**](https://archive.cdc.gov/www_cdc_gov/nchs/nhds/index.htm) Compiled nationally representative data on inpatients discharges from nonfederal, short-stay hospitals in the United States from 1965 to 2010. The survey focused on general and children's hospitals with average stays under 30 days, excluding veterans' hospitals, institutions serving confined populations, and facilities without inpatient capabilities. At its largest, the survey included 422 hospitals in 2007. The NHDS's inpatient data collection role has since been assumed by the NHCS survey, while NHAMCS now handles emergency department, outpatient department, and ambulatory surgery center data\ [@nhds_about_archived].
 
 - [**Nursing Home Survey (NNHS):**](https://archive.cdc.gov/www_cdc_gov/nchs/nnhs/index.htm) Nationally representative surveys of nursing homes, examining facilities, services, staff, and residents. Operating from 1973 to 2004 (with surveys conducted in 1973-74, 1977, 1985, 1995, 1997, 1999, and 2004), each survey collected core information about nursing homes while focusing on different topics. Participating facilities had at least three beds and were either certified by Medicare/Medicaid or state-licensed. In 2012, the NNHS evolved into NPALS, previously known as NSLTCP. NPALS broadened its scope to cover adult day services centers, residential care communities, nursing homes, home health agencies, and hospice agencies, using CMS administrative data for nursing home information\ [@npals_about_alt; @nnhs_about_archived].
+
+- [**Nursing Home Survey (NNHS):**](https://archive.cdc.gov/www_cdc_gov/nchs/nnhs/index.htm) Conducted as part of the National Nursing Home Survey, NNAS was the first national study of nursing assistants in U.S. nursing facilities. Sponsored by the U.S. Department of Health and Human Services, the survey involved about 6,000 nursing assistants from 800 nursing homes and gathered data on ADL assistance, job satisfaction, work environment, training, and workforce retention\ [@nnas_about_archived; @rdc_site_index].
 
 - [**Survey of Ambulatory Surgery (NSAS):**](https://archive.cdc.gov/www_cdc_gov/nchs/nsas/index.htm) Collected data on ambulatory surgery (same-day outpatient surgeries) visits from hospitals and freestanding surgery centers during 1994-1996 and 2006, serving as the sole source of nationally representative ambulatory surgery data. In 2009, NHAMCS took over ambulatory surgery data collection, incorporating hospital data into its ongoing emergency department and outpatient department surveys (since 1992). NHAMCS briefly expanded to cover ambulatory surgery centers from 2010-2012 before discontinuing this in 2013 and maintaining only hospital-based collection through 2017\ [@nsas_about_archived].
 

@@ -97,6 +97,15 @@ build_search_query(
   affiliation = "Yale School of Public Health", years = 5)
 
 
+## ----------------
+## RSS
+
+build_search_query(
+  keywords = c("Rapid Surveys System", "Rapid Surveys"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+
+
 ## ----------------------------------------------------------------
 ## LICENSE REQUIRED
 
