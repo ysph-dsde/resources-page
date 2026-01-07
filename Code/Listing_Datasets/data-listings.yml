@@ -200,11 +200,11 @@ items:
         date-updated: 2025-04-08
         ranking: "1"
         description: |
-          The National Vital Statistics System is the oldest and most successful example of inter-governmental data sharing in Public Health and the shared relationships, standards, and procedures form the mechanism by which NCHS collects and disseminates the Nation’s official vital statistics. These data are provided through contracts between NCHS and vital registration systems operated in the various jurisdictions legally responsible for the registration of vital events – births, deaths, marriages, divorces, and fetal deaths. Vital Statistics data are also available online. In the United States, legal authority for the registration of these events resides individually with the 50 States, 2 cities (Washington, DC, and New York City), and 5 territories (Puerto Rico, the Virgin Islands, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands). These jurisdictions are responsible for maintaining registries of vital events and for issuing copies of birth, marriage, divorce, and death certificates.
+          The National Vital Statistics System (NVSS) is managed by NCHS and has been collecting vital records data since 1946. The system gathers national data on births, deaths, fetal deaths, marriages, and divorces from 57 U.S. registration areas, then standardizes these vital statistics to support public health research and policy-making. NVSS also conducts specialized surveys and data linkage projects to address specific health concerns.
         image: ../Images/Datasets/NVSS.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nvss/index.htm
-        #info: More-Info-Pages/Freely-Accessible/NCHS NVSS.qmd
+        info: More-Info-Pages/Freely-Accessible/NCHS NVSS.qmd
       - title: NCHS's Data Linkage Activities
         date-added: 2025-04-08
         date-updated: 2025-04-08

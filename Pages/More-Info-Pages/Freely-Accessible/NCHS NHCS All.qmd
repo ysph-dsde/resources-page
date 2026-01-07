@@ -81,6 +81,10 @@ Unlike the currently maintained surveys, these discontinued surveys do not have 
 - [Current Surveys](https://www.cdc.gov/nchs/healthcare-surveys/about/surveys.html): Find a comprehensive listing of all active surveys conducted under the NHCS program\ [@nhcs_all_current].
 
 - [Past Surveys](https://www.cdc.gov/nchs/healthcare-surveys/about/past-surveys.html): Find a comprehensive listing of all surveys previously conducted under the NHCS program\ [@nhcs_all_past].
+
+- [NCHS Data User Agreement](https://www.cdc.gov/nchs/policy/data-user-agreement.html): Find the data use limitations and expectations set by NCHS for using their publicly available data\ [@data_use_agreement].
+
+- [FastStats](https://www.cdc.gov/nchs/fastats/default.htm): Find links to select statistics covering a wide range of health topics, reports on the latest data and available resources, and tools\ [@faststats].
 :::
 
 
@@ -111,7 +115,7 @@ if(!any(str_detect(citations$citations, "No publications"))) {
 ```
 
 
-This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.
+This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale University. These articles are provided to inspire researchers and students to use the data in their own work.
 
 ::: {style="margin-left: 1rem"}
 

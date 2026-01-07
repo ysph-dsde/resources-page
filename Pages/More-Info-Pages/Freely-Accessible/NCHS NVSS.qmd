@@ -4,7 +4,7 @@ title: |
   National Vital Statistics System (NVSS)
 description: |
   </br>
-  The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center\ [@about_nhis; @feinleib93].
+  The National Vital Statistics System (NVSS) is managed by NCHS and has been collecting vital records data since 1946. The system gathers national data on births, deaths, fetal deaths, marriages, and divorces from 57 U.S. registration areas, then standardizes these vital statistics to support public health research and policy-making. NVSS also conducts specialized surveys and data linkage projects to address specific health concerns\ [@about_nvss; @manning1991].
 include-in-header: ../../../_includes/feedback_popup.html
 bibliography: BibTeX/all_nchs_references.bib
 csl: ../../../Code/nature.csl
@@ -17,18 +17,43 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: December 18<sup>th</sup>, 2025</small>
+<small>Updated: January 6<sup>th</sup>, 2026</small>
 
 ## Overview
 
+The National Vital Statistics System (NVSS) is operated by the Division of Vital Statistics within the National Center for Health Statistics (NCHS)\ [@about_nvss]. National collection of vital statistics (births, deaths, fetal deaths, marriages, divorces, and annulments) began with the U.S. Census Bureau in 1900 and transferred to NCHS in 1946 under the Public Health Service Act (42 USC 242k). Since then, NCHS has collected and disseminated annual vital records while providing recommendations to ensure uniform laws, forms, procedures, and statistical methodology\ [@manning1991].
 
-The types of data collected include\ [@nhis_2025_docs; @nhis_2019_update; @feinleib89]:
+Data is compiled from 57 registration areas: all 50 U.S. states, the District of Columbia, New York City, American Samoa, Guam, Northern Mariana Islands, Puerto Rico, and the Virgin Islands. These jurisdictions operate independently and register vital events within their boundaries\ [@about_nvss]. To establish standardization among these diverse areas, NCHS issues periodic guidelines and certificates that reflect changing social conditions and evolving user demands. These standards are updated approximately every 10 years to meet current needs\ [@manning1991].
+
+Because data is sourced from all these jurisdictions, the NVSS is representative of the U.S. population. However, users should be aware that some datasets may have under- or overestimated occurrences of specific outcomes, depending on the data collection methods applied that year\ [@manning1991; @restricted_nvss].
+
+The types of data collected include\ [@data_nvss; @homepage_nvss; @drug_od_nvss]:
 
 ::: {style="margin-left: 2rem"}
-- **Demographic Data:** Basic demographics such as age, gender, race, socioeconomic status, family characteristics, and geographic location information such as state and urbanicity.
+- **Demographic Data:** Basic demographics such as age, gender, race, socioeconomic status, family characteristics, and geographic location information.
 
+- **Marriage and Divorce Data:** Statistics on marriages, divorces, and annulments, including characteristics of the individuals (e.g., age, race, previous marital status) and geographic data.
+
+- **Birth Data:** Information on birth certificates, including birth rates, characteristics of births (e.g., place of birth, birth weight, gestational age), and maternal and paternal demographics.
+
+- **Death and Mortality Data:** Data from death certificates, including mortality rates, causes of death, underlying and contributing factors, decedent demographics, and detailed data on deaths by specific causes, including chronic diseases, infectious diseases, and external causes such as accidents and violence.
+
+- **Fetal Death Data:** Data on fetal deaths, including information on gestational age, birth weight, maternal characteristics, and causes of fetal death.
+
+- **Drug Overdose Deaths:** Data includes cause-of-death information, specific drugs involved, ICD-10 codes, and updates from ongoing investigations reported by medical examiners and coroners.
 :::
 
+NVSS has also conducted specialized programs and data linking efforts addressing specific concerns that can be analyzed using vital statistics. These include\ [@linked_birth_death_nvss; @matched_multiple_nvss; @maternal_infant_nvss; @mortality_followback_nvss]:
+
+::: {style="margin-left: 2rem"}
+**Linked Birth/Infant Death Data:** Contains linked data from birth certificates and subsequent infant death certificates to analyze factors associated with infant mortality.
+
+**Matched Multiple Birth Data Set:** Includes information on multiple births, such as twins and triplets, matched to assess outcomes and characteristics of these births.
+
+**National Maternal and Infant Health Survey:** Collects data on maternal and infant health, including prenatal care, pregnancy complications, and infant health outcomes.
+
+**National Mortality Followback Survey:** Compiles detailed information on decedents, including healthcare utilization and circumstances around their deaths, to analyze mortality patterns and contributing factors.
+:::
 
 ## Gaining Access
 
@@ -46,7 +71,7 @@ There are no time constraints for accessing these data.
 
 #### Step-by-Step Guide
 
-There are no specific steps required. Simply navigate to the [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html) page, find the NHIS program installment link you want to use, and download the data from there\ [@nhis_data].
+Researchers can access publicly available data from two webpages: the [Vital Statistics Online Data Portal](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) and the [CDC's Wide-ranging ONline Data for Epidemiologic Research (WONDER)](https://wonder.cdc.gov/) Application Programming Interface (API)\ [@restricted_nvss; @data_nvss].
 
 
 ### Restrcited Access
@@ -280,9 +305,13 @@ When accessing the data, researchers must provide the following documentation in
 ## Valuable Links
 
 ::: {style="margin-left: 2rem"}
-- [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html): Find links to all installments or ancillary studies and their associated program methods and documentation\ [@nhis_data].
+- [Vital Statistics Online Data Portal](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm): Find links to all publicly available data and their user guides, categorized by U.S. state and city data and U.S. territories data\ [@data_nvss].
 
-- [NHIS Restricted Data](https://www.cdc.gov/nchs/nhis/documentation/index.html): Find links to all installments classified as restricted data and their associated program methods and documentation\ [@nhis_restricted_data].
+- [CDC's Wide-ranging ONline Data for Epidemiologic Research (WONDER)](https://wonder.cdc.gov/): Use the CDC WONDER API to select and query custom combinations of some publicly available NVSS data\ [@wonder].
+
+- [Restricted-Use Vital Statistics Data](https://www.cdc.gov/nchs/nvss/nvss-restricted-data.htm): Find links to descriptions of data files and records available in the restricted dataset, along with the conditions for using these datasets\ [@restricted_nvss].
+
+- [Where to Write for Vital Records](https://www.cdc.gov/nchs/w2w/index.htm): Find links to information on how to directly access individual state, city, and territory vital statistics\ [@contact_nvss].
 
 - [NCHS Data User Agreement](https://www.cdc.gov/nchs/policy/data-user-agreement.html): Find the data use limitations and expectations set by NCHS for using their publicly available data\ [@data_use_agreement].
 
@@ -292,7 +321,11 @@ When accessing the data, researchers must provide the following documentation in
 
 - [RDC Reference Materials](https://www.cdc.gov/rdc/application-process/reference-materials.html): Find restricted-use data proposals, example applications, confidentiality and disclosure documents, rules, policies, and data protection toolkits\ [@rdc_reference_materials].
 
-- [NHIS Results and Publications](https://www.cdc.gov/nchs/nhis/products/index.html): Find reports and publications using NHIS data, statistics accessible in interactive data query systems and Morbidity and Mortality Weekly Report (MMWR) QuickStats, as well as archived reports\ [@nhis_pub].
+- [Model State Vital Statistics Act and Regulations](https://www.cdc.gov/nchs/products/misc_pubs.htm#modelstate): Find some of the guidelines provided to states, cities, and territories to standardize the collection, recording, and reporting of vital statistics\ [@guidelines_nvss].
+
+- [NCHS Data Visualization Gallery](https://www.cdc.gov/nchs/data-visualization/index.htm): Find links to interactive data visualization dashboards created using NVSS data\ [@data_viz_nvss].
+
+- [What’s New](https://www.cdc.gov/nchs/nvss/new_nvss.htm): Find a listing of previously published NVSS reports, data release notices, and training materials. Note that some of these resources are intended for a broader audience beyond researchers using NVSS data in their studies\ [@new_nvss].
 :::
 
 
@@ -303,7 +336,9 @@ When accessing the data, researchers must provide the following documentation in
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.1016/j.amjmed.2024.02.032"),
+  doi = c("10.1093/neuonc/noaf142", "10.1016/j.socscimed.2025.118442",
+          "10.1016/j.jacasi.2024.07.010", "10.3390/jcm11175184",
+          "10.1038/s41591-024-03117-0"),
   affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )
@@ -322,7 +357,7 @@ if(!any(str_detect(citations$citations, "No publications"))) {
 ```
 
 
-This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale School of Public Health. These articles are provided to inspire researchers and students to use the data in their own work.
+This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale University. These articles are provided to inspire researchers and students to use the data in their own work.
 
 ::: {style="margin-left: 1rem"}
 
