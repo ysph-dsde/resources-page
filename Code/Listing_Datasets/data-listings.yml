@@ -126,7 +126,7 @@ items:
   # Region/Affiliation by: Yale University
 
   # -----------
-  # Region/Affiliation by: American University
+  # Region/Affiliation by: U.S. University
   
   # -----------
   # Region/Affiliation by: International University
@@ -154,7 +154,7 @@ items:
         info: More-Info-Pages/Freely-Accessible/NCHS.qmd
       - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
         date-added: 2025-03-20
-        date-updated: 2025-10-10
+        date-updated: 2025-10-09
         ranking: "2"
         description: |
          The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health . Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
@@ -187,7 +187,7 @@ items:
         info: More-Info-Pages/Freely-Accessible/NCHS NHCS All.qmd
       - title: NCHS's Rapid Surveys System
         date-added: 2025-04-08
-        date-updated: 2025-04-08
+        date-updated: 2025-12-23
         ranking: "1"
         description: |
           The Rapid Surveys System (RSS) is a time-sensitive data collection platform launched by the National Center for Health Statistics in 2022 to quickly gather actionable health data on emerging concerns. RSS leverages commercially available probability-based online panels, recruiting approximately 4,000 adults per round through AmeriSpeak and KnowledgePanel using address-based sampling methods. While prioritizing speed and flexibility over traditional survey precision, RSS provides nationally representative estimates to support real-time evidence-based public health decision making.
@@ -197,7 +197,7 @@ items:
         info: More-Info-Pages/Freely-Accessible/NCHS Rapid Survey.qmd
       - title: NCHS's National Vital Statistics System (NVSS)
         date-added: 2025-04-08
-        date-updated: 2025-04-08
+        date-updated: 2026-01-06
         ranking: "1"
         description: |
           The National Vital Statistics System (NVSS) is managed by NCHS and has been collecting vital records data since 1946. The system gathers national data on births, deaths, fetal deaths, marriages, and divorces from 57 U.S. registration areas, then standardizes these vital statistics to support public health research and policy-making. NVSS also conducts specialized surveys and data linkage projects to address specific health concerns.
@@ -205,28 +205,16 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nvss/index.htm
         info: More-Info-Pages/Freely-Accessible/NCHS NVSS.qmd
-      - title: NCHS's Data Linkage Activities
+      - title: NCHS's Data Linkage
         date-added: 2025-04-08
-        date-updated: 2025-04-08
+        date-updated: 2026-01-12
         ranking: "2"
         description: |
-          NCHS has developed a record linkage program designed to maximize the scientific value of the Center’s population-based surveys. Linked data files enable researchers to examine the factors that influence disability, chronic disease, health care utilization, morbidity, and mortality.
-          </br>
-          </br>
-          NCHS is currently linking various NCHS surveys with administrative data from the following:
-          </br>
-          - National Death Index (NDI)
-          - Centers for Medicare and Medicaid Services (CMS)
-          - Medicare
-          - Medicaid/CHIP
-          - United States Renal Data System (USRDS)
-          - Social Security Administration (SSA)
-          - Department of Housing and Urban Development (HUD)
-          - Department of Veterans Affairs (VA)
+          Since the 1980s, the National Center for Health Statistics (NCHS) Data Linkage program has combined NCHS survey data with administrative sources from Medicare, Medicaid, National Death Index, and Social Security records, supporting over 1,000 peer-reviewed publications. The program maximizes resource efficiency by using state-of-the-art data science matching techniques to link existing data, avoiding costly re-collection efforts. While most program resources require restrictive-access permissions to ensure participant privacy, the program takes every opportunity to make publicly available versions, including through innovative synthetic data generation.
         image: ../Images/Datasets/NCHS Data Linkage.png
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/data-linkage/index.htm
-        #info: More-Info-Pages/Freely-Accessible/NCHS Data Linkage.qmd
+        info: More-Info-Pages/Freely-Accessible/NCHS Data Linkage.qmd
       - title: Surveillance, Epidemiology, and End Results Program (SEER)
         date-added: 2025-03-20
         date-updated: 2025-10-21

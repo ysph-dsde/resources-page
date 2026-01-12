@@ -460,7 +460,7 @@ Certified Data Science users gain access to a dedicated DSVM, as described in th
 :::
 
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [Epic UserWeb](https://userweb.epic.com/): Find Epic training materials, documentation, community discussions, support resources, updates, customization options, and access to your Epic profile\ [@epic_user_web].

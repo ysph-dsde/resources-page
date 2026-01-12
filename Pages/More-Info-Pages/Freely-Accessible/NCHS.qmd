@@ -43,7 +43,7 @@ The program manages six crucial datasets for public health, each detailed on ind
 - **Vital Statistics:** Includes data on births, deaths, marriages, and divorces, providing essential information for understanding population health trends and outcomes.
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [National Center for Health Statistics](https://www.cdc.gov/nchs/index.html): Find a comprehensive listing of all the data offerings provided by NCHS\ [@nchs_main_page].

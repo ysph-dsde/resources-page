@@ -59,7 +59,7 @@ There are no time constraints for accessing these data.
 
 #### Step-by-Step Guide
 
-There are no specific steps required. Simply navigate to the [Rapid Surveys Datasets and Documentation](https://www.cdc.gov/nchs/rapid-surveys/documentation/index.html) page, locate the desired Round link, and download the corresponding data\ [@rss_data].
+No specific steps are required. Researchers can navigate to the [Rapid Surveys Datasets and Documentation](https://www.cdc.gov/nchs/rapid-surveys/documentation/index.html) page, locate the desired Round link, and download the corresponding data\ [@rss_data].
 
 
 ### Restrcited Access
@@ -290,7 +290,7 @@ When accessing the data, researchers must provide the following documentation in
 
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [RSS Datasets and Documentation](https://www.cdc.gov/nchs/rapid-surveys/documentation/index.html): Find links to data and documentation associated with all rounds of RSS\ [@rss_data].

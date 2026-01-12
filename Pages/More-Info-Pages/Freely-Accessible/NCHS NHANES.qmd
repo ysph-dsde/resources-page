@@ -80,7 +80,7 @@ There are no time constraints for accessing these data.
 
 #### Step-by-Step Guide
 
-There are no specific steps required. Simply navigate to the [NHANES Questionnaires, Datasets, and Related Documentation](https://wwwn.cdc.gov/nchs/nhanes/default.aspx) page, find the NHANES program installment link you want to use, and download the data from there\ [@data_nhanes].
+No specific steps are required. Researchers can navigate to the [NHANES Questionnaires, Datasets, and Related Documentation](https://wwwn.cdc.gov/nchs/nhanes/default.aspx) page, find the desired NHANES program installment link, and download the data from there\ [@data_nhanes].
 
 :::{.callout-warning}
 Be aware that combining two different installments or biannual Continuous NHANES datasets requires specific considerations. Refer to the relevant data documentation, the list of helpful resources provided earlier, or any of the [webinars and tutorials](#valuable-links) available for further guidance on handling survey design and protocol differences.
@@ -315,7 +315,7 @@ When accessing the data, researchers must provide the following documentation in
 
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [NHANES Questionnaires, Datasets, and Related Documentation](https://wwwn.cdc.gov/nchs/nhanes/default.aspx): Find links to all installments or ancillary studies and their associated program methods and documentation\ [@data_nhanes].

@@ -184,7 +184,7 @@ Additional details pertaining to the data application and application review pro
 
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [Documentation for SEER Data](https://seer.cancer.gov/data-software/documentation/): Find details about SEER databases, the NCCR databases, and variable definitions available in SEER*Stat, including record numbers, U.S. population coverage, geographic regions, and SEER variable dictionary\ [@data_docs].

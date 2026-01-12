@@ -355,7 +355,7 @@ You can learn more about applying for [Financial Support](https://www.ukbiobank.
 :::
 
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [Get started with UK Biobank](https://community.ukbiobank.ac.uk/hc/en-gb/categories/14494598931229-Get-started-with-UK-Biobank): Find articles about gaining access to UK Biobank data, links to policies, an FAQ for common problems, a listing of mandatory trainings, and articles on how to manage your active projects and share results\ [@get_started].

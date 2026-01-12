@@ -260,7 +260,7 @@ Be mindful of the compute power and disk space you select, as these incur differ
 :::
 
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - All of Us [Research Program](https://allofus.nih.gov/) and [Research Hub](https://www.researchallofus.org/): The The All of Us program maintains two primary websites: one with a participant log-in for program engagement and another tailored for researchers looking to access and utilize the data\ [@aou_main; @aou_research].

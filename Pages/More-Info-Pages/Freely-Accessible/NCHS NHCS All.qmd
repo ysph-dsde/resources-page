@@ -75,7 +75,7 @@ Unlike the currently maintained surveys, these discontinued surveys do not have 
 - [**Survey of Residential Care Facilities (NSRCF):**](https://archive.cdc.gov/www_cdc_gov/nchs/nsrcf/index.htm) Conducted in 2010, this was the first-ever comprehensive survey of residential care providers. It covered residential care facilities, assisted living residences, board and care homes, congregate care, enriched housing programs, homes for the aged, personal care homes, and shared housing establishments that are licensed, registered, listed, certified, or otherwise regulated by a state. In 2012, NSRCF evolved into NPALS (previously known as NSLTCP), which covers adult day services centers, residential care communities, nursing homes, home health agencies, and hospice agencies. NPALS continues collecting residential care community data alongside these other long-term care providers\ [@npals_about_alt; @nsrcf_about_archived].
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [Current Surveys](https://www.cdc.gov/nchs/healthcare-surveys/about/surveys.html): Find a comprehensive listing of all active surveys conducted under the NHCS program\ [@nhcs_all_current].

@@ -1,10 +1,10 @@
 ---
 title-block-banner: true
 title: |
-  NCHS Data Linkage
+  NCHS's Data Linkage
 description: |
   </br>
-  The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center\ [@about_nhis; @feinleib93].
+  Since the 1980s, the National Center for Health Statistics (NCHS) Data Linkage program has combined NCHS survey data with administrative sources from Medicare, Medicaid, National Death Index, and Social Security records, supporting over 1,000 peer-reviewed publications. The program maximizes resource efficiency by using state-of-the-art data science matching techniques to link existing data, avoiding costly re-collection efforts. While most program resources require restrictive-access permissions to ensure participant privacy, the program takes every opportunity to make publicly available versions, including through innovative synthetic data generation\ [@about_data_linkage; @intro_webinar_linkage].
 include-in-header: ../../../_includes/feedback_popup.html
 bibliography: BibTeX/all_nchs_references.bib
 csl: ../../../Code/nature.csl
@@ -17,16 +17,56 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: December 18<sup>th</sup>, 2025</small>
+<small>Updated: December 12<sup>th</sup>, 2026</small>
 
 ## Overview
 
+The National Hospital Care Surveys (NHCS) Data Linkage program addresses complex policy questions by combining detailed data from NCHS-run surveys with existing vital statistics and health-related administrative sources\ [@about_data_linkage]. This effort intends to maximize the usability of existing resources to avoid the need for costly and time-consuming re-administration of data collection. Since the 1980s, the program has continually updated linkage sets with decades of follow-up and expanded linked datasets as new sources become available\ [@about_data_linkage; @intro_webinar_linkage]. To date, these efforts have supported epidemiological research published in over 1,000 peer-reviewed papers in top scientific journals\ [@intro_webinar_linkage].
 
-The types of data collected include\ [@nhis_2025_docs; @nhis_2019_update; @feinleib89]:
+To achieve these outcomes, the program focuses on maximizing linkage-eligible participants and survey-administrative record combinations while creating high-quality products with minimal errors through state-of-the-art data science techniques\ [@about_data_linkage; @intro_webinar_linkage]. However, participant eligibility requires NCHS survey respondents to provide consent and minimum necessary Personally Identifiable Information (PII) for record linking. Because PII collection requirements and consent procedures vary by survey and over time, different percentages of participants qualify for linkage attempts\ [@intro_webinar_linkage]. Once eligible participants are identified, matched records undergo a two-stage assessment before being considered linked\ [@ndi_linked_public_use_info; @cms_medicare_linked_methods; @hud_linked_methods]:
 
 ::: {style="margin-left: 2rem"}
-- **Demographic Data:** Basic demographics such as age, gender, race, socioeconomic status, family characteristics, and geographic location information such as state and urbanicity.
+1. **Deterministic:** Records are matched using participants' Social Security Number (SSN) and Health Insurance Claim Number (HICN), with identifier formats varying by survey and year. Additionally, percentage matching is conducted across demographic fields including first and last name, middle initial, birth date components, 5-digit ZIP code, state of residence, and sex.
 
+2. **Probabilistic:** Deterministic pairs are weighted using an approach based on the Fellegi-Sunter paradigm. This method defines the relationship between agreement probabilities and their corresponding agreement/non-agreement weights for each identifier used in the record linkage process.
+:::
+
+Records are then classified as linked or non-linked based on successful linkage between survey and administrative data, with linked records further classified as matched or non-matched survey data. Non-linked records are analyzed to determine linkage failure reasons, including participant death between collection periods or non-receipt of administrative benefits\ [@intro_webinar_linkage]. Detailed methods are available in *Methodology and Analytics Considerations* documents for each administrative record type\ [@cms_medicare_linked_methods; @hud_linked_methods].
+
+NCHS's Research Ethics Review Board (ERB) carefully assesses all linkage efforts for confidentiality risk and scientific justification. Consequently, linked data are typically restricted access only\ [@cms_medicare_linked_methods; @hud_linked_methods]. However, the program provides limited public-use versions of qualifying datasets and is piloting synthetic data creation that maintains analytical properties while protecting privacy. Feasibility files with limited variables and linkage indicators are also available to help researchers assess whether sample sizes are adequate for their research questions\ [@intro_webinar_linkage].
+
+Linked datasets are primarily organized by administrative dataset type, with all linked NCHS survey programs listed for each. Each administrative page contains details about the specific linkage effort, including methods, publicly available datasets, and data dictionaries. As of this writing, the available administrative pages include\ [@data_linkage]:
+
+::: {style="margin-left: 2rem"}
+- **National Death Index (NDI) Mortality Files:** Provides a central, computerized index of death record information for mortality ascertainment and follow-up studies\ [@ndi_linked].
+
+- **Centers for Medicare & Medicaid Services (CMS):** Contains administrative records on healthcare utilization, costs, and patient outcomes for Medicare and Medicaid beneficiaries\ [@cms_medicare_linked; @cms_medicaid_linked].
+
+- **Department of Housing and Urban Development’s (HUD) Housing Assistance Programs:** Includes administrative records on individuals receiving housing assistance, focusing on their health and well-being\ [@hud_linked].
+
+- **Department of Veterans Affairs (VA):** Covers healthcare utilization, health outcomes, and related factors for U.S. veterans\ [@va_linked].
+
+- **United States Renal Data System (USRDS) End Stage Renal Disease (ESRD) Data:** Consists of records on kidney disease progression, treatment, and patient outcomes for individuals with end-stage renal disease\ [@usrds_linked].
+
+- **Social Security Administration (SSA) Old Age, Survivors and Disability Insurance (OASDI) and Supplemental Security Income (SSI) Benefit Records:** Provides data on the economic and health status of individuals receiving social security benefits\ [@ssa_linked].
+:::
+
+Each has been linked with different qualifying NCHS survey programs. Across all administrative datasets, the following NCHS surveys have been linked. Additional information about some of these programs can be found on the respective pages from our [Dataset](../../datasets.qmd) listing page.
+
+::: {style="margin-left: 2rem"}
+- **National Health Interview Survey (NHIS):** Established in 1957, this survey collects comprehensive health data from the U.S. civilian population through face-to-face household interviews, providing nationally representative data on health trends, illness, disability, and healthcare utilization\ [@about_nhis].
+
+- **National Hospital Care Survey (NHCS):** This survey collects data on healthcare utilization and patient care in U.S. hospitals to provide insights into hospital capacity, services, and treatment outcomes\ [@nchs_about].
+
+- **National Health and Nutrition Examination Surveys (NHANES):** Assesses the health and nutritional status of adults and children in the United States through interviews, physical examinations, and laboratory tests, providing critical data on public health and nutrition\ [@about_nhanes].
+
+- **NHANES I Epidemiologic Follow-up Study (NHEFS):** Follows up with participants from NHANES I to study long-term health outcomes, including morbidity, mortality, and risk factors for chronic diseases\ [@nhanes_I; @NHEFS].
+
+- **National Nursing Home Surveys (NNHS):** Collects data on nursing home facilities, services, and resident characteristics to inform policies and programs for long-term care\ [@nnhs_about_archived].
+
+- **The Second Longitudinal Study of Aging (LSOA II):** Follows a cohort of older adults to study aging-related health changes, disability progression, healthcare utilization, and social factors affecting the elderly population between the 1980s and 1990s\ [@archived_lsoa_ii].
+
+- **National Ambulatory Medical Care Survey (NAMCS) Health Center (HC) Component Data:** Collects data on the utilization and provision of ambulatory care services (hospital emergency or outpatient departments) in health centers, providing insights into primary care practices and patient demographics\ [@nhamcs_about].
 :::
 
 
@@ -46,8 +86,17 @@ There are no time constraints for accessing these data.
 
 #### Step-by-Step Guide
 
-There are no specific steps required. Simply navigate to the [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html) page, find the NHIS program installment link you want to use, and download the data from there\ [@nhis_data].
+The NCHS Data Linkage program offers three types of publicly available data, each with different considerations and intended uses. Each dataset linkage may include any one or all of these types of publicly available datasets:
 
+::: {style="margin-left: 2rem"}
+1. **Limited Versions of Restricted-Use Datasets:** Reduced variable sets from the full restricted files
+
+2. **Synthetic Data:** Created to mimic the restricted-use files without limiting which variables are accessible while maintaining analytical properties and protecting privacy
+
+3. **Research Feasibility Files:** Limited variables and linkage indicators to help researchers assess whether sample sizes are adequate for their research questions
+:::
+
+No specific steps are required to access these publicly available datasets. Users can navigate to the main [NCHS Data Linkage Activities](https://www.cdc.gov/nchs/data-linkage/index.htm) page and find available linked datasets listed in the left navigation bar. Data downloads are available through their respective pages\ [@data_linkage].
 
 ### Restrcited Access
 
@@ -277,12 +326,12 @@ When accessing the data, researchers must provide the following documentation in
 
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
-- [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html): Find links to all installments or ancillary studies and their associated program methods and documentation\ [@nhis_data].
+- [NCHS Data Linkage Activities](https://www.cdc.gov/nchs/data-linkage/index.htm): Linked datasets are primarily organized by administrative dataset type, with all linked NCHS survey programs listed for each. The main program page provides links to landing pages for all administratively linked datasets\ [@data_linkage].
 
-- [NHIS Restricted Data](https://www.cdc.gov/nchs/nhis/documentation/index.html): Find links to all installments classified as restricted data and their associated program methods and documentation\ [@nhis_restricted_data].
+- [NCHS Public-use Synthetic Linked Data](https://www.cdc.gov/nchs/data-linkage/synthetic.data.htm): Find synthetic linked datasets generated as part of a pilot project to expand publicly available datasets while maintaining participant privacy\ [@synthetic_linked].
 
 - [NCHS Data User Agreement](https://www.cdc.gov/nchs/policy/data-user-agreement.html): Find the data use limitations and expectations set by NCHS for using their publicly available data\ [@data_use_agreement].
 
@@ -292,7 +341,11 @@ When accessing the data, researchers must provide the following documentation in
 
 - [RDC Reference Materials](https://www.cdc.gov/rdc/application-process/reference-materials.html): Find restricted-use data proposals, example applications, confidentiality and disclosure documents, rules, policies, and data protection toolkits\ [@rdc_reference_materials].
 
-- [NHIS Results and Publications](https://www.cdc.gov/nchs/nhis/products/index.html): Find reports and publications using NHIS data, statistics accessible in interactive data query systems and Morbidity and Mortality Weekly Report (MMWR) QuickStats, as well as archived reports\ [@nhis_pub].
+- [Using Linked Data Products](https://www.cdc.gov/nchs/data-linkage/access.htm): Find a step-by-step guide for navigating available resources and using the feasibility public file to formulate scientific questions that researchers could address with access to the restricted version\ [@how_to_use_linkage].
+
+- [What's New](https://www.cdc.gov/nchs/data-linkage/new-linkage.htm): Find notices of recent releases and new program pages\ [@linked_whats_new].
+
+- [Data Linkage Webinar](https://www.cdc.gov/nchs/data-linkage/datalinkage-webinar.htm): Find webinars about the Data Linkage program covering program information, new releases, and key features\ [@webinars_linkage].
 :::
 
 
@@ -301,23 +354,23 @@ When accessing the data, researchers must provide the following documentation in
 ```{r}
 #| echo: false
 
-# Fetch and format the citations.
-citations <- get_citations(
-  doi = c("10.1016/j.amjmed.2024.02.032"),
-  affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
-  highlight_names = c("Bhramar Mukherjee")
-)
-
-# Condition the output based on presence of articles.
-citations_html <- make_pub_list(citations)
-
-if(!any(str_detect(citations$citations, "No publications"))) {
-  citation_length <- length(citations$citations)
-  citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
-} else {
-  citation_length <- 0
-  citation_date   <- as.numeric(format(Sys.Date(), "%Y")) - as.numeric(str_extract("No publications found in the last 25 years.", "[0-9]{2}"))
-}
+# # Fetch and format the citations.
+# citations <- get_citations(
+#   doi = c("10.1016/j.amjmed.2024.02.032"),
+#   affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
+#   highlight_names = c("Bhramar Mukherjee")
+# )
+# 
+# # Condition the output based on presence of articles.
+# citations_html <- make_pub_list(citations)
+# 
+# if(!any(str_detect(citations$citations, "No publications"))) {
+#   citation_length <- length(citations$citations)
+#   citation_date   <- str_match(citations$query, "\\((\\d{4}):(\\d{4})\\[dp\\]\\)")[,2]
+# } else {
+#   citation_length <- 0
+#   citation_date   <- as.numeric(format(Sys.Date(), "%Y")) - as.numeric(str_extract("No publications found in the last 25 years.", "[0-9]{2}"))
+# }
 
 ```
 
@@ -330,8 +383,8 @@ This section presents a selection of PubMed articles that utilize the dataset an
 #| echo: false
 #| results: 'asis'
 
-# Display formatted citations.
-cat(citations_html)
+# # Display formatted citations.
+# cat(citations_html)
 ```
 
 ```{=html}

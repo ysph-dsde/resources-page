@@ -279,7 +279,7 @@ Researchers seeking access to YNHHS Epic data will need a Researcher Basic Acces
 :::
 
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [YNHH Learning Management System (LMS)](https://ynhh.certpointsystems.com/): Center Point Systems is where you can sign up for YNHH-created in-person or online training courses\ [@ynhhs_lms].

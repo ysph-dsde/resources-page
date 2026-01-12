@@ -302,7 +302,7 @@ When accessing the data, researchers must provide the following documentation in
 
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [Vital Statistics Online Data Portal](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm): Find links to all publicly available data and their user guides, categorized by U.S. state and city data and U.S. territories data\ [@data_nvss].

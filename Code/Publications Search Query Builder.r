@@ -105,6 +105,23 @@ build_search_query(
   affiliation = "Yale School of Public Health", years = 5)
 
 
+## ----------------
+## NVSS
+
+build_search_query(
+  keywords = c("National Vital Statistics System", "NVSS"), 
+  affiliation = "Yale", years = 6)
+
+
+## ----------------
+## Data Linkage
+
+build_search_query(
+  keywords = c("National Center for Health Statistics AND Data Linkage", "NCHS AND Data Linkage",
+               "Data Linkage"), 
+  affiliation = "Yale", years = 6)
+
+
 
 ## ----------------------------------------------------------------
 ## LICENSE REQUIRED

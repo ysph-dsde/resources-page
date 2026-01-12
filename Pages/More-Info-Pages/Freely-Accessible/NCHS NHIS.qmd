@@ -66,7 +66,7 @@ There are no time constraints for accessing these data.
 
 #### Step-by-Step Guide
 
-There are no specific steps required. Simply navigate to the [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html) page, find the NHIS program installment link you want to use, and download the data from there\ [@nhis_data].
+No specific steps are required. Researchers can navigate to the [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html) page, find the NHIS program installment link you want to use, and download the data from there\ [@nhis_data].
 
 
 ### Restrcited Access
@@ -297,7 +297,7 @@ When accessing the data, researchers must provide the following documentation in
 
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [NHIS Questionnaires, Datasets, and Documentation](https://www.cdc.gov/nchs/nhis/documentation/index.html): Find links to all installments or ancillary studies and their associated program methods and documentation\ [@nhis_data].

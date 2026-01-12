@@ -68,7 +68,7 @@ After receiving approval, the [Harvey Cushing/John Hay Whitney Medical Library](
 
 :::
 
-## Valuable Links
+## Relevant Links
 
 ::: {style="margin-left: 2rem"}
 - [YBIC - MarketScan](https://medicine.yale.edu/ybic/data-resources-services/marketscan/): Find links to the DataMed webpage for the dataset and training\ [@ybic_marketscan].
