@@ -62,6 +62,7 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://www.healthattribution.org/
         group: https://www.carlsonlab.bio/
+        info: More-Info-Pages/Freely-Accessible/Health Attribution Library.qmd
       - title: Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)
         description: |
           The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a centralized platform housing data on immunogenicity from clinical trials of pneumococcal vaccines. The data on WISSPAR are primarily curated from outcomes tables from clinicaltrials.gov and are made available in a searchable format that can be readily used for downstream analyses. Fields included in the database include product, manufacturers, dosing schedule, age group, and geographic region. You can use the embedded tools to generate customizable visualizations, export data for further analyses, or just browse through clinical trial results.
@@ -72,6 +73,8 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://wisspar.com/
         group: https://medicine.yale.edu/lab/weinberger/
+        article: https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/
+        info: More-Info-Pages/Freely-Accessible/WISSPAR.qmd
   - categories1:
       - "Yale School of Public Health"
     categories2:
@@ -89,6 +92,7 @@ items:
         topic: "Basic Research Assays"
         site: https://grubaughlab.com/nextstrain/
         group: https://www.carlsonlab.bio/
+        info: More-Info-Pages/Freely-Accessible/nextstrain.qmd
         
   # -----------
   # Region/Affiliation by: Yale School of Medicine
