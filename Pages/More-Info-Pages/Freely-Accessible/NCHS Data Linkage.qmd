@@ -1,7 +1,7 @@
 ---
 title-block-banner: true
 title: |
-  NCHS's Data Linkage
+  Data Linkage
 description: |
   </br>
   Since the 1980s, the National Center for Health Statistics (NCHS) Data Linkage program has combined NCHS survey data with administrative sources from Medicare, Medicaid, National Death Index, and Social Security records, supporting over 1,000 peer-reviewed publications. The program maximizes resource efficiency by using state-of-the-art data science matching techniques to link existing data, avoiding costly re-collection efforts. While most program resources require restrictive-access permissions to ensure participant privacy, the program takes every opportunity to make publicly available versions, including through innovative synthetic data generation\ [@about_data_linkage; @intro_webinar_linkage].

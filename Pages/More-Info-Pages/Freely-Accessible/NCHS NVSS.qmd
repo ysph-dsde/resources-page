@@ -17,7 +17,7 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: January 6<sup>th</sup>, 2026</small>
+<small>Updated: January 12<sup>th</sup>, 2026</small>
 
 ## Overview
 
@@ -74,13 +74,111 @@ There are no time constraints for accessing these data.
 Researchers can access publicly available data from two webpages: the [Vital Statistics Online Data Portal](https://www.cdc.gov/nchs/data_access/vitalstatsonline.htm) and the [CDC's Wide-ranging ONline Data for Epidemiologic Research (WONDER)](https://wonder.cdc.gov/) Application Programming Interface (API)\ [@restricted_nvss; @data_nvss].
 
 
-### Restrcited Access
+### Restrcited Access - Micro-Data
 
 #### Do I Qualify?
 
-Individuals seeking to use data for statistical analysis and reporting may submit research proposals to the [NCHS Research Data Center (RDC)](https://www.cdc.gov/rdc/) through the Standard Application Process (SAP) via the [ResearchDataGov (RDG)](https://www.researchdatagov.org/) portal\ [@rdc_process; @data_release_policy].
+Two versions of restricted data are available, each offering different information levels, access requirements, and researcher obligations. National micro-data can be requested directly from NVSS by following the process outlined on the [Restricted-Use Vital Statistics Data](https://www.cdc.gov/nchs/nvss/nvss-restricted-data.htm) webpage, with key features summarized below [@restricted_nvss].
 
-Applicants must fulfill criteria during application review and, in some cases, after approval. The four core criteria below are summarized from the [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf)\ [@rdg_user_guide]. If additional post-approval steps are required, data-owning agencies contact applicants directly to initiate those processes.
+This restricted data level provides researchers access to:
+
+::: {style="margin-left: 2rem"}
+- Additional demographic and geographic details suppressed since 2005
+
+- Event timing to the nearest month, and sometimes week (exact dates are not provided)
+
+- Access to values otherwise suppressed due to small counts
+:::
+
+:::{.callout-caution}
+NCHS changed its maternal mortality coding, publication, and release methods in 2018. A separate restricted-use data file containing cause-of-death codes is available through an NCHS Research Data Center (RDC) to help researchers reconcile these changes with previously released data from 2003-2017\ [@nvss_policy].
+:::
+
+Researchers seeking to use this data must only be\ [@restricted_nvss; @nvss_micro_request]:
+
+::: {style="margin-left: 2rem"}
+- Conducting research studying health and factors affecting health
+
+- Demonstrating capacity to advance scientific knowledge about health-related issues
+:::
+
+Requestors CANNOT use the data or request access if they plan to:
+
+::: {style="margin-left: 2rem"}
+- Assess health-related issues for a single state (researchers should contact the applicable state directly for such data)
+
+- Conduct analysis requiring geographic data more specific than what is described in the previously linked data dictionaries
+
+- Use exact dates in their research
+
+- Access data remotely from outside the U.S./territories or lead projects as overseas Principal Investigators without U.S. physical presence and institutional affiliation
+
+- Link the data to other datasets that may re-identify participants
+
+- Use the data for commercial or resale purposes
+:::
+
+#### How Is My Application Assessed?
+
+Successful applicants will meet the previously mentioned expectations and provide sufficient evidence of their ability to secure accessed data and adhere to cybersecurity requirements. Researchers seeking this type of restricted data are encouraged to thoroughly review the [Restricted-Use Vital Statistics Data](https://www.cdc.gov/nchs/nvss/nvss-restricted-data.htm) webpage and the **Project Review Form** to understand expectations before pursuing access\ [@nvss_micro_request].
+
+Key considerations include, but are not limited to:
+
+::: {style="margin-left: 2rem"}
+- Suppress counts below 10 (including totals or rates based on these counts) when preparing results for distribution
+
+- Store and access data on secure computer systems of the affiliated organization or institution, with limited exceptions possible if proper cybersecurity measures are implemented
+
+- Provide a description of the institution's data protection procedures, storage systems, and designated personnel responsible for Division of Vital Statistics (DVS) restricted data security
+
+- If sharing data with researchers from multiple institutions, provide data protection procedures and identify the responsible party at each institution
+:::
+
+:::{.callout-important}
+Researchers are NOT allowed to store data on portable devices or commercial cloud platforms (e.g., Dropbox, Google Drive, Microsoft Azure, Amazon Web Services)\ [@nvss_micro_request].
+:::
+
+#### Typical Timeline
+
+Allow 4-6 weeks for application processing, with initial review taking 2-4 weeks. Researchers have access to data for 2 years following submission of a signed NCHS Data Use Agreement, with the possibility of applying for an extension. Requests to extend access or add new data years will require an amended application based on the original\ [@restricted_nvss; @nvss_micro_request].
+
+
+#### Step-by-Step Guide
+
+::: {style="margin-left: 2rem"}
+1. Confirm that your study requires restricted data access and that restricted micro-data (not RDC data) will meet your research needs. Review the [Descriptions of Data Files/Record Layouts](https://www.cdc.gov/nchs/nvss/nvss-restricted-data.htm) to ensure they are sufficient for your research project\ [@restricted_nvss].
+
+2. Complete the [Project Review Form](https://www.cdc.gov/nchs/data/nvss/nchs-research-review-application.pdf), also available on the same page. Include all required and supporting documents as PDFs with your application\ [@nvss_micro_request].
+
+::: {.callout-note}
+Students submitting as principal investigators must provide a letter of support from their primary mentor or advisor on institutional letterhead. Additional details are available in the [Project Review Form](https://www.cdc.gov/nchs/data/nvss/nchs-research-review-application.pdf)\ [@nvss_micro_request].
+:::
+
+3. An authorized institutional official (not the PI, co-investigators, or analysts) must sign the Data Use Agreement on behalf of the applicant's organization. Each institution that will house copies of the files requires a separate agreement\ [@nvss_micro_request].
+:::
+
+Following NCHS project approval, direct all inquiries about file delivery status, access issues with specific files or variables, personnel modifications, and extensions for existing file access (without additional data years) to [dvsdatarequests@cdc.gov](mailto:dvsdatarequests@cdc.gov)\ [@nvss_micro_request].
+
+Researchers must either return the micro-data and compressed files to NCHS or securely destroy all data files upon completion of the approved project period, unless they have requested and received approval for renewal\ [@restricted_nvss].
+
+
+### Restrcited Access - RDC
+
+#### Do I Qualify?
+
+Two versions of restricted data are available, each offering different information levels, access requirements, and researcher obligations. The complete datasets can be requested through the [NCHS Research Data Center (RDC)](https://www.cdc.gov/rdc/) by following the Standard Application Process (SAP) via the [ResearchDataGov (RDG)](https://www.researchdatagov.org/) portal\ [@rdc_process; @data_release_policy].
+
+This restricted data level provides researchers access to:
+
+::: {style="margin-left: 2rem"}
+- All demographic and geographic details, including sub-county level information
+
+- Exact dates and timing for highly sensitive variables
+
+- The ability to gain approval for linkage studies using data available through the RDC
+:::
+
+Applicants must satisfy criteria both during application review and, when necessary, after approval. Researchers seeking data for statistical analysis and reporting typically qualify for access. The [RDG User Guide](https://manager.researchdatagov.org/RDG_User_Guide.pdf)\ [@rdg_user_guide] outlines four core criteria, summarized below. If post-approval steps are needed, data-owning agencies will contact applicants directly to begin those processes.
 
 ::: {style="margin-left: 2rem"}
 i. **Identification:** Researchers verify identity, job title, organizational affiliation, and skill level. Some agencies require U.S. citizenship confirmation.
@@ -312,6 +410,8 @@ When accessing the data, researchers must provide the following documentation in
 - [Restricted-Use Vital Statistics Data](https://www.cdc.gov/nchs/nvss/nvss-restricted-data.htm): Find links to descriptions of data files and records available in the restricted dataset, along with the conditions for using these datasets\ [@restricted_nvss].
 
 - [Where to Write for Vital Records](https://www.cdc.gov/nchs/w2w/index.htm): Find links to information on how to directly access individual state, city, and territory vital statistics\ [@contact_nvss].
+
+- [Data Release Policy for Vital Statistics Micro-data Files](https://www.cdc.gov/nchs/nvss/dvs_data_release.htm): Find the current NCHS/Division of Vital Statistics (DVS) policy on micro-data for births, deaths, fetal deaths, linked birth/infant death, and matched multiple births.
 
 - [NCHS Data User Agreement](https://www.cdc.gov/nchs/policy/data-user-agreement.html): Find the data use limitations and expectations set by NCHS for using their publicly available data\ [@data_use_agreement].
 

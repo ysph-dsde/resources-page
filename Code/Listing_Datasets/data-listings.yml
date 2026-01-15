@@ -102,14 +102,15 @@ items:
     tiles:
       - title: Yale University Open Data Access (YODA)
         date-added: 2024-10-01
-        date-updated: 2025-03-20
+        date-updated: 2025-01-14
         ranking: "3"
         description: |
-          In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
+          The Yale University Open Data Access (YODA) Project at Yale's School of Medicine was founded in 2013 to facilitate responsible sharing of clinical trial data. As an independent academic organization, YODA approves external researchers' access to participant-level clinical trial data from Data Partners (manufacturers, academic researchers, and government funders). It currently lists over 500 available trials across mental health, cancer, autoimmune diseases, infectious diseases, metabolic disorders, and cardiovascular conditions. The project provides de-identified data that meets HIPAA and EU privacy standards and has enabled hundreds of publications working to advance patient health and scientific knowledge.
         image: ../Images/Datasets/YODA.png
         topic: "Clinical Study/Surveys"
         site: https://yoda.yale.edu/
         group: https://medicine.yale.edu/core/
+        info: More-Info-Pages/Restricted-Access/YODA.qmd
       - title: Yale New Haven Health System (YNHHS) Epic
         date-added: 2025-03-20
         date-updated: 2025-12-03
@@ -197,7 +198,7 @@ items:
         info: More-Info-Pages/Freely-Accessible/NCHS Rapid Survey.qmd
       - title: NCHS's National Vital Statistics System (NVSS)
         date-added: 2025-04-08
-        date-updated: 2026-01-06
+        date-updated: 2026-01-12
         ranking: "1"
         description: |
           The National Vital Statistics System (NVSS) is managed by NCHS and has been collecting vital records data since 1946. The system gathers national data on births, deaths, fetal deaths, marriages, and divorces from 57 U.S. registration areas, then standardizes these vital statistics to support public health research and policy-making. NVSS also conducts specialized surveys and data linkage projects to address specific health concerns.
