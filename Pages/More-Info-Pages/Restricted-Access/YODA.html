@@ -6,6 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="description" content=" The Yale University Open Data Access (YODA) Project at Yale’s School of Medicine was founded in 2013 to facilitate responsible sharing of clinical trial data&nbsp;1,2. As an independent academic organization, YODA approves external researchers’ access to participant-level clinical trial data from Data Partners (manufacturers, academic researchers, and government funders)&nbsp;3,4. It currently lists over 500 available trials across mental health, cancer, autoimmune diseases, infectious diseases, metabolic disorders, and cardiovascular conditions&nbsp;5. The project provides de-identified data that meets HIPAA and EU privacy standards and has enabled hundreds of publications working to advance patient health and scientific knowledge&nbsp;6.">
 
 <title>Yale University Open Data Access (YODA) – Resource Navigation Tool</title>
 <style>
@@ -20,7 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -39,7 +60,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap-4b9eaea2f0bfe36b0cd022ecbe11ae3c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../../site_libs/bootstrap/bootstrap-c4f4081289391a7fbcdfc1e5a41c8b65.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -125,13 +146,44 @@ ul.task-list li input[type="checkbox"] {
  * Need to try generalizing the zoom script so that it can be applied
  * globally.
  -->
+<!--
+ * This script handles the functionality for a timed feedback popup modal that
+ * appears after a specified delay when users visit the webpage.
+ * 
+ * It includes the following features:
+ *    1. Displaying a feedback popup after a configurable time delay.
+ *    2. Opening multiple Microsoft Forms links in new tabs.
+ *    3. Configurable delay timing with common preset options commented.
+ *
+ * Author: Shelby Golden, M.S.
+ *   Date: November 2025
+ * 
+ * Note: Written with the assistance of Yale's AI, Clarity.
+ -->
+ 
+ </head><body class="nav-fixed"><div id="formsPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-button">×</span>
+        <h2>We'd Love Your Feedback!</h2>
+        <p>Thank you for visiting our website! We value your feedback and use it to continually enhance our services. At the end of the feedback survey, you will have the chance to suggest new workshops and asynchronous materials.</p>
+        
+        <div class="form-links">
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMjhSTjVOWjQ0MkFIM0hDS0pVQ0tZN1kzMi4u" target="_blank" class="form-link">Link for Yale Affiliates</a>
+            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5URFBRQ1ZVUFlFVEY0MElSNTlSSzJTWkhXNS4u" target="_blank" class="form-link">Link for Non-Yale Affiliates</a>
+        </div>
+        
+        <p><small>Forms will open in a new tab</small></p>
+    </div>
+</div>
+
+<script src="../../../Code/popup.js"></script>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 
-</head>
 
-<body class="nav-fixed">
+
+
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -190,8 +242,13 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Yale University Open Data Access (YODA)</h1>
-                      </div>
+      <h1 class="title"><p>Yale University Open Data Access (YODA)</p></h1>
+                  <div>
+        <div class="description">
+          <p><br> The Yale University Open Data Access (YODA) Project at Yale’s School of Medicine was founded in 2013 to facilitate responsible sharing of clinical trial data&nbsp;<span class="citation" data-cites="ysm_article clinical_leader_article"><sup><a href="#ref-ysm_article" role="doc-biblioref">1</a>,<a href="#ref-clinical_leader_article" role="doc-biblioref">2</a></sup></span>. As an independent academic organization, YODA approves external researchers’ access to participant-level clinical trial data from Data Partners (manufacturers, academic researchers, and government funders)&nbsp;<span class="citation" data-cites="roles_responsibilities about"><sup><a href="#ref-roles_responsibilities" role="doc-biblioref">3</a>,<a href="#ref-about" role="doc-biblioref">4</a></sup></span>. It currently lists over 500 available trials across mental health, cancer, autoimmune diseases, infectious diseases, metabolic disorders, and cardiovascular conditions&nbsp;<span class="citation" data-cites="trials"><sup><a href="#ref-trials" role="doc-biblioref">5</a></sup></span>. The project provides de-identified data that meets HIPAA and EU privacy standards and has enabled hundreds of publications working to advance patient health and scientific knowledge&nbsp;<span class="citation" data-cites="procedures_guide"><sup><a href="#ref-procedures_guide" role="doc-biblioref">6</a></sup></span>.</p>
+        </div>
+      </div>
+                </div>
   </div>
     
   
@@ -206,8 +263,18 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#gaining-access" id="toc-gaining-access" class="nav-link" data-scroll-target="#gaining-access">Gaining Access</a></li>
+  <li><a href="#relevant-links" id="toc-relevant-links" class="nav-link" data-scroll-target="#relevant-links">Relevant Links</a></li>
+  <li><a href="#publications" id="toc-publications" class="nav-link" data-scroll-target="#publications">Publications</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/More-Info-Pages/Restricted-Access/YODA.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -216,15 +283,387 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/AdobeStock_284810520.jpeg" class="img-fluid figure-img"></p>
-<figcaption>Free Adobe Stock photo by inspiring.team. File #: 284810520</figcaption>
-</figure>
+<p><small>Updated: January 14<sup>th</sup>, 2026</small></p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The <a href="https://yoda.yale.edu/">Yale University Open Data Access (YODA) Project</a> at the <a href="https://medicine.yale.edu/core/">Center for Outcomes Research &amp; Evaluation (CORE)</a> in Yale’s School of Medicine was founded in 2013 by <a href="https://medicine.yale.edu/internal-medicine/profile/joseph-ross/">Joseph S. Ross, MD, MHS</a>, and <a href="https://medicine.yale.edu/internal-medicine/profile/harlan-krumholz/">Harlan M. Krumholz, MD</a>, both professors at Yale’s Schools of Medicine and Public Health&nbsp;<span class="citation" data-cites="ysm_article"><sup><a href="#ref-ysm_article" role="doc-biblioref">1</a></sup></span>. YODA functions as an independent academic organization with authority to approve external researchers’ access to clinical trial data supplied by Data Partners—entities that hold or control clinical trial data, typically manufacturers, academic researchers, or government funders&nbsp;<span class="citation" data-cites="procedures_guide roles_responsibilities"><sup><a href="#ref-roles_responsibilities" role="doc-biblioref">3</a>,<a href="#ref-procedures_guide" role="doc-biblioref">6</a></sup></span>. Through this model, YODA supports responsible sharing of clinical research data, fosters mutually beneficial partnerships with Data Partners, and advocates for open science and research transparency in clinical trials&nbsp;<span class="citation" data-cites="policies_landing clinical_leader_article about"><sup><a href="#ref-clinical_leader_article" role="doc-biblioref">2</a>,<a href="#ref-about" role="doc-biblioref">4</a>,<a href="#ref-policies_landing" role="doc-biblioref">7</a></sup></span>.</p>
+<p>This resource empowers research projects aimed at improving patient health and advancing scientific knowledge by providing free access to otherwise inaccessible clinical trial data&nbsp;<span class="citation" data-cites="clinical_leader_article home_page about"><sup><a href="#ref-clinical_leader_article" role="doc-biblioref">2</a>,<a href="#ref-about" role="doc-biblioref">4</a>,<a href="#ref-home_page" role="doc-biblioref">8</a></sup></span>. To date, YODA has supported hundreds of publications, with 215 publications recently published from 166 research projects&nbsp;<span class="citation" data-cites="home_page"><sup><a href="#ref-home_page" role="doc-biblioref">8</a></sup></span>. Through the project, researchers can access participant-level study data that has been de-identified and redacted using current best practices to guarantee research participant anonymity in accordance with the Health Insurance Portability and Accountability Act of 1996 (HIPAA) and European Union standards&nbsp;<span class="citation" data-cites="procedures_guide"><sup><a href="#ref-procedures_guide" role="doc-biblioref">6</a></sup></span>.</p>
+<p>Over 500 trials are currently available for research requests—view the current listing on <a href="https://yoda.yale.edu/trials-by-generic-name/">Trials By Generic Name</a> or <a href="https://yoda.yale.edu/trials-search/">Trials</a>&nbsp;<span class="citation" data-cites="trials trials_by_generic"><sup><a href="#ref-trials" role="doc-biblioref">5</a>,<a href="#ref-trials_by_generic" role="doc-biblioref">9</a></sup></span>. Information about previously assessed trials that were initially unavailable but have since been reassessed and approved can be found on the <a href="https://yoda.yale.edu/metrics/clinical-trial-inquiries-and-csr-summary-requests/trials-determined-to-be-unavailable/#Unavailable%20Trials%20Now%20Available">Trials Determined to be Unavailable</a> page&nbsp;<span class="citation" data-cites="trials_unavailable"><sup><a href="#ref-trials_unavailable" role="doc-biblioref">10</a></sup></span>. Researchers are encouraged to <a href="https://yoda.yale.edu/submit-inquiry/">submit an inquiry</a> or email <a href="mailto:yodap@yale.edu">yodap@yale.edu</a> about unlisted trials.</p>
+<p>The YODA Project currently partners with Johnson &amp; Johnson (pharmaceuticals and medical devices) and Kenvue Brands LLC. More information about current and past Data Partners is available on the <a href="https://yoda.yale.edu/about/data-holders/">Partnering with the YODA Project</a> webpage. Available trials cover the following topics&nbsp;<span class="citation" data-cites="data_partners"><sup><a href="#ref-data_partners" role="doc-biblioref">11</a></sup></span>:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><strong>Mental Health &amp; Neurological Disorders:</strong> Psychiatric conditions (schizophrenia, bipolar disorder, depression, ADHD, autism), neurological diseases (Alzheimer’s, dementia, epilepsy, migraine, multiple sclerosis), and behavioral disorders</p></li>
+<li><p><strong>Cancer &amp; Blood Disorders:</strong> Blood cancers (multiple myeloma, leukemia, lymphoma), solid tumors (prostate, breast, ovarian, sarcoma), and anemia</p></li>
+<li><p><strong>Autoimmune &amp; Inflammatory Diseases:</strong> Arthritis conditions (rheumatoid, psoriatic, ankylosing spondylitis), inflammatory bowel diseases (Crohn’s, ulcerative colitis), and skin/systemic conditions (psoriasis, lupus, scleroderma)</p></li>
+<li><p><strong>Infectious Diseases:</strong> Viral infections (HIV, RSV, coronavirus, rabies) and bacterial/parasitic infections (tuberculosis, pneumonia, helminths)</p></li>
+<li><p><strong>Metabolic &amp; Endocrine Disorders:</strong> Type 1 and Type 2 diabetes and obesity</p></li>
+<li><p><strong>Cardiovascular &amp; Respiratory:</strong> Heart conditions (pulmonary arterial hypertension, atrial fibrillation, congenital heart disease) and lung diseases (idiopathic pulmonary fibrosis)</p></li>
+<li><p><strong>Other Conditions:</strong> Dermatological issues (acne, alopecia, dental hypersensitivity) and miscellaneous conditions (alcoholism, asthma, critical illness)</p></li>
+</ul>
+</div>
+</section>
+<section id="gaining-access" class="level2">
+<h2 class="anchored" data-anchor-id="gaining-access">Gaining Access</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Restrcited Access</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="do-i-qualify" class="level4">
+<h4 class="anchored" data-anchor-id="do-i-qualify">Do I Qualify?</h4>
+<p>Eligible projects must seek to create or enhance generalizable scientific and/or medical knowledge. This includes research that reevaluates secondary endpoints, evaluates subgroup populations, or confirms and validates previously conducted research.</p>
+<p>Projects using data for non-scientific purposes, such as litigation or commercial interests, will not be approved. Additionally, requests for research partnerships or other data types—including biological, pharmacological, radiographic, or genetic data—are beyond the YODA Project’s scope and cannot be approved&nbsp;<span class="citation" data-cites="policies_landing"><sup><a href="#ref-policies_landing" role="doc-biblioref">7</a></sup></span>.</p>
+<p>Data requests must be submitted by a Principal Investigator (PI) affiliated with an institution capable of research oversight and ethical conduct, such as an academic institution, research or healthcare organization, or government agency. The institution must also be able to sign Data Use Agreements (DAUs) on behalf of its employees. Team members may submit requests on behalf of the PI but must enter the PI’s information in the Project Personnel section with the appropriate primary contact email&nbsp;<span class="citation" data-cites="faq"><sup><a href="#ref-faq" role="doc-biblioref">12</a></sup></span>.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Employees affiliated with or employed by the Data Partner cannot submit requests and should use established internal processes for data access.</p>
+</div>
+</div>
+<p>The sections below summarize relevant portions of the <a href="https://yoda.yale.edu/wp-content/uploads/2022/11/YODA-Project-Data-Release-Procedures-January-2025.pdf">YODA Project Data Release Policies and Procedures</a> unless otherwise cited. Review this document and the <a href="https://yoda.yale.edu/about/frequently-asked-questions-faqs/">FAQs</a> page for additional details&nbsp;<span class="citation" data-cites="procedures_guide faq"><sup><a href="#ref-procedures_guide" role="doc-biblioref">6</a>,<a href="#ref-faq" role="doc-biblioref">12</a></sup></span>.</p>
+</section>
+<section id="how-is-my-application-assessed" class="level4">
+<h4 class="anchored" data-anchor-id="how-is-my-application-assessed">How Is My Application Assessed?</h4>
+<p>All applications undergo a review by the YODA Project and the basic Data Partner Due Diligence Assessment (Section A below)&nbsp;<span class="citation" data-cites="due_diligence"><sup><a href="#ref-due_diligence" role="doc-biblioref">13</a></sup></span>. If requested data is not available on the secure data sharing platform, the Data Partner reviews additional criteria in their Due Diligence Assessment (Section B below)&nbsp;<span class="citation" data-cites="due_diligence"><sup><a href="#ref-due_diligence" role="doc-biblioref">13</a></sup></span>. Additionally, if the YODA Project cannot verify the scientific merit of a proposal, an External Review involving the YODA Project Steering Committee and other independent experts in the field will be conducted (Section C below).</p>
+<p>All requests and associated materials—including the Research Proposal, Data Partner Due Diligence Assessment summary, any external scientific reviews, and the YODA Project’s access decision—will be publicly posted.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Trial Review Status
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>More information about current and past Data Partners is available on the <a href="https://yoda.yale.edu/about/data-holders/">Partnering with the YODA Project</a> webpage&nbsp;<span class="citation" data-cites="data_partners"><sup><a href="#ref-data_partners" role="doc-biblioref">11</a></sup></span>. The current listing of available trials can be viewed on <a href="https://yoda.yale.edu/trials-by-generic-name/">Trials By Generic Name</a> or <a href="https://yoda.yale.edu/trials-search/">Trials</a>&nbsp;<span class="citation" data-cites="trials trials_by_generic"><sup><a href="#ref-trials" role="doc-biblioref">5</a>,<a href="#ref-trials_by_generic" role="doc-biblioref">9</a></sup></span>. Information about previously assessed trials that were initially unapproved but have since been reassessed and approved can be found on the <a href="https://yoda.yale.edu/metrics/clinical-trial-inquiries-and-csr-summary-requests/trials-determined-to-be-unavailable/#Unavailable%20Trials%20Now%20Available">Trials Determined to be Unavailable</a> page&nbsp;<span class="citation" data-cites="trials_unavailable"><sup><a href="#ref-trials_unavailable" role="doc-biblioref">10</a></sup></span>.</p>
+</div>
+</div>
+<p><strong>a. Standard Application Review:</strong></p>
+<p>In addition to reviewing the application for completeness, the YODA Project will also assess the proposal for scientific merit:</p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>The scientific purpose is clearly described</p></li>
+<li><p>The data will be used to create or materially enhance generalizable scientific and/or medical knowledge to inform science and public health</p></li>
+<li><p>The requested data is reasonably expected to address the proposed research and whether the research question can be addressed using summary-level data</p></li>
+</ol>
+</div>
+<p>The Data Partner Due Diligence Assessment will assess whether similar research is already being conducted by internal or external affiliates of the Data Partner. This assessment is not a preclusive criterion, but serves to facilitate coordinated research efforts or notify the research team of existing projects similar to theirs&nbsp;[#due_diligence].</p>
+<p><strong>b. Unlisted Data Requests:</strong></p>
+<p>The Data Partner is responsible for the appropriate legal, regulatory, and ethical sharing of their data, in addition to the logistical considerations necessary to make it accessible (i.e., time and effort to de-identify the data or preparation of data not already in an easily shareable format). If the project request is asking for trial data not already processed and available in the secure platform, then the Data Partner will need to assess these factors to determine if the request can be appropriately or logistically met&nbsp;<span class="citation" data-cites="due_diligence"><sup><a href="#ref-due_diligence" role="doc-biblioref">13</a></sup></span>.</p>
+<p>Additional details about the scope and process of the Data Partner <a href="https://yoda.yale.edu/about/policies-procedures/due-diligence-assessment/">Due Diligence Assessment</a> can be found on the YODA Project’s <a href="https://yoda.yale.edu/about/policies-procedures/">Policies &amp; Procedures</a> webpage, or in the <a href="https://yoda.yale.edu/wp-content/uploads/2022/11/YODA-Project-Data-Release-Procedures-January-2025.pdf">YODA Project Data Release Policies and Procedures</a> document&nbsp;<span class="citation" data-cites="due_diligence policies_landing"><sup><a href="#ref-policies_landing" role="doc-biblioref">7</a>,<a href="#ref-due_diligence" role="doc-biblioref">13</a></sup></span>.</p>
+<p><strong>c.&nbsp;External Review:</strong></p>
+<p>When the YODA Project team cannot independently verify the previously listed criteria to confirm the scientific merit of the project proposal, the team will engage external reviewers. These reviewers must possess sufficient clinical expertise within the broader scientific community and maintain no institutional affiliation with either the Data Partner or the YODA Project. Following this external review, the YODA Project will consult with the YODA Project Steering Committee—an independent group of leaders in the fields of clinical research and biomedical ethics—to make a final decision.</p>
+</section>
+<section id="typical-timeline" class="level4">
+<h4 class="anchored" data-anchor-id="typical-timeline">Typical Timeline</h4>
+<p>Application processing time largely depends on three factors: the number of trials requested, whether additional reviews are needed, and data conversion requirements. The aim is to provide a decision regarding approval within 30 days of receipt of the application, and to provide the approved data to the research team within an additional 30 days following return of the signed DUA.</p>
+<p>The YODA Project publishes operational metrics each year which can be found on their <a href="https://yoda.yale.edu/metrics/">Project Metrics</a> page&nbsp;<span class="citation" data-cites="app_metrics"><sup><a href="#ref-app_metrics" role="doc-biblioref">14</a></sup></span>.</p>
+<p>Once executed, DUAs expire one year following signing, with the opportunity to apply for additional years in one-year increments. Data Users will also have the ability to access data, but not to continue analysis, for five years following completion of the project to allow for verification of their publication from the research and to respond to any inquiries received about it.</p>
+</section>
+<section id="step-by-step-guide" class="level4">
+<h4 class="anchored" data-anchor-id="step-by-step-guide">Step-by-Step Guide</h4>
+<p>All project members must complete Human Research Protection Training, including HIPAA and CITI training, before executing the DUA to conduct Human Subject Research. Complete Sections A and B below as necessary, or skip to Section C to apply for clinical trial data.</p>
+<p><strong>a: Complete Yale’s HIPAA Training</strong></p>
+<div style="margin-left: 2rem">
+<p><strong>For Yale NetID holders:</strong> Complete the <a href="https://hipaa.yale.edu/training/training-modules">HIPAA Privacy and Security</a> courses in Workday, including the basic privacy and security module, followed by the role-specific module (e.g., for clinicians or researchers)&nbsp;<span class="citation" data-cites="yale_hippa"><sup><a href="#ref-yale_hippa" role="doc-biblioref">15</a></sup></span>.</p>
+<p><strong>For Non-Yale NetID holders:</strong> Read and sign the <a href="https://hipaa.yale.edu/training/training-modules">HIPAA Privacy and Security</a> training materials specific to your role on the project (e.g., for clinicians or researchers). Submission directions for these documents can be found on the accompanying PDF&nbsp;<span class="citation" data-cites="yale_hippa"><sup><a href="#ref-yale_hippa" role="doc-biblioref">15</a></sup></span>.</p>
+</div>
+<p><strong>b: Obtain a Human Subjects Protection Training (HSPT) Certificate from CITI</strong></p>
+<p>A Human Subjects Protection Training (HSPT) certificate from CITI completed within the last three years is required. Below is a summary of the process, and the complete directions can be found on the <a href="https://your.yale.edu/research-support/human-research-protection-program/education-and-training/human-research-training">It’s Your Yale</a> page about HSPT&nbsp;<span class="citation" data-cites="yale_human_subject"><sup><a href="#ref-yale_human_subject" role="doc-biblioref">16</a></sup></span>.</p>
+<p>Researchers need to complete the following CITI certificates:</p>
+<div style="margin-left: 2rem">
+<ul>
+<li>“Basic Training”</li>
+<li>One of the following two initial/basic Human Subjects Research modules: “Biomedical Research Basic” or “Social Behavioral Educational Researchers Basic”.</li>
+</ul>
+</div>
+<p>If CITI certification was completed at another institution, a copy should be emailed to <a href="mailto:irb.training@yale.edu">irb.training@yale.edu</a> before proceeding to Section C. For further inquiries, the same email address can be used.</p>
+<p>If you have not yet received an HSPT certificate or if your certificate is more than three years old, you will need to complete the training in CITI. First, access CITI or link your CITI account with your Yale Workday account.</p>
+<p><strong>b.i: Accessing CITI and Linking It</strong></p>
+<div style="margin-left: 2rem">
+<p><strong>For Yale Employees:</strong> It is preferable, though not required, to access the CITI training modules through Workday. This will expedite the recognition of the certificate in the Yale Integrated Research Enterprise Solution (IRES) IRB system.</p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Open the <a href="https://www.myworkday.com/yale/learning">Learning Homepage</a> in Workday.</p></li>
+<li><p>The CITI training link will appear as the “Human Subjects Protection Training – Initial/Refresher” course under the “Required Training” section. If it does not appear, ensure that your name is listed in the IRES IRB pending study or submission. If it still does not appear, contact your manager or reach out to <a href="mailto:learning@yale.edu">learning@yale.edu</a> or <a href="mailto:irb.training@yale.edu">irb.training@yale.edu</a> to request a manual assignment.</p></li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If available, complete the “Compliance Assessment” to indicate that you are conducting human subjects research.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li><p>Once the “Human Subjects Protection Training – Initial/Refresher” course page is accessed, the “Enroll” button should be clicked to proceed.</p></li>
+<li><p>A button labeled “Start Program”, or “Retake Program” if being taken as a refresher, will appear under the course photo. Click it to proceed.</p></li>
+<li><p>Log into <a href="https://www.citiprogram.org/index.cfm?pageID=668">CITI</a> using the “Yale University Training Opportunities” Single Sign-On (SSO).</p></li>
+</ol>
+</div>
+<p><strong>For Non-Yale Employees:</strong> Non-Yale employees should access CITI through their own institution or directly via the <a href="https://about.citiprogram.org/">main webpage</a>. Pursuing certification independently may incur charges. Current costs for CITI courses can be found on the <a href="https://about.citiprogram.org/courses/?reset=true">Explore Our Courses</a> webpage&nbsp;<span class="citation" data-cites="citi_courses"><sup><a href="#ref-citi_courses" role="doc-biblioref">17</a></sup></span>.</p>
+</div>
+<p><strong>b.ii: Register for the Certification</strong></p>
+<p>Once access to CITI courses is granted, follow these steps to complete the certification:</p>
+<div style="margin-left: 2rem">
+<ol type="a">
+<li><p>In CITI, select “Add a Course” and scroll to the bottom to find the initial/basic CITI HSP Training under the Human Subjects Research heading.</p></li>
+<li><p>Indicate the intent to take a Human Subjects Research course and select either “Biomedical Research” or “Social Behavioral Educational Researchers.” When prompted, confirm the selection of the “Biomedical Research-Basic Course.”</p></li>
+<li><p>Complete the course modules and achieve a passing grade of at least 70% on the assessment.</p></li>
+<li><p>If the Workday account was not linked with CITI, save the completion certificate and send it to <a href="mailto:irb.training@yale.edu">irb.training@yale.edu</a>. If accessed through Workday, the record should auto-update.</p></li>
+</ol>
+</div>
+<p><strong>c: Choose Relevant Clinical Trials</strong>&nbsp;<span class="citation" data-cites="request_data"><sup><a href="#ref-request_data" role="doc-biblioref">18</a></sup></span></p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>Review the <a href="https://yoda.yale.edu/wp-content/uploads/2022/11/YODA-Project-Data-Release-Procedures-January-2025.pdf">YODA Project Policies and Procedures</a> and the <a href="https://yoda.yale.edu/wp-content/uploads/2023/08/Diagram-How-to-Request-Data.pdf">Data Request Process Diagram</a> to become familiar with the process&nbsp;<span class="citation" data-cites="flow_chart procedures_guide"><sup><a href="#ref-procedures_guide" role="doc-biblioref">6</a>,<a href="#ref-flow_chart" role="doc-biblioref">19</a></sup></span>.</p></li>
+<li><p>Determine data needs:</p></li>
+</ol>
+<div style="margin-left: 2rem">
+<ul>
+<li>Clinical Study Reports (CSRs) or Individual Participant-Level Data (IPD)?</li>
+<li>Which specific trials are needed?”</li>
+</ul>
+</div>
+<ol start="3" type="1">
+<li>Find available trials by reviewing the <a href="https://yoda.yale.edu/trials-by-generic-name/">Trials By Generic Name</a> or <a href="https://yoda.yale.edu/trials-search/">Trials</a> pages&nbsp;<span class="citation" data-cites="trials trials_by_generic"><sup><a href="#ref-trials" role="doc-biblioref">5</a>,<a href="#ref-trials_by_generic" role="doc-biblioref">9</a></sup></span>.</li>
+</ol>
+<p>If the desired trial isn’t listed, check <a href="https://yoda.yale.edu/metrics/clinical-trial-inquiries-and-csr-summary-requests/trials-determined-to-be-unavailable/#Unavailable%20Trials%20Now%20Available">Trials Determined to be Unavailable</a> for previously assessed trials, which lists trials that were initially unapproved but have since been reassessed and approved for access&nbsp;<span class="citation" data-cites="trials_unavailable"><sup><a href="#ref-trials_unavailable" role="doc-biblioref">10</a></sup></span>. <a href="https://yoda.yale.edu/submit-inquiry/">Submit an inquiry</a> or email <a href="mailto:yodap@yale.edu">yodap@yale.edu</a> for unlisted trials using the National Clinical Trial (NCT) or PubMed Identifier (PMID) number&nbsp;<span class="citation" data-cites="faq"><sup><a href="#ref-faq" role="doc-biblioref">12</a></sup></span>.</p>
+</div>
+<div class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Caution
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>DUAs vary by Data Partner&nbsp;<span class="citation" data-cites="duas"><sup><a href="#ref-duas" role="doc-biblioref">20</a></sup></span>.</p>
+</div>
+</div>
+<p><strong>d: Submit Project Proposal</strong>&nbsp;<span class="citation" data-cites="request_data"><sup><a href="#ref-request_data" role="doc-biblioref">18</a></sup></span></p>
+<div style="margin-left: 2rem">
+<ol type="1">
+<li><p>The PI and all Key Personnel—collaborators who contribute substantively to the project’s scientific development or execution—must complete the following documents:</p>
+<div style="margin-left: 2rem">
+<ol type="i">
+<li>YODA Project <a href="https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_0P7Kl30x4aAZDRX?Q_JFE=qdg">Data Use Agreement Training</a>&nbsp;<span class="citation" data-cites="dua_training"><sup><a href="#ref-dua_training" role="doc-biblioref">21</a></sup></span></li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Review the <a href="https://yoda.yale.edu/about/policies-procedures/data-use-agreement/">Data Use Agreement</a> that applies to the specific Data Partner making the requested data available through the YODA Project&nbsp;<span class="citation" data-cites="duas"><sup><a href="#ref-duas" role="doc-biblioref">20</a></sup></span>.</p>
+</div>
+</div>
+<ol start="2" type="i">
+<li>The <a href="https://yoda.yale.edu/request/request-data/conflict-interest/">Conflict of Interest</a> form&nbsp;<span class="citation" data-cites="coi"><sup><a href="#ref-coi" role="doc-biblioref">22</a></sup></span></li>
+</ol>
+</div></li>
+<li><p>Log into the YODA Project account portal: <a href="https://yoda.yale.edu/login/">login page</a></p></li>
+<li><p>Complete and submit the application</p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Review the application template (<a href="https://yoda.yale.edu/wp-content/uploads/2025/05/YODA-Project-Research-Proposal-Template-May-2025.pdf">Research Proposal Template</a>) or previously submitted proposals (<a href="https://yoda.yale.edu/metrics/submitted-requests-to-use-johnson-johnson-data/data-requests-johnson-and-johnson/">Details of Data Requests to Use Johnson and Johnson Data</a>) to see examples and learn tips for creating successful applications&nbsp;<span class="citation" data-cites="template approved_projects"><sup><a href="#ref-template" role="doc-biblioref">23</a>,<a href="#ref-approved_projects" role="doc-biblioref">24</a></sup></span>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="accessing-the-data" class="level4">
+<h4 class="anchored" data-anchor-id="accessing-the-data">Accessing the Data</h4>
+<p>The YODA Project provides two methods for accessing trial data during the research project: a password-protected personalized account on a secure (Safe Harbor) data sharing platform and secure electronic data transfer. Requests for data dissemination outside the secure platform are considered individually only after all attempts to facilitate research within the platform have been exhausted.</p>
+<p>Note that redacted complete CSRs are distributed directly, not through the Safe Harbor platform.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Data Destruction Requirements Following Project Completion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Upon project completion (or DUA expiration, whichever occurs first), all local copies of data and supporting documentation must be destroyed. The PI must provide evidence of destruction within 30 days of the expiration date.</p>
+<p>Data Users retain access to data for verification purposes for five years following project completion, allowing them to verify publications and respond to inquiries. Any new analyses require a separate data access application to the YODA Project&nbsp;<span class="citation" data-cites="faq"><sup><a href="#ref-faq" role="doc-biblioref">12</a></sup></span>.</p>
+</div>
+</div>
+<section id="safe-harbor" class="level5">
+<h5 class="anchored" data-anchor-id="safe-harbor">Safe Harbor</h5>
+<p>This password-protected, personalized account on a secure data sharing platform hosts all data, which cannot be copied or downloaded. All relevant clinical trial data and supporting documentation are available through this platform. Limited associated materials, such as clinical study reports and protocols, may be downloadable if needed&nbsp;<span class="citation" data-cites="faq"><sup><a href="#ref-faq" role="doc-biblioref">12</a></sup></span>.</p>
+<p>The platform includes analytical tools like Stata, R, RStudio, Notepad, and OpenOffice. Researchers may upload additional approved datasets as necessary. For requests for additional analytical tools or packages, contact <a href="mailto:yodap@yale.edu">yodap@yale.edu</a> -the YODA Project will work with the Data Partner to determine feasibility.</p>
+</section>
+<section id="secure-electronic-data-transfer" class="level5">
+<h5 class="anchored" data-anchor-id="secure-electronic-data-transfer">Secure Electronic Data Transfer</h5>
+<p>Data is transferred directly to researchers via a secure electronic transfer system. Depending on the system used, data may require local downloading for use.</p>
+</section>
+</section>
+</div>
+</div>
+</div>
+</section>
+<section id="relevant-links" class="level2">
+<h2 class="anchored" data-anchor-id="relevant-links">Relevant Links</h2>
+<div style="margin-left: 2rem">
+<ul>
+<li><p><a href="https://yoda.yale.edu/trials-by-generic-name/">Trials By Generic Name</a> and <a href="https://yoda.yale.edu/trials-search/">Trials</a>: Find a listing of all trials currently ready for research requests. Each page allows for different methods of searching the span of offerings&nbsp;<span class="citation" data-cites="trials trials_by_generic"><sup><a href="#ref-trials" role="doc-biblioref">5</a>,<a href="#ref-trials_by_generic" role="doc-biblioref">9</a></sup></span>.</p></li>
+<li><p><a href="https://yoda.yale.edu/metrics/clinical-trial-inquiries-and-csr-summary-requests/trials-determined-to-be-unavailable/#Unavailable%20Trials%20Now%20Available">Trials Determined to be Unavailable</a>: Find all previously assessed trials—this section lists trials that were initially unapproved but have since been reassessed and approved for access&nbsp;<span class="citation" data-cites="trials_unavailable"><sup><a href="#ref-trials_unavailable" role="doc-biblioref">10</a></sup></span>.</p></li>
+<li><p><a href="https://yoda.yale.edu/about/policies-procedures/">Policies &amp; Procedures to Guide External Investigator Access to Clinical Trial Data</a>: Find an overview of the YODA Project, its relationship to third-party Data Partners, and policies for data access requests, plus a link to the complete procedures document&nbsp;<span class="citation" data-cites="policies_landing"><sup><a href="#ref-policies_landing" role="doc-biblioref">7</a></sup></span>.</p></li>
+<li><p><a href="https://yoda.yale.edu/about/policies-procedures/data-use-agreement/">Data Use Agreement</a>: Find links to the Data Use Agreements (DUAs) specific for each Data Partner who makes data available through the YODA Project&nbsp;<span class="citation" data-cites="duas"><sup><a href="#ref-duas" role="doc-biblioref">20</a></sup></span>.</p></li>
+<li><p><a href="https://yoda.yale.edu/about/roles-responsibilities/">Roles &amp; Responsibilities</a>: Find information about the YODA Project’s scope and its role as mediator, facilitator, and advocate for responsible data sharing on behalf of Data Partners&nbsp;<span class="citation" data-cites="roles_responsibilities"><sup><a href="#ref-roles_responsibilities" role="doc-biblioref">3</a></sup></span>.</p></li>
+<li><p><a href="https://yoda.yale.edu/about/publications-presentations/">Publications &amp; Presentations</a> and <a href="https://yoda.yale.edu/about/announcements-media-coverage/">Announcements &amp; Media Coverage</a>: Find publications, webinars, recorded presentations, and media releases about the YODA Project, its usage, and advocacy efforts for open science in clinical research&nbsp;<span class="citation" data-cites="presentations media"><sup><a href="#ref-presentations" role="doc-biblioref">25</a>,<a href="#ref-media" role="doc-biblioref">26</a></sup></span>.</p></li>
+<li><p><a href="https://yoda.yale.edu/featured-articles/">Articles Making Use of Data Shared Through the YODA Project</a>: Find a collection of recent publications from research using YODA Project data&nbsp;<span class="citation" data-cites="publications_using_yoda"><sup><a href="#ref-publications_using_yoda" role="doc-biblioref">27</a></sup></span>.</p></li>
+<li><p><a href="https://yoda.yale.edu/about/frequently-asked-questions-faqs/">Frequently Asked Questions (FAQs)</a>: Find answers to common questions regarding the application process, review procedures, data access requirements, and additional considerations&nbsp;<span class="citation" data-cites="faq"><sup><a href="#ref-faq" role="doc-biblioref">12</a></sup></span>.</p></li>
+<li><p><a href="https://yoda.yale.edu/about/community-data-sharing-resources/">Community Data Sharing Resources</a>: Find a curation of other organizations and resources participating in data sharing for clinical trial and other scientific research&nbsp;<span class="citation" data-cites="community_sharing"><sup><a href="#ref-community_sharing" role="doc-biblioref">28</a></sup></span>.</p></li>
+</ul>
+</div>
+</section>
+<section id="publications" class="level2">
+<h2 class="anchored" data-anchor-id="publications">Publications</h2>
+<p>This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale University. These articles are provided to inspire researchers and students to use the data in their own work.</p>
+<div style="margin-left: 1rem">
+<div id="citations-box">
+<ul id="citations-content">
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/40517297/">Years of life lost due to central nervous system tumor subtypes in the United States.</a><br>Jakob V E Gerstl, Mackenzie Price, Joshua D Bernstock, Carol Kruchko, Lennard Spanehl, Paramesh V Karandikar, Jill S Barnholtz-Sloan, Timothy R Smith, <strong>Elizabeth B Claus</strong>, Quinn T Ostrom<br>Neuro-oncology 2025 Jun 15 pii: noaf142. doi: 10.1093/neuonc/noaf142<br>PMID: 40517297
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/41496761/">Precision Mental Health: Predicting Heterogeneous Treatment Effects for Depression through Data Integration.</a><br>Carly L Brantner, Trang Quynh Nguyen, <strong>Harsh Parikh</strong>, Congwen Zhao, Hwanhee Hong, Elizabeth A Stuart<br>Journal of the Royal Statistical Society. Series C, Applied statistics 2025 Dec 12 doi: 10.1093/jrsssc/qlaf068<br>PMID: 41496761
+</li>
+<li>
+<a href="https://pubmed.ncbi.nlm.nih.gov/41245530/">Efficacy of intranasal esketamine versus rTMS for treatment-resistant depression: analysis of individual participant data from two clinical trials.</a><br>Tyler S Kaster, <strong>Yi Dai</strong>, Fidel Vila-Rodriguez, Jonathan Downar, Zafiris J Daskalakis, Daniel M Blumberger, <strong>Taeho G Rhee</strong><br>EClinicalMedicine 2025 Oct 30 doi: 10.1016/j.eclinm.2025.103609<br>PMID: 41245530
+</li>
+</ul>
+</div>
+<!-- Pagination buttons and scripting -->
+<div class="citations-navigation">
+  <button onclick="prevPage()">◀ Previous</button>
+  <button onclick="nextPage()">Next ▶</button>
 </div>
 
+<script src="../../../Code/pagination.js"></script>
+</div>
+</section>
+<section id="references" class="level2">
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body" data-entry-spacing="0" data-line-spacing="2" role="list">
+<div id="ref-ysm_article" class="csl-entry" role="listitem">
+<div class="csl-left-margin">1. </div><div class="csl-right-inline">Frank, C. Yale open data access project reaches milestone in helping to maximize the use of clinical trial data for research. Internal medicine - in depth. <a href="https://medicine.yale.edu/internal-medicine/news-article/yale-open-data-access-project-reaches-milestone-in-helping-to-maximize-the-use-of-clinical-trial-data-for-research/">https://medicine.yale.edu/internal-medicine/news-article/yale-open-data-access-project-reaches-milestone-in-helping-to-maximize-the-use-of-clinical-trial-data-for-research/</a> (2023).</div>
+</div>
+<div id="ref-clinical_leader_article" class="csl-entry" role="listitem">
+<div class="csl-left-margin">2. </div><div class="csl-right-inline">Clinical Leader. A decade of data sharing: Insights from j&amp;j and yale’s <span>YODA</span> project. Guest column. <a href="https://www.clinicalleader.com/doc/a-decade-of-data-sharing-insights-from-j-j-and-yale-s-yoda-project-0001">https://www.clinicalleader.com/doc/a-decade-of-data-sharing-insights-from-j-j-and-yale-s-yoda-project-0001</a>.</div>
+</div>
+<div id="ref-roles_responsibilities" class="csl-entry" role="listitem">
+<div class="csl-left-margin">3. </div><div class="csl-right-inline">The YODA Project. Roles &amp; responsibilities. <a href="https://yoda.yale.edu/about/roles-responsibilities/">https://yoda.yale.edu/about/roles-responsibilities/</a> (2023).</div>
+</div>
+<div id="ref-about" class="csl-entry" role="listitem">
+<div class="csl-left-margin">4. </div><div class="csl-right-inline">The YODA Project. Welcome to the <span>YODA</span> project. <a href="https://yoda.yale.edu/about/">https://yoda.yale.edu/about/</a> (2025).</div>
+</div>
+<div id="ref-trials" class="csl-entry" role="listitem">
+<div class="csl-left-margin">5. </div><div class="csl-right-inline">The YODA Project. Trials list search. <a href="https://yoda.yale.edu/trials-search/">https://yoda.yale.edu/trials-search/</a> (2025).</div>
+</div>
+<div id="ref-procedures_guide" class="csl-entry" role="listitem">
+<div class="csl-left-margin">6. </div><div class="csl-right-inline">The YODA Project &amp; Center for Outcomes Research and Evaluation. <a href="https://yoda.yale.edu/wp-content/uploads/2022/11/YODA-Project-Data-Release-Procedures-January-2025.pdf">Procedures to guide external investigator access to clinical trial data</a>. (2025).</div>
+</div>
+<div id="ref-policies_landing" class="csl-entry" role="listitem">
+<div class="csl-left-margin">7. </div><div class="csl-right-inline">The YODA Project. Policies &amp; procedures to guide external investigator access to clinical trial data. Policies &amp; procedures. <a href="https://yoda.yale.edu/about/policies-procedures/">https://yoda.yale.edu/about/policies-procedures/</a> (2025).</div>
+</div>
+<div id="ref-home_page" class="csl-entry" role="listitem">
+<div class="csl-left-margin">8. </div><div class="csl-right-inline">The YODA Project. Home. <a href="https://yoda.yale.edu/">https://yoda.yale.edu/</a> (2026).</div>
+</div>
+<div id="ref-trials_by_generic" class="csl-entry" role="listitem">
+<div class="csl-left-margin">9. </div><div class="csl-right-inline">The YODA Project. Trials by generic name. <a href="https://yoda.yale.edu/trials-by-generic-name/">https://yoda.yale.edu/trials-by-generic-name/</a> (2024).</div>
+</div>
+<div id="ref-trials_unavailable" class="csl-entry" role="listitem">
+<div class="csl-left-margin">10. </div><div class="csl-right-inline">The YODA Project. Trials determined to be unavailable. <a href="https://yoda.yale.edu/metrics/clinical-trial-inquiries-and-csr-summary-requests/trials-determined-to-be-unavailable/">https://yoda.yale.edu/metrics/clinical-trial-inquiries-and-csr-summary-requests/trials-determined-to-be-unavailable/</a> (2025).</div>
+</div>
+<div id="ref-data_partners" class="csl-entry" role="listitem">
+<div class="csl-left-margin">11. </div><div class="csl-right-inline">The YODA Project. Partnering with the <span>YODA</span> project. <a href="https://yoda.yale.edu/about/data-holders/">https://yoda.yale.edu/about/data-holders/</a> (2025).</div>
+</div>
+<div id="ref-faq" class="csl-entry" role="listitem">
+<div class="csl-left-margin">12. </div><div class="csl-right-inline">The YODA Project. Frequently asked questions (<span>FAQs</span>). <a href="https://yoda.yale.edu/about/frequently-asked-questions-faqs/">https://yoda.yale.edu/about/frequently-asked-questions-faqs/</a> (2025).</div>
+</div>
+<div id="ref-due_diligence" class="csl-entry" role="listitem">
+<div class="csl-left-margin">13. </div><div class="csl-right-inline">The YODA Project. Due diligence assessment. Policies &amp; procedures. <a href="https://yoda.yale.edu/about/policies-procedures/due-diligence-assessment/">https://yoda.yale.edu/about/policies-procedures/due-diligence-assessment/</a> (2025).</div>
+</div>
+<div id="ref-app_metrics" class="csl-entry" role="listitem">
+<div class="csl-left-margin">14. </div><div class="csl-right-inline">The YODA Project. <span>YODA</span> project metrics. <a href="https://yoda.yale.edu/metrics/">https://yoda.yale.edu/metrics/</a> (2025).</div>
+</div>
+<div id="ref-yale_hippa" class="csl-entry" role="listitem">
+<div class="csl-left-margin">15. </div><div class="csl-right-inline">Office, Y. H. P. <span>HIPPA</span> resource documents and guidance. Health insurance portability and accountability act. <a href="https://hipaa.yale.edu/resources/resource-documents-and-guidance">https://hipaa.yale.edu/resources/resource-documents-and-guidance</a> (2025).</div>
+</div>
+<div id="ref-yale_human_subject" class="csl-entry" role="listitem">
+<div class="csl-left-margin">16. </div><div class="csl-right-inline">Support, Y. U. R. Human subjects protection training. Training &amp; education. <a href="https://research-support.yale.edu/research-compliance-regulatory-affairs/human-research-protection-program/training-education/human">https://research-support.yale.edu/research-compliance-regulatory-affairs/human-research-protection-program/training-education/human</a>.</div>
+</div>
+<div id="ref-citi_courses" class="csl-entry" role="listitem">
+<div class="csl-left-margin">17. </div><div class="csl-right-inline">Program), C. I. T. I. (CITI. Explore our courses. Https://about.citiprogram.org/. <a href="https://about.citiprogram.org/courses/">https://about.citiprogram.org/courses/</a>.</div>
+</div>
+<div id="ref-request_data" class="csl-entry" role="listitem">
+<div class="csl-left-margin">18. </div><div class="csl-right-inline">The YODA Project. How to request data. <a href="https://yoda.yale.edu/request/">https://yoda.yale.edu/request/</a> (2025).</div>
+</div>
+<div id="ref-flow_chart" class="csl-entry" role="listitem">
+<div class="csl-left-margin">19. </div><div class="csl-right-inline">The YODA Project &amp; Center for Outcomes Research and Evaluation. <a href="https://yoda.yale.edu/wp-content/uploads/2023/08/Diagram-How-to-Request-Data.pdf">The <span>YODA</span> project: How to request data</a>.</div>
+</div>
+<div id="ref-duas" class="csl-entry" role="listitem">
+<div class="csl-left-margin">20. </div><div class="csl-right-inline">The YODA Project. Data use agreement. Policies &amp; procedures. <a href="https://yoda.yale.edu/about/policies-procedures/data-use-agreement/">https://yoda.yale.edu/about/policies-procedures/data-use-agreement/</a> (2025).</div>
+</div>
+<div id="ref-dua_training" class="csl-entry" role="listitem">
+<div class="csl-left-margin">21. </div><div class="csl-right-inline">The YODA Project. <span>YODA</span> data use agreement training. <a href="https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_0P7Kl30x4aAZDRX?Q_JFE=qdg">https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_0P7Kl30x4aAZDRX?Q_JFE=qdg</a>.</div>
+</div>
+<div id="ref-coi" class="csl-entry" role="listitem">
+<div class="csl-left-margin">22. </div><div class="csl-right-inline">The YODA Project. Conflict of interest. <a href="https://yoda.yale.edu/request/request-data/conflict-interest/">https://yoda.yale.edu/request/request-data/conflict-interest/</a>.</div>
+</div>
+<div id="ref-template" class="csl-entry" role="listitem">
+<div class="csl-left-margin">23. </div><div class="csl-right-inline">The YODA Project &amp; Center for Outcomes Research and Evaluation. <a href="https://yoda.yale.edu/wp-content/uploads/2025/05/YODA-Project-Research-Proposal-Template-May-2025.pdf">Research proposal template</a>.</div>
+</div>
+<div id="ref-approved_projects" class="csl-entry" role="listitem">
+<div class="csl-left-margin">24. </div><div class="csl-right-inline">The YODA Project. Details of data requests to use johnson and johnson data. <a href="https://yoda.yale.edu/metrics/submitted-requests-to-use-johnson-johnson-data/data-requests-johnson-and-johnson/">https://yoda.yale.edu/metrics/submitted-requests-to-use-johnson-johnson-data/data-requests-johnson-and-johnson/</a> (2025).</div>
+</div>
+<div id="ref-presentations" class="csl-entry" role="listitem">
+<div class="csl-left-margin">25. </div><div class="csl-right-inline">The YODA Project. Publications &amp; presentations. <a href="https://yoda.yale.edu/about/publications-presentations/">https://yoda.yale.edu/about/publications-presentations/</a> (2025).</div>
+</div>
+<div id="ref-media" class="csl-entry" role="listitem">
+<div class="csl-left-margin">26. </div><div class="csl-right-inline">The YODA Project. Announcements &amp; media coverage. <a href="https://yoda.yale.edu/about/announcements-media-coverage/">https://yoda.yale.edu/about/announcements-media-coverage/</a> (2025).</div>
+</div>
+<div id="ref-publications_using_yoda" class="csl-entry" role="listitem">
+<div class="csl-left-margin">27. </div><div class="csl-right-inline">The YODA Project. Articles feature archive. <a href="https://yoda.yale.edu/featured-articles/">https://yoda.yale.edu/featured-articles/</a>.</div>
+</div>
+<div id="ref-community_sharing" class="csl-entry" role="listitem">
+<div class="csl-left-margin">28. </div><div class="csl-right-inline">The YODA Project. Community data sharing resources. <a href="https://yoda.yale.edu/about/community-data-sharing-resources/">https://yoda.yale.edu/about/community-data-sharing-resources/</a> (2026).</div>
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -671,7 +1110,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </a>
   </li>  
 </ul>
-    <div class="toc-actions"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/More-Info-Pages/Restricted-Access/YODA.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/ysph-dsde/resources-page/blob/main/Pages/More-Info-Pages/Restricted-Access/YODA.qmd" class="toc-action"><i class="bi bi-github"></i>View source</a></li><li><a href="https://github.com/ysph-dsde/resources-page/issues" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       <ul class="footer-items list-unstyled">
     <li class="nav-item compact">
