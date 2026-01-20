@@ -54,15 +54,15 @@ items:
     tiles:
       - title: The Health Attribution Library
         description: |
-          We compile studies that conduct end-to-end attribution studies on the human health impacts of human-caused climate change. The Health Attribution Library is a living resource, meant to provide evidence in support of scientific research, journalism, public interest, litigation, and political negotiations.
+          The Health Attribution Library is a curated collection of scientific publications that conduct rigorous end-to-end attribution studies linking human-caused climate change to specific health impacts. Created in 2023 through Wellcome Trust-funded research that found only 13 qualifying studies among nearly 4,000 reviewed papers, the library serves as an ongoing resource to support scientific research, journalism, litigation, and policy work requiring evidence-based attribution of health impacts to climate change.
         date-added: 2025-03-17
-        date-updated: 2025-03-17
+        date-updated: 2025-01-20
         ranking: "4"
         image: ../Images/Datasets/The Health Attribution Library.png
         topic: "Clinical Study/Surveys"
         site: https://www.healthattribution.org/
         group: https://www.carlsonlab.bio/
-        #info: More-Info-Pages/Freely-Accessible/Health Attribution Library.qmd
+        info: More-Info-Pages/Freely-Accessible/Health Attribution Library.qmd
       - title: Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)
         description: |
           The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a searchable database launched in 2023 by Yale researchers to aggregate immunogenicity data from pneumococcal vaccine clinical trials. WISSPAR enables researchers and regulators to quickly access and visualize serotype-specific immune response data through search and filtering tools, supporting comparative efficacy research and evidence-based decision making for pneumococcal conjugate vaccine development.
@@ -246,13 +246,14 @@ items:
     tiles:
       - title: data.gov
         date-added: 2025-04-08
-        date-updated: 2025-04-08
+        date-updated: 2025-01-20
         ranking: "1"
         description: |
           Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
         image: ../Images/Datasets/Data Gov.png
         topic: "Clinical Study/Surveys, Experimental Assay Data"
         site: https://data.gov/
+        info: More-Info-Pages/Freely-Accessible/data_gov.qmd
       
   # -----------
   # Region/Affiliation by: International Government    
