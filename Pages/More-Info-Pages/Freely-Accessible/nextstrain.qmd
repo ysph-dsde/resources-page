@@ -1,15 +1,12 @@
 ---
 title-block-banner: true
 title: |
-  nextstrain
+  Nextstrain
 description: |
   </br>
-  The Surveillance, Epidemiology, and End Results Program (SEER) has provided vital cancer statistics since 1973, now covering 45.9% of the US population and recording around 17 million cases. SEER data includes demographics, tumor characteristics, treatments, and outcomes from various registries, providing national representation of different racial and ethnic groups\ [@about_seer; @program_overview].
-  </br>
-  </br>
-  Researchers can access SEER Research Data, SEER Research Plus and NCCR Data, Supplementary Datasets, and Specialized Datasets, each offering varying levels of detail. SEER also provides software tools like SEER\*Explorer, NCCR\*Explorer, SEER\*Stat, SEERPrep, and SEER\*DMS for efficient data access and analysis\ [@data_apps; @explorer_tools; @methods_tools; @data_software].
+  Nextstrain offers real-time dashboards for tracking viral diseases such as influenza, Zika, and Ebola. The platform supports both community-developed and internally-maintained dashboards for a range of pathogens. Utilizing an open-source, reproducible bioinformatics pipeline, Nextstrain integrates data from repositories like the National Center for Biotechnology Information (NCBI) and the Global Initiative on Sharing All Influenza Data (GISAID) to assist researchers and policymakers in making informed epidemiological decisions\ [@hadfield2018]. Its suite of tools, including Augur and Auspice, enables robust, reproducible phylogenetic analysis and visualization, facilitating the rapid and comprehensive dissemination of results\ [@docs_what_is; @webpage].
 include-in-header: ../../../_includes/feedback_popup.html
-bibliography: BibTeX/yale_freely_references.bib
+bibliography: BibTeX/nextstrain.bib
 csl: ../../../Code/nature.csl
 ---
 
@@ -20,37 +17,129 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: October 21<sup>th</sup>, 2025</small>
+<small>Updated: January 19<sup>th</sup>, 2026</small>
 
 ## Overview
 
+Researchers and policy makers can use the genetic evolution of viruses to make critical epidemiological decisions, aiding in understanding emerging disease trends and informing policy responses to outbreaks\ [@webpage]. Often, however, these analyses are conducted in isolation, with results and data rarely made public until after publication, and they do not always capture how viral evolution unfolds over time\ [@hadfield2018]. In response to this bottleneck, collaborators from the Fred Hutchinson Cancer Research Center and the University of Basel launched [Nextstrain](https://nextstrain.org/) in 2015\ [@wiki].
 
+This platform provides near real-time dashboards for viral diseases of high public health interest—from endemic infections (seasonal influenza, dengue) to emerging outbreaks (avian influenza, Zika, Ebola)—plus access to the underlying bioinformatics tools\ [@webpage]. Its framework enables ongoing monitoring of pathogen evolution and can expand to additional diseases developed and maintained by the research community. This approach allows robust, reproducible, rapid analysis and dissemination of results that keep pace with sequencing data generation\ [@hadfield2018; @docs_what_is].
 
-The types of data products available include\ [@data_apps; @data_variables; @data_comparisons; @us_data]:
+Data for Nextstrain maintained dashboards are sourced from public repositories such as the National Center for Biotechnology Information (NCBI), Global Initiative on Sharing All Influenza Data (GISAID), and Virus Pathogen Resource (ViPR), as well as GitHub repositories and other genomic data sources. The visualization integrates sequence data with other data types such as geographic information, serology, or host species in a consistent and concise format accessible to health professionals, epidemiologists, virologists and the public alike\ [@hadfield2018; @docs_what_is].
+
+Nextstrain displays dashboards developed by both internal maintainers ([Nextstrain-maintained pathogen analyses](https://nextstrain.org/pathogens)) and community contributors ([Scalable Sharing with Nextstrain Groups](https://nextstrain.org/groups)), all using the same reproducible open-source bioinformatics pipeline\ [@groups; @pathogens; @docs_contributing]. Nextstrain currently maintains dashboards for the following endemic infections and emerging outbreaks:
 
 ::: {style="margin-left: 2rem"}
-- **SEER Research Data:** The standard SEER data, which provides information on cancer incidence and survival from population-based cancer registries. The data encompasses patient demographics, primary tumor site, tumor morphology, stage at diagnosis, extent and history of the disease, initial treatments, and survival outcomes.
+- **RNA Viruses - Respiratory:** Avian influenza, HMPV (Human metapneumovirus), Measles, Mumps, RSV (Respiratory syncytial virus), Rubella, SARS-CoV-2, Seasonal CoV (Seasonal coronaviruses), Seasonal influenza
+
+- **RNA Viruses - Vector-borne (Arboviruses):** Dengue, Oropouche, West Nile Virus, Yellow Fever Virus, Zika
+
+- **RNA Viruses - Hemorrhagic Fever:** Ebola, Lassa, Nipah
+
+- **RNA Viruses - Gastrointestinal:** Norovirus
+
+- **RNA Viruses - Neurotropic:** Enterovirus, Rabies
+
+- **DNA Viruses:** Mpox (Monkeypox)
+
+- **Bacteria:** Tuberculosis
+:::
+
+
+Nextstrain offers an open-source toolkit—a collection of core functions and packages—that powers both the insights on their main webpage and enables researchers to analyze their own data. These tools can be accessed and installed for local use at: [Installing Nextstrain](https://docs.nextstrain.org/en/latest/install.html)\ [@cdc_presentation; @docs_install].
+
+::: {style="margin-left: 2rem"}
+- **[Augur](https://docs.nextstrain.org/projects/augur/en/stable/)**: A suite of bioinformatics tools that together provide complete phylogenetic analysis using configurable "recipes" (called builds) specific to different pathogens. Includes composable functions for filtering and aligning sequences, inferring trees, and integrating metadata\ [@docs_augur].
+
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+  <img id="myImage" src="https://docs.nextstrain.org/projects/augur/en/stable/_images/augur_analysis_sketch.png" alt="Zoomable Image" title="Click to zoom in">
+  <figcaption class="caption">
+    Pipeline schematic showing some of the core computational modules and possible workflow entry points\ [@cdc_presentation; @docs_augur; @docs_parts_of_whole].
+  </figcaption>
+</div>
+
+```{=html}
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src="../../../Code/zoom.js"></script>
+```
+
+
+- **Auspice** ([Package](https://docs.nextstrain.org/projects/auspice/en/stable/index.html) and [Webtool](https://auspice.us/)): Dynamic visualization tool for data generated by the Augur pipeline. It powers all pathogen dashboards on Nextstrain, including community-created dashboards\ [@docs_auspice; @auspice; @cdc_presentation; @docs_parts_of_whole].
+
+- **[Nextstrain CLI](https://docs.nextstrain.org/projects/cli/en/stable/)**: The Nextstrain CLI integrates Augur, Auspice, and deployment functionality, providing a unified interface to run pathogen workflows across computing environments (Docker, Conda, AWS Batch) and publish datasets to nextstrain.org or self-hosted pages\ [@docs_cli].
+
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+  <img id="myImage" src="https://docs.nextstrain.org/projects/cli/en/stable/_images/big-picture.svg" alt="Zoomable Image" title="Click to zoom in">
+  <figcaption class="caption">
+    Schematic of CLI-coordinated workflow integration\ [@docs_cli; @docs_parts_of_whole].
+  </figcaption>
+</div>
+
+```{=html}
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src="../../../Code/zoom.js"></script>
+```
+
+- **Nextclade** ([CLI](https://docs.nextstrain.org/projects/nextclade/en/stable/user/nextclade-cli/index.html) and [Webtool](https://clades.nextstrain.org/)): Analyzes virus genome sequences by aligning data to a reference genome, calling mutations, and placing sequences on a phylogeny. Reports clade assignments based on phylogenetic position (rather than mutational signatures) and sequence quality metrics\ [@nextclade; @docs_nextclade_cli; @docs_clade; @docs_faq].
 :::
 
 
 ## Gaining Access
 
-::: {.panel-tabset}
+### Getting Data
 
-### Research Data
+Nextstrain is committed to open science while respecting data privacy and ownership. Researchers can access publicly available sequencing data through dashboards that draw from public repositories, such as GenBank and GISAID where applicable\ [@hadfield2018]. The platform provides derived data, including phylogenetic trees, metadata, and dashboard screenshots that users can download and integrate with their own metadata files\ [@docs_download]. Additionally, researchers can view previous data releases or compare different releases. See [Viewing previous analyses](https://docs.nextstrain.org/en/latest/guides/snapshots.html#multiple-datasets-uploaded-on-the-same-day) for detailed guidance\ [@docs_previous_analyses].
 
-#### Do I Qualify?
+To access publicly available datasets, navigate to any Nextstrain dashboard and scroll to the bottom of the page to locate the download button, or press the "d" key to open the data download popup window. Available download options include:
 
-#### Typical Timeline
+::: {style="margin-left: 2rem"}
+- **Phylogenetic Trees:** Download newick trees with branch lengths (in terms of genetic divergence or time). Trees include all data and do not reflect current filtering.
 
-#### Step-by-Step Guide
+- **Metadata:** Per-strain metadata for all samples or current visualization. Includes traits and authorship. An “authors” metadata table is also available.
 
+- **Diversity (entropy) data:** Download data behind the entropy (diversity) panel. The data mirrors what is displayed and includes nucleotide positions and base change counts.
+
+- **SVG Screenshot:** Download a vector image for editing and display. Screenshots are licensed under CC-BY.
 :::
+
+
+### Sharing Data
+
+Nextstrain enables users to run analyses and share them through multiple methods. These include storing data on nextstrain.org, utilizing GitHub repositories, creating groups on Nextstrain, and using [public URLs](https://docs.nextstrain.org/projects/auspice/en/stable/server/overview.html)\ [@https://docs.nextstrain.org/projects/auspice/en/stable/server/overview.html]. See [Contributing to Nextstrain](https://docs.nextstrain.org/en/latest/guides/contribute/index.html) and [Share Analyses through Nextstrain](https://docs.nextstrain.org/en/latest/guides/share/index.html#) for detailed guidance\ [@discussion_thomas2020; @docs_contributing; @docs_share].
+
 
 ## Relevant Links
 
 ::: {style="margin-left: 2rem"}
-- [Documentation for SEER Data](https://seer.cancer.gov/data-software/documentation/): Find details about SEER databases, the NCCR databases, and variable definitions available in SEER*Stat, including record numbers, U.S. population coverage, geographic regions, and SEER variable dictionary\ [@data_docs].
+- [Download the data displayed through nextstrain.org](https://docs.nextstrain.org/en/latest/guides/share/download-data.html): Find what types of information are available for download. Note that availability may vary between sources\ [@docs_download].
+
+- [Share Analyses through Nextstrain](https://docs.nextstrain.org/en/latest/guides/share/index.html): Find information on how Nextstrain enables real-time, pre-publication sharing of results\ [@docs_share].
+
+- [Data](https://docs.nextstrain.org/en/latest/reference/data-files.html): Find documentation on how visualized data is stored and distributed\ [@docs_data_files].
+
+- [Viewing previous analyses](https://docs.nextstrain.org/en/latest/guides/snapshots.html): Find information about how analysis snapshots are generated, how to navigate historical versions, and how to compare key details available across different time releases of the dashboard data\ [@docs_previous_analyses].
+
+- [Nextstrain Documentation](https://docs.nextstrain.org/en/latest/index.html): Find information on using and interpreting Nextstrain, their bioinformatics tools and installation guides, and tutorials for genome sequence analysis and phylogenetic workflows\ [@docs_welcome].
+
+- [Nextstrain GitHub](https://github.com/nextstrain): Find all public codebases for the project, including data builds for visualization and modeling such as forecasting\ [@github].
+
+- [Nextstrain Discussions Forum](https://discussion.nextstrain.org/): Find Nextstrain's community forum where users can ask questions, discuss projects, and share ideas about the platform or research applications\ [@discussion].
+
+- [Rapid data analysis and sharing using Nextstrain](https://grubaughlab.com/nextstrain/): The [Grubaugh Lab](https://grubaughlab.com/) at Yale School of Public Health contributes genomic surveillance data to Nextstrain, a collaborative bioinformatics platform for tracking pathogen evolution and spread. Find their current dashboards visualizing surveillance data for SARS-CoV-2, Dengue, Powassan virus, among others\ [@grubaugh].
+
+- [Nextstrain: real-time tracking of pathogen evolution _Hadfiel et al. 2018_](https://academic.oup.com/bioinformatics/article/34/23/4121/5001388): Find the article introducing the Nextstrain resource, which highlights the scientific need being addressed, methods, and other important features\ [@hadfield2018].
 :::
 
 
@@ -61,7 +150,7 @@ The types of data products available include\ [@data_apps; @data_variables; @dat
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.1016/j.urology.2022.07.012"),
+  doi = c("10.1016/j.onehlt.2023.100664"),
   affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )

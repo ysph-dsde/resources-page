@@ -62,12 +62,12 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://www.healthattribution.org/
         group: https://www.carlsonlab.bio/
-        info: More-Info-Pages/Freely-Accessible/Health Attribution Library.qmd
+        #info: More-Info-Pages/Freely-Accessible/Health Attribution Library.qmd
       - title: Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)
         description: |
-          The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a centralized platform housing data on immunogenicity from clinical trials of pneumococcal vaccines. The data on WISSPAR are primarily curated from outcomes tables from clinicaltrials.gov and are made available in a searchable format that can be readily used for downstream analyses. Fields included in the database include product, manufacturers, dosing schedule, age group, and geographic region. You can use the embedded tools to generate customizable visualizations, export data for further analyses, or just browse through clinical trial results.
+          The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a searchable database launched in 2023 by Yale researchers to aggregate immunogenicity data from pneumococcal vaccine clinical trials. WISSPAR enables researchers and regulators to quickly access and visualize serotype-specific immune response data through search and filtering tools, supporting comparative efficacy research and evidence-based decision making for pneumococcal conjugate vaccine development.
         date-added: 2025-04-07
-        date-updated: 2025-04-07
+        date-updated: 2026-01-15
         ranking: "4"
         image: ../Images/Datasets/WISSPAR.png
         topic: "Clinical Study/Surveys"
@@ -75,24 +75,6 @@ items:
         group: https://medicine.yale.edu/lab/weinberger/
         article: https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/
         info: More-Info-Pages/Freely-Accessible/WISSPAR.qmd
-  - categories1:
-      - "Yale School of Public Health"
-    categories2:
-      - "Basic Research Assays"
-    categories3:
-      - "Open Access"
-    tiles:
-      - title: Nextstrain
-        description: |
-          Nextstrain is an open-source project to harness the scientific and public health potential of pathogen genome data. Here are a few of our ongoing ‘community’ Nextstrain projects. Note that most of these analyses are preliminary, so interpret with caution. We love to collaborate – contact us if you’d like to join one of these exciting projects!
-        date-added: 2025-03-17
-        date-updated: 2025-03-17
-        ranking: "4"
-        image: ../Images/Datasets/Nextstrain.png
-        topic: "Basic Research Assays"
-        site: https://grubaughlab.com/nextstrain/
-        group: https://www.carlsonlab.bio/
-        info: More-Info-Pages/Freely-Accessible/nextstrain.qmd
         
   # -----------
   # Region/Affiliation by: Yale School of Medicine
@@ -106,7 +88,7 @@ items:
     tiles:
       - title: Yale University Open Data Access (YODA)
         date-added: 2024-10-01
-        date-updated: 2025-01-14
+        date-updated: 2026-01-14
         ranking: "3"
         description: |
           The Yale University Open Data Access (YODA) Project at Yale's School of Medicine was founded in 2013 to facilitate responsible sharing of clinical trial data. As an independent academic organization, YODA approves external researchers' access to participant-level clinical trial data from Data Partners (manufacturers, academic researchers, and government funders). It currently lists over 500 available trials across mental health, cancer, autoimmune diseases, infectious diseases, metabolic disorders, and cardiovascular conditions. The project provides de-identified data that meets HIPAA and EU privacy standards and has enabled hundreds of publications working to advance patient health and scientific knowledge.
@@ -258,7 +240,7 @@ items:
       - "U.S. Government"
     categories2:
       - "Clinical Study/Surveys"
-      - "Basic Research Assays"
+      - "Experimental Assay Data"
     categories3:
       - "Open Access"
     tiles:
@@ -269,7 +251,7 @@ items:
         description: |
           Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
         image: ../Images/Datasets/Data Gov.png
-        topic: "Clinical Study/Surveys, Basic Research Assays"
+        topic: "Clinical Study/Surveys, Experimental Assay Data"
         site: https://data.gov/
       
   # -----------
@@ -341,3 +323,27 @@ items:
         group: https://medicine.yale.edu/ybic/
         info: More-Info-Pages/License-Required/MarketScan.qmd
         
+  # -----------
+  # Region/Affiliation by: Multiple
+  # Open Access & Restricted Access
+  - categories1:
+      - "Non-Governmental Organization"
+      - "International University"
+    categories2:
+      - "Experimental Assay Data"
+    categories3:
+      - "Open Access"
+    tiles:
+      - title: Nextstrain
+        description: |
+          Nextstrain offers real-time dashboards for tracking viral diseases such as influenza, Zika, and Ebola. The platform supports both community-developed and internally-maintained dashboards for a range of pathogens. Utilizing an open-source, reproducible bioinformatics pipeline, Nextstrain integrates data from repositories like the National Center for Biotechnology Information (NCBI) and the Global Initiative on Sharing All Influenza Data (GISAID) to assist researchers and policymakers in making informed epidemiological decisions. Its suite of tools, including Augur and Auspice, enables robust, reproducible phylogenetic analysis and visualization, facilitating the rapid and comprehensive dissemination of results.
+        date-added: 2025-03-17
+        date-updated: 2026-01-19
+        ranking: "4"
+        image: ../Images/Datasets/Nextstrain.png
+        topic: "Experimental Assay Data"
+        site: https://nextstrain.org/
+        github: https://github.com/nextstrain
+        article: https://academic.oup.com/bioinformatics/article/34/23/4121/5001388
+        info: More-Info-Pages/Freely-Accessible/nextstrain.qmd
+  

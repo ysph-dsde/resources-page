@@ -503,6 +503,11 @@ div.datatables {
   color: #555;
   text-align: left;
 }
+@media (min-width: 576px) {
+    .container-sm, .container {
+        max-width: 100% !important;
+    }
+}
 
 
 /* Custom table for summarizing contents of datasets by program */
