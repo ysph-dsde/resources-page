@@ -692,6 +692,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     - Three categories filter with sorting by title and date updated - May 10th, 2025
     - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
     - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
+    - Ranking filtering on default view - Nov. 5th, 2025
   </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
@@ -699,7 +700,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div>
     <div class="main-container">
       <div class="sidebar-wrapper">
+        <button class="sidebar-toggler">☰</button>
         <aside class="sidebar">
+
+          
+          
+            
+
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
               <option value="default" selected="">No sorting</option>
@@ -851,7 +858,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         <div class="container" id="tilesContainer">
           
           
-                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20and%20Health%20Surveys Environmental%2FGeospatial" data-categories3="Open%20Access" data-ranking="4" data-title="The Health Attribution Library" data-date="2025-01-20">
+                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20and%20Health%20Surveys Environmental%2FGeospatial" data-categories3="Open%20Access" data-info="yes" data-title="The Health Attribution Library" data-date="2025-01-20" data-ranking="4">
                   <img src="../Images/Datasets/The Health Attribution Library.png" class="image">
                   <h2 class="js-line-count">The Health Attribution Library</h2>
                   <p class="description">The Health Attribution Library is a curated collection of scientific publications that conduct rigorous end-to-end attribution studies linking human-caused climate change to specific health impacts. Created in 2023 through Wellcome Trust-funded research that found only 13 qualifying studies among nearly 4,000 reviewed papers, the library serves as an ongoing resource to support scientific research, journalism, litigation, and policy work requiring evidence-based attribution of health impacts to climate change.
@@ -883,7 +890,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20Trials Experimental%20Assay%20Data" data-categories3="Open%20Access" data-ranking="4" data-title="Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)" data-date="2026-01-15">
+                <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20Trials Experimental%20Assay%20Data" data-categories3="Open%20Access" data-info="yes" data-title="Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)" data-date="2026-01-15" data-ranking="4">
                   <img src="../Images/Datasets/WISSPAR.png" class="image">
                   <h2 class="js-line-count">Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)</h2>
                   <p class="description">The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a searchable database launched in 2023 by Yale researchers to aggregate immunogenicity data from pneumococcal vaccine clinical trials. WISSPAR enables researchers and regulators to quickly access and visualize serotype-specific immune response data through search and filtering tools, supporting comparative efficacy research and evidence-based decision making for pneumococcal conjugate vaccine development.
@@ -919,7 +926,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Clinical%20Trials Designed%20Observational%20Studies" data-categories3="Restricted%20Access" data-ranking="3" data-title="Yale University Open Data Access (YODA)" data-date="2026-01-14">
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Clinical%20Trials Designed%20Observational%20Studies" data-categories3="Restricted%20Access" data-info="yes" data-title="Yale University Open Data Access (YODA)" data-date="2026-01-14" data-ranking="3">
                   <img src="../Images/Datasets/YODA.png" class="image">
                   <h2 class="js-line-count">Yale University Open Data Access (YODA)</h2>
                   <p class="description">The Yale University Open Data Access (YODA) Project at Yale's School of Medicine was founded in 2013 to facilitate responsible sharing of clinical trial data. As an independent academic organization, YODA approves external researchers' access to participant-level clinical trial data from Data Partners (manufacturers, academic researchers, and government funders). It currently lists over 500 available trials across mental health, cancer, autoimmune diseases, infectious diseases, metabolic disorders, and cardiovascular conditions. The project provides de-identified data that meets HIPAA and EU privacy standards and has enabled hundreds of publications working to advance patient health and scientific knowledge.
@@ -951,7 +958,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Electronic%20Health%20Records" data-categories3="Restricted%20Access" data-ranking="3" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-12-03">
+                <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Electronic%20Health%20Records" data-categories3="Restricted%20Access" data-info="yes" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-12-03" data-ranking="3">
                   <img src="../Images/Datasets/YNHHS Epic.png" class="image">
                   <h2 class="js-line-count">Yale New Haven Health System (YNHHS) Epic</h2>
                   <p class="description">The Yale New Haven Hospital System (YNHHS) uses Epic's EMR system to digitize comprehensive patient data across its network, supporting various medical services. Annually, they manage around 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits. Epic Cosmos integrates these records into a single, HIPAA-compliant longitudinal patient record, enhancing privacy by eliminating duplicates and obscuring identifiable information.
@@ -983,7 +990,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-ranking="1" data-title="NCHS's Rapid Surveys System" data-date="2025-12-23">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's Rapid Surveys System" data-date="2025-12-23" data-ranking="1">
                   <img src="../Images/Datasets/NCHS Rapid Surveys.png" class="image">
                   <h2 class="js-line-count">NCHS's Rapid Surveys System</h2>
                   <p class="description">The Rapid Surveys System (RSS) is a time-sensitive data collection platform launched by the National Center for Health Statistics in 2022 to quickly gather actionable health data on emerging concerns. RSS leverages commercially available probability-based online panels, recruiting approximately 4,000 adults per round through AmeriSpeak and KnowledgePanel using address-based sampling methods. While prioritizing speed and flexibility over traditional survey precision, RSS provides nationally representative estimates to support real-time evidence-based public health decision making.
@@ -1011,7 +1018,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-ranking="1" data-title="National Center for Health Statistics (NCHS)" data-date="2025-10-23">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="National Center for Health Statistics (NCHS)" data-date="2025-10-23" data-ranking="1">
                   <img src="../Images/Datasets/NCHS.png" class="image">
                   <h2 class="js-line-count">National Center for Health Statistics (NCHS)</h2>
                   <p class="description">The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends.
@@ -1039,7 +1046,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-ranking="1" data-title="NCHS's National Vital Statistics System (NVSS)" data-date="2026-01-12">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Vital Statistics System (NVSS)" data-date="2026-01-12" data-ranking="1">
                   <img src="../Images/Datasets/NVSS.png" class="image">
                   <h2 class="js-line-count">NCHS's National Vital Statistics System (NVSS)</h2>
                   <p class="description">The National Vital Statistics System (NVSS) is managed by NCHS and has been collecting vital records data since 1946. The system gathers national data on births, deaths, fetal deaths, marriages, and divorces from 57 U.S. registration areas, then standardizes these vital statistics to support public health research and policy-making. NVSS also conducts specialized surveys and data linkage projects to address specific health concerns.
@@ -1067,7 +1074,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-ranking="2" data-title="NCHS's National Health Interview Survey (NHIS)" data-date="2025-12-18">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health Interview Survey (NHIS)" data-date="2025-12-18" data-ranking="2">
                   <img src="../Images/Datasets/NHIS.png" class="image">
                   <h2 class="js-line-count">NCHS's National Health Interview Survey (NHIS)</h2>
                   <p class="description">The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center.
@@ -1095,7 +1102,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
                 </div>
                 
               
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-ranking="2" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-10-09">
+                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-10-09" data-ranking="2">
                   <img src="../Images/Datasets/NHANES.png" class="image">
                   <h2 class="js-line-count">NCHS's National Health and Nutrition Examination Survey (NHANES)</h2>
                   <p class="description">The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health . Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
@@ -1126,7 +1133,7 @@ Researchers can access both publicly available and restricted data produced by N
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys Medical%20Claims" data-categories3="Open%20Access Restricted%20Access" data-ranking="2" data-title="NCHS's Data Linkage" data-date="2026-01-12">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys Medical%20Claims" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's Data Linkage" data-date="2026-01-12" data-ranking="2">
                   <img src="../Images/Datasets/NCHS Data Linkage.png" class="image">
                   <h2 class="js-line-count">NCHS's Data Linkage</h2>
                   <p class="description">Since the 1980s, the National Center for Health Statistics (NCHS) Data Linkage program has combined NCHS survey data with administrative sources from Medicare, Medicaid, National Death Index, and Social Security records, supporting over 1,000 peer-reviewed publications. The program maximizes resource efficiency by using state-of-the-art data science matching techniques to link existing data, avoiding costly re-collection efforts. While most program resources require restrictive-access permissions to ensure participant privacy, the program takes every opportunity to make publicly available versions, including through innovative synthetic data generation.
@@ -1154,7 +1161,7 @@ Researchers can access both publicly available and restricted data produced by N
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Demographic%20and%20Economic%20Surveys Registries" data-categories3="Open%20Access Restricted%20Access" data-ranking="2" data-title="Surveillance, Epidemiology, and End Results Program (SEER)" data-date="2025-10-21">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Demographic%20and%20Economic%20Surveys Registries" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="Surveillance, Epidemiology, and End Results Program (SEER)" data-date="2025-10-21" data-ranking="2">
                   <img src="../Images/Datasets/SEER.png" class="image">
                   <h2 class="js-line-count">Surveillance, Epidemiology, and End Results Program (SEER)</h2>
                   <p class="description">The Surveillance, Epidemiology, and End Results (SEER) Program provides information on cancer statistics in an effort to reduce the cancer burden among the U.S. population. SEER is supported by the Surveillance Research Program (SRP) in NCI's Division of Cancer Control and Population Sciences (DCCPS).
@@ -1182,7 +1189,7 @@ Researchers can access both publicly available and restricted data produced by N
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Medical%20Claims" data-categories3="Open%20Access Restricted%20Access" data-ranking="1" data-title="NCHS's The National Health Care Survey (NHCS)" data-date="2025-12-22">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Medical%20Claims" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's The National Health Care Survey (NHCS)" data-date="2025-12-22" data-ranking="1">
                   <img src="../Images/Datasets/NHCS.png" class="image">
                   <h2 class="js-line-count">NCHS's The National Health Care Survey (NHCS)</h2>
                   <p class="description">The National Hospital Care Surveys (NHCS) collect and disseminate data to provide comprehensive understanding of hospital healthcare services in the United States through five active surveys. The data across all programs include patient demographics, diagnoses, treatments, procedures, and outcomes from emergency departments, inpatient units, office-based providers, health centers, and residential care communities. Data are accessible through reports, freely accessible files, and restricted access files and can be used to inform health policy decisions, monitor care quality, examine healthcare disparities, and more.
@@ -1210,7 +1217,7 @@ Researchers can access both publicly available and restricted data produced by N
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Biobanks Clinical%20and%20Health%20Surveys Electronic%20Health%20Records Experimental%20Assay%20Data" data-categories3="Restricted%20Access" data-ranking="3" data-title="National Institutes of Health's (NIH) All of Us (AOU)" data-date="2025-10-29">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Biobanks Clinical%20and%20Health%20Surveys Electronic%20Health%20Records Experimental%20Assay%20Data" data-categories3="Restricted%20Access" data-info="yes" data-title="National Institutes of Health's (NIH) All of Us (AOU)" data-date="2025-10-29" data-ranking="3">
                   <img src="../Images/Datasets/NIH All of Us_4.8x3.6.png" class="image">
                   <h2 class="js-line-count">National Institutes of Health's (NIH) All of Us (AOU)</h2>
                   <p class="description">The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens. 
@@ -1241,7 +1248,7 @@ All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys Other" data-categories3="Open%20Access" data-ranking="1" data-title="data.gov" data-date="2025-01-20">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys Other" data-categories3="Open%20Access" data-info="yes" data-title="data.gov" data-date="2025-01-20" data-ranking="1">
                   <img src="../Images/Datasets/Data Gov.png" class="image">
                   <h2 class="js-line-count">data.gov</h2>
                   <p class="description">Data.gov is the U.S. federal government's official open data website, launched in 2009 to enhance government transparency and accountability by providing free public access to federal datasets. Operating under the OPEN Government Data Act of 2018, it mandates federal agencies to publish their data online in standardized, machine-readable formats. The platform, maintained by the General Services Administration (GSA), also collaborates with state, local, and international sources to create a comprehensive data catalog. Its open-source foundation enables adaptation by governments worldwide, with the source code available on the GSA's GitHub repository.
@@ -1255,9 +1262,9 @@ All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure
                        
                        
                        
-                        &nbsp;
-                        <a href="https://github.com/GSA/data.gov" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
+                       &nbsp;
+                     <a href="https://github.com/GSA/data.gov" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                       <i class="bi-github"></i></a> 
                        
                        
                        
@@ -1273,7 +1280,7 @@ All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="Non-Governmental%20Organization" data-categories2="Biobanks Clinical%20and%20Health%20Surveys Clinical%20Trials Electronic%20Health%20Records Experimental%20Assay%20Data" data-categories3="Restricted%20Access" data-ranking="3" data-title="UK Biobank" data-date="2025-11-05">
+                <div class="tile hidden" data-categories1="Non-Governmental%20Organization" data-categories2="Biobanks Clinical%20and%20Health%20Surveys Clinical%20Trials Electronic%20Health%20Records Experimental%20Assay%20Data" data-categories3="Restricted%20Access" data-info="yes" data-title="UK Biobank" data-date="2025-11-05" data-ranking="3">
                   <img src="../Images/Datasets/UK Biobank.png" class="image">
                   <h2 class="js-line-count">UK Biobank</h2>
                   <p class="description">The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
@@ -1287,9 +1294,9 @@ All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure
                        
                        
                        
-                        &nbsp;
-                        <a href="https://github.com/UK-Biobank" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
+                       &nbsp;
+                     <a href="https://github.com/UK-Biobank" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                       <i class="bi-github"></i></a> 
                        
                        
                        
@@ -1305,7 +1312,7 @@ All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="Private%20Company" data-categories2="Electronic%20Health%20Records" data-categories3="Restricted%20Access" data-ranking="3" data-title="Epic Cosmos" data-date="2025-12-12">
+                <div class="tile hidden" data-categories1="Private%20Company" data-categories2="Electronic%20Health%20Records" data-categories3="Restricted%20Access" data-info="yes" data-title="Epic Cosmos" data-date="2025-12-12" data-ranking="3">
                   <img src="../Images/Datasets/Epic Cosmos.png" class="image">
                   <h2 class="js-line-count">Epic Cosmos</h2>
                   <p class="description">Cosmos compiles Epic electronic medical record (EMR) data from nearly 2,000 participating hospitals globally, creating a comprehensive dataset with analytical tools like SlicerDicer and the Data Science Virtual Machine (DSVM) to advance medical research. This network encompasses half a million physicians caring for 300 million patients, generating billions of high-quality, longitudinal clinical data points. Cosmos integrates and de-identifies patient records to create unified longitudinal profiles while eliminating duplicates.
@@ -1337,7 +1344,7 @@ All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="Private%20Company" data-categories2="Demographic%20and%20Economic%20Surveys Electronic%20Health%20Records Medical%20Claims" data-categories3="License%20Required" data-ranking="2" data-title="Merative's MarketScan" data-date="2025-10-10">
+                <div class="tile hidden" data-categories1="Private%20Company" data-categories2="Demographic%20and%20Economic%20Surveys Electronic%20Health%20Records Medical%20Claims" data-categories3="License%20Required" data-info="yes" data-title="Merative's MarketScan" data-date="2025-10-10" data-ranking="2">
                   <img src="../Images/Datasets/MarketScan_Main.png" class="image">
                   <h2 class="js-line-count">Merative's MarketScan</h2>
                   <p class="description">Merative advances health and social care by providing innovative healthcare data and technology solutions, collaborating with thousands of providers and major organizations. Their MarketScan Research Databases offer longitudinal, patient-level data on healthcare costs and outcomes, supporting diverse research applications with data from over 273 million patients and more than 2,600 peer-reviewed publications. MarketScan's detailed and HIPAA-compliant data enhance research across disease areas, backed by powerful analytic tools.
@@ -1372,7 +1379,7 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
                 </div>
                 
               
-                <div class="tile hidden" data-categories1="Non-Governmental%20Organization International%20University" data-categories2="Experimental%20Assay%20Data" data-categories3="Open%20Access" data-ranking="4" data-title="Nextstrain" data-date="2026-01-19">
+                <div class="tile hidden" data-categories1="Non-Governmental%20Organization International%20University" data-categories2="Experimental%20Assay%20Data" data-categories3="Open%20Access" data-info="yes" data-title="Nextstrain" data-date="2026-01-19" data-ranking="4">
                   <img src="../Images/Datasets/Nextstrain.png" class="image">
                   <h2 class="js-line-count">Nextstrain</h2>
                   <p class="description">Nextstrain offers real-time dashboards for tracking viral diseases such as influenza, Zika, and Ebola. The platform supports both community-developed and internally-maintained dashboards for a range of pathogens. Utilizing an open-source, reproducible bioinformatics pipeline, Nextstrain integrates data from repositories like the National Center for Biotechnology Information (NCBI) and the Global Initiative on Sharing All Influenza Data (GISAID) to assist researchers and policymakers in making informed epidemiological decisions. Its suite of tools, including Augur and Auspice, enables robust, reproducible phylogenetic analysis and visualization, facilitating the rapid and comprehensive dissemination of results.
@@ -1386,9 +1393,9 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
                        
                        
                        
-                        &nbsp;
-                        <a href="https://github.com/nextstrain" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
+                       &nbsp;
+                     <a href="https://github.com/nextstrain" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                       <i class="bi-github"></i></a> 
                        
                        
                         &nbsp;
@@ -1457,10 +1464,12 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
       const categoryFilter3 = document.getElementById('categoryFilter3');
       const sortOptions = document.getElementById('sortOptions');
       const tilesContainer = document.getElementById('tilesContainer');
+      
       const showMoreBtn = document.getElementById('showMoreBtn');
       const initialLoadCount = 9; // 3 rows of 3 tiles each
       const loadMoreCount = 3; // 1 row of 3 tiles
-  
+      
+      const infoCheckbox = document.getElementById('info-yes');
       let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
       let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
   
@@ -1476,8 +1485,8 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
           const titleB = b.getAttribute('data-title').toLowerCase();
-          const rankingA = a.dataset.numericRanking || 0;
-          const rankingB = b.dataset.numericRanking || 0;
+          const rankingA = a.dataset.numericRanking;
+          const rankingB = b.dataset.numericRanking;
   
           if (rankingA !== rankingB) {
             return rankingA - rankingB;
@@ -1491,10 +1500,10 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
   
         filterTiles(); // Apply the current filter on new sorted order
       }
-  
+      
       // Initialize the display with the initial tiles shown
       sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove('hidden'));
-  
+      
       showMoreBtn.addEventListener('click', function() {
         let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
         hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
@@ -1511,6 +1520,7 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
         const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
         const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
         const selectedCategories3 = Array.from(categoryFilter3.querySelectorAll('input[name="category3"]:checked')).map(input => decodeURIComponent(input.value));
+        const selectedInfo = infoCheckbox && infoCheckbox.checked ? 'yes' : 'all';
   
         let visibleTileCount = 0;
   
@@ -1518,12 +1528,14 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
           const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
           const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
           const categories3 = (tile.getAttribute('data-categories3') || '').split(' ').map(cat => decodeURIComponent(cat));
+          const infoAvailable = tile.getAttribute('data-info');
   
           const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
           const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
           const matchesCategory3 = selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
+          const matchesInfo = selectedInfo === 'all' || infoAvailable === selectedInfo;
   
-          if (matchesCategory1 && matchesCategory2 && matchesCategory3) {
+          if (matchesCategory1 && matchesCategory2 && matchesCategory3 && matchesInfo) {
             tile.classList.add('filtered');
             if (visibleTileCount < initialLoadCount) {
               tile.classList.remove('hidden');
@@ -1551,14 +1563,21 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
   
       function sortTiles() {
         const sortValue = sortOptions.value;
+        // Convert ranks to numbers before sorting
+        sortedTiles.forEach(tile => {
+          const rankAttr = tile.getAttribute('data-ranking');
+          if (rankAttr) {
+            tile.dataset.numericRanking = parseInt(rankAttr, 10);
+          }
+        });
   
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
           const titleB = b.getAttribute('data-title').toLowerCase();
           const dateA = parseDate(a.getAttribute('data-date'));
           const dateB = parseDate(b.getAttribute('data-date'));
-          const rankingA = a.dataset.numericRanking || 0;
-          const rankingB = b.dataset.numericRanking || 0;
+          const rankingA = a.dataset.numericRanking;
+          const rankingB = b.dataset.numericRanking;
   
           if (sortValue === 'title-asc') {
             return titleA.localeCompare(titleB);
@@ -1568,17 +1587,15 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
             return dateA - dateB;
           } else if (sortValue === 'date-desc') {
             return dateB - dateA;
-          } else if (sortValue === 'default') {
+          } else {
+            // Default sorting: by ranking and then by title if same ranking
             if (rankingA !== rankingB) {
               return rankingA - rankingB;
             }
             return titleA.localeCompare(titleB);
           }
-  
-          return 0;
         });
   
-        // Move tiles in the container based on sorted order
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
@@ -1589,16 +1606,23 @@ At Yale, the MarketScan database is licensed for research use by the Yale Biomed
       categoryFilter1.addEventListener('change', filterTiles);
       categoryFilter2.addEventListener('change', filterTiles);
       categoryFilter3.addEventListener('change', filterTiles);
-      sortOptions.addEventListener('change', sortTiles);
-  
-      filterTiles(); // Apply filters initially after DOM is ready
+      if (infoCheckbox) {
+        infoCheckbox.addEventListener('change', filterTiles);
+      }
+      sortOptions.addEventListener('change', function() {
+        if (sortOptions.value === "default") {
+          sortByDefault();
+        } else {
+          sortTiles();
+        }
+      });
   
       // Initial sort by default (ranking then title)
       sortByDefault();
     });
     
     
-    / Media view with folded sidebar
+    // Media view with folded sidebar
     document.addEventListener('DOMContentLoaded', () => {
       const sidebarToggler = document.querySelector('.sidebar-toggler');
       const sidebarWrapper = document.querySelector('.sidebar-wrapper');
