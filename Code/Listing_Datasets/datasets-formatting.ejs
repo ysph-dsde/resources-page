@@ -6,6 +6,7 @@
     - Three categories filter with sorting by title and date updated - May 10th, 2025
     - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
     - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
+    - Ranking filtering on default view - Nov. 5th, 2025
   </title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
@@ -13,7 +14,23 @@
   <div>
     <div class="main-container">
       <div class="sidebar-wrapper">
+        <button class="sidebar-toggler">☰</button>
         <aside class="sidebar">
+
+          <% let hasInfo = false; %>
+          <% if (items && items[0].items && items[0].items.length > 0) { %>
+            <% items[0].items.forEach(function(item) { 
+              if (item.tiles) { 
+                item.tiles.forEach(function(tile) { 
+                  if (tile.info) { 
+                    hasInfo = true;
+                  }
+                });
+              } 
+            }); 
+          } 
+          %>
+
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
               <option value="default" selected>No sorting</option>
@@ -95,13 +112,14 @@
           <% items[0].items.forEach(function(item) { 
             if (item.tiles && item.tiles.length > 0) { 
               item.tiles.forEach(function(tile) { %>
-                <div class="tile <%= (visibleTileCount < 9) ? '' : 'hidden' %>"
-                     data-categories1="<%= item.categories1 ? item.categories1.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
+                <div class="tile <%= (visibleTileCount < 9) ? '' : 'hidden' %>" 
+                     data-categories1="<%= item.categories1 ? item.categories1.map(cat => encodeURIComponent(cat)).join(' ') : '' %>" 
                      data-categories2="<%= item.categories2 ? item.categories2.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
                      data-categories3="<%= item.categories3 ? item.categories3.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
-                     data-ranking="<%= tile.ranking %>"
+                     data-info="<%= tile.info ? 'yes' : 'no' %>"
                      data-title="<%= tile.title %>"
-                     data-date="<%= tile['date-updated'] %>">
+                     data-date="<%= tile['date-updated'] %>"
+                     data-ranking="<%= tile.ranking %>">
                   <img src="<%= tile.image %>" class="image">
                   <h2 class="js-line-count"><%= tile.title %></h2>
                   <p class="description"><%= tile.description %></p>
@@ -118,9 +136,9 @@
                           <i class="bi-people-fill"></i></a> 
                       <% } %> 
                       <% if (tile.github) { %> 
-                        &nbsp;
-                        <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
+                       &nbsp;
+                     <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                       <i class="bi-github"></i></a> 
                       <% } %> 
                       <% if (tile.article) { %> 
                         &nbsp;
@@ -195,10 +213,12 @@
       const categoryFilter3 = document.getElementById('categoryFilter3');
       const sortOptions = document.getElementById('sortOptions');
       const tilesContainer = document.getElementById('tilesContainer');
+      
       const showMoreBtn = document.getElementById('showMoreBtn');
       const initialLoadCount = 9; // 3 rows of 3 tiles each
       const loadMoreCount = 3; // 1 row of 3 tiles
-  
+      
+      const infoCheckbox = document.getElementById('info-yes');
       let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
       let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
   
@@ -214,8 +234,8 @@
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
           const titleB = b.getAttribute('data-title').toLowerCase();
-          const rankingA = a.dataset.numericRanking || 0;
-          const rankingB = b.dataset.numericRanking || 0;
+          const rankingA = a.dataset.numericRanking;
+          const rankingB = b.dataset.numericRanking;
   
           if (rankingA !== rankingB) {
             return rankingA - rankingB;
@@ -229,10 +249,10 @@
   
         filterTiles(); // Apply the current filter on new sorted order
       }
-  
+      
       // Initialize the display with the initial tiles shown
       sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove('hidden'));
-  
+      
       showMoreBtn.addEventListener('click', function() {
         let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
         hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
@@ -249,6 +269,7 @@
         const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
         const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
         const selectedCategories3 = Array.from(categoryFilter3.querySelectorAll('input[name="category3"]:checked')).map(input => decodeURIComponent(input.value));
+        const selectedInfo = infoCheckbox && infoCheckbox.checked ? 'yes' : 'all';
   
         let visibleTileCount = 0;
   
@@ -256,12 +277,14 @@
           const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
           const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
           const categories3 = (tile.getAttribute('data-categories3') || '').split(' ').map(cat => decodeURIComponent(cat));
+          const infoAvailable = tile.getAttribute('data-info');
   
           const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
           const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
           const matchesCategory3 = selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
+          const matchesInfo = selectedInfo === 'all' || infoAvailable === selectedInfo;
   
-          if (matchesCategory1 && matchesCategory2 && matchesCategory3) {
+          if (matchesCategory1 && matchesCategory2 && matchesCategory3 && matchesInfo) {
             tile.classList.add('filtered');
             if (visibleTileCount < initialLoadCount) {
               tile.classList.remove('hidden');
@@ -289,14 +312,21 @@
   
       function sortTiles() {
         const sortValue = sortOptions.value;
+        // Convert ranks to numbers before sorting
+        sortedTiles.forEach(tile => {
+          const rankAttr = tile.getAttribute('data-ranking');
+          if (rankAttr) {
+            tile.dataset.numericRanking = parseInt(rankAttr, 10);
+          }
+        });
   
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
           const titleB = b.getAttribute('data-title').toLowerCase();
           const dateA = parseDate(a.getAttribute('data-date'));
           const dateB = parseDate(b.getAttribute('data-date'));
-          const rankingA = a.dataset.numericRanking || 0;
-          const rankingB = b.dataset.numericRanking || 0;
+          const rankingA = a.dataset.numericRanking;
+          const rankingB = b.dataset.numericRanking;
   
           if (sortValue === 'title-asc') {
             return titleA.localeCompare(titleB);
@@ -306,17 +336,15 @@
             return dateA - dateB;
           } else if (sortValue === 'date-desc') {
             return dateB - dateA;
-          } else if (sortValue === 'default') {
+          } else {
+            // Default sorting: by ranking and then by title if same ranking
             if (rankingA !== rankingB) {
               return rankingA - rankingB;
             }
             return titleA.localeCompare(titleB);
           }
-  
-          return 0;
         });
   
-        // Move tiles in the container based on sorted order
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
@@ -327,16 +355,23 @@
       categoryFilter1.addEventListener('change', filterTiles);
       categoryFilter2.addEventListener('change', filterTiles);
       categoryFilter3.addEventListener('change', filterTiles);
-      sortOptions.addEventListener('change', sortTiles);
-  
-      filterTiles(); // Apply filters initially after DOM is ready
+      if (infoCheckbox) {
+        infoCheckbox.addEventListener('change', filterTiles);
+      }
+      sortOptions.addEventListener('change', function() {
+        if (sortOptions.value === "default") {
+          sortByDefault();
+        } else {
+          sortTiles();
+        }
+      });
   
       // Initial sort by default (ranking then title)
       sortByDefault();
     });
     
     
-    / Media view with folded sidebar
+    // Media view with folded sidebar
     document.addEventListener('DOMContentLoaded', () => {
       const sidebarToggler = document.querySelector('.sidebar-toggler');
       const sidebarWrapper = document.querySelector('.sidebar-wrapper');
