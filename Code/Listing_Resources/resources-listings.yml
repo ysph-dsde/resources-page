@@ -9,7 +9,7 @@
 # Author: Shelby Golden, M.S.
 #   Date: May 10th, 2025
 # 
-# Date last updated: Sep. 10th, 2025
+# Date last updated: Jan. 20th, 2026
 #   Last updated by: Shelby Golden
 # 
 # 
@@ -85,33 +85,8 @@ items:
   - categories1:
       - "Yale School of Medicine"
     categories2:
-      - "Analytical Tools"
-      - "Consulting/Services"
       - "Datasets"
     tiles:
-      - title: Yale Biomedical Informatics & Computing (YBIC)
-        description: |
-          Yale Biomedical Informatics & Computing (YBIC) is a resource hub for researchers across Yale School of Medicine and Yale New Haven Health System. We offer a single point of entry for principal investigators to access diverse biomedical data sets, use advanced software and tools, and effectively integrate data science, informatics and computing into their research practices.As the Office of the Deputy Dean for Biomedical Informatics, we help researchers navigate the resources, services, and trainings that are available across Yale School of Medicine and YNHHS. YBIC houses expertise and infrastructure for AI Computing (CPU) and GPU. We support data storage and data sharing efforts across the university and health system.
-        date-added: 2024-10-01
-        date-updated: 2024-10-01
-        ranking: "2"
-        image: ../Images/DSDE Identity/AdobeStock_802446835.jpeg
-        topic: "Datasets, Consulting/Services, Analytical Tools"
-        site: https://medicine.yale.edu/ybic/
-  - categories1:
-      - "Yale School of Medicine"
-    categories2:
-      - "Datasets"
-    tiles:
-      - title: Harvey Cushing/John Hay Whitney Medical Library Research Data
-        description: |
-          The Harvey Cushing/John Hay Whitney Medical Library provides access to an extensive array of information resources and tools, offers research assistance and expertise, and delivers meaningful services to users, to support innovation and excellence in biomedical research, patient care, and the development of scholars and future leaders in healthcare.
-        date-added: 2024-10-01
-        date-updated: 2024-10-01
-        ranking: "1"
-        image: ../Images/DSDE Identity/Firefly ai datahub 91076.jpg
-        topic: "Datasets"
-        site: https://library.medicine.yale.edu/research-data/find-datasets
       - title: Polymer Screen
         description: |
           Combining polymer chemistry with quantitative proteomics, we have developed a quantitative guide for spatially-resolved extraction for more than 2100 MPs into native-nanodiscs. Searching for your protein(s) of interest will yield the preferred condition for optimal native extraction for that protein of interest serving as a starting point for structural and biochemical studies.
@@ -126,7 +101,7 @@ items:
   - categories1:
       - "Yale School of Medicine"
     categories2:
-      - "Consulting/Services"
+      - "Analytical Tools"
     tiles:
       - title: Yale Magnetic Resonance Research Center (MRRC) Analytical Tools
         description: |
@@ -141,6 +116,47 @@ items:
         topic: "Analytical Tools"
         github: https://github.com/YaleMRRC
         group: https://medicine.yale.edu/mrrc/
+  - categories1:
+      - "Yale School of Medicine"
+    categories2:
+      - "Consulting/Services"
+      - "Datasets"
+      - "Educational Materials"
+    tiles:
+      - title: Harvey Cushing/John Hay Whitney Medical Library Research Data
+        description: |
+          The Harvey Cushing/John Hay Whitney Medical Library provides access to an extensive array of information resources and tools, offers research assistance and expertise, and delivers meaningful services to users, to support innovation and excellence in biomedical research, patient care, and the development of scholars and future leaders in healthcare.
+        date-added: 2024-10-01
+        date-updated: 2024-01-21
+        ranking: "1"
+        image: ../Images/DSDE Identity/Firefly ai datahub 91076.jpg
+        topic: "Consulting/Services, Datasets, Educational Materials"
+        site: https://library.medicine.yale.edu/research-data/find-datasets
+        group: https://library.medicine.yale.edu/
+        github: https://github.com/CWML
+  - categories1:
+      - "Yale School of Medicine"
+    categories2:
+      - "Analytical Tools"
+      - "Consulting/Services"
+      - "Datasets"
+      - "Educational Materials"
+    tiles:
+      - title: Yale Biomedical Informatics & Computing (YBIC)
+        description: |
+          Yale Biomedical Informatics & Computing (YBIC) is a resource hub for researchers across Yale School of Medicine and Yale New Haven Health System. We offer a single point of entry for principal investigators to access diverse biomedical data sets, use advanced software and tools, and effectively integrate data science, informatics and computing into their research practices.As the Office of the Deputy Dean for Biomedical Informatics, we help researchers navigate the resources, services, and trainings that are available across Yale School of Medicine and YNHHS. YBIC houses expertise and infrastructure for AI Computing (CPU) and GPU. We support data storage and data sharing efforts across the university and health system.
+        date-added: 2024-10-01
+        date-updated: 2024-10-01
+        ranking: "2"
+        image: ../Images/DSDE Identity/AdobeStock_802446835.jpeg
+        topic: "Analytical Tools, Consulting/Services, Datasets, Educational Materials"
+        site: https://medicine.yale.edu/ybic/
+  - categories1:
+      - "Yale School of Medicine"
+    categories2:
+      - "Consulting/Services"
+      - "Educational Materials"
+    tiles:
       - title: The Yale Center for Clinical Investigation (YCCI)
         description: |
           Clinical and translational research in today’s complex landscape requires a team-based effort that involves partnerships between investigators in different disciplines and from different institutions, as well as with the National Institutes of Health, industry, and the community.
@@ -148,7 +164,8 @@ items:
         date-updated: 2025-04-08
         ranking: "1"
         image: ../Images/DSDE Identity/Firefly data scientists; illustration 97073.jpg
-        topic: "Consulting/Services"
+        topic: "Consulting/Services, Educational Materials"
+        site: https://medicine.yale.edu/center-clinical-investigation/
         
   # -----------
   # Region/Affiliation by: Yale University
@@ -175,6 +192,7 @@ items:
         image: ../Images/DSDE Identity/Firefly ai datahub 91076.jpg
         topic: "Datasets"
         site: https://web.library.yale.edu/quicksearch/tips/find-data-sets
+        github: https://github.com/yalelibrary
       - title: Wharton Research Data Services (WRDS)
         description: |
           Wharton Research Data Services, often referred to as WRDS, is a research platform that provides access to a variety of different datasets across multiple disciplines. While access to the WRDS platform is made available by the Yale School of Management, all Yale University faculty, students, and researchers are eligible for access and may use the currently available data. Access to WRDS requires users to have an individual account.
@@ -182,7 +200,7 @@ items:
         date-updated: 2023-03-20
         ranking: "1"
         image: ../Images/DSDE Identity/Firefly data science data equity 50124.jpg
-        topic: "Datasets"
+        topic: "Demographic and Economic Surveys"
         site: https://guides.library.yale.edu/WRDS
   - categories1:
       - "Yale University"
@@ -202,17 +220,9 @@ items:
       - "Yale University"
     categories2:
       - "Analytical Tools"
+      - "Educational Materials"
       - "Consulting/Services"
     tiles:
-      - title: Data-Intensive Social Science Center (DISSC) at Yale
-        date-added: 2025-03-20
-        date-updated: 2025-03-20
-        ranking: "2"
-        description: |
-          A university-wide hub to support data-intensive social science research at the frontiers of each discipline.
-        image: ../Images/DSDE Identity/AdobeStock_802446835.jpeg
-        topic: "Consulting/Services, Analytical Tools"
-        site: https://dissc.yale.edu/
       - title: Yale Center for Research Computing (YCRC)
         date-added: 2025-03-20
         date-updated: 2025-03-20
@@ -220,6 +230,16 @@ items:
         description: |
           The Yale Center for Research Computing (YCRC) is a computational core facility under the Office of the Provost created to support the advanced computing needs of the research community. The YCRC is staffed by a team of research scientists, application specialists, and systems administrators with expertise in supporting high performance computing (HPC) and computationally dependent disciplines.
         image: ../Images/DSDE Identity/AdobeStock_323829966 cropped.jpeg
-        topic: "Consulting/Services, Analytical Tools"
+        topic: "Analytical Tools, Educational Materials, Consulting/Services"
         site: https://research.computing.yale.edu/
+        github: https://github.com/ycrc
+      - title: Data-Intensive Social Science Center (DISSC) at Yale
+        date-added: 2025-03-20
+        date-updated: 2025-03-20
+        ranking: "2"
+        description: |
+          A university-wide hub to support data-intensive social science research at the frontiers of each discipline.
+        image: ../Images/DSDE Identity/AdobeStock_802446835.jpeg
+        topic: "Analytical Tools, Educational Materials, Consulting/Services"
+        site: https://dissc.yale.edu/
         

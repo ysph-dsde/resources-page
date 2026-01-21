@@ -7,7 +7,7 @@ format:
     includes:
       before-body: ../Code/sidebar.html 
 listing:
-  - template: ../Code/Listing_Datasets/datasets-infoFilter-formatting.ejs
+  - template: ../Code/Listing_Datasets/datasets-formatting.ejs
     contents: ../Code/Listing_Datasets/data-listings.yml
     categories: false
     sort-ui: false

@@ -154,8 +154,12 @@ build_search_query(
   affiliation = "Yale School of Public Health", years = 6)
 
 build_search_query(
-  keywords = c("Centers for Medicare & Medicaid Services Statistics", "CMS Statistics"), 
+  keywords = c("Social Vulnerability Index"), 
   affiliation = "Yale", years = 6)
+
+build_search_query(
+  keywords = c("FluSurv-NET"), 
+  affiliation = "Yale", years = 10)
 
 
 

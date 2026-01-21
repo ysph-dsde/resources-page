@@ -6,7 +6,7 @@
 # Author: Shelby Golden, M.S.
 #   Date: May 10th, 2025
 # 
-# Date last updated: Sep. 10th, 2025
+# Date last updated: Jan. 20th, 2026
 #   Last updated by: Shelby Golden
 # 
 # 
@@ -48,7 +48,8 @@ items:
   - categories1:
       - "Yale School of Public Health"
     categories2:
-      - "Clinical Study/Surveys"
+      - "Clinical and Health Surveys"
+      - "Environmental/Geospatial"
     categories3:
       - "Open Access"
     tiles:
@@ -59,10 +60,18 @@ items:
         date-updated: 2025-01-20
         ranking: "4"
         image: ../Images/Datasets/The Health Attribution Library.png
-        topic: "Clinical Study/Surveys"
+        topic: "Clinical and Health Surveys, Environmental/Geospatial"
         site: https://www.healthattribution.org/
         group: https://www.carlsonlab.bio/
         info: More-Info-Pages/Freely-Accessible/Health Attribution Library.qmd
+  - categories1:
+      - "Yale School of Public Health"
+    categories2:
+      - "Clinical Trials"
+      - "Experimental Assay Data"
+    categories3:
+      - "Open Access"
+    tiles:
       - title: Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)
         description: |
           The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a searchable database launched in 2023 by Yale researchers to aggregate immunogenicity data from pneumococcal vaccine clinical trials. WISSPAR enables researchers and regulators to quickly access and visualize serotype-specific immune response data through search and filtering tools, supporting comparative efficacy research and evidence-based decision making for pneumococcal conjugate vaccine development.
@@ -70,7 +79,7 @@ items:
         date-updated: 2026-01-15
         ranking: "4"
         image: ../Images/Datasets/WISSPAR.png
-        topic: "Clinical Study/Surveys"
+        topic: "Clinical Trials, Experimental Assay Data"
         site: https://wisspar.com/
         group: https://medicine.yale.edu/lab/weinberger/
         article: https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/
@@ -82,7 +91,8 @@ items:
   - categories1:
       - "Yale School of Medicine"
     categories2:
-      - "Clinical Study/Surveys"
+      - "Clinical Trials"
+      - "Designed Observational Studies"
     categories3:
       - "Restricted Access"
     tiles:
@@ -97,6 +107,13 @@ items:
         site: https://yoda.yale.edu/
         group: https://medicine.yale.edu/core/
         info: More-Info-Pages/Restricted-Access/YODA.qmd
+  - categories1:
+      - "Yale School of Medicine"
+    categories2:
+      - "Electronic Health Records"
+    categories3:
+      - "Restricted Access"
+    tiles:
       - title: Yale New Haven Health System (YNHHS) Epic
         date-added: 2025-03-20
         date-updated: 2025-12-03
@@ -104,7 +121,7 @@ items:
         description: |
           The Yale New Haven Hospital System (YNHHS) uses Epic's EMR system to digitize comprehensive patient data across its network, supporting various medical services. Annually, they manage around 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits. Epic Cosmos integrates these records into a single, HIPAA-compliant longitudinal patient record, enhancing privacy by eliminating duplicates and obscuring identifiable information.
         image: ../Images/Datasets/YNHHS Epic.png
-        topic: "Clinical Study/Surveys"
+        topic: "Electronic Health Records"
         site: https://medicine.yale.edu/ybic/ynhhs-research-access/
         group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
         info: More-Info-Pages/Restricted-Access/YNHHS-Epic.qmd
@@ -124,6 +141,24 @@ items:
   - categories1:
       - "U.S. Government"
     categories2:
+      - "Clinical and Health Surveys"
+    categories3:
+      - "Open Access"
+      - "Restricted Access"
+    tiles:
+      - title: NCHS's Rapid Surveys System
+        date-added: 2025-04-08
+        date-updated: 2025-12-23
+        ranking: "1"
+        description: |
+          The Rapid Surveys System (RSS) is a time-sensitive data collection platform launched by the National Center for Health Statistics in 2022 to quickly gather actionable health data on emerging concerns. RSS leverages commercially available probability-based online panels, recruiting approximately 4,000 adults per round through AmeriSpeak and KnowledgePanel using address-based sampling methods. While prioritizing speed and flexibility over traditional survey precision, RSS provides nationally representative estimates to support real-time evidence-based public health decision making.
+        image: ../Images/Datasets/NCHS Rapid Surveys.png
+        topic: "Clinical and Health Surveys"
+        site: https://www.cdc.gov/nchs/rapid-surveys/about/index.html
+        info: More-Info-Pages/Freely-Accessible/NCHS Rapid Survey.qmd
+  - categories1:
+      - "U.S. Government"
+    categories2:
       - "Clinical Study/Surveys"
     categories3:
       - "Open Access"
@@ -139,49 +174,6 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/index.html
         info: More-Info-Pages/Freely-Accessible/NCHS.qmd
-      - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
-        date-added: 2025-03-20
-        date-updated: 2025-10-09
-        ranking: "2"
-        description: |
-         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health . Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
-         </br>
-         </br>
-         Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
-        image: ../Images/Datasets/NHANES.png
-        topic: "Clinical Study/Surveys"
-        site: https://www.cdc.gov/nchs/nhanes/
-        info: More-Info-Pages/Freely-Accessible/NCHS NHANES.qmd
-      - title: NCHS's National Health Interview Survey (NHIS)
-        date-added: 2025-03-20
-        date-updated: 2025-12-18
-        ranking: "2"
-        description: |
-          The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center.
-        image: ../Images/Datasets/NHIS.png
-        topic: "Clinical Study/Surveys"
-        site: https://www.cdc.gov/nchs/nhis/index.html
-        info: More-Info-Pages/Freely-Accessible/NCHS NHIS.qmd
-      - title: NCHS's The National Health Care Survey (NHCS)
-        date-added: 2025-04-08
-        date-updated: 2025-12-22
-        ranking: "1"
-        description: |
-          The National Hospital Care Surveys (NHCS) collect and disseminate data to provide comprehensive understanding of hospital healthcare services in the United States through five active surveys. The data across all programs include patient demographics, diagnoses, treatments, procedures, and outcomes from emergency departments, inpatient units, office-based providers, health centers, and residential care communities. Data are accessible through reports, freely accessible files, and restricted access files and can be used to inform health policy decisions, monitor care quality, examine healthcare disparities, and more.
-        image: ../Images/Datasets/NHCS.png
-        topic: "Clinical Study/Surveys"
-        site: https://www.cdc.gov/nchs/healthcare-surveys/about/index.html
-        info: More-Info-Pages/Freely-Accessible/NCHS NHCS All.qmd
-      - title: NCHS's Rapid Surveys System
-        date-added: 2025-04-08
-        date-updated: 2025-12-23
-        ranking: "1"
-        description: |
-          The Rapid Surveys System (RSS) is a time-sensitive data collection platform launched by the National Center for Health Statistics in 2022 to quickly gather actionable health data on emerging concerns. RSS leverages commercially available probability-based online panels, recruiting approximately 4,000 adults per round through AmeriSpeak and KnowledgePanel using address-based sampling methods. While prioritizing speed and flexibility over traditional survey precision, RSS provides nationally representative estimates to support real-time evidence-based public health decision making.
-        image: ../Images/Datasets/NCHS Rapid Surveys.png
-        topic: "Clinical Study/Surveys"
-        site: https://www.cdc.gov/nchs/rapid-surveys/about/index.html
-        info: More-Info-Pages/Freely-Accessible/NCHS Rapid Survey.qmd
       - title: NCHS's National Vital Statistics System (NVSS)
         date-added: 2025-04-08
         date-updated: 2026-01-12
@@ -192,6 +184,48 @@ items:
         topic: "Clinical Study/Surveys"
         site: https://www.cdc.gov/nchs/nvss/index.htm
         info: More-Info-Pages/Freely-Accessible/NCHS NVSS.qmd
+  - categories1:
+      - "U.S. Government"
+    categories2:
+      - "Clinical and Health Surveys"
+      - "Demographic and Economic Surveys"
+    categories3:
+      - "Open Access"
+      - "Restricted Access"
+    tiles:
+      - title: NCHS's National Health Interview Survey (NHIS)
+        date-added: 2025-03-20
+        date-updated: 2025-12-18
+        ranking: "2"
+        description: |
+          The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center.
+        image: ../Images/Datasets/NHIS.png
+        topic: "Clinical and Health Surveys, Demographic and Economic Surveys"
+        site: https://www.cdc.gov/nchs/nhis/index.html
+        info: More-Info-Pages/Freely-Accessible/NCHS NHIS.qmd
+      - title: NCHS's National Health and Nutrition Examination Survey (NHANES)
+        date-added: 2025-03-20
+        date-updated: 2025-10-09
+        ranking: "2"
+        description: |
+         The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health . Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
+         </br>
+         </br>
+         Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
+        image: ../Images/Datasets/NHANES.png
+        topic: "Clinical and Health Surveys, Demographic and Economic Surveys"
+        site: https://www.cdc.gov/nchs/nhanes/
+        info: More-Info-Pages/Freely-Accessible/NCHS NHANES.qmd
+  - categories1:
+      - "U.S. Government"
+    categories2:
+      - "Clinical and Health Surveys"
+      - "Demographic and Economic Surveys"
+      - "Medical Claims"
+    categories3:
+      - "Open Access"
+      - "Restricted Access"
+    tiles:
       - title: NCHS's Data Linkage
         date-added: 2025-04-08
         date-updated: 2026-01-12
@@ -199,9 +233,18 @@ items:
         description: |
           Since the 1980s, the National Center for Health Statistics (NCHS) Data Linkage program has combined NCHS survey data with administrative sources from Medicare, Medicaid, National Death Index, and Social Security records, supporting over 1,000 peer-reviewed publications. The program maximizes resource efficiency by using state-of-the-art data science matching techniques to link existing data, avoiding costly re-collection efforts. While most program resources require restrictive-access permissions to ensure participant privacy, the program takes every opportunity to make publicly available versions, including through innovative synthetic data generation.
         image: ../Images/Datasets/NCHS Data Linkage.png
-        topic: "Clinical Study/Surveys"
+        topic: "Clinical and Health Surveys, Demographic and Economic Surveys, Medical Claims"
         site: https://www.cdc.gov/nchs/data-linkage/index.htm
         info: More-Info-Pages/Freely-Accessible/NCHS Data Linkage.qmd
+  - categories1:
+      - "U.S. Government"
+    categories2:
+      - "Demographic and Economic Surveys"
+      - "Registries"
+    categories3:
+      - "Open Access"
+      - "Restricted Access"
+    tiles:
       - title: Surveillance, Epidemiology, and End Results Program (SEER)
         date-added: 2025-03-20
         date-updated: 2025-10-21
@@ -209,15 +252,38 @@ items:
         description: |
           The Surveillance, Epidemiology, and End Results (SEER) Program provides information on cancer statistics in an effort to reduce the cancer burden among the U.S. population. SEER is supported by the Surveillance Research Program (SRP) in NCI's Division of Cancer Control and Population Sciences (DCCPS).
         image: ../Images/Datasets/SEER.png
-        topic: "Clinical Study/Surveys"
+        topic: "Demographic and Economic Surveys, Registries"
         site: https://seer.cancer.gov/
         info: More-Info-Pages/Freely-Accessible/SEER.qmd
+  - categories1:
+      - "U.S. Government"
+    categories2:
+      - "Clinical and Health Surveys"
+      - "Medical Claims"
+    categories3:
+      - "Open Access"
+      - "Restricted Access"
+    tiles:
+      - title: NCHS's The National Health Care Survey (NHCS)
+        date-added: 2025-04-08
+        date-updated: 2025-12-22
+        ranking: "1"
+        description: |
+          The National Hospital Care Surveys (NHCS) collect and disseminate data to provide comprehensive understanding of hospital healthcare services in the United States through five active surveys. The data across all programs include patient demographics, diagnoses, treatments, procedures, and outcomes from emergency departments, inpatient units, office-based providers, health centers, and residential care communities. Data are accessible through reports, freely accessible files, and restricted access files and can be used to inform health policy decisions, monitor care quality, examine healthcare disparities, and more.
+        image: ../Images/Datasets/NHCS.png
+        topic: "Clinical and Health Surveys, Medical Claims"
+        site: https://www.cdc.gov/nchs/healthcare-surveys/about/index.html
+        info: More-Info-Pages/Freely-Accessible/NCHS NHCS All.qmd
+        
 
   # Restricted Access
   - categories1:
       - "U.S. Government"
     categories2:
-      - "Clinical Study/Surveys"
+      - "Biobanks"
+      - "Clinical and Health Surveys"
+      - "Electronic Health Records"
+      - "Experimental Assay Data"
     categories3:
       - "Restricted Access"
     tiles:
@@ -231,16 +297,19 @@ items:
           </br>
           All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies.
         image: ../Images/Datasets/NIH All of Us_4.8x3.6.png
-        topic: "Clinical Study/Surveys"
+        topic: "Biobanks, Clinical and Health Surveys, Electronic Health Records, Experimental Assay Data"
         site: https://allofus.nih.gov/
         info: More-Info-Pages/Restricted-Access/NIH_All-of-Us.qmd
-        
+  
+  
+  ###########      
   # Open Access
   - categories1:
       - "U.S. Government"
     categories2:
-      - "Clinical Study/Surveys"
-      - "Experimental Assay Data"
+      - "Clinical and Health Surveys"
+      - "Demographic and Economic Surveys"
+      - "Other"
     categories3:
       - "Open Access"
     tiles:
@@ -251,7 +320,7 @@ items:
         description: |
           Data.gov is the U.S. federal government's official open data website, launched in 2009 to enhance government transparency and accountability by providing free public access to federal datasets. Operating under the OPEN Government Data Act of 2018, it mandates federal agencies to publish their data online in standardized, machine-readable formats. The platform, maintained by the General Services Administration (GSA), also collaborates with state, local, and international sources to create a comprehensive data catalog. Its open-source foundation enables adaptation by governments worldwide, with the source code available on the GSA's GitHub repository.
         image: ../Images/Datasets/Data Gov.png
-        topic: "Clinical Study/Surveys, Experimental Assay Data"
+        topic: "Clinical and Health Surveys, Demographic and Economic Surveys, Other"
         site: https://data.gov/
         github: https://github.com/GSA/data.gov
         info: More-Info-Pages/Freely-Accessible/data_gov.qmd
@@ -264,7 +333,11 @@ items:
   - categories1:
       - "Non-Governmental Organization"
     categories2:
-      - "Clinical Study/Surveys"
+      - "Biobanks"
+      - "Clinical and Health Surveys"
+      - "Clinical Trials"
+      - "Electronic Health Records"
+      - "Experimental Assay Data"
     categories3:
       - "Restricted Access"
     tiles:
@@ -275,7 +348,7 @@ items:
         description: |
           The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
         image: ../Images/Datasets/UK Biobank.png
-        topic: "Clinical Study/Surveys"
+        topic: "Biobanks, Clinical and Health Surveys, Clinical Trials, Electronic Health Records, Experimental Assay Data"
         site: https://www.ukbiobank.ac.uk/
         github: https://github.com/UK-Biobank
         info: More-Info-Pages/Restricted-Access/UK-Biobank.qmd
@@ -286,7 +359,7 @@ items:
   - categories1:
       - "Private Company"
     categories2:
-      - "Clinical Study/Surveys"
+      - "Electronic Health Records"
     categories3:
       - "Restricted Access"
     tiles:
@@ -297,7 +370,7 @@ items:
         description: |
           Cosmos compiles Epic electronic medical record (EMR) data from nearly 2,000 participating hospitals globally, creating a comprehensive dataset with analytical tools like SlicerDicer and the Data Science Virtual Machine (DSVM) to advance medical research. This network encompasses half a million physicians caring for 300 million patients, generating billions of high-quality, longitudinal clinical data points. Cosmos integrates and de-identifies patient records to create unified longitudinal profiles while eliminating duplicates.
         image: ../Images/Datasets/Epic Cosmos.png
-        topic: "Clinical Study/Surveys"
+        topic: "Electronic Health Records"
         site: https://medicine.yale.edu/ybic/ynhhs-research-access/
         group: https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/
         info: More-Info-Pages/Restricted-Access/Epic-Cosmos.qmd
@@ -306,7 +379,9 @@ items:
   - categories1:
       - "Private Company"
     categories2:
-      - "Clinical Study/Surveys"
+      - "Demographic and Economic Surveys"
+      - "Electronic Health Records"
+      - "Medical Claims"
     categories3:
       - "License Required"
     tiles:
@@ -320,7 +395,7 @@ items:
         date-updated: 2025-10-10
         ranking: "2"
         image: ../Images/Datasets/MarketScan_Main.png
-        topic: "Clinical Study/Surveys"
+        topic: "Demographic and Economic Surveys, Electronic Health Records, Medical Claims"
         site: https://datamed.library.medicine.yale.edu/marketscan
         group: https://medicine.yale.edu/ybic/
         info: More-Info-Pages/License-Required/MarketScan.qmd
