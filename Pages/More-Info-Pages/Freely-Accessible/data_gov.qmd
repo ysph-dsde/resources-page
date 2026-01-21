@@ -4,9 +4,9 @@ title: |
   data.gov
 description: |
   </br>
-  The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a searchable database launched in 2023 by Yale researchers to aggregate immunogenicity data from pneumococcal vaccine clinical trials. WISSPAR enables researchers and regulators to quickly access and visualize serotype-specific immune response data through search and filtering tools, supporting comparative efficacy research and evidence-based decision making for pneumococcal conjugate vaccine development\ [@perniciaro2023; @clinical_trials].
+  Data.gov is the U.S. federal government's official open data website, launched in 2009 to enhance government transparency and accountability by providing free public access to federal datasets. Operating under the OPEN Government Data Act of 2018, it mandates federal agencies to publish their data online in standardized, machine-readable formats. The platform, maintained by the General Services Administration (GSA), also collaborates with state, local, and international sources to create a comprehensive data catalog\ [@user_guide]. Its open-source foundation enables adaptation by governments worldwide, with the source code available on the GSA's GitHub repository\ [@github].
 include-in-header: ../../../_includes/feedback_popup.html
-bibliography: BibTeX/yale_freely_references.bib
+bibliography: BibTeX/data_gov_references.bib
 csl: ../../../Code/nature.csl
 ---
 
@@ -17,30 +17,64 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: January 15<sup>th</sup>, 2026</small>
+<small>Updated: January 20<sup>th</sup>, 2026</small>
 
 ## Overview
 
-[Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)](https://wisspar.com/) was created by [Stephanie Perniciaro, PhD, MPH](https://ysph.yale.edu/profile/stephanie-perniciaro/), Dominic Cooper-Wootton, Maria Deloria Knoll, PhD, and [Daniel Weinberger, PhD](https://ysph.yale.edu/profile/daniel-weinberger/) and launched in 2023 as a searchable database of immunogenicity data from pneumococcal vaccine clinical trials. The platform empowers researchers and regulators to quickly access and compare efficacy data for new pneumococcal conjugate vaccines (PCVs) through search and visualization tools\ [@perniciaro2023]. Users can search or visualize trial data by trial number, vaccine products, manufacturers, dosing schedules, geographic regions, immunocompromised populations, or age groups\ [@clinical_trials].
+Data.gov is the U.S. federal government's official open data website, designed to make government more open and accountable by providing free public access to federal datasets. Originally launched in 2009 following a presidential directive for greater transparency, the platform operates under the OPEN Government Data Act of 2018, which legally requires federal agencies to publish their data online in standardized, machine-readable formats. The site promotes citizen participation in government, economic development, and informed decision-making across both public and private sectors, with the General Services Administration (GSA) responsible for maintaining the central catalog\ [@open_gov; @user_guide].
 
-WISSPAR currently offers data from over 70 clinical trials that generated serotype-specific immunogenicity measures published in the Outcome Measures subsection on clinicaltrials.gov\ [@clinical_trials]. Some datasets also include adverse events reporting, subject demographics, and retention pattern information. Data undergoes manual validation for completeness, clarity, and consistent formatting, though users should be aware that inaccurately reported results on clinicaltrials.gov are not corrected through this process\ [@perniciaro2023].
+Data.gov extends beyond federal data by collaborating with state, local, and international sources to build a comprehensive multi-level government catalog. The platform's open source foundation allows governments worldwide to adapt its code for their own initiatives. The source code is available on the GSA [GitHub](https://github.com/GSA/data.gov) repository, and a complete listing of international and U.S. open data sites can be found on the [Open Data in the United States and Internationally](https://data.gov/open-gov/#open-data-in-the-united-states-and-internationally) page\ [@github; @github]. Federal agencies currently represented include\ [@catalog]:
 
-The resource focuses on two measures of serotype-specific immunogenicity: geometric mean concentrations of immunoglobulin G levels measured by enzyme-linked immunosorbent assay (ELISA) or electrochemiluminescence (ECL) assay, and geometric mean titers measured with opsonophagocytic assays (OPA). These blood serum tests provide follow-up results after pneumococcal vaccine dosing, with follow-up timing that may vary across trials. While these assays are largely cross-trial comparable, researchers should be aware that differences between assay types can cause variations that limit direct comparability\ [@perniciaro2023].
+::: {style="margin-left: 2rem"}
+- **Health & Medical Agencies:** National Institutes of Health (NIH), Centers for Disease Control and Prevention (CDC), Centers for Medicare and Medicaid Services (CMS), Substance Abuse and Mental Health Services Administration (SAMHSA), Veterans Health Administration (VHA), Administration for Children and Families (ACF), Department of Health and Human Services (HHS)
+
+- **Environmental & Natural Resources:** United States Geological Survey (USGS), Environmental Protection Agency (EPA), National Park Service (NPS), Bureau of Reclamation, Bureau of Land Management (BLM), United States Fish and Wildlife Service (USFWS), Forest Service, Bureau of Safety and Environmental Enforcement (BSEE)
+
+- **Space & Scientific Research:** National Aeronautics and Space Administration (NASA), National Institute of Standards and Technology (NIST), Nuclear Regulatory Commission (NRC), Office of Science and Technology Policy (OSTP)
+
+- **Demographics & Social Statistics:** Bureau of the Census, Social Security Administration (SSA)
+
+- **Agriculture & Food:** Agricultural Research Service (ARS), Economic Research Service (ERS), Food and Nutrition Service (FNS), Farm Service Agency (FSA)
+
+- **Transportation & Infrastructure:** Department of Transportation (DOT), Federal Highway Administration (FHWA)
+
+- **Justice & Law Enforcement:** Office of Justice Programs (OJP)
+
+- **Education:** Institute of Education Sciences (IES), Department of Education, Office of English Language Acquisition, Office of Postsecondary Education
+
+- **Energy:** Energy Programs
+
+- **Financial & Economic:** Federal Financing Bank, Financing Vehicles and the Board of Governors of the Federal Reserve, Federal Trade Commission (FTC)
+
+- **Veterans Affairs:** Department of Veterans Affairs (VA), Departmental Administration
+
+- **International & Trade:** Department of State, International Trade Commission (ITC)
+
+- **Housing & Urban Development:** Department of Housing and Urban Development (HUD)
+
+- **Employment & Personnel:** Office of Personnel Management (OPM), Equal Employment Opportunity Commission (EEOC)
+:::
 
 ## Gaining Access
 
-All data are freely accessible for direct download or online visualization through the platform. Simply go to the data [Export](https://wisspar.com/export) page to directly download, or create quick, customized visualizations of the data on the [Graphical View](https://wisspar.com/pcv_antibodies) page\ [@data_export; @graphical_view].
+All data are freely accessible for direct download or online visualization through the platform. Simply visit the [Data Catalog](https://catalog.data.gov/dataset) page to download directly\ [@catalog].
+
+::: {.callout-important}
+Terms of service and licenses for non-federal datasets accessible on data.gov may vary from those of federal agency sources.
+:::
 
 ## Relevant Links
 
 ::: {style="margin-left: 2rem"}
-- [Export](https://wisspar.com/export): Access and download data directly\ [@data_export].
+- [Data Catalog](https://catalog.data.gov/dataset): Search through the complete data catalog by topic, categories, etc. See how many datasets are applied to each listing filter type\ [@catalog].
 
-- [Graphical View](https://wisspar.com/pcv_antibodies): Generate customized visualizations using data available on the platform\ [@graphical_view].
+- [User Guide](https://data.gov/user-guide/): Find information on how to effectively search the catalog of data, discover the contributors to this database, and understand what you might find on each data page, including any applicable terms of service and licenses\ [@user_guide].
 
-- [Clinical Trials](https://wisspar.com/trial-dashboard): Find a listing of all currently available trials, and filter or search by vaccine products, manufacturers, dosing schedules, geographic regions, immunocompromised populations, or age groups\ [@clinical_trials].
+- [Open Government](https://data.gov/open-gov/): Find information about federal open data site requirements and discover other international and U.S. open data sites\ [@open_gov].
 
-- [Worldwide Index of Serotype-Specific Pneumococcal Antibody Responses (WISSPAR): A curated database of clinical trial data _Perniciaro et al. 2023_](https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/): Find the article introducing the WISSPAR resource, which highlights the scientific need being addressed, methods, and other important features\ [@perniciaro2023].
+- [Resources.data.gov](resources.data.gov): Find policies, tools, case studies, and other resources to support federal data governance, management, exchange, and use and help agencies adopt open data practices across government\ [@resources].
+
+- [GSA/data.gov](https://github.com/GSA/data.gov): Find Data.gov platform code, GitHub Actions templates, and development resources at the main Data.gov Platform repository, which houses reusable code and documentation for the static site (www.data.gov), catalog (catalog.data.gov), and inventory (inventory.data.gov) applications\ [@github].
 :::
 
 
@@ -51,7 +85,8 @@ All data are freely accessible for direct download or online visualization throu
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.1016/j.urology.2022.07.012"),
+  doi = c("10.1001/jamainternmed.2024.5932", "10.1097/XCS.0000000000000429",
+          "10.1093/cid/ciae427"),
   affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )

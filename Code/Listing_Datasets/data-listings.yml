@@ -249,10 +249,11 @@ items:
         date-updated: 2025-01-20
         ranking: "1"
         description: |
-          Here you will find data, tools, and resources to conduct research, develop web and mobile applications, design data visualizations, and more.
+          Data.gov is the U.S. federal government's official open data website, launched in 2009 to enhance government transparency and accountability by providing free public access to federal datasets. Operating under the OPEN Government Data Act of 2018, it mandates federal agencies to publish their data online in standardized, machine-readable formats. The platform, maintained by the General Services Administration (GSA), also collaborates with state, local, and international sources to create a comprehensive data catalog. Its open-source foundation enables adaptation by governments worldwide, with the source code available on the GSA's GitHub repository.
         image: ../Images/Datasets/Data Gov.png
         topic: "Clinical Study/Surveys, Experimental Assay Data"
         site: https://data.gov/
+        github: https://github.com/GSA/data.gov
         info: More-Info-Pages/Freely-Accessible/data_gov.qmd
       
   # -----------

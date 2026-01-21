@@ -122,6 +122,42 @@ build_search_query(
   affiliation = "Yale", years = 6)
 
 
+## ----------------
+## WISSPAR
+
+build_search_query(
+  keywords = c("Worldwide Index of Serotype Specific Pneumococcal Antibody Responses", "WISSPAR"), 
+  affiliation = "Yale", years = 10)
+
+
+## ----------------
+## Nextstrain
+
+build_search_query(
+  keywords = c("Nextstrain"), 
+  affiliation = "Yale", years = 6)
+
+
+## ----------------
+## The Health Attribution Library
+
+build_search_query(
+  keywords = c("The Health Attribution Library"), 
+  affiliation = "Yale", years = 6)
+
+
+## ----------------
+## data.gov
+
+build_search_query(
+  keywords = c("Supplemental Nutrition Assistance Program", "SNAP"), 
+  affiliation = "Yale School of Public Health", years = 6)
+
+build_search_query(
+  keywords = c("Centers for Medicare & Medicaid Services Statistics", "CMS Statistics"), 
+  affiliation = "Yale", years = 6)
+
+
 
 ## ----------------------------------------------------------------
 ## LICENSE REQUIRED
@@ -179,6 +215,13 @@ build_search_query(
   keywords = c("Yale New Haven Health System", "YNHHS"), 
   affiliation = "Yale School of Public Health", years = 5)
 
+
+## ----------------
+## YODA
+
+build_search_query(
+  keywords = c("YODA", "Yale University Open Data Access"), 
+  affiliation = "Yale", years = 10)
 
 
 
