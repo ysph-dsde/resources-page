@@ -867,6 +867,22 @@ ol, ul {
   margin-top: -20px !important;
 }
 
+.collapsible-content {
+  display: none; /* Hidden by default */
+  padding: 10px 0;
+}
+.collapsible-header {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.arrow {
+  transition: transform 0.3s ease !important;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
 /* Mobile adjustments */
 @media (max-width: 480px) {
   .sidebar-wrapper {
@@ -884,7 +900,7 @@ ol, ul {
   }
   .sidebar-toggler {
     display: block; /* Show toggler on small screens */
-    right: -10px; /* Adjusted to move a few points to the left for small screens */
+    right: -15px !important; /* Adjusted to move a few points to the left for small screens */
   }
 }
 

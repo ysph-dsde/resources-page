@@ -4,8 +4,6 @@ format:
     toc: false
     code-fold: true
     page-layout: custom
-    includes:
-      before-body: ../Code/sidebar.html 
 listing:
   - template: ../Code/Listing_Resources/resources-formatting.ejs
     contents: ../Code/Listing_Resources/resources-listings.yml

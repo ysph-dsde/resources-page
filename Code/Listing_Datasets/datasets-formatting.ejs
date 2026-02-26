@@ -16,7 +16,7 @@
       <div class="sidebar-wrapper">
         <button class="sidebar-toggler">☰</button>
         <aside class="sidebar">
-
+  
           <% let hasInfo = false; %>
           <% if (items && items[0].items && items[0].items.length > 0) { %>
             <% items[0].items.forEach(function(item) { 
@@ -28,9 +28,8 @@
                 });
               } 
             }); 
-          } 
-          %>
-
+          } %>
+  
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
               <option value="default" selected>No sorting</option>
@@ -40,72 +39,89 @@
               <option value="date-asc">Date Updated: Oldest to Newest</option>
             </select>
           </div>
-          <form id="categoryFilter1" class="form">
-            <h5>Region and Affiliation</h5>
-            <% if (items && items[0].items && items[0].items.length > 0) { %>
-              <% const categories1 = new Set(); %>
-              <% items[0].items.forEach(function(item) { 
-                if (item.categories1) { 
-                  item.categories1.forEach(function(cat) {
-                    categories1.add(cat);
-                  });
-                }
-              }); %>
-              <% categories1.forEach(function(category) { %>
-                <div class="checkbox-container">
-                  <input type="checkbox" name="category1" value="<%= encodeURIComponent(category) %>" id="category1-<%= encodeURIComponent(category) %>">
-                  <label for="category1-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
-                </div>
-              <% }); %>
-            <% } %>
-          </form>
-
+  
+          <!-- Affiliation filter -->
+          <h5 class="collapsible-header">Region and Affiliation
+            <span class="arrow">></span>
+          </h5>
+          <div class="collapsible-content" style="display:none;">
+            <form id="categoryFilter1" class="form">
+              <% if (items && items[0].items && items[0].items.length > 0) { %>
+                <% const categories1 = new Set(); %>
+                <% items[0].items.forEach(function(item) { 
+                  if (item.categories1) { 
+                    item.categories1.forEach(function(cat) {
+                      categories1.add(cat);
+                    });
+                  }
+                }); %>
+                <% categories1.forEach(function(category) { %>
+                  <div class="checkbox-container">
+                    <input type="checkbox" name="category1" value="<%= encodeURIComponent(category) %>" id="category1-<%= encodeURIComponent(category) %>">
+                    <label for="category1-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
+                  </div>
+                <% }); %>
+              <% } %>
+            </form>
+          </div>
+  
           <br>
-
-          <form id="categoryFilter2" class="form">
-            <h5>Services Offered</h5>
-            <% if (items && items[0].items && items[0].items.length > 0) { %>
-              <% const categories2 = new Set(); %>
-              <% items[0].items.forEach(function(item) { 
-                if (item.categories2) { 
-                  item.categories2.forEach(function(cat) {
-                    categories2.add(cat);
-                  });
-                }
-              }); %>
-              <% categories2.forEach(function(category) { %>
-                <div class="checkbox-container">
-                  <input type="checkbox" name="category2" value="<%= encodeURIComponent(category) %>" id="category2-<%= encodeURIComponent(category) %>">
-                  <label for="category2-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
-                </div>
-              <% }); %>
-            <% } %>
-          </form>
-
+  
+          <!-- Services filter -->
+          <h5 class="collapsible-header">Services Offered
+            <span class="arrow">></span>
+          </h5>
+          <div class="collapsible-content" style="display:none;">
+            <form id="categoryFilter2" class="form">
+              <% if (items && items[0].items && items[0].items.length > 0) { %>
+                <% const categories2 = new Set(); %>
+                <% items[0].items.forEach(function(item) { 
+                  if (item.categories2) { 
+                    item.categories2.forEach(function(cat) {
+                      categories2.add(cat);
+                    });
+                  }
+                }); %>
+                <% categories2.forEach(function(category) { %>
+                  <div class="checkbox-container">
+                    <input type="checkbox" name="category2" value="<%= encodeURIComponent(category) %>" id="category2-<%= encodeURIComponent(category) %>">
+                    <label for="category2-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
+                  </div>
+                <% }); %>
+              <% } %>
+            </form>
+          </div>
+  
           <br>
-
-          <form id="categoryFilter3" class="form">
-            <h5>Data Types</h5>
-            <% if (items && items[0].items && items[0].items.length > 0) { %>
-              <% const categories3 = new Set(); %>
-              <% items[0].items.forEach(function(item) { 
-                if (item.categories3) { 
-                  item.categories3.forEach(function(cat) {
-                    categories3.add(cat);
-                  });
-                }
-              }); %>
-              <% categories3.forEach(function(category) { %>
-                <div class="checkbox-container">
-                  <input type="checkbox" name="category3" value="<%= encodeURIComponent(category) %>" id="category3-<%= encodeURIComponent(category) %>">
-                  <label for="category3-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
-                </div>
-              <% }); %>
-            <% } %>
-          </form>
+  
+          <!-- Data Types filter -->
+          <h5 class="collapsible-header">Data Types
+            <span class="arrow">></span>
+          </h5>
+          <div class="collapsible-content" style="display:none;">
+            <form id="categoryFilter3" class="form">
+              <% if (items && items[0].items && items[0].items.length > 0) { %>
+                <% const categories3 = new Set(); %>
+                <% items[0].items.forEach(function(item) { 
+                  if (item.categories3) { 
+                    item.categories3.forEach(function(cat) {
+                      categories3.add(cat);
+                    });
+                  }
+                }); %>
+                <% categories3.forEach(function(category) { %>
+                  <div class="checkbox-container">
+                    <input type="checkbox" name="category3" value="<%= encodeURIComponent(category) %>" id="category3-<%= encodeURIComponent(category) %>">
+                    <label for="category3-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
+                  </div>
+                <% }); %>
+              <% } %>
+            </form>
+          </div>
+  
         </aside>
       </div>
-
+  
       <div class="main-content">
         <div class="container" id="tilesContainer">
           <% let visibleTileCount = 0; %>
@@ -136,9 +152,9 @@
                           <i class="bi-people-fill"></i></a> 
                       <% } %> 
                       <% if (tile.github) { %> 
-                       &nbsp;
-                     <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                       <i class="bi-github"></i></a> 
+                        &nbsp;
+                        <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-github"></i></a> 
                       <% } %> 
                       <% if (tile.article) { %> 
                         &nbsp;
@@ -175,53 +191,66 @@
     function parseDate(dateStr) {
       return new Date(dateStr);
     }
-  
+    
     function updateLineCounts() {
       document.querySelectorAll(".tile").forEach(function (tile) {
         const h2Element = tile.querySelector(".js-line-count");
         const lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
-  
+    
         const linesInH2 = Math.ceil(h2Element.scrollHeight / lineHeight);
-  
+    
         const pElement = tile.querySelector("p.description");
         pElement.style.display = '-webkit-box';
         pElement.style.webkitBoxOrient = 'vertical';
         pElement.style.overflow = 'hidden';
-  
+    
         let clampValue = 10;
-  
+    
         clampValue -= Math.max(0, linesInH2 - 1);
-  
+    
         const topicElement = tile.querySelector('.topic');
         if (topicElement && topicElement.style.display !== 'none') {
           const linesInTopic = Math.ceil(topicElement.scrollHeight / lineHeight);
           clampValue -= Math.max(0, linesInTopic - 1);
         }
-  
+    
         if (clampValue < 1) clampValue = 1; // Ensure at least one line is available for the description
-  
+    
         pElement.style.webkitLineClamp = clampValue;
       });
     }
-  
-    document.addEventListener('DOMContentLoaded', function() {
+    
+    function toggleCollapsible(event) {
+      const header = event.target.closest('.collapsible-header');
+      if (!header) return;
+      header.classList.toggle('active');
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow');
+      if (content) {
+        content.style.display = content.style.display === 'none' ? 'block' : 'none';
+        content.classList.toggle('collapsed', content.style.display === 'none');
+      }
+      if (arrow) {
+        arrow.style.transform = content.style.display === 'none' ? 'rotate(0deg)' : 'rotate(90deg)';
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function () {
       updateLineCounts();
       window.addEventListener('resize', updateLineCounts);
-  
+    
       const categoryFilter1 = document.getElementById('categoryFilter1');
       const categoryFilter2 = document.getElementById('categoryFilter2');
       const categoryFilter3 = document.getElementById('categoryFilter3');
       const sortOptions = document.getElementById('sortOptions');
       const tilesContainer = document.getElementById('tilesContainer');
-      
       const showMoreBtn = document.getElementById('showMoreBtn');
       const initialLoadCount = 9; // 3 rows of 3 tiles each
       const loadMoreCount = 3; // 1 row of 3 tiles
-      
       const infoCheckbox = document.getElementById('info-yes');
       let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
       let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
-  
+    
       // Function to sort by default criteria: ranking then title
       function sortByDefault() {
         sortedTiles.forEach(tile => {
@@ -230,23 +259,23 @@
             tile.dataset.numericRanking = parseInt(rankAttr, 10);
           }
         });
-  
+    
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
           const titleB = b.getAttribute('data-title').toLowerCase();
           const rankingA = a.dataset.numericRanking;
           const rankingB = b.dataset.numericRanking;
-  
+    
           if (rankingA !== rankingB) {
             return rankingA - rankingB;
           }
           return titleA.localeCompare(titleB);
         });
-  
+    
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
-  
+    
         filterTiles(); // Apply the current filter on new sorted order
       }
       
@@ -264,26 +293,26 @@
           showMoreBtn.style.display = 'none';
         }
       });
-  
+    
       function filterTiles() {
         const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
         const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
         const selectedCategories3 = Array.from(categoryFilter3.querySelectorAll('input[name="category3"]:checked')).map(input => decodeURIComponent(input.value));
         const selectedInfo = infoCheckbox && infoCheckbox.checked ? 'yes' : 'all';
-  
+    
         let visibleTileCount = 0;
-  
-        sortedTiles.forEach(function(tile) {
+    
+        sortedTiles.forEach(function (tile) {
           const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
           const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
           const categories3 = (tile.getAttribute('data-categories3') || '').split(' ').map(cat => decodeURIComponent(cat));
           const infoAvailable = tile.getAttribute('data-info');
-  
+    
           const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
           const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
           const matchesCategory3 = selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
           const matchesInfo = selectedInfo === 'all' || infoAvailable === selectedInfo;
-  
+    
           if (matchesCategory1 && matchesCategory2 && matchesCategory3 && matchesInfo) {
             tile.classList.add('filtered');
             if (visibleTileCount < initialLoadCount) {
@@ -300,16 +329,16 @@
             tile.style.display = 'none'; // Hide if it doesn't match the filter
           }
         });
-  
+    
         updateLineCounts();
-  
+    
         if (sortedTiles.filter(tile => tile.classList.contains('hidden')).length === 0) {
           showMoreBtn.style.display = 'none';
         } else {
           showMoreBtn.style.display = 'block';
         }
       }
-  
+    
       function sortTiles() {
         const sortValue = sortOptions.value;
         // Convert ranks to numbers before sorting
@@ -319,7 +348,7 @@
             tile.dataset.numericRanking = parseInt(rankAttr, 10);
           }
         });
-  
+    
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
           const titleB = b.getAttribute('data-title').toLowerCase();
@@ -327,7 +356,7 @@
           const dateB = parseDate(b.getAttribute('data-date'));
           const rankingA = a.dataset.numericRanking;
           const rankingB = b.dataset.numericRanking;
-  
+    
           if (sortValue === 'title-asc') {
             return titleA.localeCompare(titleB);
           } else if (sortValue === 'title-desc') {
@@ -344,14 +373,14 @@
             return titleA.localeCompare(titleB);
           }
         });
-  
+    
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
-  
+    
         filterTiles(); // Apply the current filter on new sorted order
       }
-  
+    
       categoryFilter1.addEventListener('change', filterTiles);
       categoryFilter2.addEventListener('change', filterTiles);
       categoryFilter3.addEventListener('change', filterTiles);
@@ -359,17 +388,25 @@
         infoCheckbox.addEventListener('change', filterTiles);
       }
       sortOptions.addEventListener('change', function() {
-        if (sortOptions.value === "default") {
+        if (sortOptions.value === 'default') {
           sortByDefault();
         } else {
           sortTiles();
         }
       });
-  
+    
       // Initial sort by default (ranking then title)
       sortByDefault();
+      
+      // Add collapsible functionality to all collapsible headers
+      document.querySelectorAll('.collapsible-header').forEach(header => {
+        header.addEventListener('click', toggleCollapsible);
+        // Initial arrow state
+        const arrow = header.querySelector('.arrow');
+        header.nextElementSibling.style.display = 'none'; // Collapse by default
+        if (arrow) arrow.style.transform = 'rotate(0deg)'; // Arrow pointing down initially
+      });
     });
-    
     
     // Media view with folded sidebar
     document.addEventListener('DOMContentLoaded', () => {
@@ -387,7 +424,7 @@
         console.error('Sidebar toggler or wrapper not found');
       }
     });
-  </script>
+    </script>
 </body>
 
 ```
