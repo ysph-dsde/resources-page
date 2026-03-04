@@ -39,7 +39,7 @@ All papers are freely accessible for direct download or online visualization thr
 ::: {style="margin-left: 2rem"}
 - [Database](https://www.healthattribution.org/database): Access and download papers directly\ [@attributes_database].
 
-- [Detection & Attribution of Climate Change Impacts on Human Health Carlson et al. 2024_](https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/): Find the article introducing health impact attribution research, including its conceptual framework, scientific goals, current progress, and future research needs\ [@carlson2024].
+- [Carlson et al. 2024. Detection & Attribution of Climate Change Impacts on Human Health](https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/): Find the article introducing health impact attribution research, including its conceptual framework, scientific goals, current progress, and future research needs\ [@carlson2024].
 :::
 
 

@@ -117,7 +117,7 @@ To access publicly available datasets, navigate to any Nextstrain dashboard and 
 
 ### Sharing Data
 
-Nextstrain enables users to run analyses and share them through multiple methods. These include storing data on nextstrain.org, utilizing GitHub repositories, creating groups on Nextstrain, and using [public URLs](https://docs.nextstrain.org/projects/auspice/en/stable/server/overview.html)\ [@https://docs.nextstrain.org/projects/auspice/en/stable/server/overview.html]. See [Contributing to Nextstrain](https://docs.nextstrain.org/en/latest/guides/contribute/index.html) and [Share Analyses through Nextstrain](https://docs.nextstrain.org/en/latest/guides/share/index.html#) for detailed guidance\ [@discussion_thomas2020; @docs_contributing; @docs_share].
+Nextstrain enables users to run analyses and share them through multiple methods. These include storing data on nextstrain.org, utilizing GitHub repositories, creating groups on Nextstrain, and using [public URLs](https://docs.nextstrain.org/projects/auspice/en/stable/server/overview.html)\ [@docs_server]. See [Contributing to Nextstrain](https://docs.nextstrain.org/en/latest/guides/contribute/index.html) and [Share Analyses through Nextstrain](https://docs.nextstrain.org/en/latest/guides/share/index.html#) for detailed guidance\ [@discussion_thomas2020; @docs_contributing; @docs_share].
 
 
 ## Relevant Links
@@ -139,7 +139,7 @@ Nextstrain enables users to run analyses and share them through multiple methods
 
 - [Rapid data analysis and sharing using Nextstrain](https://grubaughlab.com/nextstrain/): The [Grubaugh Lab](https://grubaughlab.com/) at Yale School of Public Health contributes genomic surveillance data to Nextstrain, a collaborative bioinformatics platform for tracking pathogen evolution and spread. Find their current dashboards visualizing surveillance data for SARS-CoV-2, Dengue, Powassan virus, among others\ [@grubaugh].
 
-- [Nextstrain: real-time tracking of pathogen evolution _Hadfiel et al. 2018_](https://academic.oup.com/bioinformatics/article/34/23/4121/5001388): Find the article introducing the Nextstrain resource, which highlights the scientific need being addressed, methods, and other important features\ [@hadfield2018].
+- [Hadfiel et al. 2018. Nextstrain: real-time tracking of pathogen evolution](https://academic.oup.com/bioinformatics/article/34/23/4121/5001388): Find the article introducing the Nextstrain resource, which highlights the scientific need being addressed, methods, and other important features\ [@hadfield2018].
 :::
 
 

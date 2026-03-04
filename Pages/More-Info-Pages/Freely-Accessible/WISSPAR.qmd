@@ -40,7 +40,7 @@ All data are freely accessible for direct download or online visualization throu
 
 - [Clinical Trials](https://wisspar.com/trial-dashboard): Find a listing of all currently available trials, and filter or search by vaccine products, manufacturers, dosing schedules, geographic regions, immunocompromised populations, or age groups\ [@clinical_trials].
 
-- [Worldwide Index of Serotype-Specific Pneumococcal Antibody Responses (WISSPAR): A curated database of clinical trial data _Perniciaro et al. 2023_](https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/): Find the article introducing the WISSPAR resource, which highlights the scientific need being addressed, methods, and other important features\ [@perniciaro2023].
+- [Perniciaro et al. 2023. Worldwide Index of Serotype-Specific Pneumococcal Antibody Responses (WISSPAR): A curated database of clinical trial data](https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/): Find the article introducing the WISSPAR resource, which highlights the scientific need being addressed, methods, and other important features\ [@perniciaro2023].
 :::
 
 
