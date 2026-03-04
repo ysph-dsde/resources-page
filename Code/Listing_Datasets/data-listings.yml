@@ -402,6 +402,34 @@ items:
         
   # -----------
   # Region/Affiliation by: Multiple
+  # Restricted Access
+  - categories1:
+      - "Yale School of Medicine"
+      - "U.S. Government"
+    categories2:
+      - "Clinical and Health Surveys"
+      - "Demographic and Economic Surveys"
+      - "Clinical Trials"
+      - "Designed Observational Studies"
+      - "Registries"
+      - "Biobanks"
+      - "Experimental Assay Data"
+    categories3:
+      - "Restricted Access"
+    tiles:
+      - title: Claude D. Pepper Older Americans Independence Center (OAIC)
+        date-added: 2026-03-02
+        date-updated: 2026-02-01
+        ranking: "3"
+        description: |
+          The Claude D. Pepper Older Americans Independence Centers (OAIC) Program is a network of 15 NIA-funded research centers established in 1991 to promote health and independence in older Americans. The OAIC Coordinating Center manages study registration, data access, and connects researchers with funding opportunities. Each center has its own research focus; Yale's Center focuses on multifactorial geriatric conditions and multimorbidity.
+        image: ../Images/Datasets/OAIC Logo.png
+        topic: "Clinical and Health Surveys, Demographic and Economic Surveys, Clinical Trials, Designed Observational Studies, Registries, Biobanks, Experimental Assay Data"
+        group: https://medicine.yale.edu/internal-medicine/geriatrics/peppercenter/
+        site: https://www.peppercenter.org/
+        article: https://pmc.ncbi.nlm.nih.gov/articles/PMC11090727/
+        info: More-Info-Pages/Freely-Accessible/Claude D. Pepper OAIC.qmd
+  
   # Open Access & Restricted Access
   - categories1:
       - "Non-Governmental Organization"
@@ -423,4 +451,26 @@ items:
         github: https://github.com/nextstrain
         article: https://academic.oup.com/bioinformatics/article/34/23/4121/5001388
         info: More-Info-Pages/Freely-Accessible/nextstrain.qmd
+        
+  # Linkdrop
+  - categories1:
+      - "Yale School of Public Health"
+      - "Yale School of Medicine"
+      - "Yale University"
+    categories2:
+      - "Medical Claims"
+    categories3:
+      - "Open Access"
+      - "Restricted Access"
+      - "License Required"
+    tiles:
+      - title: Innovative Applications of Dataset Repositories
+        description: |
+          Researchers across the university often combine datasets to generate novel resources and comparative insights. This page highlights these harmonization efforts to inspire similar work and raise awareness of available resources. To learn more about a resource, please contact the primary contact listed.
+        date-added: 2026-03-02
+        date-updated: 2026-02-01
+        ranking: "4"
+        image: ../Images/DSDE Identity/DSDE People_AS399026036.jpeg
+        topic: "Multiple"
+        info: More-Info-Pages/Freely-Accessible/Yale Linkdrop.qmd
   

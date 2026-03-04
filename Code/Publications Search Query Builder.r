@@ -162,6 +162,15 @@ build_search_query(
   affiliation = "Yale", years = 10)
 
 
+## ----------------
+## Claude D. Pepper Older Americans Independence Center (OAIC)
+
+build_search_query(
+  keywords = c("Claude D. Pepper Older Americans Independence Center", 
+               "Older Americans Independence Center", "OAIC"), 
+  affiliation = "Yale", years = 6)
+
+
 
 ## ----------------------------------------------------------------
 ## LICENSE REQUIRED

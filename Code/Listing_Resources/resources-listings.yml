@@ -243,3 +243,30 @@ items:
         topic: "Analytical Tools, Educational Materials, Consulting/Services"
         site: https://dissc.yale.edu/
         
+        
+  # -----------
+  # Region/Affiliation by: Multiple
+  - categories1:
+      - "Yale School of Medicine"
+      - "U.S. Government"
+    categories2:
+      - "Clinical and Health Surveys"
+      - "Demographic and Economic Surveys"
+      - "Clinical Trials"
+      - "Designed Observational Studies"
+      - "Registries"
+      - "Biobanks"
+      - "Experimental Assay Data"
+    tiles:
+      - title: Claude D. Pepper Older Americans Independence Center (OAIC)
+        date-added: 2026-03-02
+        date-updated: 2026-02-01
+        ranking: "3"
+        description: |
+          The Claude D. Pepper Older Americans Independence Centers (OAIC) Program is a network of 15 NIA-funded research centers established in 1991 to promote health and independence in older Americans. The OAIC Coordinating Center manages study registration, data access, and connects researchers with funding opportunities. Each center has its own research focus; Yale's Center focuses on multifactorial geriatric conditions and multimorbidity.
+        image: ../Images/Datasets/OAIC Logo.png
+        topic: "Clinical and Health Surveys, Demographic and Economic Surveys, Clinical Trials, Designed Observational Studies, Registries, Biobanks, Experimental Assay Data"
+        group: https://medicine.yale.edu/internal-medicine/geriatrics/peppercenter/
+        site: https://www.peppercenter.org/
+        article: https://pmc.ncbi.nlm.nih.gov/articles/PMC11090727/
+        info: More-Info-Pages/Freely-Accessible/Claude D. Pepper OAIC.qmd

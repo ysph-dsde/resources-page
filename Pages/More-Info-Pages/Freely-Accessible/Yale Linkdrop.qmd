@@ -1,0 +1,36 @@
+---
+title-block-banner: true
+title: |
+  Innovative Applications of Dataset Repositories
+include-in-header: ../../../_includes/feedback_popup.html
+toc-depth: 2
+bibliography: BibTeX/oaic.bib
+csl: ../../../Code/nature.csl
+---
+
+```{r}
+#| echo: false
+
+# Load in the functions.
+source('../../../Code/PubMed Search_Functions.R')
+```
+
+<small>Updated: March 3<sup>rd</sup>, 2026</small>
+
+## Overview
+
+Researchers across the university often combine datasets to generate novel resources and comparative insights. This page highlights these harmonization efforts to inspire similar work and raise awareness of available resources. To learn more about a resource, please contact the primary contact listed.
+
+## Listing
+
+### Medical Expenditure Panel Survey (MEPS) with NAVLIN
+
+**Publication:** [Estimating US savings on outpatient prescription pharmaceuticals from international reference pricing](https://www.pnas.org/doi/10.1073/pnas.2520871122) by Ye et al. 2025
+
+**Abstract:** The exorbitant cost of prescription pharmaceuticals is a critical and long-standing concern facing the United States (US). To curb rising drug costs, international reference pricing, aligning drug prices with those in other high-income countries, has emerged as a prominent policy option. We evaluated the potential national savings from such a strategy in the United States through a comprehensive analysis of utilization patterns and global price differentials for over 8,000 drugs. We project an annual national saving of $184 billion if outpatient prescription pharmaceuticals were priced comparably to those in Canada, France, Germany, Japan, and the United Kingdom. Private insurers, Medicare, and Medicaid would realize savings of 51%, 62%, and 35%, respectively. Pharmaceutical expenditures for common chronic illnesses would be substantially reduced, with costs declining by over 75% for diabetes, atrial fibrillation, and heart failure. Our findings emphasize the substantial fiscal and equity gains achievable through international reference pricing, demonstrating its potential to mitigate financial burdens borne by both healthcare systems and individual patients.
+
+**Dashboard:** [https://irp.cidma.us/](https://irp.cidma.us/)
+
+## Gaining Access
+
+This page displays innovative applications and data harmonization research from Yale researchers. Some datasets already have dedicated tiles with information on access and usage: [Datasets](../../datasets.qmd). Yale affiliates can submit suggestions by accessing the Qualtrics link in the feedback section at the top.
