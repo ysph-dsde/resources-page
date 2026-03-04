@@ -1,7 +1,7 @@
 ---
 title-block-banner: true
 title: |
-  Claude D. Pepper Older Americans Independence Center (OAIC)
+  Claude D. Pepper Older Americans</br>Independence Center (OAIC)
 description: |
   </br>
   The Claude D. Pepper Older Americans Independence Centers (OAIC) Program is a network of 15 NIA-funded research centers established in 1991 to promote health and independence in older Americans. The OAIC Coordinating Center manages study registration, data access, and connects researchers with funding opportunities. Each center has its own research focus; Yale's Center focuses on multifactorial geriatric conditions and multimorbidity\ [@kitzman2024; @oaic_home].

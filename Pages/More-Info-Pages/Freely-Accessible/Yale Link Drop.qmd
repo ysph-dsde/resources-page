@@ -1,7 +1,7 @@
 ---
 title-block-banner: true
 title: |
-  Innovative Applications of Dataset Repositories
+  Beyond the Collection: Faculty Data</br>Applications & Resources
 include-in-header: ../../../_includes/feedback_popup.html
 toc-depth: 2
 bibliography: BibTeX/oaic.bib
@@ -15,11 +15,11 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: March 3<sup>rd</sup>, 2026</small>
+<small>Updated: March 4<sup>th</sup>, 2026</small>
 
 ## Overview
 
-Researchers across the university often combine datasets to generate novel resources and comparative insights. This page highlights these harmonization efforts to inspire similar work and raise awareness of available resources. To learn more about a resource, please contact the primary contact listed.
+This page showcases additional data applications and harmonization efforts from Yale University faculty. We hope these examples will inspire new research pathways within the research community and help broaden awareness of valuable resources beyond those in our actively curated collection. To learn more about any dataset or resource listed here, we encourage you to contact the primary investigator noted in the publication.
 
 ## Listing
 
@@ -33,4 +33,4 @@ Researchers across the university often combine datasets to generate novel resou
 
 ## Gaining Access
 
-This page displays innovative applications and data harmonization research from Yale researchers. Some datasets already have dedicated tiles with information on access and usage: [Datasets](../../datasets.qmd). Yale affiliates can submit suggestions by accessing the Qualtrics link in the feedback section at the top.
+This page highlights data applications and harmonization research shared by Yale researchers. Some of these datasets may already be featured with full access and usage details on our [Datasets](../../datasets.qmd) page. Yale affiliates can submit suggestions by accessing the Qualtrics link in the feedback form at the top.

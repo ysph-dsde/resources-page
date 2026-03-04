@@ -464,13 +464,13 @@ items:
       - "Restricted Access"
       - "License Required"
     tiles:
-      - title: Innovative Applications of Dataset Repositories
+      - title: "Beyond the Collection: Faculty Data Applications & Resources"
         description: |
-          Researchers across the university often combine datasets to generate novel resources and comparative insights. This page highlights these harmonization efforts to inspire similar work and raise awareness of available resources. To learn more about a resource, please contact the primary contact listed.
+          This page showcases additional data applications and harmonization efforts from Yale University faculty. We hope these examples will inspire new research pathways within the research community and help broaden awareness of valuable resources beyond those in our actively curated collection. To learn more about any dataset or resource listed here, we encourage you to contact the primary investigator noted in the publication.
         date-added: 2026-03-02
-        date-updated: 2026-02-01
+        date-updated: 2026-03-04
         ranking: "4"
         image: ../Images/DSDE Identity/DSDE People_AS399026036.jpeg
         topic: "Multiple"
-        info: More-Info-Pages/Freely-Accessible/Yale Linkdrop.qmd
+        info: More-Info-Pages/Freely-Accessible/Yale Link Drop.qmd
   
