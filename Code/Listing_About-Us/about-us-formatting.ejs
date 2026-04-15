@@ -1,57 +1,110 @@
 ```{=html}
 
+<!--
+  Template: About Us People Listing EJS
+
+  Purpose:
+  - Render a responsive “people” tile grid (image + name + titles + links + bio + contact + optional profile CTA).
+
+  Notes / dependencies:
+  - Bootstrap CSS is included below.
+  - Icons used:
+    - Bootstrap Icons classes: `bi-globe`, `bi-people-fill`, `bi-linkedin`
+      Include Bootstrap Icons in <head> if not already present:
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    - Academicons (already included below): `ai-google-scholar-square`, `ai-orcid`
+
+  Data expected (high level):
+  - items[0].items.tiles = [{
+      name, image, titles, bio,
+      "ysph-site"?, group?, linkedin?, google_scholar?, orcid?,
+      email?, phone?, profile_link?
+    }]
+
+  Rendering behavior:
+  - Only renders tiles when `items[0].items.tiles` exists; otherwise prints “No tiles available.”
+  - Link bar shows only the icons for links present on each tile.
+  - Contact info shows email/phone only when present.
+  - “View Full Profile” link is shown only when `profile_link` exists.
+-->
+
 <head>
+  <!-- Document metadata / dependencies -->
   <meta charset="UTF-8">
   <title>Resources with Features</title>
+
+  <!-- CSS frameworks / icon packs -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 </head>
+
 <body class="people">
   <div class="tile-container">
+    <!-- Guard: ensure tiles exist before iterating -->
     <% if (items[0] && items[0].items && items[0].items.tiles) { %>
+
+      <!-- Render one tile per entry -->
       <% items[0].items.tiles.forEach(function(tile) { %>
         <div class="tile">
+          <!-- Image -->
           <div class="img-container">
             <img src="<%= tile.image %>" alt="Image for <%= tile.name %>">
           </div>
+
           <div class="tile-content">
+            <!-- Name / title -->
             <h2><%= tile.name %></h2>
             <p class="title-paragraph"><%= tile.titles %></p>
+
+            <!-- Links / icons (render only if present) -->
             <div class="link-bar">
               <small class="link-bar-text">
                 <% if (tile['ysph-site']) { %>
                   <a href="<%= tile['ysph-site'] %>" title="YSPH Site"><i class="bi-globe"></i></a>
                 <% } %>
+
                 <% if (tile.group) { %>
                   <a href="<%= tile.group %>" title="Group Site"><i class="bi-people-fill"></i></a>
                 <% } %>
+
                 <% if (tile.linkedin) { %>
                   <a href="<%= tile.linkedin %>" title="LinkedIn"><i class="bi-linkedin"></i></a>
                 <% } %>
+
                 <% if (tile.google_scholar) { %>
                   <a href="<%= tile.google_scholar %>" title="Google Scholar"><i class="ai ai-google-scholar"></i></a>
                 <% } %>
+
                 <% if (tile.orcid) { %>
                   <a href="<%= tile.orcid %>" title="ORCID"><i class="ai ai-orcid"></i></a>
                 <% } %>
               </small>
             </div>
+
+            <!-- Bio -->
             <p class="description"><%= tile.bio %></p>
+
+            <!-- Contact -->
             <div class="contact-info">
               <% if (tile.email) { %>
                 Email: <a href="mailto:<%= tile.email %>"><%= tile.email %></a><br>
               <% } %>
+
               <% if (tile.phone) { %>
                 Phone: <a href="tel:<%= tile.phone %>"><%= tile.phone %></a>
               <% } %>
             </div>
+
+            <!-- Profile CTA -->
             <% if (tile.profile_link) { %>
               <a class="profile-link" href="<%= tile.profile_link %>">View Full Profile</a>
             <% } %>
           </div>
         </div>
       <% }); %>
+
     <% } else { %>
+      <!-- Empty state -->
       <p>No tiles available.</p>
     <% } %>
   </div>

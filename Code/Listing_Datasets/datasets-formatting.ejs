@@ -1,37 +1,82 @@
 ```{=html}
 
+<!--
+  Template: Datasets Listing EJS
+  Purpose:
+  - Render a filterable/sortable tile grid with:
+    - 3 checkbox filter groups (categories1/2/3)
+    - Optional “info” link filtering (data-info)
+    - Sorting by title/date, plus a default sort (ranking asc, then title A–Z)
+    - “Show More” progressive reveal (initial 9 tiles, then +9 per click)
+    - Collapsible sidebar sections and a mobile sidebar toggler
+
+  Notes / dependencies:
+  - Bootstrap CSS is included below.
+  - The markup uses Bootstrap Icons classes like `bi-globe`, `bi-github`, etc.
+    Include Bootstrap Icons in <head> if not already present:
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  - Data expected (high level):
+    items[0].items = [{
+      categories1?: string[],
+      categories2?: string[],
+      categories3?: string[],
+      tiles?: [{
+        title, description, image,
+        site?, group?, github?, article?, info?, topic?,
+        "date-updated"?, ranking?
+      }]
+    }]
+  
+  Change log / features:
+  - Three categories filter with sorting by title and date updated - May 10th, 2025
+  - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
+  - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
+  - Ranking filtering on default view - Nov. 5th, 2025
+-->
+
 <head>
+  <!-- Document metadata -->
   <meta charset="UTF-8">
-  <title>Resources with Features:
-    - Three categories filter with sorting by title and date updated - May 10th, 2025
-    - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
-    - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
-    - Ranking filtering on default view - Nov. 5th, 2025
-  </title>
+
+  <!-- Page title (consider keeping <title> single-line; long notes are better as comments) -->
+  <title>Resources with Features</title>
+
+  <!-- CSS framework -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+  <!-- Optional: required for all `bi-*` icons used in the tile link bar / back-to-top -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> -->
 </head>
+
 <body>
+  <!-- Outer wrapper -->
   <div>
     <div class="main-container">
+
+      <!-- Sidebar (filters + sorting) -->
       <div class="sidebar-wrapper">
+        <!-- Mobile sidebar toggle button -->
         <button class="sidebar-toggler">☰</button>
+
         <aside class="sidebar">
-  
+          <!-- Scan all tiles to detect whether any tile has an info link -->
           <% let hasInfo = false; %>
           <% if (items && items[0].items && items[0].items.length > 0) { %>
-            <% items[0].items.forEach(function(item) { 
-              if (item.tiles) { 
-                item.tiles.forEach(function(tile) { 
-                  if (tile.info) { 
+            <% items[0].items.forEach(function(item) {
+              if (item.tiles) {
+                item.tiles.forEach(function(tile) {
+                  if (tile.info) {
                     hasInfo = true;
                   }
                 });
-              } 
-            }); 
+              }
+            });
           } %>
-  
+
+          <!-- Sorting dropdown -->
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
+              <!-- “default” = ranking asc, then title A–Z (implemented in JS) -->
               <option value="default" selected>No sorting</option>
               <option value="title-asc">Title A-Z</option>
               <option value="title-desc">Title Z-A</option>
@@ -39,392 +84,525 @@
               <option value="date-asc">Date Updated: Oldest to Newest</option>
             </select>
           </div>
-  
-          <!-- Affiliation filter -->
-          <h5 class="collapsible-header">Region and Affiliation
+
+          <!-- Filter group 1: Region and Affiliation -->
+          <h5 class="collapsible-header">
+            Region and Affiliation
             <span class="arrow">></span>
           </h5>
           <div class="collapsible-content" style="display:none;">
             <form id="categoryFilter1" class="form">
+              <!-- Build unique checkbox values from items[0].items[*].categories1 -->
               <% if (items && items[0].items && items[0].items.length > 0) { %>
                 <% const categories1 = new Set(); %>
-                <% items[0].items.forEach(function(item) { 
-                  if (item.categories1) { 
+                <% items[0].items.forEach(function(item) {
+                  if (item.categories1) {
                     item.categories1.forEach(function(cat) {
                       categories1.add(cat);
                     });
                   }
                 }); %>
+
                 <% categories1.forEach(function(category) { %>
                   <div class="checkbox-container">
-                    <input type="checkbox" name="category1" value="<%= encodeURIComponent(category) %>" id="category1-<%= encodeURIComponent(category) %>">
-                    <label for="category1-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
+                    <input
+                      type="checkbox"
+                      name="category1"
+                      value="<%= encodeURIComponent(category) %>"
+                      id="category1-<%= encodeURIComponent(category) %>">
+                    <label for="category1-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;">
+                      <%= category %>
+                    </label>
                   </div>
                 <% }); %>
               <% } %>
             </form>
           </div>
-  
+
           <br>
-  
-          <!-- Services filter -->
-          <h5 class="collapsible-header">Services Offered
+
+          <!-- Filter group 2: Services Offered -->
+          <h5 class="collapsible-header">
+            Services Offered
             <span class="arrow">></span>
           </h5>
           <div class="collapsible-content" style="display:none;">
             <form id="categoryFilter2" class="form">
+              <!-- Build unique checkbox values from categories2 -->
               <% if (items && items[0].items && items[0].items.length > 0) { %>
                 <% const categories2 = new Set(); %>
-                <% items[0].items.forEach(function(item) { 
-                  if (item.categories2) { 
+                <% items[0].items.forEach(function(item) {
+                  if (item.categories2) {
                     item.categories2.forEach(function(cat) {
                       categories2.add(cat);
                     });
                   }
                 }); %>
+
                 <% categories2.forEach(function(category) { %>
                   <div class="checkbox-container">
-                    <input type="checkbox" name="category2" value="<%= encodeURIComponent(category) %>" id="category2-<%= encodeURIComponent(category) %>">
-                    <label for="category2-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
+                    <input
+                      type="checkbox"
+                      name="category2"
+                      value="<%= encodeURIComponent(category) %>"
+                      id="category2-<%= encodeURIComponent(category) %>">
+                    <label for="category2-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;">
+                      <%= category %>
+                    </label>
                   </div>
                 <% }); %>
               <% } %>
             </form>
           </div>
-  
+
           <br>
-  
-          <!-- Data Types filter -->
-          <h5 class="collapsible-header">Data Types
+
+          <!-- Filter group 3: Data Types -->
+          <h5 class="collapsible-header">
+            Data Types
             <span class="arrow">></span>
           </h5>
           <div class="collapsible-content" style="display:none;">
             <form id="categoryFilter3" class="form">
+              <!-- Build unique checkbox values from categories3 -->
               <% if (items && items[0].items && items[0].items.length > 0) { %>
                 <% const categories3 = new Set(); %>
-                <% items[0].items.forEach(function(item) { 
-                  if (item.categories3) { 
+                <% items[0].items.forEach(function(item) {
+                  if (item.categories3) {
                     item.categories3.forEach(function(cat) {
                       categories3.add(cat);
                     });
                   }
                 }); %>
+
                 <% categories3.forEach(function(category) { %>
                   <div class="checkbox-container">
-                    <input type="checkbox" name="category3" value="<%= encodeURIComponent(category) %>" id="category3-<%= encodeURIComponent(category) %>">
-                    <label for="category3-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;"><%= category %></label>
+                    <input
+                      type="checkbox"
+                      name="category3"
+                      value="<%= encodeURIComponent(category) %>"
+                      id="category3-<%= encodeURIComponent(category) %>">
+                    <label for="category3-<%= encodeURIComponent(category) %>" style="margin-bottom: 0px;">
+                      <%= category %>
+                    </label>
                   </div>
                 <% }); %>
               <% } %>
             </form>
           </div>
-  
+
         </aside>
       </div>
-  
+
+      <!-- Main area (tiles + show more + back-to-top) -->
       <div class="main-content">
         <div class="container" id="tilesContainer">
+          <!-- Used during server-side render to hide tiles after initial threshold -->
           <% let visibleTileCount = 0; %>
-          <% items[0].items.forEach(function(item) { 
-            if (item.tiles && item.tiles.length > 0) { 
+
+          <!-- Iterate through item groups and their tiles -->
+          <% items[0].items.forEach(function(item) {
+            if (item.tiles && item.tiles.length > 0) {
               item.tiles.forEach(function(tile) { %>
-                <div class="tile <%= (visibleTileCount < 9) ? '' : 'hidden' %>" 
-                     data-categories1="<%= item.categories1 ? item.categories1.map(cat => encodeURIComponent(cat)).join(' ') : '' %>" 
-                     data-categories2="<%= item.categories2 ? item.categories2.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
-                     data-categories3="<%= item.categories3 ? item.categories3.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
-                     data-info="<%= tile.info ? 'yes' : 'no' %>"
-                     data-title="<%= tile.title %>"
-                     data-date="<%= tile['date-updated'] %>"
-                     data-ranking="<%= tile.ranking %>">
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
+                <div
+                  class="tile <%= (visibleTileCount < 9) ? '' : 'hidden' %>"
+                  data-categories1="<%= item.categories1 ? item.categories1.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
+                  data-categories2="<%= item.categories2 ? item.categories2.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
+                  data-categories3="<%= item.categories3 ? item.categories3.map(cat => encodeURIComponent(cat)).join(' ') : '' %>"
+                  data-info="<%= tile.info ? 'yes' : 'no' %>"
+                  data-title="<%= tile.title %>"
+                  data-date="<%= tile['date-updated'] %>"
+                  data-ranking="<%= tile.ranking %>">
+
+                  <!-- Tile image -->
                   <img src="<%= tile.image %>" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count"><%= tile.title %></h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description"><%= tile.description %></p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                      <% if (tile.site) { %> 
+                      <% if (tile.site) { %>
                         &nbsp;
                         <a href="<%= tile.site %>" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                      <% } %> 
-                      <% if (tile.group) { %> 
+                          <i class="bi-globe"></i>
+                        </a>
+                      <% } %>
+
+                      <% if (tile.group) { %>
                         &nbsp;
                         <a href="<%= tile.group %>" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-people-fill"></i></a> 
-                      <% } %> 
-                      <% if (tile.github) { %> 
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      <% } %>
+
+                      <% if (tile.github) { %>
                         &nbsp;
                         <a href="<%= tile.github %>" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
-                      <% } %> 
-                      <% if (tile.article) { %> 
+                          <i class="bi-github"></i>
+                        </a>
+                      <% } %>
+
+                      <% if (tile.article) { %>
                         &nbsp;
                         <a href="<%= tile.article %>" title="View publication" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-journal-text"></i></a> 
-                      <% } %> 
-                      <% if (tile.info) { %> 
+                          <i class="bi-journal-text"></i>
+                        </a>
+                      <% } %>
+
+                      <% if (tile.info) { %>
                         &nbsp;
                         <a href="<%= tile.info %>" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       <% } %>
-                      <% if (tile.topic) { %> 
-                        <p class="topic" style="margin-bottom: 5px;"><%= tile.topic %></p> 
-                      <% } else { %> 
-                        <p class="topic" style="display:none; margin-bottom: 5px;"></p> 
+
+                      <!-- Optional topic line -->
+                      <% if (tile.topic) { %>
+                        <p class="topic" style="margin-bottom: 5px;"><%= tile.topic %></p>
+                      <% } else { %>
+                        <p class="topic" style="display:none; margin-bottom: 5px;"></p>
                       <% } %>
                     </small>
                   </div>
                 </div>
+
                 <% visibleTileCount++ %>
-              <% }); 
-            } else { %> 
-              <p>No tiles found for this category.</p> 
-            <% } 
+              <% });
+            } else { %>
+              <!-- Empty-state for an item group with no tiles -->
+              <p>No tiles found for this category.</p>
+            <% }
           }); %>
         </div>
-        <button id="showMoreBtn" class="btn btn-primary" style="display: block; margin: 20px auto;">Show More</button>
-        <a id="quarto-back-to-top" title="Back to top" role="button" style="display: none;"><i class="bi bi-arrow-up"></i>Back to top</a>
+
+        <!-- Reveal more filtered tiles -->
+        <button id="showMoreBtn" class="btn btn-primary" style="display: block; margin: 20px auto;">
+          Show More
+        </button>
+
+        <!-- Back-to-top control (visibility is managed elsewhere / by CSS/JS on the page) -->
+        <a id="quarto-back-to-top" title="Back to top" role="button" style="display: none;">
+          <i class="bi bi-arrow-up"></i>Back to top
+        </a>
       </div>
     </div>
   </div>
 
   <script>
+    // Parse a date string from data-date into a JS Date object
     function parseDate(dateStr) {
       return new Date(dateStr);
     }
-    
+
+    // Dynamically clamp description lines based on title/topic line usage
     function updateLineCounts() {
       document.querySelectorAll(".tile").forEach(function (tile) {
         const h2Element = tile.querySelector(".js-line-count");
         const lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
-    
+
         const linesInH2 = Math.ceil(h2Element.scrollHeight / lineHeight);
-    
+
         const pElement = tile.querySelector("p.description");
-        pElement.style.display = '-webkit-box';
-        pElement.style.webkitBoxOrient = 'vertical';
-        pElement.style.overflow = 'hidden';
-    
+        // Use -webkit-line-clamp (requires display: -webkit-box + orient + overflow hidden)
+        pElement.style.display = "-webkit-box";
+        pElement.style.webkitBoxOrient = "vertical";
+        pElement.style.overflow = "hidden";
+
+        // Base clamp budget for description lines
         let clampValue = 10;
-    
+
+        // Reduce clamp by extra title lines beyond the first
         clampValue -= Math.max(0, linesInH2 - 1);
-    
-        const topicElement = tile.querySelector('.topic');
-        if (topicElement && topicElement.style.display !== 'none') {
+
+        // If topic is shown, reduce clamp for its extra lines too
+        const topicElement = tile.querySelector(".topic");
+        if (topicElement && topicElement.style.display !== "none") {
           const linesInTopic = Math.ceil(topicElement.scrollHeight / lineHeight);
           clampValue -= Math.max(0, linesInTopic - 1);
         }
-    
-        if (clampValue < 1) clampValue = 1; // Ensure at least one line is available for the description
-    
+
+        // Ensure at least one line remains for the description
+        if (clampValue < 1) clampValue = 1;
+
         pElement.style.webkitLineClamp = clampValue;
       });
     }
-    
+
+    // Expand/collapse filter sections in the sidebar
     function toggleCollapsible(event) {
-      const header = event.target.closest('.collapsible-header');
+      const header = event.target.closest(".collapsible-header");
       if (!header) return;
-      header.classList.toggle('active');
+
+      header.classList.toggle("active");
+
       const content = header.nextElementSibling;
-      const arrow = header.querySelector('.arrow');
+      const arrow = header.querySelector(".arrow");
+
       if (content) {
-        content.style.display = content.style.display === 'none' ? 'block' : 'none';
-        content.classList.toggle('collapsed', content.style.display === 'none');
+        content.style.display = content.style.display === "none" ? "block" : "none";
+        content.classList.toggle("collapsed", content.style.display === "none");
       }
+
       if (arrow) {
-        arrow.style.transform = content.style.display === 'none' ? 'rotate(0deg)' : 'rotate(90deg)';
+        arrow.style.transform = content.style.display === "none" ? "rotate(0deg)" : "rotate(90deg)";
       }
     }
-    
-    document.addEventListener('DOMContentLoaded', function () {
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initial line clamp + keep updated on resize
       updateLineCounts();
-      window.addEventListener('resize', updateLineCounts);
-    
-      const categoryFilter1 = document.getElementById('categoryFilter1');
-      const categoryFilter2 = document.getElementById('categoryFilter2');
-      const categoryFilter3 = document.getElementById('categoryFilter3');
-      const sortOptions = document.getElementById('sortOptions');
-      const tilesContainer = document.getElementById('tilesContainer');
-      const showMoreBtn = document.getElementById('showMoreBtn');
+      window.addEventListener("resize", updateLineCounts);
+
+      // Cache DOM references
+      const categoryFilter1 = document.getElementById("categoryFilter1");
+      const categoryFilter2 = document.getElementById("categoryFilter2");
+      const categoryFilter3 = document.getElementById("categoryFilter3");
+      const sortOptions = document.getElementById("sortOptions");
+      const tilesContainer = document.getElementById("tilesContainer");
+      const showMoreBtn = document.getElementById("showMoreBtn");
+
+      // Progressive reveal settings
       const initialLoadCount = 9; // 3 rows of 3 tiles each
-      const loadMoreCount = 3; // 1 row of 3 tiles
-      const infoCheckbox = document.getElementById('info-yes');
-      let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
-      let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
-    
-      // Function to sort by default criteria: ranking then title
+      const loadMoreCount = 9;    // 3 row of 3 tiles
+
+      // Optional “info” filter checkbox (note: element must exist in HTML to work)
+      const infoCheckbox = document.getElementById("info-yes");
+
+      // tiles = all tiles in DOM; sortedTiles = current working order
+      let tiles = Array.from(tilesContainer.querySelectorAll(".tile"));
+      let sortedTiles = [...tiles]; // Preserve original order snapshot
+
+      // Default sorting: ranking asc, then title A–Z
       function sortByDefault() {
+        // Convert ranking attribute to numeric value once per tile (if present)
         sortedTiles.forEach(tile => {
-          const rankAttr = tile.getAttribute('data-ranking');
+          const rankAttr = tile.getAttribute("data-ranking");
           if (rankAttr) {
             tile.dataset.numericRanking = parseInt(rankAttr, 10);
           }
         });
-    
+
         sortedTiles.sort((a, b) => {
-          const titleA = a.getAttribute('data-title').toLowerCase();
-          const titleB = b.getAttribute('data-title').toLowerCase();
+          const titleA = a.getAttribute("data-title").toLowerCase();
+          const titleB = b.getAttribute("data-title").toLowerCase();
           const rankingA = a.dataset.numericRanking;
           const rankingB = b.dataset.numericRanking;
-    
+
           if (rankingA !== rankingB) {
             return rankingA - rankingB;
           }
           return titleA.localeCompare(titleB);
         });
-    
+
+        // Re-append tiles to reflect new order in the DOM
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
-    
-        filterTiles(); // Apply the current filter on new sorted order
+
+        // Re-apply current filters after sorting
+        filterTiles();
       }
-      
-      // Initialize the display with the initial tiles shown
-      sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove('hidden'));
-      
-      showMoreBtn.addEventListener('click', function() {
-        let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
+
+      // Ensure the first batch is visible on load
+      sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove("hidden"));
+
+      // “Show More” reveals additional tiles that are currently filtered-in but hidden
+      showMoreBtn.addEventListener("click", function () {
+        let hiddenTiles = sortedTiles.filter(
+          tile => tile.classList.contains("hidden") && tile.classList.contains("filtered")
+        );
+
         hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
-          tile.classList.remove('hidden');
-          tile.style.display = 'block'; // Ensure display is set to block
+          tile.classList.remove("hidden");
+          tile.style.display = "block";
         });
+
         updateLineCounts();
+
+        // Hide the button when nothing more remains to show
         if (hiddenTiles.length <= loadMoreCount) {
-          showMoreBtn.style.display = 'none';
+          showMoreBtn.style.display = "none";
         }
       });
-    
+
+      // Apply checkbox filters (category1/2/3 and optional info)
       function filterTiles() {
-        const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
-        const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
-        const selectedCategories3 = Array.from(categoryFilter3.querySelectorAll('input[name="category3"]:checked')).map(input => decodeURIComponent(input.value));
-        const selectedInfo = infoCheckbox && infoCheckbox.checked ? 'yes' : 'all';
-    
+        const selectedCategories1 = Array.from(
+          categoryFilter1.querySelectorAll('input[name="category1"]:checked')
+        ).map(input => decodeURIComponent(input.value));
+
+        const selectedCategories2 = Array.from(
+          categoryFilter2.querySelectorAll('input[name="category2"]:checked')
+        ).map(input => decodeURIComponent(input.value));
+
+        const selectedCategories3 = Array.from(
+          categoryFilter3.querySelectorAll('input[name="category3"]:checked')
+        ).map(input => decodeURIComponent(input.value));
+
+        const selectedInfo = infoCheckbox && infoCheckbox.checked ? "yes" : "all";
+
         let visibleTileCount = 0;
-    
+
         sortedTiles.forEach(function (tile) {
-          const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
-          const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
-          const categories3 = (tile.getAttribute('data-categories3') || '').split(' ').map(cat => decodeURIComponent(cat));
-          const infoAvailable = tile.getAttribute('data-info');
-    
-          const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
-          const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
-          const matchesCategory3 = selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
-          const matchesInfo = selectedInfo === 'all' || infoAvailable === selectedInfo;
-    
+          // Decode stored categories from data attributes
+          const categories1 = (tile.getAttribute("data-categories1") || "")
+            .split(" ")
+            .map(cat => decodeURIComponent(cat));
+
+          const categories2 = (tile.getAttribute("data-categories2") || "")
+            .split(" ")
+            .map(cat => decodeURIComponent(cat));
+
+          const categories3 = (tile.getAttribute("data-categories3") || "")
+            .split(" ")
+            .map(cat => decodeURIComponent(cat));
+
+          const infoAvailable = tile.getAttribute("data-info");
+
+          // Match logic: OR within each group, AND across groups
+          const matchesCategory1 =
+            selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
+          const matchesCategory2 =
+            selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
+          const matchesCategory3 =
+            selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
+          const matchesInfo = selectedInfo === "all" || infoAvailable === selectedInfo;
+
           if (matchesCategory1 && matchesCategory2 && matchesCategory3 && matchesInfo) {
-            tile.classList.add('filtered');
+            tile.classList.add("filtered");
+
+            // Enforce progressive reveal: show only first N visible matches
             if (visibleTileCount < initialLoadCount) {
-              tile.classList.remove('hidden');
-              tile.style.display = 'block'; // Ensure display is set to block
+              tile.classList.remove("hidden");
+              tile.style.display = "block";
               visibleTileCount++;
             } else {
-              tile.classList.add('hidden');
-              tile.style.display = 'none'; // Hide others
+              tile.classList.add("hidden");
+              tile.style.display = "none";
             }
           } else {
-            tile.classList.remove('filtered');
-            tile.classList.add('hidden');
-            tile.style.display = 'none'; // Hide if it doesn't match the filter
+            // Filter out
+            tile.classList.remove("filtered");
+            tile.classList.add("hidden");
+            tile.style.display = "none";
           }
         });
-    
+
         updateLineCounts();
-    
-        if (sortedTiles.filter(tile => tile.classList.contains('hidden')).length === 0) {
-          showMoreBtn.style.display = 'none';
+
+        // Toggle show-more button based on whether any tiles remain hidden
+        if (sortedTiles.filter(tile => tile.classList.contains("hidden")).length === 0) {
+          showMoreBtn.style.display = "none";
         } else {
-          showMoreBtn.style.display = 'block';
+          showMoreBtn.style.display = "block";
         }
       }
-    
+
+      // Non-default sorting options
       function sortTiles() {
         const sortValue = sortOptions.value;
+
         // Convert ranks to numbers before sorting
         sortedTiles.forEach(tile => {
-          const rankAttr = tile.getAttribute('data-ranking');
+          const rankAttr = tile.getAttribute("data-ranking");
           if (rankAttr) {
             tile.dataset.numericRanking = parseInt(rankAttr, 10);
           }
         });
-    
+
         sortedTiles.sort((a, b) => {
-          const titleA = a.getAttribute('data-title').toLowerCase();
-          const titleB = b.getAttribute('data-title').toLowerCase();
-          const dateA = parseDate(a.getAttribute('data-date'));
-          const dateB = parseDate(b.getAttribute('data-date'));
+          const titleA = a.getAttribute("data-title").toLowerCase();
+          const titleB = b.getAttribute("data-title").toLowerCase();
+          const dateA = parseDate(a.getAttribute("data-date"));
+          const dateB = parseDate(b.getAttribute("data-date"));
           const rankingA = a.dataset.numericRanking;
           const rankingB = b.dataset.numericRanking;
-    
-          if (sortValue === 'title-asc') {
+
+          if (sortValue === "title-asc") {
             return titleA.localeCompare(titleB);
-          } else if (sortValue === 'title-desc') {
+          } else if (sortValue === "title-desc") {
             return titleB.localeCompare(titleA);
-          } else if (sortValue === 'date-asc') {
+          } else if (sortValue === "date-asc") {
             return dateA - dateB;
-          } else if (sortValue === 'date-desc') {
+          } else if (sortValue === "date-desc") {
             return dateB - dateA;
           } else {
-            // Default sorting: by ranking and then by title if same ranking
+            // Fallback: ranking then title
             if (rankingA !== rankingB) {
               return rankingA - rankingB;
             }
             return titleA.localeCompare(titleB);
           }
         });
-    
+
+        // Apply new DOM order
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
-    
-        filterTiles(); // Apply the current filter on new sorted order
+
+        // Re-apply filters after sorting
+        filterTiles();
       }
-    
-      categoryFilter1.addEventListener('change', filterTiles);
-      categoryFilter2.addEventListener('change', filterTiles);
-      categoryFilter3.addEventListener('change', filterTiles);
+
+      // Hook up filter listeners
+      categoryFilter1.addEventListener("change", filterTiles);
+      categoryFilter2.addEventListener("change", filterTiles);
+      categoryFilter3.addEventListener("change", filterTiles);
       if (infoCheckbox) {
-        infoCheckbox.addEventListener('change', filterTiles);
+        infoCheckbox.addEventListener("change", filterTiles);
       }
-      sortOptions.addEventListener('change', function() {
-        if (sortOptions.value === 'default') {
+
+      // Hook up sorting listener
+      sortOptions.addEventListener("change", function () {
+        if (sortOptions.value === "default") {
           sortByDefault();
         } else {
           sortTiles();
         }
       });
-    
-      // Initial sort by default (ranking then title)
+
+      // Initial sort: default (ranking then title)
       sortByDefault();
-      
-      // Add collapsible functionality to all collapsible headers
-      document.querySelectorAll('.collapsible-header').forEach(header => {
-        header.addEventListener('click', toggleCollapsible);
-        // Initial arrow state
-        const arrow = header.querySelector('.arrow');
-        header.nextElementSibling.style.display = 'none'; // Collapse by default
-        if (arrow) arrow.style.transform = 'rotate(0deg)'; // Arrow pointing down initially
+
+      // Initialize collapsible behavior
+      document.querySelectorAll(".collapsible-header").forEach(header => {
+        header.addEventListener("click", toggleCollapsible);
+
+        // Start collapsed
+        const arrow = header.querySelector(".arrow");
+        header.nextElementSibling.style.display = "none";
+        if (arrow) arrow.style.transform = "rotate(0deg)";
       });
     });
-    
-    // Media view with folded sidebar
-    document.addEventListener('DOMContentLoaded', () => {
-      const sidebarToggler = document.querySelector('.sidebar-toggler');
-      const sidebarWrapper = document.querySelector('.sidebar-wrapper');
-    
-      console.log('sidebarToggler:', sidebarToggler); // Log for debugging
-      console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
-    
+
+    // Mobile view: fold/unfold sidebar wrapper
+    document.addEventListener("DOMContentLoaded", () => {
+      const sidebarToggler = document.querySelector(".sidebar-toggler");
+      const sidebarWrapper = document.querySelector(".sidebar-wrapper");
+
+      console.log("sidebarToggler:", sidebarToggler);
+      console.log("sidebarWrapper:", sidebarWrapper);
+
       if (sidebarToggler && sidebarWrapper) {
-        sidebarToggler.addEventListener('click', () => {
-          sidebarWrapper.classList.toggle('expanded');
+        sidebarToggler.addEventListener("click", () => {
+          sidebarWrapper.classList.toggle("expanded");
         });
       } else {
-        console.error('Sidebar toggler or wrapper not found');
+        console.error("Sidebar toggler or wrapper not found");
       }
     });
-    </script>
+  </script>
 </body>
 
 ```

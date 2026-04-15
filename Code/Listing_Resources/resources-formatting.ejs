@@ -1,12 +1,55 @@
 ```{=html}
 
+<!--
+  Template: Resources Listing EJS
+
+  Purpose:
+  - Render a filterable/sortable tile grid with:
+    - 2 checkbox filter groups (categories1 + categories2)
+    - Sorting by title/date, plus a default sort (ranking asc, then title A–Z) shown as “No sorting”
+    - “Show More” progressive reveal (initial 9 tiles, then +9 per click)
+    - Collapsible sidebar sections and a mobile sidebar toggler
+    - Dynamic text clamping so tile descriptions fit based on title/topic line usage
+
+  Notes / dependencies:
+  - Bootstrap CSS is included below.
+  - The markup uses Bootstrap Icons classes like `bi-globe`, `bi-people-fill`, `bi-github`, etc.
+    Include Bootstrap Icons in <head> if not already present:
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  - Data expected (high level):
+    items[0].items = [{
+      categories1?: string[],
+      categories2?: string[],
+      tiles?: [{
+        title, description, image,
+        site?, group?, github?, article?, info?, topic?,
+        "date-updated"?, ranking?
+      }]
+    }]
+
+  Implementation details (as written):
+  - Each .tile stores filter/sort metadata in data-attributes:
+    data-categories1, data-categories2, data-ranking, data-title, data-date
+  - Filtering is OR-within each group and AND-across groups:
+    (matches any selected categories1 OR none selected) AND (matches any selected categories2 OR none selected)
+  - “Show More” reveals only tiles that are both .hidden and .filtered.
+
+  Change log / features:
+  - Two categories filter with sorting by title and date updated - May 10th, 2025
+  - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
+  - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
+-->
 <head>
   <meta charset="UTF-8">
+
+  <!-- Page title: describes current feature set + dated milestones -->
   <title>Resources with Features:
     - Two categories filter with sorting by title and date updated - May 10th, 2025
     - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
     - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
   </title>
+
+  <!-- Bootstrap (layout + base styling) -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
@@ -19,6 +62,7 @@
           <!-- Sorting Options -->
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
+              <!-- "default" means: ranking ASC, then title A-Z -->
               <option value="default" selected>No sorting</option>
               <option value="title-asc">Title A-Z</option>
               <option value="title-desc">Title Z-A</option>
@@ -26,7 +70,7 @@
               <option value="date-asc">Date Updated: Oldest to Newest</option>
             </select>
           </div>
-  
+
           <!-- Affiliation filter -->
           <h5 class="collapsible-header">Region and Affiliation
             <span class="arrow">></span>
@@ -36,8 +80,8 @@
               <!-- Dynamically generated category items will go here -->
               <% if (items && items[0].items && items[0].items.length > 0) { %>
                 <% const categories1 = new Set(); %>
-                <% items[0].items.forEach(function(item) { 
-                  if (item.categories1) { 
+                <% items[0].items.forEach(function(item) {
+                  if (item.categories1) {
                     item.categories1.forEach(function(cat) {
                       categories1.add(cat);
                     });
@@ -52,9 +96,9 @@
               <% } %>
             </form>
           </div>
-  
+
           <br>
-  
+
           <!-- Services filter -->
           <h5 class="collapsible-header">Services Offered
             <span class="arrow">></span>
@@ -64,8 +108,8 @@
               <!-- Dynamically generated category items will go here -->
               <% if (items && items[0].items && items[0].items.length > 0) { %>
                 <% const categories2 = new Set(); %>
-                <% items[0].items.forEach(function(item) { 
-                  if (item.categories2) { 
+                <% items[0].items.forEach(function(item) {
+                  if (item.categories2) {
                     item.categories2.forEach(function(cat) {
                       categories2.add(cat);
                     });
@@ -82,11 +126,11 @@
           </div>
         </aside>
       </div>
-  
+
       <div class="main-content">
         <div class="container" id="tilesContainer">
           <% let visibleTileCount = 0; %>
-          <% items[0].items.forEach(function(item) { 
+          <% items[0].items.forEach(function(item) {
             if (item.tiles && item.tiles.length > 0) {
               item.tiles.forEach(function(tile) { %>
                 <div class="tile <%= (visibleTileCount < 9) ? '' : 'hidden' %>"
@@ -134,51 +178,58 @@
                   </div>
                 </div>
                 <% visibleTileCount++; %>
-              <% }); 
+              <% });
             } else { %>
               <p>No tiles found for this category.</p>
-            <% } 
+            <% }
           }); %>
         </div>
+
+        <!-- "Show More" reveals additional filtered tiles in batches -->
         <button id="showMoreBtn" class="btn btn-primary" style="display: block; margin: 20px auto;">Show More</button>
+
+        <!-- Back-to-top control -->
         <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top" title="Back to top"><i class="bi bi-arrow-up"></i>Back to top</a>
       </div>
     </div>
   </div>
-  
+
   <script>
+    // Parse date string from data-date attribute
     function parseDate(dateStr) {
       return new Date(dateStr);
     }
-    
+
+    // Clamp description lines based on title/topic line usage (visual consistency)
     function updateLineCounts() {
       document.querySelectorAll(".tile").forEach(function(tile) {
         const h2Element = tile.querySelector(".js-line-count");
         const lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
-    
+
         const linesInH2 = Math.ceil(h2Element.scrollHeight / lineHeight);
-    
+
         const pElement = tile.querySelector("p.description");
         pElement.style.display = '-webkit-box';
         pElement.style.webkitBoxOrient = 'vertical';
         pElement.style.overflow = 'hidden';
-    
+
         let clampValue = 10;
-    
+
         clampValue -= Math.max(0, linesInH2 - 1);
-    
+
         const topicElement = tile.querySelector('.topic');
         if (topicElement && topicElement.style.display !== 'none') {
           const linesInTopic = Math.ceil(topicElement.scrollHeight / lineHeight);
           clampValue -= Math.max(0, linesInTopic - 1);
         }
-    
+
         if (clampValue < 1) clampValue = 1; // Ensure at least one line is available for the description
-    
+
         pElement.style.webkitLineClamp = clampValue;
       });
     }
-    
+
+    // Sidebar collapsible sections (filters)
     function toggleCollapsible(event) {
       const header = event.target.closest('.collapsible-header');
       if (!header) return;
@@ -192,24 +243,25 @@
         arrow.style.transform = content.style.display === 'none' ? 'rotate(0deg)' : 'rotate(90deg)';
       }
     }
-    
+
     document.addEventListener('DOMContentLoaded', function () {
       updateLineCounts();
       window.addEventListener('resize', updateLineCounts);
-    
+
       const categoryFilter1 = document.getElementById('categoryFilter1');
       const categoryFilter2 = document.getElementById('categoryFilter2');
       const sortOptions = document.getElementById('sortOptions');
       const tilesContainer = document.getElementById('tilesContainer');
       const tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
-    
-      // Hold the sorted order of tiles
+
+      // Working list reflecting the current sort order
       let sortedTiles = [...tiles];
-    
+
       const showMoreBtn = document.getElementById('showMoreBtn');
       const initialLoadCount = 9; // 5 rows
-      const loadMoreCount = 3; // 1 row at a time
-    
+      const loadMoreCount = 9; // 3 row at a time
+
+      // "Show More" reveals the next batch of currently-filtered tiles
       showMoreBtn.addEventListener('click', function() {
         let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
         hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
@@ -221,20 +273,21 @@
           showMoreBtn.style.display = 'none';
         }
       });
-    
+
+      // Apply category1/category2 filters and enforce initial visible count
       function filterTiles() {
         const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
         const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
-    
+
         let visibleTileCount = 0;
-    
+
         sortedTiles.forEach(function (tile) {
           const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
           const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
-    
+
           const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
           const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
-    
+
           if (matchesCategory1 && matchesCategory2) {
             tile.classList.add('filtered');
             if (visibleTileCount < initialLoadCount) {
@@ -251,17 +304,18 @@
             tile.style.display = 'none'; // Hide if it doesn't match the filter
           }
         });
-    
+
         updateLineCounts();
-    
+
+        // Toggle "Show More" visibility based on whether anything remains hidden
         if (sortedTiles.filter(tile => tile.classList.contains('hidden')).length === 0) {
           showMoreBtn.style.display = 'none';
         } else {
           showMoreBtn.style.display = 'block';
         }
       }
-    
-      // Function to sort by ranking then title
+
+      // Default sort: ranking ASC then title A-Z
       function sortByDefault() {
         sortedTiles.forEach(tile => {
           const rankAttr = tile.getAttribute('data-ranking');
@@ -269,30 +323,30 @@
             tile.dataset.numericRanking = parseInt(rankAttr, 10);
           }
         });
-    
+
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
           const titleB = b.getAttribute('data-title').toLowerCase();
           const rankingA = a.dataset.numericRanking || 0;
           const rankingB = b.dataset.numericRanking || 0;
-    
+
           if (rankingA !== rankingB) {
             return rankingA - rankingB;
           }
           return titleA.localeCompare(titleB);
         });
-    
-        // Append sorted tiles back into the container
+
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
-    
-        filterTiles(); // Apply the current filter on new sorted order
+
+        filterTiles();
       }
-    
+
+      // Sort handler for the dropdown
       function sortTiles() {
         const sortValue = sortOptions.value;
-    
+
         sortedTiles.sort((a, b) => {
           const titleA = a.getAttribute('data-title').toLowerCase();
           const titleB = b.getAttribute('data-title').toLowerCase();
@@ -300,7 +354,7 @@
           const dateB = parseDate(b.getAttribute('data-date'));
           const rankingA = a.dataset.numericRanking || 0;
           const rankingB = b.dataset.numericRanking || 0;
-    
+
           if (sortValue === 'title-asc') {
             return titleA.localeCompare(titleB);
           } else if (sortValue === 'title-desc') {
@@ -315,37 +369,35 @@
             }
             return titleA.localeCompare(titleB);
           }
-    
+
           return 0;
         });
-    
+
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
-    
-        filterTiles(); // Apply the current filter on new sorted order
+
+        filterTiles();
       }
-    
+
       categoryFilter1.addEventListener('change', filterTiles);
       categoryFilter2.addEventListener('change', filterTiles);
       sortOptions.addEventListener('change', sortTiles);
-    
-      filterTiles(); // Apply filters initially after the DOM is ready
-    
-      // Initial sort by default (ranking then title)
+
+      // Initial state
+      filterTiles();
       sortByDefault();
-    
-      // Add collapsible functionality to all collapsible headers
+
+      // Enable collapsibles and start them collapsed
       document.querySelectorAll('.collapsible-header').forEach(header => {
         header.addEventListener('click', toggleCollapsible);
-        // Initial arrow state
         const arrow = header.querySelector('.arrow');
-        header.nextElementSibling.style.display = 'none'; // Collapse by default
-        if (arrow) arrow.style.transform = 'rotate(0deg)'; // Arrow pointing down initially
+        header.nextElementSibling.style.display = 'none';
+        if (arrow) arrow.style.transform = 'rotate(0deg)';
       });
     });
-    
-    // Media view with folded sidebar
+
+    // Mobile/compact view: fold/unfold sidebar
     document.addEventListener('DOMContentLoaded', () => {
       const sidebarToggler = document.querySelector('.sidebar-toggler');
       const sidebarWrapper = document.querySelector('.sidebar-wrapper');
@@ -357,7 +409,7 @@
         console.error('Sidebar toggler or wrapper not found');
       }
     });
-    </script>
+  </script>
 </body>
 
 ```

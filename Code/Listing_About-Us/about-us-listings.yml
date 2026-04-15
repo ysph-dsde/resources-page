@@ -1,18 +1,55 @@
-# -----------
-# yaml listing for the Datasets page in the Yale School of 
-# Public Health (YSPH) Resource Navigation Tool github.io page.
-# 
-# Filter by three categories: 
-#   1. Region and/or affiliation 
-#   2. Dataset content type
-#   3. Accessibility
-# 
-# Sort by title and date updated.
-# 
+# =============================================================================
+# Yale School of Public Health (YSPH)
+# Resource Navigation Tool — About Us Page (github.io)
+# YAML listing documentation
+# =============================================================================
+#
+# Overview
+# --------
+# This file defines the YAML listing that populates the About Us page. Entries
+# are rendered as people/profile tiles in the order they appear under `items`
+# (left-to-right, then continuing on subsequent rows).
+#
+# Author / Maintenance
+# --------------------
 # Author: Shelby Golden, M.S.
-#   Date: May 10th, 2025
-# 
-# Last Updated: 
+# Created: May 10, 2025
+#
+# Last updated: April 15, 2026
+# Last updated by: Shelby Golden
+#
+# Adding new tiles (YAML / data file)
+# ----------------------------------
+#   - Add new entries under `items`.
+#   - Tiles display in listing order (left-to-right).
+#
+# Tile fields
+# -----------
+# Required:
+#   - name
+#   - titles
+#   - bio
+#   - image (headshot)
+#   - date-added
+#   - date-updated
+#
+# Optional fields (links/icons):
+#   - YSPH site: Beatrix webpage
+#   - Group site: Lab group webpage
+#   - LinkedIn
+#   - Google Scholar
+#   - ORCID: URL containing the 16-digit ORCID iD
+#
+# Optional fields (bio/contact):
+#   - email
+#   - phone
+#
+# Editing existing tiles
+# ----------------------
+#   - Confirm any new/updated links work.
+#   - Update the tile’s `date-updated` value.
+#   - Update the page-level “Last updated” text at the top of the page.
+# =============================================================================
 
 items:
   tiles:

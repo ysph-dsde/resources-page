@@ -11,7 +11,6 @@ listing:
     filter-ui: false
 ---
 
-
 ::: {.column-screen}
 ```{=html}
 <div class="alt_header">

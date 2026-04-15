@@ -21,13 +21,13 @@ website:
         href: Pages/resources.qmd
       - text: "Datasets"
         href: Pages/datasets.qmd
-      - text: "Feedback"
+      - text: "Improve This Site"
         menu:
-          - text: "For Yale Affiliates"
+          - text: "Share Feedback"
             href: https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u
             target: _blank
-          - text: "For Non-Yale Affiliates"
-            href: https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u
+          - text: "Propose an Enhancement"
+            href: https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_cFPVTzailrPXep8
             target: _blank
       - text: "About Us"
         href: Pages/about-us.qmd

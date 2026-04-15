@@ -1,43 +1,75 @@
-# -----------
-# yaml listing for the Datasets page in the Yale School of 
-# Public Health (YSPH) Resource Navigation Tool github.io page.
+# =============================================================================
+# Yale School of Public Health (YSPH)
+# Resource Navigation Tool — Datasets Page (github.io)
+# YAML listing documentation
+# =============================================================================
 # 
+# Overview
+# --------
+# This file defines the YAML listing that populates the Datasets page. Content
+# is rendered by an EJS template into a filterable/sortable grid of “tiles”.
 # 
+# Filter by two categories: 
+#   1. Region and/or affiliation 
+#   2. Dataset content type
+#   3. Accessibility (e.g., restricted-use, license)
+# 
+# Author / Maintenance
+# --------------------
 # Author: Shelby Golden, M.S.
 #   Date: May 10th, 2025
 # 
 # Date last updated: Jan. 20th, 2026
 #   Last updated by: Shelby Golden
+#
+# UI behavior (EJS template integration)
+# -------------------------------------
+# Filtering:
+#   - Filters apply across all three groups.
+#   - Within a group: matching is “OR” across selected checkboxes.
+#   - Across groups: matching is “AND” (tile must satisfy each active group).
+#
+# Sorting:
+#   - User-selectable sorting by:
+#       * title
+#       * date-updated
+#   - Default sorting (“No sorting” option):
+#       * ranking (ascending), then title (A–Z)
+#
+# Adding new tiles
+# ---------------
+# Structure:
+#   - Under `items`, each entry groups tiles that share the same three categories.
+#   - Grouping rule:
+#       * Put tiles with the SAME (Region and/or affiliation, Services offered) 
+#         together under the same `tiles:` list.
+#       * Result: those tiles will filter together when users select any
+#         combination of the three category groups.
+#
+# Required tile fields (under `tiles: - title: ...`)
+# --------------------------------------------------
+#   - title
+#   - description
+#   - date-added
+#   - date-updated
+#   - ranking
+#   - image
+#   - topic (used to display the services offered on the tile)
 # 
-# 
-# Filter/search behavior with the ejs file:
-#   - Filter by three categories: 1. region and/or affiliation, 2. dataset 
-#     content type, and 3. accessibility (i.e. restricted-use, license)
-#   - Sort tiles by "title" and "date-updated". The user can
-#     control how these two characteristics are sorted.
-#   - Default sorting of the tiles is by "ranking" (ascending) then "title"
-#     (A-Z)
-# 
-# 
-# When adding new tiles:
-#   - Under "items" each entry requires association with all three categories
-#     and metadata that gets added under "tiles" |-> "- title: ** ".
-#   - Group tiles with the SAME three categories together under the same "tiles".
-#     This causes all tiles listed under that subsection to get filtered together
-#     when the user selectes any or all three categories.
-#   - Mandatory "tiles" |-> "- title: ** " fields: "title", "description", 
-#     "date-added", "date-updated", "ranking," "image", "topic" to list the 
-#     second category.
-#   - Opional "tiles" |-> "- title: ** " fields: "site" for the main webpage for 
-#     the source, "group" for the lab or group webpage who provides the source,
-#     "github" for the codebase repository, "article" if there primary articles
-#     presenting the resource by the creators, and "info" that links to an
-#     internal page with additional details about the resource.
-# 
-# When editing existing tiles:
-#   - Ensure that the new links work as expected.
-#   - Change the "date-updated" entry for the tile you edited.
-#   - Change the "last updated" sections at the top of the page.
+# Optional tile fields
+# --------------------
+#   - site: main source webpage
+#   - group: lab/group webpage providing the resource
+#   - github: code repository
+#   - article: primary publication(s) describing the resource
+#   - info: internal page with additional details
+#
+# Editing existing tiles
+# ----------------------
+#   - Verify any new/changed links work as expected.
+#   - Update the tile’s `date-updated`.
+#   - Update the “Last updated” metadata in the header comments above.
+# =============================================================================
 
 
 items:
