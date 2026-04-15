@@ -219,17 +219,17 @@ window.Quarto = {
 <span class="menu-text">Datasets</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Feedback</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-improve-this-site" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Improve This Site</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-improve-this-site">    
         <li>
     <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
- <span class="dropdown-text">For Yale Affiliates</span></a>
+ <span class="dropdown-text">Share Feedback</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
- <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+    <a class="dropdown-item" href="https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_cFPVTzailrPXep8" target="_blank">
+ <span class="dropdown-text">Propose an Enhancement</span></a>
   </li>  
     </ul>
   </li>
@@ -360,123 +360,207 @@ Each resource is designed to empower YSPH students, staff, and faculty to excel 
 </div>
 <div id="listing-contributors" class="column-screen-inset quarto-listing quarto-listing-container-custom">
 
+<!--
+  Template: About Us People Listing EJS
 
+  Purpose:
+  - Render a responsive “people” tile grid (image + name + titles + links + bio + contact + optional profile CTA).
+
+  Notes / dependencies:
+  - Bootstrap CSS is included below.
+  - Icons used:
+    - Bootstrap Icons classes: `bi-globe`, `bi-people-fill`, `bi-linkedin`
+      Include Bootstrap Icons in <head> if not already present:
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    - Academicons (already included below): `ai-google-scholar-square`, `ai-orcid`
+
+  Data expected (high level):
+  - items[0].items.tiles = [{
+      name, image, titles, bio,
+      "ysph-site"?, group?, linkedin?, google_scholar?, orcid?,
+      email?, phone?, profile_link?
+    }]
+
+  Rendering behavior:
+  - Only renders tiles when `items[0].items.tiles` exists; otherwise prints “No tiles available.”
+  - Link bar shows only the icons for links present on each tile.
+  - Contact info shows email/phone only when present.
+  - “View Full Profile” link is shown only when `profile_link` exists.
+-->
+
+
+  <!-- Document metadata / dependencies -->
   <meta charset="UTF-8">
   <title>Resources with Features</title>
+
+  <!-- CSS frameworks / icon packs -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 
 
+
   <div class="tile-container">
+    <!-- Guard: ensure tiles exist before iterating -->
     
+
+      <!-- Render one tile per entry -->
       
         <div class="tile">
+          <!-- Image -->
           <div class="img-container">
             <img src="../Images/People/bhramar-mukherjee.jpeg" alt="Image for Bhramar Mukherjee, PhD">
           </div>
+
           <div class="tile-content">
+            <!-- Name / title -->
             <h2 class="anchored">Bhramar Mukherjee, PhD</h2>
             <p class="title-paragraph">Senior Associate Dean of Public Health Data Science and Data Equity; Anna M.R. Lauder Professor of Biostatistics; Professor of Epidemiology (Chronic Diseases) and of Statistics and Data Science; Affiliated Faculty, Yale Institute for Global Health
 </p>
+
+            <!-- Links / icons (render only if present) -->
             <div class="link-bar">
               <small class="link-bar-text">
                 
                   <a href="https://ysph.yale.edu/profile/bhramar-mukherjee/" title="YSPH Site"><i class="bi-globe"></i></a>
                 
+
                 
                   <a href="https://ysph-dsde.github.io/mukherjee-lab/" title="Group Site"><i class="bi-people-fill"></i></a>
                 
+
                 
                   <a href="https://www.linkedin.com/in/bhramar-mukherjee-483810320/" title="LinkedIn"><i class="bi-linkedin"></i></a>
                 
+
                 
+
                 
               </small>
             </div>
+
+            <!-- Bio -->
             <p class="description">Professor Bhramar Mukherjee is the Anna M.R. Lauder Professor of Biostatistics and Professor of Chronic Disease Epidemiology at the Yale School of Public Health (YSPH). Professor Mukherjee serves as the inaugural Senior Associate Dean of Public Health Data Science and Data Equity at YSPH. She holds a secondary appointment in the Department of Statistics and Data Science and is affiliated with the MacMillan Center and the Institute for the Foundations of Data Science. She serves on the Yale Cancer Center Director’s cabinet.
 </p>
+
+            <!-- Contact -->
             <div class="contact-info">
               
                 Email: <a href="mailto:bhramar.mukherjee@yale.edu">bhramar.mukherjee@yale.edu</a><br>
               
+
               
                 Phone: <a href="tel:203-737-8644">203-737-8644</a>
               
             </div>
+
+            <!-- Profile CTA -->
             
           </div>
         </div>
       
         <div class="tile">
+          <!-- Image -->
           <div class="img-container">
             <img src="../Images/People/michaela-dinan.jpeg" alt="Image for Michaela Dinan, PhD">
           </div>
+
           <div class="tile-content">
+            <!-- Name / title -->
             <h2 class="anchored">Michaela Dinan, PhD</h2>
             <p class="title-paragraph">Associate Professor Tenure; Co-Leader, Cancer Prevention and Control, Yale Cancer Center; Associate Director for Research Training and Education, Yale Cancer Center
 </p>
+
+            <!-- Links / icons (render only if present) -->
             <div class="link-bar">
               <small class="link-bar-text">
                 
                   <a href="https://ysph.yale.edu/profile/michaela-dinan/" title="YSPH Site"><i class="bi-globe"></i></a>
                 
+
                 
+
                 
+
                 
+
                 
               </small>
             </div>
+
+            <!-- Bio -->
             <p class="description">Dr. Michaela Dinan is an Associate Professor of Epidemiology in the Yale School of Public Health, and Co-Leader of the Cancer Prevention and Control Research Program at the Yale Comprehensive Cancer Center, Yale School of Medicine. She is also a member of the Cancer Outcomes, Public Policy, and Effectiveness Research (COPPER) Center. Dr. Dinan has extensive research expertise in leveraging existing real-world data sources as well as novel data linkages to examine oncology outcomes.
 </p>
+
+            <!-- Contact -->
             <div class="contact-info">
               
                 Email: <a href="mailto:michaela.dinan@yale.edu">michaela.dinan@yale.edu</a><br>
               
+
               
                 Phone: <a href="tel:203-785-7124">203-785-7124</a>
               
             </div>
+
+            <!-- Profile CTA -->
             
           </div>
         </div>
       
         <div class="tile">
+          <!-- Image -->
           <div class="img-container">
             <img src="../Images/People/shelby-golden.jpeg" alt="Image for Shelby Golden, M.S.">
           </div>
+
           <div class="tile-content">
+            <!-- Name / title -->
             <h2 class="anchored">Shelby Golden, M.S.</h2>
             <p class="title-paragraph">Data Scientist I
 </p>
+
+            <!-- Links / icons (render only if present) -->
             <div class="link-bar">
               <small class="link-bar-text">
                 
                   <a href="https://ysph.yale.edu/profile/shelby-golden/" title="YSPH Site"><i class="bi-globe"></i></a>
                 
+
                 
                   <a href="https://ysph-dsde.github.io/mukherjee-lab/" title="Group Site"><i class="bi-people-fill"></i></a>
                 
+
                 
                   <a href="https://www.linkedin.com/in/shelby-golden/" title="LinkedIn"><i class="bi-linkedin"></i></a>
                 
+
                 
+
                 
               </small>
             </div>
+
+            <!-- Bio -->
             <p class="description">Shelby Golden is a data scientist with a background in computational mathematics, molecular biology, and biochemistry. She holds a Master of Science in Applied Computational Mathematics from Johns Hopkins University and dual Bachelor of Science degrees in Molecular, Cellular, Developmental Biology and Biochemistry with a minor in Engineering in Applied Mathematics.
 </p>
+
+            <!-- Contact -->
             <div class="contact-info">
               
                 Email: <a href="mailto:shelby.golden@yale.edu">shelby.golden@yale.edu</a><br>
               
+
               
                 Phone: <a href="tel:203-737-8644">203-737-8644</a>
               
             </div>
+
+            <!-- Profile CTA -->
             
           </div>
         </div>
       
+
     
   </div>
 

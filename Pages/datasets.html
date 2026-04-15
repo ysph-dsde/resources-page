@@ -219,17 +219,17 @@ window.Quarto = {
 <span class="menu-text">Datasets</span></a>
   </li>  
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-feedback" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Feedback</span>
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-improve-this-site" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Improve This Site</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-feedback">    
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-improve-this-site">    
         <li>
     <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UMFpGM1dIUlRTSlE2OUtFU1FKSE9CWk1XWi4u" target="_blank">
- <span class="dropdown-text">For Yale Affiliates</span></a>
+ <span class="dropdown-text">Share Feedback</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="https://forms.office.com/Pages/ResponsePage.aspx?id=u76M3Tkh-E20EU4-h6vrXH-TvKDg8gZHqoE3FAMavy5UNEROTzJISElXVzFLRjFLSDA2UE5DNzVMUi4u" target="_blank">
- <span class="dropdown-text">For Non-Yale Affiliates</span></a>
+    <a class="dropdown-item" href="https://yalesurvey.ca1.qualtrics.com/jfe/form/SV_cFPVTzailrPXep8" target="_blank">
+ <span class="dropdown-text">Propose an Enhancement</span></a>
   </li>  
     </ul>
   </li>
@@ -671,29 +671,74 @@ window.Quarto = {
   </script>
 <div class="quarto-listing quarto-listing-container-custom" id="listing-listing-1">
 
+<!--
+  Template: Datasets Listing EJS
+  Purpose:
+  - Render a filterable/sortable tile grid with:
+    - 3 checkbox filter groups (categories1/2/3)
+    - Optional “info” link filtering (data-info)
+    - Sorting by title/date, plus a default sort (ranking asc, then title A–Z)
+    - “Show More” progressive reveal (initial 9 tiles, then +9 per click)
+    - Collapsible sidebar sections and a mobile sidebar toggler
 
+  Notes / dependencies:
+  - Bootstrap CSS is included below.
+  - The markup uses Bootstrap Icons classes like `bi-globe`, `bi-github`, etc.
+    Include Bootstrap Icons in <head> if not already present:
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  - Data expected (high level):
+    items[0].items = [{
+      categories1?: string[],
+      categories2?: string[],
+      categories3?: string[],
+      tiles?: [{
+        title, description, image,
+        site?, group?, github?, article?, info?, topic?,
+        "date-updated"?, ranking?
+      }]
+    }]
+  
+  Change log / features:
+  - Three categories filter with sorting by title and date updated - May 10th, 2025
+  - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
+  - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
+  - Ranking filtering on default view - Nov. 5th, 2025
+-->
+
+
+  <!-- Document metadata -->
   <meta charset="UTF-8">
-  <title>Resources with Features:
-    - Three categories filter with sorting by title and date updated - May 10th, 2025
-    - Show more with starting at 5 rows of tiles and back-to-top - June 11th, 2025
-    - Default sorting by ranking (ascending) then title (A-Z) called "No sorting" - Sept. 11th, 2025
-    - Ranking filtering on default view - Nov. 5th, 2025
-  </title>
+
+  <!-- Page title (consider keeping <title> single-line; long notes are better as comments) -->
+  <title>Resources with Features</title>
+
+  <!-- CSS framework -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
+  <!-- Optional: required for all `bi-*` icons used in the tile link bar / back-to-top -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"> -->
 
+
+
+  <!-- Outer wrapper -->
   <div>
     <div class="main-container">
+
+      <!-- Sidebar (filters + sorting) -->
       <div class="sidebar-wrapper">
+        <!-- Mobile sidebar toggle button -->
         <button class="sidebar-toggler">☰</button>
+
         <aside class="sidebar">
-  
+          <!-- Scan all tiles to detect whether any tile has an info link -->
           
           
             
-  
+
+          <!-- Sorting dropdown -->
           <div class="sort-wrapper">
             <select id="sortOptions" class="form-control" style="width: 94%;">
+              <!-- “default” = ranking asc, then title A–Z (implemented in JS) -->
               <option value="default" selected="">No sorting</option>
               <option value="title-asc">Title A-Z</option>
               <option value="title-desc">Title Z-A</option>
@@ -701,1032 +746,1635 @@ window.Quarto = {
               <option value="date-asc">Date Updated: Oldest to Newest</option>
             </select>
           </div>
-  
-          <!-- Affiliation filter -->
-          <h5 class="collapsible-header">Region and Affiliation
+
+          <!-- Filter group 1: Region and Affiliation -->
+          <h5 class="collapsible-header">
+            Region and Affiliation
             <span class="arrow">&gt;</span>
           </h5>
           <div class="collapsible-content" style="display:none;">
             <form id="categoryFilter1" class="form">
+              <!-- Build unique checkbox values from items[0].items[*].categories1 -->
               
                 
                 
+
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category1" value="Yale%20School%20of%20Public%20Health" id="category1-Yale%20School%20of%20Public%20Health">
-                    <label for="category1-Yale%20School%20of%20Public%20Health" style="margin-bottom: 0px;">Yale School of Public Health</label>
+                    <label for="category1-Yale%20School%20of%20Public%20Health" style="margin-bottom: 0px;">
+                      Yale School of Public Health
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category1" value="Yale%20School%20of%20Medicine" id="category1-Yale%20School%20of%20Medicine">
-                    <label for="category1-Yale%20School%20of%20Medicine" style="margin-bottom: 0px;">Yale School of Medicine</label>
+                    <label for="category1-Yale%20School%20of%20Medicine" style="margin-bottom: 0px;">
+                      Yale School of Medicine
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category1" value="U.S.%20Government" id="category1-U.S.%20Government">
-                    <label for="category1-U.S.%20Government" style="margin-bottom: 0px;">U.S. Government</label>
+                    <label for="category1-U.S.%20Government" style="margin-bottom: 0px;">
+                      U.S. Government
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category1" value="Non-Governmental%20Organization" id="category1-Non-Governmental%20Organization">
-                    <label for="category1-Non-Governmental%20Organization" style="margin-bottom: 0px;">Non-Governmental Organization</label>
+                    <label for="category1-Non-Governmental%20Organization" style="margin-bottom: 0px;">
+                      Non-Governmental Organization
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category1" value="Private%20Company" id="category1-Private%20Company">
-                    <label for="category1-Private%20Company" style="margin-bottom: 0px;">Private Company</label>
+                    <label for="category1-Private%20Company" style="margin-bottom: 0px;">
+                      Private Company
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category1" value="International%20University" id="category1-International%20University">
-                    <label for="category1-International%20University" style="margin-bottom: 0px;">International University</label>
+                    <label for="category1-International%20University" style="margin-bottom: 0px;">
+                      International University
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category1" value="Yale%20University" id="category1-Yale%20University">
-                    <label for="category1-Yale%20University" style="margin-bottom: 0px;">Yale University</label>
+                    <label for="category1-Yale%20University" style="margin-bottom: 0px;">
+                      Yale University
+                    </label>
                   </div>
                 
               
             </form>
           </div>
-  
+
           <br>
-  
-          <!-- Services filter -->
-          <h5 class="collapsible-header">Services Offered
+
+          <!-- Filter group 2: Services Offered -->
+          <h5 class="collapsible-header">
+            Services Offered
             <span class="arrow">&gt;</span>
           </h5>
           <div class="collapsible-content" style="display:none;">
             <form id="categoryFilter2" class="form">
+              <!-- Build unique checkbox values from categories2 -->
               
                 
                 
+
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Clinical%20and%20Health%20Surveys" id="category2-Clinical%20and%20Health%20Surveys">
-                    <label for="category2-Clinical%20and%20Health%20Surveys" style="margin-bottom: 0px;">Clinical and Health Surveys</label>
+                    <label for="category2-Clinical%20and%20Health%20Surveys" style="margin-bottom: 0px;">
+                      Clinical and Health Surveys
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Environmental%2FGeospatial" id="category2-Environmental%2FGeospatial">
-                    <label for="category2-Environmental%2FGeospatial" style="margin-bottom: 0px;">Environmental/Geospatial</label>
+                    <label for="category2-Environmental%2FGeospatial" style="margin-bottom: 0px;">
+                      Environmental/Geospatial
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Clinical%20Trials" id="category2-Clinical%20Trials">
-                    <label for="category2-Clinical%20Trials" style="margin-bottom: 0px;">Clinical Trials</label>
+                    <label for="category2-Clinical%20Trials" style="margin-bottom: 0px;">
+                      Clinical Trials
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Experimental%20Assay%20Data" id="category2-Experimental%20Assay%20Data">
-                    <label for="category2-Experimental%20Assay%20Data" style="margin-bottom: 0px;">Experimental Assay Data</label>
+                    <label for="category2-Experimental%20Assay%20Data" style="margin-bottom: 0px;">
+                      Experimental Assay Data
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Designed%20Observational%20Studies" id="category2-Designed%20Observational%20Studies">
-                    <label for="category2-Designed%20Observational%20Studies" style="margin-bottom: 0px;">Designed Observational Studies</label>
+                    <label for="category2-Designed%20Observational%20Studies" style="margin-bottom: 0px;">
+                      Designed Observational Studies
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Electronic%20Health%20Records" id="category2-Electronic%20Health%20Records">
-                    <label for="category2-Electronic%20Health%20Records" style="margin-bottom: 0px;">Electronic Health Records</label>
+                    <label for="category2-Electronic%20Health%20Records" style="margin-bottom: 0px;">
+                      Electronic Health Records
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Clinical%20Study%2FSurveys" id="category2-Clinical%20Study%2FSurveys">
-                    <label for="category2-Clinical%20Study%2FSurveys" style="margin-bottom: 0px;">Clinical Study/Surveys</label>
+                    <label for="category2-Clinical%20Study%2FSurveys" style="margin-bottom: 0px;">
+                      Clinical Study/Surveys
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Demographic%20and%20Economic%20Surveys" id="category2-Demographic%20and%20Economic%20Surveys">
-                    <label for="category2-Demographic%20and%20Economic%20Surveys" style="margin-bottom: 0px;">Demographic and Economic Surveys</label>
+                    <label for="category2-Demographic%20and%20Economic%20Surveys" style="margin-bottom: 0px;">
+                      Demographic and Economic Surveys
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Medical%20Claims" id="category2-Medical%20Claims">
-                    <label for="category2-Medical%20Claims" style="margin-bottom: 0px;">Medical Claims</label>
+                    <label for="category2-Medical%20Claims" style="margin-bottom: 0px;">
+                      Medical Claims
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Registries" id="category2-Registries">
-                    <label for="category2-Registries" style="margin-bottom: 0px;">Registries</label>
+                    <label for="category2-Registries" style="margin-bottom: 0px;">
+                      Registries
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Biobanks" id="category2-Biobanks">
-                    <label for="category2-Biobanks" style="margin-bottom: 0px;">Biobanks</label>
+                    <label for="category2-Biobanks" style="margin-bottom: 0px;">
+                      Biobanks
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Other" id="category2-Other">
-                    <label for="category2-Other" style="margin-bottom: 0px;">Other</label>
+                    <label for="category2-Other" style="margin-bottom: 0px;">
+                      Other
+                    </label>
                   </div>
                 
               
             </form>
           </div>
-  
+
           <br>
-  
-          <!-- Data Types filter -->
-          <h5 class="collapsible-header">Data Types
+
+          <!-- Filter group 3: Data Types -->
+          <h5 class="collapsible-header">
+            Data Types
             <span class="arrow">&gt;</span>
           </h5>
           <div class="collapsible-content" style="display:none;">
             <form id="categoryFilter3" class="form">
+              <!-- Build unique checkbox values from categories3 -->
               
                 
                 
+
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category3" value="Open%20Access" id="category3-Open%20Access">
-                    <label for="category3-Open%20Access" style="margin-bottom: 0px;">Open Access</label>
+                    <label for="category3-Open%20Access" style="margin-bottom: 0px;">
+                      Open Access
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category3" value="Restricted%20Access" id="category3-Restricted%20Access">
-                    <label for="category3-Restricted%20Access" style="margin-bottom: 0px;">Restricted Access</label>
+                    <label for="category3-Restricted%20Access" style="margin-bottom: 0px;">
+                      Restricted Access
+                    </label>
                   </div>
                 
                   <div class="checkbox-container">
                     <input type="checkbox" name="category3" value="License%20Required" id="category3-License%20Required">
-                    <label for="category3-License%20Required" style="margin-bottom: 0px;">License Required</label>
+                    <label for="category3-License%20Required" style="margin-bottom: 0px;">
+                      License Required
+                    </label>
                   </div>
                 
               
             </form>
           </div>
-  
+
         </aside>
       </div>
-  
+
+      <!-- Main area (tiles + show more + back-to-top) -->
       <div class="main-content">
         <div class="container" id="tilesContainer">
+          <!-- Used during server-side render to hide tiles after initial threshold -->
           
+
+          <!-- Iterate through item groups and their tiles -->
           
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20and%20Health%20Surveys Environmental%2FGeospatial" data-categories3="Open%20Access" data-info="yes" data-title="The Health Attribution Library" data-date="2025-01-20" data-ranking="4">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/The Health Attribution Library.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">The Health Attribution Library</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The Health Attribution Library is a curated collection of scientific publications that conduct rigorous end-to-end attribution studies linking human-caused climate change to specific health impacts. Created in 2023 through Wellcome Trust-funded research that found only 13 qualifying studies among nearly 4,000 reviewed papers, the library serves as an ongoing resource to support scientific research, journalism, litigation, and policy work requiring evidence-based attribution of health impacts to climate change.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.healthattribution.org/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="https://www.carlsonlab.bio/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-people-fill"></i></a> 
-                       
-                       
-                       
-                       
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/Health Attribution Library.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Environmental/Geospatial</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Environmental/Geospatial</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="Yale%20School%20of%20Public%20Health" data-categories2="Clinical%20Trials Experimental%20Assay%20Data" data-categories3="Open%20Access" data-info="yes" data-title="Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)" data-date="2026-01-15" data-ranking="4">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/WISSPAR.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The Worldwide Index of Serotype Specific Pneumococcal Antibody Responses (WISSPAR) is a searchable database launched in 2023 by Yale researchers to aggregate immunogenicity data from pneumococcal vaccine clinical trials. WISSPAR enables researchers and regulators to quickly access and visualize serotype-specific immune response data through search and filtering tools, supporting comparative efficacy research and evidence-based decision making for pneumococcal conjugate vaccine development.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://wisspar.com/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="https://medicine.yale.edu/lab/weinberger/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-people-fill"></i></a> 
-                       
-                       
-                       
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10409981/" title="View publication" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-journal-text"></i></a> 
-                       
-                       
+                          <i class="bi-journal-text"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/WISSPAR.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical Trials, Experimental Assay Data</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical Trials, Experimental Assay Data</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Clinical%20Trials Designed%20Observational%20Studies" data-categories3="Restricted%20Access" data-info="yes" data-title="Yale University Open Data Access (YODA)" data-date="2026-01-14" data-ranking="3">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/YODA.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Yale University Open Data Access (YODA)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The Yale University Open Data Access (YODA) Project at Yale's School of Medicine was founded in 2013 to facilitate responsible sharing of clinical trial data. As an independent academic organization, YODA approves external researchers' access to participant-level clinical trial data from Data Partners (manufacturers, academic researchers, and government funders). It currently lists over 500 available trials across mental health, cancer, autoimmune diseases, infectious diseases, metabolic disorders, and cardiovascular conditions. The project provides de-identified data that meets HIPAA and EU privacy standards and has enabled hundreds of publications working to advance patient health and scientific knowledge.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://yoda.yale.edu/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="https://medicine.yale.edu/core/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-people-fill"></i></a> 
-                       
-                       
-                       
-                       
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Restricted-Access/YODA.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="Yale%20School%20of%20Medicine" data-categories2="Electronic%20Health%20Records" data-categories3="Restricted%20Access" data-info="yes" data-title="Yale New Haven Health System (YNHHS) Epic" data-date="2025-12-03" data-ranking="3">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/YNHHS Epic.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Yale New Haven Health System (YNHHS) Epic</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The Yale New Haven Hospital System (YNHHS) uses Epic's EMR system to digitize comprehensive patient data across its network, supporting various medical services. Annually, they manage around 150,000 inpatient visits, 3.5 to 4 million outpatient encounters, and 350,000 emergency department visits. Epic Cosmos integrates these records into a single, HIPAA-compliant longitudinal patient record, enhancing privacy by eliminating duplicates and obscuring identifiable information.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://medicine.yale.edu/ybic/ynhhs-research-access/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-people-fill"></i></a> 
-                       
-                       
-                       
-                       
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Restricted-Access/YNHHS-Epic.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Electronic Health Records</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Electronic Health Records</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's Rapid Surveys System" data-date="2025-12-23" data-ranking="1">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/NCHS Rapid Surveys.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">NCHS's Rapid Surveys System</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The Rapid Surveys System (RSS) is a time-sensitive data collection platform launched by the National Center for Health Statistics in 2022 to quickly gather actionable health data on emerging concerns. RSS leverages commercially available probability-based online panels, recruiting approximately 4,000 adults per round through AmeriSpeak and KnowledgePanel using address-based sampling methods. While prioritizing speed and flexibility over traditional survey precision, RSS provides nationally representative estimates to support real-time evidence-based public health decision making.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/rapid-surveys/about/index.html" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/NCHS Rapid Survey.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="National Center for Health Statistics (NCHS)" data-date="2025-10-23" data-ranking="1">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/NCHS.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">National Center for Health Statistics (NCHS)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The National Center for Health Statistics (NCHS) collects and disseminates data to provide a comprehensive understanding of health and healthcare in the United States. The data includes birth and death records, medical records, interviews, physical examinations, and laboratory testing, and is accessible through reports, dashboards, and data files to identify health problems, develop policies, and monitor health trends.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/index.html" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/NCHS.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20Study%2FSurveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Vital Statistics System (NVSS)" data-date="2026-01-12" data-ranking="1">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/NVSS.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">NCHS's National Vital Statistics System (NVSS)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The National Vital Statistics System (NVSS) is managed by NCHS and has been collecting vital records data since 1946. The system gathers national data on births, deaths, fetal deaths, marriages, and divorces from 57 U.S. registration areas, then standardizes these vital statistics to support public health research and policy-making. NVSS also conducts specialized surveys and data linkage projects to address specific health concerns.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/nvss/index.htm" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/NCHS NVSS.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical Study/Surveys</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health Interview Survey (NHIS)" data-date="2025-12-18" data-ranking="2">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/NHIS.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">NCHS's National Health Interview Survey (NHIS)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The National Health Interview Survey (NHIS) is the nation's oldest continuously running health survey, established in 1957 to collect comprehensive health data from the U.S. civilian population. Conducted annually by the National Center for Health Statistics, NHIS provides nationally representative data on health trends, illness, disability, and healthcare utilization through face-to-face household interviews. The survey adapts over time to address emerging health topics and offers linked datasets to researchers through the Research Data Center.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/nhis/index.html" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/NCHS NHIS.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-10-09" data-ranking="2">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/NHANES.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">NCHS's National Health and Nutrition Examination Survey (NHANES)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The National Health and Nutrition Examination Survey (NHANES) collects data about the health of adults and children in the United States. This data has driven changes in medical treatment practices and public policy supporting good health . Since its inception in 1959, NHANES has completed eight distinct iterations of the survey, with the latest being conducted as an ongoing surveillance program. These efforts have led to the creation of four special focus programs or ancillary studies.
 <br>
 <br>
 Researchers can access both publicly available and restricted data produced by NHANES from all survey installments. Moreover, researchers have the opportunity to request biospecimens collected during some surveys, allowing for the generation of additional data points that enhance the research community's resources.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/nhanes/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/NCHS NHANES.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys Medical%20Claims" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's Data Linkage" data-date="2026-01-12" data-ranking="2">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/NCHS Data Linkage.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">NCHS's Data Linkage</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">Since the 1980s, the National Center for Health Statistics (NCHS) Data Linkage program has combined NCHS survey data with administrative sources from Medicare, Medicaid, National Death Index, and Social Security records, supporting over 1,000 peer-reviewed publications. The program maximizes resource efficiency by using state-of-the-art data science matching techniques to link existing data, avoiding costly re-collection efforts. While most program resources require restrictive-access permissions to ensure participant privacy, the program takes every opportunity to make publicly available versions, including through innovative synthetic data generation.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/data-linkage/index.htm" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/NCHS Data Linkage.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys, Medical Claims</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys, Medical Claims</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Demographic%20and%20Economic%20Surveys Registries" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="Surveillance, Epidemiology, and End Results Program (SEER)" data-date="2025-10-21" data-ranking="2">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/SEER.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Surveillance, Epidemiology, and End Results Program (SEER)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The Surveillance, Epidemiology, and End Results (SEER) Program provides information on cancer statistics in an effort to reduce the cancer burden among the U.S. population. SEER is supported by the Surveillance Research Program (SRP) in NCI's Division of Cancer Control and Population Sciences (DCCPS).
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://seer.cancer.gov/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/SEER.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Demographic and Economic Surveys, Registries</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Demographic and Economic Surveys, Registries</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Medical%20Claims" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's The National Health Care Survey (NHCS)" data-date="2025-12-22" data-ranking="1">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/NHCS.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">NCHS's The National Health Care Survey (NHCS)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The National Hospital Care Surveys (NHCS) collect and disseminate data to provide comprehensive understanding of hospital healthcare services in the United States through five active surveys. The data across all programs include patient demographics, diagnoses, treatments, procedures, and outcomes from emergency departments, inpatient units, office-based providers, health centers, and residential care communities. Data are accessible through reports, freely accessible files, and restricted access files and can be used to inform health policy decisions, monitor care quality, examine healthcare disparities, and more.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.cdc.gov/nchs/healthcare-surveys/about/index.html" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/NCHS NHCS All.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Medical Claims</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Medical Claims</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Biobanks Clinical%20and%20Health%20Surveys Electronic%20Health%20Records Experimental%20Assay%20Data" data-categories3="Restricted%20Access" data-info="yes" data-title="National Institutes of Health's (NIH) All of Us (AOU)" data-date="2025-10-29" data-ranking="3">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/NIH All of Us_4.8x3.6.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">National Institutes of Health's (NIH) All of Us (AOU)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The All of Us (AoU) initiative, overseen by the National Institutes of Health (NIH), is a precision medicine program that connects researchers, healthcare providers, technology experts, community partners, and the public. It aims to gather longitudinal data from diverse participants to create effective individualized treatments. Currently, around 600,000 participants have contributed electronic health records (EHR), completed surveys, provided physical measurements, and donated biospecimens. 
 <br>
 <br>
 All of Us' one-of-a-kind dataset is stored on the Researcher Workbench, a secure, cloud-based platform where registered researchers can access data from surveys, genomic analyses, EHRs, physical measurements, and wearable devices. The data collected include standardized EHRs, biosamples for genomic sequencing, surveys on demographics and health behaviors, physical measurements, and health tracking data from wearable devices, with additional data contributed by partnered research studies.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://allofus.nih.gov/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Restricted-Access/NIH_All-of-Us.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Biobanks, Clinical and Health Surveys, Electronic Health Records, Experimental Assay Data</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Biobanks, Clinical and Health Surveys, Electronic Health Records, Experimental Assay Data</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys Other" data-categories3="Open%20Access" data-info="yes" data-title="data.gov" data-date="2025-01-20" data-ranking="1">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/Data Gov.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">data.gov</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">Data.gov is the U.S. federal government's official open data website, launched in 2009 to enhance government transparency and accountability by providing free public access to federal datasets. Operating under the OPEN Government Data Act of 2018, it mandates federal agencies to publish their data online in standardized, machine-readable formats. The platform, maintained by the General Services Administration (GSA), also collaborates with state, local, and international sources to create a comprehensive data catalog. Its open-source foundation enables adaptation by governments worldwide, with the source code available on the GSA's GitHub repository.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://data.gov/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="https://github.com/GSA/data.gov" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
-                       
-                       
-                       
+                          <i class="bi-github"></i>
+                        </a>
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/data_gov.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys, Other</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys, Other</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="Non-Governmental%20Organization" data-categories2="Biobanks Clinical%20and%20Health%20Surveys Clinical%20Trials Electronic%20Health%20Records Experimental%20Assay%20Data" data-categories3="Restricted%20Access" data-info="yes" data-title="UK Biobank" data-date="2025-11-05" data-ranking="3">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/UK Biobank.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">UK Biobank</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The UK Biobank Data Showcase provides a summary of all the information gathered by UK Biobank on our 500,000 participants and is available to explore. Not only does this contain background information on how these data were collected, it also includes notes about future collections. Before applying to access UK Biobank data, or if you are already accessing data, please keep up to date by checking the notes and additional resources provided with categories and data-fields for useful information. Please note: data is only accessible through our Research Analysis Platform.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.ukbiobank.ac.uk/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="https://github.com/UK-Biobank" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
-                       
-                       
-                       
+                          <i class="bi-github"></i>
+                        </a>
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Restricted-Access/UK-Biobank.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Biobanks, Clinical and Health Surveys, Clinical Trials, Electronic Health Records, Experimental Assay Data</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Biobanks, Clinical and Health Surveys, Clinical Trials, Electronic Health Records, Experimental Assay Data</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="Private%20Company" data-categories2="Electronic%20Health%20Records" data-categories3="Restricted%20Access" data-info="yes" data-title="Epic Cosmos" data-date="2025-12-12" data-ranking="3">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/Epic Cosmos.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Epic Cosmos</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">Cosmos compiles Epic electronic medical record (EMR) data from nearly 2,000 participating hospitals globally, creating a comprehensive dataset with analytical tools like SlicerDicer and the Data Science Virtual Machine (DSVM) to advance medical research. This network encompasses half a million physicians caring for 300 million patients, generating billions of high-quality, longitudinal clinical data points. Cosmos integrates and de-identifies patient records to create unified longitudinal profiles while eliminating duplicates.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://medicine.yale.edu/ybic/ynhhs-research-access/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="https://medicine.yale.edu/news-article/jdat-data-analytics-in-one-place/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-people-fill"></i></a> 
-                       
-                       
-                       
-                       
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Restricted-Access/Epic-Cosmos.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Electronic Health Records</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Electronic Health Records</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="Private%20Company" data-categories2="Demographic%20and%20Economic%20Surveys Electronic%20Health%20Records Medical%20Claims" data-categories3="License%20Required" data-info="yes" data-title="Merative's MarketScan" data-date="2025-10-10" data-ranking="2">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/MarketScan_Main.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Merative's MarketScan</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">Merative advances health and social care by providing innovative healthcare data and technology solutions, collaborating with thousands of providers and major organizations. Their MarketScan Research Databases offer longitudinal, patient-level data on healthcare costs and outcomes, supporting diverse research applications with data from over 273 million patients and more than 2,600 peer-reviewed publications. MarketScan's detailed and HIPAA-compliant data enhance research across disease areas, backed by powerful analytic tools.
 <br>
 <br>
 At Yale, the MarketScan database is licensed for research use by the Yale Biomedical Informatics and Computing (YBIC) office, with support from the Harvey Cushing/John Hay Whitney Medical Library and the Yale Center for Clinical Investigation. Yale researchers can access and analyze MarketScan data by submitting a request form for assistance from the YBIC team.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://datamed.library.medicine.yale.edu/marketscan" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="https://medicine.yale.edu/ybic/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-people-fill"></i></a> 
-                       
-                       
-                       
-                       
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/License-Required/MarketScan.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Demographic and Economic Surveys, Electronic Health Records, Medical Claims</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Demographic and Economic Surveys, Electronic Health Records, Medical Claims</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="Yale%20School%20of%20Medicine U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys Clinical%20Trials Designed%20Observational%20Studies Registries Biobanks Experimental%20Assay%20Data" data-categories3="Restricted%20Access" data-info="yes" data-title="Claude D. Pepper Older Americans Independence Center (OAIC)" data-date="2026-02-01" data-ranking="3">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/OAIC Logo.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Claude D. Pepper Older Americans Independence Center (OAIC)</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">The Claude D. Pepper Older Americans Independence Centers (OAIC) Program is a network of 15 NIA-funded research centers established in 1991 to promote health and independence in older Americans. The OAIC Coordinating Center manages study registration, data access, and connects researchers with funding opportunities. Each center has its own research focus; Yale's Center focuses on multifactorial geriatric conditions and multimorbidity.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://www.peppercenter.org/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="https://medicine.yale.edu/internal-medicine/geriatrics/peppercenter/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-people-fill"></i></a> 
-                       
-                       
-                       
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11090727/" title="View publication" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-journal-text"></i></a> 
-                       
-                       
+                          <i class="bi-journal-text"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/Claude D. Pepper OAIC.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys, Clinical Trials, Designed Observational Studies, Registries, Biobanks, Experimental Assay Data</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Clinical and Health Surveys, Demographic and Economic Surveys, Clinical Trials, Designed Observational Studies, Registries, Biobanks, Experimental Assay Data</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="Non-Governmental%20Organization International%20University" data-categories2="Experimental%20Assay%20Data" data-categories3="Open%20Access" data-info="yes" data-title="Nextstrain" data-date="2026-01-19" data-ranking="4">
+
+                  <!-- Tile image -->
                   <img src="../Images/Datasets/Nextstrain.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Nextstrain</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">Nextstrain offers real-time dashboards for tracking viral diseases such as influenza, Zika, and Ebola. The platform supports both community-developed and internally-maintained dashboards for a range of pathogens. Utilizing an open-source, reproducible bioinformatics pipeline, Nextstrain integrates data from repositories like the National Center for Biotechnology Information (NCBI) and the Global Initiative on Sharing All Influenza Data (GISAID) to assist researchers and policymakers in making informed epidemiological decisions. Its suite of tools, including Augur and Auspice, enables robust, reproducible phylogenetic analysis and visualization, facilitating the rapid and comprehensive dissemination of results.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
+                      
                         &nbsp;
                         <a href="https://nextstrain.org/" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-globe"></i></a> 
-                       
-                       
-                       
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="https://github.com/nextstrain" title="GitHub page" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-github"></i></a> 
-                       
-                       
+                          <i class="bi-github"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="https://academic.oup.com/bioinformatics/article/34/23/4121/5001388" title="View publication" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-journal-text"></i></a> 
-                       
-                       
+                          <i class="bi-journal-text"></i>
+                        </a>
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/nextstrain.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Experimental Assay Data</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Experimental Assay Data</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile hidden" data-categories1="Yale%20School%20of%20Public%20Health Yale%20School%20of%20Medicine Yale%20University" data-categories2="Medical%20Claims" data-categories3="Open%20Access Restricted%20Access License%20Required" data-info="yes" data-title="Beyond the Collection: Faculty Data Applications &amp; Resources" data-date="2026-03-04" data-ranking="4">
+
+                  <!-- Tile image -->
                   <img src="../Images/DSDE Identity/DSDE People_AS399026036.jpeg" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
                   <h2 class="js-line-count">Beyond the Collection: Faculty Data Applications &amp; Resources</h2>
+
+                  <!-- Description (line clamped in JS) -->
                   <p class="description">This page showcases additional data applications and harmonization efforts from Yale University faculty. We hope these examples will inspire new research pathways within the research community and help broaden awareness of valuable resources beyond those in our actively curated collection. To learn more about any dataset or resource listed here, we encourage you to contact the primary investigator noted in the publication.
 </p>
+
+                  <!-- Link bar / metadata area -->
                   <div class="card-header py-1 px-2 border-bottom bg-light">
                     <small class="card-text">
-                       
-                       
-                       
-                       
-                       
+                      
+
+                      
+
+                      
+
+                      
+
+                      
                         &nbsp;
                         <a href="../Pages/More-Info-Pages/Freely-Accessible/Yale Link Drop.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
-                          <i class="bi-info-circle"></i></a>
+                          <i class="bi-info-circle"></i>
+                        </a>
                       
-                       
-                        <p class="topic" style="margin-bottom: 5px;">Multiple</p> 
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Multiple</p>
                       
                     </small>
                   </div>
                 </div>
+
                 
               
         </div>
-        <button id="showMoreBtn" class="btn btn-primary" style="display: block; margin: 20px auto;">Show More</button>
-        <a id="quarto-back-to-top" title="Back to top" role="button" style="display: none;"><i class="bi bi-arrow-up"></i>Back to top</a>
+
+        <!-- Reveal more filtered tiles -->
+        <button id="showMoreBtn" class="btn btn-primary" style="display: block; margin: 20px auto;">
+          Show More
+        </button>
+
+        <!-- Back-to-top control (visibility is managed elsewhere / by CSS/JS on the page) -->
+        <a id="quarto-back-to-top" title="Back to top" role="button" style="display: none;">
+          <i class="bi bi-arrow-up"></i>Back to top
+        </a>
       </div>
     </div>
   </div>
 
   <script>
+    // Parse a date string from data-date into a JS Date object
     function parseDate(dateStr) {
       return new Date(dateStr);
     }
-    
+
+    // Dynamically clamp description lines based on title/topic line usage
     function updateLineCounts() {
       document.querySelectorAll(".tile").forEach(function (tile) {
         const h2Element = tile.querySelector(".js-line-count");
         const lineHeight = parseFloat(getComputedStyle(h2Element).lineHeight);
-    
+
         const linesInH2 = Math.ceil(h2Element.scrollHeight / lineHeight);
-    
+
         const pElement = tile.querySelector("p.description");
-        pElement.style.display = '-webkit-box';
-        pElement.style.webkitBoxOrient = 'vertical';
-        pElement.style.overflow = 'hidden';
-    
+        // Use -webkit-line-clamp (requires display: -webkit-box + orient + overflow hidden)
+        pElement.style.display = "-webkit-box";
+        pElement.style.webkitBoxOrient = "vertical";
+        pElement.style.overflow = "hidden";
+
+        // Base clamp budget for description lines
         let clampValue = 10;
-    
+
+        // Reduce clamp by extra title lines beyond the first
         clampValue -= Math.max(0, linesInH2 - 1);
-    
-        const topicElement = tile.querySelector('.topic');
-        if (topicElement && topicElement.style.display !== 'none') {
+
+        // If topic is shown, reduce clamp for its extra lines too
+        const topicElement = tile.querySelector(".topic");
+        if (topicElement && topicElement.style.display !== "none") {
           const linesInTopic = Math.ceil(topicElement.scrollHeight / lineHeight);
           clampValue -= Math.max(0, linesInTopic - 1);
         }
-    
-        if (clampValue < 1) clampValue = 1; // Ensure at least one line is available for the description
-    
+
+        // Ensure at least one line remains for the description
+        if (clampValue < 1) clampValue = 1;
+
         pElement.style.webkitLineClamp = clampValue;
       });
     }
-    
+
+    // Expand/collapse filter sections in the sidebar
     function toggleCollapsible(event) {
-      const header = event.target.closest('.collapsible-header');
+      const header = event.target.closest(".collapsible-header");
       if (!header) return;
-      header.classList.toggle('active');
+
+      header.classList.toggle("active");
+
       const content = header.nextElementSibling;
-      const arrow = header.querySelector('.arrow');
+      const arrow = header.querySelector(".arrow");
+
       if (content) {
-        content.style.display = content.style.display === 'none' ? 'block' : 'none';
-        content.classList.toggle('collapsed', content.style.display === 'none');
+        content.style.display = content.style.display === "none" ? "block" : "none";
+        content.classList.toggle("collapsed", content.style.display === "none");
       }
+
       if (arrow) {
-        arrow.style.transform = content.style.display === 'none' ? 'rotate(0deg)' : 'rotate(90deg)';
+        arrow.style.transform = content.style.display === "none" ? "rotate(0deg)" : "rotate(90deg)";
       }
     }
-    
-    document.addEventListener('DOMContentLoaded', function () {
+
+    document.addEventListener("DOMContentLoaded", function () {
+      // Initial line clamp + keep updated on resize
       updateLineCounts();
-      window.addEventListener('resize', updateLineCounts);
-    
-      const categoryFilter1 = document.getElementById('categoryFilter1');
-      const categoryFilter2 = document.getElementById('categoryFilter2');
-      const categoryFilter3 = document.getElementById('categoryFilter3');
-      const sortOptions = document.getElementById('sortOptions');
-      const tilesContainer = document.getElementById('tilesContainer');
-      const showMoreBtn = document.getElementById('showMoreBtn');
+      window.addEventListener("resize", updateLineCounts);
+
+      // Cache DOM references
+      const categoryFilter1 = document.getElementById("categoryFilter1");
+      const categoryFilter2 = document.getElementById("categoryFilter2");
+      const categoryFilter3 = document.getElementById("categoryFilter3");
+      const sortOptions = document.getElementById("sortOptions");
+      const tilesContainer = document.getElementById("tilesContainer");
+      const showMoreBtn = document.getElementById("showMoreBtn");
+
+      // Progressive reveal settings
       const initialLoadCount = 9; // 3 rows of 3 tiles each
-      const loadMoreCount = 3; // 1 row of 3 tiles
-      const infoCheckbox = document.getElementById('info-yes');
-      let tiles = Array.from(tilesContainer.querySelectorAll('.tile'));
-      let sortedTiles = [...tiles];  // Preserve original order for sorted tiles
-    
-      // Function to sort by default criteria: ranking then title
+      const loadMoreCount = 9;    // 3 row of 3 tiles
+
+      // Optional “info” filter checkbox (note: element must exist in HTML to work)
+      const infoCheckbox = document.getElementById("info-yes");
+
+      // tiles = all tiles in DOM; sortedTiles = current working order
+      let tiles = Array.from(tilesContainer.querySelectorAll(".tile"));
+      let sortedTiles = [...tiles]; // Preserve original order snapshot
+
+      // Default sorting: ranking asc, then title A–Z
       function sortByDefault() {
+        // Convert ranking attribute to numeric value once per tile (if present)
         sortedTiles.forEach(tile => {
-          const rankAttr = tile.getAttribute('data-ranking');
+          const rankAttr = tile.getAttribute("data-ranking");
           if (rankAttr) {
             tile.dataset.numericRanking = parseInt(rankAttr, 10);
           }
         });
-    
+
         sortedTiles.sort((a, b) => {
-          const titleA = a.getAttribute('data-title').toLowerCase();
-          const titleB = b.getAttribute('data-title').toLowerCase();
+          const titleA = a.getAttribute("data-title").toLowerCase();
+          const titleB = b.getAttribute("data-title").toLowerCase();
           const rankingA = a.dataset.numericRanking;
           const rankingB = b.dataset.numericRanking;
-    
+
           if (rankingA !== rankingB) {
             return rankingA - rankingB;
           }
           return titleA.localeCompare(titleB);
         });
-    
+
+        // Re-append tiles to reflect new order in the DOM
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
-    
-        filterTiles(); // Apply the current filter on new sorted order
+
+        // Re-apply current filters after sorting
+        filterTiles();
       }
-      
-      // Initialize the display with the initial tiles shown
-      sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove('hidden'));
-      
-      showMoreBtn.addEventListener('click', function() {
-        let hiddenTiles = sortedTiles.filter(tile => tile.classList.contains('hidden') && tile.classList.contains('filtered'));
+
+      // Ensure the first batch is visible on load
+      sortedTiles.slice(0, initialLoadCount).forEach(tile => tile.classList.remove("hidden"));
+
+      // “Show More” reveals additional tiles that are currently filtered-in but hidden
+      showMoreBtn.addEventListener("click", function () {
+        let hiddenTiles = sortedTiles.filter(
+          tile => tile.classList.contains("hidden") && tile.classList.contains("filtered")
+        );
+
         hiddenTiles.slice(0, loadMoreCount).forEach(tile => {
-          tile.classList.remove('hidden');
-          tile.style.display = 'block'; // Ensure display is set to block
+          tile.classList.remove("hidden");
+          tile.style.display = "block";
         });
+
         updateLineCounts();
+
+        // Hide the button when nothing more remains to show
         if (hiddenTiles.length <= loadMoreCount) {
-          showMoreBtn.style.display = 'none';
+          showMoreBtn.style.display = "none";
         }
       });
-    
+
+      // Apply checkbox filters (category1/2/3 and optional info)
       function filterTiles() {
-        const selectedCategories1 = Array.from(categoryFilter1.querySelectorAll('input[name="category1"]:checked')).map(input => decodeURIComponent(input.value));
-        const selectedCategories2 = Array.from(categoryFilter2.querySelectorAll('input[name="category2"]:checked')).map(input => decodeURIComponent(input.value));
-        const selectedCategories3 = Array.from(categoryFilter3.querySelectorAll('input[name="category3"]:checked')).map(input => decodeURIComponent(input.value));
-        const selectedInfo = infoCheckbox && infoCheckbox.checked ? 'yes' : 'all';
-    
+        const selectedCategories1 = Array.from(
+          categoryFilter1.querySelectorAll('input[name="category1"]:checked')
+        ).map(input => decodeURIComponent(input.value));
+
+        const selectedCategories2 = Array.from(
+          categoryFilter2.querySelectorAll('input[name="category2"]:checked')
+        ).map(input => decodeURIComponent(input.value));
+
+        const selectedCategories3 = Array.from(
+          categoryFilter3.querySelectorAll('input[name="category3"]:checked')
+        ).map(input => decodeURIComponent(input.value));
+
+        const selectedInfo = infoCheckbox && infoCheckbox.checked ? "yes" : "all";
+
         let visibleTileCount = 0;
-    
+
         sortedTiles.forEach(function (tile) {
-          const categories1 = (tile.getAttribute('data-categories1') || '').split(' ').map(cat => decodeURIComponent(cat));
-          const categories2 = (tile.getAttribute('data-categories2') || '').split(' ').map(cat => decodeURIComponent(cat));
-          const categories3 = (tile.getAttribute('data-categories3') || '').split(' ').map(cat => decodeURIComponent(cat));
-          const infoAvailable = tile.getAttribute('data-info');
-    
-          const matchesCategory1 = selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
-          const matchesCategory2 = selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
-          const matchesCategory3 = selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
-          const matchesInfo = selectedInfo === 'all' || infoAvailable === selectedInfo;
-    
+          // Decode stored categories from data attributes
+          const categories1 = (tile.getAttribute("data-categories1") || "")
+            .split(" ")
+            .map(cat => decodeURIComponent(cat));
+
+          const categories2 = (tile.getAttribute("data-categories2") || "")
+            .split(" ")
+            .map(cat => decodeURIComponent(cat));
+
+          const categories3 = (tile.getAttribute("data-categories3") || "")
+            .split(" ")
+            .map(cat => decodeURIComponent(cat));
+
+          const infoAvailable = tile.getAttribute("data-info");
+
+          // Match logic: OR within each group, AND across groups
+          const matchesCategory1 =
+            selectedCategories1.length === 0 || selectedCategories1.some(cat => categories1.includes(cat));
+          const matchesCategory2 =
+            selectedCategories2.length === 0 || selectedCategories2.some(cat => categories2.includes(cat));
+          const matchesCategory3 =
+            selectedCategories3.length === 0 || selectedCategories3.some(cat => categories3.includes(cat));
+          const matchesInfo = selectedInfo === "all" || infoAvailable === selectedInfo;
+
           if (matchesCategory1 && matchesCategory2 && matchesCategory3 && matchesInfo) {
-            tile.classList.add('filtered');
+            tile.classList.add("filtered");
+
+            // Enforce progressive reveal: show only first N visible matches
             if (visibleTileCount < initialLoadCount) {
-              tile.classList.remove('hidden');
-              tile.style.display = 'block'; // Ensure display is set to block
+              tile.classList.remove("hidden");
+              tile.style.display = "block";
               visibleTileCount++;
             } else {
-              tile.classList.add('hidden');
-              tile.style.display = 'none'; // Hide others
+              tile.classList.add("hidden");
+              tile.style.display = "none";
             }
           } else {
-            tile.classList.remove('filtered');
-            tile.classList.add('hidden');
-            tile.style.display = 'none'; // Hide if it doesn't match the filter
+            // Filter out
+            tile.classList.remove("filtered");
+            tile.classList.add("hidden");
+            tile.style.display = "none";
           }
         });
-    
+
         updateLineCounts();
-    
-        if (sortedTiles.filter(tile => tile.classList.contains('hidden')).length === 0) {
-          showMoreBtn.style.display = 'none';
+
+        // Toggle show-more button based on whether any tiles remain hidden
+        if (sortedTiles.filter(tile => tile.classList.contains("hidden")).length === 0) {
+          showMoreBtn.style.display = "none";
         } else {
-          showMoreBtn.style.display = 'block';
+          showMoreBtn.style.display = "block";
         }
       }
-    
+
+      // Non-default sorting options
       function sortTiles() {
         const sortValue = sortOptions.value;
+
         // Convert ranks to numbers before sorting
         sortedTiles.forEach(tile => {
-          const rankAttr = tile.getAttribute('data-ranking');
+          const rankAttr = tile.getAttribute("data-ranking");
           if (rankAttr) {
             tile.dataset.numericRanking = parseInt(rankAttr, 10);
           }
         });
-    
+
         sortedTiles.sort((a, b) => {
-          const titleA = a.getAttribute('data-title').toLowerCase();
-          const titleB = b.getAttribute('data-title').toLowerCase();
-          const dateA = parseDate(a.getAttribute('data-date'));
-          const dateB = parseDate(b.getAttribute('data-date'));
+          const titleA = a.getAttribute("data-title").toLowerCase();
+          const titleB = b.getAttribute("data-title").toLowerCase();
+          const dateA = parseDate(a.getAttribute("data-date"));
+          const dateB = parseDate(b.getAttribute("data-date"));
           const rankingA = a.dataset.numericRanking;
           const rankingB = b.dataset.numericRanking;
-    
-          if (sortValue === 'title-asc') {
+
+          if (sortValue === "title-asc") {
             return titleA.localeCompare(titleB);
-          } else if (sortValue === 'title-desc') {
+          } else if (sortValue === "title-desc") {
             return titleB.localeCompare(titleA);
-          } else if (sortValue === 'date-asc') {
+          } else if (sortValue === "date-asc") {
             return dateA - dateB;
-          } else if (sortValue === 'date-desc') {
+          } else if (sortValue === "date-desc") {
             return dateB - dateA;
           } else {
-            // Default sorting: by ranking and then by title if same ranking
+            // Fallback: ranking then title
             if (rankingA !== rankingB) {
               return rankingA - rankingB;
             }
             return titleA.localeCompare(titleB);
           }
         });
-    
+
+        // Apply new DOM order
         sortedTiles.forEach(tile => {
           tilesContainer.appendChild(tile);
         });
-    
-        filterTiles(); // Apply the current filter on new sorted order
+
+        // Re-apply filters after sorting
+        filterTiles();
       }
-    
-      categoryFilter1.addEventListener('change', filterTiles);
-      categoryFilter2.addEventListener('change', filterTiles);
-      categoryFilter3.addEventListener('change', filterTiles);
+
+      // Hook up filter listeners
+      categoryFilter1.addEventListener("change", filterTiles);
+      categoryFilter2.addEventListener("change", filterTiles);
+      categoryFilter3.addEventListener("change", filterTiles);
       if (infoCheckbox) {
-        infoCheckbox.addEventListener('change', filterTiles);
+        infoCheckbox.addEventListener("change", filterTiles);
       }
-      sortOptions.addEventListener('change', function() {
-        if (sortOptions.value === 'default') {
+
+      // Hook up sorting listener
+      sortOptions.addEventListener("change", function () {
+        if (sortOptions.value === "default") {
           sortByDefault();
         } else {
           sortTiles();
         }
       });
-    
-      // Initial sort by default (ranking then title)
+
+      // Initial sort: default (ranking then title)
       sortByDefault();
-      
-      // Add collapsible functionality to all collapsible headers
-      document.querySelectorAll('.collapsible-header').forEach(header => {
-        header.addEventListener('click', toggleCollapsible);
-        // Initial arrow state
-        const arrow = header.querySelector('.arrow');
-        header.nextElementSibling.style.display = 'none'; // Collapse by default
-        if (arrow) arrow.style.transform = 'rotate(0deg)'; // Arrow pointing down initially
+
+      // Initialize collapsible behavior
+      document.querySelectorAll(".collapsible-header").forEach(header => {
+        header.addEventListener("click", toggleCollapsible);
+
+        // Start collapsed
+        const arrow = header.querySelector(".arrow");
+        header.nextElementSibling.style.display = "none";
+        if (arrow) arrow.style.transform = "rotate(0deg)";
       });
     });
-    
-    // Media view with folded sidebar
-    document.addEventListener('DOMContentLoaded', () => {
-      const sidebarToggler = document.querySelector('.sidebar-toggler');
-      const sidebarWrapper = document.querySelector('.sidebar-wrapper');
-    
-      console.log('sidebarToggler:', sidebarToggler); // Log for debugging
-      console.log('sidebarWrapper:', sidebarWrapper); // Log for debugging
-    
+
+    // Mobile view: fold/unfold sidebar wrapper
+    document.addEventListener("DOMContentLoaded", () => {
+      const sidebarToggler = document.querySelector(".sidebar-toggler");
+      const sidebarWrapper = document.querySelector(".sidebar-wrapper");
+
+      console.log("sidebarToggler:", sidebarToggler);
+      console.log("sidebarWrapper:", sidebarWrapper);
+
       if (sidebarToggler && sidebarWrapper) {
-        sidebarToggler.addEventListener('click', () => {
-          sidebarWrapper.classList.toggle('expanded');
+        sidebarToggler.addEventListener("click", () => {
+          sidebarWrapper.classList.toggle("expanded");
         });
       } else {
-        console.error('Sidebar toggler or wrapper not found');
+        console.error("Sidebar toggler or wrapper not found");
       }
     });
-    </script>
+  </script>
 
 
 <div class="listing-no-matching d-none">No matching items</div>
