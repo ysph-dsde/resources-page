@@ -91,7 +91,7 @@ items:
           An open data ecosystem made to power pandemic prediction.
         date-added: 2025-03-17
         date-updated: 2026-03-05
-        ranking: "3"
+        ranking: "5"
         image: ../Images/Resources/Verena.png
         topic: "Analytical Tools, Datasets"
         github: https://github.com/viralemergence
@@ -109,7 +109,7 @@ items:
           In our opinion, good science isn’t done in a vacuum. Sharing information among our peers is critical for responding to a public health crisis and understanding the mechanisms driving emerging diseases. We’ll release our virus genetic data and any useful protocols or analysis tools as soon as they are generated. Please note that because these are usually early releases (pre-publication), they may contain mistakes. We’ll make protocols, analysis tools, and data available as they are developed.
         date-added: 2025-03-17
         date-updated: 2025-03-17
-        ranking: "3"
+        ranking: "5"
         image: ../Images/Resources/Grubaugh.png
         topic: "Analytical Tools, Consulting/Services, Datasets"
         site: https://grubaughlab.com/open-science/
@@ -127,7 +127,7 @@ items:
           Combining polymer chemistry with quantitative proteomics, we have developed a quantitative guide for spatially-resolved extraction for more than 2100 MPs into native-nanodiscs. Searching for your protein(s) of interest will yield the preferred condition for optimal native extraction for that protein of interest serving as a starting point for structural and biochemical studies.
         date-added: 2025-03-20
         date-updated: 2025-03-20
-        ranking: "3"
+        ranking: "5"
         image: ../Images/Resources/Polymer Screen.png
         topic: "Datasets"
         site: https://polymerscreen.yale.edu/
@@ -137,20 +137,23 @@ items:
       - "Yale School of Medicine"
     categories2:
       - "Analytical Tools"
+      - "Consulting/Services"
+      - "Datasets"
     tiles:
-      - title: Yale Magnetic Resonance Research Center (MRRC) Analytical Tools
+      - title: Yale Magnetic Resonance Research Center (MRRC)
         description: |
-          The Yale Magnetic Resonance Research Center (MRRC) was founded in 1986 as a result of the recognition that NMR applications, as pioneered by Yale scientists, have enormous potential in biomedical research. The MRRC is now an interdepartmental and interdisciplinary research laboratory that provides state-of-the-art MR equipment, infrastructure, and expertise for the development and application of MRI and MRS methodology in biomedical research. 
+          Housed under the Yale Bioimaging Institute the MR core is a revenue-neutral (fee-for-service) inter-institutional service provider.
           </br>
           </br>
-          Research is focused on the study of intact biological systems by developing methods for obtaining structural, functional, physiological and biochemical information by MRI, MRS and other techniques. Applications include fMRI for neurosurgery and neuroscience; brain, muscle, and liver energy metabolism; diabetes; adult and juvenile epilepsy; and psychiatric disorders.
+          The Yale Magnetic Resonance (MR) Core provides cutting-edge MR imaging for various applications, from acquisition strategies and methodology development to data analysis and archiving. With expert physicists and engineers on staff, the core supports novel hardware development and pulse sequence strategies. It is equipped with five whole-body MRI scanners, including three Siemens 3T Prisma scanners, a 3T Siemens Vida system, and a Bruker 4T, along with two preclinical magnets (9.4T and 11.7T Bruker). The MR Core also features custom-built electromagnets, advanced RF and NMR systems, human behavioral testing rooms, and data storage and analysis facilities, all dedicated to research imaging.
         date-added: 2025-04-07
-        date-updated: 2025-04-07
-        ranking: "2"
+        date-updated: 2026-04-24
+        ranking: "3"
         image: ../Images/DSDE Identity/Firefly machine learning; code 71123.jpg
-        topic: "Analytical Tools"
+        topic: "Analytical Tools, Consulting/Services, Datasets"
+        site: https://medicine.yale.edu/mrrc/
+        group: https://medicine.yale.edu/biomedical-imaging-institute/
         github: https://github.com/YaleMRRC
-        group: https://medicine.yale.edu/mrrc/
   - categories1:
       - "Yale School of Medicine"
     categories2:
@@ -162,9 +165,9 @@ items:
         description: |
           The Harvey Cushing/John Hay Whitney Medical Library provides access to an extensive array of information resources and tools, offers research assistance and expertise, and delivers meaningful services to users, to support innovation and excellence in biomedical research, patient care, and the development of scholars and future leaders in healthcare.
         date-added: 2024-10-01
-        date-updated: 2024-01-21
-        ranking: "1"
-        image: ../Images/DSDE Identity/Firefly ai datahub 91076.jpg
+        date-updated: 2026-04-24
+        ranking: "2"
+        image: ../Images/Resources/Harvey Cushing John Hay Whitney Medical Library.png
         topic: "Consulting/Services, Datasets, Educational Materials"
         site: https://library.medicine.yale.edu/research-data/find-datasets
         group: https://library.medicine.yale.edu/
@@ -181,9 +184,9 @@ items:
         description: |
           Yale Biomedical Informatics & Computing (YBIC) is a resource hub for researchers across Yale School of Medicine and Yale New Haven Health System. We offer a single point of entry for principal investigators to access diverse biomedical data sets, use advanced software and tools, and effectively integrate data science, informatics and computing into their research practices.As the Office of the Deputy Dean for Biomedical Informatics, we help researchers navigate the resources, services, and trainings that are available across Yale School of Medicine and YNHHS. YBIC houses expertise and infrastructure for AI Computing (CPU) and GPU. We support data storage and data sharing efforts across the university and health system.
         date-added: 2024-10-01
-        date-updated: 2024-10-01
-        ranking: "2"
-        image: ../Images/DSDE Identity/AdobeStock_802446835.jpeg
+        date-updated: 2026-04-24
+        ranking: "3"
+        image: ../Images/Resources/YBIC.png
         topic: "Analytical Tools, Consulting/Services, Datasets, Educational Materials"
         site: https://medicine.yale.edu/ybic/
   - categories1:
@@ -192,13 +195,16 @@ items:
       - "Consulting/Services"
       - "Educational Materials"
     tiles:
-      - title: The Yale Center for Clinical Investigation (YCCI)
+      - title: Yale Center for Clinical Investigation (YCCI)
         description: |
-          Clinical and translational research in today’s complex landscape requires a team-based effort that involves partnerships between investigators in different disciplines and from different institutions, as well as with the National Institutes of Health, industry, and the community.
+          The Yale Center for Clinical Investigation (YCCI) provides critical infrastructure and training in clinical and translational research to members of the Yale University community. The overarching goal of the center is to enable Yale University investigators to conduct effective, innovative, efficient, and safe clinical research protocols that ultimately improve health outcomes for all members of society.
+          </br>
+          </br>
+          Successful execution of the center’s activities requires a team effort involving partnerships among investigators from different disciplines and regions, members of our community, and sponsors of clinical and translational research such as the National Institutes of Health, industry, private foundations, and individuals.
         date-added: 2025-04-08
-        date-updated: 2025-04-08
-        ranking: "1"
-        image: ../Images/DSDE Identity/Firefly data scientists; illustration 97073.jpg
+        date-updated: 2026-04-24
+        ranking: "3"
+        image: ../Images/Resources/YCCI.png
         topic: "Consulting/Services, Educational Materials"
         site: https://medicine.yale.edu/center-clinical-investigation/
         
@@ -213,30 +219,36 @@ items:
         description: |
           Yale Dataverse is a data repository service for Yale University faculty, staff, students, and affiliates to share, preserve, and cite research data. Yale University Library hosts and manages Yale Dataverse to ensure research produced at Yale is accessible and discoverable to the global community.
         date-added: 2024-10-01
-        date-updated: 2025-03-20
-        ranking: "1"
+        date-updated: 2026-04-24
+        ranking: "2"
         image: ../Images/Resources/Yale Dataverse.png
         topic: "Datasets"
         site: https://dataverse.yale.edu/
+        group: https://dataverse.org/
       - title: Yale University Library
         description: |
+          Yale Library’s unique collections, amassed over three centuries and widely used in teaching, are a distinctive feature of a Yale education, alongside the holdings of Yale’s museums. In continuing to build and steward these collections, we are committed to preserving and disseminating human knowledge, and to finding new ways to make our collections accessible to the Yale community and to the world.
+          </br>
+          </br>
           Yale University Library has over 10,000 datasets ranging from statistical data to linguistics corpora, to GIS data, to image data sets.
         date-added: 2024-10-01
-        date-updated: 2025-03-24
+        date-updated: 2026-04-23
         ranking: "1"
-        image: ../Images/DSDE Identity/Firefly ai datahub 91076.jpg
+        image: ../Images/Resources/Yale University Library.png
         topic: "Datasets"
         site: https://web.library.yale.edu/quicksearch/tips/find-data-sets
+        group: https://library.yale.edu/
         github: https://github.com/yalelibrary
       - title: Wharton Research Data Services (WRDS)
         description: |
           Wharton Research Data Services, often referred to as WRDS, is a research platform that provides access to a variety of different datasets across multiple disciplines. While access to the WRDS platform is made available by the Yale School of Management, all Yale University faculty, students, and researchers are eligible for access and may use the currently available data. Access to WRDS requires users to have an individual account.
         date-added: 2024-10-01
-        date-updated: 2023-03-20
-        ranking: "1"
-        image: ../Images/DSDE Identity/Firefly data science data equity 50124.jpg
+        date-updated: 2026-04-24
+        ranking: "2"
+        image: ../Images/Resources/Wharton Research Data Services (WRDS).png
         topic: "Demographic and Economic Surveys"
         site: https://guides.library.yale.edu/WRDS
+        group: https://library.yale.edu/
   - categories1:
       - "Yale University"
     categories2:
@@ -260,23 +272,30 @@ items:
     tiles:
       - title: Yale Center for Research Computing (YCRC)
         date-added: 2025-03-20
-        date-updated: 2025-03-20
-        ranking: "2"
+        date-updated: 2026-04-24
+        ranking: "3"
         description: |
-          The Yale Center for Research Computing (YCRC) is a computational core facility under the Office of the Provost created to support the advanced computing needs of the research community. The YCRC is staffed by a team of research scientists, application specialists, and systems administrators with expertise in supporting high performance computing (HPC) and computationally dependent disciplines.
-        image: ../Images/DSDE Identity/AdobeStock_323829966 cropped.jpeg
+          Yale Center for Research Computing (YCRC) is a core facility that is jointly overseen by the Office of the Provost and Information Technology Services, established to address the advanced computing needs of the Yale research community. The YCRC comprises an integrated team of professionals working collaboratively to advance computational research across the university. 
+          </br>
+          </br>
+          Our research scientists and application specialists provide domain-specific expertise in various aspects of computationally intensive research, while our systems administrators design and manage our advanced computing infrastructure. Complementing this technical foundation, our project and program management team coordinates YCRC’s capital projects, vendor relationships, procurement, and all operational aspects of the center, ensuring Yale researchers have access to cutting-edge computational resources backed by comprehensive support.
+        image: ../Images/Resources/YCRC.png
         topic: "Analytical Tools, Educational Materials, Consulting/Services"
         site: https://research.computing.yale.edu/
         github: https://github.com/ycrc
-      - title: Data-Intensive Social Science Center (DISSC) at Yale
+      - title: Data-Intensive Social Science Center (DISSC)
         date-added: 2025-03-20
         date-updated: 2025-03-20
-        ranking: "2"
+        ranking: "3"
         description: |
-          A university-wide hub to support data-intensive social science research at the frontiers of each discipline.
-        image: ../Images/DSDE Identity/AdobeStock_802446835.jpeg
+          DISSC is Yale’s central hub for advancing data-intensive social science. Whether you’re faculty, staff, or student, we provide you with expert support across the research lifecycle. We can help you acquire data, navigate Yale’s computing environments, manage complex or secure data, and ensure your research is ready for reproducibility. 
+          </br>
+          </br>
+          We partner with Yale researchers to lower the barriers to research and shape impactful studies, across every phase of the research lifecycle.
+        image: ../Images/Datasets/DISSC.png
         topic: "Analytical Tools, Educational Materials, Consulting/Services"
         site: https://dissc.yale.edu/
+        github: https://github.com/DISSC-yale
         
         
   # -----------

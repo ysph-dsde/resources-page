@@ -160,6 +160,27 @@ items:
         
   # -----------
   # Region/Affiliation by: Yale University
+  # Open Access and License Required
+  - categories1:
+      - "Yale University"
+    categories2:
+      - "Demographic and Economic Surveys"
+      - "Medical Claims"
+    categories3:
+      - "Open Access"
+      - "License Required"
+    tiles:
+      - title: Data-Intensive Social Science Center (DISSC) Curated Social Science Data
+        date-added: 2026-04-23
+        date-updated: 2026-04-23
+        ranking: "2"
+        description: |
+          DISSC connects Yale researchers to licensed, and public-use datasets - along with the knowledge and tools to use them effectively. Data acquisition is handled in multiple ways across the University. The Yale Library (YL) aims to license data broadly for University-wide use to support all research areas. DISSC, other research centers, academic departments and individual researchers also acquire data that may be restricted to a set of users, specific to a discipline or focused use.
+        image: ../Images/Datasets/DISSC.png
+        topic: "Demographic and Economic Surveys, Medical Claims, and Consumer and Spending Data"
+        site: https://dissc.yale.edu/data-resources
+        group: https://dissc.yale.edu/
+        info: More-Info-Pages/License-Required/DISSC Curated Social Science Data.qmd
 
   # -----------
   # Region/Affiliation by: U.S. University

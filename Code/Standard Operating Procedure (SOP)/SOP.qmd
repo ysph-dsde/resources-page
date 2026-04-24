@@ -1,0 +1,108 @@
+---
+format:
+  pdf:
+    include-in-header: 
+      - text: |
+          \input{SOP Formatting/PDF Formatting Script.tex}
+highlight-style: ../../_styles/idle-fingers-light.theme
+csl: ../nature.csl
+---
+
+\clearpage
+\null
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+The purpose of this document is to outline the contents of the Resource Navigation Tool 
+
+\tableofcontents
+\newpage
+
+# File Structure
+
+\vspace{-2ex}
+
+\begin{flushleft}
+\texttt{dsde-workshops/}\\
+\texttt{\ \ |- start-local/}\\
+\texttt{\ \ |- JHU-CRC-Vaccinations/}\\
+\texttt{\ \ |- JHU-CRC-Cases-and-Deaths/}
+\end{flushleft}
+
+
+
+
+# Updating Procedure
+
+In this example, we will create a mock project folder from scratch, initialize Git, and link it to a remote repository on GitHub. We will then test the connection by adding "Hello World" to the `README.md` file on GitHub and pulling the changes to the local repository.
+
+## Create an Empty Remote Repository
+
+1. [Log in](https://github.com/login) to your personal GitHub account.
+
+2. In the top-right of the page navigation bar, select the
+
+3. Fill out the following sections:
+
+    a. Adjust the GitHub account owner as needed and create the name for the new repository.
+    
+    c. It is good practice to initially set the repository to "Private".
+    
+    d. Do **[NOT]{.underline}** use a template or include a description, `README.md`, `.gitignore`, or license.
+
+## Create a New Local Project
+
+1. Open the command-line application (i.e. Terminal for Macs and Git Bash for Windows) and navigate to the file location you want to temporarily store the repository copy\ [@local_hosted].
+
+\vspace{-2ex}
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{cd} \str{"~/dsde-workshops/"}     \com{# Go to workshop directory}
+\func{mkdir} \str{"start-local"}        \com{# Create project folder}
+\func{cd} \str{"start-local"}           \com{# Enter project folder}
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+
+2. Confirm that Git has **[NOT]{.underline}** yet been initialized by checking the project status. If the project is initialized, you should see that Git is present and tracking files.
+
+\vspace{-2ex}
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{git} status    \com{# Show current status}
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-2.5ex}
+  \item\small \textbf{Output} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\str{fatal:} not a \func{git} repository (or any of the parent directories: \str{.git}
+  \end{Verbatim}
+  \end{codebox}
+
+\vspace{-4.5ex}
+\item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+
