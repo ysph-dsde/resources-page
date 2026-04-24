@@ -149,7 +149,7 @@ items:
         date-added: 2025-04-07
         date-updated: 2026-04-24
         ranking: "3"
-        image: ../Images/DSDE Identity/Firefly machine learning; code 71123.jpg
+        image: ../Images/Resources/MRRC.png
         topic: "Analytical Tools, Consulting/Services, Datasets"
         site: https://medicine.yale.edu/mrrc/
         group: https://medicine.yale.edu/biomedical-imaging-institute/
@@ -260,7 +260,7 @@ items:
         ranking: "2"
         description: |
           This tool will assist you in searching for storage options. Note that this is only for evaluation purposes and the proposed solutions are not the only possibilities. Your data workflow should determine what storage solution or combination of solutions is best for you with regards to your performance, cost and data protection needs. Please feel free to reach out to the Yale ITS Enterprise Storage team for additional consultation.
-        image: ../Images/DSDE Identity/Firefly machine learning; code 38667.jpg
+        image: ../Images/DSDE Identity/Firefly data science data equity 50124.jpg
         topic: "Analytical Tools"
         site: https://storage-finder.yale.edu/
   - categories1:

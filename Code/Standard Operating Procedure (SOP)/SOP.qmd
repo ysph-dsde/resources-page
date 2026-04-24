@@ -16,6 +16,14 @@ csl: ../nature.csl
 
 The purpose of this document is to outline the contents of the Resource Navigation Tool 
 
+**Authors**
+Shelby Golden, M.S.
+
+**Date Effective** April 24<sup>th</sup>, 2026
+
+**Date Updated** N/A
+
+
 \tableofcontents
 \newpage
 
