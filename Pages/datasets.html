@@ -775,6 +775,13 @@ window.Quarto = {
                   </div>
                 
                   <div class="checkbox-container">
+                    <input type="checkbox" name="category1" value="Yale%20University" id="category1-Yale%20University">
+                    <label for="category1-Yale%20University" style="margin-bottom: 0px;">
+                      Yale University
+                    </label>
+                  </div>
+                
+                  <div class="checkbox-container">
                     <input type="checkbox" name="category1" value="U.S.%20Government" id="category1-U.S.%20Government">
                     <label for="category1-U.S.%20Government" style="margin-bottom: 0px;">
                       U.S. Government
@@ -799,13 +806,6 @@ window.Quarto = {
                     <input type="checkbox" name="category1" value="International%20University" id="category1-International%20University">
                     <label for="category1-International%20University" style="margin-bottom: 0px;">
                       International University
-                    </label>
-                  </div>
-                
-                  <div class="checkbox-container">
-                    <input type="checkbox" name="category1" value="Yale%20University" id="category1-Yale%20University">
-                    <label for="category1-Yale%20University" style="margin-bottom: 0px;">
-                      Yale University
                     </label>
                   </div>
                 
@@ -871,13 +871,6 @@ window.Quarto = {
                   </div>
                 
                   <div class="checkbox-container">
-                    <input type="checkbox" name="category2" value="Clinical%20Study%2FSurveys" id="category2-Clinical%20Study%2FSurveys">
-                    <label for="category2-Clinical%20Study%2FSurveys" style="margin-bottom: 0px;">
-                      Clinical Study/Surveys
-                    </label>
-                  </div>
-                
-                  <div class="checkbox-container">
                     <input type="checkbox" name="category2" value="Demographic%20and%20Economic%20Surveys" id="category2-Demographic%20and%20Economic%20Surveys">
                     <label for="category2-Demographic%20and%20Economic%20Surveys" style="margin-bottom: 0px;">
                       Demographic and Economic Surveys
@@ -888,6 +881,13 @@ window.Quarto = {
                     <input type="checkbox" name="category2" value="Medical%20Claims" id="category2-Medical%20Claims">
                     <label for="category2-Medical%20Claims" style="margin-bottom: 0px;">
                       Medical Claims
+                    </label>
+                  </div>
+                
+                  <div class="checkbox-container">
+                    <input type="checkbox" name="category2" value="Clinical%20Study%2FSurveys" id="category2-Clinical%20Study%2FSurveys">
+                    <label for="category2-Clinical%20Study%2FSurveys" style="margin-bottom: 0px;">
+                      Clinical Study/Surveys
                     </label>
                   </div>
                 
@@ -1202,6 +1202,62 @@ window.Quarto = {
                   - Has data-* attributes used by JS for filtering/sorting
                   - Gets `hidden` class server-side after the first 9 tiles
                 -->
+                <div class="tile " data-categories1="Yale%20University" data-categories2="Demographic%20and%20Economic%20Surveys Medical%20Claims" data-categories3="Open%20Access License%20Required" data-info="yes" data-title="Data-Intensive Social Science Center (DISSC) Curated Social Science Data" data-date="2026-04-23" data-ranking="2">
+
+                  <!-- Tile image -->
+                  <img src="../Images/Datasets/DISSC.png" class="image">
+
+                  <!-- Title (used for dynamic line clamp calculations) -->
+                  <h2 class="js-line-count">Data-Intensive Social Science Center (DISSC) Curated Social Science Data</h2>
+
+                  <!-- Description (line clamped in JS) -->
+                  <p class="description">DISSC connects Yale researchers to licensed, and public-use datasets - along with the knowledge and tools to use them effectively. Data acquisition is handled in multiple ways across the University. The Yale Library (YL) aims to license data broadly for University-wide use to support all research areas. DISSC, other research centers, academic departments and individual researchers also acquire data that may be restricted to a set of users, specific to a discipline or focused use.
+</p>
+
+                  <!-- Link bar / metadata area -->
+                  <div class="card-header py-1 px-2 border-bottom bg-light">
+                    <small class="card-text">
+                      
+                        &nbsp;
+                        <a href="https://dissc.yale.edu/data-resources" title="Main site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-globe"></i>
+                        </a>
+                      
+
+                      
+                        &nbsp;
+                        <a href="https://dissc.yale.edu/" title="Group site" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-people-fill"></i>
+                        </a>
+                      
+
+                      
+
+                      
+
+                      
+                        &nbsp;
+                        <a href="../Pages/More-Info-Pages/License-Required/DISSC Curated Social Science Data.html" title="Get more information" class="source-code" style="color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));">
+                          <i class="bi-info-circle"></i>
+                        </a>
+                      
+
+                      <!-- Optional topic line -->
+                      
+                        <p class="topic" style="margin-bottom: 5px;">Demographic and Economic Surveys, Medical Claims, and Consumer and Spending Data</p>
+                      
+                    </small>
+                  </div>
+                </div>
+
+                
+              
+
+                <!--
+                  Tile element:
+                  - Has data-* attributes used by JS for filtering/sorting
+                  - Gets `hidden` class server-side after the first 9 tiles
+                -->
                 <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's Rapid Surveys System" data-date="2025-12-23" data-ranking="1">
 
                   <!-- Tile image -->
@@ -1406,7 +1462,7 @@ window.Quarto = {
                   - Has data-* attributes used by JS for filtering/sorting
                   - Gets `hidden` class server-side after the first 9 tiles
                 -->
-                <div class="tile " data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-10-09" data-ranking="2">
+                <div class="tile hidden" data-categories1="U.S.%20Government" data-categories2="Clinical%20and%20Health%20Surveys Demographic%20and%20Economic%20Surveys" data-categories3="Open%20Access Restricted%20Access" data-info="yes" data-title="NCHS's National Health and Nutrition Examination Survey (NHANES)" data-date="2025-10-09" data-ranking="2">
 
                   <!-- Tile image -->
                   <img src="../Images/Datasets/NHANES.png" class="image">
