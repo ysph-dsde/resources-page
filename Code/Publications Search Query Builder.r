@@ -188,6 +188,41 @@ build_search_query(
   affiliation = "Yale School of Public Health", years = 5)
 
 
+## ----------------
+## Flatiron Health
+
+build_search_query(
+  keywords = c("Flatiron Health"), 
+  affiliation = "Yale School of Public Health", years = 5)
+
+
+## ----------------
+## DISSC
+
+build_search_query(
+  keywords = c("Managed Markets Insight & Technology"), 
+  affiliation = "Yale School of Medicine", years = 10)
+
+build_search_query(
+  keywords = c("Kilts-Nielsen", "Kilts"), 
+  affiliation = "Yale University", years = 10)
+
+build_search_query(
+  keywords = c("MBHS3"), 
+  affiliation = "Yale University", years = 10)
+
+build_search_query(
+  keywords = c("Infutor"), 
+  affiliation = "Yale University", years = 10)
+
+build_search_query(
+  keywords = c("Integrated Public Microdata Series"), 
+  affiliation = "Yale University", years = 5)
+
+build_search_query(
+  keywords = c("Numerator"), 
+  affiliation = "Yale University", years = 10)
+
 
 
 ## ----------------------------------------------------------------

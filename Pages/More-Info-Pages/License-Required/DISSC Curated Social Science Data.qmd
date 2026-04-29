@@ -1,13 +1,10 @@
 ---
 title-block-banner: true
 title: |
-  Merative's MarketScan
+  Data-Intensive Social Science Center (DISSC) Curated Social Science Data
 description: |
   </br>
-  <a href="https://www.merative.com/">Merative</a> advances health and social care by providing innovative healthcare data and technology solutions, collaborating with thousands of providers and major organizations\ [@merative; @about_merative]. Their MarketScan Research Databases offer longitudinal, patient-level data on healthcare costs and outcomes, supporting diverse research applications with data from over 273 million patients and more than 2,600 peer-reviewed publications. MarketScan's detailed and HIPAA-compliant data enhance research across disease areas, backed by powerful analytic tools\ [@merative_marketscan_docs].
-  </br>
-  </br>
-  At Yale, the <a href="https://medicine.yale.edu/ybic/data-resources-services/marketscan/">MarketScan database</a> is licensed for research use by the <a href="https://medicine.yale.edu/ybic/">Yale Biomedical Informatics and Computing (YBIC)</a> office, with support from the <a href="https://library.medicine.yale.edu/">Harvey Cushing/John Hay Whitney Medical Library</a> and the <a href="https://medicine.yale.edu/center-clinical-investigation/">Yale Center for Clinical Investigation (YCCI)</a>. Yale researchers can access and analyze MarketScan data by submitting a request form for assistance from the YBIC team\ [@ybic_marketscan; @ybic_access].
+  Founded in 2022, Yale's <a href = "https://dissc.yale.edu/">Data-Intensive Social Science Center (DISSC)</a> serves as a central hub supporting data-intensive social science research across the university, providing access to computational resources, data science tools, and statistical methods. In partnership with the Yale Library, DISSC maintains a curated listing of licensed and publicly available datasets, including census microdata, consumer spending, and health and pharmacy data, accessible through their <a href = "https://dissc.yale.edu/data-resources">Discover and Access High-Value Social Science Data</a> webpage.
 include-in-header: ../../../_includes/feedback_popup.html
 bibliography: BibTeX/references.bib
 csl: ../../../Code/nature.csl
@@ -20,31 +17,21 @@ csl: ../../../Code/nature.csl
 source('../../../Code/PubMed Search_Functions.R')
 ```
 
-<small>Updated: October 10<sup>th</sup>, 2025</small>
+<small>Updated: April 29<sup>th</sup>, 2026</small>
 
 ## Overview
 
-Merative advances health and social care by innovatively providing healthcare data and technology solutions for patients, program managers, radiologists, and researchers. They collaborate with over 4,500 healthcare providers, top US health plans, government agencies, Fortune 100 employers, and all leading life sciences companies to drive shared health progress\ [@merative; @about_merative].
+Yale's [Data-Intensive Social Science Center (DISSC)](https://dissc.yale.edu/) was founded in 2022 to address a growing need for coordinated support for data-intensive social science research. DISSC serving as a central research support hub, expanding access to computational resources, data science tools, and statistical methods for social science researchers across the university\ [@dissc_about].
 
-Merative's MarketScan Research Databases provide longitudinal, patient-level data that cover the full continuum of healthcare costs and outcomes, including detailed prescription drug information. These databases, with data from over 273 million unique patients across diverse care points, support numerous research applications such as pharmacoeconomic outcome evaluations, economic burden studies, and therapeutic pathway analyses, documented in more than 2,600 peer-reviewed publications\ [@merative_marketscan_docs].
-
-MarketScan offers several unique advantages: it includes comprehensive patient-level details, tracks the full continuum of care, and provides detailed prescription drug information for longitudinal research. Its large sample size supports studies on unique patient populations, and linked data enhance research across various disease areas, maintaining appropriate claims linkages and HIPAA compliance. Equipped with analytic tools for efficient data exploration, MarketScan facilitates understanding of disease progression, treatment patterns, and health outcomes for patients, employers, health plans, and government entities\ [@ybic_access; @merative_marketscan_docs].
-
-
-The YBIC license includes the following MarketScan datasets\ [@ybic_access]:
+They assist colleagues with data acquisition, access, and storage, and maintain a listing of new data licenses acquired for the Yale community or publicly available in partnership with the Yale Library. Their site also includes links to additional data sources made available through other groups and sources. Their [Discover and Access High-Value Social Science Data](https://dissc.yale.edu/data-resources) webpage includes links to additional data sources made available through other groups, alongside a full listing of DISSC-managed data acquisitions. At the time of this writing, current offerings include\ [@dissc_curated_data]:
 
 ::: {style="margin-left: 2rem"}
-- **Commercial Database (CCAE):** Contains data from active employees, early retirees, COBRA continuees, and dependents with employer-sponsored plans, including lab results. Its table structure includes Inpatient Admissions, Facility Header, Inpatient Services, Outpatient Services, Outpatient Pharmaceutical Claims, Annual Enrollment Summary, Enrollment Detail, and Lab Results. This dataset represents approximately 69 million patients and 8.7 billion records.
+- **Census Data:** Individual-level and household microdata from US decennial census records (1870–1950), available through Integrated Public Microdata Series (IPUMS).
 
-- **Medicare Database (MDCR):** Originally designed for Medicare-eligible retirees with employer-sponsored Medicare Supplemental and Medicare Advantage plans, primarily containing fee-for-service plan data. Its table structure matches that of the Commercial Database and includes both Medicare-paid and employer-paid supplemental insurance amounts, limited to plans where both types of payments are available and evident on claims. This dataset represents approximately 4 million patients and 1.55 billion records.
+- **Consumer and Spending Data:** Multiple datasets covering US consumer demographics, spending, and purchasing behavior, including longitudinal consumer history (Infutor), retail and product-level sales data (Kilts-Nielsen), de-identified credit and debit card transactions since 2019 (MBHS<sub>3</sub>), and multi-channel consumer panel data covering both e-commerce and in-store purchases since 2017 (Numerator).
 
-- **Medicaid Database (MDCD):** Captures healthcare service use for Medicaid enrollees across various states, covering both fee-for-service and managed care plans. It includes records of inpatient services, admissions, outpatient services, prescription drug claims, long-term care, and demographic variables such as age, gender, Federal Aid, Disability, TANF, and race. This dataset represents approximately 28 million patients and 8.26 billion records.
-
-- **Dental Database:** An independent product that can be linked to specific years and versions of the Merative MarketScan Commercial Database and the MarketScan Medicare Database. This dataset represents approximately 28 million patients and 1.73 billion records.
-
-- **Commercial Insurance Weights Database:** The Merative MarketScan Commercial (CCAE) and Medicare (MDCR) Databases contain data on individuals with employer-sponsored insurance (ESI), either as primary or supplemental coverage. The MarketScan Commercial Insurance Weights, created using the Public Use Microdata Sample (PUMS) from the American Community Survey (ACS), project this data to the national population with ESI.
+- **Health and Pharmacy Data:** Drug formulary and prior authorization data covering pharmacy and medical benefit coverage across thousands of US health plans, pharmacy benefit managers, and payers, spanning 2017–2022, from Managed Markets Insight & Technology (MMIT).
 :::
-
 
 ## Gaining Access
 
@@ -54,26 +41,24 @@ The YBIC license includes the following MarketScan datasets\ [@ybic_access]:
 
 #### Do I Qualify?
 
-The YBIC has licensed the MarketScan database for Yale community members to use in their research.
+DISSC advertises newly released publicly available data and maintains a curated listing of licensed datasets acquired for the Yale community. Access to some datasets may be restricted based on discipline or intended use, with restrictions varying across datasets.
 
 #### Typical Timeline
 
-Time constraints may vary for applicants.
+Licenses have already been established for qualifying researchers. Review and approval processes for gaining access may vary depending on the researcher's intended use and current discipline.
 
 #### Step-by-Step Guide
 
-Researchers need to fill out an application requesting access, listing the dataset and population they want access to, describing their research plan, disclosing funding sources, and signing the data use agreement.
-
-After receiving approval, the [Harvey Cushing/John Hay Whitney Medical Library](https://library.medicine.yale.edu/), the [Yale Center for Clinical Investigation (YCCI)](https://medicine.yale.edu/center-clinical-investigation/), and [YBIC](https://medicine.yale.edu/ybic/) will collaborate to assist with data retrieval, analysis, and ensuring compliance with data use agreements. The request form is accessible on the MarketScan Database [DataMed](https://datamed.library.medicine.yale.edu/marketscan) webpage.
+Steps to gaining access vary across DISSC-curated datasets and depend on the researcher's intended use and discipline. Please review the documentation on DISSC's data resources site or contact DISSC directly for further guidance.
 
 :::
 
 ## Relevant Links
 
 ::: {style="margin-left: 2rem"}
-- [YBIC - MarketScan](https://medicine.yale.edu/ybic/data-resources-services/marketscan/): Find links to the DataMed webpage for the dataset and training\ [@ybic_marketscan].
+- [Data-Intensive Social Science Center (DISSC)](https://dissc.yale.edu/): Find information about DISSC's resources and services.
 
-- [MarketScan use at Yale](https://datamed.library.medicine.yale.edu/marketscan): Find additional details about the datasets covered by Yale's license, access training, and apply for research access\ [@ybic_access].
+- [Discover and Access High-Value Social Science Data](https://dissc.yale.edu/data-resources): Find DISSC's curated datasets acquired for social science research\ [@dissc_curated_data].
 :::
 
 
@@ -84,10 +69,7 @@ After receiving approval, the [Harvey Cushing/John Hay Whitney Medical Library](
 
 # Fetch and format the citations.
 citations <- get_citations(
-  doi = c("10.1377/hlthaff.2019.01776", "10.1001/jama.2021.0720",
-          "10.1001/jamanetworkopen.2022.22101", "10.1016/j.vaccine.2021.04.003",
-          "10.3390/ijerph192114445", "10.1016/j.clml.2024.07.017",
-          "10.1200/OP-24-00978"),
+  doi = c("10.1093/ntr/ntac209"),
   affiliation = c("Yale School of Public Health", "Yale School of Medicine", "Yale University"),
   highlight_names = c("Bhramar Mukherjee")
 )
@@ -106,7 +88,7 @@ if(!any(str_detect(citations$citations, "No publications"))) {
 ```
 
 
-This section presents a selection of PubMed articles that utilize the dataset and are authored by individuals affiliated with the Yale University. These articles are provided to inspire researchers and students to use the data in their own work.
+This section presents a selection of PubMed articles that utilize one of the curated datasets and are authored by individuals affiliated with the Yale University. These articles are provided to inspire researchers and students to use the data in their own work.
 
 ::: {style="margin-left: 1rem"}
 
