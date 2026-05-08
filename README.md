@@ -54,14 +54,25 @@ Additional scripts were created to effectively render the site. Follow the proce
 
 Sometimes the webpage may fail to publish, but this is not necessarily a critical error. If you encounter this issue after attempting to publish, you will first need to clear any working trees generated during the incomplete process before retrying Step 6.
 
-1. To retry publishing the site, you first need to clear any unfinished working trees that remain in the Git environment. For example, if the working tree is called `17fef8679f581e08/`:
+For example, if the working tree is called `FILE-PATH/.quarto/quarto-publish-worktree-17fef8679f581e08/`:
+
+1. List all currently active worktrees in the environment. One will be associated with `quarto publish` and denoted as "prunable."
 
     ```
-    git status                                            # This should show the working tree that failed to complete.
-    git worktree remove --force "17fef8679f581e08/"       # Remove it from the Git environment.
+    git worktree list
+
+    # Example Result
+    FILE-PATH/  69edfb0 [main]
+    FILE-PATH/.quarto/quarto-publish-worktree-71502552fdce11b5  0ee5bea [gh-pages] prunable
     ```
 
-2. Retry publishing the site. Follow the prompts by entering "Yes" to proceed with updating the site and entering any required passwords when prompted.
+2. Forcably removed the prunable worktree.
+
+    ```
+    git worktree remove --force "FILE-PATH/.quarto/quarto-publish-worktree-71502552fdce11b5"
+    ```
+
+3. Retry publishing the site. Follow the prompts by entering "Yes" to proceed with updating the site and entering any required passwords when prompted.
      
     ```
     quarto publish gh-pages --no-render
