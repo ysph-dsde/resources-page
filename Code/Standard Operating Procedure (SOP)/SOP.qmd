@@ -87,7 +87,7 @@ The project SharePoint folder contains additional resources, including running m
 \end{flushleft}
 
 :::{.callout-note}
-Files within the "Keep Local/Archived Pages/" directory are not documented here, as they are not actively utilized in the CI/CD pipeline. They are maintained for archival purposes only.
+Files within the "KEEP LOCAL/Archived Pages/" directory are not documented here, as they are not actively utilized in the CI/CD pipeline. They are maintained for archival purposes only.
 :::
 
 ## Environment Reproducibility
@@ -141,8 +141,6 @@ If this is the first time the repository is being initialized, you may need to i
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
 \end{list}
 
-\newpage
-
 :::{.callout-note}
 If you are asked to update packages, say no. The `renv()` is intended to recreate the same environment under which the project was created, making it reproducible. You are ready to proceed when running `renv::restore()` gives the output:
 
@@ -187,6 +185,7 @@ Resources represent Yale University-wide organizations or services that provide 
 
     If entering this content into "Approval List.xlsx" first, also complete the approval-related columns B through E. All subsequent columns are labeled according to their relevance to either the Dataset or Resources curation type. Required fields will highlight red based on the curation type indicated in column C.
 
+3. When adding content to the "Resources" sheet of "Webpage Queue and Status.xlsx", initially set column P to "No." This will highlight the row in blue, indicating that it needs to be added to the website.
 
 ## Dataset Curation
 
@@ -198,6 +197,8 @@ Datasets represent data collections created by Yale affiliates or external sourc
 
     If entering this content into "Approval List.xlsx" first, also complete the approval-related columns B through E. All subsequent columns are labeled according to their relevance to either the Dataset or Resources curation type. Required fields will highlight red based on the curation type indicated in column C.
 
+3. When adding content to the "Datasets" sheet of "Webpage Queue and Status.xlsx", initially set column P and Q to "No." This will highlight the row in blue, indicating that it needs to be added to the website.
+
 ## Committee Review of the Curation List
 
 No procedure is defined.
@@ -206,20 +207,21 @@ No procedure is defined.
 
 Page content is managed through the corresponding `*.qmd` files. Refer to existing files for guidance on content organization and formatting conventions.
 
-## Listing Pages
+## Feedback and Suggestion Box
 
-### Adding Tiles
+A user feedback survey (Microsoft Forms) and suggestion box (Qualtrics) have been created for this resource, with links available on the project SharePoint. Note that only designated collaborators have editing access to both. To edit the suggestion box, access it directly in Qualtrics rather than via the external link.
 
-Three pages utilize the Quarto Listing feature: the Resources and Datasets filter/search pages, and the People section of the About Us page. Each of these pages or sections is comprised of the following files:
+On the site, these are linked in three locations: a pop-up referenced in the `*.qmd` header YAML section, the main menu bar, and the right corner of the footer.
 
-- `*.qmd` — Renders the page on the website.
-- `*.yaml` — Contains all information fields and organizes them within defined hierarchies and classifications.
-- `*.ejs` — Ingests the `*.yaml` file and processes it through embedded HTML and JavaScript, formatting the tiles and defining page behaviors such as content-responsive text clamping and the "Show More" button.
-- `*.scss` — Defines custom styling and some responsive behaviors.
+\footnotesize \textbf{a. Configuring Stable Links} \normalsize
 
-The `*.qmd` files are located with in the "Pages/" directory, the `*.yaml` and and `*.ejs` are in "Code/Listing_\*/" respective directory, and the `*.scss` file is in the "\_styles/" directory. Users only need to edit the `*.yaml` to remove, add, or update existing content fields.
+1. Launch the project by opening the `*.Rproj` file in RStudio.
 
-1. In the command-line application (i.e., Terminal for Macs or Git Bash for Windows) navigate to the codebase file location.
+2. Both stable links are accessible through the site's `_quarto.yml`. Open this `*.yml` file in RStudio.
+
+3. Edit the main menu links under the `navbar:` section and the footer links under the `right:` subsection of `page-footer:` and save.
+
+4. **OPTIONAL:** Preview the changes using a local preview. Navigate to the codebase directory in the command-line application (Terminal for Mac or Git Bash for Windows).
 
 \begin{list}{}{\setlength\leftmargin{2.5em}}
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
@@ -236,7 +238,7 @@ The `*.qmd` files are located with in the "Pages/" directory, the `*.yaml` and a
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
 \end{list}
 
-2. Run a local preview of the website. It will open in a browser at the "localhost:[port]/web/" address.
+6. Run a local preview of the website. It will open in a browser at the "localhost:[port]/web/" address.
 
 \begin{list}{}{\setlength\leftmargin{2.5em}}
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
@@ -253,19 +255,123 @@ The `*.qmd` files are located with in the "Pages/" directory, the `*.yaml` and a
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
 \end{list}
 
-3. Launch the project by opening the `*.Rproj` file in RStudio.
+7. To reflect changes saved in the `*.yml` file in the local preview, save a minor change in any `*.qmd` file to refresh the page. Be sure to revert these changes once the `*.yml` has been updated.
 
-4. Open the `*.yaml` and `*.qmd` files associated with the Listing you want to revise.
+\footnotesize \textbf{b. Configuring Pop-Up Links} \normalsize
 
-5. The header of each `*.yaml` file describes the required and optional fields used by the respective `*.ejs` file, as well as any additional hierarchies and classifications needed to organize the content. Refer to preexisting entries to help determine formatting and structural conventions.
+The pop-up is coordinated using "Code/popup.js" and "_includes/feedback_popup.html", a before head file.
 
-6. To refresh the local preview and reflect changes saved in the `*.yaml`, save a minor change in the associated `*.qmd` file. Be sure to revert these changes once you have finished updating the `*.yaml`.
+1. Launch the project by opening the `*.Rproj` file in RStudio.
 
-7. Update the page-level "Last Updated" field in the header section of the `*.yaml` file.
+2. Open "_includes/feedback_popup.html" to update the links and pop-up copy, then save the file.
 
-8. For Resources and Datasets, update the "Added to the Website" field in the respective sheet of "Webpage Queue and Status.xlsx".
+3. **OPTIONAL:** Preview the changes using a local preview. Navigate to the codebase directory in the command-line application (Terminal for Mac or Git Bash for Windows).
 
-9. The content is now ready for publishing. This process is described below.
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{cd} \str{"FILE-PATH/resource-page/"}
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+4. Run a local preview of the website. It will open in a browser at the "localhost:[port]/web/" address.
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{quarto} preview
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+5. To reflect changes saved in the `*.yml` file in the local preview, save a minor change in a `*.qmd` file where the pop-up will appear to refresh the page. Be sure to revert these changes once the `*.yml` has been updated.
+
+    \begin{callout-note}[Timed Delay]
+    The pop-up has a 2-minute delay. Allow the previewed page to sit for a few minutes before the pop-up appears.
+    \end{callout-note}
+
+
+## Index and About Us
+
+These pages do not require regular updates or maintenance. Links and copy can be revised directly in the respective HTML or Markdown sections. To update the People section of About Us, refer to the section about about maintaining Listings.
+
+## Listing Pages
+
+Three pages utilize the Quarto Listing feature: the Resources and Datasets filter/search pages, and the People section of the About Us page. Each of these pages or sections is comprised of the following files:
+
+- `*.qmd` — Renders the page on the website.
+- `*.yml` — Contains all information fields and organizes them within defined hierarchies and classifications.
+- `*.ejs` — Ingests the `*.yml` file and processes it through embedded HTML and JavaScript, formatting the tiles and defining page behaviors such as content-responsive text clamping and the "Show More" button.
+- `*.scss` — Defines custom styling and some responsive behaviors.
+
+The `*.qmd` files are located with in the "Pages/" directory, the `*.yml` and and `*.ejs` are in "Code/Listing_\*/" respective directory, and the `*.scss` file is in the "\_styles/" directory. Users only need to edit the `*.yml` to remove, add, or update existing content fields.
+
+### Adding Tiles
+
+1. For Resources and Datasets, update column P in the respective sheet of "Webpage Queue and Status.xlsx" to "In Progress". For Datasets, also update column Q, as it additionally reflects entry status and determines row highlighting.
+
+2. In the command-line application (i.e., Terminal for Macs or Git Bash for Windows) navigate to the codebase file location.
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{cd} \str{"FILE-PATH/resource-page/"}
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+3. Run a local preview of the website. It will open in a browser at the "localhost:[port]/web/" address.
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{quarto} preview
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+4. Launch the project by opening the `*.Rproj` file in RStudio.
+
+5. Open the `*.yml` and `*.qmd` files associated with the Listing you want to revise.
+
+6. The header of each `*.yml` file describes the required and optional fields used by the respective `*.ejs` file, as well as any additional hierarchies and classifications needed to organize the content. Refer to preexisting entries to help determine formatting and structural conventions.
+
+7. To refresh the local preview and reflect changes saved in the `*.yml`, save a minor change in the associated `*.qmd` file. Be sure to revert these changes once you have finished updating the `*.yml`.
+
+8. Update the page-level "Date last updated: \_\_" and "Last updated by: \_\_" fields in the header section of the `*.yml` file.
+
+9. For Resources and Datasets, update column P in the respective sheet of "Webpage Queue and Status.xlsx" to "Yes". For Datasets, also update column Q, as it additionally reflects entry status and determines row highlighting.
+
+10. The content is now ready for publishing. This process is described below.
 
 ### Formatting Banner Images
 
@@ -287,11 +393,13 @@ Images used on the Resources and Datasets tiles must be formatted to ensure they
 
 \vspace{1ex}
 
-6. Add the image file path to the respective listing `*.yaml` file and save.
+6. Launch the project by opening the `*.Rproj` file in RStudio.
 
-\newpage
+7. Open the `*.yml` and `*.qmd` files associated with the Listing you want to revise.
 
-7. **OPTIONAL:** Preview the changes using a local preview. Navigate to the codebase directory in the command-line application (Terminal for Mac or Git Bash for Windows).
+8. Add the image file path to the respective listing `*.yml` file and save.
+
+9. **OPTIONAL:** Preview the changes using a local preview. Navigate to the codebase directory in the command-line application (Terminal for Mac or Git Bash for Windows).
 
 \begin{list}{}{\setlength\leftmargin{2.5em}}
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
@@ -308,7 +416,7 @@ Images used on the Resources and Datasets tiles must be formatted to ensure they
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
 \end{list}
 
-8. Run a local preview of the website. It will open in a browser at the "localhost:[port]/web/" address.
+10. Run a local preview of the website. It will open in a browser at the "localhost:[port]/web/" address.
 
 \begin{list}{}{\setlength\leftmargin{2.5em}}
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
@@ -325,49 +433,119 @@ Images used on the Resources and Datasets tiles must be formatted to ensure they
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
 \end{list}
 
-9. To refresh the local preview and reflect changes saved in the `*.yaml`, save a minor change in the associated `*.qmd` file. Be sure to revert these changes once you have finished updating the `*.yaml`.
+11. To refresh the local preview and reflect changes saved in the `*.yml`, save a minor change in the associated `*.qmd` file. Be sure to revert these changes once you have finished updating the `*.yml`.
+
+### Removing Tiles
+
+1. For Resources and Datasets, update column P in the respective sheet of "Webpage Queue and Status.xlsx" to "Remove". This will highlight the row in red, indicating that it needs to be removed from the website but has not yet been.
+
+2. In the command-line application (i.e., Terminal for Macs or Git Bash for Windows) navigate to the codebase file location.
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{cd} \str{"FILE-PATH/resource-page/"}
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+3. Run a local preview of the website. It will open in a browser at the "localhost:[port]/web/" address.
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{quarto} preview
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+4. Launch the project by opening the `*.Rproj` file in RStudio.
+
+5. Open the `*.yml` and `*.qmd` files associated with the Listing you want to revise.
+
+6. Locate the `title` listing header for the tile to be removed. Delete all relevant components under this listing section and remove any extra spacing.
+
+7. To refresh the local preview and reflect changes saved in the `*.yml`, save a minor change in the associated `*.qmd` file. Be sure to revert these changes once you have finished updating the `*.yml`.
+
+8. Update the page-level "Date last updated: \_\_" and "Last updated by: \_\_" fields in the header section of the `*.yml` file.
+
+9. For Resources and Datasets, update column P in the respective sheet of "Webpage Queue and Status.xlsx" to "Removed". This will highlight the row in grey, indicating that the entry has been removed and its curation content has been archived for posterity.
+
+10. The content is now ready for publishing. This process is described below.
 
 ## More Info Pages
 
 Each Dataset has an associated "More Info" `*.qmd` page that provides additional details about that dataset. Each page contains four sections: Overview, Gaining Access, Relevant Links, and Publications. References are compiled using BibTeX, which automatically renders them at the end of the page.
 
-\newpage
+### Starting a New "More Info" Page
 
-A custom JavaScript function was implemented to allow users to zoom into images. Use the following example as a guide for incorporating images with the zoom feature.
+1. Update column Q in the "Datasets" sheet of "Webpage Queue and Status.xlsx" to "In Progress".
 
-\noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{1pt}\vspace{-2.5ex}
-\small \textbf{*.qmd} \normalsize \vspace{-2.5ex}
-\noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{0.4pt}\vspace{-0.8ex}
+2. To start a new "More Info" page, it is recommended you copy-and-paste an existing `*.qmd` in "Pages/More-Info-Pages" so all components are already outlined. Rename the file after the dataset.
 
-\begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
-<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
-  <img id="myImage" src="../../../Images/Timelines/AllofUs_DURA_Infographic_Downloaded06012025.png" alt="Zoomable Image" title="Click to zoom in">
-  <figcaption class="caption">
-    The DURA application timeline varies, as institutions may experience different lengths of time during the application process. For additional questions, please contact <a href="mailto:aoudurasupport@vumc.org">aoudurasupport@vumc.org</a>\ [@support].
-  </figcaption>
-</div>
+3. In the command-line application (i.e., Terminal for Macs or Git Bash for Windows) navigate to the codebase file location.
 
-```{=html}
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
-</div>
-
-<script src="../../../Code/zoom.js"></script>
-```
-\end{Verbatim}
-
-\vspace{-4.5ex}
-\noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{0.4pt}
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
   
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{cd} \str{"FILE-PATH/resource-page/"}
+  \end{Verbatim}
+  \end{codebox}
 
-### Overview
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+4. Run a local preview of the website. It will open in a browser at the "localhost:[port]/web/" address.
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{quarto} preview
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+5. Launch the project by opening the `*.Rproj` file in RStudio.
+
+6. Open "Code/Listing_Datasets/data-listing.yml" and the new `*.qmd` file.
+
+7. Complete all sections outlined below. Processing them in the order listed may be helpful when constructing the page.
+
+8. When the "More Info" page is completed, update column Q in the "Datasets" sheet of "Webpage Queue and Status.xlsx" to "Yes".
+
+9. The content is now ready for publishing. This process is described below.
+
+### SECTION: Overview
 
 The Overview section summarizes background details about the data provider and dataset, and describes key features such as study design, sample size, highlights of variable types, demographics. Refer to existing Overview sections for guidance on structure and formatting.
 
-### Gaining Access
+### SECTION: Gaining Access
 
 The Gaining Access section describes how Yale affiliates can access the dataset. For datasets with multiple access levels, each level includes a summary of the qualification requirements, typical timeline, and step-by-step access process. Citing the exact source page for each piece of information is recommended to provide a direct link and capture an date accessed.
 
@@ -401,17 +579,17 @@ Use the panel formatting outline below to get started, and refer to existing "Mo
 \vspace{-4.5ex}
 \noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{0.4pt}
 
-### Relevant Links
+### SECTION: Relevant Links
 
 The Relevant Links section features important pages from the data provider, including ancillary resources such as research communities and workshops, as well as support pages. Include a brief description for each link summarizing what users can expect to find on that page.
 
-### Publications
+### SECTION: Publications
 
 The Publications section utilizes custom functions that search PubMed for publication matches by DOI. These results then get processed and transformed into the formatted HTML seen on the rendered page (hyperlinked titles, bold-highlighted Yale affiliated authors, journal, etc). JavaScript applies pagination that will restrict publication listings to show three at a time.
 
 There are two sections to this code:
 
-**a. Pulling and Formatting Citation Matches**
+\footnotesize \textbf{a. Pulling and Formatting Citation Matches} \normalsize
 
 The `get_citations()` function retrieves publication details from PubMed using the listed DOIs. Authors whose primary or secondary affiliation matches the listed affiliations will be formatted with bolded names. An override of explicit names is applied for authors whose affiliation is not listed as Yale. 
 
@@ -442,8 +620,7 @@ citations\_html \op{<-} \func{make\_pub\_list}(citations)
 \vspace{-4.5ex}
 \noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{0.4pt}
 
-
-**b. Display with Pagination**
+\footnotesize \textbf{b. Display with Pagination} \normalsize
 
 The second section presents the formatted citations with pagination. The script used to render this section is provided in full below.
 
@@ -480,14 +657,46 @@ This section presents a selection of PubMed articles that utilize the dataset an
 \vspace{-4.5ex}
 \noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{0.4pt}
 
-### References
+### SECTION: References
 
-Citations must be exported in BibTeX format. Load the corresponding \*.bib file in the YAML header of each \*.qmd page to automatically render the citations at the end of the document without additional code. Include a `# References` heading at the end of the page to title the section.
+Citations must be exported in BibTeX format and stored as a `*.bib` file in the "~/BibTeX/" directory nested under each "~/More-Info-Pages/" subclassification. Load the corresponding `*.bib` file in the YAML header of each `*.qmd` page to automatically render the citations at the end of the document without additional code. Include a `# References` heading at the end of the page to title the section.
 
-## About Us
+### SECTION: Summary Description
 
-This page does not require regular updates or maintenance. Links and copy can be revised directly in the respective HTML or Markdown sections. To update the People section, refer to the section about about maintaining Listings.
+At the top of each "More Info" page is a summary description of the dataset. This summarises the content given in the Overview section and is also displayed on the dataset's respective tile.
 
+Add the summary description to the YAML header of the "More Info" `*.qmd` file, including any citations using Markdown citation formatting. Then copy and paste the completed summary description into the dataset's respective listing in "Code/Listing_Datasets/data-listings.yml", removing any citations from this copy.
+
+### Image Zoom-In Script
+
+A custom JavaScript function was implemented to allow users to zoom into images. Use the following example as a guide for incorporating images with the zoom feature.
+
+\noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{1pt}\vspace{-2.5ex}
+\small \textbf{*.qmd} \normalsize \vspace{-2.5ex}
+\noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{0.4pt}\vspace{-0.8ex}
+
+\begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+<div class="container" data-min-scale="1" data-max-scale="3" style="width: 100%;">
+  <img id="myImage" src="../../../Images/Timelines/AllofUs_DURA_Infographic_Downloaded06012025.png" alt="Zoomable Image" title="Click to zoom in">
+  <figcaption class="caption">
+    The DURA application timeline varies, as institutions may experience different lengths of time during the application process. For additional questions, please contact <a href="mailto:aoudurasupport@vumc.org">aoudurasupport@vumc.org</a>\ [@support].
+  </figcaption>
+</div>
+
+```{=html}
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script src="../../../Code/zoom.js"></script>
+```
+\end{Verbatim}
+
+\vspace{-4.5ex}
+\noindent\rule[0.3ex]{\dimexpr\textwidth\relax}{0.4pt}
 
 # Publishing Updates
 
@@ -645,8 +854,6 @@ FILE-PATH/.quarto/quarto-publish-worktree-17fef8679f581e08/
   \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
 \end{list}
 
-\newpage
-
 3. Retry publishing the site. Follow the prompts by entering "Yes" to proceed with updating the site and entering any required passwords when prompted.
      
 \begin{list}{}{\setlength\leftmargin{2.5em}}
@@ -671,6 +878,24 @@ This Standard Operating Procedure (SOP) uses a preconfigured LaTeX formatting sc
 If you are updating the document, please add your name to the **Authors** field and update the **Date Updated** field accordingly. The LaTeX formatting script will automatically include the date the document was rendered at the top of the page.
 
 Indented code blocks use Verbatim code environments, which require additional formatting to align the environment and apply code highlighting. Use "Code Highlighting Formatting_Verbatim.R" to prepare code for this environment and one-level indentation.
+
+To preview a rendered version of these documents, comment out the following line in the website's `_quarto.yml`:
+
+\vspace{-2.5ex}
+\noindent\rule[0.3ex]{\textwidth}{1pt}\vspace{-2.5ex}
+\small \textbf{\texttt{\_quarto.yml}} \normalsize\vspace{-2.5ex}
+\noindent\rule[0.3ex]{\textwidth}{0.4pt}\vspace{-0.8ex}
+
+```{.yml}
+- "!code/Standard Operating Procedure (SOP)/SOP.qmd"
+- "!code/Standard Operating Procedure (SOP)/Code Highlighting Formatting_Verbatim.qmd"
+```
+
+\vspace{-5.5ex}
+\noindent\rule[0.3ex]{\textwidth}{0.4pt}
+
+
+This line prevents the SOP and its associated `*.qmd` files from being rendered when the site is published. Once editing and previewing are complete, uncomment the line to allow a new PDF to be rendered.
 
 Once you have finished editing the document render it, move the resulting `*.pdf` to the project's root directory, then commit and push your changes.
 
