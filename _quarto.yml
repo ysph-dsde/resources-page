@@ -3,7 +3,9 @@ project:
   output-dir: _site
   render:
     - "*.qmd"
-    - "!Local Only/"
+    - "!KEEP LOCAL/"
+    - "!Code/Standard Operating Procedure (SOP)/SOP.qmd"
+    - "!Code/Standard Operating Procedure (SOP)/Code Highlighting Formatting_Verbatim.qmd"
 
 website:
   title: "Resource Navigation Tool"

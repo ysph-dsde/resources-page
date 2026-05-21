@@ -7,7 +7,7 @@
 # Overview
 # --------
 # This file defines the YAML listing that populates the About Us page. Entries
-# are rendered as people/profile tiles in the order they appear under `items`
+# are rendered as people/profile tiles in the order they appear under "items"
 # (left-to-right, then continuing on subsequent rows).
 #
 # Author / Maintenance
@@ -20,7 +20,7 @@
 #
 # Adding new tiles (YAML / data file)
 # ----------------------------------
-#   - Add new entries under `items`.
+#   - Add new entries under "items".
 #   - Tiles display in listing order (left-to-right).
 #
 # Tile fields
@@ -34,11 +34,11 @@
 #   - date-updated
 #
 # Optional fields (links/icons):
-#   - YSPH site: Beatrix webpage
-#   - Group site: Lab group webpage
-#   - LinkedIn
-#   - Google Scholar
-#   - ORCID: URL containing the 16-digit ORCID iD
+#   - ysph-site: Beatrix webpage
+#   - group: Lab group webpage
+#   - linkedin
+#   - google_scholar
+#   - orcid: URL containing the 16-digit ORCID iD
 #
 # Optional fields (bio/contact):
 #   - email
@@ -48,7 +48,7 @@
 # ----------------------
 #   - Confirm any new/updated links work.
 #   - Update the tile’s `date-updated` value.
-#   - Update the page-level “Last updated” text at the top of the page.
+#   - Update the page-level "Last updated" text at the top of the page.
 # =============================================================================
 
 items:

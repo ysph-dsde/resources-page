@@ -1,24 +1,41 @@
+# --------------------
+# General for R Projects
+
 .
 ..
 .DS_Store
 .Rproj.user
 .Rhistory
+.Rprofile
 .Rapp.history
 .RData
 .Ruserdata
 
-*_files
-*.html
-*.pptx
+# --------------------
+# General for the site
 
 /.quarto/
 /docs/
 /_site/
 /_includes/
 /site_libs/
-/Local Only/
+
+# --------------------
+# Exclude file types and incompletely rendered page outputs
+
+*_files
+*.html
+/_quarto_internal_scss_error.scss
+**/*.quarto_ipynb
+
+# --------------------
+# Project-specific exclusions
+
+*.pptx
+**/Yale_typeface/
+**/KEEP LOCAL/
 /Images/
 
-/_quarto_internal_scss_error.scss
-Yale_typeface/
-**/*.quarto_ipynb
+**/formatted_bash.tex
+**/Code-Highlighting-Formatting_Verbatim-blx.bib
+**/SOP-blx.bib

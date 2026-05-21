@@ -7,7 +7,7 @@
 # Overview
 # --------
 # This file defines the YAML listing that populates the Datasets page. Content
-# is rendered by an EJS template into a filterable/sortable grid of “tiles”.
+# is rendered by an EJS template into a filterable/sortable grid of "tiles".
 # 
 # Filter by two categories: 
 #   1. Region and/or affiliation 
@@ -31,14 +31,14 @@
 # -------------------------------------
 # Filtering:
 #   - Filters apply across all two groups.
-#   - Within a group: matching is “OR” across selected checkboxes.
-#   - Across groups: matching is “AND” (tile must satisfy each active group).
+#   - Within a group: matching is "OR" across selected checkboxes.
+#   - Across groups: matching is "AND" (tile must satisfy each active group).
 #
 # Sorting:
 #   - User-selectable sorting by:
 #       * title
 #       * date-updated
-#   - Default sorting (“No sorting” option):
+#   - Default sorting ("No sorting" option):
 #       * ranking (ascending), then title (A–Z)
 #
 # Adding new tiles
@@ -51,7 +51,7 @@
 #       * Result: those tiles will filter together when users select any
 #         combination of the two category groups.
 #
-# Required tile fields (under `tiles: - title: ...`)
+# Required tile fields (under `tiles:\\ - title: ...`)
 # --------------------------------------------------
 #   - title
 #   - description
@@ -63,17 +63,16 @@
 # 
 # Optional tile fields
 # --------------------
-#   - site: main source webpage
-#   - group: lab/group webpage providing the resource
-#   - github: code repository
-#   - article: primary publication(s) describing the resource
-#   - info: internal page with additional details
+#   - site: Main source webpage
+#   - group: Lab/group webpage providing the resource
+#   - github: Code repository
+#   - article: Primary publication(s) describing the resource
 #
 # Editing existing tiles
 # ----------------------
 #   - Verify any new/changed links work as expected.
 #   - Update the tile’s `date-updated`.
-#   - Update the “Last updated” metadata in the header comments above.
+#   - Update the "Last updated" metadata in the header comments above.
 # =============================================================================
 
   

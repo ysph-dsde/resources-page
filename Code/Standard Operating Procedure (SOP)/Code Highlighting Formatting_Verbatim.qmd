@@ -1,0 +1,74 @@
+---
+format:
+  pdf:
+    include-in-header: 
+      - text: |
+          \input{SOP Formatting/PDF Formatting Script.tex}
+highlight-style: ../../_styles/idle-fingers-light.theme
+---
+
+\clearpage
+\null
+\thispagestyle{empty}
+\newpage
+\setcounter{page}{1}
+
+
+This document applies code highlighting to Verbatim code environments, which are used to render formatted indentation in code blocks because this is not not natively supported in Quarto LaTeX documents. Below are the two steps to generate a formatted code block.
+
+1. Paste the code to be highlighted into the bash_snippets list item. This will parse all provided code list items using the defined algorithm and generate a new TeX file named formatted_bash.tex. The resulting output may require manual adjustments, which can be made in the following two code block sections.
+
+
+```{r}
+#| include: false
+#| echo: false
+
+source("Code Highlighting Functions_Verbatim.R")
+
+# Read all your bash snippets
+bash_snippets <- list(
+  'git worktree remove --force "FILE-PATH/.quarto/quarto-publish-worktree-71502552fdce11b5"'
+)
+
+# Generate all formatted code
+formatted <- lapply(bash_snippets, format_bash)
+#formatted <- lapply(bash_snippets, format_r)
+#formatted <- lapply(bash_snippets, format_python)
+
+# Write to a file you can copy-paste from
+writeLines(unlist(formatted), "formatted_bash.tex")
+
+```
+
+2. Adjust the formatting by pasting the output below where Quarto will apply code highlighting, and in the following `\\begin{Verbatim}` section. The available commands are:
+
+    - `\\kw` for Keywords
+    - `\\func` for Functions
+    - `\\str` for Strings
+    - `\\com` for Comments
+    - `\\op` for Operators
+    - `\\atr` for Atributes
+
+
+```{.bash}
+git worktree remove --force "FILE-PATH/.quarto/quarto-publish-worktree-71502552fdce11b5"
+```
+
+
+
+\begin{list}{}{\setlength\leftmargin{2.5em}}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{1pt}\vspace{-2.5ex}
+  \item\small \textbf{Command-Line Interface} \normalsize \vspace{-2.5ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}\vspace{-0.8ex}
+  
+  \begin{codebox}
+  \begin{Verbatim}[breaklines = true, breaksymbol = \textcolor{idlelinnum}{\scriptsize$\hookrightarrow$}, commandchars = \\\{\}]
+\func{git} worktree remove \kw{--force} \str{"FILE-PATH/.quarto/quarto-publish-worktree-71502552fdce11b5"}
+  \end{Verbatim}
+  \end{codebox}
+
+  \vspace{-4ex}
+  \item\noindent\rule[0.3ex]{\dimexpr\textwidth - 2.5em\relax}{0.4pt}
+\end{list}
+
+
