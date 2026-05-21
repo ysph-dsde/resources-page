@@ -387,7 +387,7 @@ Use the panel formatting outline below to get started, and refer to existing "Mo
 
 #### Step-by-Step Guide
 
-### Restricte Access
+### Restricted Access
 
 #### Do I Qualify?
 

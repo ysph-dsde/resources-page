@@ -25,13 +25,14 @@
 
 *_files
 *.html
+*.pptx
+
 /_quarto_internal_scss_error.scss
 **/*.quarto_ipynb
 
 # --------------------
 # Project-specific exclusions
 
-*.pptx
 **/Yale_typeface/
 **/KEEP LOCAL/
 /Images/
