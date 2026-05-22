@@ -308,7 +308,7 @@ The pop-up is coordinated using "Code/popup.js" and "_includes/feedback_popup.ht
 
 ## Index and About Us
 
-These pages do not require regular updates or maintenance. Links and copy can be revised directly in the respective HTML or Markdown sections. To update the People section of About Us, refer to the section about about maintaining Listings.
+These pages do not require regular updates or maintenance. Links and copy can be revised directly in the respective HTML or Markdown sections. To update the People section of About Us, refer to the section on maintaining Listings.
 
 ## Listing Pages
 
@@ -887,8 +887,8 @@ To preview a rendered version of these documents, comment out the following line
 \noindent\rule[0.3ex]{\textwidth}{0.4pt}\vspace{-0.8ex}
 
 ```{.yml}
-- "!code/Standard Operating Procedure (SOP)/SOP.qmd"
-- "!code/Standard Operating Procedure (SOP)/Code Highlighting Formatting_Verbatim.qmd"
+- "!Code/Standard Operating Procedure (SOP)/SOP.qmd"
+- "!Code/Standard Operating Procedure (SOP)/Code Highlighting Formatting_Verbatim.qmd"
 ```
 
 \vspace{-5.5ex}
