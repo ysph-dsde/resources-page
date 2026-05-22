@@ -4,7 +4,7 @@ A webpage that curates Yale University resources, datasets owned or produced by 
 
 &nbsp;
 
-![GitHub Repo stars](https://img.shields.io/github/stars/ysph-dsde/resources-page) ![GitHub watchers](https://img.shields.io/github/watchers/ysph-dsde/resources-page) ![GitHub forks](https://img.shields.io/github/forks/ysph-dsde/resources-page) [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](http://creativecommons.org/licenses/by-nc/4.0/)
+![GitHub Repo stars](https://img.shields.io/github/stars/ysph-dsde/resources-page) ![GitHub watchers](https://img.shields.io/github/watchers/ysph-dsde/resources-page) ![GitHub forks](https://img.shields.io/github/forks/ysph-dsde/resources-page)
 
 ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/ysph-dsde/resources-page) ![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/ysph-dsde/resources-page) ![GitHub Release Date](https://img.shields.io/github/release-date/ysph-dsde/resources-page) ![GitHub repo size](https://img.shields.io/github/repo-size/ysph-dsde/resources-page)
 
