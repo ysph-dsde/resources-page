@@ -23,9 +23,9 @@ The purpose of this document is to outline the contents and ongoing maintenance 
 
 - Shelby Golden, M.S.
 
-**Date Effective:** May 21<sup>th</sup>, 2026
+**Date Effective:** May 21<sup>st</sup>, 2026
 
-**Date Updated:** May 21<sup>th</sup>, 2026
+**Date Updated:** May 21<sup>st</sup>, 2026
 
 
 \tableofcontents
